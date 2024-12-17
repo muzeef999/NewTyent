@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+}
+
+body {
+    background-color: #f8fbfe;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background-image: url("../../asserts/BG.png");
+  }
+
+.appbg {
+    background-color: #008AC7;
+    width: 100%;
+    height: 140px;
+    position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 0 12px 0 rgba(28, 0, 76, 0.50);
+   
+}
+.appbardemo{
+    background-color: #008AC7;
+    color: #FFF;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 30px;
+    font-weight: 600;
+    
+}
+
+.nav-item {
+  padding: 8px;
+}
+
+.appbarlink{
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.appbgbutton {
+    border: 1px solid #FFF;
+    border-radius: 30px;
+    background-color: #008AC7;
+    color: #FFF;
+    padding: 3px 18px;
+
+}
+.second-section{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 12px 0 rgba(28, 0, 76, 0.50);
+  overflow: hidden; /* Hides content when collapsed */
+  transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth transitions */
+}
+.navbar {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 10px;
+}
+
+
+
+
+.table-custom {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 5px solid #ddd;
+  }
+  
+  .table-custom thead {
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .table-custom tbody {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .custom-card{
+    background-color: #FFF;
+    border-radius: 24px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+  }
+
+  .sectiontwo {
+    border-radius: 32px;
+    background-color: #FFF;
+    padding: 30px;
+    box-shadow: 0 0 28px 0 rgba(28, 0, 76, 0.12);
+    margin: 2px;
+  }
+
+  .big-number {
+    font-size: 8rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: transparent; /* Make the text itself transparent */
+    -webkit-text-stroke: 2px #008AC7; /* Outer stroke color and width */
+    position: relative;
+  }
+
+.contactSectionbg {
+  background-image: url(../../asserts/bgcontact.png);
+    background-size: cover;
+    padding: 50px 0;
+    background-position: center;
+}
+
+
+.whytentfont{
+  width:38px;
+  height:38px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#c8e0eb;
+  
+}
+
+
+
+
+.custom-table thead, .custom-table tbody, .custom-table tr, .custom-table td {
+  background-color: transparent !important; /* Apply transparent to the entire table */
+}
+
+.rotate-360 {
+  animation: rotate-animation 29s linear infinite;
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.h1, h2, h3, h4 {
+  margin-top: 40px; /* Space above the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+/* Below max-width: 768px (Mobile) */
+@media (max-width: 768px) {
+  #displaysvgresponsive {
+    padding: 28px; /* Reduced padding for mobile devices */
+  }
+}
+
+/* Between 769px and 1024px (Tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #displaysvgresponsive {
+    padding: 40px; /* Padding adjusted for tablets */
+  }
+}
+
+/* Between 1025px and 1440px (Laptop) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  #displaysvgresponsive {
+    padding: 60px; /* Default padding for laptops */
+  }
+}
+
+/* Above 1440px (Desktop) */
+@media (min-width: 1441px) {
+  #displaysvgresponsive {
+    padding: 80px; /* Larger padding for larger screens */
+  }
+}
+
+
+
+.card-container-data {
+  background-color: #FFF;
+  box-shadow: 0px 5px 15px rgba(0, 138, 199, 0.5); /* Adjusted box-shadow */
+  }
+
+
+/* Product Section and Heading */
+.product-section {
+  color: #000;
+  background-color: #008ac7;
+  box-shadow: 0px 5px 15px rgba(0, 138, 199, 0.5); /* Adjusted box-shadow */
+  overflow: hidden;
+ border: 1px solid #FFF;
+ justify-content: center;
+ align-items: center;
+}
+
+
+
+
+
+
+
+
+

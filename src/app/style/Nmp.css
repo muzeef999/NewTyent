@@ -1,0 +1,72 @@
+.filterbutton {
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  color: #008AC7;
+  padding: 8px 12px;
+  background-color: #FFF;
+  cursor: pointer; /* Ensures the button appears clickable */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+} 
+
+/* Active button styling */
+.activebutton {
+  border: 1px solid #008AC7;
+  border-radius: 30px;
+  color: #FFF;
+  background-color: #008AC7; /* Change background color for active state */
+  font-weight: bold; /* Optional: make the text bold */
+}
+
+/* Optional: Hover effect for better UI feedback */
+.filterbutton:hover {
+  background-color: #e6f7ff;
+  color: #008AC7;
+}
+
+
+
+.details-container{
+  display: flex;
+  background-color: #f0f1ec;
+}
+
+.detail-item {
+  white-space: nowrap; /* Prevent breaking into multiple lines */
+  font-size: 14px; /* Adjust font size */
+  color: #333; /* Text color */
+  border-radius:30px;
+  border: 1px solid #FFF;
+  background-color: #f3f4f0;
+  padding: 8px;
+}
+
+.easytotouchdisplay :hover{
+  background-color: #e9f4fb;
+  border-radius: 50px;
+}
+
+.touchpreviewnumber{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #369ef2;
+  color: #FFF;
+  font-size: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.image-container {
+  width: 80%;
+  padding: 10px;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensures the image looks good within its bounds */
+}
