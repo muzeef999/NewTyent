@@ -7,6 +7,11 @@ import { Button, Col, Modal, Row } from "react-bootstrap";
 import axios from "axios";
 import BlogPostModal from "../../compoents/BlogPost";
 
+
+// Ensure the API URL is available
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+
+
 export default function Page({params}) {
   const { slug } = params;
   const router = useRouter();
@@ -25,7 +30,7 @@ export default function Page({params}) {
 
     const fetchPost = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/${slug}`);
+        const res = await fetch(`${apiUrl}/api/blog/${slug}`);
         if (!res.ok) {
           setError(true);
           return;
@@ -43,7 +48,7 @@ export default function Page({params}) {
 
 
   const handleDelete = async(data) => {
-    await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/${data}`).then((res) => router.push("/dashboard")).catch((err) => console.log(err));
+    await axios.delete(`${apiUrl}/api/blog/${data}`).then((res) => router.push("/dashboard")).catch((err) => console.log(err));
   };
 
 

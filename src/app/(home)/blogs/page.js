@@ -1,6 +1,9 @@
 import failedImage from "@/asserts/failedImage.png";
 import dynamic from "next/dynamic";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+
+
 const PaginationData = dynamic(() => import("../compoents/PaginationData"), {
   ssr: false,
   loading: () => <p>Loading pagination...</p>,
@@ -8,7 +11,7 @@ const PaginationData = dynamic(() => import("../compoents/PaginationData"), {
 
 export async function generateMetadata() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`);
+    const res = await fetch(`${apiUrl}/api/blog`);
     if (!res.ok) throw new Error("API request failed");
 
     return {
@@ -24,7 +27,7 @@ export async function generateMetadata() {
 }
 
 const Page = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`);
+  const res = await fetch(`${apiUrl}/api/blog`);
   if (!res.ok) {
     return <p>No blogs found.</p>;
   }

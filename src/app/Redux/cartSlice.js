@@ -2,12 +2,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+
+
 // Async thunks
 export const fetchCart = createAsyncThunk(
   "cart/fetchCart",
   async (userId, thunkAPI) => {
     try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${userId}`);
+      const response = await axios.get(`${apiUrl}/api/cart/${userId}`);
       return response.data.cart; // Return the cart object
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response?.data || "Error fetching cart");
@@ -20,7 +23,7 @@ export const postCart = createAsyncThunk(
   "cart/postCart",
   async (cartData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${cartData.userId}`, cartData);
+      const response = await axios.post(`${apiUrl}/api/cart/${cartData.userId}`, cartData);
       console.log("Product added to cart successfully");
       return response.data;
     } catch (error) {
@@ -35,7 +38,7 @@ export const updateItemQuantity = createAsyncThunk(
   "cart/updateQuantity",
   async ({ userId, productName, quantity }, thunkAPI) => {
     try {
-      const response = await axios.put(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/${userId}`, {
+      const response = await axios.put(`${apiUrl}/api/cart/${userId}`, {
         productName,
         quantity,
       });

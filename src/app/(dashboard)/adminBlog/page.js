@@ -1,13 +1,18 @@
 import dynamic from "next/dynamic";
 
+// Dynamically importing the pagination component
 const AdminPaginationData = dynamic(() => import("../compoents/AdminPaginationData"), {
   ssr: false,
   loading: () => <p>Loading pagination...</p>,
 });
 
+// Ensure the API URL is available
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+
+// Metadata generation function
 export async function generateMetadata() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`);
+    const res = await fetch(`${apiUrl}/api/blog`);
     if (!res.ok) throw new Error("API request failed");
 
     return {
@@ -15,6 +20,7 @@ export async function generateMetadata() {
       description: "All the latest blog posts.",
     };
   } catch (error) {
+    console.error(error); // Log error for debugging
     return {
       title: "Blogs Not Found",
       description: "No blogs are available.",
@@ -22,11 +28,13 @@ export async function generateMetadata() {
   }
 }
 
+// Page component to display the blogs
 const Page = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`);
+  const res = await fetch(`${apiUrl}/api/blog`);
   if (!res.ok) {
     return <p>No blogs found.</p>;
   }
+
   const blogs = await res.json(); // Fetch blogs from API
   const blogsPerPage = 6;
 
