@@ -43,7 +43,7 @@ export default function Page({params}) {
 
 
   const handleDelete = async(data) => {
-    await axios.delete(`/api/blog/${data}`).then((res) => router.push("/dashboard")).catch((err) => console.log(err));
+    await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/${data}`).then((res) => router.push("/dashboard")).catch((err) => console.log(err));
   };
 
 
