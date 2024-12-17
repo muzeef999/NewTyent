@@ -1,0 +1,49 @@
+.cardshipping{
+    border-radius: 6px;
+    margin: 10px;
+    background-color: #FFF;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+  }
+  
+  .headsection{
+    padding: 15px;
+    color: #878787;
+    font-weight: 600;
+  }
+  .headsection.active {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #008ac7;
+    color: white;
+    font-weight: 600;
+  }
+  
+  
+  .bodybutton{
+      background: #fb641b;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+      border: none;
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 20px;
+      margin: 12px 0px 0px;
+  }
+  
+  .bodysection {
+    height: 0;
+    overflow: hidden;
+    transition: max-height 0.15s ease-in-out; /* add this line */
+  }
+  
+  .active.bodysection {
+    max-height: 500px; /* set a max height value */
+    transition: max-height 0.15s ease-in-out; /* add this line */
+  }
+  
+  .cardshipping:hover .bodysection {
+    opacity: 1;
+    height: auto; /* or specify a fixed height */
+  }

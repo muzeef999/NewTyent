@@ -1,0 +1,153 @@
+
+  /* Apply theme variables */
+
+
+  .App {
+    transition: all 0.3s ease-in-out; /* Add a transition effect to the App container */
+    display: flex;
+    overflow-y: hidden;
+    min-height: 94vh;
+  }
+  
+  
+  .custom-card {
+    background-color: #f9f9f9;
+    border-radius: 24px;
+    box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards have the same height */
+  }
+ 
+
+  .searchbackground{
+    background-color:#e6f7ff;
+    height: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+  }
+  /* Sidebar styling */
+  .sidebar {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px; /* Normal width for larger screens */
+    background-color: #e6f7ff;
+    min-height: 100vh;
+    position: fixed;
+    left: -250px; /* Hide sidebar initially */
+    top: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Add this line */
+  }
+  
+  .sidebar.show {
+    left: 0; /* Show sidebar when active */
+  }
+  
+  .sidebar.collapsed {
+    width: 60px; /* Collapsed width for smaller screens */
+    left: 0;
+  }
+  
+  .cancel-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .sidebar.show .cancel-button {
+    display: block;
+  }
+  
+  .sidebar.collapsed .cancel-button {
+    display: none;
+  }
+  
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    width: 100%;
+  }
+  
+  .nav-item {
+    width: 100%; /* Full width for each nav item */
+  }
+
+  .nav-linkdata {
+    padding: 12px 16px; /* Adjust padding */
+    display: flex; /* Flex to align items */
+    align-items: center; /* Center icon and text vertically */
+    color: #000;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .nav-linkdata span {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    padding: 12px 16px; /* Adjust padding */
+    display: flex; /* Flex to align items */
+    align-items: center; /* Center icon and text vertically */
+    color: var(--text-color);
+  }
+  /* Hide text on small screens and show on larger screens */
+  .nav-link span {
+    display: none; /* Hide text by default */
+  }
+  
+  /* Show text only on large screens */
+  @media (min-width: 992px) {
+    .nav-link span {
+      display: inline; /* Show text on large screens */
+    }
+  }
+  
+  /* Ensure text is hidden when sidebar is collapsed */
+  .sidebar.collapsed .nav-link span {
+    display: none; /* Hide text when sidebar is collapsed */
+  }
+  
+  /* Main content styling */
+  .main-content-container {
+    flex: 1; /* Take the remaining space */
+    transition: margin-left 0.3s ease;
+    margin-left: 250px; /* Margin for normal sidebar width */
+  }
+  
+  .main-content-container.collapsed {
+    margin-left: 60px; /* Reduced margin-left for collapsed sidebar */
+  }
+  
+  @media (max-width: 588px) {
+    .sidebar {
+      margin-top: 100px;
+    }
+  }
+  
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .sidebar {
+      width: 60px; /* Collapsed width on smaller screens */
+    }
+  
+    .main-content-container {
+      margin-left: 60px; /* Adjust main content margin for collapsed sidebar */
+    }
+  }
+  
+
+  
