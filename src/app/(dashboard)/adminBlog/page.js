@@ -30,21 +30,30 @@ export async function generateMetadata() {
 
 // Page component to display the blogs
 const Page = async () => {
-  const res = await fetch(`${apiUrl}/api/blog`);
-  if (!res.ok) {
-    return <p>No blogs found.</p>;
+  try {
+    const res = await fetch(`${apiUrl}/api/blog`);
+    if (!res.ok) {
+      console.error(`Error fetching blogs: ${res.status} ${res.statusText}`);
+      return <p>No blogs found.</p>;
+    }
+
+    const blogs = await res.json(); // Fetch blogs from API
+    const blogsPerPage = 6;
+
+    return (
+      <div className="container">
+        <h1 className="m-4">All Blog Posts</h1>
+        {blogs.length > 0 ? (
+          <AdminPaginationData data={blogs} itemsPerPage={blogsPerPage} />
+        ) : (
+          <p>No blogs available at the moment. Please check back later.</p>
+        )}
+      </div>
+    );
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    return <p>Error loading blogs. Please try again later.</p>;
   }
-
-  const blogs = await res.json(); // Fetch blogs from API
-  const blogsPerPage = 6;
-
-  return (
-    <div className="container">
-      <h1 className="m-4">All Blog Posts</h1>
-      {/* Pagination Component */}
-      <AdminPaginationData data={blogs} itemsPerPage={blogsPerPage} />
-    </div>
-  );
 };
 
 export default Page;

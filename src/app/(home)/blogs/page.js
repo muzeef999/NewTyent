@@ -1,13 +1,15 @@
 import failedImage from "@/asserts/failedImage.png";
 import dynamic from "next/dynamic";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
 
 
 const PaginationData = dynamic(() => import("../compoents/PaginationData"), {
   ssr: false,
   loading: () => <p>Loading pagination...</p>,
 });
+
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+
 
 export async function generateMetadata() {
   try {
@@ -27,8 +29,10 @@ export async function generateMetadata() {
 }
 
 const Page = async () => {
+  try{
   const res = await fetch(`${apiUrl}/api/blog`);
   if (!res.ok) {
+    console.error(`Error fetching blogs: ${res.status} ${res.statusText}`);
     return <p>No blogs found.</p>;
   }
   const blogs = await res.json(); // Fetch blogs from API
@@ -38,9 +42,18 @@ const Page = async () => {
     <div className="container">
       <h1 className="m-4">All Blog Posts</h1>
       {/* Pagination Component */}
-      <PaginationData data={blogs} itemsPerPage={blogsPerPage} />
+      {blogs.length > 0 ? (
+          <PaginationData data={blogs} itemsPerPage={blogsPerPage} />
+      )
+          : (
+          <p>No blogs available at the moment. Please check back later.</p>
+        )}
     </div>
   );
+} catch (error) {
+  console.error("Error fetching blogs:", error);
+  return <p>Error loading blogs. Please try again later.</p>;
+}
 };
 
 export default Page;
