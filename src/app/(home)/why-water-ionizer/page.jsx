@@ -267,7 +267,7 @@ H2 reduces oxidative stress and improves redox homeostasis partly mediated via t
       <div
           className="background-container"
         >
-          <div className='background-overlay'></div>
+          <div className='background-overlay'></div> 
           <div
             className="text-overlay"
             style={{

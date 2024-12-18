@@ -99,7 +99,8 @@ const ProductData = [
         ],
       },
     ],
-  }, 
+  },
+   
   {
     category: "Sterilizing water generator",
     link:"nmp-5",

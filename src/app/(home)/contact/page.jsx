@@ -16,7 +16,7 @@ const InfoCard = ({ icon: Icon, title, text }) => (
       </div>
     </div>
     </div>
-  </Col>
+  </Col> 
 );
 
 const Page = () => {

@@ -20,9 +20,7 @@ const AppBar = () => {
   
 
   const { data: session,  } = useSession(); // Get session data from NextAuth
-
   const dispatch = useDispatch();
-
 
   useEffect(() => {
     if (session?.user) {
@@ -40,6 +38,7 @@ const AppBar = () => {
 
   const router = useRouter();
   const [isCollapsed, setIsCollapsed] = useState(false);
+  
   const [isProductOpen, setIsProductOpen] = useState(false);
 
   const handleToggleNavbar = () => setIsCollapsed(!isCollapsed);
@@ -49,10 +48,22 @@ const AppBar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [isFixed, setIsFixed] = useState(false);
 
   const [cartShow, cartSetShow] = useState(false);
   const cartHandleClose = () => cartSetShow(false);
   const cartHandleShow = () => cartSetShow(true);
+
+
+  // State to track active section
+  const [active, setActive] = useState('/');
+
+  // Function to set the active section
+  const handleClick = (section) => {
+    setActive(section);
+    setIsProductOpen(false);
+  };
+
 
 
 
@@ -61,12 +72,30 @@ const AppBar = () => {
     router.push('/');
   };
 
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       import("bootstrap/dist/js/bootstrap.bundle.min.js").catch((err) =>
         console.error("Failed to load Bootstrap JS", err)
       );
     }
+  }, []);
+
+  // Handle scroll position
+  const handleScroll = () => {
+    if (window.scrollY > 45) {
+      setIsFixed(true);
+    } else {
+      setIsFixed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -81,6 +110,7 @@ const AppBar = () => {
             alignItems: "center",
             padding: "10px 20px",
             width: "100%",
+            height:'40px',
             backgroundColor: "#008AC7",
           }}
         >
@@ -152,11 +182,14 @@ const AppBar = () => {
 
       <div>
         {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className={`navbar navbar-expand-lg navbar-light flex-column ${
+        isFixed ? 'fixed' : ""
+      }`}>
+
           <div className="container-fluid">
             {/* Left: Logo */}
             <Link href="/" className="navbar-brand">
-              <Image src={logo} width={100} alt="Logo" />
+              <Image className="nav-logo" src={logo} width={100} alt="Logo" />
             </Link>
 
             {/* Mobile: Toggle Button */}
@@ -175,7 +208,7 @@ const AppBar = () => {
               }`}
             >
               <ul className="navbar-nav mx-auto">
-                <li className="nav-item">
+                <li className={`nav-item ${active === '/' ? 'active' : ''}`} onClick={() => handleClick('/')}>
                   <Link className="nav-link" href="/">
                     Home
                   </Link>
@@ -203,42 +236,42 @@ const AppBar = () => {
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item`}>
                   <button className="nav-link" onClick={handleToggleProduct}>
                     Products
                   </button>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'benefits' ? 'active' : ''}`} onClick={() => handleClick('benefits')}>
                   <Link className="nav-link" href="/benefits">
                     Benefits
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'why-tyent' ? 'active' : ''}`} onClick={() => handleClick('why-tyent')}>
                   <Link className="nav-link" href="/why-tyent">
                     Why Tyent
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'why-water-ionizer' ? 'active' : ''}`} onClick={() => handleClick('why-water-ionizer')}>
                   <Link className="nav-link" href="/why-water-ionizer">
                     Why Water Ionizer
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'certifications' ? 'active' : ''}`} onClick={() => handleClick('certifications')}>
                   <Link className="nav-link" href="/certifications">
                     Certifications
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'blogs' ? 'active' : ''}`} onClick={() => handleClick('blogs')}>
                   <Link className="nav-link" href="/blogs">
                     Blogs
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'testimonials' ? 'active' : ''}`} onClick={() => handleClick('testimonials')}>
                   <Link className="nav-link" href="/testimonials">
                     Testimonials
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className={`nav-item ${active === 'contact' ? 'active' : ''}`} onClick={() => handleClick('contact')}>
                   <Link className="nav-link" href="/contact">
                     Contact Us
                   </Link>
@@ -251,13 +284,17 @@ const AppBar = () => {
               </div>
             </div>
           </div>
-        </nav>
-        {/* Collapsible Products Section */}
+
+          <div>
         {isProductOpen && (
-          <div className="bg-light p-3">
+          <div className="p-3">
             <ResponsiveProductPage />
           </div>
         )}
+        </div>
+        </nav>
+        {/* Collapsible Products Section */}
+        
       </div>
 
       <Offcanvas show={cartShow} onHide={cartHandleClose} placement="end">

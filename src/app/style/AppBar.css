@@ -3,6 +3,7 @@
 }
 
 body {
+     margin: 0;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     width: 100%;
@@ -34,14 +35,11 @@ body {
 }
 
 .nav-item {
-  padding: 8px;
+  padding: 5px;
+  color: inherit !important; /* Inherit color from parent navbar */
 }
 
-.appbarlink{
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-}
+
 
 .appbgbutton {
     border: 1px solid #FFF;
@@ -59,16 +57,46 @@ body {
   overflow: hidden; /* Hides content when collapsed */
   transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth transitions */
 }
-.navbar {
-   position: sticky;
-  top: 0;
-  overflow: hidden;
-  padding: 10px;
-  background-color: #FFF;
-  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1);
-  z-index: 99; /* To ensure it stays on top */
 
+
+
+.navbar {
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #000 !important;
+  transition: background-color 0.1s ease-out, 
+              color 0.1s ease-out, 
+              box-shadow 0.1s ease-out; /* Smooth specific transitions */
 }
+
+/* Fixed Navbar */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: background-color 0.1s ease-out, 
+              color 0.1s ease-out, 
+              box-shadow 0.1s ease-out; /* Smooth specific transitions */
+}
+
+
+
+.nav-item.active {
+  text-decoration: underline; /* Underline the text */
+  text-decoration-color: #008AC7; /* Color of underline */
+  text-decoration-thickness: 4px; /* Thickness of underline */
+  text-underline-offset: 8px; /* Space between text and underline */
+  border-radius: 60%; /* Adds rounded corners */
+  display: inline-block; /* Ensures width works properly for inline elements */
+}
+
 
 
 

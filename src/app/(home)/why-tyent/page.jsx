@@ -13,7 +13,7 @@ const Page = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const svgRefs = useRef([]);
-  const bigNumberRefs = useRef([]);
+  const bigNumberRefs = useRef([]); 
   const textRefs = useRef([]);
 
 
