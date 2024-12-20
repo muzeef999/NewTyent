@@ -1,12 +1,6 @@
 "use client"
 import React from 'react'
 const SvgBackground = () => {
-
-
-        
-    
-    
-
   return (
     <div className='container' style={{position:'absolute', width:'100%', zIndex:'-999', margin:'40px'}}>
 <svg  style={{width:'100%', height:'auto'}} viewBox="0 0 2271 980" fill="none" xmlns="http://www.w3.org/2000/svg">

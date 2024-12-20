@@ -45,6 +45,7 @@ const MyComponent = () => {
   return (
     <div
       style={{
+        overflow:'hidden',
         display: "flex",
         justifyContent: "center", // Centers horizontally
         alignItems: "center", // Centers vertically

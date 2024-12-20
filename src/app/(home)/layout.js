@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import "aos/dist/aos.css"; 
 import "@/app/style/AppBar.css"; 
-import ClientComponent from "./(pages)/ClientComponent";
+import dynamic from "next/dynamic";
+const ClientComponent = dynamic(() => import("./(pages)/ClientComponent"),{ssr:false})
+
 
 
 

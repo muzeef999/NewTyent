@@ -1,18 +1,20 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import useSWR from "swr";
 import { fetchCart, updateItemQuantity } from "@/app/Redux/cartSlice";
 import "@/app/style/Shipping.css";
 import { IoMdRadioButtonOn } from "react-icons/io";
 import { IoMdAdd } from "react-icons/io";
-import Loading from "@/app/(home)/compoents/Loading";
-import EditShippingAddress from "@/app/(home)/compoents/EditShippingAddress";
-import ShippingAddress from "@/app/(home)/compoents/ShippingAddress";
-import CartItems from "../compoents/CartItems";
+import dynamic from "next/dynamic";
+const CartItems = dynamic(() => import("@/app/(home)/compoents/CartItems"), {srr: false});
+const ShippingAddress = dynamic(() => import("@/app/(home)/compoents/ShippingAddress"), {srr: false});
+const EditShippingAddress = dynamic(() => import("@/app/(home)/compoents/EditShippingAddress"), {srr: false});
+const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"),{srr: false})
 
-const ShippingPage = () => {
+
+const page = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { products, loading } = useSelector((state) => state.cart);
@@ -429,4 +431,4 @@ const ShippingPage = () => {
   );
 };
 
-export default ShippingPage;
+export default page;

@@ -1,15 +1,10 @@
 import dynamic from "next/dynamic";
-const Header = dynamic(() => import('../compoents/Header'), {
-  ssr: false,
-});
-
-
-const PaginationData = dynamic(() => import("../compoents/PaginationData"), {
-  ssr: false,
-  loading: () => <p>Loading pagination...</p>,
-});
+const Header = dynamic(() => import('../compoents/Header'), {ssr: false});
+const Loading = dynamic(()=> import("@/app/(home)/compoents/Loading"),{srr:false})
+const PaginationData = dynamic(() => import("../compoents/PaginationData"), { ssr: false, loading: () => <Loading />,});
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+
 
 
 export async function generateMetadata() {
