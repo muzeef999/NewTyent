@@ -10,6 +10,7 @@ import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
 import CustomizedTables from "./compoents/CustomizedTables";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
+import Loading  from "./compoents/Loading"
 
 const PriceComp = dynamic(() => import("./compoents/PriceComp"), {
   ssr: false, 
@@ -77,7 +78,7 @@ const Home = () => {
 
   return (
     <div>
-      
+
      <Slider />
      <br/>
      <br/>

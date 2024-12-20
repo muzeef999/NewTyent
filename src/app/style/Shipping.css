@@ -1,49 +1,108 @@
-.cardshipping{
-    border-radius: 6px;
-    margin: 10px;
-    background-color: #FFF;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
-  }
-  
-  .headsection{
-    padding: 15px;
-    color: #878787;
-    font-weight: 600;
-  }
-  .headsection.active {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background-color: #008ac7;
-    color: white;
-    font-weight: 600;
-  }
-  
-  
-  .bodybutton{
-      background: #fb641b;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-      border: none;
-      color: #fff;
-      border-radius: 6px;
-      padding: 10px 20px;
-      margin: 12px 0px 0px;
-  }
-  
-  .bodysection {
-    height: 0;
-    overflow: hidden;
-    transition: max-height 0.15s ease-in-out; /* add this line */
-  }
-  
-  .active.bodysection {
-    max-height: 500px; /* set a max height value */
-    transition: max-height 0.15s ease-in-out; /* add this line */
-  }
-  
-  .cardshipping:hover .bodysection {
-    opacity: 1;
-    height: auto; /* or specify a fixed height */
-  }
+.accordion-item {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  margin-bottom: 16px; /* Optional spacing between items */
+}
+
+
+.accordion-button:not(.collapsed) {
+  color: #878787;
+  background-color: #FFF;
+}
+
+
+.accordion-button.active-header {
+  background-color: #008ac7; 
+  color: #fff; 
+  border-color: #007bb5; 
+}
+
+.accordion-button {
+  background-color: #f8f9fa; /* Light background for inactive state */
+  color: #878787; /* Dark text color */
+  border: none !important; /* Border color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.accordion-button:not(.collapsed)::after {
+  display: none !important;
+}
+
+.accordion-button::after{
+  background-image: none !important;
+}
+
+.steps{
+  width: 20px;
+  height:20px;
+  justify-content: center;
+  align-items: center;
+  display: flex; 
+  background-color:#f8fbfe;
+  color:#008AC7;
+  border: 1px solid #008AC7;
+}
+
+.saveanddelivery{
+  color: #FFF;
+  background-color: #008AC7;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  width: 30%;
+}
+
+.saveanddelivery:hover {
+  color: #FFF;
+  background-color: #008AC7;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  width: 30%;
+}
+
+.saveanddelivery:active {
+  color: #FFF;
+  background-color: #008AC7;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  width: 30%;
+}
+
+
+.cancel{
+  font-weight: 600;
+  background-color: #FFF;
+  border: 0;
+  padding: 10px 20px;
+  color: #008AC7;
+}
+
+.cancel:hover{
+  font-weight: 600;
+  background-color: #FFF;
+  border: 0;
+  padding: 10px 20px;
+  color: #008AC7;
+}
+
+.cancel:active{
+  font-weight: 600;
+  background-color: #FFF;
+  border: 0;
+  padding: 10px 20px;
+  color: #008AC7;
+}
+
+
+/* Ensure the accordion header remains visible when active */
+#flush-headingTwo .accordion-button:not(.collapsed) {
+ background-color: #FFF !important;
+ color: black;
+}
+
+.customPriceCard{
+  background-color: #FFF;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  padding: 10px;
+}

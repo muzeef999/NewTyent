@@ -3,6 +3,8 @@ import "aos/dist/aos.css";
 import "@/app/style/AppBar.css"; 
 import ClientComponent from "./(pages)/ClientComponent";
 
+
+
 // Define metadata for the layout
 export const metadata = {
   title: "Tyent India",
@@ -10,6 +12,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, session }) {
+
   return (
     <html lang="en">
       <body style={{ fontFamily: "Poppins, sans-serif" }}>

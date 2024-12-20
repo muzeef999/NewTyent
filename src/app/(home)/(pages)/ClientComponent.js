@@ -3,14 +3,20 @@
 import { Provider } from "react-redux";
 import { SessionProvider } from "next-auth/react"; 
 import { store } from "@/app/Redux/store";
-import AppBar from "../compoents/AppBar";
-import Footer from "../compoents/Footer";
 import Aos from "aos";
 import { useEffect } from "react";
 import SvgBackground from "../compoents/SvgBackground";
+import { usePathname } from "next/navigation";
+import Footer from "../compoents/Footer";
+import AppBar from "../compoents/AppBar";
 
 export default function ClientComponent({ children, session }) {
 
+    const pathname = usePathname();
+    // Pages where Navbar and Footer are excluded
+    const noLayoutPages = ['/shipping'];
+    const shouldExcludeLayout = noLayoutPages.includes(pathname);
+  
   useEffect(() => {
     Aos.init({
       easing: "ease-out-cubic",
@@ -22,10 +28,10 @@ export default function ClientComponent({ children, session }) {
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
-        <AppBar />
         <SvgBackground />
+        {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>
-        <Footer />
+        {!shouldExcludeLayout && <Footer />}
       </Provider>
     </SessionProvider>
   );

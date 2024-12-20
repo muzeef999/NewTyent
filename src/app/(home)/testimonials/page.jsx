@@ -1,32 +1,316 @@
 import React from "react";
-import dynamic from 'next/dynamic';
-const Header = dynamic(() => import('../compoents/Header'), {
-  ssr: false,
+import dynamic from "next/dynamic";
+import { Col, Row } from "react-bootstrap";
+import icon from "@/asserts/Testmonials/icon1.png";
+import Image from "next/image";
+
+const RWebShareComp = dynamic(() => import("../compoents/RWebShare"), {
+  ssr: false, // Disable server-side rendering for this component
 });
-const page = () => {
 
-  const headerData = { 
-    basic: "Trust, Satisfaction & Transformations",
-    preheading:'Hear From Our Real',
-    afterheading: "Satisfied Tyent India Customers",
-    content: "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
-    img: "path/to/image.jpg", // Add image URL if needed
-    animatedText: "Health, Wellness, Transformation" // Pass the animated text here
-  }
+const Header = dynamic(() => import("../compoents/Header"), {
+  ssr: false, // Disable server-side rendering for this component
+});
 
+const videos = [
+  {
+    id: 1,
+    src: "https://www.youtube.com/embed/fZSV5ebM3D0?rel=0&modestbranding=1",
+    description:
+      "World's No: 1 Tyent Alkaline water ionizer - Now officially available in India.",
+  },
+  {
+    id: 2,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 3,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 4,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 5,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 6,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 7,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 8,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 9,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 10,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 11,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+  {
+    id: 12,
+    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    description:
+      "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
+  },
+];
+
+const icons = [
+  {
+    id: 1,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 2,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 3,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 4,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 5,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 6,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 7,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 8,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 9,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 10,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 11,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 12,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 13,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 14,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 15,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 16,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 17,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 18,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+  {
+    id: 19,
+    icon: icon,
+    name: "muzeef",
+    designation: "Canadian Film Actor",
+  },
+];
+
+const VideoCard = ({ src, description }) => {
   return (
-    <div>
-       <Header 
-        basic={headerData.basic} 
-        preheading={headerData.preheading} 
-        afterheading={headerData.afterheading}
-        content={headerData.content} 
-        img={headerData.img}
-        animatedText={headerData.animatedText} // Passing dynamic animated text
-      />
-      <div className="container">start</div>
+    <div
+      className="custom-card text-center"
+      style={{ padding: "10px" }}
+      data-aos="fade-up"
+    >
+      <div className="embed-responsive embed-responsive-16by9 mb-3">
+        <iframe
+          className="embed-responsive-item"
+          src={src}
+          style={{ borderRadius: "8px", width: "100%", height: "290px" }}
+          allowFullScreen
+          title="Video"
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <h6 className="text-start" style={{ flexGrow: 1 }}>
+          {description}
+        </h6>
+        <RWebShareComp text={description} link={src} />
+      </div>
     </div>
   );
 };
 
-export default page;
+const IconTest = ({ name, icon, designation }) => {
+  return (
+    <div data-aos="zoom-in">
+      <div>
+        <center>
+          <Image
+            src={icon}
+            priority
+            style={{ width: "120px", height: "120px" }}
+            alt={designation}
+          />
+        </center>
+      </div>
+
+      <h5 className="text-center mt-2" style={{ flexGrow: 1 }}>
+        {name}
+      </h5>
+      <p className="text-center mt-2" style={{ flexGrow: 1, color:'#008AC7' }}>
+        {designation}
+      </p>
+    </div>
+  );
+};
+
+const Page = () => {
+  const headerData = {
+    basic: "Trust, Satisfaction & Transformations",
+    preheading: "Hear From Our Real",
+    afterheading: "Satisfied Tyent India Customers",
+    content:
+      "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
+    img: "path/to/image.jpg", // Add image URL if needed
+    animatedText: "Health, Wellness, Transformation", // Pass the animated text here
+  };
+
+  return (
+    <div>
+      <Header
+        basic={headerData.basic}
+        preheading={headerData.preheading}
+        afterheading={headerData.afterheading}
+        content={headerData.content}
+        img={headerData.img}
+        animatedText={headerData.animatedText}
+      />
+      <div className="container">
+        <Row className="gy-3">
+          {videos.map((video) => (
+            <Col md={4} sm={6} key={video.id}>
+              <VideoCard src={video.src} description={video.description} />
+            </Col>
+          ))}
+        </Row>
+        <br />
+        <h2 className="text-center">
+          "
+          <span style={{ fontWeight: 600, color: "#008AC7" }}>
+            Trusted by Icons:
+          </span>{" "}
+          Influential Voices on Tyent Water"
+        </h2>
+        <Row className="gy-3">
+          {icons.map((iconItem) => (
+            <Col md={2} key={iconItem.id}>
+              <IconTest
+                icon={iconItem.icon}
+                name={iconItem.name}
+                designation={iconItem.designation}
+              />
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </div>
+  );
+};
+
+export default Page;
