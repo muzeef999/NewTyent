@@ -14,7 +14,7 @@ const EditShippingAddress = dynamic(() => import("@/app/(home)/compoents/EditShi
 const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"),{srr: false})
 
 
-const page = () => {
+const Page = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { products, loading } = useSelector((state) => state.cart);
@@ -431,4 +431,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
