@@ -27,6 +27,32 @@ body {
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marqueeEffect 10s linear infinite;
+}
+
+@keyframes marqueeEffect {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 794px) {
+  .marquee-content {
+    animation: none;
+  }
+}
+
 .navbar-toggler {
   color: #008AC7;
 }

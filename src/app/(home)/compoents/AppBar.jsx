@@ -28,11 +28,17 @@ const AppBar = () => {
   const userData = useSelector((state) => state.auth.user);
   const { totalItems } = useSelector((state) => state.cart);
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
+
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartShow, setCartShow] = useState(false);
+  const [offcanvasOpen, setOffcanvasOpen] = useState(false);  // State to manage offcanvas visibility
+
+
+  const closeOffcanvas = () => {
+    setOffcanvasOpen(false);
+  };
 
   useEffect(() => {
     if (session?.user) {
@@ -75,11 +81,14 @@ const AppBar = () => {
       {/* Top Bar */}
       <div className="appbg">
         <div className="d-flex justify-content-between align-items-center p-2" style={{ backgroundColor: "#008AC7", color: "#FFF" }}>
-          <div className="d-flex align-items-center" style={{ overflow: "hidden", whiteSpace: "nowrap" }}>
-            <p className="mb-0">1000+ customers</p>
-            <span className="mx-2">|</span>
-            <p className="mb-0">3 years warranty on ionizer & 15 years warranty on plates.</p>
-          </div>
+        <div className="d-flex align-items-center marquee" style={{ overflow: "hidden", whiteSpace: "nowrap" }}>
+  <div className="marquee-content">
+    <p className="mb-0">1000+ customers</p>
+    <span className="mx-2">|</span>
+    <p className="mb-0">3 years warranty on ionizer & 15 years warranty on plates.</p>
+  </div>
+</div>
+
           <div className="d-flex align-items-center" style={{ cursor: "pointer" }}>
             {userData ? (
               <div className="btn-group">
@@ -115,6 +124,8 @@ const AppBar = () => {
           <button
             className="navbar-toggler"
             type="button"
+            onClick={() => setOffcanvasOpen(!offcanvasOpen)}  // Toggle offcanvas open state
+            aria-expanded={offcanvasOpen ? "true" : "false"}
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
           >
@@ -128,7 +139,7 @@ const AppBar = () => {
 
   
         {/* Offcanvas Menu */}
-        <div className="offcanvas offcanvas-start" id="offcanvasNavbar">
+        <div className="offcanvas offcanvas-start"   style={{ width: "40%" }}  id="offcanvasNavbar">
           <div className="offcanvas-header">
             <h5>Menu</h5>
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -136,7 +147,7 @@ const AppBar = () => {
           <div className="offcanvas-body">
             <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-            <Link href="/" className={`nav-link ${pathname === "/" ? "active" : ""}`}>
+            <Link href="/" className={`nav-link ${pathname === "/" ? "active" : ""}`} onClick={closeOffcanvas}>
               Home
             </Link>
           </li>
@@ -152,12 +163,12 @@ const AppBar = () => {
             </Link>
             <ul className="dropdown-menu">
               <li>
-                <Link href="/our-story" className="dropdown-item">
+                <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
                   Our Story
                 </Link>
               </li>
               <li>
-                <Link href="/tyent-global" className="dropdown-item">
+                <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
                   Tyent Global
                 </Link>
               </li>
@@ -179,8 +190,9 @@ const AppBar = () => {
           ].map((item) => (
             <li key={item.path} className="nav-item">
               <Link
-                href={item.path}
+                href={item.path} 
                 className={`nav-link ${pathname === item.path ? "active" : ""}`}
+                onClick={closeOffcanvas}
               >
                 {item.label}
               </Link>
@@ -204,7 +216,7 @@ const AppBar = () => {
 
 
       {/* Cart Offcanvas */}
-      <Offcanvas show={cartShow} onHide={() => setCartShow(false)} placement="end">
+      <Offcanvas show={cartShow}  style={{ width: "24%" }} onHide={() => setCartShow(false)} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
