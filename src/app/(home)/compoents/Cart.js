@@ -1,13 +1,11 @@
 "use client";
-import { fetchCart, updateItemQuantity } from "@/app/Redux/cartSlice";
+import { deleteProductAction, fetchCart, updateItemQuantity } from "@/app/Redux/cartSlice";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Loading from "./Loading";
 import { useRouter } from "next/navigation";
 import Login from "./Login";
 import CartItems from "./CartItems";
-
-
 
 
 const OrderSummary = ({ totalItems, totalAmount, deliverCharge, router }) => {
@@ -56,10 +54,7 @@ const CartPage = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const { user } = useSelector((state) => state.auth);
-  const { products, loading } = useSelector((state) => state.cart);
-  const totalAmount = useSelector((state) => state.cart.totalAmount);
-  const deliverCharge = useSelector((state) => state.cart.deliverCharge);
-  const totalItems = useSelector((state) => state.cart.totalItems);
+  const { products, loading, totalAmount, deliverCharge, totalItems } = useSelector((state) => state.cart);
 
   const [updatingProduct, setUpdatingProduct] = useState(null);
 
@@ -68,6 +63,19 @@ const CartPage = () => {
       dispatch(fetchCart(user.id));
     }
   }, [user?.id, dispatch]);
+
+  const deleteProduct = async (productName) => {
+    try {
+      if (!user?.id) {
+        console.error("User is not logged in.");
+        return;
+      }
+      await dispatch(deleteProductAction({ userId: user.id, productName:productName })).unwrap();
+    } catch (error) {
+      console.error("Failed to delete product:", error);
+    }
+  };
+  
 
   const handleQtyChange = async (productName, newQuantity) => {
     if (!user?.id) {
@@ -84,15 +92,15 @@ const CartPage = () => {
           quantity: newQuantity,
         })
       ).unwrap();
-      setUpdatingProduct(null);
     } catch (error) {
       console.error("Failed to update quantity:", error);
+    } finally {
       setUpdatingProduct(null);
     }
   };
 
   return (
-    <div style={{ height: "100%" }}>
+    <div className="cart-page-container" style={{ height: "100%" }}>
       {loading ? (
         <Loading />
       ) : (
@@ -102,19 +110,24 @@ const CartPage = () => {
         >
           {user ? (
             <>
-             <div className="top-content">
+              <div className="top-content">
                 <CartItems
                   products={products}
                   handleQtyChange={handleQtyChange}
                   updatingProduct={updatingProduct}
+                  deleteProduct={deleteProduct}
                 />
               </div>
+
+              {totalItems > 0 && (
               <OrderSummary
                 totalItems={totalItems}
                 totalAmount={totalAmount}
                 deliverCharge={deliverCharge}
                 router={router}
               />
+              )}
+
             </>
           ) : (
             <div>

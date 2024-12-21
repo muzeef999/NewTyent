@@ -1,77 +1,60 @@
 "use client";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import logo from "@/asserts/logo.png";
-import { FaUser } from "react-icons/fa";
-import { MdOutlineShoppingBag } from "react-icons/md";
+import { usePathname, useRouter } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
+import { useDispatch, useSelector } from "react-redux";
 import { Modal, Offcanvas } from "react-bootstrap";
-import Login from "./Login";
-import ResponsiveProductPage from "./ResponsiveProductPage";
+import { FaUser } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { useRouter } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { signOut, useSession } from "next-auth/react";
+import { PiShoppingCartLight } from "react-icons/pi";
 import { setUser } from "@/app/Redux/authSlice";
+import { fetchCart } from "@/app/Redux/cartSlice";
+import logo from "@/asserts/logo.png";
+import Login from "./Login";
+import ResponsiveProductPage from "./ResponsiveProductPage";
 import Cartpage from "./Cart";
+import "@/app/style/AppBar.css"
 
 const AppBar = () => {
-  
-
-  const { data: session,  } = useSession(); // Get session data from NextAuth
+  const { data: session } = useSession();
   const dispatch = useDispatch();
+  const router = useRouter();
+  const pathname = usePathname();  // Get the current path using usePathname
+
+
+  const userData = useSelector((state) => state.auth.user);
+  const { totalItems } = useSelector((state) => state.cart);
+
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isProductOpen, setIsProductOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [cartShow, setCartShow] = useState(false);
 
   useEffect(() => {
     if (session?.user) {
-      // Dispatch the user data to the Redux store if the user is authenticated
       dispatch(
         setUser({
           id: session.user.id,
           name: session.user.name,
           email: session.user.email,
-        }));
+        })
+      );
+      dispatch(fetchCart(session.user.id));
     }
   }, [session, dispatch]);
 
-  const userData  = useSelector((state) => state.auth.user); // Access user data from Redux
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsFixed(window.scrollY > 45);
+    };
 
-  const router = useRouter();
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  
-  const [isProductOpen, setIsProductOpen] = useState(false);
-
-  const handleToggleNavbar = () => setIsCollapsed(!isCollapsed);
-  const handleToggleProduct = () => setIsProductOpen(!isProductOpen);
-  
-  const [show, setShow] = useState(false); 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  const [isFixed, setIsFixed] = useState(false);
-
-  const [cartShow, cartSetShow] = useState(false);
-  const cartHandleClose = () => cartSetShow(false);
-  const cartHandleShow = () => cartSetShow(true);
-
-
-  // State to track active section
-  const [active, setActive] = useState('/');
-
-  // Function to set the active section
-  const handleClick = (section) => {
-    setActive(section);
-    setIsProductOpen(false);
-  };
-
-
-
-
-  const handleLogout = () => {
-    signOut();
-    router.push('/');
-  };
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -81,223 +64,147 @@ const AppBar = () => {
     }
   }, []);
 
-  // Handle scroll position
-  const handleScroll = () => {
-    if (window.scrollY > 45) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
+  const handleLogout = () => {
+    signOut();
+    router.push("/");
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div>
       {/* Top Bar */}
       <div className="appbg">
-        <div
-          style={{
-            color: "#FFF",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "10px 20px",
-            width: "100%",
-            height:'40px',
-            backgroundColor: "#008AC7",
-          }}
-        >
-          {/* Left: Marquee Text */}
-          <div
-            style={{
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              width: "80%",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <p style={{ margin: 0 }}>1000+ customers</p>
-            <span style={{ color: "#FFF", margin: "0 10px" }}>|</span>
-            <p style={{ margin: 0 }}>
-              3 years warranty on ionizer & 15 years warranty on plates.
-            </p>
+        <div className="d-flex justify-content-between align-items-center p-2" style={{ backgroundColor: "#008AC7", color: "#FFF" }}>
+          <div className="d-flex align-items-center" style={{ overflow: "hidden", whiteSpace: "nowrap" }}>
+            <p className="mb-0">1000+ customers</p>
+            <span className="mx-2">|</span>
+            <p className="mb-0">3 years warranty on ionizer & 15 years warranty on plates.</p>
           </div>
-
-          {/* Right: Login */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              cursor: "pointer",
-              color: "#FFF",
-            }}
-          >
+          <div className="d-flex align-items-center" style={{ cursor: "pointer" }}>
             {userData ? (
-        <div className="btn-group">
-          <p
-            type="button"
-            className="dropdown-toggle m-0"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            &nbsp;Hi, {userData.name || userData.given_name || "User"}
-          </p>
-          <ul className="dropdown-menu dropdown-menu-end">
-            <li>
-              <button className="dropdown-item" type="button">
-                <IoBagHandleOutline /> Your Orders
-              </button>
-            </li>
-            <div className="dropdown-divider"></div>
-            <li style={{ cursor: "pointer" }}>
-              <button
-                onClick={handleLogout}
-                className="dropdown-item"
-                type="button"
-              >
-                <LuLogOut /> Logout
-              </button>
-            </li>
-          </ul>
-        </div>
-      ) : (
-        <p
-          onClick={handleShow}
-          style={{ margin: 0, marginLeft: "5px", cursor: "pointer" }}
-        >
-          <FaUser size={15} /> Login
-        </p>
-      )} 
-          </div>
-        </div>
-      </div>
-
-      <div>
-        {/* Navbar */}
-        <nav className={`navbar navbar-expand-lg navbar-light flex-column ${
-        isFixed ? 'fixed' : ""
-      }`}>
-
-          <div className="container-fluid">
-            {/* Left: Logo */}
-            <Link href="/" className="navbar-brand">
-              <Image className="nav-logo" src={logo} width={100} alt="Logo" />
-            </Link>
-
-            {/* Mobile: Toggle Button */}
-            <button
-              className="navbar-toggler"
-              type="button"
-              onClick={handleToggleNavbar}
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            {/* Center: Navbar Links */}
-            <div
-              className={`collapse navbar-collapse ${
-                isCollapsed ? "show" : ""
-              }`}
-            >
-              <ul className="navbar-nav mx-auto">
-                <li className={`nav-item ${active === '/' ? 'active' : ''}`} onClick={() => handleClick('/')}>
-                  <Link className="nav-link" href="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <Link
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    About Us
-                  </Link>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" href="/our-story">
-                        Our Story
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" href="/tyent-global">
-                        Tyent Global
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={`nav-item`}>
-                  <button className="nav-link" onClick={handleToggleProduct}>
-                    Products
-                  </button>
-                </li>
-                <li className={`nav-item ${active === 'benefits' ? 'active' : ''}`} onClick={() => handleClick('benefits')}>
-                  <Link className="nav-link" href="/benefits">
-                    Benefits
-                  </Link>
-                </li>
-                <li className={`nav-item ${active === 'why-tyent' ? 'active' : ''}`} onClick={() => handleClick('why-tyent')}>
-                  <Link className="nav-link" href="/why-tyent">
-                    Why Tyent
-                  </Link>
-                </li>
-                <li className={`nav-item ${active === 'why-water-ionizer' ? 'active' : ''}`} onClick={() => handleClick('why-water-ionizer')}>
-                  <Link className="nav-link" href="/why-water-ionizer">
-                    Why Water Ionizer
-                  </Link>
-                </li>
-                <li className={`nav-item ${active === 'certifications' ? 'active' : ''}`} onClick={() => handleClick('certifications')}>
-                  <Link className="nav-link" href="/certifications">
-                    Certifications
-                  </Link>
-                </li>
-                <li className={`nav-item ${active === 'blogs' ? 'active' : ''}`} onClick={() => handleClick('blogs')}>
-                  <Link className="nav-link" href="/blogs">
-                    Blogs
-                  </Link>
-                </li>
-                <li className={`nav-item ${active === 'testimonials' ? 'active' : ''}`} onClick={() => handleClick('testimonials')}>
-                  <Link className="nav-link" href="/testimonials">
-                    Testimonials
-                  </Link>
-                </li>
-                <li className={`nav-item ${active === 'contact' ? 'active' : ''}`} onClick={() => handleClick('contact')}>
-                  <Link className="nav-link" href="/contact">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-
-              {/* Right: Cart Icon */}
-              <div className="d-none d-lg-block" style={{cursor:'pointer'}} onClick={cartHandleShow}>
-                <MdOutlineShoppingBag size={30} />
+              <div className="btn-group">
+                <button style={{textDecoration:'none'}} type="button" className="btn btn-link text-white dropdown-toggle" data-bs-toggle="dropdown">
+                  Hi, {userData.name || "User"}
+                </button>
+                <ul className="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <button className="dropdown-item">
+                      <IoBagHandleOutline /> Your Orders
+                    </button>
+                  </li>
+                  <li>
+                    <button className="dropdown-item" onClick={handleLogout}>
+                      <LuLogOut /> Logout
+                    </button>
+                  </li>
+                </ul>
               </div>
-            </div>
+            ) : (
+              <p className="mb-0" onClick={() => setShowLoginModal(true)}>
+                <FaUser size={15} /> Login
+              </p>
+            )}
           </div>
-
-          <div>
-        {isProductOpen && (
-          <div className="p-3">
-            <ResponsiveProductPage />
-          </div>
-        )}
         </div>
-        </nav>
-        {/* Collapsible Products Section */}
-        
       </div>
 
-      <Offcanvas show={cartShow} onHide={cartHandleClose} placement="end">
+      {/* Navbar */}
+      <nav className={`navbar navbar-expand-lg navbar-light flex-column ${isFixed ? "fixed" : ""}`}>
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          {/* Toggle Button */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Logo */}
+          <Link href="/" className="navbar-brand">
+            <Image src={logo} width={100} alt="Logo" />
+          </Link>
+
+  
+        {/* Offcanvas Menu */}
+        <div className="offcanvas offcanvas-start" id="offcanvasNavbar">
+          <div className="offcanvas-header">
+            <h5>Menu</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav mx-auto">
+            <li className="nav-item">
+            <Link href="/" className={`nav-link ${pathname === "/" ? "active" : ""}`}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item dropdown">
+            <Link
+              href="#"
+              className={`dropdown-toggle nav-link ${pathname === '/our-story' || pathname === '/tyent-global' ? 'active' : ''}`}
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              About Us
+            </Link>
+            <ul className="dropdown-menu">
+              <li>
+                <Link href="/our-story" className="dropdown-item">
+                  Our Story
+                </Link>
+              </li>
+              <li>
+                <Link href="/tyent-global" className="dropdown-item">
+                  Tyent Global
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className="nav-item">
+              <button className="btn btn-link nav-link" onClick={() => setIsProductOpen(!isProductOpen)}>
+                  Products
+                </button>
+                </li>
+          {[
+            { path: "/benefits", label: "Benefits" },
+            { path: "/why-tyent", label: "Why Tyent" },
+            { path: "/why-water-ionizer", label: "Why Water Ionizer" },
+            { path: "/certifications", label: "Certifications" },
+            { path: "/blogs", label: "Blogs" },
+            { path: "/testimonials", label: "Testimonials" },
+            { path: "/contact", label: "Contact Us" },
+          ].map((item) => (
+            <li key={item.path} className="nav-item">
+              <Link
+                href={item.path}
+                className={`nav-link ${pathname === item.path ? "active" : ""}`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+            </ul>
+          </div>
+        </div>
+
+          {/* Cart Icon */}
+          <div className="d-flex align-items-center" style={{ cursor: "pointer" }} onClick={() => setCartShow(true)}>
+            <div className="counter mx-2">{totalItems || 0}</div>
+            <PiShoppingCartLight size={40} color="#008AC7" />
+          </div>
+        </div>
+
+      {/* Product Page */}
+      {isProductOpen && <ResponsiveProductPage />}
+
+      </nav>
+
+
+      {/* Cart Offcanvas */}
+      <Offcanvas show={cartShow} onHide={() => setCartShow(false)} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
@@ -306,8 +213,9 @@ const AppBar = () => {
         </Offcanvas.Body>
       </Offcanvas>
 
+
       {/* Login Modal */}
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>

@@ -11,7 +11,7 @@ import Footer from "../compoents/Footer";
 import AppBar from "../compoents/AppBar";
 
 export default function ClientComponent({ children, session }) {
-
+   
     const pathname = usePathname();
     // Pages where Navbar and Footer are excluded
     const noLayoutPages = ['/shipping'];
@@ -24,6 +24,8 @@ export default function ClientComponent({ children, session }) {
       duration: 1000, 
     });
   }, []);
+  
+
 
   return (
     <SessionProvider session={session}>

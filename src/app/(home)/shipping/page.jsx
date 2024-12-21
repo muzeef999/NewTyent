@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import useSWR from "swr";
-import { fetchCart, updateItemQuantity } from "@/app/Redux/cartSlice";
+import { deleteProductAction, fetchCart, updateItemQuantity } from "@/app/Redux/cartSlice";
 import "@/app/style/Shipping.css";
-import { IoMdRadioButtonOn } from "react-icons/io";
+import { IoMdRadioButtonOn } from "react-icons/io"; 
 import { IoMdAdd } from "react-icons/io";
 import dynamic from "next/dynamic";
 const CartItems = dynamic(() => import("@/app/(home)/compoents/CartItems"), {srr: false});
@@ -56,7 +56,6 @@ const Page = () => {
     );
   };
 
-  // Fetch shipping addresses using SWR
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data: shippingData, isLoading } = useSWR(
@@ -74,7 +73,7 @@ const Page = () => {
 
   if (!totalAmount) return <Loading />;
 
-  const handleRadioChange = (addressId) => {
+  const handleAddressSelect  = (addressId) => {
     setSelectedAddressId(addressId);
   };
 
@@ -87,6 +86,7 @@ const Page = () => {
       router.push("/Signin");
       return;
     }
+
 
     try {
       setUpdatingProduct(productName);
@@ -101,6 +101,20 @@ const Page = () => {
     } catch (error) {
       console.error("Failed to update quantity:", error);
       setUpdatingProduct(null);
+    }
+  };
+
+
+  
+  const deleteProduct = async (productName) => {
+    try {
+      if (!user?.id) {
+        console.error("User is not logged in.");
+        return;
+      }
+      await dispatch(deleteProductAction({ userId: user.id, productName:productName })).unwrap();
+    } catch (error) {
+      console.error("Failed to delete product:", error);
     }
   };
 
@@ -166,7 +180,7 @@ const Page = () => {
                 aria-labelledby="flush-headingOne"
                 data-bs-parent="#accordionPanelsStayOpenExample"
               >
-                <div className="accordion-body">
+                <div className="accordion-body m-0 p-0">
                   {isLoading ? (
                     <p>Loading...</p>
                   ) : shippingData?.shippingAddresses?.length > 0 ? (
@@ -175,7 +189,9 @@ const Page = () => {
                         {shippingAddress.addresses?.map((address) => (
                           <div
                             key={address._id}
-                            className="address-card mb-3 align-items-start"
+                            className={`address-card align-items-start  ${
+                              selectedAddressId === address._id ? "selected" : ""
+                            }`} 
                           >
                             {" "}
                             {editingAddressId === address._id ? (
@@ -187,13 +203,15 @@ const Page = () => {
                               />
                             ) : (
                               <div className="d-flex align-items-center">
-                                <div className="flex-grow-1 d-flex align-items-start">
+                                <div className="flex-grow-1 d-flex align-items-start m-3">
                                   <div className="form-check">
                                     <input
                                       className="form-check-input"
                                       type="radio"
                                       name="addressRadio"
                                       id={address._id}
+                                      onChange={() => handleAddressSelect(address._id)}
+                                      checked={selectedAddressId === address._id}
                                     />
                                   </div>
                                   <div className="w-100 pl-3">
@@ -222,7 +240,7 @@ const Page = () => {
                                 </div>
                                 <div className="w-10 float-end">
                                   <p
-                                    className="text-end m-1"
+                                    className="text-end m-4"
                                     onClick={() =>
                                       setEditingAddressId(address._id)
                                     }
@@ -237,7 +255,7 @@ const Page = () => {
                                 </div>
                               </div>
                             )}
-                            <hr />
+                            <hr className="m-0" />
                           </div>
                         ))}
                       </div>
@@ -341,6 +359,7 @@ const Page = () => {
         products={products}
         handleQtyChange={handleQtyChange}
         updatingProduct={updatingProduct}
+        deleteProduct={deleteProduct}
       />
     </div>
 

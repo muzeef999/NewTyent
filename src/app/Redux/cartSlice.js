@@ -1,6 +1,7 @@
 // Redux Slice - cartSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { act } from "react";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
 
@@ -42,17 +43,37 @@ export const updateItemQuantity = createAsyncThunk(
         productName,
         quantity,
       });
-      return response.data.cart; // Return the updated cart
+      return response.data; // Return the updated cart
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response?.data || "Error updating item quantity");
     }
   }
 );
 
+export const deleteProductAction = createAsyncThunk(
+  "cart/delCart",
+  async (cartData, { rejectWithValue }) => {
+    try {
+      // Send userId and productName as query parameters in the URL
+      const response = await axios.delete(`${apiUrl}/api/cart/${cartData.userId}`, {
+        data: {userId:cartData.userId, productName: cartData.productName } // Send data in the request body
+      });
+      console.log("Deleted product successfully");
+      return response.data; // Return the deleted productId
+    } catch (error) {
+      console.error("Error deleting product from cart:", error);
+      return rejectWithValue(error.response?.data || "Failed to delete product from cart");
+    }
+  }
+);
+
+
+
+
 const initialState = {
-  products: [],  // Rename `cartItems` to `products` for consistency
+  products: [],  
   userId: null,
-  loading: false,
+  loading: true,
   error: null,
   totalItems: 0,
   totalAmount: 0,
@@ -79,9 +100,15 @@ const cartSlice = createSlice({
       })
       .addCase(fetchCart.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = action.payload.products;
-        state.userId = action.payload.userId;
-        calculateTotal(state);  // Calculate the total after the cart is fetched
+         
+        if (action.payload && action.payload.products) {
+          state.products = action.payload.products;
+          state.userId = action.payload.userId;  
+        } else {
+          state.products = [];
+          state.userId = null;
+        }
+        calculateTotal(state);  
       })
       .addCase(fetchCart.rejected, (state, action) => {
         state.loading = false;
@@ -92,45 +119,68 @@ const cartSlice = createSlice({
       })
       .addCase(postCart.fulfilled, (state, action) => {
         state.loading = false;
-        state.cartItems.push(action.payload);
+        state.products.push(action.payload);
         calculateTotal(state);
       })
       .addCase(postCart.rejected, (state) => {
         state.loading = false;
       })
-      .addCase(updateItemQuantity.pending, (state) => {
+       .addCase(updateItemQuantity.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
       .addCase(updateItemQuantity.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = action.payload.products;
+        state.products = action.payload.cart.products;
         calculateTotal(state);  // Recalculate the total after updating the quantity
       })
       .addCase(updateItemQuantity.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
-      });
+      })
+      .addCase(deleteProductAction.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(deleteProductAction.fulfilled, (state, action) => {
+        state.loading = false;
+        
+        console.log("Before update, current state.products:", state.products);
+        console.log("Action payload:", action.payload);
+      
+        if (action.payload.cart && Array.isArray(action.payload.cart.products)) {
+          state.products = action.payload.cart.products; // Correctly set the products array from the payload
+        } else {
+          console.error("Error: No products in payload or invalid structure", action.payload);
+        }
+      
+        console.log("After update, current state.products:", state.products);
+      
+        calculateTotal(state);
+      })
+      
+      .addCase(deleteProductAction.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });      
   },
 });
 
-// Helper function to calculate total amount and total items
 const calculateTotal = (state) => {
   let totalAmount = 0;
   let totalItems = 0;
+
+  // Iterate over the products array to calculate the total amount and total items
   state.products.forEach((product) => {
-    if (Array.isArray(product.price)) {
-      totalAmount += product.price.reduce((cartTotal, cartItem) => cartTotal + cartItem, 0);
-    } else {
-      totalAmount += product.price * product.quantity;
-    }
-    totalItems += product.quantity;
+    totalAmount += product.price * product.quantity; // Total price calculation
+    totalItems += product.quantity; // Total quantity of items
   });
 
-  // Update the state with the calculated values
-  state.totalAmount = totalAmount + state.deliverCharge; // Add delivery charge to total amount
-  state.totalItems = totalItems;
+  // Add delivery charge to the total amount
+  state.totalAmount = totalAmount + state.deliverCharge;
+  state.totalItems = totalItems; // Update totalItems count
 };
+
 
 export const selectTotalAmount = (state) => state.cart.totalAmount;
 

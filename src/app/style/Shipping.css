@@ -31,6 +31,11 @@
   background-image: none !important;
 }
 
+
+.address-card.selected {
+  background-color: #e6f7ff; 
+}
+
 .steps{
   width: 20px;
   height:20px;

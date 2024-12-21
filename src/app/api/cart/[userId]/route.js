@@ -157,3 +157,51 @@ export const PUT = async (request, { params }) => {
   }
 };
 
+
+export const DELETE = async (request, { params }) => {
+const { userId, productName } = await request.json();
+  if (!userId || !productName) {
+    return new NextResponse("User ID and Product Name are required", { status: 400 });
+  }
+  try {
+    await connect();
+
+    // Find the user's cart
+    const cart = await CartModel.findOne({ userId });
+
+    if (!cart || cart.products.length === 0) {
+      return new NextResponse("Cart is empty or not found", { status: 404 });
+    }
+
+    // Find the index of the product to remove
+    const productIndex = cart.products.findIndex(
+      (product) => product.productName === productName
+    );
+
+    if (productIndex === -1) {
+      return new NextResponse("Product not found in cart", { status: 404 });
+    }
+
+    // Remove the product from the cart
+    cart.products.splice(productIndex, 1);
+
+    await cart.save();
+
+    // Return updated cart
+    return new NextResponse(
+      JSON.stringify({
+        message: "Product removed from cart successfully",
+        cart: cart,
+      }),
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error removing item from cart:", error);
+    return new NextResponse(
+      JSON.stringify({ message: "Internal Server Error" }),
+      { status: 500 }
+    );
+  }
+};
+
+

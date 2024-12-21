@@ -5,15 +5,20 @@ import { IoAddSharp } from "react-icons/io5";
 import Loading from "./Loading"; // Adjust the path if `Loading` is in a different folder.
 import Image from "next/image";
 import productImage from "@/asserts/Ace13.png";
+import { AiOutlineDelete } from "react-icons/ai"; 
 
 
-const CartItems = ({ products, handleQtyChange, updatingProduct }) => {
+const CartItems = ({ products, handleQtyChange, updatingProduct, deleteProduct }) => {
   return (
     <Row className="d-flex flex-column justify-content-between align-items-center">
       {products?.length > 0 ? (
         products.map((item, index) => (
           <div key={index}>
+            <div className="d-flex justify-content-between align-items-center">
             <h5>{item.productName}</h5>
+             <div onClick={() => {
+              deleteProduct(item.productName)}}> <AiOutlineDelete color="#d11a2a" size={20} style={{cursor:'pointer'}} /></div>
+            </div>
             <div className="d-flex justify-content-between align-items-center mb-3">
               <Image
                 style={{
@@ -25,6 +30,7 @@ const CartItems = ({ products, handleQtyChange, updatingProduct }) => {
                 height={100}
                 src={productImage} // Replace with a valid image path
               />
+
               <div className="cartqty">
                 <button
                   className="cartqtybutton"
@@ -57,6 +63,7 @@ const CartItems = ({ products, handleQtyChange, updatingProduct }) => {
                   )}
                 </button>
               </div>
+
               <p style={{ fontWeight: "600" }} className="mb-0">
                 ₹ {new Intl.NumberFormat("en-IN").format(item.price)}/-
               </p>
