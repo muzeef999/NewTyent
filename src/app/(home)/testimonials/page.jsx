@@ -167,26 +167,26 @@ const icons = [
   {
     id: 16,
     icon: icon,
-    name: "muzeef",
-    designation: "Canadian Film Actor",
+    name: "Srinivas Rao",
+    designation: "ACP - Telangana",
   },
   {
     id: 17,
     icon: icon,
-    name: "muzeef",
-    designation: "Canadian Film Actor",
+    name: "Shiva Naidu",
+    designation: "DSP - Crime - Telangana",
   },
   {
     id: 18,
     icon: icon,
-    name: "muzeef",
-    designation: "Canadian Film Actor",
+    name: "Bhanu",
+    designation: "Retired IAS",
   },
   {
     id: 19,
     icon: icon,
-    name: "muzeef",
-    designation: "Canadian Film Actor",
+    name: "Satyanaryana",
+    designation: "KLU  President",
   },
 ];
 

@@ -16,30 +16,30 @@ import logo from "@/asserts/logo.png";
 import Login from "./Login";
 import ResponsiveProductPage from "./ResponsiveProductPage";
 import Cartpage from "./Cart";
-import "@/app/style/AppBar.css"
+import "@/app/style/AppBar.css";
 
 const AppBar = () => {
   const { data: session } = useSession();
   const dispatch = useDispatch();
   const router = useRouter();
-  const pathname = usePathname();  // Get the current path using usePathname
-
+  const pathname = usePathname();
 
   const userData = useSelector((state) => state.auth.user);
   const { totalItems } = useSelector((state) => state.cart);
-
 
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartShow, setCartShow] = useState(false);
-  const [offcanvasOpen, setOffcanvasOpen] = useState(false);  // State to manage offcanvas visibility
+  const [offcanvasOpen, setOffcanvasOpen] = useState(false);
 
+  const toggleOffcanvas = () => {
+    setOffcanvasOpen(!offcanvasOpen);
+  };
 
   const closeOffcanvas = () => {
     setOffcanvasOpen(false);
   };
-
 
   useEffect(() => {
     if (session?.user) {
@@ -53,7 +53,6 @@ const AppBar = () => {
       dispatch(fetchCart(session.user.id));
     }
   }, [session, dispatch]);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,24 +76,39 @@ const AppBar = () => {
     router.push("/");
   };
 
-
   return (
     <div>
       {/* Top Bar */}
       <div className="appbg">
-        <div className="d-flex justify-content-between align-items-center p-2" style={{ backgroundColor: "#008AC7", color: "#FFF" }}>
-        <div className="d-flex align-items-center marquee" style={{ overflow: "hidden", whiteSpace: "nowrap" }}>
-  <div className="marquee-content">
-    <p className="mb-0">1000+ customers</p>
-    <span className="mx-2">|</span>
-    <p className="mb-0">3 years warranty on ionizer & 15 years warranty on plates.</p>
-  </div>
-</div>
+        <div
+          className="d-flex justify-content-between align-items-center p-2"
+          style={{ backgroundColor: "#008AC7", color: "#FFF" }}
+        >
+          <div
+            className="d-flex align-items-center marquee"
+            style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+          >
+            <div className="marquee-content">
+              <p className="mb-0">1000+ customers</p>
+              <span className="mx-2">|</span>
+              <p className="mb-0">
+                3 years warranty on ionizer & 15 years warranty on plates.
+              </p>
+            </div>
+          </div>
 
-          <div className="d-flex align-items-center" style={{ cursor: "pointer" }}>
+          <div
+            className="d-flex align-items-center"
+            style={{ cursor: "pointer" }}
+          >
             {userData ? (
               <div className="btn-group">
-                <button style={{textDecoration:'none'}} type="button" className="btn btn-link text-white dropdown-toggle" data-bs-toggle="dropdown">
+                <button
+                  style={{ textDecoration: "none" }}
+                  type="button"
+                  className="btn btn-link text-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
                   Hi, {userData.name || "User"}
                 </button>
                 <ul className="dropdown-menu dropdown-menu-end">
@@ -104,14 +118,21 @@ const AppBar = () => {
                     </button>
                   </li>
                   <li>
-                    <button className="dropdown-item" onClick={handleLogout}>
+                    <button
+                      className="dropdown-item"
+                      onClick={handleLogout}
+                    >
                       <LuLogOut /> Logout
                     </button>
                   </li>
                 </ul>
               </div>
             ) : (
-              <p className="mb-0" style={{ overflow: "hidden", whiteSpace: "nowrap" }} onClick={() => setShowLoginModal(true)}>
+              <p
+                className="mb-0"
+                style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+                onClick={() => setShowLoginModal(true)}
+              >
                 <FaUser size={15} /> Login
               </p>
             )}
@@ -120,16 +141,16 @@ const AppBar = () => {
       </div>
 
       {/* Navbar */}
-      <nav className={`navbar navbar-expand-lg navbar-light flex-column ${isFixed ? "fixed" : ""}`}>
+      <nav
+        className={`navbar navbar-expand-lg navbar-light flex-column ${isFixed ? "fixed" : ""}`}
+      >
         <div className="container-fluid d-flex justify-content-between align-items-center">
           {/* Toggle Button */}
           <button
             className="navbar-toggler"
             type="button"
-            onClick={() => setOffcanvasOpen(!offcanvasOpen)}  // Toggle offcanvas open state
+            onClick={toggleOffcanvas}
             aria-expanded={offcanvasOpen ? "true" : "false"}
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -139,86 +160,123 @@ const AppBar = () => {
             <Image src={logo} width={100} alt="Logo" />
           </Link>
 
-  
-        {/* Offcanvas Menu */}
-        <div className="offcanvas offcanvas-start"   style={{ width: "40%" }}  id="offcanvasNavbar">
-          <div className="offcanvas-header">
-            <h5>Menu</h5>
-            <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
-          </div>
-          <div className="offcanvas-body">
-            <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-            <Link href="/" className={`nav-link ${pathname === "/" ? "active" : ""}`} onClick={closeOffcanvas}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item dropdown">
-            <Link
-              href="#"
-              className={`dropdown-toggle nav-link ${pathname === '/our-story' || pathname === '/tyent-global' ? 'active' : ''}`}
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              About Us
-            </Link>
-            <ul className="dropdown-menu">
-              <li>
-                <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
-                  Tyent Global
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className="nav-item">
-              <button className="btn btn-link nav-link" onClick={() => setIsProductOpen(!isProductOpen)}>
-                  Products
-                </button>
-                </li>
-          {[
-            { path: "/benefits", label: "Benefits" },
-            { path: "/why-tyent", label: "Why Tyent" },
-            { path: "/why-water-ionizer", label: "Why Water Ionizer" },
-            { path: "/certifications", label: "Certifications" },
-            { path: "/blogs", label: "Blogs" },
-            { path: "/testimonials", label: "Testimonials" },
-            { path: "/contact", label: "Contact Us" },
-          ].map((item) => (
-            <li key={item.path} className="nav-item">
-              <Link
-                href={item.path} 
-                className={`nav-link ${pathname === item.path ? "active" : ""}`}
+          {/* Offcanvas Menu */}
+          <div
+            className={`offcanvas offcanvas-start ${offcanvasOpen ? "show" : ""}`}
+            style={{
+              width: "65%",
+              visibility: offcanvasOpen ? "visible" : "hidden",
+            }}
+          >
+            <div className="offcanvas-header">
+              <h5>Menu</h5>
+              <button
+                type="button"
+                className="btn-close"
                 onClick={closeOffcanvas}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-            </ul>
+              ></button>
+            </div>
+            <div className="offcanvas-body">
+              <ul className="navbar-nav mx-auto">
+                <li className="nav-item">
+                  <Link
+                    href="/"
+                    className={`nav-link ${pathname === "/" ? "active" : ""}`}
+                    onClick={closeOffcanvas}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    href="#"
+                    className={`dropdown-toggle nav-link ${
+                      pathname === "/our-story" || pathname === "/tyent-global"
+                        ? "active"
+                        : ""
+                    }`}
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    About Us
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link
+                        href="/our-story"
+                        className="dropdown-item"
+                        onClick={closeOffcanvas}
+                      >
+                        Our Story
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/tyent-global"
+                        className="dropdown-item"
+                        onClick={closeOffcanvas}
+                      >
+                        Tyent Global
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="btn btn-link nav-link"
+                    onClick={() => setIsProductOpen(!isProductOpen)}
+                  >
+                    Products
+                  </button>
+                </li>
+                {[
+                  { path: "/benefits", label: "Benefits" },
+                  { path: "/why-tyent", label: "Why Tyent" },
+                  { path: "/why-water-ionizer", label: "Why Water Ionizer" },
+                  { path: "/certifications", label: "Certifications" },
+                  { path: "/blogs", label: "Blogs" },
+                  { path: "/testimonials", label: "Testimonials" },
+                  { path: "/contact", label: "Contact Us" },
+                ].map((item) => (
+                  <li key={item.path} className="nav-item">
+                    <Link
+                      href={item.path}
+                      className={`nav-link ${
+                        pathname === item.path ? "active" : ""
+                      }`}
+                      onClick={closeOffcanvas}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
 
           {/* Cart Icon */}
-          <div className="d-flex align-items-center" style={{ cursor: "pointer" }} onClick={() => setCartShow(true)}>
+          <div
+            className="d-flex align-items-center"
+            style={{ cursor: "pointer" }}
+            onClick={() => setCartShow(true)}
+          >
             <div className="counter mx-2">{totalItems || 0}</div>
             <PiShoppingCartLight size={40} color="#008AC7" />
           </div>
         </div>
 
-      {/* Product Page */}
-      {isProductOpen && <ResponsiveProductPage />}
-
+        {/* Product Page */}
+        {isProductOpen && <ResponsiveProductPage />}
       </nav>
 
-
       {/* Cart Offcanvas */}
-      <Offcanvas show={cartShow}  style={{ width: "24%" }} onHide={() => setCartShow(false)} placement="end">
+      <Offcanvas
+        show={cartShow}
+        style={{ width: "24%" }}
+        onHide={() => setCartShow(false)}
+        placement="end"
+      >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
@@ -226,7 +284,6 @@ const AppBar = () => {
           <Cartpage />
         </Offcanvas.Body>
       </Offcanvas>
-
 
       {/* Login Modal */}
       <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
