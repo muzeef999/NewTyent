@@ -39,8 +39,8 @@ const Certifications = () => {
                  <Image
                   src={icon}
                   alt={`Certification ${index + 1}`}
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
                   style={{ objectFit: 'contain' }}
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 100px" // Use responsive sizes based on screen width
                 />

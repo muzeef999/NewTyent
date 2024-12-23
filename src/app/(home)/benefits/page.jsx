@@ -9,6 +9,18 @@ import { IoWaterOutline } from "react-icons/io5";
 import weight from "@/asserts/health/weight.png";
 import digestive from "@/asserts/health/digestive.png";
 import cardiovascular from "@/asserts/health/cardiovascular.png";
+import immune from "@/asserts/health/immune.png"
+import liver from "@/asserts/health/liver.png"
+import oxygen from "@/asserts/health/oxygen.png"
+import kidneys from "@/asserts/health/kidneys.png"
+import spine from "@/asserts/health/spine.png"
+import blood from "@/asserts/health/blood.png"
+import bloodsugar from "@/asserts/health/bloodsugur.png"
+import breathing from "@/asserts/health/breathing.png"
+import chemistry from "@/asserts/health/chemistry.png"
+import glands from "@/asserts/health/glands.png"
+
+
 import policy from "@/asserts/health/policy.png";
 import cannerp from "@/asserts/health/cannerp.png"
 import artharitis from "@/asserts/health/artharitis.png" 
@@ -170,11 +182,11 @@ const BenfitsOnisedAlkaline = [
     title: "Lowers the risk of developing cardiovascular disease",
   },
   {
-    icon: icon,
+    icon: immune,
     title: "Immune System restoration and balance",
   },
   {
-    icon: icon,
+    icon: kidneys,
     title: "Enhancement of the kidneys urinary function",
   },
   {
@@ -182,11 +194,11 @@ const BenfitsOnisedAlkaline = [
     title: "Normalisation of bone and cartilage tissue structue",
   },
   {
-    icon: icon,
-    title: "Enhancement of the kidneys urinary function",
+    icon: liver,
+    title: "Normalisation of liver and bile duct function",
   },
   {
-    icon: icon,
+    icon: spine,
     title: "The joints and spine operate more effectively",
   },
   {
@@ -194,19 +206,19 @@ const BenfitsOnisedAlkaline = [
     title: "Improves vision",
   },
   {
-    icon: icon,
+    icon: oxygen,
     title: "Increases blood oxygen saturation ",
   },
   {
-    icon: icon,
+    icon: bloodsugar,
     title: "Lowers blood sugar levels",
   },
   {
-    icon: icon,
+    icon: chemistry,
     title: "Activates essential body microelements",
   },
   {
-    icon: icon,
+    icon: breathing,
     title: "Normalises thermoregulation and breathing",
   },
   {
@@ -215,11 +227,11 @@ const BenfitsOnisedAlkaline = [
       "Provides reliable protection against the destructive effects of free radicals",
   },
   {
-    icon: icon,
+    icon: blood,
     title: "Enhances the quality of blood and lymph",
   },
   {
-    icon: icon,
+    icon: glands,
     title: "Normalises the function of endocrine glands",
   },
   // Add more features as needed
@@ -231,14 +243,18 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
       {" "}
       {/* AOS animation applied here */}
       <div className="d-flex justify-content-center align-items-center custom-card-benfts" style={{backgroundColor:'#FFF', backgroundBlendMode:'multiply', borderRadius:'15px'}}>
-        <div style={{width:'100%'}}>
+        <div style={{width:'100%', height:'240px'}}>
         <Image
         className="custom-iamge-benfts"
           src={icon}
           priority
-          layout="responsive"
+          layout="intrinsic"
           alt={Heading}
-
+          style={{
+      objectFit: 'contain', // You can use 'contain' as well
+      width: '100%',
+      height:'240px'
+    }}
         />
         </div>
         <div className="ml-4 align-items-center">

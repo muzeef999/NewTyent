@@ -33,6 +33,10 @@ const AppBar = () => {
   const [cartShow, setCartShow] = useState(false);
   const [offcanvasOpen, setOffcanvasOpen] = useState(false);
 
+  const handleisProductOpen = (data) => {
+    setIsProductOpen(data)  
+  }
+
   const toggleOffcanvas = () => {
     setOffcanvasOpen(!offcanvasOpen);
   };
@@ -79,7 +83,7 @@ const AppBar = () => {
   return (
     <div>
       {/* Top Bar */}
-      <div className="appbg">
+      <div className="appbg sticky-top">
         <div
           className="d-flex justify-content-between align-items-center p-2"
           style={{ backgroundColor: "#008AC7", color: "#FFF" }}
@@ -138,11 +142,11 @@ const AppBar = () => {
             )}
           </div>
         </div>
-      </div>
+      
 
       {/* Navbar */}
       <nav
-        className={`navbar navbar-expand-lg navbar-light flex-column ${isFixed ? "fixed" : ""}`}
+        className={`navbar navbar-expand-lg sticky-top navbar-light flex-column ${isFixed ? "fixed" : ""}`}
       >
         <div className="container-fluid d-flex justify-content-between align-items-center">
           {/* Toggle Button */}
@@ -267,7 +271,7 @@ const AppBar = () => {
         </div>
 
         {/* Product Page */}
-        {isProductOpen && <ResponsiveProductPage />}
+        {isProductOpen && <ResponsiveProductPage isProductOpen={handleisProductOpen}  />}
       </nav>
 
       {/* Cart Offcanvas */}
@@ -294,6 +298,7 @@ const AppBar = () => {
           <Login />
         </Modal.Body>
       </Modal>
+    </div>
     </div>
   );
 };

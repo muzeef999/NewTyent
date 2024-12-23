@@ -4,6 +4,7 @@
   .feature-icon {
     width: 100px;
     height: 100px;
+    padding: 10px;
     margin-bottom: 10px;
     background-color: #e9f4fb;
     border-radius: 50%;

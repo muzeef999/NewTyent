@@ -10,21 +10,20 @@ const WhyTyent = () => {
     <section className="container py-5">
       <Row className="align-items-center">
         {/* Left Section */}
-        <Col md={6} className="mb-4">
-        <h2 style={{ fontSize: '42px', fontWeight: '500' }}>
+        <Col md={6} className="mb-4 justify-content-top">
+        <h2  style={{ fontSize: '42px', fontWeight: '500', margin:'0px' }}>
             Why <span style={{ color: '#008AC7', fontWeight: '600', fontSize: '72px' }}>Tyent ?</span>
           </h2>
           <p>
             With over three decades of expertise, Tyent delivers the most advanced, slim, and sleek water ionizers with updated Japanese technology, available in{" "}
             <span className="highlight">86+ countries</span> and renowned for exceptional customer satisfaction worldwide.
           </p>
-          <div className="video-wrapper mt-4">
-            <iframe
+          <div className="video-wrapper mt-4" style={{borderRadius:'20px'}}>
+            <iframe style={{borderRadius:'20px'}}
               width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/FKL-ndta3xE?si=NHY8-rR62itq8kcg&autoplay=1"
+              height="295"
+              src="https://www.youtube.com/embed/VA82Xf6jfv4?rel=0"
               title="YouTube video player"
-              frameBorder="0"
               className="video-frame"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

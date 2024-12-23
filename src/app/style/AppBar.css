@@ -114,7 +114,6 @@ body {
 
 .navbar {
   width: 100%;
-  position: relative;
   background-color: #ffffff;
   transition: all 0.3s ease; /* Smooth transition */
   box-shadow: none;

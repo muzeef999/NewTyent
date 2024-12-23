@@ -145,7 +145,7 @@ const ProductData = [
   },
 ];
 
-const ResponsiveProductPage = ({setOpen}) => {
+const ResponsiveProductPage = ({isProductOpen}) => {
   const [activeCategory, setActiveCategory] = useState(ProductData[0].category);
   const [expandedProduct, setExpandedProduct] = useState(null);
 
@@ -153,6 +153,10 @@ const ResponsiveProductPage = ({setOpen}) => {
     setExpandedProduct(expandedProduct === index ? null : index);
   };
 
+
+  const sendData = () => {
+    isProductOpen(false) // Send the data to the parent
+  };
 
   return (
     <div>
@@ -179,8 +183,8 @@ const ResponsiveProductPage = ({setOpen}) => {
             <div key={idx} className="mb-5">
               <Row>
                 {section.products.map((product, index) => (
-                  <Col key={index} xs={12} sm={6} md={4} lg={3}>
-                    <Link href={`${product.link}`}   onClick={() => setOpen(false)}>
+                  <Col key={index} xs={12} sm={6} md={4} lg={3} >
+                    <Link href={`${product.link}`}   onClick={sendData}>
                     <Card className="h-100 shadow-sm border-0" style={{backgroundColor:'#f1f1ef', textDecoration:'none'}}>
                       <div className="d-flex justify-content-center position-relative">
                         {/* Product Image */}

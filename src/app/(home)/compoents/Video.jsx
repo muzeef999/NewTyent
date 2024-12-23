@@ -27,11 +27,9 @@ const VideoCard = ({ src, description }) => {
 
   const togglePlayStop = () => {
     if (isPlaying) {
-      // Stop the video
       iframeRef.current.src = src; // Reset the iframe source
       setIsPlaying(false);
     } else {
-      // Play the video
       iframeRef.current.src = `${src}&autoplay=1`; // Add autoplay parameter
       setIsPlaying(true);
     }
@@ -48,7 +46,7 @@ const VideoCard = ({ src, description }) => {
           ref={iframeRef}
           className="embed-responsive-item"
           src={src}
-          style={{ borderRadius: "8px", width: "100%", height: "290px" }}
+          style={{ borderRadius: "8px", width: "100%", height: "220px" }}
           allowFullScreen
           title="Video"
         />

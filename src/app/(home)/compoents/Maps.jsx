@@ -7,15 +7,15 @@ const Maps = () => {
   return (
     <div>
       <Row>
-        <Col md={7}>
+        <Col md={7} className='d-flex justify-content-center align-items-center'>
           {/* Using layout="responsive" for the image to make it responsive */}
-          <div style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '56.25%' }}>
+          <div>
+          <div style={{width: '100%', }}>
             <Image
               src={maps}
+              layout='responsive'
+              priority
               alt="map"
-              width={700}           // Set the width ratio of the image
-              height={400}          // Set the height ratio of the image
-              style={{ objectFit: 'contain' }}
             />
           </div>
           <p
@@ -28,6 +28,7 @@ const Maps = () => {
             Technical brilliance with{" "}
             <span style={{ color: "#0082bc" }}>global availability</span>
           </p>
+          </div>
         </Col>
         <Col
           md={5}
