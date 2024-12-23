@@ -24,6 +24,7 @@ import { useState } from 'react';
 import { RWebShare } from 'react-web-share';
 import { IoShareSocial } from "react-icons/io5";
 import dynamic from 'next/dynamic';
+import certification from "@/asserts/certifications/certification.png"
 const Header = dynamic(() => import('../compoents/Header'), {
   ssr: false,
 });
@@ -70,7 +71,7 @@ const CertificationsPage = () => {
     preheading:'Building',
     afterheading: "Global Recognition",
     content: "At Tyent, every drop of water symbolizes purity, safety, and advanced technology. Our certifications and patents stand as a testament to our unwavering commitment to quality, innovation, and customer well-being. Recognized by world-renowned regulatory bodies and industry leaders, these certifications validate the safety, effectiveness, and reliability of Tyent water ionizers.",
-    img: "path/to/image.jpg", // Add image URL if needed
+    img: certification, // Add image URL if needed
     animatedText: "Trust, Credibility" // Pass the animated text here
   }
 

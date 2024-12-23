@@ -40,6 +40,7 @@ const AppBar = () => {
     setOffcanvasOpen(false);
   };
 
+
   useEffect(() => {
     if (session?.user) {
       dispatch(
@@ -53,9 +54,10 @@ const AppBar = () => {
     }
   }, [session, dispatch]);
 
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsFixed(window.scrollY > 45);
+      setIsFixed(window.scrollY > 25);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -109,7 +111,7 @@ const AppBar = () => {
                 </ul>
               </div>
             ) : (
-              <p className="mb-0" onClick={() => setShowLoginModal(true)}>
+              <p className="mb-0" style={{ overflow: "hidden", whiteSpace: "nowrap" }} onClick={() => setShowLoginModal(true)}>
                 <FaUser size={15} /> Login
               </p>
             )}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import dynamic from 'next/dynamic';
+import why from '@/asserts/whyTyeny.png'
+const Header = dynamic(() => import("../compoents/Header"), {ssr: false});
 const FeatureCard = dynamic(() => import("../compoents/FeatureCard"), {srr:false})
 
 export const metadata = {
@@ -112,8 +114,28 @@ async function fetchData() {
 const Page = async () => {
   const data = await fetchData(); // Fetch data inside the component
 
+  const headerData = {
+    basic: "Trust, Satisfaction & Transformations",
+    preheading: "Hear From Our Real",
+    afterheading: "Satisfied Tyent India Customers",
+    content:
+      "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
+    img: "path/to/image.jpg", // Add image URL if needed
+    animatedText: "Health, Wellness, Transformation", // Pass the animated text here
+  };
+
+
   return (
     <>
+
+     <Header
+            basic={headerData.basic}
+            preheading={headerData.preheading}
+            afterheading={headerData.afterheading}
+            content={headerData.content}
+            img={why}
+            animatedText={headerData.animatedText}
+          />
       <FeatureCard data={data} />
     </>
   );

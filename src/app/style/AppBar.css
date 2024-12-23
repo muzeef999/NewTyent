@@ -86,7 +86,9 @@ body {
 
 .nav-item {
   padding: 5px;
-  color: inherit !important; /* Inherit color from parent navbar */
+}
+.nav-link{
+  cursor: pointer !important;
 }
 
 

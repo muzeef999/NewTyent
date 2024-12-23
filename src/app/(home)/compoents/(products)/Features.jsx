@@ -14,7 +14,6 @@ const Features = ({data, delay }) => {
   }, []);
 
 
-
   return (
       <div
           key={data.id}
@@ -22,7 +21,7 @@ const Features = ({data, delay }) => {
           data-aos-delay={delay } // Delay to stagger the animations
         >
           <div className="custom-card">
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="justify-content-center align-items-center">
               <div style={{ width: '100%' }}>
                 <Image
                   src={data.icon}
@@ -34,15 +33,7 @@ const Features = ({data, delay }) => {
                   placeholder="blur"
                 />
               </div>
-              <hr
-                style={{
-                  margin: '8px',
-                  height: '15vh',
-                  width: '.5vw',
-                  border: 'none',
-                  backgroundColor: '#008AC7',
-                }}
-              />
+              
               <div>
                 <h4 style={{ color: '#008AC7', fontWeight: 500 }}>{data.title}</h4>
                 <p style={{ fontSize: '14px' }}>{data.description}</p>

@@ -8,7 +8,7 @@ import Filter from "@/app/(home)/compoents/(products)/Filter";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import npmhealth from "@/asserts/npmhealth.png";
 import Image from "next/image";
-import plates from "@/asserts/nmp/NMP5ECOMODE.webp";
+import plates from "@/asserts/nmp/qtyo.png";
 import AnimatedSVG from "@/app/(home)/compoents/(products)/AnimatedSVG";
 import Certifications from "@/app/(home)/compoents/Certifications";
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
@@ -185,7 +185,7 @@ const TyentNMP5 = () => {
         {/* Features Section */}
           <div className="row g-3">
             {features.map((data, index) => (
-              <div className="col-md-6" key={data.id}>
+              <div className="col-md-4" key={data.id}>
                 <Features data={data} delay={index * 100} />
               </div>
             ))}

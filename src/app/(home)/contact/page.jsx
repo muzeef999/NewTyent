@@ -5,6 +5,7 @@ import { IoCallOutline, IoTimeOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 import Form from '../compoents/Form/Form';
 import dynamic from "next/dynamic";
+import certification from "@/asserts/certifications/certification.png"
 const Header = dynamic(() => import('../compoents/Header'), {
   ssr: false,
 });
@@ -22,7 +23,7 @@ const headerData = {
   preheading:'Hear From Our Real',
   afterheading: "Satisfied Tyent India Customers",
   content: "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
-  img: "path/to/image.jpg", // Add image URL if needed
+  img: certification,
   animatedText: "Health, Wellness, Transformation" // Pass the animated text here
 }
 

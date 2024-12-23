@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { TypeAnimation } from 'react-type-animation'
@@ -55,7 +56,11 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
           </div>
         </Col>
 
-        <Col md={6}></Col>
+        <Col md={6}>
+        <div style={{width:'100%'}}>
+          <Image src={img} alt="image" layout='responsive' priority />
+        </div>
+        </Col>
       </Row>
     </div>
   )
