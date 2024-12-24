@@ -111,10 +111,7 @@ function CustomizedTables() {
 
 
   return (
-    <Container fluid="lg" >
-
-
-
+    <>
       <Table className='table-borderless border  p-0' style={{borderRadius:'15px', overflow: 'hidden', }} hover responsive  >
        
         <tbody>
@@ -138,7 +135,7 @@ function CustomizedTables() {
           ))}
         </tbody>
       </Table>
-    </Container>
+    </>
   );
 }
 

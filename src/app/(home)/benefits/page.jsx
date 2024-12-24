@@ -9,31 +9,30 @@ import { IoWaterOutline } from "react-icons/io5";
 import weight from "@/asserts/health/weight.png";
 import digestive from "@/asserts/health/digestive.png";
 import cardiovascular from "@/asserts/health/cardiovascular.png";
-import immune from "@/asserts/health/immune.png"
-import liver from "@/asserts/health/liver.png"
-import oxygen from "@/asserts/health/oxygen.png"
-import kidneys from "@/asserts/health/kidneys.png"
-import spine from "@/asserts/health/spine.png"
-import blood from "@/asserts/health/blood.png"
-import bloodsugar from "@/asserts/health/bloodsugur.png"
-import breathing from "@/asserts/health/breathing.png"
-import chemistry from "@/asserts/health/chemistry.png"
-import glands from "@/asserts/health/glands.png"
-
+import immune from "@/asserts/health/immune.png";
+import liver from "@/asserts/health/liver.png";
+import oxygen from "@/asserts/health/oxygen.png";
+import kidneys from "@/asserts/health/kidneys.png";
+import spine from "@/asserts/health/spine.png";
+import blood from "@/asserts/health/blood.png";
+import bloodsugar from "@/asserts/health/bloodsugur.png";
+import breathing from "@/asserts/health/breathing.png";
+import chemistry from "@/asserts/health/chemistry.png";
+import glands from "@/asserts/health/glands.png";
 
 import policy from "@/asserts/health/policy.png";
-import bpp from "@/asserts/health/bpp.png"
-import Diabetes from "@/asserts/health/Diabetesp.png"
-import heartp from "@/asserts/health/heartp.png"
-import cannerp from "@/asserts/health/cannerp.png"
-import artharitis from "@/asserts/health/artharitis.png" 
-import kidneyp from "@/asserts/health/kidneyp.png"
-import energyp from "@/asserts/health/energyp.png"
-import Obesity from "@/asserts/health/Obesity.png"
-import Respiratory from "@/asserts/health/Respiratory.png"
-import yogo from "@/asserts/health/yogo.png"
-import skin from "@/asserts/health/skin.png"
-import sleep from "@/asserts/health/sleep.png"
+import bpp from "@/asserts/health/bpp.png";
+import Diabetes from "@/asserts/health/Diabetesp.png";
+import heartp from "@/asserts/health/heartp.png";
+import cannerp from "@/asserts/health/cannerp.png";
+import artharitis from "@/asserts/health/artharitis.png";
+import kidneyp from "@/asserts/health/kidneyp.png";
+import energyp from "@/asserts/health/energyp.png";
+import Obesity from "@/asserts/health/Obesity.png";
+import Respiratory from "@/asserts/health/Respiratory.png";
+import yogo from "@/asserts/health/yogo.png";
+import skin from "@/asserts/health/skin.png";
+import sleep from "@/asserts/health/sleep.png";
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -242,29 +241,21 @@ const BenfitsOnisedAlkaline = [
 
 const IconTest = ({ Heading, id, icon, Descrpition }) => {
   return (
-    <div data-aos="fade-up">
-      {" "}
-      {/* AOS animation applied here */}
-      <div className="d-flex justify-content-center align-items-center custom-card-benfts" style={{ backgroundColor: '#FFF', backgroundBlendMode: 'multiply', borderRadius: '15px' }}>
-  <div style={{ width: '100%', height: '240px' }}> {/* Set height directly on the div */}
-    <Image
-      className="custom-iamge-benfts"
-      src={icon}
-      priority
-      layout="fixed"
-      alt={Heading}
-      style={{
-        objectFit: 'fill', // 'contain' or 'cover' might also work depending on the effect you want
-        width: '100%',
-        height: '240px', // Image height now set correctly
-      }}
-    />
-  </div>
-
+     <div>
+      <div 
+        className="d-flex justify-content-center align-items-center custom-card-benfts"
+      >
+        <Image
+            className="custom-image-benfts"
+            src={icon}
+            priority
+            layout="fixed"
+            alt={Heading}
+          />
         <div className="ml-4 align-items-center">
-          <h3 className="m-4 text-start" style={{color:'#008AC7'}}>
+          <h3 className="m-4 text-start" style={{ color: "#008AC7" }}>
             <b>
-              {id}. {Heading}
+              {id}.{Heading}
             </b>
           </h3>
           <p className="text-start m-4" style={{ color: "#565959" }}>
@@ -272,7 +263,7 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 
@@ -470,10 +461,17 @@ const Page = () => {
             <span style={{ color: "#008AC7" }}> diabetes.</span>
           </p>
 
-          <Row className="gy-5 container">
+         <div className="container">
+          <Row className="d-flex flex-wrap">
             {icons.map((iconItem) => (
-              <Col md={6} key={iconItem.id} data-aos="zoom-in">
-                {" "}
+              <Col
+                key={iconItem.id}
+                xs={12} // Full width on extra-small screens
+                sm={12} // Two columns on small screens
+                md={6} // Three columns on medium screens
+                lg={6} // Four columns on large screens
+                data-aos="zoom-in"
+              >
                 {/* Apply AOS here */}
                 <IconTest
                   id={iconItem.id}
@@ -484,6 +482,7 @@ const Page = () => {
               </Col>
             ))}
           </Row>
+          </div>
         </center>
 
         <br />
@@ -497,8 +496,8 @@ const Page = () => {
             }}
           >
             The Benefits of{" "}
-            <span style={{ color: "#008AC7" }}>onised alkaline water </span>{" "}
-            for your health
+            <span style={{ color: "#008AC7" }}>onised alkaline water </span> for
+            your health
           </h2>
         </center>
         <br />

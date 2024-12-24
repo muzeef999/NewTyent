@@ -79,9 +79,6 @@ const Page = () => {
         </Row>
       </Container>
 
-      {/* Form Component */}
-      <br />
-      <Form />
     </div>
   );
 };

@@ -205,8 +205,6 @@ const Home = () => {
       <br />
       <ContactSection />
       <br />
-      <br />
-      <Form />
     </div>
   );
 };

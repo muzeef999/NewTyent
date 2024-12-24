@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import CustomizedTables from '../CustomizedTables'
+import CustomizedTables from './CustomizedTables'
 import { Tab, Tabs } from 'react-bootstrap'
-import PriceComp from "../../compoents/PriceComp"
+import PriceComp from "./PriceComp"
 
 const TyentvsKAngan = () => {
   return (

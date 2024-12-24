@@ -5,10 +5,10 @@ import { SessionProvider } from "next-auth/react";
 import { store } from "@/app/Redux/store";
 import Aos from "aos";
 import { useEffect } from "react";
-import SvgBackground from "../compoents/SvgBackground";
 import { usePathname } from "next/navigation";
 import Footer from "../compoents/Footer";
 import AppBar from "../compoents/AppBar";
+import Form from "../compoents/Form/Form";
 
 export default function ClientComponent({ children, session }) {
    
@@ -33,6 +33,9 @@ export default function ClientComponent({ children, session }) {
         {/* <SvgBackground /> */}
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>
+        <br/>
+        <br/>
+        {!shouldExcludeLayout && <Form />}
         {!shouldExcludeLayout && <Footer />}
       </Provider>
     </SessionProvider>
