@@ -22,6 +22,9 @@ import glands from "@/asserts/health/glands.png"
 
 
 import policy from "@/asserts/health/policy.png";
+import bpp from "@/asserts/health/bpp.png"
+import Diabetes from "@/asserts/health/Diabetesp.png"
+import heartp from "@/asserts/health/heartp.png"
 import cannerp from "@/asserts/health/cannerp.png"
 import artharitis from "@/asserts/health/artharitis.png" 
 import kidneyp from "@/asserts/health/kidneyp.png"
@@ -42,14 +45,14 @@ export const metadata = {
 const icons = [
   {
     id: 1,
-    icon: cannerp,
+    icon: Diabetes,
     Heading: "Diabetes",
     Descrpition:
       "Tyent water improves glucose metabolism, enhances insulin sensitivity, and reduces oxidative stress, supporting better blood sugar control.",
   },
   {
     id: 2,
-    icon: icon,
+    icon: bpp,
     Heading: "Hypertension (High BP)",
     Descrpition:
       "The antioxidant properties of Tyent water reduce oxidative damage to blood vessels, promoting better blood flow and heart health.",
@@ -91,7 +94,7 @@ const icons = [
   },
   {
     id: 8,
-    icon: icon,
+    icon: heartp,
     Heading: "Cardiovascular Disease",
     Descrpition:
       "Alkaline water prevents stone formation by balancing pH levels, dissolving uric acid, and supporting kidney health.",
@@ -242,21 +245,22 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
     <div data-aos="fade-up">
       {" "}
       {/* AOS animation applied here */}
-      <div className="d-flex justify-content-center align-items-center custom-card-benfts" style={{backgroundColor:'#FFF', backgroundBlendMode:'multiply', borderRadius:'15px'}}>
-        <div style={{width:'100%', height:'240px'}}>
-        <Image
-        className="custom-iamge-benfts"
-          src={icon}
-          priority
-          layout="intrinsic"
-          alt={Heading}
-          style={{
-      objectFit: 'contain', // You can use 'contain' as well
-      width: '100%',
-      height:'240px'
-    }}
-        />
-        </div>
+      <div className="d-flex justify-content-center align-items-center custom-card-benfts" style={{ backgroundColor: '#FFF', backgroundBlendMode: 'multiply', borderRadius: '15px' }}>
+  <div style={{ width: '100%', height: '240px' }}> {/* Set height directly on the div */}
+    <Image
+      className="custom-iamge-benfts"
+      src={icon}
+      priority
+      layout="fixed"
+      alt={Heading}
+      style={{
+        objectFit: 'fill', // 'contain' or 'cover' might also work depending on the effect you want
+        width: '100%',
+        height: '240px', // Image height now set correctly
+      }}
+    />
+  </div>
+
         <div className="ml-4 align-items-center">
           <h3 className="m-4 text-start" style={{color:'#008AC7'}}>
             <b>

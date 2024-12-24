@@ -144,7 +144,6 @@ body {
   text-decoration-color: #008AC7; /* Color of underline */
   text-decoration-thickness: 4px; /* Thickness of underline */
   text-underline-offset: 8px; /* Space between text and underline */
-  border-radius: 60%; /* Adds rounded corners */
   display: inline-block; /* Ensures width works properly for inline elements */
 }
 
@@ -203,6 +202,39 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
     position: relative;
   }
 
+  .nav-tabs .nav-item {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .nav-tabs .nav-link {
+    color: #008AC7; /* Change this to the desired color for inactive tab links */
+    font: 500 !important;
+    border-bottom: none; /* Remove the bottom border */
+    border: 1px solid  #008AC7 !important;
+  }
+  
+  
+  .nav-tabs .nav-link.active {
+    background-color: #008AC7 !important;  
+   color: #FFF !important;
+   border: 1px solid  #008AC7 !important;
+  }
+
+  #uncontrolled-tab-example{
+    margin: 0 !important;
+    border-bottom: none; /* Remove the bottom border */
+  }
+
+  .tabcontentdesign{
+    border: 1px solid #008AC7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+
+  
 .contactSectionbg {
   background-image: url(../../asserts/bgcontact.png);
     background-size: cover;
@@ -222,23 +254,24 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   
 }
 
-
-
-
 .custom-table thead, .custom-table tbody, .custom-table tr, .custom-table td {
   background-color: transparent !important; /* Apply transparent to the entire table */
 }
 
-.rotate-360 {
-  animation: rotate-animation 29s linear infinite;
+
+.table-borderless p {
+  font-size: 16px; /* Base size */
 }
 
-@keyframes rotate-animation {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .table-borderless p {
+    font-size: 14px; /* Smaller size for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 576px) {
+  .table-borderless p {
+    font-size: 11px;
   }
 }
 
@@ -251,6 +284,22 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   h1, h2, h3, h4 {
     margin-top: 30px;
     margin-bottom: 15px;
+  }
+}
+
+
+
+
+.rotate-360 {
+  animation: rotate-animation 29s linear infinite;
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

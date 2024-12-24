@@ -1,4 +1,5 @@
-import { Col, Row } from "react-bootstrap";
+"use client";
+import { Col, Row, Tab, Tabs } from "react-bootstrap";
 import ContactSection from "./compoents/(Home)/ContactSection";
 import WhyTyent from "./compoents/(Home)/WhyTyent";
 import SectionTwo from "./compoents/(Home)/SectionTwo";
@@ -10,22 +11,21 @@ import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
 import CustomizedTables from "./compoents/CustomizedTables";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
-import Loading  from "./compoents/Loading"
+import Loading from "./compoents/Loading";
+import { CiSettings } from "react-icons/ci";
+
 
 const PriceComp = dynamic(() => import("./compoents/PriceComp"), {
-  ssr: false, 
+  ssr: false,
 });
 const SlickSlider = dynamic(() => import("./compoents/SlickSlider"), {
-  ssr: false, 
+  ssr: false,
 });
 const Form = dynamic(() => import("./compoents/Form/Form"), {
-  ssr: false, 
+  ssr: false,
 });
 
 const Home = () => {
-
-  
-
   const cardDetails = [
     {
       title: "Alkalinity",
@@ -75,89 +75,156 @@ const Home = () => {
     },
   ];
 
-
   return (
     <div>
-
-     <Slider />
-     <br/>
-     <br/>
+      <Slider />
+      <br />
+      <br />
       <SectionTwo />
-       <br/>
-       <br/>
-       <br/>
-       <div className="container">
-      <Row className="align-items-center">
-        <Col xs={12} md={3} className="text-start mb-3 mb-md-0">
-          <h2 style={{ fontWeight: 700 }} className="d-inline-block">
-            Why To Drink <span style={{ color: '#008AC7' }}>Tyent</span>  Water ?
-          </h2>
-        </Col>
-        <Col xs={12} md={9} className="text-end">
-          <TyentLineAnimation /> 
-        </Col>
-      </Row>
       <br />
       <br />
-      <Row className="g-4">
-        {cardDetails.map((card, index) => (
-          <Col key={index} xs={12} sm={6} md={3}>
-            <WhyDrinkTyentWater title={card.title} content={card.content} /> {/* Individual card */}
+      <br />
+      <div className="container">
+        <Row className="align-items-center">
+          <Col xs={12} md={3} className="text-start mb-3 mb-md-0">
+            <h2 style={{ fontWeight: 700 }} className="d-inline-block">
+              Why To Drink <span style={{ color: "#008AC7" }}>Tyent</span> Water
+              ?
+            </h2>
           </Col>
-        ))}
-      </Row>
-    </div>
-     <br/>
-     <br/>
+          <Col xs={12} md={9} className="text-end">
+            <TyentLineAnimation />
+          </Col>
+        </Row>
+        <br />
+        <br />
+        <Row className="g-4">
+          {cardDetails.map((card, index) => (
+            <Col key={index} xs={12} sm={6} md={3}>
+              <WhyDrinkTyentWater title={card.title} content={card.content} />{" "}
+              {/* Individual card */}
+            </Col>
+          ))}
+        </Row>
+      </div>
+      <br />
+      <br />
       <WhyTyent />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <div className="container">
         <Row>
-          <Col md={6} className="d-flex justify-content-center alin-items-center" style={{backgroundColor:'#008AC7', color:'#FFF'}}>
-          <div style={{padding:'60px'}}>
-            <h2 style={{fontWeight:600}}>Why Tyent ?</h2>
-            <p style={{fontSize:'18px'}}>Tyent, a medical-grade water ionizer manufactured by TAEYOUNG E&T, is available in 86+ countries. Since more than 3 decades Tyent is known for its advanced Japanese technology, Tyent follows traditional marketing and offers end-to-end service with an in-house team handling demos, installations, and after-sales support, focusing customer satisfaction and brand trust.</p>
-          </div>
+          <Col
+            md={6}
+            className="d-flex justify-content-center alin-items-center"
+            style={{ backgroundColor: "#008AC7", color: "#FFF" }}
+          >
+            <div style={{ padding: "60px" }}>
+              <h2 style={{ fontWeight: 600 }}>Why Tyent ?</h2>
+              <p style={{ fontSize: "18px" }}>
+                Tyent, a medical-grade water ionizer manufactured by TAEYOUNG
+                E&T, is available in 86+ countries. Since more than 3 decades
+                Tyent is known for its advanced Japanese technology, Tyent
+                follows traditional marketing and offers end-to-end service with
+                an in-house team handling demos, installations, and after-sales
+                support, focusing customer satisfaction and brand trust.
+              </p>
+            </div>
           </Col>
-          <Col md={6} className="d-flex justify-content-center alin-items-center" style={{backgroundColor:'#f2f2f2', color:'#000'}}>
-          <div style={{padding:'60px'}}>
-            <h2 style={{fontWeight:600}}>What is Kangen ?</h2>
-            <p style={{fontSize:'18px'}}>Kangen, a medical-grade water ionizer manufactured by Enagic & Co, is available in 26+ countries., relies on an MLM business model, doubling prices as 49% of costs go to commissions for 30 middlemen. Unlike other ionizers, Kangen lacks manpower for demo, installation and after-sales doorstep service globally, Focusing revenue generation over end customer satisfaction.</p>
-          </div>
+          <Col
+            md={6}
+            className="d-flex justify-content-center alin-items-center"
+            style={{ backgroundColor: "#f2f2f2", color: "#000" }}
+          >
+            <div style={{ padding: "60px" }}>
+              <h2 style={{ fontWeight: 600 }}>What is Kangen ?</h2>
+              <p style={{ fontSize: "18px" }}>
+                Kangen, a medical-grade water ionizer manufactured by Enagic &
+                Co, is available in 26+ countries., relies on an MLM business
+                model, doubling prices as 49% of costs go to commissions for 30
+                middlemen. Unlike other ionizers, Kangen lacks manpower for
+                demo, installation and after-sales doorstep service globally,
+                Focusing revenue generation over end customer satisfaction.
+              </p>
+            </div>
           </Col>
         </Row>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <CustomizedTables />
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
 
-      <PriceComp />
-      <br/>
-      <br/>
-       <Certifications />
-      <br/>
-      <br/>
-      <h1 className="text-center" style={{ fontSize: '3rem', fontWeight: 'bold', color: '#333' }}>Technical excellence with global availability</h1>
+      <p
+        className="text-center"
+        style={{
+          marginTop: "-20px",
+          fontWeight: 600,
+          fontSize: "70px",
+          color: "#008AC7",
+        }}
+      >
+        Tyent
+        <span
+          style={{ color: "#7B7B7B", fontSize: "44px", fontWeight: "normal" }}
+        >
+          {" "}
+          VS{" "}
+        </span>{" "}
+        <span style={{ color: "#7B7B7B" }}>Kangen</span>
+      </p>
+
+      <div className="container">
+        <Tabs variant="tabs"
+          defaultActiveKey="home"
+          id="uncontrolled-tab-example" className="m-0 p-0"
+          style={{margin:'0px !imortant', padding: '0px !important'}}
+        >
+          <Tab eventKey="home" className="tabcontentdesign" title="Technical Comparison">
+            <CustomizedTables />
+          </Tab>
+          <Tab eventKey="profile" className="tabcontentdesign"  title="Detail Comparison">
+            <PriceComp />
+          </Tab>
+        </Tabs>
+      </div>
+
+      
+
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <Certifications />
+      <br />
+      <br />
+      <h1
+        className="text-center"
+        style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
+      >
+        Technical excellence with global availability
+      </h1>
       <Video />
-      <br/>
-      <h1 className="text-center" style={{ fontSize: '3rem', fontWeight: 'bold', color: '#333' }}>  Our Valued Clients</h1>
-       <br/>
+      <br />
+      <h1
+        className="text-center"
+        style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
+      >
+        {" "}
+        Our Valued Clients
+      </h1>
+      <br />
       <SlickSlider />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <Maps />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <ContactSection />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <Form />
-     
     </div>
-  )
-}
+  );
+};
 export default Home;

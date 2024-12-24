@@ -30,7 +30,7 @@ export default function ClientComponent({ children, session }) {
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
-        <SvgBackground />
+        {/* <SvgBackground /> */}
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>
         {!shouldExcludeLayout && <Footer />}

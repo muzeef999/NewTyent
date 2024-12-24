@@ -8,24 +8,24 @@ function CustomizedTables() {
   // Table data
   const rows = [
     {
-      check: '',
-      image: (
-        <div className="d-flex justify-content-center">
-          <center>
-            {/* Uncomment and add the correct path for the image */}
-            {/* <img id="timgs" src={require('../assets/products/tyent.png')} alt="Tyent" /> */}
-          </center>
-        </div>
-      ),
-      description: (
-        <div className="text-center">
-          {/* Uncomment and add the correct path for the image */}
-          {/* <img src={require('../assets/vs.png')} width="40%" alt="VS" /> */}
-          <p className="mb-0" style={{ color: '#000', fontWeight: '500' }}>Think Once</p>
-          <p className="mb-0" style={{ color: '#000', fontWeight: '500' }}>before</p>
-          <p style={{ color: '#0082bc', fontWeight: '600' }}>buying</p>
-        </div>
-      ),
+      // check: '',
+      // image: (
+      //   <div className="d-flex justify-content-center">
+      //     <center>
+      //       {/* Uncomment and add the correct path for the image */}
+      //       {/* <img id="timgs" src={require('../assets/products/tyent.png')} alt="Tyent" /> */}
+      //     </center>
+      //   </div>
+      // ),
+      // description: (
+      //   <div className="text-center">
+      //     {/* Uncomment and add the correct path for the image */}
+      //     {/* <img src={require('../assets/vs.png')} width="40%" alt="VS" /> */}
+      //     <p className="mb-0" style={{ color: '#000', fontWeight: '500' }}>Think Once</p>
+      //     <p className="mb-0" style={{ color: '#000', fontWeight: '500' }}>before</p>
+      //     <p style={{ color: '#0082bc', fontWeight: '600' }}>buying</p>
+      //   </div>
+      // ),
       wrong: '',
       details: (
         <div>
@@ -113,45 +113,27 @@ function CustomizedTables() {
   return (
     <Container fluid="lg" >
 
-<h1 className="text-center" style={{ fontSize: '3rem', fontWeight: 'bold', color: '#333' }}>
-  Technical Comparison
-</h1>
-<p 
-  className="text-center" 
-  style={{
-    marginTop:'-20px',
-    fontWeight: 600, 
-    fontSize: '70px', 
-    color: '#008AC7', 
-  }}
->
-  Tyent<span style={{ color: '#7B7B7B', fontSize: '44px', fontWeight: 'normal' }}>
-    {' '}VS{' '}
-  </span> <span style={{color:'#7B7B7B'}}>Kangen</span>
-</p>
 
 
-      <Table className='table-borderless border custom-card' style={{borderRadius:'15px', overflow: 'hidden', padding:'5px'}} hover responsive="md"  >
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th>Description</th>
-            <th style={{backgroundColor:'#C8C8C8', borderTopLeftRadius:'10px'}}></th>
-            <th style={{backgroundColor:'#C8C8C8', borderTopRightRadius:'10px'}}>Details</th>
-          </tr>
-        </thead>
+      <Table className='table-borderless border  p-0' style={{borderRadius:'15px', overflow: 'hidden', }} hover responsive  >
+       
         <tbody>
+          <tr>
+                 <td><p>Descrpition</p></td>
+                 <td colSpan={2}><p>tyent</p></td>
+                 <td style={{backgroundColor:'#f6f6f6'}} colSpan={2}><p>kagan</p></td>
+          </tr>
           {rows.map((row, index) => (
             <tr  key={index}>
                <td style={{ width: '30%', color:'#008AC7' }}>
-                <strong>{row.description}</strong>
+                <p><strong>{row.description}</strong></p>
               </td>
-              <td>{row.check}</td>
-              <td style={{ width: '30%' }}>{row.image}</td>
+
+              <td><p>{row.check}</p></td>
+              <td style={{ width: '30%' }}><p>{row.image}</p></td>
               
-              <td style={{backgroundColor:'#C8C8C8'}}>{row.wrong}</td>
-              <td style={{ width: '30%', backgroundColor:'#C8C8C8' }}>{row.details}</td>
+              <td style={{backgroundColor:'#f6f6f6'}}><p>{row.wrong}</p></td>
+              <td style={{ width: '30%', backgroundColor:'#f6f6f6' }}><p>{row.details}</p></td>
             </tr>
           ))}
         </tbody>
