@@ -1,5 +1,4 @@
-"use client";
-import { Col, Row, Tab, Tabs } from "react-bootstrap";
+import { Col, Row,} from "react-bootstrap";
 import ContactSection from "./compoents/(Home)/ContactSection";
 import WhyTyent from "./compoents/(Home)/WhyTyent";
 import SectionTwo from "./compoents/(Home)/SectionTwo";
@@ -9,15 +8,13 @@ import Video from "./compoents/Video";
 import Maps from "./compoents/Maps";
 import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
-import CustomizedTables from "./compoents/CustomizedTables";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
-import Loading from "./compoents/Loading";
-import { CiSettings } from "react-icons/ci";
 
-
-const PriceComp = dynamic(() => import("./compoents/PriceComp"), {
+const TyentvsKAngan = dynamic(() => import("./compoents/(Home)/TyentvsKAngan"), {
   ssr: false,
 });
+
+
 const SlickSlider = dynamic(() => import("./compoents/SlickSlider"), {
   ssr: false,
 });
@@ -173,21 +170,7 @@ const Home = () => {
         <span style={{ color: "#7B7B7B" }}>Kangen</span>
       </p>
 
-      <div className="container">
-        <Tabs variant="tabs"
-          defaultActiveKey="home"
-          id="uncontrolled-tab-example" className="m-0 p-0"
-          style={{margin:'0px !imortant', padding: '0px !important'}}
-        >
-          <Tab eventKey="home" className="tabcontentdesign" title="Technical Comparison">
-            <CustomizedTables />
-          </Tab>
-          <Tab eventKey="profile" className="tabcontentdesign"  title="Detail Comparison">
-            <PriceComp />
-          </Tab>
-        </Tabs>
-      </div>
-
+      <TyentvsKAngan />
       
 
       <br />
