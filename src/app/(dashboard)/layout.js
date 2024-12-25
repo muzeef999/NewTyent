@@ -5,9 +5,12 @@ import Sidebar from "./compoents/Sidebar";
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Provider } from "react-redux";
+import { store } from "../Redux/store";
+import { SessionProvider } from "next-auth/react";
 
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, session }) {
  
   const [showSidebar, setShowSidebar] = useState(true);
 
@@ -19,6 +22,8 @@ export default function RootLayout({ children }) {
   <html>
     <body>
       <div>
+        <SessionProvider session={session}>
+        <Provider store={store}>
       <DashboardBar  toggleSidebar={toggleSidebar}/>
     <div className={`App d-flex`}>
       <Sidebar isOpen={showSidebar} toggleSidebar={toggleSidebar} />
@@ -27,6 +32,8 @@ export default function RootLayout({ children }) {
         <ToastContainer />
       </div>
     </div>
+    </Provider>
+    </SessionProvider>
       </div>
         </body>
 
