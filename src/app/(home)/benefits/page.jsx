@@ -22,7 +22,7 @@ import glands from "@/asserts/health/glands.png";
 import eye from "@/asserts/health/eye.png"
 import protection  from "@/asserts/health/protection.png"
 
-import coffe from "@/asserts/health/coffee.png"
+import coffe from "@/asserts/health/Coffee.png"
 import milktea from "@/asserts/health/milktea.png"
 import greentea from "@/asserts/health/greentea.png"
 import alcohol from "@/asserts/health/alcohol.png"
