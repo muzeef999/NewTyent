@@ -60,34 +60,16 @@ const page = () => {
         </h2>
         <br />
         <Row className="d-flex justify-content-center">
-          <Col xs={12} sm={6} md={4} lg={3}>
-            <Image
-              src={i1}
-              alt="left image water"
-              layout="responsive"
-              width={1000}
-              height={600}
-            />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+           <div style={{width:'80%', height:'auto'}}>
             <Image
               src={im}
               alt="left image water"
               layout="responsive"
-              width={1000}
-              height={600}
+              priority
             />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
-            <Image
-              src={i2}
-              alt="left image water"
-              layout="responsive"
-              width={1000}
-              height={600}
-            />
-          </Col>
-        </Row>
+            </div>
+         
+                </Row>
 
         <Row>
           <Col md={4}>

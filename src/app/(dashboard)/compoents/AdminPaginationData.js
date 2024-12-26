@@ -32,7 +32,7 @@ const AdminPaginationData = ({ data, itemsPerPage }) => {
         <Row>
           {currentItems?.length > 0 ? (
             currentItems.map((blog, index) => (
-              <Col key={blog.slug} md={4} className="mb-4" data-aos={
+              <Col key={blog.slug} md={3} className="mb-4" data-aos={
                 index % 3 === 0
                   ? "fade-right"
                   : index % 3 === 1

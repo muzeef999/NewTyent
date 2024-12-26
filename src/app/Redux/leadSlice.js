@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in';
 
-export const fetchLeads = () => async (dispatch) => {
+
+export const fetchLeads = (userRole, username) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const response = await axios.get(`${apiUrl}/api/lead`);
@@ -19,40 +21,50 @@ export const fetchLeads = () => async (dispatch) => {
       "Installed",
     ];
 
-    // Filter the leads based on the status categories
-    const filteredLeads = response.data.filter((lead) =>
+    const allLeads = response.data;
+    const filteredLeads = allLeads.filter((lead) =>
       statusCategories.includes(lead.status)
     );
 
-    dispatch(setLeads(response.data)); // Update Redux store with all fetched leads
-    dispatch(setFilteredLeads(filteredLeads)); // Update Redux store with filtered leads based on status
+    let roleBasedLeads = [];
+
+    if (userRole === "admin") {
+      roleBasedLeads = response.data; 
+    } else if (userRole === "manager") {
+      roleBasedLeads = response.data.filter((lead) => lead.assignedTo === username);
+    }
+    
+
+
+    dispatch(setLeads(roleBasedLeads)); 
+    dispatch(setFilteredLeads(filteredLeads)); 
   } catch (error) {
-    dispatch(setError(error.message)); // Handle error if the request fails
+    dispatch(setError(error.message)); 
   } finally {
-    dispatch(setLoading(false)); // Set loading to false once the request is complete
+    dispatch(setLoading(false)); 
   }
 };
 
 
-export const updateLead = (leadId, updateData) => async (dispatch, getState) => {
+export const updateLead = (updateData) => async (dispatch, getState) => {
   try {
     dispatch(setLoading(true));
-    console.log(leadId)
-    console.log(updateData.assignedTo);
+    
     const response = await axios.put(`${apiUrl}/api/lead`, {
-      leadId,
-      assignedTo: updateData.assignedTo,
-      status: updateData.status,
+      
+        leadId:updateData.id,
+        assignedTo:updateData.assignedTo,
+        status:updateData.status
+    
     });
 
-    console.log("Update Response: ", response.data);
 
     // Get the current leads from the store
     const { leads } = getState().leads;
 
     // Update the lead in the local Redux state
     const updatedLeads = leads.map((lead) =>
-      lead._id === leadId
+      lead._id === updateData.id
         ? { ...lead, assignedTo: updateData.assignedTo, status: updateData.status }
         : lead
     );

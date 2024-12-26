@@ -52,6 +52,7 @@ const AppBar = () => {
           id: session.user.id,
           name: session.user.name,
           email: session.user.email,
+          role: session.user.role
         })
       );
       dispatch(fetchCart(session.user.id));

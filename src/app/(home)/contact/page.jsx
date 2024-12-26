@@ -1,11 +1,15 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { MdOutlineMailOutline } from "react-icons/md";
-import { IoCallOutline, IoTimeOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
-import Form from '../compoents/Form/Form';
 import dynamic from "next/dynamic";
 import certification from "@/asserts/certifications/certification.png"
+import AskyourQuery  from "@/asserts/contact/AskyourQuery.png"
+import DealerEnquiry  from "@/asserts/contact/DealerEnquiry.png"
+import productDemo   from "@/asserts/contact/productDemo.png"
+import ServiceRequest from "@/asserts/contact/ServiceRequest.png"
+import Image from 'next/image';
+
+
 const Header = dynamic(() => import('../compoents/Header'), {
   ssr: false,
 });
@@ -33,7 +37,7 @@ const InfoCard = ({ icon: Icon, title, text }) => (
     <div className="custom-card">
     <p className='m-0' style={{fontSize:'20px', fontWeight:600, padding:'10px'}}>{title}</p>
     <div className='d-flex align-items-center'>
-      <div className="contennticon"><Icon size={30} /></div>
+      <div className="contennticon" ><Icon size={20} style={{backgroundColor:'#008ac7', color:'#FFF',width:'60px', height: '60px', borderRadius:'50%', padding:'10px' }} /></div>
       <div className="content p-2">
         <div className="text" dangerouslySetInnerHTML={{ __html: text }} />
       </div>
@@ -54,29 +58,93 @@ const Page = () => {
         animatedText={headerData.animatedText} // Passing dynamic animated text
       />
       <Container>
+
+         <Row>
+          <Col md={3} xs={2} className='p-3'>
+          <div>
+          <Image src={productDemo} alt="AskyourQuery"  layout="responsive" priority  style={{borderRadius:'20px'}}/>
+          <h5 className='text-center m-4'><b>Product Demo</b></h5>
+          </div>
+          </Col>
+          <Col md={3} xs={2} className='p-3'>
+          <div>
+          <Image src={DealerEnquiry} alt="AskyourQuery"  layout="responsive" priority  style={{borderRadius:'20px'}}/>
+          <h5 className='text-center m-4'><b>Dealer Enquiry</b></h5>
+          </div>
+          </Col>
+          <Col md={3} xs={2} className='p-3'>
+          <div>
+          <Image src={ServiceRequest} alt="AskyourQuery"  layout="responsive" priority style={{borderRadius:'20px'}}/>
+           <h5 className='text-center m-4'><b>Service Request</b></h5>
+          </div>
+          </Col>
+          <Col md={3} xs={2} className='p-3'>
+          <div>
+          <Image src={AskyourQuery} alt="AskyourQuery"  layout="responsive" priority style={{borderRadius:'20px'}}/>
+          <h5 className='text-center m-4'><b>Ask your Query</b></h5>
+          </div>
+          </Col>
+         </Row>
+
+        <br/>
+        
         {/* First Row */}
         <Row> {/* Added grid gap and bottom margin for row */}
           <InfoCard
-            icon={MdOutlineMailOutline}
-            title="Email"
-            text="Mail: contact@medilightindia.com"
-          />
-          <InfoCard
-            icon={IoCallOutline}
-            title="Contact"
-            text="Phone No: +91 91824 14181"
+            icon={CiLocationOn}
+            title="Corporate Head office:"
+            text="8-277/45, UBI Colony,
+           Banjara Hills Rd Number 3, Hyderabad, Telangana - 500034.
+           Landmark:  Near TV9 news office"
           />
           <InfoCard
             icon={CiLocationOn}
-            title="Location"
-            text={`8-277/45, UBI Colony, Banjara Hills <br/> Rd Number 3, Hyderabad - 500034.`}
+            title="Tyent Delhi - Head office"
+            text=" Mahadev Enterprises, 
+              Room no 2 , Merry building, 
+            Liberty garden no 3, 
+              Near moreshwar dham Building,
+            Malad west Mumbai - 400064."
           />
           <InfoCard
-            icon={IoTimeOutline}
-            title="Timing"
-            text="Monday to Friday from 9 AM to 5 PM"
+            icon={CiLocationOn}
+            title="Tyent Mumbai - Head office"
+            text={`Mahadev Enterprises, 
+Room no 2 , Merry building, 
+Liberty garden no 3, 
+Near moreshwar dham Building,
+Malad west Mumbai - 400064.`}
+          />
+          <InfoCard
+            icon={CiLocationOn}
+            title="Tyent Ahmadabad - Head office"
+            text="Mahadev Enterprises, 
+Room no 2 , Merry building, 
+Liberty garden no 3, 
+Near moreshwar dham Building,
+Malad west Mumbai - 400064."
+          />
+          <InfoCard
+            icon={CiLocationOn}
+            title="Tyent Sikhar - Head office"
+            text={`Mahadev Enterprises, 
+Room no 2 , Merry building, 
+Liberty garden no 3, 
+Near moreshwar dham Building,
+Malad west Mumbai - 400064.`}
+          />
+          <InfoCard
+            icon={CiLocationOn}
+            title="Tyent UP - Head office"
+            text="Mahadev Enterprises, 
+Room no 2 , Merry building, 
+Liberty garden no 3, 
+Near moreshwar dham Building,
+Malad west Mumbai - 400064."
           />
         </Row>
+
+
       </Container>
 
     </div>

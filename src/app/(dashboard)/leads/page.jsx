@@ -30,33 +30,39 @@ import {
 import { fetchManagers } from "../../Redux/managerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AgCharts } from "ag-charts-react";
+import { useSession } from "next-auth/react";
 
 const statusColors = {
-  "New": "#d6d6d6",
+  New: "#d6d6d6",
   "Contacted & send details": "#007bff",
   "Under follow for demo": "#ffc107",
   "Demo done - Closure follow up": "#28a745",
   "Required time": "#6f42c1",
   "Not interested": "#dc3545",
-  "Installed": "#155724",
+  Installed: "#155724",
 };
 
 const LeadsPage = () => {
   const dispatch = useDispatch();
+  const { data: session } = useSession();
+
+  const { role: userRole, name: username } = session?.user || {};
+
   const [updateData, setUpdateData] = useState({
     id: "",
     assignedTo: "",
     status: "",
   });
+
   const { leads, filteredLeads, loading } = useSelector((state) => state.leads);
   const { managers, loadingManagers } = useSelector((state) => state.managers);
   const [selectedDate, setSelectedDate] = useState(null);
   const [location, setLocation] = useState("");
 
   useEffect(() => {
-    dispatch(fetchLeads());
+    dispatch(fetchLeads(userRole, username));
     dispatch(fetchManagers());
-  }, [dispatch]);
+  }, [dispatch, userRole, username]);
 
   useEffect(() => {
     const filtered = leads.filter((lead) => {
@@ -80,11 +86,7 @@ const LeadsPage = () => {
 
   const handleUpdateLead = async (leadId) => {
     try {
-      const updatedData = {
-        assignedTo: updateData.assignedTo,
-        status: updateData.status,
-      };
-      await dispatch(updateLead({ leadId, updatedData }));
+      await dispatch(updateLead(updateData));
 
       const refreshedLeads = leads.map((lead) =>
         lead._id === leadId
@@ -114,7 +116,6 @@ const LeadsPage = () => {
       (lead) => lead.assignedTo === "Not assigned"
     ).length;
 
-
     // Count for "New Leads (Last 24hrs)"
     const newLeadsCount = filteredLeads.filter((lead) => {
       const createdAt = new Date(lead.createdAt);
@@ -128,7 +129,6 @@ const LeadsPage = () => {
     const contactedAndSentDetailsCount = filteredLeads.filter(
       (lead) => lead.status === "Contacted & send details"
     ).length;
-
 
     // Count for "Under Follow for Demo"
     const underFollowForDemoCount = filteredLeads.filter(
@@ -159,7 +159,7 @@ const LeadsPage = () => {
     return {
       notAssignedCount,
       newLeadsCount,
-      contactedAndSentDetailsCount, 
+      contactedAndSentDetailsCount,
       underFollowForDemoCount,
       demoDoneClosureFollowUpCount,
       requiredTimeCount,
@@ -208,13 +208,13 @@ const LeadsPage = () => {
         labelKey: "category", // Use the 'category' value as the label
         fills: [
           "#FF5733", // Not Assigned
-          "#FFC300", // New Leads (Last 24hrs)
-          "#28B463", // Contacted & Send Details
-          "#5DADE2", // Under Follow for Demo
-          "#7D3C98", // Demo Done - Closure Follow-Up
-          "#AAB7B8", // Required Time
-          "#F39C12", // Not Interested
-          "#2980B9", // Installed
+          "#d6d6d6", // New Leads (Last 24hrs)
+          "#007bff", // Contacted & Send Details
+          "#ffc107", // Under Follow for Demo
+          "#28a745", // Demo Done - Closure Follow-Up
+          "#6f42c1", // Required Time
+          "#dc3545", // Not Interested
+          "#155724", // Installed
         ],
         calloutLabelKey: "category", // This should match 'category'
         sectorLabelKey: "count", // This should match 'count'
@@ -351,54 +351,54 @@ const LeadsPage = () => {
                       <td>{lead.location}</td>
                       <td>{lead.message}</td>
                       <td>
-                        {updateData.id === lead._id ? (
-                          <Form.Control
-                            as="select"
-                            name="assignedTo"
-                            value={updateData.assignedTo}
-                            onChange={handleUpdateChange}
-                          >
-                            <option value="">Select Manager</option>
-                            {managers.map((manager) => (
-                              <option key={manager._id} value={manager.name}>
-                                {manager.name}
-                              </option>
-                            ))}
-                          </Form.Control>
-                        ) : (
-                          lead.assignedTo || "Not assigned"
-                        )}
+                        <td>
+                          {userRole === "admin" ? (
+                            updateData.id === lead._id ? (
+                              <Form.Control
+                                as="select"
+                                name="assignedTo"
+                                value={updateData.assignedTo}
+                                onChange={handleUpdateChange}
+                              >
+                                <option value="">Select Manager</option>
+                                {managers.map(({ _id, name }) => (
+                                  <option key={_id} value={name}>
+                                    {name}
+                                  </option>
+                                ))}
+                              </Form.Control>
+                            ) : (
+                              lead.assignedTo || "Not assigned"
+                            )
+                          ) : (
+                            lead.assignedTo
+                          )}
+                        </td>
                       </td>
                       <td>
                         {updateData.id === lead._id ? (
                           <Form.Control
-                          as="select"
-                          name="status"
-                          value={updateData.status}
-                          onChange={handleUpdateChange}
-                          onMouseEnter={(e) => e.target.style.backgroundColor = 'transparent'} 
-                          onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-                          style={{ cursor: 'pointer' }}
-                        >
-                          <option value="Contacted & send details" >
-                            Contacted & send details
-                          </option>
-                          <option value="Under follow for demo" >
-                            Under follow for demo
-                          </option>
-                          <option value="Demo done - Closure follow up">
-                            Demo done - Closure follow up
-                          </option>
-                          <option value="Required time" >
-                            Required time
-                          </option>
-                          <option value="Not interested" >
-                            Not interested
-                          </option>
-                          <option value="Installed">
-                            Installed
-                          </option>
-                        </Form.Control>
+                            as="select"
+                            name="status"
+                            value={updateData.status}
+                            onChange={handleUpdateChange}
+                            style={{ cursor: "pointer" }}
+                          >
+                            <option value="Contacted & send details">
+                              Contacted & send details
+                            </option>
+                            <option value="Under follow for demo">
+                              Under follow for demo
+                            </option>
+                            <option value="Demo done - Closure follow up">
+                              Demo done - Closure follow up
+                            </option>
+                            <option value="Required time">Required time</option>
+                            <option value="Not interested">
+                              Not interested
+                            </option>
+                            <option value="Installed">Installed</option>
+                          </Form.Control>
                         ) : (
                           <p
                             className="text-center"
@@ -434,12 +434,20 @@ const LeadsPage = () => {
                         >
                           <TiTick />
                         </Button>{" "}
-                        <Button
-                          variant="danger"
-                          onClick={() => dispatch(handleDeleteLead(lead._id))}
-                        >
-                          <FaTrash />
-                        </Button>
+                        {userRole === "admin" ? (
+                          <>
+                            <Button
+                              variant="danger"
+                              onClick={() =>
+                                dispatch(handleDeleteLead(lead._id))
+                              }
+                            >
+                              <FaTrash />
+                            </Button>
+                          </>
+                        ) : (
+                          <></>
+                        )}
                       </td>
                     </tr>
                   ))}

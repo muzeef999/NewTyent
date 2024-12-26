@@ -19,6 +19,19 @@ import bloodsugar from "@/asserts/health/bloodsugur.png";
 import breathing from "@/asserts/health/breathing.png";
 import chemistry from "@/asserts/health/chemistry.png";
 import glands from "@/asserts/health/glands.png";
+import eye from "@/asserts/health/eye.png"
+import protection  from "@/asserts/health/protection.png"
+
+import coffe from "@/asserts/health/coffee.png"
+import milktea from "@/asserts/health/milktea.png"
+import greentea from "@/asserts/health/greentea.png"
+import alcohol from "@/asserts/health/alcohol.png"
+import juices from "@/asserts/health/juices.png"
+import purifiedwater from "@/asserts/health/purified-water.png" 
+import tap from "@/asserts/health/tap.png"
+import mineralwater from "@/asserts/health/mineral-water.png"
+import tyentwater from "@/asserts/health/tyentwater.png"
+import fracture from "@/asserts/health/fracture.png"
 
 import policy from "@/asserts/health/policy.png";
 import bpp from "@/asserts/health/bpp.png";
@@ -33,6 +46,8 @@ import Respiratory from "@/asserts/health/Respiratory.png";
 import yogo from "@/asserts/health/yogo.png";
 import skin from "@/asserts/health/skin.png";
 import sleep from "@/asserts/health/sleep.png";
+import Osteoporosisp from "@/asserts/health/Osteoporosisp.png"
+import GastricIssuesp from "@/asserts/health/GastricIssuesp.png"
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -86,7 +101,7 @@ const icons = [
   },
   {
     id: 7,
-    icon: icon,
+    icon: GastricIssuesp,
     Heading: "Acid Reflux (GERD)",
     Descrpition:
       "Alkaline water prevents stone formation by balancing pH levels, dissolving uric acid, and supporting kidney health.",
@@ -121,7 +136,7 @@ const icons = [
   },
   {
     id: 12,
-    icon: icon,
+    icon: Osteoporosisp,
     Heading: "Osteoporosis",
     Descrpition:
       "Tyent water maintains a balanced body pH, reducing calcium loss from bones and supporting better bone density.",
@@ -192,7 +207,7 @@ const BenfitsOnisedAlkaline = [
     title: "Enhancement of the kidneys urinary function",
   },
   {
-    icon: icon,
+    icon: fracture,
     title: "Normalisation of bone and cartilage tissue structue",
   },
   {
@@ -204,7 +219,7 @@ const BenfitsOnisedAlkaline = [
     title: "The joints and spine operate more effectively",
   },
   {
-    icon: icon,
+    icon: eye,
     title: "Improves vision",
   },
   {
@@ -224,7 +239,7 @@ const BenfitsOnisedAlkaline = [
     title: "Normalises thermoregulation and breathing",
   },
   {
-    icon: icon,
+    icon: protection,
     title:
       "Provides reliable protection against the destructive effects of free radicals",
   },
@@ -269,21 +284,21 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
 
 const tableData = [
   {
-    icon: weight,
+    icon: coffe,
     beverage: "Coffee",
     phRange: "4.5 To 5.0",
     orpLevel: "+250 To +300mV",
     remarks: "Acidic & Oxidative (Can Cause Acidity/ Heartburn)",
   },
   {
-    icon: weight,
+    icon: milktea,
     beverage: "Tea",
     phRange: "4.0 To 6.0",
     orpLevel: "+250 To +300mV",
     remarks: "Slightly Acidic & Oxidative (Depends On Type Of Tea)",
   },
   {
-    icon: weight,
+    icon: greentea,
     beverage: "Green Tea",
     phRange: "7.0 To 8.0",
     orpLevel: "+50 To +150mV",
@@ -291,7 +306,7 @@ const tableData = [
       "Neutral To Slightly Alkaline & Has Anti-Oxidants Like Catechins (Healthier Option)",
   },
   {
-    icon: weight,
+    icon: alcohol,
     beverage: "Alcohol (Beer/Wine)",
     phRange: "4.0 To 4.5",
     orpLevel: "+350 To +500mV",
@@ -299,21 +314,21 @@ const tableData = [
       "Acidic & Highly Oxidative (Promotes Acidity & Free Radicals In The Body)",
   },
   {
-    icon: weight,
+    icon: juices,
     beverage: "Fresh Juice",
     phRange: "3.0 To 5.0",
     orpLevel: "+100 To +250mV",
     remarks: "Acidic & Slightly Oxidative (Citrus Juices Are Highly Acidic)",
   },
   {
-    icon: weight,
+    icon: purifiedwater,
     beverage: "RO Water",
     phRange: "5.0 To 7.0",
     orpLevel: "+150 To +350mV",
     remarks: "Acidic & More Oxidative (Lacks Minerals)",
   },
   {
-    icon: weight,
+    icon: tap,
     beverage: "Municipal Water",
     phRange: "6.5 To 7.5",
     orpLevel: "+200 To +400mV",
@@ -329,7 +344,7 @@ const tableData = [
       "Neutral To Slightly Alkaline, Slight Oxidative (Contains Essential Minerals)",
   },
   {
-    icon: weight,
+    icon: mineralwater,
     beverage: "Soft Drinks",
     phRange: "2.5 To 3.5",
     orpLevel: "+400 To +500mV",
@@ -337,7 +352,7 @@ const tableData = [
       "Highly Acidic & Highly Oxidative (One Of The Most Acidic Beverages)",
   },
   {
-    icon: weight,
+    icon: tyentwater,
     beverage: "Tyent Water",
     phRange: "8.5 To 9.5",
     orpLevel: "-100 To -1250mV",
