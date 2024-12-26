@@ -33,10 +33,10 @@ const headerData = {
 
 
 const InfoCard = ({ icon: Icon, title, text }) => (
-  <Col xs={12} md={6} style={{padding:'10px'}}>
+  <Col xs={12} md={4} style={{padding:'20px'}}>
     <div className="custom-card">
     <p className='m-0' style={{fontSize:'20px', fontWeight:600, padding:'10px'}}>{title}</p>
-    <div className='d-flex align-items-center'>
+    <div className='d-flex align-items-top p-1'>
       <div className="contennticon" ><Icon size={20} style={{backgroundColor:'#008ac7', color:'#FFF',width:'60px', height: '60px', borderRadius:'50%', padding:'10px' }} /></div>
       <div className="content p-2">
         <div className="text" dangerouslySetInnerHTML={{ __html: text }} />

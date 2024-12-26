@@ -516,8 +516,11 @@ const Page = () => {
           </h2>
         </center>
         <br />
+        </div>
 
-        <Row>
+      <div className="benefitsbackground">
+        <center>
+        <Row className="container">
           {BenfitsOnisedAlkaline.map((feature, index) => (
             <Col
               key={index}
@@ -545,9 +548,12 @@ const Page = () => {
             </Col>
           ))}
         </Row>
+        </center>
+        </div>
 
         <br />
-
+  
+  <div className="container">
         <center>
           <h2
             className="text-center mb-4"
@@ -572,41 +578,42 @@ const Page = () => {
         </p>
         <br />
 
-        <div className="table-responsive">
-          <Table className="custom-table" hover responsive>
-            <tbody>
-              <tr>
-                <th className="text-start">Beverage</th>
-                <th className="text-center">Ph Range</th>
-                <th className="text-center">ORP Level (Approx)</th>
-                <th className="text-center">Remarks</th>
-              </tr>
-              {tableData.map((row, index) => (
-                <tr key={index}>
-                  <td className="text-start d-flex align-items-center">
-                    <Image
-                      src={row.icon}
-                      alt={row.title}
-                      width={40}
-                      height={40}
-                    />
-                    {row.beverage}
-                  </td>
-                  <td className="text-center  align-items-center">
-                    {row.phRange}
-                  </td>
-                  <td className="text-center align-items-center">
-                    {row.orpLevel}
-                  </td>
-                  <td className="text-start align-items-center">
-                    {row.remarks}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
+        <Table className="custom-table" hover responsive>
+  <tbody>
+    <tr>
+      <th className="text-start">Beverage</th>
+      <th className="text-center">Ph Range</th>
+      <th className="text-center">ORP Level (Approx)</th>
+      <th className="text-center">Remarks</th>
+    </tr>
+    {tableData.map((row, index) => (
+      <tr key={index}>
+        <td className="text-start d-flex align-items-center">
+          <Image
+            src={row.icon}
+            alt={row.title}
+            width={40}
+            height={40}
+          /> &nbsp;&nbsp;
+          {row.beverage}
+        </td>
+        <td className="text-center align-items-center">
+          {row.phRange}
+        </td>
+        <td className="text-center align-items-center">
+          {row.orpLevel}
+        </td>
+        <td className="text-start align-items-center">
+          {row.remarks}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</Table>
+
+
         </div>
-      </div>
+      
       <Row className="align-items-center">
         <div className="background-container">
           <div className="background-overlay"></div>
