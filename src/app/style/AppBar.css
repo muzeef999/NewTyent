@@ -59,7 +59,7 @@ body {
 
 .counter {
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 10px;
  width: 24px;
  height: 24px;
@@ -92,7 +92,6 @@ body {
 }
 
 
-
 .appbgbutton {
     border: 1px solid #FFF;
     border-radius: 30px;
@@ -122,6 +121,7 @@ body {
   transition: background-color 0.1s ease-out, 
               color 0.1s ease-out, 
               box-shadow 0.1s ease-out; /* Smooth specific transitions */
+             
 }
 
 /* Fixed Navbar */
@@ -137,16 +137,26 @@ body {
               box-shadow 0.1s ease-out; /* Smooth specific transitions */
 }
 
-
-
-.nav-link.active {
-  text-decoration: underline; /* Underline the text */
-  text-decoration-color: #008AC7; /* Color of underline */
-  text-decoration-thickness: 4px; /* Thickness of underline */
-  text-underline-offset: 8px; /* Space between text and underline */
-  display: inline-block; /* Ensures width works properly for inline elements */
+.custom-navbar {
+  padding: 0 !important; /* Remove padding or set to the value you prefer */
 }
 
+
+.nav-item {
+  display: inline-block;
+  position: relative; /* Needed to position the underline relative to the nav item */
+}
+
+.nav-link.active::after {
+  content: ''; /* Empty content to create the underline */
+  position: absolute;
+  bottom: -3px; /* Positions the underline 3px below the text */
+  left: 50%; /* Starts the underline from the middle */
+  transform: translateX(-50%); /* Centers the underline by adjusting from the left */
+  width: 75%; /* Width of the underline */
+  height: 2px; /* Thickness of the underline */
+  background-color: #008AC7; /* Color of the underline */
+}
 
 .navbar-toggler-icon {
 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 138, 199, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
@@ -154,6 +164,31 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 
 .navbar-toggler {
   border: 1px solid #008AC7 !important;
+}
+
+
+.responsive-product-container {
+  max-height: 0; /* Start with zero height */
+  overflow: hidden; /* Hide content when collapsed */
+  transition: max-height 0.6s ease-in-out; /* Smooth transition on height */
+}
+
+.responsive-product-container.expanded {
+  max-height: 350px; /* Adjust max-height based on content height */
+  padding: 10px; /* Optionally add padding */
+}
+
+
+
+.responsive-design-back{
+  background-color: #FFF;
+}
+
+.product-selection-filter{
+  cursor: pointer;
+}
+.product-selection-filter:hover{
+  color: #757575;
 }
 
 
@@ -227,10 +262,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   }
 
   .tabcontentdesign{
-    border: 1px solid #008AC7;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+        border-top: 1px solid #008AC7; /* Only the top border */
   }
 
 

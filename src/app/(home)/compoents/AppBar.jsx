@@ -33,10 +33,6 @@ const AppBar = () => {
   const [cartShow, setCartShow] = useState(false);
   const [offcanvasOpen, setOffcanvasOpen] = useState(false);
 
-  const handleisProductOpen = (data) => {
-    setIsProductOpen(data)  
-  }
-
   const toggleOffcanvas = () => {
     setOffcanvasOpen(!offcanvasOpen);
   };
@@ -52,7 +48,7 @@ const AppBar = () => {
           id: session.user.id,
           name: session.user.name,
           email: session.user.email,
-          role: session.user.role
+          role: session.user.role,
         })
       );
       dispatch(fetchCart(session.user.id));
@@ -84,9 +80,9 @@ const AppBar = () => {
   return (
     <div>
       {/* Top Bar */}
-      <div className="appbg sticky-top">
+      <div className="appbg sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
-          className="d-flex justify-content-between align-items-center p-2"
+          className="d-flex justify-content-between align-items-center"
           style={{ backgroundColor: "#008AC7", color: "#FFF" }}
         >
           <div
@@ -123,10 +119,7 @@ const AppBar = () => {
                     </button>
                   </li>
                   <li>
-                    <button
-                      className="dropdown-item"
-                      onClick={handleLogout}
-                    >
+                    <button className="dropdown-item" onClick={handleLogout}>
                       <LuLogOut /> Logout
                     </button>
                   </li>
@@ -143,163 +136,181 @@ const AppBar = () => {
             )}
           </div>
         </div>
-      
 
-      {/* Navbar */}
-      <nav
-        className={`navbar navbar-expand-lg sticky-top navbar-light flex-column ${isFixed ? "fixed" : ""}`}
-      >
-        <div className="container-fluid d-flex justify-content-between align-items-center">
-          {/* Toggle Button */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={toggleOffcanvas}
-            aria-expanded={offcanvasOpen ? "true" : "false"}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+        {/* Navbar */}
+        <nav
+          className={`navbar  navbar-expand-lg sticky-top navbar-light flex-column custom-navbar  ${
+            isFixed ? "fixed" : ""
+          }`}
+        >
+          <div className="container-fluid d-flex justify-content-between align-items-center mt-2 border-bottom">
+            {/* Toggle Button */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              onClick={toggleOffcanvas}
+              aria-expanded={offcanvasOpen ? "true" : "false"}
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-          {/* Logo */}
-          <Link href="/" className="navbar-brand">
-            <Image src={logo} width={100} alt="Logo" />
-          </Link>
+            {/* Logo */}
+            <Link href="/" className="navbar-brand">
+              <Image src={logo} width={100} alt="Logo" />
+            </Link>
 
-          {/* Offcanvas Menu */}
-          <div
-            className={`offcanvas offcanvas-start ${offcanvasOpen ? "show" : ""}`}
-            style={{
-              width: "65%",
-              visibility: offcanvasOpen ? "visible" : "hidden",
-            }}
-          >
-            <div className="offcanvas-header">
-              <h5>Menu</h5>
-              <button
-                type="button"
-                className="btn-close"
-                onClick={closeOffcanvas}
-              ></button>
-            </div>
-            <div className="offcanvas-body">
-              <ul className="navbar-nav mx-auto">
-                <li className="nav-item">
-                  <Link
-                    href="/"
-                    className={`nav-link ${pathname === "/" ? "active" : ""}`}
-                    onClick={closeOffcanvas}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <Link
-                    href="#"
-                    className={`dropdown-toggle nav-link ${
-                      pathname === "/our-story" || pathname === "/tyent-global"
-                        ? "active"
-                        : ""
-                    }`}
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    About Us
-                  </Link>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link
-                        href="/our-story"
-                        className="dropdown-item"
-                        onClick={closeOffcanvas}
-                      >
-                        Our Story
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/tyent-global"
-                        className="dropdown-item"
-                        onClick={closeOffcanvas}
-                      >
-                        Tyent Global
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <button
-                    className="btn btn-link nav-link"
-                    onClick={() => setIsProductOpen(!isProductOpen)}
-                  >
-                    Products
-                  </button>
-                </li>
-                {[
-                  { path: "/benefits", label: "Benefits" },
-                  { path: "/why-tyent", label: "Why Tyent" },
-                  { path: "/why-water-ionizer", label: "Why Water Ionizer" },
-                  { path: "/certifications", label: "Certifications" },
-                  { path: "/blogs", label: "Blogs" },
-                  { path: "/testimonials", label: "Testimonials" },
-                  { path: "/contact", label: "Contact Us" },
-                ].map((item) => (
-                  <li key={item.path} className="nav-item">
+            {/* Offcanvas Menu */}
+            <div
+              className={`offcanvas offcanvas-start ${
+                offcanvasOpen ? "show" : ""
+              }`}
+              style={{
+                width: "65%",
+                visibility: offcanvasOpen ? "visible" : "hidden",
+              }}
+            >
+              <div className="offcanvas-header">
+                <h5>Menu</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={closeOffcanvas}
+                ></button>
+              </div>
+              <div className="offcanvas-body">
+                <ul className="navbar-nav mx-auto">
+                  <li className={"nav-item"} onMouseEnter={() => setIsProductOpen(false)}>
                     <Link
-                      href={item.path}
-                      className={`nav-link ${
-                        pathname === item.path ? "active" : ""
-                      }`}
+                      href="/"
+                      className={`nav-link ${pathname === "/" ? "active" : ""}`}
                       onClick={closeOffcanvas}
                     >
-                      {item.label}
+                      Home
                     </Link>
                   </li>
-                ))}
-              </ul>
+                  <li className="nav-item dropdown" onMouseEnter={() => setIsProductOpen(false)}>
+                    <Link 
+                      href="#"
+                      className={`dropdown-toggle nav-link ${
+                        pathname === "/our-story" ||
+                        pathname === "/tyent-global"
+                          ? "active"
+                          : ""
+                      }`}
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About Us
+                    </Link>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link
+                          href="/our-story"
+                          className="dropdown-item"
+                          onClick={closeOffcanvas}
+                        >
+                          Our Story
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/tyent-global"
+                          className="dropdown-item"
+                          onClick={closeOffcanvas}
+                        >
+                          Tyent Global
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item" >
+                    <div
+                      className="btn btn-link nav-link"
+                      onMouseEnter={() => setIsProductOpen(true)} // Open on hover
+                    
+                    >
+                      Products
+                    </div>
+                  </li>
+                  {[
+                    { path: "/benefits", label: "Benefits" },
+                    { path: "/why-tyent", label: "Why Tyent" },
+                    { path: "/why-water-ionizer", label: "Why Water Ionizer" },
+                    { path: "/certifications", label: "Certifications" },
+                    { path: "/blogs", label: "Blogs" },
+                    { path: "/testimonials", label: "Testimonials" },
+                    { path: "/contact", label: "Contact Us" },
+                  ].map((item) => (
+                    <li key={item.path} className="nav-item" onMouseEnter={() => setIsProductOpen(false)}>
+                      <Link 
+                        href={item.path}
+                        className={`nav-link ${
+                          pathname === item.path ? "active" : ""
+                        }`}
+                        onClick={closeOffcanvas}
+                         // Close on hover leave
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Cart Icon */}
+            <div
+              className="d-flex align-items-center"
+              style={{ cursor: "pointer" }}
+              onClick={() => setCartShow(true)}
+            >
+              <div className="counter mx-2">{totalItems || 0}</div>
+              <PiShoppingCartLight size={40} color="#008AC7" />
             </div>
           </div>
 
-          {/* Cart Icon */}
-          <div
-            className="d-flex align-items-center"
-            style={{ cursor: "pointer" }}
-            onClick={() => setCartShow(true)}
-          >
-            <div className="counter mx-2">{totalItems || 0}</div>
-            <PiShoppingCartLight size={40} color="#008AC7" />
-          </div>
-        </div>
+          {/* Product Page */}
+          {isProductOpen && (
+            <div  className={`responsive-product-container ${isProductOpen ? 'expanded' : ''}`}
 
-        {/* Product Page */}
-        {isProductOpen && <ResponsiveProductPage isProductOpen={handleisProductOpen}  />}
-      </nav>
+              onMouseEnter={() => setIsProductOpen(true)} // Keep it open while hovering over the dropdown
+              onMouseLeave={() => setIsProductOpen(false)} // Close when leaving
+            >
+              
+              <ResponsiveProductPage />
+              
+            </div>
+          
+          )}
+        
+        </nav>
 
-      {/* Cart Offcanvas */}
-      <Offcanvas
-        show={cartShow}
-        style={{ width: "24%" }}
-        onHide={() => setCartShow(false)}
-        placement="end"
-      >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Cart</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Cartpage />
-        </Offcanvas.Body>
-      </Offcanvas>
+        {/* Cart Offcanvas */}
+        <Offcanvas
+          show={cartShow}
+          style={{ width: "24%" }}
+          onHide={() => setCartShow(false)}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Cart</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Cartpage />
+          </Offcanvas.Body>
+        </Offcanvas>
 
-      {/* Login Modal */}
-      <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Login</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Login />
-        </Modal.Body>
-      </Modal>
-    </div>
+        {/* Login Modal */}
+        <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Login</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Login />
+          </Modal.Body>
+        </Modal>
+      </div>
     </div>
   );
 };

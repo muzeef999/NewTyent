@@ -36,10 +36,10 @@ const InfoCard = ({ icon: Icon, title, text }) => (
   <Col xs={12} md={4} style={{padding:'20px'}}>
     <div className="custom-card">
     <p className='m-0' style={{fontSize:'20px', fontWeight:600, padding:'10px'}}>{title}</p>
-    <div className='d-flex align-items-top p-1'>
-      <div className="contennticon" ><Icon size={20} style={{backgroundColor:'#008ac7', color:'#FFF',width:'60px', height: '60px', borderRadius:'50%', padding:'10px' }} /></div>
-      <div className="content p-2">
-        <div className="text" dangerouslySetInnerHTML={{ __html: text }} />
+    <div className='d-flex align-items-top'>
+      <div className="contennticon p-1"><Icon size={20} style={{backgroundColor:'#008ac7', color:'#FFF',width:'50px', height: '50px', borderRadius:'50%', padding:'10px' }} /></div>
+      <div className="content align-items-top">
+        <div className="text p-1" dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </div>
     </div>
@@ -59,6 +59,10 @@ const Page = () => {
       />
       <Container>
 
+         <br/>
+         <h3 className='m-0 text-center' style={{color:'#008AC7', fontWeight:'600'}}>You can find us here! </h3>
+         <p className='text-center' style={{fontSize:'20px'}}>We would love to connect with you</p>
+         <br/>
          <Row>
           <Col md={3} xs={2} className='p-3'>
           <div>
@@ -99,7 +103,7 @@ const Page = () => {
           />
           <InfoCard
             icon={CiLocationOn}
-            title="Tyent Delhi - Head office"
+            title="Tyent Delhi"
             text=" Mahadev Enterprises, 
               Room no 2 , Merry building, 
             Liberty garden no 3, 
@@ -108,7 +112,7 @@ const Page = () => {
           />
           <InfoCard
             icon={CiLocationOn}
-            title="Tyent Mumbai - Head office"
+            title="Tyent Mumbai"
             text={`Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
@@ -117,7 +121,7 @@ Malad west Mumbai - 400064.`}
           />
           <InfoCard
             icon={CiLocationOn}
-            title="Tyent Ahmadabad - Head office"
+            title="Tyent Ahmadabad"
             text="Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
@@ -126,7 +130,7 @@ Malad west Mumbai - 400064."
           />
           <InfoCard
             icon={CiLocationOn}
-            title="Tyent Sikhar - Head office"
+            title="Tyent Sikhar"
             text={`Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
@@ -135,7 +139,7 @@ Malad west Mumbai - 400064.`}
           />
           <InfoCard
             icon={CiLocationOn}
-            title="Tyent UP - Head office"
+            title="Tyent UP"
             text="Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 

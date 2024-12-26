@@ -10,6 +10,10 @@ import { FaQuestion } from "react-icons/fa";
 import hydrogen from "@/asserts/why ionizer/hydrogen.png";
 import NMP from "@/asserts/NMP5.webp";
 import whyIonizer from "@/asserts/why ionizer/whyIonizer.png";
+import minerals from "@/asserts/why ionizer/minerals.png"
+
+import purity from "@/asserts/why ionizer/purity.png"
+import hydrogenicon from "@/asserts/why ionizer/hydrogenicon.png"
 
 
 
@@ -22,28 +26,33 @@ export const metadata = {
 
 
 
+
 const page = () => {
 
   const cardDetails = [
     {
+      icon:purity,
       title: "Purity",
       content: `
        Free from harmful contaminants like heavy metals, chemicals, and microorganisms.
       `,
     },
     {
+      icon:minerals,
       title: "Minerals",
       content: `
      Retains essential minerals like calcium, magnesium, Potassium and Sillica for optimal health.
       `,
     },
     {
+      icon:purity,
       title: "pH Balance",
       content: `
        Slightly alkaline water (pH 7.5–9.5) is ideal for counteracting the acidic environment caused by diet and stress.
       `,
     },
     {
+      icon:hydrogenicon,
       title: "Hydrogen-Rich",
       content: `
        Molecular hydrogen acts as a powerful antioxidant to combat free radical damage.
@@ -123,7 +132,7 @@ const page = () => {
           <Row className="g-4">
             {cardDetails.map((card, index) => (
               <Col key={index} xs={12} sm={6} md={3}>
-                <WhyDrinkTyentWater title={card.title} content={card.content} />{" "}
+                <WhyDrinkTyentWater icon={card.icon} title={card.title} content={card.content} />{" "}
                 {/* Individual card */}
               </Col>
             ))}
@@ -197,6 +206,7 @@ const page = () => {
               <br />
             </div>
 
+
             <div className="d-flex justify-content-end align-items-end">
               <div style={{ width: "60%" }}>
                 <div>
@@ -269,6 +279,8 @@ const page = () => {
           </Col>
         </Row>
 
+        <br/>
+        <br/>
         <Row>
           <Col
             md={6}
@@ -319,6 +331,8 @@ const page = () => {
           </Col>
         </Row>
 
+        <br/>
+        <br/>
         <Row>
           <Col
             md={6}
@@ -371,6 +385,8 @@ const page = () => {
           </Col>
         </Row>
 
+        <br/>
+        <br/>
         <Row>
           <Col
             md={6}
@@ -427,6 +443,8 @@ const page = () => {
         </Row>
       </div>
 
+      <br/>
+      <br/>
       <Row className="align-items-center">
         <div className="background-container">
           <div className="background-overlay"></div>

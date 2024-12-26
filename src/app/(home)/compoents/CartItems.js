@@ -4,7 +4,7 @@ import { RiSubtractLine } from "react-icons/ri";
 import { IoAddSharp } from "react-icons/io5";
 import Loading from "./Loading"; // Adjust the path if `Loading` is in a different folder.
 import Image from "next/image";
-import productImage from "@/asserts/Ace13.png";
+import productImage from "@/asserts/NMP5.webp";
 import { AiOutlineDelete } from "react-icons/ai"; 
 
 
