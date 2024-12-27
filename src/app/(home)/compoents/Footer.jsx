@@ -11,17 +11,17 @@ import { color } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer  style={{color:'#FFF'}}>
-      <svg width="100%" height="auto" viewBox="0 0 1919 280">
-  <path d="M952 89.5003C465.5 56.6539 179.5 155.059 1 282V994.5H1919V125.5C1759.5 189.5 1321 114.414 952 89.5003Z" fill="#008ac7" />
-</svg>
+    <footer  style={{color:'#000'}}>
+      <br/>
+      <br/>
+      
 
-<div className='py-5' style={{backgroundColor:'#008ac7'}}>
+<div className='py-5' style={{backgroundColor:'#FFF'}}>
       <Container>
         <Row>
           {/* Column 1: Products */}
           <Col xs={12} md={3} className="mb-4">
-            <h5 style={{ color: "#FFF", fontWeight:'600' }}>Products</h5>
+            <h5 style={{ color: "#000", fontWeight:'600' }}>Products</h5>
             <ul className="list-unstyled">
               <li>Counter-Top Water Ionizers</li>
               <li>Under-Counter Water Ionizers</li>
@@ -34,7 +34,7 @@ const Footer = () => {
 
           {/* Column 2: Customers */}
           <Col xs={12} md={3} className="mb-4">
-            <h5 style={{ color: "#FFF", fontWeight:'600' }}>Customers</h5>
+            <h5 style={{ color: "#000", fontWeight:'600' }}>Customers</h5>
             <ul className="list-unstyled">
               <li>Dealer Opportunity</li>
               <li>Usage Instructions</li>
@@ -46,19 +46,19 @@ const Footer = () => {
 
           {/* Column 3: Technical Information */}
           <Col xs={12} md={3} className="mb-4">
-            <h5 style={{ color: "#FFF", fontWeight:'600' }}>Technical Information</h5>
+            <h5 style={{ color: "#000", fontWeight:'600' }}>Technical Information</h5>
             <ul className="list-unstyled">
-              <li>Tyent Vs Enagic Kangen</li>
-              <li>Tyent’s Solid Hybrid Mesh Plates</li>
-              <li>Tyent’s Patented SMPS PLUS</li>
-              <li>Tyent’s .01 Micron Filters</li>
-              <li>Tyent Warranty</li>
+              <li><Link style={{textDecoration:'none', color:'#000'}} href={""}>Tyent Vs Enagic Kangen</Link></li>
+              <li><Link style={{textDecoration:'none', color:'#000'}} href={"/solid-hybrid-mesh-plates"}>Tyent’s Solid Hybrid Mesh Plates</Link></li>
+              <li><Link style={{textDecoration:'none', color:'#000'}} href={"/patented-SMPS-plus"}>Tyent’s Patented SMPS PLUS</Link></li>
+              <li><Link style={{textDecoration:'none', color:'#000'}} href={"/0.1-micron-filters"}>Tyent’s .01 Micron Filters</Link></li>
+              <li><Link style={{textDecoration:'none', color:'#000'}} href={""}>Tyent Warranty</Link></li>
             </ul>
           </Col>
 
           {/* Column 4: Product Sales & Service */}
           <Col xs={12} md={3} className="mb-4">
-            <h5 style={{ color: "#FFF", fontWeight:'600' }}>Product Sales & Service</h5>
+            <h5 style={{ color: "#000", fontWeight:'600' }}>Product Sales & Service</h5>
             <ul className="list-unstyled">
               <li>Product Demo: 9182-41-41-81</li>
               <li>Product Support: <a href="mailto:Sravan@medilightindia.com">Sravan@medilightindia.com</a></li>
@@ -75,7 +75,7 @@ const Footer = () => {
               <Col md={3}>
           <Link href="/" className="navbar-brand">
           <div  style={{width:'100%'}}>
-            <Image src={logo} alt="logo"  style={{ filter: "invert(100%) grayscale(100%)"}}/>
+            <Image src={logo} alt="logo" />
             </div>
           </Link>
           </Col>

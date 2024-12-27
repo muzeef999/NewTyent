@@ -234,7 +234,7 @@ const Page = () => {
 
         <Row>
         <Col md={4} className="d-flex justify-content-center align-items-center">
-          <div style={{width:'50%'}}>
+          <div style={{width:'30%'}}>
           <Image src={filter2} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
           </div>
           </Col>
@@ -266,8 +266,8 @@ const Page = () => {
           </Col>
 
           <Col md={6} className="d-flex justify-content-center align-items-center">
-          <div style={{width:'50%'}}>
-          <Image src={filter2} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
+          <div style={{width:'60%'}}>
+          <Image src={filter} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
           </div>
           </Col>
           
