@@ -4,7 +4,7 @@ import icon from "@/asserts/Testmonials/icon1.png";
 import Image from "next/image";
 import { Col, Row, Table } from "react-bootstrap";
 import "@/app/style/Benfits.css";
-import benfitsBanner from "@/asserts/benfits.png";
+import benfitsBanner from "@/asserts/health/benfits.webp";
 import { IoWaterOutline } from "react-icons/io5";
 import weight from "@/asserts/health/weight.png";
 import digestive from "@/asserts/health/digestive.png";
@@ -48,6 +48,8 @@ import skin from "@/asserts/health/skin.png";
 import sleep from "@/asserts/health/sleep.png";
 import Osteoporosisp from "@/asserts/health/Osteoporosisp.png"
 import GastricIssuesp from "@/asserts/health/GastricIssuesp.png"
+import BrainStroke from "@/asserts/health/BrainStroke.png"
+import Alzheimer from "@/asserts/health/Alzheimer.png"
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -115,7 +117,7 @@ const icons = [
   },
   {
     id: 9,
-    icon: icon,
+    icon: Alzheimer,
     Heading: "Alzheimer's Disease",
     Descrpition:
       "Molecular hydrogen in Tyent water reduces brain inflammation, oxidative stress, and neurodegeneration, supporting cognitive health and memory function.",
@@ -150,7 +152,7 @@ const icons = [
   },
   {
     id: 14,
-    icon: icon,
+    icon: BrainStroke,
     Heading: "Brain Stroke",
     Descrpition:
       "Tyent water reduces oxidative stress in blood vessels, supporting better brain function and reducing the risk of strokes.",
@@ -257,7 +259,7 @@ const BenfitsOnisedAlkaline = [
 const IconTest = ({ Heading, id, icon, Descrpition }) => {
   return (
      <div>
-      <div 
+      <div style={{backgroundColor:'#FFF'}} 
         className="d-flex justify-content-center align-items-center custom-card-benfts"
       >
         <Image

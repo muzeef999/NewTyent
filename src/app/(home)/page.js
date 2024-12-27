@@ -10,6 +10,9 @@ import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
 
+import Molecular from "@/asserts/health/Molecular.png"
+import Alkalinity from "@/asserts/health/Alkalinity.png"
+
 const TyentvsKAngan = dynamic(() => import("./compoents/(Home)/TyentvsKAngan"), {
   ssr: false,
 });
@@ -25,6 +28,7 @@ const Form = dynamic(() => import("./compoents/Form/Form"), {
 const Home = () => {
   const cardDetails = [
     {
+      icon:Alkalinity,
       title: "Alkalinity",
       content: `
         Acidic stress is the root cause of all the major lifestyle diseases 
@@ -49,6 +53,7 @@ const Home = () => {
       `,
     },
     {
+      icon:Molecular,
       title: "Anti-oxidant Molecular H2",
       content: `
         Tyent ionized hydrogen-rich alkaline water has a selective antioxidant 
@@ -98,7 +103,7 @@ const Home = () => {
         <Row className="g-4">
           {cardDetails.map((card, index) => (
             <Col key={index} xs={12} sm={6} md={3}>
-              <WhyDrinkTyentWater title={card.title} content={card.content} />{" "}
+              <WhyDrinkTyentWater icon={card.icon} title={card.title} content={card.content} />{" "}
               {/* Individual card */}
             </Col>
           ))}

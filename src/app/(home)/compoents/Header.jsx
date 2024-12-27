@@ -56,9 +56,9 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
           </div>
         </Col>
 
-        <Col md={6}>
-        <div style={{width:'100%'}}>
-          <Image src={img} alt="image" layout='responsive' priority />
+        <Col md={6} className='d-flex align-items-center justify-contend-end p-0'>
+        <div style={{width:'100%', borderTopRightRadius:'20px', borderBottomRightRadius:'20px'}} >
+          <Image src={img} alt="image" layout='responsive' priority style={{borderTopRightRadius:'20px', borderBottomRightRadius:'20px'}} />
         </div>
         </Col>
       </Row>

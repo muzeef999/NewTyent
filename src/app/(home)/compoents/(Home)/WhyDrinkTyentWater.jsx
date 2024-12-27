@@ -8,7 +8,7 @@ const WhyDrinkTyentWater = ({icon, title, content }) => {
  
   return (
     <>
-     <div className="custom-card d-flex flex-column">
+     <div className="custom-card d-flex flex-column" style={{color:'#FFF'}}>
     <div className="card-body">
        <Image src={icon} width={50} height={50} />
       <h4 className="card-title m-0 mt-3">{title}</h4>

@@ -9,7 +9,7 @@ const SectionTwo = () => {
     
     <div className="container">
     <Row className="sectiontwo">
-      <Col md={5} className="d-flex justify-content-center align-items-center">
+      <Col md={6} className="d-flex justify-content-center align-items-center">
       <div className="align-items-center text-center mx-auto">
        <h2 className="align-center" style={{fontWeight:'600'}}>Improving <span style={{color:'#008AC7'}}>Health</span>  and <br/> preserving  <span style={{color:'#008AC7'}}>Nature</span></h2>
        <h1 className="big-number">9</h1>
@@ -19,26 +19,23 @@ const SectionTwo = () => {
       </div>
       </Col>
 
-      <Col md={7}>
+      <Col md={6}  style={{aspectRatio:'1/1'}}>
       <div className="container-fluid text-white py-5" style={{  background: 'linear-gradient(to left, #008AC7 50%, transparent 50%)', borderRadius:'32px'}}>
 
-<div className="container d-flex justify-content-center align-items-center">
+<div className="container d-flex justify-content-center align-items-center" style={{aspectRatio:'1/1'}}>
 
-<div className="justify-content-center align-items-center">
+<div className="justify-content-center align-items-center"  style={{aspectRatio:'1/1'}}>
  
 
-  <div style={{paddingRight:'30px'}}>
-    <div className="custom-card shadow-lg p-4 mb-4 bg-white rounded">
+  <div style={{paddingRight:'30px',}}>
+    <div className="custom-card shadow-lg p-4 mb-4 bg-white rounded" style={{width:'80%'}}>
       <h5 className="card-title fw-bold">Tyent Global</h5>
       <p className="card-text">
       Tyent Global has been a leader in water ionization technology since 1995, offering premium, medical-grade hydrogen-rich alkaline water solutions to over 86 countries. Renowned for its advanced Japanese technology and innovation, Tyent empowers millions with healthier, cleaner water worldwide.
       </p>
     </div>
-  </div>
 
- 
-  <div style={{paddingRight:'30px'}}>
-    <div className="custom-card shadow-lg p-4 mb-4 bg-white rounded">
+    <div className="custom-card shadow-lg p-4 mb-4 bg-white rounded" style={{width:'80%'}}>
       <h5 className="card-title fw-bold">Tyent India</h5>
       <p className="card-text">
       Since 2016, Tyent India has brought advanced Japanese water ionizers to Indian homes, offering superior, chemical-free water for better health. With 64+ branches and a dedicated team, Tyent is India's top choice for hydrogen-rich alkaline water ionizers, ensuring transparency, quality, and unmatched service.
@@ -46,6 +43,7 @@ const SectionTwo = () => {
     </div>
   </div>
 
+ 
 </div>
 
 <div className="custom-arrow">
