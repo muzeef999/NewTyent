@@ -5,7 +5,7 @@ import Image from "next/image";
 import nmp5 from "@/asserts/NMP5.webp";
 import nmp9 from "@/asserts/NMP9.webp";
 import uce from "@/asserts/Uce.webp";
-import hybrid from "@/asserts/hybrid.webp";
+import hybrid from "@/asserts/Hybrid.webp";
 import "../../style/Nmp.css";
 import Link from "next/link";
 
