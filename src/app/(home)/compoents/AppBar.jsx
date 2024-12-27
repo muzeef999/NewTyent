@@ -82,7 +82,7 @@ const AppBar = () => {
       {/* Top Bar */}
       <div className="appbg sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
-          className="d-flex justify-content-between align-items-center"
+          className="d-flex justify-content-between align-items-center p-2"
           style={{ backgroundColor: "#008AC7", color: "#FFF" }}
         >
           <div
