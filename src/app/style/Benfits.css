@@ -103,4 +103,21 @@
   width: 50%; /* Adjust as needed */
 }
 
+.d-flex {
+  position: relative; /* Ensure relative positioning for the hover-line */
+}
+
+.hover-line {
+  position: absolute;
+  bottom: -5px; /* Adjust position below the content */
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #008ac7; /* Line color */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.d-flex:hover .hover-line {
+  width: 100%; /* Expand the line on hover */
+}
 
