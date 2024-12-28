@@ -22,6 +22,7 @@ import glands from "@/asserts/health/glands.png";
 import eye from "@/asserts/health/eye.png"
 import protection  from "@/asserts/health/protection.png"
 
+
 import coffe from "@/asserts/health/Coffee.png"
 import milktea from "@/asserts/health/milktea.png"
 import greentea from "@/asserts/health/greentea.png"
@@ -50,6 +51,8 @@ import Osteoporosisp from "@/asserts/health/Osteoporosisp.png"
 import GastricIssuesp from "@/asserts/health/GastricIssuesp.png"
 import BrainStroke from "@/asserts/health/BrainStroke.png"
 import Alzheimer from "@/asserts/health/Alzheimer.png"
+import fattyliver from "@/asserts/health/fattyliver.png"
+import ChronicFatigue from "@/asserts/health/ChronicFatigue.png"
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -131,7 +134,7 @@ const icons = [
   },
   {
     id: 11,
-    icon: icon,
+    icon: fattyliver,
     Heading: "Fatty Liver Disease",
     Descrpition:
       "Alkaline water supports liver detoxification, promotes fat breakdown, and reduces oxidative stress linked to liver damage.",
@@ -159,7 +162,7 @@ const icons = [
   },
   {
     id: 15,
-    icon: icon,
+    icon: ChronicFatigue,
     Heading: "Chronic Fatigue",
     Descrpition:
       "Hydration from Tyent water boosts cellular energy, reduces lactic acid, and combats fatigue, enhancing overall energy and vitality.",
