@@ -4,7 +4,7 @@ import icon from "@/asserts/Testmonials/icon1.png";
 import Image from "next/image";
 import { Col, Row, Table } from "react-bootstrap";
 import "@/app/style/Benfits.css";
-import benfitsBanner from "@/asserts/health/benfits.webp";
+import benfitsBanner from "@/asserts/benfits.png";
 import { IoWaterOutline } from "react-icons/io5";
 import weight from "@/asserts/health/weight.png";
 import digestive from "@/asserts/health/digestive.png";
