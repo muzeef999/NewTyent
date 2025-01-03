@@ -1,4 +1,4 @@
-import connect from "@/app/lib/mongoDB";
+import connect from "@/app/lib/mongoDB"
 import Lead from "@/models/Leads";
 
 export const POST = async (request) => {

@@ -3,7 +3,6 @@ import ProductModel from '@/models/Product';
 import { NextResponse } from 'next/server';
 import connectDB from '@/app/lib/mongoDB';
 
-
 // POST: Create an Order
 export const POST = async (request) => {
   await connectDB();
