@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import "@/app/style/Shipping.css";
+import { useSession } from "next-auth/react";
 
 const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
-  // Initialize form data with the editAddress values if provided
+  const { data: session } = useSession();
+
   const [formData, setFormData] = useState({
     fullName: "",
     address: "",
@@ -38,33 +40,50 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Debugging: Log the required values
+    console.log("Edit Address:", editAddress);
+    console.log("Form Data:", formData);
+
+    if (!session?.user?.id) {
+      alert("User session is not available. Please log in.");
+      return;
+    }
+
+    if (!editAddress?._id) {
+      alert("Address ID is missing.");
+      return;
+    }
+
     try {
-      const response = await fetch("/api/shipping", {
-        method: "PUT", // Use PUT for updating existing data
+      const response = await fetch(`/api/shipping/${session.user.id}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          addressId: editAddress._id, // Pass the ID of the address being edited
-          updatedAddress: formData, // Send the updated form data
+          addressId: editAddress._id, // Ensure address ID is sent
+          updatedAddress: formData,  // Ensure updated address details are sent
         }),
       });
 
       const data = await response.json();
+
       if (response.ok) {
         alert("Address updated successfully!");
         handleEditAccordionClose(); // Close the edit form on success
       } else {
-        alert(`Error: ${data.error}`);
+        console.error("Error:", data);
+        alert(`Error: ${data.error || "Unknown error occurred"}`);
       }
     } catch (error) {
+      console.error("API Error:", error);
       alert("Something went wrong!");
-      console.error(error);
     }
   };
 
   return (
-    <div className="m-1">
+    <div className="p-3">
       <Form onSubmit={handleSubmit}>
         <Row>
           <Col>
@@ -78,7 +97,7 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
                 placeholder="Enter full name"
                 required
               />
-            </Form.Group>
+            </Form.Group> 
           </Col>
           <Col>
             <Form.Group controlId="formAddress" className="mb-3">

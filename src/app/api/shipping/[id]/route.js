@@ -14,7 +14,7 @@ export async function GET(request, { params }) {
     if (!shippingAddresses || shippingAddresses.length === 0) {
       return NextResponse.json({
         message: "No shipping addresses found for this user",
-        success: false,
+        success: false, 
       });
     }
 

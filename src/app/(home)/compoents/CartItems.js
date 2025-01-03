@@ -1,8 +1,7 @@
 import React from "react";
-import { Row } from "react-bootstrap";
+import { Row, Spinner } from "react-bootstrap";
 import { RiSubtractLine } from "react-icons/ri";
 import { IoAddSharp } from "react-icons/io5";
-import Loading from "./Loading"; // Adjust the path if `Loading` is in a different folder.
 import Image from "next/image";
 import productImage from "@/asserts/NMP5.webp";
 import { AiOutlineDelete } from "react-icons/ai"; 
@@ -41,11 +40,7 @@ const CartItems = ({ products, handleQtyChange, updatingProduct, deleteProduct }
                     item.quantity <= 1 || updatingProduct === item.productName
                   }
                 >
-                  {updatingProduct === item.productName ? (
-                    <Loading size="sm" />
-                  ) : (
-                    <RiSubtractLine />
-                  )}
+                  {updatingProduct === item.productName ?  <Spinner animation="border" size="sm" /> : <RiSubtractLine />}
                 </button>
                 <span className="mx-2">{item.quantity}</span>
                 <button
@@ -56,11 +51,7 @@ const CartItems = ({ products, handleQtyChange, updatingProduct, deleteProduct }
                   }
                   disabled={updatingProduct === item.productName}
                 >
-                  {updatingProduct === item.productName ? (
-                    <Loading size="sm" />
-                  ) : (
-                    <IoAddSharp />
-                  )}
+                  {updatingProduct === item.productName ? <Spinner animation="border" size="sm" /> : <IoAddSharp />}
                 </button>
               </div>
 

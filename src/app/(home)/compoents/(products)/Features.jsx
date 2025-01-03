@@ -35,7 +35,7 @@ const Features = ({data, delay }) => {
               </div>
               
               <div>
-                <h4 style={{ color: '#008AC7', fontWeight: 500 }}>{data.title}</h4>
+                <h4 style={{ color: '#008AC7', fontWeight: 500 }}><b>{data.title}</b></h4>
                 <p style={{ fontSize: '14px' }}>{data.description}</p>
               </div>
             </div>

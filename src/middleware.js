@@ -4,7 +4,7 @@ import { getToken } from 'next-auth/jwt';
 // Role-specific accessible paths
 const rolePaths = {
   admin: ['/dashboard', '/adminOrder', '/leads', '/service', '/complains', '/adminBlog'],
-  manager: ['/leads', '/service', '/complains', '/adminBlog'],
+  manager: ['/leads', '/adminBlog'],
   employee: ['/complains', '/service'],
 };
 
@@ -42,7 +42,6 @@ export async function middleware(request) {
 export const config = {
   matcher: [
     '/dashboard',
-    '/shipping',
     '/adminOrder',
     '/adminBlog/:path*',
     '/leads',

@@ -36,7 +36,7 @@ export default function ClientComponent({ children, session }) {
         <br/>
         <br/>
         {!shouldExcludeLayout && <Form />}
-        {!shouldExcludeLayout && <Footer />}
+        <Footer />
       </Provider>
     </SessionProvider>
   );

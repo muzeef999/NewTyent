@@ -121,3 +121,16 @@
   width: 100%; /* Expand the line on hover */
 }
 
+
+
+@media (max-width: 768px) {
+
+  .benfitsheading{
+    font-size: 18px;
+  }
+  .benfitsubheading{
+    font-size: 14px;
+  }
+
+
+}

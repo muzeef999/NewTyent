@@ -77,6 +77,10 @@ const cartSlice = createSlice({
     setItemLoading: (state, action) => {
       state.loadingIds[action.payload] = true;
     },
+    setUpdatingProduct: (state, action) => {
+      state.updatingProduct = action.payload; // Store the product name or ID being updated
+    },
+
     clearItemLoading: (state, action) => {
       delete state.loadingIds[action.payload];
     },

@@ -273,12 +273,12 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
             alt={Heading}
           />
         <div className="ml-4 align-items-center">
-          <h3 className="m-4 text-start" style={{ color: "#008AC7" }}>
+          <h3 className="m-4 text-start benfitsheading" style={{ color: "#008AC7" }}>
             <b>
               {id}.{Heading}
             </b>
           </h3>
-          <p className="text-start m-4" style={{ color: "#565959" }}>
+          <p className="text-start m-4 benfitsubheading" style={{ color: "#565959" }}>
             {Descrpition}
           </p>
         </div>
@@ -529,7 +529,7 @@ const Page = () => {
           {BenfitsOnisedAlkaline.map((feature, index) => (
             <Col
               key={index}
-              md={6}
+              md={6} xs={2} ms={2}
               className={`d-flex  align-items-center ${
                 Math.floor(index / 2) % 2 === 0
                   ? "justify-content-start"

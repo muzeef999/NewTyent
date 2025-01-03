@@ -225,7 +225,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   .sectiontwo {
     border-radius: 32px;
     background-color: #FFF;
-    padding: 30px;
+    padding: 10px;
     box-shadow: 0 0 28px 0 rgba(28, 0, 76, 0.12);
     margin: 2px;
   }

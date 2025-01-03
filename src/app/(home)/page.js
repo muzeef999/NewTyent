@@ -10,8 +10,12 @@ import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
 
+import minerals from "@/asserts/why ionizer/minerals.png"
 import Molecular from "@/asserts/health/Molecular.png"
-import Alkalinity from "@/asserts/health/Alkalinity.png"
+import alkaline from "@/asserts/alkaline.png"
+import watersoda from "@/asserts/water.png"
+
+
 
 const TyentvsKAngan = dynamic(() => import("./compoents/(Home)/TyentvsKAngan"), {
   ssr: false,
@@ -28,7 +32,7 @@ const Form = dynamic(() => import("./compoents/Form/Form"), {
 const Home = () => {
   const cardDetails = [
     {
-      icon:Alkalinity,
+      icon:alkaline,
       title: "Alkalinity",
       content: `
         Acidic stress is the root cause of all the major lifestyle diseases 
@@ -42,6 +46,7 @@ const Home = () => {
       `,
     },
     {
+      icon:watersoda,
       title: "Micro-clustered water",
       content: `
         Tyent ionized hydrogen-rich alkaline water is Micro-clustered water. 
@@ -65,6 +70,7 @@ const Home = () => {
       `,
     },
     {
+      icon:minerals,
       title: "Natural minerals",
       content: `
         Tyent ionized hydrogen-rich alkaline water is rich in alkaline minerals 
@@ -118,10 +124,10 @@ const Home = () => {
         <Row>
           <Col
             md={6}
-            className="d-flex justify-content-center alin-items-center"
-            style={{ backgroundColor: "#008AC7", color: "#FFF" }}
+            className="d-flex justify-content-center align-items-center"
+            style={{ backgroundColor: "#008AC7", color: "#FFF", aspectRatio:'1/1' }}
           >
-            <div style={{ padding: "60px" }}>
+            <div style={{padding:'60px'}}>
               <h2 style={{ fontWeight: 600 }}>Why Tyent ?</h2>
               <p style={{ fontSize: "18px" }}>
                 Tyent, a medical-grade water ionizer manufactured by TAEYOUNG
@@ -135,10 +141,10 @@ const Home = () => {
           </Col>
           <Col
             md={6}
-            className="d-flex justify-content-center alin-items-center"
-            style={{ backgroundColor: "#f2f2f2", color: "#000" }}
+            className="d-flex justify-content-center align-items-center"
+            style={{ backgroundColor: "#f2f2f2", color: "#000", aspectRatio:'1/1' }}
           >
-            <div style={{ padding: "60px" }}>
+            <div style={{padding:'60px'}}>
               <h2 style={{ fontWeight: 600 }}>What is Kangen ?</h2>
               <p style={{ fontSize: "18px" }}>
                 Kangen, a medical-grade water ionizer manufactured by Enagic &

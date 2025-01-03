@@ -61,11 +61,12 @@ const ShippingAddresBar = () => {
 
 
   return (
-    <div>
-      {/* Top Bar */}
-      <div className="appbg">
+    <>
         <div
           style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
             color: "#FFF",
             display: "flex",
             justifyContent: "space-between",
@@ -74,6 +75,7 @@ const ShippingAddresBar = () => {
             width: "100%",
             height:'40px',
             backgroundColor: "#008AC7",
+            zIndex:'999'
           }}
         >
           {/* Left: Marquee Text */}
@@ -92,6 +94,7 @@ const ShippingAddresBar = () => {
               3 years warranty on ionizer & 15 years warranty on plates.
             </p>
           </div>
+
 
           {/* Right: Login */}
           <div
@@ -139,11 +142,8 @@ const ShippingAddresBar = () => {
         </p>
       )} 
           </div>
-        </div>
-      </div>
-
-      
-            {/* Login Modal */}
+        
+        </div> 
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title>Login</Modal.Title>
@@ -152,7 +152,7 @@ const ShippingAddresBar = () => {
                 <Login />
               </Modal.Body>
             </Modal>
-    </div>
+    </>
   );
 };
 
