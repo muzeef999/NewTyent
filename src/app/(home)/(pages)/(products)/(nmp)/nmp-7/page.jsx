@@ -38,18 +38,18 @@ const TyentNMP5 = () => {
   ]; 
 
   const specifications = [
-    { label: "Model", name: "Tyent NMP-5" },
-    { label: "Price", name: "160000" },
-    { label: "Electrode/Plates", name: "5" },
-    { label: "pH Range", name: "2.5 - 11.5" },
-    { label: "ORP Range", name: "Up to -850" },
+    { label: "Model", name: "Tyent NMP-7" },
+    { label: "Price", name: "205000" },
+    { label: "Electrode/Plates", name: "7" },
+    { label: "pH Range", name: "2.5 - 11.5*" },
+    { label: "ORP Range", name: "Up to -950*" },
     { label: "Hydrogen Range", name: "Up to 1550 PPB" },
     { label: "Generates", name: "7 types of water levels" },
     {
       label: "pH Levels",
       name: "3 alkaline, 2 acidic, 1 neutral, & 1 Turbo (Strong alkaline 11.5 pH)",
     },
-    { label: "Plate Surface Area", name: "52.9 * 5 = 264.5 sq inches" },
+    { label: "Plate Surface Area", name: "52.9 * 7 = 370.3 sq inches" },
     { label: "Water Generating Capacity", name: "1.5 - 3.0 L/min" },
     {
       label: "Filters Structure",

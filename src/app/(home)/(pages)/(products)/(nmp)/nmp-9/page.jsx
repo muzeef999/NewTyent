@@ -8,15 +8,15 @@ import Filter from "@/app/(home)/compoents/(products)/Filter";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import npmhealth from "@/asserts/npmhealth.png";
 import Image from "next/image";
-import plates from "@/asserts/nmp/qtyo.png";
-import rtr from "@/asserts/nmp/rtr.png"
-import turbo from "@/asserts/nmp/turbo.png"
-import ECOMode from "@/asserts/nmp/ECO-Mode.png"
-import display from "@/asserts/nmp/display.png"
-import Plates from "@/asserts/nmp/Plates.png"
+import plates from "@/asserts/nmp/qtyo.webp";
+import rtr from "@/asserts/nmp/rtr.webp"
+import turbo from "@/asserts/nmp/turbo.webp"
+import ECOMode from "@/asserts/nmp/ECO-Mode.webp"
+import display from "@/asserts/nmp/display.webp"
+import Plates from "@/asserts/nmp/Plates.webp"
 import jogDail from "@/asserts/nmp/jogDail.png"
-import SMPS from "@/asserts/nmp/SMPS.png"
-import filterIndication from "@/asserts/nmp/filterIndication.png"
+import SMPS from "@/asserts/nmp/SMPS.webp"
+import filterIndication from "@/asserts/nmp/filterIndication.webp"
 import AnimatedSVG from "@/app/(home)/compoents/(products)/AnimatedSVG";
 import Certifications from "@/app/(home)/compoents/Certifications";
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
@@ -40,17 +40,17 @@ const TyentNMP5 = () => {
 
   const specifications = [
     { label: "Model", name: "Tyent NMP-9" },
-    { label: "Price", name: "160000" },
-    { label: "Electrode/Plates", name: "5" },
-    { label: "pH Range", name: "2.5 - 11.5" },
-    { label: "ORP Range", name: "Up to -850" },
-    { label: "Hydrogen Range", name: "Up to 1550 PPB" },
+    { label: "Price", name: "238000" },
+    { label: "Electrode/Plates", name: "9" },
+    { label: "pH Range", name: "2.5 - 11.5*" },
+    { label: "ORP Range", name: "Up to -1050*" },
+    { label: "Hydrogen Range", name: "Up to 1800 PPB" },
     { label: "Generates", name: "7 types of water levels" },
     {
       label: "pH Levels",
       name: "3 alkaline, 2 acidic, 1 neutral, & 1 Turbo (Strong alkaline 11.5 pH)",
     },
-    { label: "Plate Surface Area", name: "52.9 * 5 = 264.5 sq inches" },
+    { label: "Plate Surface Area", name: "52.9 * 9 = 476.1 sq inches" },
     { label: "Water Generating Capacity", name: "1.5 - 3.0 L/min" },
     {
       label: "Filters Structure",

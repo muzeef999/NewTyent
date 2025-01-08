@@ -41,8 +41,8 @@ const TyentNMP5 = () => {
     { label: "Model", name: "Tyent NMP-5" },
     { label: "Price", name: "160000" },
     { label: "Electrode/Plates", name: "5" },
-    { label: "pH Range", name: "2.5 - 11.5" },
-    { label: "ORP Range", name: "Up to -850" },
+    { label: "pH Range", name: "2.5 - 11.5*" },
+    { label: "ORP Range", name: "Up to -850*" },
     { label: "Hydrogen Range", name: "Up to 1550 PPB" },
     { label: "Generates", name: "7 types of water levels" },
     {
