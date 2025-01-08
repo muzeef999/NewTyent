@@ -224,14 +224,44 @@ const AppBar = () => {
                       </li>
                     </ul>
                   </li>
-                  <li className="nav-item" >
+                  <li className="nav-item">
                     <div
-                      className="btn btn-link nav-link"
-                      onMouseEnter={() => setIsProductOpen(true)} // Open on hover
-                    
-                    >
+                      className={`nav-link ${
+                        ["/nmp-5", "/nmp-7", "/nmp-9", "/nmp-11"].includes(pathname)
+                          ? "active"
+                          : ""
+                      }`}
+                      onMouseEnter={() => window.innerWidth > 768 && setIsProductOpen(true)} 
+                      onMouseLeave={() => window.innerWidth > 768 && setIsProductOpen(false)}
+                      onClick={() => window.innerWidth <= 768 && setIsProductOpen(!isProductOpen)} 
+                  
+                   >
                       Products
                     </div>
+                    {isProductOpen && (
+                          <ul className="dropdown-menu">
+                                <li>
+                                  <Link href="/nmp-5" className="dropdown-item">
+                                    NMP 5
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/nmp-7" className="dropdown-item">
+                                    NMP 7
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/nmp-9" className="dropdown-item">
+                                    NMP 9
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link href="/nmp-11" className="dropdown-item">
+                                    NMP 11
+                                  </Link>
+                                </li>
+                              </ul>
+                            )}
                   </li>
                   {[
                     { path: "/benefits", label: "Benefits" },
@@ -289,7 +319,7 @@ const AppBar = () => {
         {/* Cart Offcanvas */}
         <Offcanvas
           show={cartShow}
-          style={{ width: "24%" }}
+          
           onHide={() => setCartShow(false)}
           placement="end"
         >

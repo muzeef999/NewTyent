@@ -137,7 +137,7 @@ const TyentNMP5 = () => {
     {
       title: "ECO Mode",
       description:
-        "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods, ensuring optimal performance while conserving electricity.",
+        "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
       icon: ECOMode, // Replace with the actual path to your icon
     },
     {
