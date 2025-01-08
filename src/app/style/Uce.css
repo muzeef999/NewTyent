@@ -1,0 +1,8 @@
+.backgrounduce {
+    background-image: url("../../asserts/uce/background.png"); /* Fixed typo from 'asserts' to 'assets' */
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: bottom center; /* Align the image to the bottom */
+}

@@ -20,7 +20,7 @@ export default function ClientComponent({ children, session }) {
   useEffect(() => {
     Aos.init({
       easing: "ease-out-cubic",
-      offset: 300,
+      offset: 150,
       duration: 1000, 
     });
   }, []);

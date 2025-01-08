@@ -19,20 +19,19 @@ import bloodsugar from "@/asserts/health/bloodsugur.png";
 import breathing from "@/asserts/health/breathing.png";
 import chemistry from "@/asserts/health/chemistry.png";
 import glands from "@/asserts/health/glands.png";
-import eye from "@/asserts/health/eye.png"
-import protection  from "@/asserts/health/protection.png"
+import eye from "@/asserts/health/eye.png";
+import protection from "@/asserts/health/protection.png";
 
-
-import coffe from "@/asserts/health/Coffee.png"
-import milktea from "@/asserts/health/milktea.png"
-import greentea from "@/asserts/health/greentea.png"
-import alcohol from "@/asserts/health/alcohol.png"
-import juices from "@/asserts/health/juices.png"
-import purifiedwater from "@/asserts/health/purified-water.png" 
-import tap from "@/asserts/health/tap.png"
-import mineralwater from "@/asserts/health/mineral-water.png"
-import tyentwater from "@/asserts/health/tyentwater.png"
-import fracture from "@/asserts/health/fracture.png"
+import coffe from "@/asserts/health/Coffee.png";
+import milktea from "@/asserts/health/milktea.png";
+import greentea from "@/asserts/health/greentea.png";
+import alcohol from "@/asserts/health/alcohol.png";
+import juices from "@/asserts/health/juices.png";
+import purifiedwater from "@/asserts/health/purified-water.png";
+import tap from "@/asserts/health/tap.png";
+import mineralwater from "@/asserts/health/mineral-water.png";
+import tyentwater from "@/asserts/health/tyentwater.png";
+import fracture from "@/asserts/health/fracture.png";
 
 import policy from "@/asserts/health/policy.png";
 import bpp from "@/asserts/health/bpp.png";
@@ -47,12 +46,12 @@ import Respiratory from "@/asserts/health/Respiratory.png";
 import yogo from "@/asserts/health/yogo.png";
 import skin from "@/asserts/health/skin.png";
 import sleep from "@/asserts/health/sleep.png";
-import Osteoporosisp from "@/asserts/health/Osteoporosisp.png"
-import GastricIssuesp from "@/asserts/health/GastricIssuesp.png"
-import BrainStroke from "@/asserts/health/BrainStroke.png"
-import Alzheimer from "@/asserts/health/Alzheimer.png"
-import fattyliver from "@/asserts/health/fattyliver.png"
-import ChronicFatigue from "@/asserts/health/ChronicFatigue.png"
+import Osteoporosisp from "@/asserts/health/Osteoporosisp.png";
+import GastricIssuesp from "@/asserts/health/GastricIssuesp.png";
+import BrainStroke from "@/asserts/health/BrainStroke.png";
+import Alzheimer from "@/asserts/health/Alzheimer.png";
+import fattyliver from "@/asserts/health/fattyliver.png";
+import ChronicFatigue from "@/asserts/health/ChronicFatigue.png";
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -261,29 +260,36 @@ const BenfitsOnisedAlkaline = [
 
 const IconTest = ({ Heading, id, icon, Descrpition }) => {
   return (
-     <div>
-      <div style={{backgroundColor:'#FFF'}} 
+    <div>
+      <div
+        style={{ backgroundColor: "#FFF" }}
         className="d-flex justify-content-center align-items-center custom-card-benfts"
       >
         <Image
-            className="custom-image-benfts"
-            src={icon}
-            priority
-            layout="fixed"
-            alt={Heading}
-          />
+          className="custom-image-benfts"
+          src={icon}
+          priority
+          layout="fixed"
+          alt={Heading}
+        />
         <div className="ml-4 align-items-center">
-          <h3 className="m-4 text-start benfitsheading" style={{ color: "#008AC7" }}>
+          <h3
+            className="m-4 text-start benfitsheading"
+            style={{ color: "#008AC7" }}
+          >
             <b>
               {id}.{Heading}
             </b>
           </h3>
-          <p className="text-start m-4 benfitsubheading" style={{ color: "#565959" }}>
+          <p
+            className="text-start m-4 benfitsubheading"
+            style={{ color: "#565959" }}
+          >
             {Descrpition}
           </p>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 
@@ -375,6 +381,12 @@ const Page = () => {
       "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
     img: benfitsBanner, // Replace with actual image path if different
     animatedText: "Health, Wellness, Transformation",
+  };
+
+  const getJustifyClass = (index) => {
+    return Math.floor(index / 2) % 2 === 0
+      ? "justify-content-start"
+      : "justify-content-end";
   };
 
   return (
@@ -481,27 +493,27 @@ const Page = () => {
             <span style={{ color: "#008AC7" }}> diabetes.</span>
           </p>
 
-         <div className="container">
-          <Row className="d-flex flex-wrap">
-            {icons.map((iconItem) => (
-              <Col
-                key={iconItem.id}
-                xs={12} // Full width on extra-small screens
-                sm={12} // Two columns on small screens
-                md={6} // Three columns on medium screens
-                lg={6} // Four columns on large screens
-                data-aos="zoom-in"
-              >
-                {/* Apply AOS here */}
-                <IconTest
-                  id={iconItem.id}
-                  icon={iconItem.icon}
-                  Heading={iconItem.Heading}
-                  Descrpition={iconItem.Descrpition}
-                />
-              </Col>
-            ))}
-          </Row>
+          <div className="container">
+            <Row className="d-flex flex-wrap">
+              {icons.map((iconItem) => (
+                <Col
+                  key={iconItem.id}
+                  xs={12} // Full width on extra-small screens
+                  sm={12} // Two columns on small screens
+                  md={6} // Three columns on medium screens
+                  lg={6} // Four columns on large screens
+                  data-aos="zoom-in"
+                >
+                  {/* Apply AOS here */}
+                  <IconTest
+                    id={iconItem.id}
+                    icon={iconItem.icon}
+                    Heading={iconItem.Heading}
+                    Descrpition={iconItem.Descrpition}
+                  />
+                </Col>
+              ))}
+            </Row>
           </div>
         </center>
 
@@ -521,44 +533,43 @@ const Page = () => {
           </h2>
         </center>
         <br />
-        </div>
+      </div>
 
       <div className="benefitsbackground">
         <center>
-        <Row className="container">
-          {BenfitsOnisedAlkaline.map((feature, index) => (
-            <Col
-              key={index}
-              md={6} xs={2} ms={2}
-              className={`d-flex  align-items-center ${
-                Math.floor(index / 2) % 2 === 0
-                  ? "justify-content-start"
-                  : "justify-content-end"
-              }`}
-            >
-              <div>
-                <center>
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width={60}
-                    height={60}
-                    className="feature-icon mb-3"
-                  />
-                  <p className="feature-description text-center custom-title">
-                    {feature.title}
-                  </p>
-                </center>
-              </div>
-            </Col>
-          ))}
-        </Row>
+          <Row className="container">
+            {BenfitsOnisedAlkaline.map((feature, index) => (
+              <Col
+                key={index}
+                md={6} // Fixed column width
+                xs={6} // Full-width on smaller devices
+                className={`d-flex align-items-center ${getJustifyClass(
+                  index
+                )}`}
+              >
+                <div>
+                  <center>
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={60}
+                      height={60}
+                      className="feature-icon mb-3"
+                    />
+                    <p className="feature-description text-center custom-title">
+                      {feature.title}
+                    </p>
+                  </center>
+                </div>
+              </Col>
+            ))}
+          </Row>
         </center>
-        </div>
+      </div>
 
-        <br />
-  
-  <div className="container">
+      <br />
+
+      <div className="container">
         <center>
           <h2
             className="text-center mb-4"
@@ -584,41 +595,38 @@ const Page = () => {
         <br />
 
         <Table className="custom-table" hover responsive>
-  <tbody>
-    <tr>
-      <th className="text-start">Beverage</th>
-      <th className="text-center">Ph Range</th>
-      <th className="text-center">ORP Level (Approx)</th>
-      <th className="text-center">Remarks</th>
-    </tr>
-    {tableData.map((row, index) => (
-      <tr key={index}>
-        <td className="text-start d-flex align-items-center">
-          <Image
-            src={row.icon}
-            alt={row.title}
-            width={40}
-            height={40}
-          /> &nbsp;&nbsp;
-          {row.beverage}
-        </td>
-        <td className="text-center align-items-center">
-          {row.phRange}
-        </td>
-        <td className="text-center align-items-center">
-          {row.orpLevel}
-        </td>
-        <td className="text-start align-items-center">
-          {row.remarks}
-        </td>
-      </tr>
-    ))}
-  </tbody>
-</Table>
+          <tbody>
+            <tr>
+              <th className="text-start">Beverage</th>
+              <th className="text-center">Ph Range</th>
+              <th className="text-center">ORP Level (Approx)</th>
+              <th className="text-center">Remarks</th>
+            </tr>
+            {tableData.map((row, index) => (
+              <tr key={index}>
+                <td className="text-start d-flex align-items-center">
+                  <Image
+                    src={row.icon}
+                    alt={row.title}
+                    width={40}
+                    height={40}
+                  />{" "}
+                  &nbsp;&nbsp;
+                  {row.beverage}
+                </td>
+                <td className="text-center align-items-center">
+                  {row.phRange}
+                </td>
+                <td className="text-center align-items-center">
+                  {row.orpLevel}
+                </td>
+                <td className="text-start align-items-center">{row.remarks}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
 
-
-        </div>
-      
       <Row className="align-items-center">
         <div className="background-container">
           <div className="background-overlay"></div>

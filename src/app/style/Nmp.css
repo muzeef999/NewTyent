@@ -8,6 +8,13 @@
   transition: all 0.3s ease; /* Smooth transition for hover and active states */
 } 
 
+
+@font-face {
+  font-family: 'MyCustomFont'; /* Define the font name */
+  src: url('../../fonts/QuartzItalic.ttf') format('truetype');
+}
+
+
 /* Active button styling */
 .activebutton {
   border: 1px solid #008AC7;
