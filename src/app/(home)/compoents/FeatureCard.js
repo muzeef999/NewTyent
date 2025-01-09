@@ -108,11 +108,12 @@ const FeatureCard = ({ data }) => {
 
           {/* Content Section */}
           <div className="container-fluid" style={{ backgroundColor: item.id == 3 ? "#05060a" : 
-                 item.id == 6 ? "#FF5733" : 
                  item.id == 9 ? "#005d88" : 
                  item.id == 12 ? "#55a4b1" : 
                  item.color1, borderBottom: "1px solid #bfbfbf",
-                                                    color: item.id == 3 ? "#2ebb46": item.id == 6 ? "#FF5733" : item.id == 9 ? "#FFF" : "#008AC7" }}>
+                                                    color: item.id == 3 ? "#2ebb46" :
+                                                            item.id == 12 ? "#FFF" : 
+                                                            item.id == 9 ? "#FFF" : "#008AC7" }}>
             <div className="container" style={{padding:'50px'}}>
               <Row>
                 
@@ -129,12 +130,12 @@ const FeatureCard = ({ data }) => {
                     ref={(el) => (textRefs.current[index] = el)}
                     style={{
                       fontWeight: 400,
-                      fontSize: "20px",
+                      fontSize: "16px",
                       display: "-webkit-box",
                       WebkitBoxOrient: "vertical",
                       WebkitLineClamp: expandedItems[item.id] ? "none" : "5", // Limit lines to 5 or show all
                       overflow: "hidden",
-                      color:`${item.id == 3 ? "#2ebb46": item.id==9 ? "#FFF" :'#000'}`,
+                      color:`${item.id == 3 ? "#2ebb46": item.id==9 ? "#FFF" : item.id==12 ? "#FFF" : '#000'}`,
                       textOverflow: "ellipsis",
                     }}
                   >
@@ -159,16 +160,14 @@ const FeatureCard = ({ data }) => {
                           <div className="position-relative imagecolor"
                             style={{width:'70%', height:'auto',  borderRadius:'20px', padding:'20px'}}
                           >
-                            
-
                             <div
                               id="displaysvgresponsive"
                               style={{
                                 position: "absolute",
-                                left:'61%',
-                                top: "34.7%",
+                                left:'60%',
+                                top: "36%",
                                  zIndex:0,
-                                width: "41%",
+                                width: "37%",
                                 height: "100%",
                                 transform: "translate(-50%, -50%)",
                               }}
