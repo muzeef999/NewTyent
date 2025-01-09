@@ -232,7 +232,6 @@ const AppBar = () => {
                           : ""
                       }`}
                       onMouseEnter={() => window.innerWidth > 768 && setIsProductOpen(true)} 
-                      onMouseLeave={() => window.innerWidth > 768 && setIsProductOpen(false)}
                       onClick={() => window.innerWidth <= 768 && setIsProductOpen(!isProductOpen)} 
                   
                    >

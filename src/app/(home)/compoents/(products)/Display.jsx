@@ -8,6 +8,7 @@ import { MotionPathPlugin } from "gsap/all";
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
+
 const Display = () => {
 
   const svgRef = useRef(null);
