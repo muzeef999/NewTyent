@@ -1,6 +1,7 @@
 .imagetyent {
         border-radius:'14px';
         z-index: 1; 
-        position: relative
+        position: relative;
+        border-radius: 20px;
     
 }

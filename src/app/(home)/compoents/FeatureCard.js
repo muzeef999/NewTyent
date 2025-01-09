@@ -113,8 +113,10 @@ const FeatureCard = ({ data }) => {
                  item.id == 12 ? "#55a4b1" : 
                  item.color1, borderBottom: "1px solid #bfbfbf",
                                                     color: item.id == 3 ? "#2ebb46": item.id == 6 ? "#FF5733" : item.id == 9 ? "#FFF" : "#008AC7" }}>
-            <div className="container">
+            <div className="container" style={{padding:'50px'}}>
               <Row>
+                
+          
                 <Col md={6}>
                   {/* Big Number Animation */}
                   <h1 ref={(el) => (bigNumberRefs.current[index] = el)} className="big-number">
@@ -155,7 +157,7 @@ const FeatureCard = ({ data }) => {
                  <center>
                 <div ref={svgRef}>
                           <div className="position-relative imagecolor"
-                            style={{width:'80%', height:'auto',  borderRadius:'20px'}}
+                            style={{width:'70%', height:'auto',  borderRadius:'20px', padding:'20px'}}
                           >
                             
 
@@ -536,6 +538,7 @@ const FeatureCard = ({ data }) => {
                               alt={item.heading}
                               layout="responsive"
                               priority
+
                             />
                             
 
@@ -543,6 +546,7 @@ const FeatureCard = ({ data }) => {
                         </div>
                         </center>
                 </Col>
+              
               </Row>
             </div>
           </div>
