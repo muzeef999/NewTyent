@@ -27,6 +27,97 @@ const FeatureCard = ({ data }) => {
     }));
   };
 
+  useEffect(() => {
+    // Scroll-triggered SVG Path Animation
+    svgRefs.current.forEach((svg, index) => {
+      const paths = svg.querySelectorAll("path");
+      paths.forEach((path, i) => {
+        const length = path.getTotalLength();
+        gsap.fromTo(
+          path,
+          { strokeDasharray: length, strokeDashoffset: length },
+          {
+            strokeDashoffset: 0,
+            duration: 1.5,
+            delay: index * 0.3 + i * 0.2,
+            ease: "power2.inOut",
+            scrollTrigger: {
+              trigger: svg,
+              start: "top bottom",
+              end: "top top",
+              scrub: true,
+            },
+          }
+        );
+      });
+    });
+  
+    // Scroll-triggered Big Number Animation with Count Effect
+    bigNumberRefs.current.forEach((ref, index) => {
+      const itemId = parseInt(ref.textContent, 10); // Parse the final number from the element
+  
+      gsap.fromTo(
+        { count: 0 }, // Starting number
+        { count: itemId }, // Final number
+        {
+          duration: 1.5,
+          delay: index * 0.3,
+          ease: "power2.out",
+          onUpdate: function () {
+            const value = Math.floor(this.targets()[0].count); // Round the number
+            ref.textContent = value; // Update the element's text content
+          },
+          scrollTrigger: {
+            trigger: ref,
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+          },
+        }
+      );
+  
+      // Additional scaling and opacity effect
+      gsap.fromTo(
+        ref,
+        { opacity: 0, scale: 0.8 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          delay: index * 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ref,
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+          },
+        }
+      );
+    });
+  
+    // Scroll-triggered Slide-In Text Animation
+    textRefs.current.forEach((ref, index) => {
+      gsap.fromTo(
+        ref,
+        { x: -50, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          delay: index * 0.4,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ref,
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+          },
+        }
+      );
+    });
+  }, []);
+  
 
   useEffect(() => {
     if (!svgRefs.current || svgRefs.current.length === 0) return;
@@ -165,7 +256,7 @@ const FeatureCard = ({ data }) => {
                               style={{
                                 position: "absolute",
                                 left:'60%',
-                                top: "36%",
+                                top: "36.1%",
                                  zIndex:0,
                                 width: "37%",
                                 height: "100%",

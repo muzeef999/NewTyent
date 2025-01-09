@@ -44,7 +44,7 @@ const TyentNMP5 = () => {
     { label: "Electrode/Plates", name: "9" },
     { label: "pH Range", name: "2.5 - 11.5*" },
     { label: "ORP Range", name: "Up to -1050*" },
-    { label: "Hydrogen Range", name: "Up to 1800 PPB" },
+    { label: "Hydrogen Range", name: "Up to 1800 PPB*" },
     { label: "Generates", name: "7 types of water levels" },
     {
       label: "pH Levels",
@@ -106,9 +106,9 @@ const TyentNMP5 = () => {
 
   const features = [
     {
-      title: "11 Japanese Plates",
+      title: "9 Japanese Plates",
       description:
-        "The Tyent NMP-7 features seven platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, -ORP up to -950*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+        "The Tyent NMP-9 features seven platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, -ORP up to -1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
       icon: Plates, // Replace with the actual path to your icon
     },
     {
@@ -180,19 +180,7 @@ const TyentNMP5 = () => {
               className="text-center"
               style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
             >
-              The Tyent NMP-11 is engineered with cutting-edge technology,
-              modern design, and a user-friendly interface, making it the
-              ultimate water ionizer. It features 11 advanced Japanese solid
-              hybrid mesh plates/electrodes from Permelac, Japan (Since 1969),
-              crafted from titanium and coated with platinum to ensure 99.9%
-              purity. With an expanded surface area, it maintains stable oxygen
-              levels and enhances micro-clustering. Offering seven different
-              water levels, it generates selective antioxidant molecular
-              hydrogen up to 1800 PPB and an ORP of up to -1150. It includes a
-              3-year warranty on the machine, a 15-year warranty on the
-              electrodes/plates, and a lifespan exceeding 45 years. Ideal for
-              small households, it provides clean, healthy ionized water
-              effortlessly.
+              The Tyent NMP-9 is engineered with cutting-edge technology, modern design, and a user-friendly interface, making it the Best-Selling Flagship water ionizer. It features 9 advanced Japanese solid hybrid mesh plates/electrodes from Permelac, Japan  (Since 1969), crafted from titanium and coated with platinum to ensure 99.9% purity. With an expanded surface area, it maintains stable oxygen levels and enhances micro-clustering. Offering seven different water levels, it generates selective antioxidant molecular hydrogen up to 1800 PPB and an ORP of up to -1050. It includes a 3-year warranty on the machine, a 15-year warranty on the electrodes/plates, and a lifespan exceeding 45 years. Ideal for moderate households, it provides clean, healthy ionized water effortlessly.
             </p>
           </Col>
         </Row>
