@@ -6,6 +6,17 @@ html {
     margin: 0;
 }
 
+@font-face {
+  font-family: 'Poppins'; /* Define the font name */
+  src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HalenoirEx'; /* Define the font name */
+  src: url('../../fonts/HalenoirEx-BlackOutline.otf') format('truetype');
+}
+
+
 body {
      margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -231,11 +242,8 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   }
 
   .big-number {
-    font-size: 8rem; /* Adjust size as needed */
-    font-weight: bold;
-    color: transparent; /* Make the text itself transparent */
-    -webkit-text-stroke: 2px #008AC7; /* Outer stroke color and width */
-    position: relative;
+    font-family: 'HalenoirEx', 'Poppins';
+    font-size: 110px; 
   }
 
   .nav-tabs .nav-item {

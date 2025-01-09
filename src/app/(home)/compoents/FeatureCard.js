@@ -104,20 +104,15 @@ const FeatureCard = ({ data }) => {
     <div>
       {data.map((item, index) => (
         <div key={item.id}>
-          {/* SVG Animation */}
-          <svg style={{backgroundColor:`${item.color1}`}}
-            ref={(el) => (svgRefs.current[index] = el)}
-            width="100%"
-            height="auto"
-            viewBox="0 0 1919 292"
-            fill={item.color1}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-           <path d="M-53 139.502C263.5 -18.7404 675 21.5007 888 91.2421C1101 160.984 1422.5 287.002 1931 48.0018" stroke="#eef7fc" stroke-width="8"/>
-          </svg>
+       
 
           {/* Content Section */}
-          <div className="container-fluid" style={{ backgroundColor: item.color1 }}>
+          <div className="container-fluid" style={{ backgroundColor: item.id == 3 ? "#05060a" : 
+                 item.id == 6 ? "#FF5733" : 
+                 item.id == 9 ? "#005d88" : 
+                 item.id == 12 ? "#55a4b1" : 
+                 item.color1, borderBottom: "1px solid #bfbfbf",
+                                                    color: item.id == 3 ? "#2ebb46": item.id == 6 ? "#FF5733" : item.id == 9 ? "#FFF" : "#008AC7" }}>
             <div className="container">
               <Row>
                 <Col md={6}>
@@ -137,6 +132,7 @@ const FeatureCard = ({ data }) => {
                       WebkitBoxOrient: "vertical",
                       WebkitLineClamp: expandedItems[item.id] ? "none" : "5", // Limit lines to 5 or show all
                       overflow: "hidden",
+                      color:`${item.id == 3 ? "#2ebb46": item.id==9 ? "#FFF" :'#000'}`,
                       textOverflow: "ellipsis",
                     }}
                   >
@@ -158,16 +154,18 @@ const FeatureCard = ({ data }) => {
                 <Col md={6} className='justify-content-center align-items-center'>
                  <center>
                 <div ref={svgRef}>
-                          <div className="position-relative"
-                            style={{width:'80%', height:'auto', border:'6px solid #008AC7', borderRadius:'20px'}}
+                          <div className="position-relative imagecolor"
+                            style={{width:'80%', height:'auto',  borderRadius:'20px'}}
                           >
+                            
+
                             <div
                               id="displaysvgresponsive"
                               style={{
                                 position: "absolute",
                                 left:'61%',
-                                zIndex:-9,
                                 top: "34.7%",
+                                 zIndex:0,
                                 width: "41%",
                                 height: "100%",
                                 transform: "translate(-50%, -50%)",
@@ -532,13 +530,15 @@ const FeatureCard = ({ data }) => {
                               </svg>
                             </div>
 
-                            <Image 
-                             src={item.icon} alt={item.heading}
+
+                            <Image className='imagetyent'
+                              src={item.icon}
+                              alt={item.heading}
                               layout="responsive"
                               priority
-                              style={{zIndex:9}}
-                              
                             />
+                            
+
                           </div>
                         </div>
                         </center>
