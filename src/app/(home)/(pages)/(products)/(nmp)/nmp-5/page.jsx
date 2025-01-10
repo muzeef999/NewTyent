@@ -210,7 +210,7 @@ const TyentNMP5 = () => {
             }}
           >
             <Col
-              md={6}
+              md={6}  order={{ md: 1, xs: 2 }}
               className="d-flex justify-content-center align-items-center"
             >
               <div style={{ width: "100%", height: "auto" }}>
@@ -222,7 +222,7 @@ const TyentNMP5 = () => {
                 />
               </div>
             </Col>
-            <Col md={6} className="position-relative">
+            <Col md={6} order={{ md: 2, xs: 1 }} className="position-relative">
               {/* Image Container */}
               <div style={{ width: "100%", height: "auto" }}>
                 <Image
@@ -279,7 +279,7 @@ const TyentNMP5 = () => {
           </Row>
         </div>
 
-        {/* east to use display */}
+        {/* east to use display */} 
         <br />
         <Display />
 
@@ -296,7 +296,7 @@ const TyentNMP5 = () => {
       </div>
 
       <Container>
-        <Filter />
+       
 
         <h2
           className="text-center mb-4"
@@ -339,7 +339,10 @@ const TyentNMP5 = () => {
           </tbody>
         </Table>
 
+
         <Certifications />
+        <Filter />
+
       </Container>
     </div>
   );

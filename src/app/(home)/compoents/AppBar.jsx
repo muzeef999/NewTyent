@@ -32,6 +32,8 @@ const AppBar = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [offcanvasOpen, setOffcanvasOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
 
   const toggleOffcanvas = () => {
     setOffcanvasOpen(!offcanvasOpen);
@@ -77,13 +79,25 @@ const AppBar = () => {
     router.push("/");
   };
 
+  
+  const currentUrl = window.location.href;
+
+
+  // Check if "uce" is found in the URL
+  const urlFound = currentUrl.includes("uce");
+
+  // Dynamically set the styles based on the condition
+  const style = urlFound
+    ? { backgroundColor: " #999999", color: "#FFF" }
+    : { backgroundColor: "#008AC7", color: "#FFF" };
+
   return (
     <div>
       {/* Top Bar */}
-      <div className="appbg sticky-top" style={{position:'fixed', width:'100%', overflow:'hidden'}}>
+      <div className="sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
-          className="d-flex justify-content-between align-items-center p-2"
-          style={{ backgroundColor: "#008AC7", color: "#FFF" }}
+          className="d-flex justify-content-between align-items-center"
+          style={style}
         >
           <div
             className="d-flex align-items-center marquee"
@@ -139,7 +153,7 @@ const AppBar = () => {
 
         {/* Navbar */}
         <nav
-          className={`navbar  navbar-expand-lg sticky-top navbar-light flex-column custom-navbar  ${
+          className={`navbar  navbar-expand-xl  sticky-top navbar-light flex-column custom-navbar  ${
             isFixed ? "fixed" : ""
           }`}
         >
@@ -188,43 +202,69 @@ const AppBar = () => {
                       Home
                     </Link>
                   </li>
-                  <li className="nav-item dropdown" onMouseEnter={() => setIsProductOpen(false)}>
-                    <Link 
-                      href="#"
-                      className={`dropdown-toggle nav-link ${
-                        pathname === "/our-story" ||
-                        pathname === "/tyent-global"
-                          ? "active"
-                          : ""
-                      }`}
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      About Us
-                    </Link>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link
-                          href="/our-story"
-                          className="dropdown-item"
-                          onClick={closeOffcanvas}
-                        >
-                          Our Story
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/tyent-global"
-                          className="dropdown-item"
-                          onClick={closeOffcanvas}
-                        >
-                          Tyent Global
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
+                  <li
+      className={`nav-item dropdown ${isDropdownOpen ? "show" : ""}`}
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}
+    >
+      <Link
+        href="#"
+        className={`dropdown-toggle nav-link ${
+          pathname === "/our-story" || pathname === "/tyent-global" ? "active" : ""
+        }`}
+        role="button"
+        aria-expanded={isDropdownOpen}
+      >
+        About Us
+      </Link>
+      <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? "show" : ""}`}>
+        <li>
+          <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
+            Our Story
+          </Link>
+        </li>
+        <li>
+          <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
+            Tyent Global
+          </Link>
+        </li>
+      </ul>
+    </li>
+
+
+
+
+    <li
+      className={`nav-item dropdown d-none d-sm-block d-xl-none ${isDropdownOpen ? "show" : ""}`}
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}
+    >
+      <Link
+        href="#"
+        className={`dropdown-toggle nav-link ${
+          pathname === "/our-story" || pathname === "/tyent-global" ? "active" : ""
+        }`}
+        role="button"
+        aria-expanded={isDropdownOpen}
+      >
+        products
+      </Link>
+      <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? "show" : ""}`}>
+        <li>
+          <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
+            Our Story
+          </Link>
+        </li>
+        <li>
+          <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
+            Tyent Global
+          </Link>
+        </li>
+      </ul>
+    </li>
+
+
+                  <li className="nav-item d-none d-xl-block">
                     <div
                       className={`nav-link ${
                         ["/nmp-5", "/nmp-7", "/nmp-9", "/nmp-11"].includes(pathname)
@@ -232,35 +272,9 @@ const AppBar = () => {
                           : ""
                       }`}
                       onMouseEnter={() => window.innerWidth > 768 && setIsProductOpen(true)} 
-                      onClick={() => window.innerWidth <= 768 && setIsProductOpen(!isProductOpen)} 
-                  
                    >
                       Products
                     </div>
-                    {isProductOpen && (
-                          <ul className="dropdown-menu">
-                                <li>
-                                  <Link href="/nmp-5" className="dropdown-item">
-                                    NMP 5
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/nmp-7" className="dropdown-item">
-                                    NMP 7
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/nmp-9" className="dropdown-item">
-                                    NMP 9
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/nmp-11" className="dropdown-item">
-                                    NMP 11
-                                  </Link>
-                                </li>
-                              </ul>
-                            )}
                   </li>
                   {[
                     { path: "/benefits", label: "Benefits" },

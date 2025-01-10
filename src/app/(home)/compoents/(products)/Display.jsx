@@ -11,83 +11,66 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 const Display = () => {
 
-  const svgRef = useRef(null);
+ const svgRef = useRef(null);
 
   useEffect(() => {
     const svgElement = svgRef.current;
-  
-    
-    const durationPerStep = 4; 
-    const repeatDelay = 1; 
+
+    const durationPerStep = 4;
+    const repeatDelay = 1;
     const colors = [
-      "#a667ce",
-      "#6595dd",
-      "#00d2ff",
-      "#00ff12",
-      "#f89b3e",
-      "#f6c631",
-      "#ed1b24",
-      "#797a83",
+      '#A667CE',
+'#6595DD',
+'#00D2FF',
+'#00FF12',
+'#FFA500',
+'#FFFF00',
+'#FF0000',
+'#797A83',
     ];
-    const phValues = ["9.5", "9.0", "8.5", "7.2", "5.0", "6.0", "11.0", "12:33"];
-  
+    const phValues = [
+      "9.5",
+      "9.0",
+      "8.5",
+      "7.2",
+      "5.0",
+      "6.0",
+      "11.0",
+      "12:33",
+    ];
+
     const dataDisplay = svgElement.querySelector("#dataDisplay");
+    const textElement = svgElement.querySelector("#textDisplay");
+
+    // Set dataDisplay visibility at the start of the animation
+    dataDisplay.style.display = "block";
 
     const colorTimeline = gsap.timeline({
       repeat: -1,
-      repeatDelay, // Adds delay between loops
-      onComplete: () => {
-        // Hide dataDisplay when the last color is shown
-        dataDisplay.style.display = "none";
-      },
-      onStart: () => {
-        // Show dataDisplay at the start of the loop
-        dataDisplay.style.display = "block";
-      },
+      repeatDelay,
     });
 
-    colors.forEach((color) => {
-      colorTimeline.to(svgElement.querySelector("#displayColour"), {
-        fill: color,
-        duration: durationPerStep,
-      });
-    });
-
-    
-    const textTimeline = gsap.timeline({ repeat: -1 });
-    colors.forEach((color) => {
-      textTimeline.to(
-        svgElement.querySelectorAll("#textDisplay tspan"),
+    colors.forEach((color, index) => {
+      colorTimeline.to(
+        [
+          svgElement.querySelector("#displayColour"), // Background color
+          svgElement.querySelectorAll("#textDisplay tspan"), // Text color
+        ],
         {
           fill: color,
-          duration: 4,
-        },
-        "+=0"
-      );
-    });
-  
-    
-    const textElement = svgElement.querySelector("#textDisplay");
-    const phTimeline = gsap.timeline({ repeat: -1, repeatDelay });
-  
-    phValues.forEach((value, index) => {
-      phTimeline.to(
-        {},
-        {
           duration: durationPerStep,
           onStart: () => {
-            textElement.textContent = value; 
+            const value = phValues[index % phValues.length]; // Cycle phValues
+            if (textElement) textElement.textContent = value;
           },
         },
-        index * durationPerStep 
+        index * durationPerStep
       );
     });
-  
-    
+
+    // Cleanup on unmount
     return () => {
       colorTimeline.kill();
-      phTimeline.kill();
-      textTimeline.kill();
     };
   }, []);
   
@@ -123,9 +106,9 @@ const Display = () => {
               style={{
                 zIndex:-9,
                 position: "absolute",
-                left:'60%',
+                left:'60.2%',
                 top: "33%",
-                width: "44%",
+                width: "44.5%",
                 height: "100%",
                 transform: "translate(-50%, -50%)",
               }}
@@ -133,13 +116,13 @@ const Display = () => {
               <svg
                 width="100%"
                 height="auto"
-                viewBox="0 0 3000 420"
+                viewBox="0 0 3200 420"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <g>
                   <rect
-                    width="3000"
+                    width="3200"
                     height="4000"
                     id="displayColour"
                     fill="none"

@@ -7,6 +7,7 @@ import Image from "next/image";
 const Filter = () => {
   return (
     <Container>
+      <br/>
       {/* Section Title */}
       <h2
         className="text-center mb-4"
@@ -41,6 +42,8 @@ const Filter = () => {
                 color="#008AC7"
                 style={{
                   margin: "5px 10px 0 0",
+                  width: "20px",
+                  height: "20px", // Explicitly set width and height
                 }}
               />
               <p

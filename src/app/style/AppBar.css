@@ -28,16 +28,7 @@ body {
   }
 
 
-  .appbardemo {
-    color: #008AC7;
-    border: 1px solid #008AC7;
-    padding: 10px 14px;
-    border-radius: 30px;
-    font-weight: 500;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-}
+ 
 
 .marquee {
   display: flex;
@@ -85,6 +76,19 @@ body {
   border-radius: 50%;
 }
 
+
+
+.appbardemo {
+  color: #008AC7;
+  border: 1px solid #008AC7;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
 .appbardemo:hover {
     background-color: #008AC7;
     color: #FFF;
@@ -95,6 +99,31 @@ body {
     box-shadow: 0 4px 8px rgba(0, 138, 199, 0.3); /* Subtle shadow for better hover UI */
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+.appbardemoblack {
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.appbardemoblack:hover {
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 30px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(5, 5, 5, 0.3); /* Subtle shadow for better hover UI */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+
 
 .nav-item {
   padding: 5px;

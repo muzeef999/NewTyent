@@ -48,12 +48,12 @@ const ProductSection = ({ products, specifications }) => {
   return (
     <div>
       {/* Header Section */}
-      <Row className="mb-5 align-items-center">
+      <Row className="mb-5 align-items-top">
         <Col md={6}>
-          <div style={{ width: "100%", margin: "30px", position: "relative" }}>
+          <div style={{ width: "100%", position: "relative" }}>
             {products.map((item, itemIndex) => (
               <div
-                className="d-flex justify-content-center align-items-center"
+                className="d-flex justify-content-center align-items-top"
                 key={itemIndex}
               >
                 {/* Thumbnail Images */}
@@ -79,12 +79,12 @@ const ProductSection = ({ products, specifications }) => {
                 </div>
 
                 {/* Main Image */}
-                <div className="d-flex justify-content-center align-items-center">
+                <div className="d-flex justify-content-center align-items-top" style={{borderRadius:'22px'}}>
                   <img
                     src={item.src[currentIndex]}
                     alt={`Product ${currentIndex + 1}`}
                     width="100%"
-                    style={{ borderRadius: "22px", padding: "25px" }}
+                    style={{ borderRadius: "22px", padding: "16px" }}
                   />
                 </div>
               </div>
@@ -92,25 +92,25 @@ const ProductSection = ({ products, specifications }) => {
           </div>
 
           <div className="d-flex gap-3 justify-content-center align-items-center">
-            <button className="appbardemo">
+            <button className={`${ model == "Tyent UCE-9 plus" ? "appbardemoblack" : "appbardemo"  }`}>
               <IoCallOutline />
               &nbsp;Call to Order
             </button>
 
-            <button className="appbardemo" onClick={() => addToCart()}>
+            <button className={`${ model == "Tyent UCE-9 plus" ? "appbardemoblack" : "appbardemo"  }`} onClick={() => addToCart()}>
               <MdOutlineShoppingCart />
               &nbsp;Add to Cart
             </button>
           </div>
         </Col>
         <Col md={6}>
-          <h1 style={{ fontWeight: 600, color: "#008AC7" }}>{model}</h1>
+          <h1 style={{ fontWeight: 600, color: model == "Tyent UCE-9 plus" ?"#000": "#008AC7" }}>{model}</h1>
           <hr />
-          <h4>
+          <h4 className="m-2">
             M.R.P: <span style={{ fontWeight: 500 }}>₹ {new Intl.NumberFormat("en-IN").format(price)}/-</span>
           </h4>
           <hr />
-          <h4 style={{ fontWeight: 500 }}>Specifications</h4>
+          <h4 className="m-2" style={{ fontWeight: 500 }}>Specifications</h4>
           <hr />
           <Table className="custom-table table-borderless" hover responsive>
             <tbody>
@@ -122,7 +122,7 @@ const ProductSection = ({ products, specifications }) => {
               ))}
             </tbody>
           </Table>
-          <button className="appbardemo">
+          <button className={`${ model == "Tyent UCE-9 plus" ? "appbardemoblack" : "appbardemo"  }`}>
             <RxDownload />
             &nbsp;Download Brochure
           </button>

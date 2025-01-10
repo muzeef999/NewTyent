@@ -6,3 +6,18 @@
     height: auto;
     background-position: bottom center; /* Align the image to the bottom */
 }
+
+.custom-card-uce{
+    background: linear-gradient(to right, #393939, #bcbcbc);
+    border-radius: 24px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .custom-card-uce:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+  }

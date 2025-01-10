@@ -26,16 +26,15 @@ const ProductData = [
       {
         title: "UCE-9",
         image: uce,
-        link: "nmp-9",
+        link: "uce-9",
       },
       {
         title: "HYBRID H2",
         image: hybrid,
-        link: "nmp-11",
+        link: "hybrid-11",
       },
     ],
   },
-
   {
     category: "NMP Series",
     products: [
@@ -50,12 +49,12 @@ const ProductData = [
         link: "nmp-7",
       },
       {
-        title: "NMP-8",
+        title: "NMP-9",
         image: nmp9,
         link: "nmp-9",
       },
       {
-        title: "NMP-9",
+        title: "NMP-11",
         image: nmp9,
         link: "nmp-11",
       },

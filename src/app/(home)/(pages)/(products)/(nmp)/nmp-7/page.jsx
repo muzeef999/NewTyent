@@ -15,9 +15,11 @@ import display from "@/asserts/nmp/nmp5&7/display.webp"
 import Plates from "@/asserts/nmp/nmp5&7/Plates.webp"
 import SMPS from "@/asserts/nmp/nmp5&7/SMPS.webp"
 import filterIndication from "@/asserts/nmp/nmp5&7/filterIndication.webp"
-import AnimatedSVG from "@/app/(home)/compoents/(products)/AnimatedSVG";
+import AnimatedSVG from "@/app/(home)/compoents/(products)/AnimatedSVG"; 
 import Certifications from "@/app/(home)/compoents/Certifications";
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
+import leftIamge from "@/asserts/nmp/leftboost1.webp";
+import Rightamge from "@/asserts/nmp/rightboost2.webp";
 
 
  
@@ -190,48 +192,84 @@ const TyentNMP5 = () => {
       
         <br />
         <br />
-
-        <div className="custom-card">
-                  
-                    <Row>
-            <Col
-              md={6}
-              className="d-flex justify-content-center align-items-center boost1"
-            >
-              {/* Left column (image only, no content needed) */}
-            </Col>
-            <Col md={6} className="boost2">
-              <h1
-                style={{
-                  fontSize: "38px",
-                  fontWeight: "700",
-                  lineHeight: "56px",
-                  marginBottom: "16px",
-                  color: "#FFF",
-                }}
-              >
-                The Daily Boost Your Body Deserves
-              </h1>
-              <p
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "400",
-                  lineHeight: "42px",
-                  marginBottom: "24px",
-                  color: "#FFF",
-                }}
-              >
-                Daily consumption of TYENT ionised alkaline water boosts resistance,
-                slows the ageing process, improves nutrient absorption, effectively
-                removes toxins and free radicals, and aids in the prevention and
-                treatment of dangerous chronic diseases such as cancer, diabetes,
-                Hashimoto’s, gout, hypertension, stomach pain, colitis, digestive
-                disorders, and many more…
-              </p>
-            </Col>
-          </Row>
-          
-        </div>
+            
+             <div className="custom-card-background-image">
+                      <Row
+                        className="g-0"
+                        style={{
+                          borderRadius: "24px", // Set border radius for the entire row
+                          overflow: "hidden", // Ensure child elements respect the border radius
+                        }}
+                      >
+                        <Col
+                          md={6}  order={{ md: 1, xs: 2 }}
+                          className="d-flex justify-content-center align-items-center"
+                        >
+                          <div style={{ width: "100%", height: "auto" }}>
+                            <Image
+                              src={leftIamge}
+                              alt="image data"
+                              layout="responsive"
+                              priority
+                            />
+                          </div>
+                        </Col>
+                        <Col md={6} order={{ md: 2, xs: 1 }} className="position-relative">
+                          {/* Image Container */}
+                          <div style={{ width: "100%", height: "auto" }}>
+                            <Image
+                              src={Rightamge}
+                              alt="image data"
+                              layout="responsive"
+                              priority
+                            />
+                          </div>
+            
+                          {/* Text Overlay */}
+                          <div
+                            className="position-absolute"
+                            style={{
+                              top: "13%",
+                              left: 0,
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              padding: "16px", // Optional: Add padding for spacing
+                              color: "#FFF", // Optional: Text color for visibility
+                            }}
+                          >
+                            <h1
+                              style={{
+                                fontSize: "38px",
+                                fontWeight: "700",
+                                lineHeight: "56px",
+                                marginBottom: "16px",
+                                color: "#FFF",
+                              }}
+                            >
+                              The Daily Boost Your Body Deserves
+                            </h1>
+            
+                            <p
+                              style={{
+                                fontSize: "18px",
+                                fontWeight: "400",
+                                color: "#FFF",
+                              }}
+                            >
+                              Daily consumption of TYENT ionised alkaline water boosts
+                              resistance, slows the ageing process, improves nutrient
+                              absorption, effectively removes toxins and free radicals, and
+                              aids in the prevention and treatment of dangerous chronic
+                              diseases such as cancer, diabetes, Hashimoto’s, gout,
+                              hypertension, stomach pain, colitis, digestive disorders, and
+                              many more…
+                            </p>
+                          </div>
+                        </Col>
+                      </Row>
+                    </div>
 
         {/* east to use display */}
         <br />
@@ -250,8 +288,7 @@ const TyentNMP5 = () => {
       </div> 
 
       <Container>
-        <Filter />
-
+        
         <h2
           className="text-center mb-4"
           style={{
@@ -293,7 +330,13 @@ const TyentNMP5 = () => {
           </tbody>
         </Table>
 
+
+
         <Certifications />
+
+        
+        <Filter />
+
       </Container>
     </div>
   );
