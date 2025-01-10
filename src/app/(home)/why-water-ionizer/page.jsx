@@ -1,17 +1,14 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import i1 from "@/asserts/i1.png";
 import im from "@/asserts/im.png";
-import i2 from "@/asserts/i2.png";
 import Image from "next/image";
 import TyentLineAnimation from "@/app/(home)/compoents/TyentLineAnimation";
 import WhyDrinkTyentWater from "@/app/(home)/compoents/(Home)/WhyDrinkTyentWater";
 import { FaQuestion } from "react-icons/fa";
-import hydrogen from "@/asserts/why ionizer/hydrogen.png";
+import hydrogen from "@/asserts/why ionizer/hydrogen.webp";
 import NMP from "@/asserts/NMP5.webp";
 import whyIonizer from "@/asserts/why ionizer/whyIonizer.png";
 import minerals from "@/asserts/why ionizer/minerals.png"
-
 import purity from "@/asserts/why ionizer/purity.png"
 import hydrogenicon from "@/asserts/why ionizer/hydrogenicon.png"
 

@@ -15,7 +15,7 @@ const Features = ({data, delay }) => {
 
 
   return (
-      <div
+      <div style={{padding:'10px'}}
           key={data.id}
           data-aos="fade-up" // AOS animation for fade-up
           data-aos-delay={delay } // Delay to stagger the animations

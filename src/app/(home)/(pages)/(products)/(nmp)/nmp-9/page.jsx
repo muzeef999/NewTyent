@@ -6,7 +6,7 @@ import Touchpreview from "@/app/(home)/compoents/(products)/Touchpreview";
 import Features from "@/app/(home)/compoents/(products)/Features";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
-import npmhealth from "@/asserts/npmhealth.png";
+
 import Image from "next/image";
 import plates from "@/asserts/nmp/qtyo.webp";
 import rtr from "@/asserts/nmp/rtr.webp"
@@ -198,35 +198,22 @@ const TyentNMP5 = () => {
         <br />
 
         <div className="custom-card">
-          <Row>
+                  
+                    <Row>
             <Col
               md={6}
-              className="d-flex justify-content-center align-items-center"
+              className="d-flex justify-content-center align-items-center boost1"
             >
-              <div
-                className="d-flex justify-content-center align-items-center"
-                style={{ width: "80%" }}
-              >
-                <Image
-                  src={npmhealth}
-                  alt="nmphealth"
-                  layout="responsive"
-                  style={{
-                    borderTopLeftRadius: "50%",
-                    borderBottomLeftRadius: "50%",
-                    borderBottomRightRadius: "50%",
-                  }}
-                />
-              </div>
+              {/* Left column (image only, no content needed) */}
             </Col>
-            <Col md={6}>
+            <Col md={6} className="boost2">
               <h1
                 style={{
                   fontSize: "38px",
                   fontWeight: "700",
                   lineHeight: "56px",
                   marginBottom: "16px",
-                  color: "#333", // Better visibility
+                  color: "#FFF",
                 }}
               >
                 The Daily Boost Your Body Deserves
@@ -237,19 +224,19 @@ const TyentNMP5 = () => {
                   fontWeight: "400",
                   lineHeight: "42px",
                   marginBottom: "24px",
-                  color: "#555", // Slightly lighter than heading
+                  color: "#FFF",
                 }}
               >
-                Daily consumption of TYENT ionised alkaline water boosts
-                resistance, slows the ageing process, improves nutrient
-                absorption, effectively removes toxins and free radicals, and
-                aids in the prevention and treatment of dangerous chronic
-                diseases such as cancer, diabetes, Hashimoto’s, gout,
-                hypertension, stomach pain, colitis, digestive disorders, and
-                many more…
+                Daily consumption of TYENT ionised alkaline water boosts resistance,
+                slows the ageing process, improves nutrient absorption, effectively
+                removes toxins and free radicals, and aids in the prevention and
+                treatment of dangerous chronic diseases such as cancer, diabetes,
+                Hashimoto’s, gout, hypertension, stomach pain, colitis, digestive
+                disorders, and many more…
               </p>
             </Col>
           </Row>
+          
         </div>
 
         {/* east to use display */}

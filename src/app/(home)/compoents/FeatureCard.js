@@ -256,7 +256,7 @@ const FeatureCard = ({ data }) => {
                               style={{
                                 position: "absolute",
                                 left:'60%',
-                                top: "36.1%",
+                                top: "36.2%",
                                  zIndex:0,
                                 width: "37%",
                                 height: "100%",

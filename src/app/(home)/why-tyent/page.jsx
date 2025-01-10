@@ -1,19 +1,19 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import dynamic from 'next/dynamic';
-import platess from '@/asserts/whyTent/platess.png'
-import smpsplus from '@/asserts/whyTent/smpsplus.png'
-import phscale from '@/asserts/whyTent/phscale.png'
-import tyentFilters from '@/asserts/whyTent/tyentFilters.png'
-import RTR from '@/asserts/whyTent/RTR.png'
-import BBB from '@/asserts/whyTent/BBB.png'
-import International from '@/asserts/whyTent/International.png'
-import Antioxidant  from  '@/asserts/whyTent/Antioxidant.png'
-import Chemical  from  '@/asserts/whyTent/Chemical.png'
-import doorstep  from  '@/asserts/whyTent/doorstep.png'
-import Certified from  '@/asserts/whyTent/Certified.png'
-import display from '@/asserts/whyTent/display.png'
-import plateSurfaceArea from '@/asserts/whyTent/plateSurfaceArea.png'
+import platess from '@/asserts/whyTent/platess.webp'
+import smpsplus from '@/asserts/whyTent/smpsplus.webp'
+import phscale from '@/asserts/whyTent/phscale.webp'
+import tyentFilters from '@/asserts/whyTent/tyentFilters.webp'
+import RTR from '@/asserts/whyTent/RTR.webp'
+import BBB from '@/asserts/whyTent/BBB.webp'
+import International from '@/asserts/whyTent/International.webp'
+import Antioxidant  from  '@/asserts/whyTent/Antioxidant.webp'
+import Chemical  from  '@/asserts/whyTent/Chemical.webp'
+import doorstep  from  '@/asserts/whyTent/doorstep.webp'
+import Certified from  '@/asserts/whyTent/Certified.webp'
+import display from '@/asserts/whyTent/display.webp'
+import plateSurfaceArea from '@/asserts/whyTent/plateSurfaceArea.webp'
 
 
 

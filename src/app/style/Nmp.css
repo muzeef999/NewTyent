@@ -56,7 +56,7 @@
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #369ef2;
+  background-color: #0082BC;
   color: #FFF;
   font-size: 10px !important;
   display: flex;
@@ -75,5 +75,6 @@
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* Ensures the image looks good within its bounds */
+  object-fit: cover; 
 }
+
