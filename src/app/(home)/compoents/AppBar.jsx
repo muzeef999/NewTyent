@@ -17,6 +17,8 @@ import Login from "./Login";
 import ResponsiveProductPage from "./ResponsiveProductPage";
 import Cartpage from "./Cart";
 import "@/app/style/AppBar.css";
+import { MdOutlineArrowDropDown } from "react-icons/md";
+
 
 const AppBar = () => {
   const { data: session } = useSession();
@@ -32,7 +34,18 @@ const AppBar = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [offcanvasOpen, setOffcanvasOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+const [activeSubmenu, setActiveSubmenu] = useState(null);
+
+const handleSubmenuEnter = (submenu) => {
+  setActiveSubmenu(submenu);
+};
+
+const handleSubmenuLeave = () => {
+  setActiveSubmenu(null);
+};
 
 
   const toggleOffcanvas = () => {
@@ -88,18 +101,18 @@ const AppBar = () => {
 
   // Dynamically set the styles based on the condition
   const style = urlFound
-    ? { backgroundColor: " #999999", color: "#FFF" }
-    : { backgroundColor: "#008AC7", color: "#FFF" };
+    ? { backgroundColor: " #999999", color: "#FFF", height: "40px"  }
+    : { backgroundColor: "#008AC7", color: "#FFF", height: "40px"  };
 
   return (
     <div>
       {/* Top Bar */}
       <div className="sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
-          className="d-flex justify-content-between align-items-center"
+          className="d-flex justify-content-between align-items-center" 
           style={style}
         >
-          <div
+          <div 
             className="d-flex align-items-center marquee"
             style={{ overflow: "hidden", whiteSpace: "nowrap" }}
           >
@@ -202,80 +215,146 @@ const AppBar = () => {
                       Home
                     </Link>
                   </li>
-                  <li
-      className={`nav-item dropdown ${isDropdownOpen ? "show" : ""}`}
-      onMouseEnter={() => setIsDropdownOpen(true)}
-      onMouseLeave={() => setIsDropdownOpen(false)}
-    >
-      <Link
-        href="#"
-        className={`dropdown-toggle nav-link ${
-          pathname === "/our-story" || pathname === "/tyent-global" ? "active" : ""
-        }`}
-        role="button"
-        aria-expanded={isDropdownOpen}
-      >
-        About Us
-      </Link>
-      <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? "show" : ""}`}>
-        <li>
-          <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
-            Our Story
-          </Link>
-        </li>
-        <li>
-          <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
-            Tyent Global
-          </Link>
-        </li>
-      </ul>
-    </li>
+                 
+                       <li
+                          className={`nav-item dropdown ${isAboutDropdownOpen ? "show" : ""}`}
+                          onMouseEnter={() => setIsAboutDropdownOpen(true)}
+                          onMouseLeave={() => setIsAboutDropdownOpen(false)}
+                        >
+                          <Link
+                            href="#"
+                            className={`dropdown-toggle nav-link ${
+                              pathname === "/our-story" || pathname === "/tyent-global" ? "active" : ""
+                            }`}
+                            role="button"
+                            aria-expanded={isAboutDropdownOpen}
+                          >
+                            About Us
+                          </Link>
+                          <ul className={`dropdown-menu dropdown-menu-end ${isAboutDropdownOpen ? "show" : ""}`}>
+                            <li>
+                              <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
+                                Our Story
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
+                                Tyent Global
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
 
+                        <li
+                          className={`d-block d-lg-none nav-item dropdown ${isProductsDropdownOpen ? "show" : ""}`}
+                          onMouseEnter={() => setIsProductsDropdownOpen(true)}
+                          onMouseLeave={() => setIsProductsDropdownOpen(false)}
+                        >
+                          <Link
+                            href="#"
+                            className="dropdown-toggle nav-link"
+                            role="button"
+                            aria-expanded={isProductsDropdownOpen}
+                          >
+                            Products
+                          </Link>
+                          <ul className={`dropdown-menu dropdown-menu-end ${isProductsDropdownOpen ? "show" : ""}`}>
+                            {/* NMP Series */}
+                            <li
+                              className={`dropdown-submenu ${activeSubmenu === "nmp" ? "show" : ""}`}
+                              onMouseEnter={() => handleSubmenuEnter("nmp")}
+                              onMouseLeave={handleSubmenuLeave}
+                            >
+                              <Link href="#" className="dropdown-item">
+                                NMP Series <MdOutlineArrowDropDown size={20} style={{ transform: "rotate(270deg)", marginLeft:'-10px' }}/>
+                              </Link>
+                              <ul className={`dropdown-menu ${activeSubmenu === "nmp" ? "show" : ""}`}>
+                                <li>
+                                  <Link href="/nmp-5" className="dropdown-item" onClick={closeOffcanvas}>
+                                    NMP-5 Plates 
+                                  </Link>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                  <Link href="/nmp-6" className="dropdown-item" onClick={closeOffcanvas}>
+                                    NMP-6 Plates
+                                  </Link>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                  <Link href="/nmp-9" className="dropdown-item" onClick={closeOffcanvas}>
+                                    NMP-9 Plates
+                                  </Link>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                  <Link href="/nmp-11" className="dropdown-item" onClick={closeOffcanvas}>
+                                    NMP-11 Plates
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <li
+                              className={`dropdown-submenu ${activeSubmenu === "uce" ? "show" : ""}`}
+                              onMouseEnter={() => handleSubmenuEnter("uce")}
+                              onMouseLeave={handleSubmenuLeave}
+                            >
+                              <Link href="#" className="dropdown-item">
+                                UCE Series <MdOutlineArrowDropDown size={20} style={{ transform: "rotate(270deg)", marginLeft:'-10px' }} />
+                              </Link>
+                              <ul className={`dropdown-menu ${activeSubmenu === "uce" ? "show" : ""}`}>
+                                <li>
+                                  <Link href="/uce-9" className="dropdown-item" onClick={closeOffcanvas}>
+                                    UCE-9 Plates
+                                  </Link>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                                <li>
 
+                                  <Link href="/uce-11" className="dropdown-item" onClick={closeOffcanvas}>
+                                    UCE-11 Plates
+                                  </Link>
+                                </li>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                  <Link href="/uce-12" className="dropdown-item" onClick={closeOffcanvas}>
+                                    UCE-12 Plates
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <li>
+                              <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
+                                Tyent H2
+                              </Link>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <li>
+                              <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
+                                Soap
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
 
+                        
 
-    <li
-      className={`nav-item dropdown d-none d-sm-block d-xl-none ${isDropdownOpen ? "show" : ""}`}
-      onMouseEnter={() => setIsDropdownOpen(true)}
-      onMouseLeave={() => setIsDropdownOpen(false)}
-    >
-      <Link
-        href="#"
-        className={`dropdown-toggle nav-link ${
-          pathname === "/our-story" || pathname === "/tyent-global" ? "active" : ""
-        }`}
-        role="button"
-        aria-expanded={isDropdownOpen}
-      >
-        products
-      </Link>
-      <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? "show" : ""}`}>
-        <li>
-          <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
-            Our Story
-          </Link>
-        </li>
-        <li>
-          <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
-            Tyent Global
-          </Link>
-        </li>
-      </ul>
-    </li>
-
-
-                  <li className="nav-item d-none d-xl-block">
+                  <li className="nav-item  d-block d-none d-xl-block">
                     <div
                       className={`nav-link ${
                         ["/nmp-5", "/nmp-7", "/nmp-9", "/nmp-11"].includes(pathname)
                           ? "active"
                           : ""
                       }`}
-                      onMouseEnter={() => window.innerWidth > 768 && setIsProductOpen(true)} 
+                      onMouseEnter={() =>  setIsProductOpen(true)} 
                    >
-                      Products
+                      Products <MdOutlineArrowDropDown size={25}/>
                     </div>
                   </li>
+
+
                   {[
                     { path: "/benefits", label: "Benefits" },
                     { path: "/why-tyent", label: "Why Tyent" },

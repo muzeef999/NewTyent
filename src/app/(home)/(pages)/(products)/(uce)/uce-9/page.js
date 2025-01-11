@@ -157,7 +157,6 @@ const page = () => {
             </div>
             </Col>
           </Row>
-
           <br />
 
           <Row className="g-3">

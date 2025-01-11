@@ -210,7 +210,8 @@ const TyentNMP5 = () => {
             }}
           >
             <Col
-              md={6}  order={{ md: 1, xs: 2 }}
+              md={6}
+              order={{ md: 1, xs: 2 }}
               className="d-flex justify-content-center align-items-center"
             >
               <div style={{ width: "100%", height: "auto" }}>
@@ -278,11 +279,13 @@ const TyentNMP5 = () => {
             </Col>
           </Row>
         </div>
+      </Container>
 
-        {/* east to use display */} 
-        <br />
-        <Display />
+      {/* east to use display */}
+      <br />
+      <Display />
 
+      <Container>
         <br />
         <Touchpreview />
 
@@ -296,8 +299,6 @@ const TyentNMP5 = () => {
       </div>
 
       <Container>
-       
-
         <h2
           className="text-center mb-4"
           style={{
@@ -339,10 +340,8 @@ const TyentNMP5 = () => {
           </tbody>
         </Table>
 
-
         <Certifications />
         <Filter />
-
       </Container>
     </div>
   );
