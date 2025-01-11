@@ -48,7 +48,7 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 style={{ color: "#000", fontWeight:'600' }}>Technical Information</h5>
             <ul className="list-unstyled">
-              <li><Link style={{textDecoration:'none', color:'#000'}} href={""}>Tyent Vs Enagic Kangen</Link></li>
+              <li><Link style={{textDecoration:'none', color:'#000'}} href={"/tyentvskangen"}>Tyent Vs Enagic Kangen</Link></li>
               <li><Link style={{textDecoration:'none', color:'#000'}} href={"/solid-hybrid-mesh-plates"}>Tyent’s Solid Hybrid Mesh Plates</Link></li>
               <li><Link style={{textDecoration:'none', color:'#000'}} href={"/patented-SMPS-plus"}>Tyent’s Patented SMPS PLUS</Link></li>
               <li><Link style={{textDecoration:'none', color:'#000'}} href={"/0.1-micron-filters"}>Tyent’s .01 Micron Filters</Link></li>

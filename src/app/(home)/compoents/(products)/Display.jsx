@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import fullmachine from "@/asserts/nmp/fullmachine.png";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/all";
 import { Row, Col } from "react-bootstrap";
-import  mobileimg from "@/asserts/nmp/leftbanner.png";
+
 import  desktopimg from "@/asserts/nmp/righrbanner.webp";
 
 
@@ -112,9 +111,9 @@ const Display = () => {
               style={{
                 zIndex:-9,
                 position: "absolute",
-                left:'27.5%',
-                top: "43.6%",
-                width: "12.4%",
+                left:'46.4%',
+                top: "30%",
+                width: "16.5%",
                 height: "100%",
                 transform: "translate(-50%, -50%)",
               }}
