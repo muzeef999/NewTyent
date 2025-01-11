@@ -18,6 +18,16 @@ const ProductSection = ({ products, specifications }) => {
     setCurrentIndex(index);
   };
 
+  const thumbnails = document.querySelectorAll('.thumbnail');
+
+  thumbnails.forEach((thumbnail, index) => {
+    if (currentIndex === index) {
+      thumbnail.setAttribute('data-active', 'true');
+    } else {
+      thumbnail.setAttribute('data-active', 'false');
+    }
+  });
+
   const model = specifications.find((item) => item.label === "Model")?.name;
   const price = specifications.find((item) => item.label === "Price")?.name;
 
@@ -59,21 +69,17 @@ const ProductSection = ({ products, specifications }) => {
                 {/* Thumbnail Images */}
                 <div className="thumb d-flex flex-column mt-3">
                   {item.src.map((img, index) => (
-                    <img
+                    <img className={
+                      currentIndex === index 
+                        ? `${model === "Tyent UCE-9 plus" ? "thumbnail-black " : "thumbnail"}`
+                        : "thumbnail-none"
+                    }
+                    data-active={currentIndex === index} // Set the data-active attribute
                       src={img}
                       alt={`Thumbnail ${index + 1}`}
                       key={index}
                       onClick={() => handleTab(index)}
-                      style={{
-                        cursor: "pointer",
-                        border:
-                          currentIndex === index ? "2px solid #008AC7" : "none",
-                        margin: "10px",
-                        width: "80px", // Thumbnail size
-                        height: "80px",
-                        objectFit: "cover",
-                        borderRadius: "12px",
-                      }}
+                      
                     />
                   ))}
                 </div>

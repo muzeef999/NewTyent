@@ -280,24 +280,17 @@ const TyentNMP5 = () => {
           </Row>
         </div>
       </Container>
-
-      {/* east to use display */}
       <br />
       <Display />
-
       <Container>
         <br />
-        <Touchpreview />
-
-        <br />
-        {/* One-Touch Display */}
         <OneTouchDispaly />
+        <br />
+        <Touchpreview />
       </Container>
-
-      <div>
+      <br/>
+      <br/>
         <AnimatedSVG />
-      </div>
-
       <Container>
         <h2
           className="text-center mb-4"

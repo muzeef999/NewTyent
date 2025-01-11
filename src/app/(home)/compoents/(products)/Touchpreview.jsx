@@ -45,9 +45,9 @@ const Touchpreview = () => {
   <Image src={spec} alt="specifications" className="responsive-image" />
     </div>
     <div className="position-absolute d-flex justify-content-center align-items-center" style={{
-                      top: "30.6%",
-                      left: "17%",
-                      width:'67%',
+                      top: "24.5%",
+                      left: "14%",
+                      width:'72%',
                       zIndex:-9
                     }}
                   >

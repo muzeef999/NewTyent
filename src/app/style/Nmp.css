@@ -47,9 +47,15 @@
   padding: 8px;
 }
 
-.easytotouchdisplay :hover{
-  background-color: #e9f4fb;
-  border-radius: 50px;
+.water-type {
+  box-shadow: none; /* No shadow by default */
+  transition: all 0.3s ease;
+}
+
+.water-type:hover {
+  background-color: #FFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 60px; /* Rounded corners */
 }
 
 .touchpreviewnumber{
