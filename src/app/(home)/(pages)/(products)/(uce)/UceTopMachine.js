@@ -12,7 +12,7 @@ const UceTopMachine = () => {
 
             <div style={{position: "absolute",
                 left:'53.2%',
-                top: "25.1%",
+                top: "22.5%",
                 width: "19.6%",}}>
                       <svg width="100%" height="auto" viewBox="0 0 296 405" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_ii_4826_3862)">

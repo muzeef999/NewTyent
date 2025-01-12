@@ -28,6 +28,7 @@ const Touchpreview = () => {
     { id: 19, text: "1st Filter indicator & reset" },
     { id: 20, text: "2nd Filter indicator & reset" },
   ];
+  
 
 
   useEffect(() => {
