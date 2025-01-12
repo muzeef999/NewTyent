@@ -282,7 +282,7 @@ const TyentNMP5 = () => {
       </Container>
       <br />
       <Display />
-      <Container>
+      <Container> 
         <br />
         <OneTouchDispaly />
         <br />

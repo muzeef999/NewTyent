@@ -276,24 +276,25 @@ const TyentNMP5 = () => {
               </Row>
             </div>
 
+
+            </Container>
         {/* east to use display */}
         <br />
         <Display />
 
+
+     <Container>
+     <br />
+        {/* One-Touch Display */}
+        <OneTouchDispaly />
         <br />
         <Touchpreview />
 
-        <br />
-        {/* One-Touch Display */}
-        <OneTouchDispaly />
-      </Container>
-
+        </Container>
       <div>
         <AnimatedSVG />
       </div> 
-
       <Container>
-
         <h2
           className="text-center mb-4"
           style={{
@@ -302,7 +303,7 @@ const TyentNMP5 = () => {
             fontSize: "2rem", // Default for large screens
           }}
         >
-          Tyent NMP-5 Specification's
+          Tyent NMP-9 Specification's
         </h2>
 
         <Table className="custom-table" hover responsive>
@@ -335,12 +336,8 @@ const TyentNMP5 = () => {
           </tbody>
         </Table>
 
-
         <Certifications />
-
         <Filter />
-
-
       </Container>
     </div>
   );

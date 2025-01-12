@@ -3,55 +3,78 @@ import Certifications from "@/app/(home)/compoents/Certifications";
 import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "@/app/style/Uce.css";
-import machine from "@/asserts/uce/uce.png"
+import machine from "@/asserts/uce/uce.png";
 import Image from "next/image";
 
-const RegularReplacement = [
+
+const data = [
   {
-    title: "Patented SMPS PLUS power supply",
+    icon: machine,
+    title: "Plates",
     content:
-      "The hybrid mesh design maximizes surface area, allowing for more effective electrolysis. This results in the production of higher quantities of hydrogen-rich alkaline water, offering enhanced health benefits such as improved hydration and powerful antioxidant properties.",
+      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
   },
   {
-    title: "Automated/Past cleaning system",
+    icon: machine,
+    title: "SMPS PLUS",
     content:
-      "Made from high-grade titanium and platinum, Tyent’s plates are resistant to corrosion and wear, ensuring long-lasting performance and minimal maintenance. These plates are built to withstand the rigors of continuous use.",
+      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
   },
   {
-    title: "ECO mode",
+    icon: machine,
+    title: "Past cleaning ",
     content:
-      "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods, ensuring optimal performance while conserving electricity.",
+      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
   },
   {
-    title: "One touch LCD display",
+    icon: machine,
+    title: "Turbo mode",
     content:
-      "Tyent offers an industry-leading 15-year warranty on its plates, reflecting the company’s commitment to quality and durability. This extended warranty ensures long-term peace of mind, guaranteeing that Tyent’s advanced plates remain functional and effective for years, providing exceptional value and minimizing the need for costly replacements or maintenance.",
+      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+  },
+  {
+    icon: machine,
+    title: "Past cleaning ",
+    content:
+      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
   },
 ];
 
-const WaterFilterCards = ({ title, content }) => {
+const WaterFilterCards = ({ icon, title, content }) => {
   return (
-    <div
-      style={{ backgroundColor: "#FFF", height: "270px" }}
-      className="d-flex justify-content-center align-items-center custom-card"
-    >
+    <div className="custom-card-uce-scroll">
       <div className="ml-4 align-items-center">
-        <h3 className="m-4 text-start" style={{ color: "#008AC7" }}>
+        <div style={{ width: "100%", height: "auto" }}>
+          <Image src={icon} alt="machine" layout="responsive" priority />
+        </div>
+        <h3 className="text-start" style={{ color: "#008AC7" }}>
           <b>{title}</b>
         </h3>
-        <p className="text-start m-4" style={{ color: "#565959" }}>
-          {content}
-        </p>
+        <div style={{ maxWidth: "600px" }}>
+          <p
+            style={{
+              fontWeight: 400,
+              fontSize: "16px",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              lineHeight: "1.5",
+              display: "-webkit-box",
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 6,
+              wordWrap: "break-word",
+              margin: "0 10px",
+            }}
+          >
+            {content}
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
-const page = () => {
-  const handleTab = (index) => {
-    setCurrentIndex(index);
-  };
 
+const page = () => {
   const products = [
     {
       src: [
@@ -127,65 +150,95 @@ const page = () => {
     },
   ];
   return (
-    <div style={{background: 'repeating-linear-gradient(#f8fbfe, #d9d9d9, #f8fbfe 550px)'}}>
+    <div
+      style={{
+        background:
+          "repeating-linear-gradient(#f8fbfe, #d9d9d9, #f8fbfe 550px)",
+      }}
+    >
       <Container>
         <ProductSection products={products} specifications={specifications} />
       </Container>
 
-      <div className="backgrounduce">
-        <div className="container">
-          <Row className="custom-card-uce">
-            
-            <Col md={6} className="d-flex justify-content-center align-items-center">
-              <div>
-                <h3 className="text-start" style={{ color: "#FFF" }}>
-                  <b>Tyent's Luxury Show Room Collection</b>
-                </h3>
-                <p style={{ color: "#FFF" }}>
-                  Tyent water ionizers are engineered for modern convenience,
-                  featuring the Fixed Quantity Discharge function. It dispenses
-                  precise amounts of 0.5L, 1.0L, or 1.5L, making hydration and
-                  cooking effortless and accurate for daily use
-                </p>
-
-                
-              </div>
-            </Col>
-            <Col md={6}>
-            <div style={{width:'100%', height:'auto'}}>
-              <Image src={machine} alt="uce iamge" layout="responsive" priority />
+      <div className="container">
+        <Row className="custom-card-uce">
+          <Col
+            md={6}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <div>
+              <h3 className="text-start" style={{ color: "#FFF" }}>
+                <b>Tyent's Luxury Show Room Collection</b>
+              </h3>
+              <p style={{ color: "#FFF" }}>
+                Tyent water ionizers are engineered for modern convenience,
+                featuring the Fixed Quantity Discharge function. It dispenses
+                precise amounts of 0.5L, 1.0L, or 1.5L, making hydration and
+                cooking effortless and accurate for daily use
+              </p>
             </div>
-            </Col>
-          </Row>
-          <br />
-
-          <Row className="g-3">
-            <Col md={8}>
-              <Row>
-                {RegularReplacement.map((iconItem, index) => (
-                  <Col
-                    style={{ marginBottom: "12px" }}
-                    key={index}
-                    md={index < 2 ? 6 : index === 3 ? 7 : 5}
-                  >
-                    <WaterFilterCards
-                      title={iconItem.title}
-                      content={iconItem.content}
-                    />
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-            <Col md={4}></Col>
-          </Row>
-        </div>
+          </Col>
+          <Col md={6}>
+            <div style={{ width: "100%", height: "auto" }}>
+              <Image
+                src={machine}
+                alt="uce iamge"
+                layout="responsive"
+                priority
+              />
+            </div>
+          </Col>
+        </Row>
+        <br />
       </div>
 
+      <Container>
+        <Row>
+          <Col xs={12} md={6}></Col>
+          <Col xs={12} md={6}>
+            <p>Introducing </p>
+            <h2>TYENT UCE-13 PLUS</h2>
+            <p>
+              The <b>Tyent UCE-13 PLUS</b> is a best-selling, space-saving
+              flagship under counter water ionizer, crafted to elevate your
+              high-end kitchen with its advanced technology and sleek, aesthetic
+              design. Its compact form and modern look blend seamlessly into
+              premium kitchen spaces, while the intuitive Tyent faucet,
+              featuring a touch and jog dial, makes operation effortlessly
+              smooth.{" "}
+            </p>
+            <p>
+              Equipped with 9 Japanese solid hybrid mesh plates/electrodes from
+              Permelac, Japan (since 1969), made of titanium and coated in
+              platinum for 99.9% purity, Offering seven different water levels,
+              it generates selective antioxidant-rich molecular hydrogen up to
+              1800 PPB and -ORP up to -1050. Backed by a 3-year machine
+              warranty, a 15-years plates/electrode warranty, and a 45+ year
+              lifespan.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+
+      <div className="backgrounduce">
+        <div className="card-scroll-container" style={{paddingLeft:'30%'}}>
+          {data.map((iconItem, index) => (
+            <WaterFilterCards
+              className="cardouterbody"
+              key={index}
+              icon={iconItem.icon}
+              title={iconItem.title}
+              content={iconItem.content}
+            />
+          ))}
+        </div>
+       
+      </div>
       <Container>
         <h2
           className="text-center mb-4"
           style={{
-            color: "#008AC7",
+            color: "#000",
             fontWeight: "600",
             fontSize: "2rem", // Default for large screens
           }}
@@ -224,6 +277,8 @@ const page = () => {
         </Table>
 
         <Certifications />
+        <br />
+        <br />
       </Container>
     </div>
   );

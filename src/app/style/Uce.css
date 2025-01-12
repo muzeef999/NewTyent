@@ -1,10 +1,10 @@
 .backgrounduce {
     background-image: url("../../asserts/uce/background.png"); /* Fixed typo from 'asserts' to 'assets' */
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: auto;
-    background-position: bottom center; /* Align the image to the bottom */
+    height: 100vh;
+    background-position: top left; /* Align the image to the bottom */
 }
 
 .custom-card-uce{
@@ -21,3 +21,43 @@
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-8px);
   }
+
+
+/* Outer Scroll Container */
+.card-scroll-container {
+  display: flex;
+  overflow-x: auto;  /* Enables horizontal scrolling */
+  gap: 16px;         /* Spacing between cards */
+  padding: 16px;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;       /* Ensures container width is 100% of its parent */
+  scroll-behavior: smooth;
+}
+
+/* Hide the scrollbar but keep scrolling functionality */
+.card-scroll-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+.card-scroll-container {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Individual Cards */
+.custom-card-uce-scroll {
+  background-color: #FFF;
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto; /* Prevent cards from resizing */
+  width: 400px; /* Fixed width */
+  height: 600px; /* Fixed height */
+  display: flex;
+  flex-direction: column; /* Stack title and content vertically */
+  justify-content: space-between; /* Evenly space items */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+

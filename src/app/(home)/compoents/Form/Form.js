@@ -148,6 +148,7 @@ const Form = () => {
   };
 
   return (
+  <div style={{backgroundColor:'transparent'}}>
     <div className="container">
       <div className="row">
         <div className="col-md-6 d-flex justify-content-center align-items-center">
@@ -302,6 +303,7 @@ const Form = () => {
         }
         </div>
       </div>
+    </div>
     </div>
   );
 };

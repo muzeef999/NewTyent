@@ -55,6 +55,14 @@ const ProductSection = ({ products, specifications }) => {
     ].includes(item.label)
   );
 
+
+  const currentUrl = window.location.href;
+
+
+  // Check if "uce" is found in the URL
+  const urlFound = currentUrl.includes("uce");
+
+
   return (
     <div>
       {/* Header Section */}
@@ -71,7 +79,7 @@ const ProductSection = ({ products, specifications }) => {
                   {item.src.map((img, index) => (
                     <img className={
                       currentIndex === index 
-                        ? `${model === "Tyent UCE-9 plus" ? "thumbnail-black " : "thumbnail"}`
+                        ? `${urlFound ? "thumbnail-black " : "thumbnail"}`
                         : "thumbnail-none"
                     }
                     data-active={currentIndex === index} // Set the data-active attribute
@@ -98,19 +106,19 @@ const ProductSection = ({ products, specifications }) => {
           </div>
 
           <div className="d-flex gap-3 justify-content-center align-items-center">
-            <button className={`${ model == "Tyent UCE-9 plus" ? "appbardemoblack" : "appbardemo"  }`}>
+            <button className={`${ urlFound? "appbardemoblack" : "appbardemo"  }`}>
               <IoCallOutline />
               &nbsp;Call to Order
             </button>
 
-            <button className={`${ model == "Tyent UCE-9 plus" ? "appbardemoblack" : "appbardemo"  }`} onClick={() => addToCart()}>
+            <button className={`${ urlFound ? "appbardemoblack" : "appbardemo"  }`} onClick={() => addToCart()}>
               <MdOutlineShoppingCart />
               &nbsp;Add to Cart
             </button>
           </div>
         </Col>
         <Col md={6}>
-          <h1 style={{ fontWeight: 600, color: model == "Tyent UCE-9 plus" ?"#000": "#008AC7" }}>{model}</h1>
+          <h1 style={{ fontWeight: 600, color: urlFound ?"#000": "#008AC7" }}>{model}</h1>
           <hr />
           <h4 className="m-2">
             M.R.P: <span style={{ fontWeight: 500 }}>₹ {new Intl.NumberFormat("en-IN").format(price)}/-</span>
@@ -128,7 +136,7 @@ const ProductSection = ({ products, specifications }) => {
               ))}
             </tbody>
           </Table>
-          <button className={`${ model == "Tyent UCE-9 plus" ? "appbardemoblack" : "appbardemo"  }`}>
+          <button className={`${ urlFound ? "appbardemoblack" : "appbardemo"  }`}>
             <RxDownload />
             &nbsp;Download Brochure
           </button>
