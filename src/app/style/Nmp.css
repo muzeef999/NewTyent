@@ -84,3 +84,13 @@
   object-fit: cover; 
 }
 
+
+.nmpboostbackground{
+  background: linear-gradient(25deg, #008AC7 1%, #FFF 99%);
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+

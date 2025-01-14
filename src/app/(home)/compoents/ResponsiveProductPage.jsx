@@ -8,6 +8,11 @@ import uce from "@/asserts/Uce.webp";
 import hybrid from "@/asserts/Hybrid.webp";
 import "../../style/Nmp.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import soap from "@/asserts/soap/soap.png"
+import bottle from "@/asserts/bottle/bottle-500ml.jpg";
+import "@/app/style/AppBar.css"
+
 
 const ProductData = [
   {
@@ -16,22 +21,22 @@ const ProductData = [
       {
         title: "NMP-5",
         image: nmp5,
-        link: "nmp-5",
+        link: "/nmp-5",
       },
       {
         title: "NMP-9",
         image: nmp9,
-        link: "nmp-9",
+        link: "/nmp-9",
       },
       {
         title: "UCE-9",
         image: uce,
-        link: "uce-9",
+        link: "/uce-9",
       },
       {
         title: "HYBRID H2",
         image: hybrid,
-        link: "hybrid-11",
+        link: "/hybrid-h2",
       },
     ],
   },
@@ -41,22 +46,22 @@ const ProductData = [
       {
         title: "NMP-5",
         image: nmp5,
-        link: "nmp-5",
+        link: "/nmp-5",
       },
       {
         title: "NMP-7",
         image: nmp5,
-        link: "nmp-7",
+        link: "/nmp-7",
       },
       {
         title: "NMP-9",
         image: nmp9,
-        link: "nmp-9",
+        link: "/nmp-9",
       },
       {
         title: "NMP-11",
         image: nmp9,
-        link: "nmp-11",
+        link: "/nmp-11",
       },
     ],
   },
@@ -66,17 +71,17 @@ const ProductData = [
       {
         title: "Tyent UCE-9 Plus",
         image: uce,
-        link: "uce-9",
+        link: "/uce-9",
       },
       {
         title: "Tyent UCE-11 Plus",
         image: uce,
-        link: "uce-11",
+        link: "/uce-11",
       },
       {
         title: "Tyent UCE-13 Plus",
         image: uce,
-        link: "uce-13",
+        link: "/uce-13",
       },
     ],
   },
@@ -86,18 +91,18 @@ const ProductData = [
       {
         title: "Tyent H2",
         image: hybrid,
-        link: "tyent-h2",
+        link: "/hybrid-h2",
       },
     ],
   },
 
   {
     category: "Soap",
-    link:"soap",
     products: [
       {
-        title: "Tyent UCE-9 Plus",
-        image:uce,
+        title: "TM-X Beauty Soap",
+        image:soap,
+        link:'/soap'
       },
     ]
     },
@@ -106,8 +111,8 @@ const ProductData = [
     products: [
       {
         title: "Stainless Steel Water Bottle",
-        image: hybrid,
-        link: "water-bottle-1",
+        image: bottle,
+        link: "/water-bottle-1",
       },
     ],
   },
@@ -115,19 +120,19 @@ const ProductData = [
     category: "Filter",
     products: [
       {
-        title: "Standard Water Filter",
+        title: "Filter",
         image: hybrid,
-        link: "filter-1",
+        link: "/filter-1",
       },
     ],
   },
   {
     category: "Sterilizing water generator",
-    link:"nmp-5",
     products: [
       {
         title: "Tyent UCE-9 Plus",
         image:uce,
+        link:"/Sterilizing-water-generator",
       },
     ],
   },
@@ -136,9 +141,16 @@ const ProductData = [
 const ResponsiveProductPage = ({ isProductOpen }) => {
   const [activeCategory, setActiveCategory] = useState(ProductData[0].category);
 
-  const sendData = () => {
-    isProductOpen(false); // Send the data to the parent
+  const router = useRouter(); 
+
+  const sendData = (event, link) => {
+    event.preventDefault(); // Prevent default link behavior
+    isProductOpen(false); // Close the product menu
+    if (link) {
+      router.push(link); // Navigate to the specified link
+    }
   };
+
 
   return (
     <div className="container">
@@ -173,36 +185,41 @@ const ResponsiveProductPage = ({ isProductOpen }) => {
                   <Row>
                     {section.products.map((product, index) => (
                       <Col key={index} xs={12} sm={6} md={4} lg={3}>
-                        <Link
-                          href={`${product.link}`}
-                          onClick={sendData}
-                          style={{ textDecoration: "none" }}
+                      <Link
+                        href={product.link || "#"}
+                        passHref
+                        onClick={(event) => sendData(event, product.link)}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <div
+                          className="d-flex flex-column justify-content-center"
+                          onClick={(event) => sendData(event, product.link)}
                         >
-                          <div className="d-flex flex-column justify-content-center">
-                            {/* Product Image */}
-                            <Image
-                              src={product.image}
-                              alt={product.title}
-                              className="img-fluid"
-                              style={{
-                                maxWidth: "100%",
-                                height: "auto",
-                                borderRadius: "10px",
-                              }}
-                            />
-                            <p
-                              className="text-start mt-2"
-                              style={{
-                                color: "#000",
-                                fontWeight: "300",
-                                fontSize: "16px",
-                              }}
-                            >
-                              {product.title}
-                            </p>
-                          </div>
-                        </Link>
-                      </Col>
+                          {/* Product Image */}
+                          <Image
+                            src={product.image}
+                            alt={product.title}
+                            className="img-fluid product-card"
+                            style={{
+                              maxWidth: "100%",
+                              height: "auto",
+                              borderRadius: "10px",
+                            }}
+                          />
+                          <p
+                            className="text-start mt-2"
+                            style={{
+                              color: "#000",
+                              fontWeight: "300",
+                              fontSize: "16px",
+                            }}
+                          >
+                            {product.title}
+                          </p>
+                        </div>
+                      </Link>
+                    </Col>
+                    
                     ))}
                   </Row>
                 </div>

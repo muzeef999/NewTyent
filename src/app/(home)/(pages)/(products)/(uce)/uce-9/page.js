@@ -26,6 +26,9 @@ import DisplayAnimation from "../DisplayAnimation";
 import NightModeDispay from "../NightModeDispay";
 import goodDesignaward from "@/asserts/uce/good-design-gold-award.png";
 import goodDesign from "@/asserts/uce/good-desig.png";
+import PRODUCTUCE1 from "@/asserts/uce/PRODUCTUCE-1.webp"
+import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp"
+
 
 const data = [
   {
@@ -97,8 +100,8 @@ const page = () => {
   const products = [
     {
       src: [
-        "https://firebasestorage.googleapis.com/v0/b/tyent-fa17c.appspot.com/o/uce%2FWhatsApp%20Image%202023-05-13%20at%2010.05.26.webp?alt=media&token=69fe99c8-1125-4a2f-9a0a-1b640548b3a5",
-        "https://firebasestorage.googleapis.com/v0/b/tyent-fa17c.appspot.com/o/uce%2FWhatsApp%20Image%202023-05-09%20at%2001.25.53.webp?alt=media&token=0e1f17b2-013c-4fa3-ba3a-96c11177b740",
+           PRODUCTUCE1,
+           PRODUCTUCE2
       ],
     },
   ];
@@ -685,7 +688,6 @@ const page = () => {
           <Col md={4}>
             <div style={{ position: "relative" }}>
               <UceTopMachine />
-
               <div class="image img1"></div>
               <div class="image img2"></div>
               <div class="image img3"></div>
@@ -722,7 +724,7 @@ const page = () => {
           <div style={{ position: "relative", width: "40%" }}>
             <UceTopMachine />
             <div style={{ position: "absolute", top: "40%", left: "30.5%" }}>
-              <svg
+              <svg id="rotatearrow1"
                 width="100%"
                 height="auto"
                 viewBox="0 0 311 84"
@@ -749,7 +751,7 @@ const page = () => {
               </svg>
 
               <br />
-              <svg
+              <svg id="rotatearrow2"
                 width="100%"
                 height="auto"
                 viewBox="0 0 311 84"

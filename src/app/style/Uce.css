@@ -106,7 +106,6 @@
 
 
 
-/* General styling for images */
 .image {
   width: 14.2%; /* Adjusted size to fit the container */
   height: 14.2%;
@@ -120,74 +119,88 @@
   z-index: 2; /* Ensures images are on top of UceTopMachine */
 }
 
-/* Specific images with unique delays */
+/* Specific images with unique delays and background colors */
 .img1 {
   background-image: url('../../asserts/uce/d1.png'); /* Corrected path */
+  background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */
   animation-delay: 0s;
 }
 
 .img2 {
   background-image: url('../../asserts/uce/d2.png');
+  background-color: rgba(0, 255, 0, 0.5); /* Green with 50% opacity */
   animation-delay: 3s;
 }
 
 .img3 {
   background-image: url('../../asserts/uce/d3.png');
+  background-color: rgba(0, 0, 255, 0.5); /* Blue with 50% opacity */
   animation-delay: 6s;
 }
 
 .img4 {
   background-image: url('../../asserts/uce/d4.png');
+  background-color: rgba(255, 255, 0, 0.5); /* Yellow with 50% opacity */
   animation-delay: 9s;
 }
 
 .img5 {
   background-image: url('../../asserts/uce/d5.png');
+  background-color: rgba(0, 255, 255, 0.5); /* Cyan with 50% opacity */
   animation-delay: 12s;
 }
 
 .img6 {
   background-image: url('../../asserts/uce/d6.png');
+  background-color: rgba(255, 0, 255, 0.5); /* Magenta with 50% opacity */
   animation-delay: 15s;
 }
 
 .img7 {
   background-image: url('../../asserts/uce/d7.png');
+  background-color: rgba(128, 0, 128, 0.5); /* Purple with 50% opacity */
   animation-delay: 18s;
 }
 
 .img8 {
   background-image: url('../../asserts/uce/d8.png');
+  background-color: rgba(0, 128, 128, 0.5); /* Teal with 50% opacity */
   animation-delay: 21s;
 }
 
 .img9 {
   background-image: url('../../asserts/uce/d9.png');
+  background-color: rgba(255, 165, 0, 0.5); /* Orange with 50% opacity */
   animation-delay: 24s;
 }
 
 .img10 {
   background-image: url('../../asserts/uce/d10.png');
+  background-color: rgba(139, 69, 19, 0.5); /* Brown with 50% opacity */
   animation-delay: 27s;
 }
 
 .img11 {
   background-image: url('../../asserts/uce/d11.png');
+  background-color: rgba(75, 0, 130, 0.5); /* Indigo with 50% opacity */
   animation-delay: 30s;
 }
 
 .img12 {
   background-image: url('../../asserts/uce/d12.png');
+  background-color: rgba(0, 100, 0, 0.5); /* Dark Green with 50% opacity */
   animation-delay: 33s;
 }
 
 .img13 {
   background-image: url('../../asserts/uce/d13.png');
+  background-color: rgba(255, 20, 147, 0.5); /* Deep Pink with 50% opacity */
   animation-delay: 36s;
 }
 
 .img14 {
   background-image: url('../../asserts/uce/d14.png');
+  background-color: rgba(220, 20, 60, 0.5); /* Crimson with 50% opacity */
   animation-delay: 39s;
 }
 
@@ -206,4 +219,6 @@
     opacity: 0; /* Remain hidden */
   }
 }
+
+
 

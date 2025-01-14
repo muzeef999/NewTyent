@@ -39,6 +39,9 @@ const AppBar = () => {
 const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
 const [activeSubmenu, setActiveSubmenu] = useState(null);
 
+
+
+
 const handleSubmenuEnter = (submenu) => {
   setActiveSubmenu(submenu);
 };
@@ -99,18 +102,14 @@ const handleSubmenuLeave = () => {
   // Check if "uce" is found in the URL
   const urlFound = currentUrl.includes("uce");
 
-  // Dynamically set the styles based on the condition
-  const style = urlFound
-    ? { backgroundColor: " #999999", color: "#FFF", height: "40px"  }
-    : { backgroundColor: "#008AC7", color: "#FFF", height: "40px"  };
-
+  
   return (
     <div>
       {/* Top Bar */}
       <div className="sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
           className="d-flex justify-content-between align-items-center" 
-          style={style}
+          style={{backgroundColor: "#008AC7", color: "#FFF", height: "40px"}}
         >
           <div 
             className="d-flex align-items-center marquee"
@@ -400,7 +399,7 @@ const handleSubmenuLeave = () => {
               onMouseLeave={() => setIsProductOpen(false)} // Close when leaving
             >
               
-              <ResponsiveProductPage />
+              <ResponsiveProductPage  isProductOpen={setIsProductOpen}/>
               
             </div>
           

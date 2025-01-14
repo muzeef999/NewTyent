@@ -1,14 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Row, Table } from "react-bootstrap";
 import { IoCallOutline } from "react-icons/io5";
 import { RxDownload } from "react-icons/rx";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { postCart } from "@/app/Redux/cartSlice";
+import Image from "next/image";
 
 const ProductSection = ({ products, specifications }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [urlFound, setUrlFound] = useState(false);
+
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
 
@@ -17,6 +20,9 @@ const ProductSection = ({ products, specifications }) => {
   const handleTab = (index) => {
     setCurrentIndex(index);
   };
+
+
+  
 
   const thumbnails = document.querySelectorAll('.thumbnail');
 
@@ -44,6 +50,7 @@ const ProductSection = ({ products, specifications }) => {
       router.push("/Signin");
     }
   };
+
   const selectedSpecifications = specifications.filter((item) =>
     [
       "Electrode/Plates",
@@ -56,13 +63,17 @@ const ProductSection = ({ products, specifications }) => {
   );
 
 
-  const currentUrl = window.location.href;
+  
+  useEffect(() => {
+
+    const currentUrl = window.location.href;
+    const isUrlMatch = currentUrl.includes("uce") || currentUrl.includes("hybrid-h2");
+    setUrlFound(isUrlMatch);
+
+  },[]);
 
 
-  // Check if "uce" is found in the URL
-  const urlFound = currentUrl.includes("uce");
-
-
+ 
   return (
     <div>
       {/* Header Section */}
@@ -77,7 +88,7 @@ const ProductSection = ({ products, specifications }) => {
                 {/* Thumbnail Images */}
                 <div className="thumb d-flex flex-column mt-3">
                   {item.src.map((img, index) => (
-                    <img className={
+                    <Image className={
                       currentIndex === index 
                         ? `${urlFound ? "thumbnail-black " : "thumbnail"}`
                         : "thumbnail-none"
@@ -94,12 +105,14 @@ const ProductSection = ({ products, specifications }) => {
 
                 {/* Main Image */}
                 <div className="d-flex justify-content-center align-items-top" style={{borderRadius:'22px'}}>
-                  <img
+                  <div style={{width:'100%', height:'auto'}}>
+                  <Image 
                     src={item.src[currentIndex]}
                     alt={`Product ${currentIndex + 1}`}
-                    width="100%"
+                    layout="responsive" priority
                     style={{ borderRadius: "22px", padding: "16px" }}
                   />
+                  </div>
                 </div>
               </div>
             ))}

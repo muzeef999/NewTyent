@@ -6,7 +6,6 @@ import Touchpreview from "@/app/(home)/compoents/(products)/Touchpreview";
 import Features from "@/app/(home)/compoents/(products)/Features";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
-import Image from "next/image";
 import plates from "@/asserts/nmp/qtyo.webp";
 import rtr from "@/asserts/nmp/rtr.webp";
 import turbo from "@/asserts/nmp/turbo.webp";
@@ -20,7 +19,10 @@ import AnimatedSVG from "@/app/(home)/compoents/(products)/AnimatedSVG";
 import Certifications from "@/app/(home)/compoents/Certifications";
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import leftIamge from "@/asserts/nmp/leftboost1.webp";
-import Rightamge from "@/asserts/nmp/rightboost2.webp";
+import BoosttheBody from "../BoosttheBody";
+import PRODUCTNMP91 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-1.webp";
+import PRODUCTNMP92 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-2.webp";
+import PRODUCTNMP93 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-3.webp";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -29,13 +31,16 @@ const TyentNMP5 = () => {
 
   const products = [
     {
-      src: [
-        "https://firebasestorage.googleapis.com/v0/b/tyent-fa17c.appspot.com/o/nmp%2FPRODUCTNMP1.webp?alt=media&token=522f47f3-2aef-47ef-9ddb-c426ac468fa5",
-        "https://firebasestorage.googleapis.com/v0/b/tyent-fa17c.appspot.com/o/nmp%2FPRODUCTIMAGESNMP3.webp?alt=media&token=a492cd28-e40d-4a0a-a569-2cc647a89eb8",
-        "https://firebasestorage.googleapis.com/v0/b/tyent-fa17c.appspot.com/o/nmp%2FPRODUCTIMAGESNMP2.webp?alt=media&token=b032deee-d922-4b11-946e-81b555e14e56",
-      ],
+      src: [PRODUCTNMP91, PRODUCTNMP92, PRODUCTNMP93],
     },
   ];
+
+  const Boost = {
+    image: leftIamge,
+    title: "The Daily Boost Your Body Deserves",
+    description:
+      "Daily consumption of TYENT ionised alkaline water boosts  resistance, slows the ageing process, improves nutrient absorption, effectively removes toxins and free radicals, and aids in the prevention and treatment of dangerous chronic diseases such as cancer, diabetes, Hashimoto’s, gout, hypertension, stomach pain, colitis, digestive disorders, and many more…",
+  };
 
   const specifications = [
     { label: "Model", name: "Tyent NMP-11" },
@@ -200,86 +205,8 @@ const TyentNMP5 = () => {
         </Row>
 
         <br />
+        <BoosttheBody Boost={Boost} />
         <br />
-
-        <div className="custom-card-background-image">
-          <Row
-            className="g-0"
-            style={{
-              borderRadius: "24px", // Set border radius for the entire row
-              overflow: "hidden", // Ensure child elements respect the border radius
-            }}
-          >
-            <Col
-              md={6}
-              order={{ md: 1, xs: 2 }}
-              className="d-flex justify-content-center align-items-center"
-            >
-              <div style={{ width: "100%", height: "auto" }}>
-                <Image
-                  src={leftIamge}
-                  alt="image data"
-                  layout="responsive"
-                  priority
-                />
-              </div>
-            </Col>
-            <Col md={6} order={{ md: 2, xs: 1 }} className="position-relative">
-              {/* Image Container */}
-              <div style={{ width: "100%", height: "auto" }}>
-                <Image
-                  src={Rightamge}
-                  alt="image data"
-                  layout="responsive"
-                  priority
-                />
-              </div>
-
-              {/* Text Overlay */}
-              <div
-                className="position-absolute"
-                style={{
-                  top: "13%",
-                  left: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: "16px", // Optional: Add padding for spacing
-                  color: "#FFF", // Optional: Text color for visibility
-                }}
-              >
-                <h1
-                  style={{
-                    fontSize: "38px",
-                    fontWeight: "700",
-                    lineHeight: "56px",
-                    marginBottom: "16px",
-                    color: "#FFF",
-                  }}
-                >
-                  The Daily Boost Your Body Deserves
-                </h1>
-
-                <p
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "400",
-                    color: "#FFF",
-                  }}
-                >
-                  Daily consumption of TYENT ionised alkaline water boosts
-                  resistance, slows the ageing process, improves nutrient
-                  absorption, effectively removes toxins and free radicals, and
-                  aids in the prevention and treatment of dangerous chronic
-                  diseases such as cancer, diabetes, Hashimoto’s, gout,
-                  hypertension, stomach pain, colitis, digestive disorders, and
-                  many more…
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </div>
       </Container>
 
       {/* east to use display */}
@@ -287,7 +214,7 @@ const TyentNMP5 = () => {
       <Display />
 
       <Container>
-      <br />
+        <br />
         {/* One-Touch Display */}
         <OneTouchDispaly />
         <br />

@@ -7,6 +7,7 @@ import { MotionPathPlugin } from "gsap/all";
 import { Row, Col } from "react-bootstrap";
 
 import  desktopimg from "@/asserts/nmp/righrbanner.webp";
+import npm5banner from "@/asserts/nmp/npm5banner.png"
 
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
@@ -476,6 +477,8 @@ const Display = () => {
               </svg>
             </div>
           </div>
+
+          
         </div>
       </div>
      
