@@ -64,13 +64,20 @@ const ProductSection = ({ products, specifications }) => {
 
 
   
-  useEffect(() => {
 
-    const currentUrl = window.location.href;
-    const isUrlMatch = currentUrl.includes("uce") || currentUrl.includes("hybrid-h2");
-    setUrlFound(isUrlMatch);
 
-  },[]);
+    useEffect(() => {
+      const currentUrl = window.location.href;
+  
+      // Check for 'hybrid-h2' specifically and set color based on it
+      if (currentUrl.includes("hybrid-h2")) {
+        setUrlFound("hybrid-h2"); // Mark it for 'hybrid-h2'
+      } else if (currentUrl.includes("uce")) {
+        setUrlFound("uce"); // Mark it for 'uce'
+      } else {
+        setUrlFound(false); // No match found
+      }
+    }, []);
 
 
  
@@ -90,7 +97,7 @@ const ProductSection = ({ products, specifications }) => {
                   {item.src.map((img, index) => (
                     <Image className={
                       currentIndex === index 
-                        ? `${urlFound ? "thumbnail-black " : "thumbnail"}`
+                        ? `${urlFound === "hybrid-h2" ? "thumbnail-white" : urlFound == "uce" ? "thumbnail-black " : "thumbnail"}`
                         : "thumbnail-none"
                     }
                     data-active={currentIndex === index} // Set the data-active attribute
@@ -119,19 +126,19 @@ const ProductSection = ({ products, specifications }) => {
           </div>
 
           <div className="d-flex gap-3 justify-content-center align-items-center">
-            <button className={`${ urlFound? "appbardemoblack" : "appbardemo"  }`}>
+            <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"  }`}>
               <IoCallOutline />
               &nbsp;Call to Order
             </button>
 
-            <button className={`${ urlFound ? "appbardemoblack" : "appbardemo"  }`} onClick={() => addToCart()}>
+            <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"   }`} onClick={() => addToCart()}>
               <MdOutlineShoppingCart />
               &nbsp;Add to Cart
             </button>
           </div>
         </Col>
         <Col md={6}>
-          <h1 style={{ fontWeight: 600, color: urlFound ?"#000": "#008AC7" }}>{model}</h1>
+          <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#FFF" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
           <hr />
           <h4 className="m-2">
             M.R.P: <span style={{ fontWeight: 500 }}>₹ {new Intl.NumberFormat("en-IN").format(price)}/-</span>
@@ -139,17 +146,17 @@ const ProductSection = ({ products, specifications }) => {
           <hr />
           <h4 className="m-2" style={{ fontWeight: 500 }}>Specifications</h4>
           <hr />
-          <Table className="custom-table table-borderless" hover responsive>
+          <Table  className="custom-table table-borderless" hover responsive>
             <tbody>
               {selectedSpecifications.map((item, idx) => (
                 <tr key={idx}>
-                  <td>{item.label}</td>
-                  <td>: {item.name}</td>
+                  <td style={{color: urlFound === "hybrid-h2" ? "#FFF" : "#000"}}>{item.label}</td>
+                  <td style={{color: urlFound === "hybrid-h2" ? "#FFF" : "#000"}}>: {item.name}</td>
                 </tr>
               ))}
             </tbody>
           </Table>
-          <button className={`${ urlFound ? "appbardemoblack" : "appbardemo"  }`}>
+          <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"  }`}>
             <RxDownload />
             &nbsp;Download Brochure
           </button>

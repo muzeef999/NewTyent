@@ -17,7 +17,7 @@ export default function RootLayout({ children, session }) {
 
   return (
     <html lang="en">
-      <body style={{ fontFamily: "Poppins, sans-serif" }}>
+      <body>
         <ClientComponent session={session}>
           {children}
         </ClientComponent>

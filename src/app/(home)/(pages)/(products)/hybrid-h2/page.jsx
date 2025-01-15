@@ -8,6 +8,7 @@ import PRODUCTHYBRID1 from "@/asserts/hybrid/PRODUCTHYBRID-1.webp";
 import PRODUCTHYBRID2 from "@/asserts/hybrid/PRODUCTHYBRID-2.webp";
 import PRODUCTHYBRID3 from "@/asserts/hybrid/PRODUCTHYBRID-3.webp";
 import DisplayPatter from "./DisplayPatter";
+import "@/app/style/hybridBackground.css"
 
 const page = () => {
   const products = [
@@ -82,19 +83,16 @@ const page = () => {
     },
   ];
   return (
-    <div
-      style={{
-        background:
-          "repeating-linear-gradient(#f8fbfe, #d9d9d9, #f8fbfe 550px)",
-      }}
-    >
+    <div className="hybridbackground" >
+       <br/>
+       <br/>
       <Container>
         <ProductSection products={products} specifications={specifications} />
       </Container>
 
       <div className="container">
         <Row>
-          <Col md={6} className="d-flex align-items-center">
+          <Col md={6} className="d-flex justify-content-center align-items-center">
             <div>
               <h2>
                 <b>Japanese Twin cell technology</b>
@@ -163,7 +161,7 @@ const page = () => {
               </div>
             </div>
           </Col>
-          <Col md={6} className="d-flex align-items-center">
+          <Col md={6} className="d-flex justify-content-center align-items-center">
             <div>
               <h2>
                 <b>Advanced power supply</b>
@@ -178,7 +176,7 @@ const page = () => {
           </Col>
         </Row>
         <Row>
-          <Col md={6}>
+          <Col md={6} className="d-flex justify-content-center align-items-center">
             <div>
               <h2>
                 <b> 8 Types of water levels</b>
@@ -192,12 +190,46 @@ const page = () => {
               </p>
             </div>
           </Col>
-          <Col md={6}></Col>
+          <Col md={6}>
+            <div style={{ width: "60%", height: "auto", position: "relative" }}>
+              <Image
+                src={hybrid}
+                alt="hybrid image"
+                layout="responsive"
+                priority
+                style={{
+                  position: "relative",
+                  zIndex: 2, // Image is above the Display component
+                }}
+              />
+
+              <br/>
+              <br/>
+
+              {/* Display component is in the background */}
+              <div
+                style={{
+                  position: "absolute",
+                  left: "20.5%",
+                  top: "17%",
+                  width: "100%",
+                  zIndex: 1, // Display is behind the image
+                }}
+              >
+                <Display />
+              </div>
+            </div>
+          </Col>
         </Row>
       </div>
 
       <Row>
-        <Col md={6}></Col>
+        <Col md={6} className="d-flex justify-content-center align-items-center">
+        <div>
+          <h2 className="text-center"><b>Easy-to-Use One-Touch Display</b></h2>
+          <p className="text-center">Each function has distinct icons,and you can start or stop the <br/> desired water with one touch.</p>
+        </div>
+        </Col>
         <Col md={6}>
           <DisplayPatter />
         </Col>

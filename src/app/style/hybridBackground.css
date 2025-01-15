@@ -1,0 +1,6 @@
+.hybridbackground{
+    background-image: url("../../asserts/hybrid/hybridwall.webp");
+    width: 100%;
+    color: #FFF;
+    background-size: contain;
+}
