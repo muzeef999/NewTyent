@@ -3,11 +3,15 @@ import { Col, Row, Container } from "react-bootstrap";
 import { FaDroplet } from "react-icons/fa6";
 import filter from "@/asserts/filter.png";
 import Image from "next/image";
+import certified1 from "@/asserts/filter/certified1.png"
+import certified2 from "@/asserts/filter/certified2.png"
+import ansi from "@/asserts/filter/ansi.png"
+import epa from "@/asserts/filter/epa.png"
+import nsf from "@/asserts/filter/nsf.png"
 
 const Filter = () => {
   return (
     <Container>
-      <br/>
       {/* Section Title */}
       <h2
         className="text-center mb-4"
@@ -37,15 +41,16 @@ const Filter = () => {
             "Tyent filters can remove heavy metals, pharmaceuticals, heavy contamination, micro-organisms, bacteria, viruses, algae, fungi.",
           ].map((text, index) => (
             <div className="d-flex align-items-start mb-5" key={index}>
+              <div>
               <FaDroplet
-                size={20}
-                color="#008AC7"
-                style={{
-                  margin: "5px 10px 0 0",
-                  width: "20px",
-                  height: "20px", // Explicitly set width and height
-                }}
+                  size={20} // This is the preferred way to set the size
+                  color="#008AC7"
+                  style={{
+                    margin: "5px 10px 0 0",
+                  }}                
               />
+              </div>
+              
               <p
                 style={{
                   fontSize: "20px", // Default for large screens
@@ -58,6 +63,17 @@ const Filter = () => {
               </p>
             </div>
           ))}
+        </Col>
+      </Row>
+      <Row>
+        <Col md={7} className="d-flex justify-content-around align-items-center">
+        <div style={{width:'20%', height:'auto'}}><Image src={ansi} alt="certified filter" layout="responsive" priority/></div>
+        <div style={{width:'20%', height:'auto'}}><Image src={epa} alt="certified filter" layout="responsive" priority/></div>
+        <div style={{width:'20%', height:'auto'}}><Image src={nsf} alt="certified filter" layout="responsive" priority/></div>
+        </Col>
+        <Col md={5} className="d-flex justify-content-between align-items-center">
+         <div style={{width:'50%', height:'auto', padding:'10px'}}><Image src={certified1} alt="certified filter" layout="responsive" priority/></div>
+         <div style={{width:'50%', height:'auto', padding:'10px'}}><Image src={certified2} alt="certified filter2" layout="responsive" priority/></div>   
         </Col>
       </Row>
     </Container>

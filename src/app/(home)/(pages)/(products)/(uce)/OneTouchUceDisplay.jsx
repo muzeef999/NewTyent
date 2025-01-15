@@ -636,6 +636,7 @@ const OneTouchUceDisplay = () => {
                 />
               </g>
    </svg>
+   <p className='text-center'>Main Screen</p>
   </div>
 
   <div>
@@ -736,6 +737,7 @@ const OneTouchUceDisplay = () => {
 </clipPath>
 </defs>
 </svg>
+<p className='text-center'>Bottom Menu Window</p>
   </div>
 
   <div>
@@ -811,6 +813,7 @@ const OneTouchUceDisplay = () => {
 </clipPath>
 </defs>
 </svg>
+<p className='text-center'>Upper Menu Display</p>
 
   </div>
 </div>

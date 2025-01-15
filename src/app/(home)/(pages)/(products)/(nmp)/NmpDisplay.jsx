@@ -4,8 +4,10 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/all";
-import { Row, Col } from "react-bootstrap";
+import { GoArrowRight } from "react-icons/go";
+
 import npm5banner from "@/asserts/nmp/npm5banner.png"
+import Link from "next/link";
 
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
@@ -13,6 +15,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 const NmpDisplay = () => {
     const svgRef = useRef(null);
+    
 
     useEffect(() => {
       const svgElement = svgRef.current;
@@ -100,10 +103,15 @@ const NmpDisplay = () => {
         <h2 style={{ color: "#008AC7", fontWeight: "600" }}>
           Easy To Use One Touch Display
         </h2>
-        <p style={{ fontSize: "14px", fontWeight: 500 }}>
+        <p style={{ fontSize: "15.5px", fontWeight: 500 }}>
           Each function has distinct icons, and you can start or stop the <br />{" "}
           desired water with one touch.
         </p>
+        <p>To Know How To Use</p>
+        <Link className={"appbardemo"} style={{textDecoration:'none'}}  href={"/7-types-of-Tyent-water"}>
+                      
+                      &nbsp;Click here <GoArrowRight /> 
+                    </Link>
         </div>
                 </div>
               <Image

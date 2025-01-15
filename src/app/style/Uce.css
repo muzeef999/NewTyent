@@ -87,7 +87,7 @@
 
 
 .custom-card-uce-interface {
-  background: linear-gradient(25deg, #393939 1%, #FFF 99%);
+  background: linear-gradient(25deg, #393939 1%,  #8c8c8c  40%, #FFF 89%);
   border-radius: 24px;
   cursor: pointer;
   box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
@@ -220,5 +220,38 @@
   }
 }
 
+.LuxuryBrochure{
+  color: #000;
+  border: 1px solid #FFF;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  background-color: #FFF;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */  
+}
+
+.LuxuryBrochure:hover{
+  background-color: #000;
+  color: #FFF;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(236, 244, 247, 0.3); /* Subtle shadow for better hover UI */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.water-outlet{
+  border-radius: 34px;
+  cursor: pointer;
+  box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
 
 
+.custom-card-uce:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+}

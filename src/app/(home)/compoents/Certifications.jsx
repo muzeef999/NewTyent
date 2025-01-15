@@ -13,8 +13,6 @@ import { FaArrowRight } from "react-icons/fa6";
 const Certifications = () => {
   return (
     <>
-
-
       <div className="container text-center">
         <h2 style={{ color: '#008AC7', fontWeight: '600' }}>Certifications</h2>
         <center>

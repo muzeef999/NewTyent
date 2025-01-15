@@ -138,7 +138,7 @@ const ProductSection = ({ products, specifications }) => {
           </div>
         </Col>
         <Col md={6}>
-          <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#FFF" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
+          <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
           <hr />
           <h4 className="m-2">
             M.R.P: <span style={{ fontWeight: 500 }}>₹ {new Intl.NumberFormat("en-IN").format(price)}/-</span>
@@ -150,8 +150,8 @@ const ProductSection = ({ products, specifications }) => {
             <tbody>
               {selectedSpecifications.map((item, idx) => (
                 <tr key={idx}>
-                  <td style={{color: urlFound === "hybrid-h2" ? "#FFF" : "#000"}}>{item.label}</td>
-                  <td style={{color: urlFound === "hybrid-h2" ? "#FFF" : "#000"}}>: {item.name}</td>
+                  <td style={{color: urlFound === "hybrid-h2" ? "#000" : "#000"}}>{item.label}</td>
+                  <td style={{color: urlFound === "hybrid-h2" ? "#000" : "#000"}}>: {item.name}</td>
                 </tr>
               ))}
             </tbody>

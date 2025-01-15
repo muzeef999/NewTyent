@@ -7,20 +7,46 @@ import { MotionPathPlugin } from "gsap/all";
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-const Display = () => {
+const Display = ({ displayColor, phValues }) => {
   const svgRef = useRef(null);
 
   useEffect(() => {
     const svgElement = svgRef.current;
-  
+
     if (!svgElement) {
       console.error("SVG element not found!");
       return;
     }
-  
-    const durationPerStep = 2; // Duration for transitions
-    const repeatDelay = 1; // Delay before restarting the loop
-  
+
+    // Select required elements
+    const dataDisplay = svgElement.querySelector("#dataDisplay");
+    const displayColour = svgElement.querySelector("#displayColour");
+    const textDisplay = svgElement.querySelector("#textDisplay");
+    const textColorElement = svgElement.querySelector("#textcolor");
+
+    if (!dataDisplay || !displayColour || !textDisplay || !textColorElement) {
+      console.error("One or more required SVG elements are missing.");
+      return;
+    }
+
+    // Handle static color and content behavior
+    if (displayColor) {
+      displayColour.style.fill = displayColor;
+      textColorElement.style.fill = displayColor;
+
+      dataDisplay.style.opacity = 1;
+      textDisplay.style.opacity = 1;
+
+      // Use the provided phValues or default to "ER"
+      textDisplay.textContent = phValues || "ER";
+
+      return; // Skip animation logic
+    }
+
+    // Animation logic
+    const durationPerStep = 2;
+    const repeatDelay = 1;
+
     const colors = [
       "#FF0000", // Red
       "#ff1aff", // Purple
@@ -31,8 +57,8 @@ const Display = () => {
       "#FFA500", // Orange
       "#797A83", // Gray
     ];
-  
-    const phValues = [
+
+    const animationPhValues = [
       "11.5", // Red
       "9.5",  // Purple
       "9.0",  // Dark Blue
@@ -42,38 +68,20 @@ const Display = () => {
       "4.0",  // Orange
       "12:33", // Gray
     ];
-  
-    // Select required elements
-    const dataDisplay = svgElement.querySelector("#dataDisplay");
-    const displayColour = svgElement.querySelector("#displayColour");
-    const textDisplay = svgElement.querySelector("#textDisplay");
-    const textColorElement = svgElement.querySelector("#textcolor");
-  
-    if (!dataDisplay || !displayColour || !textDisplay || !textColorElement) {
-      console.error("One or more required SVG elements are missing.");
-      return;
-    }
-  
-    // Set the initial opacity
-    dataDisplay.style.opacity = 0;
-    textDisplay.style.opacity = 0;
-  
-    // Initialize GSAP timeline
+
     const timeline = gsap.timeline({
-      repeat: -1, // Infinite loop
+      repeat: -1,
       repeatDelay,
     });
-  
-    // Add transitions to the timeline
+
     colors.forEach((color, index) => {
       timeline.to(
-        [displayColour, textColorElement], // Apply the same color to both elements
+        [displayColour, textColorElement],
         {
           fill: color,
           duration: durationPerStep,
           ease: "power4.out",
           onStart: () => {
-            // Fade in dataDisplay and update text
             if (index === 0) {
               gsap.to(dataDisplay, {
                 opacity: 1,
@@ -81,10 +89,10 @@ const Display = () => {
                 ease: "power4.inOut",
               });
             }
-  
-            const value = phValues[index % phValues.length];
+
+            const value = animationPhValues[index % animationPhValues.length];
             textDisplay.textContent = value;
-  
+
             gsap.to(textDisplay, {
               opacity: 1,
               duration: 1,
@@ -92,7 +100,6 @@ const Display = () => {
             });
           },
           onComplete: () => {
-            // Fade out dataDisplay at the end of the loop
             if (index === colors.length - 1) {
               gsap.to(dataDisplay, {
                 opacity: 0,
@@ -100,8 +107,7 @@ const Display = () => {
                 ease: "power4.inOut",
               });
             }
-  
-            // Fade out text for the next transition
+
             gsap.to(textDisplay, {
               opacity: 0,
               duration: 1,
@@ -109,18 +115,15 @@ const Display = () => {
             });
           },
         },
-        index * durationPerStep // Stagger transitions
+        index * durationPerStep
       );
     });
-  
-    // Cleanup on component unmount
+
     return () => {
       timeline.kill();
     };
-  }, []);
-  
-  
-    
+  }, [displayColor, phValues]);
+
 
   
   return (

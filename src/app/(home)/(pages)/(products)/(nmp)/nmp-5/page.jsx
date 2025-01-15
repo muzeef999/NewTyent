@@ -18,29 +18,26 @@ import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import leftIamge from "@/asserts/nmp/leftboost1.webp";
 import NmpDisplay from "../NmpDisplay";
 import BoosttheBody from "../BoosttheBody";
-import productnmp1 from "@/asserts/nmp/PRODUCTNMP1.webp"
-import productnmp2 from "@/asserts/nmp/PRODUCTNMP2.webp"
-import productnmp3 from "@/asserts/nmp/PRODUCTNMP3.webp"
+import productnmp1 from "@/asserts/nmp/PRODUCTNMP1.webp";
+import productnmp2 from "@/asserts/nmp/PRODUCTNMP2.webp";
+import productnmp3 from "@/asserts/nmp/PRODUCTNMP3.webp";
+import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
     setCurrentIndex(index);
   };
 
-
-    const Boost = {
-      image :leftIamge,
-      title:'The Daily Boost Your Body Deserves',
-      description:"Daily consumption of TYENT ionised alkaline water boosts  resistance, slows the ageing process, improves nutrient absorption, effectively removes toxins and free radicals, and aids in the prevention and treatment of dangerous chronic diseases such as cancer, diabetes, Hashimoto’s, gout, hypertension, stomach pain, colitis, digestive disorders, and many more…"
-    }
+  const Boost = {
+    image: leftIamge,
+    title: "The Daily Boost Your Body Deserves",
+    description:
+      "Daily consumption of TYENT ionised alkaline water boosts  resistance, slows the ageing process, improves nutrient absorption, effectively removes toxins and free radicals, and aids in the prevention and treatment of dangerous chronic diseases such as cancer, diabetes, Hashimoto’s, gout, hypertension, stomach pain, colitis, digestive disorders, and many more…",
+  };
 
   const products = [
     {
-      src: [
-        productnmp1,
-        productnmp2,
-        productnmp3,
-       ],
+      src: [productnmp1, productnmp2, productnmp3],
     },
   ];
 
@@ -164,107 +161,124 @@ const TyentNMP5 = () => {
   return (
     <div>
       <Container>
-        {/*product Add to Cart*/}
-        <ProductSection products={products} specifications={specifications} />
+        <div className="section-spacing">
+          <ProductSection products={products} specifications={specifications} />
+        </div>
 
-        {/* Description Section */}
-        <Row className="mb-5">
-          <Col>
-            <p
-              className="text-center"
-              style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
-            >
-              The Tyent NMP-5 is expertly crafted with advanced technology,
-              modern design, and an user friendly interface, making it the ideal
-              beginner model, featuring five advanced Japanese solid hybrid mesh
-              plates/electrodes from Permelac, Japan (Since 1969) made of
-              titanium coated with platinum, ensuring 99.99% purity. With an
-              increased surface area, it delivers stable oxygen levels and
-              improved micro-clustering. It offers seven different water
-              ionization levels, It generates selective antioxidant molecular
-              hydrogen up to 1550 PPB and an ORP of up to -850 and comes with a
-              3 year warranty on the machine, a 15 year warranty on the
-              electrodes/plates, and a lifespan of over 45+ years. Perfect for
-              small households, it effortlessly provides clean,
-              healthy ionized water.
-            </p>
-          </Col>
-        </Row>
-
-        <h2 style={{ color: "#5ac4f2" }}>
-          <b>
-            <span style={{ color: "#008AC7" }}>Loud and clear.</span> Tyent’s
-            unparalleled specifications - no other ionizer comes close!
-          </b>
-        </h2>
-        {/* Features Section */}
-        <Row className="row g-4">
-          {features.map((data, index) => (
-            <Col md={4} key={data.id}>
-              <Features data={data} delay={index * 100} />
+        <div className="section-spacing">
+          <Row>
+            <Col>
+              <p
+                className="text-center"
+                style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
+              >
+                The Tyent NMP-5 is expertly crafted with advanced technology,
+                modern design, and an user friendly interface, making it the
+                ideal beginner model, featuring five advanced Japanese solid
+                hybrid mesh plates/electrodes from Permelac, Japan (Since 1969)
+                made of titanium coated with platinum, ensuring 99.99% purity.
+                With an increased surface area, it delivers stable oxygen levels
+                and improved micro-clustering. It offers seven different water
+                ionization levels, It generates selective antioxidant molecular
+                hydrogen up to 1550 PPB and an ORP of up to -850 and comes with
+                a 3 year warranty on the machine, a 15 year warranty on the
+                electrodes/plates, and a lifespan of over 45+ years. Perfect for
+                small households, it effortlessly provides clean,
+                healthy ionized water.
+              </p>
             </Col>
-          ))}
-        </Row>
+          </Row>
+        </div>
 
-        <br />
-        <BoosttheBody Boost={Boost} />
-        <br />
+        <div className="section-spacing">
+          <h2 style={{ color: "#5ac4f2" }}>
+            <b>
+              <span style={{ color: "#008AC7" }}>Loud and clear.</span> Tyent’s
+              unparalleled specifications - no other ionizer comes close!
+            </b>
+          </h2>
 
-      </Container>
-      <br />
-      <NmpDisplay />
-      <br />
-      <Container> 
-        <br />
-        <Touchpreview />
-      </Container>
-      <br/>
-      <br/>
-        <AnimatedSVG />
-      <Container>
-        <h2
-          className="text-center mb-4"
-          style={{
-            color: "#008AC7",
-            fontWeight: "600",
-            fontSize: "2rem", // Default for large screens
-          }}
-        >
-          Tyent NMP-5 Specification's
-        </h2>
-
-        <Table className="custom-table" hover responsive>
-          <tbody>
-            {specifications.map((item, idx) => (
-              <tr key={idx}>
-                <td
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "16px",
-                    color: "#008AC7",
-                    textAlign: "left",
-                    padding: "10px",
-                  }}
-                >
-                  {item.label}
-                </td>
-                <td
-                  style={{
-                    fontSize: "16px",
-                    color: "#333",
-                    textAlign: "left",
-                    padding: "10px",
-                  }}
-                >
-                  : {item.name}
-                </td>
-              </tr>
+          <Row className="row g-4">
+            {features.map((data, index) => (
+              <Col md={4} key={data.id}>
+                <Features data={data} delay={index * 100} />
+              </Col>
             ))}
-          </tbody>
-        </Table>
+          </Row>
+        </div>
 
-        <Certifications />
-        <Filter />
+        <div className="section-spacing">
+          <BoosttheBody Boost={Boost} />
+        </div>
+      </Container>
+
+      <div className="section-spacing">
+        <NmpDisplay />
+      </div>
+
+      <Container>
+        <div className="section-spacing">
+          <OneTouchDispaly />
+        </div>
+        <div className="section-spacing">
+          <Touchpreview />
+        </div>
+      </Container>
+
+      <div className="section-spacing">
+        <AnimatedSVG />
+      </div>
+
+      <Container>
+        <div className="section-spacing">
+          <h2
+            className="text-center mb-4"
+            style={{
+              color: "#008AC7",
+              fontWeight: "600",
+              fontSize: "2rem", // Default for large screens
+            }}
+          >
+            Tyent NMP-5 Specification's
+          </h2>
+
+          <Table className="custom-table" hover responsive>
+            <tbody>
+              {specifications.map((item, idx) => (
+                <tr key={idx}>
+                  <td
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "16px",
+                      color: "#008AC7",
+                      textAlign: "left",
+                      padding: "10px",
+                    }}
+                  >
+                    {item.label}
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "16px",
+                      color: "#333",
+                      textAlign: "left",
+                      padding: "10px",
+                    }}
+                  >
+                    : {item.name}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+
+        <div className="section-spacing">
+          <Certifications />
+        </div>
+        <div className="section-spacing">
+          <Filter />
+        </div>
       </Container>
     </div>
   );

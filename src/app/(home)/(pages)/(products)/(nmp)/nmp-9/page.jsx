@@ -168,104 +168,122 @@ const TyentNMP5 = () => {
   return (
     <div>
       <Container>
-        {/*product Add to Cart*/}
-        <ProductSection products={products} specifications={specifications} />
-
-        {/* Description Section */}
-        <Row className="mb-5">
-          <Col>
-            <p
-              className="text-center"
-              style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
-            >
-              The Tyent NMP-9 is engineered with cutting-edge technology, modern
-              design, and a user-friendly interface, making it the Best-Selling
-              Flagship water ionizer. It features 9 advanced Japanese solid
-              hybrid mesh plates/electrodes from Permelac, Japan (Since 1969),
-              crafted from titanium and coated with platinum to ensure 99.9%
-              purity. With an expanded surface area, it maintains stable oxygen
-              levels and enhances micro-clustering. Offering seven different
-              water levels, it generates selective antioxidant molecular
-              hydrogen up to 1800 PPB and an ORP of up to -1050. It includes a
-              3-year warranty on the machine, a 15-year warranty on the
-              electrodes/plates, and a lifespan exceeding 45 years. Ideal for
-              moderate households, it provides clean, healthy ionized
-              water effortlessly.
-            </p>
-          </Col>
-        </Row>
-
-        {/* Features Section */}
-        <Row className="row g-3">
-          {features.map((data, index) => (
-            <Col md={4} key={data.id}>
-              <Features data={data} delay={index * 100} />
+        <div className="section-spacing">
+          <ProductSection products={products} specifications={specifications} />
+        </div>
+        <div className="section-spacing">
+          <Row className="mb-5">
+            <Col>
+              <p
+                className="text-center"
+                style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
+              >
+                The Tyent NMP-9 is engineered with cutting-edge technology,
+                modern design, and a user-friendly interface, making it the
+                Best-Selling Flagship water ionizer. It features 9 advanced
+                Japanese solid hybrid mesh plates/electrodes from Permelac,
+                Japan (Since 1969), crafted from titanium and coated with
+                platinum to ensure 99.9% purity. With an expanded surface area,
+                it maintains stable oxygen levels and enhances micro-clustering.
+                Offering seven different water levels, it generates selective
+                antioxidant molecular hydrogen up to 1800 PPB and an ORP of up
+                to -1050. It includes a 3-year warranty on the machine, a
+                15-year warranty on the electrodes/plates, and a lifespan
+                exceeding 45 years. Ideal for moderate households, it provides
+                clean, healthy ionized water effortlessly.
+              </p>
             </Col>
-          ))}
-        </Row>
+          </Row>
+        </div>
 
-        <br />
-        <BoosttheBody Boost={Boost} />
-        <br />
+        <div className="section-spacing">
+          <h2 style={{ color: "#5ac4f2" }}>
+            <b>
+              <span style={{ color: "#008AC7" }}>Loud and clear.</span> Tyent’s
+              unparalleled specifications - no other ionizer comes close!
+            </b>
+          </h2>
+          <Row className="row g-3">
+            {features.map((data, index) => (
+              <Col md={4} key={data.id}>
+                <Features data={data} delay={index * 100} />
+              </Col>
+            ))}
+          </Row>
+        </div>
+
+        <div className="section-spacing">
+          <BoosttheBody Boost={Boost} />
+        </div>
       </Container>
-      {/* east to use display */}
-      <br />
-      <Display />
+
+      <div className="section-spacing">
+        <Display />
+      </div>
 
       <Container>
-        <br />
-        {/* One-Touch Display */}
-        <OneTouchDispaly />
-        <br />
-        <Touchpreview />
+        <div className="section-spacing">
+          <OneTouchDispaly />
+        </div>
+        <div className="section-spacing">
+          <Touchpreview />
+        </div>
       </Container>
-      <div>
+
+      <div className="section-spacing">
         <AnimatedSVG />
       </div>
+
       <Container>
-        <h2
-          className="text-center mb-4"
-          style={{
-            color: "#008AC7",
-            fontWeight: "600",
-            fontSize: "2rem", // Default for large screens
-          }}
-        >
-          Tyent NMP-9 Specification's
-        </h2>
+        <div className="section-spacing">
+          <h2
+            className="text-center mb-4"
+            style={{
+              color: "#008AC7",
+              fontWeight: "600",
+              fontSize: "2rem", // Default for large screens
+            }}
+          >
+            Tyent NMP-7 Specification's
+          </h2>
 
-        <Table className="custom-table" hover responsive>
-          <tbody>
-            {specifications.map((item, idx) => (
-              <tr key={idx}>
-                <td
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "16px",
-                    color: "#008AC7",
-                    textAlign: "left",
-                    padding: "10px",
-                  }}
-                >
-                  {item.label}
-                </td>
-                <td
-                  style={{
-                    fontSize: "16px",
-                    color: "#333",
-                    textAlign: "left",
-                    padding: "10px",
-                  }}
-                >
-                  : {item.name}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+          <Table className="custom-table" hover responsive>
+            <tbody>
+              {specifications.map((item, idx) => (
+                <tr key={idx}>
+                  <td
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "16px",
+                      color: "#008AC7",
+                      textAlign: "left",
+                      padding: "10px",
+                    }}
+                  >
+                    {item.label}
+                  </td>
+                  <td
+                    style={{
+                      fontSize: "16px",
+                      color: "#333",
+                      textAlign: "left",
+                      padding: "10px",
+                    }}
+                  >
+                    : {item.name}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
 
-        <Certifications />
-        <Filter />
+        <div className="section-spacing">
+          <Certifications />
+        </div>
+        <div className="section-spacing">
+          <Filter />
+        </div>
       </Container>
     </div>
   );

@@ -35,8 +35,12 @@ export default function ClientComponent({ children, session }) {
         <main>{children}</main>
         <br/>
         <br/>
+        <div className="section-spacing">
         {!shouldExcludeLayout && <Form />}
+        </div>
+        <div className="section-spacing">
         <Footer />
+        </div>
       </Provider>
     </SessionProvider>
   );

@@ -28,6 +28,8 @@ import goodDesignaward from "@/asserts/uce/good-design-gold-award.png";
 import goodDesign from "@/asserts/uce/good-desig.png";
 import PRODUCTUCE1 from "@/asserts/uce/PRODUCTUCE-1.webp"
 import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp"
+import { RxDownload } from "react-icons/rx";
+import Filter from "@/app/(home)/compoents/(products)/Filter";
 
 
 const data = [
@@ -173,91 +175,23 @@ const page = () => {
   ];
 
   return (
-    <div
-      style={{
-        background:
-          "repeating-linear-gradient(#f8fbfe, #d9d9d9, #f8fbfe 550px)",
-      }}
-    >
+    <div>
       <Container>
+      <div className="section-spacing">
         <ProductSection products={products} specifications={specifications} />
+      </div>
       </Container>
 
-      <div className="container custom-card-uce">
-        <Row className="boxbacground">
-        
-          <Col md={6}
-            className="d-flex justify-content-center align-items-center "
-          >
-            <div className="p-4">
-              <h2
-                className="text-start"
-                style={{ color: "#FFF", fontWeight: "600" }}
-              >
-                <b>Tyent’s Exclusive Luxury Kitchen Range</b>
-              </h2>
-              <p style={{ color: "#FFF" }}>
-                Transform your kitchen with Tyent’s Luxury Kitchen Range. Sleek,
-                state-of-the-art best design awarded ionizers to deliver
-                hydrogen-rich alkaline water, combining advanced technology with
-                elegant design. Elevate your space with style and wellness.
-              </p>
-            </div>
-          </Col>
-          <Col md={6}>
-            <div
-              style={{ width: "100%", height: "auto", position: "relative" }}
-            >
-              <Image
-                src={machine}
-                alt="uce iamge"
-                layout="responsive"
-                priority
-              />
-              <div style={{ position: "absolute", top: "30%", left: "42%" }}>
-                <div style={{ width: "70%" }}>
-                  <UceTopMachine />
-                </div>
-              </div>
-            </div>
-          </Col>
-          <div className="d-flex justify-content-end">
-  <div style={{ width: '15%', marginRight: '10px' }}>
-    <Image 
-      src={goodDesign} 
-      alt="good design award" 
-      layout="responsive" 
-      priority 
-      style={{ borderRadius: '10px' }} 
-    />
-  </div>
-  <div style={{ width: '15%', marginRight: '10px' }}>
-    <Image 
-      src={goodDesignaward} 
-      alt="good design award" 
-      layout="responsive" 
-      priority 
-      style={{ borderRadius: '10px' }} 
-    />
-  </div>
-  <div style={{ width: '15%' }}>
-    <Image 
-      src={goodDesignaward} 
-      alt="good design award" 
-      layout="responsive" 
-      priority 
-      style={{ borderRadius: '10px' }} 
-    />
-  </div>
-</div>
 
-        </Row>
-        <br />
-      </div>
 
+
+      <div className="section-spacing" style={{
+        background:
+          "repeating-linear-gradient(#f8fbfe, #d9d9d9, #f8fbfe)",
+      }}>
       <Container>
-        <br />
         <Row>
+
           <Col xs={12} md={6}>
             <div
               style={{ width: "100%", height: "auto", position: "relative" }}
@@ -308,8 +242,89 @@ const page = () => {
             </div>
           </Col>
         </Row>
-        <br />
       </Container>
+      </div>
+
+
+      <div className="section-spacing">
+      <div className="container custom-card-uce">
+        <Row className="boxbacground">
+        
+          <Col md={6}
+            className="d-flex justify-content-center align-items-center "
+          >
+            <div className="p-4">
+              <h2
+                className="text-start"
+                style={{ color: "#FFF", fontWeight: "600" }}
+              >
+                <b>Tyent’s Exclusive Luxury Kitchen Range</b>
+              </h2>
+              <p style={{ color: "#FFF" }}>
+                Transform your kitchen with Tyent’s Luxury Kitchen Range. Sleek,
+                state-of-the-art best design awarded ionizers to deliver
+                hydrogen-rich alkaline water, combining advanced technology with
+                elegant design. Elevate your space with style and wellness.
+              </p>
+              <button className="LuxuryBrochure">
+                          <RxDownload />
+                          &nbsp;Download Brochure
+                        </button>
+            </div>
+          </Col>
+          <Col md={6} className="d-flex justify-content-center align-items-center">
+            <div
+              style={{ width: "80%", height: "auto", position: "relative" }}
+            >
+              <Image
+                src={machine}
+                alt="uce iamge"
+                layout="responsive"
+                priority
+              />
+              <div style={{ position: "absolute", top: "30%", left: "42%" }}>
+                <div style={{ width: "70%" }}>
+                  <UceTopMachine />
+                </div>
+              </div>
+            </div>
+          </Col>
+          <div className="d-flex justify-content-end">
+  <div style={{ width: '15%', marginRight: '10px' }}>
+    <Image 
+      src={goodDesign} 
+      alt="good design award" 
+      layout="responsive" 
+      priority 
+      style={{ borderRadius: '10px' }} 
+    />
+  </div>
+  <div style={{ width: '15%', marginRight: '10px' }}>
+    <Image 
+      src={goodDesignaward} 
+      alt="good design award" 
+      layout="responsive" 
+      priority 
+      style={{ borderRadius: '10px' }} 
+    />
+  </div>
+  <div style={{ width: '15%' }}>
+    <Image 
+      src={goodDesignaward} 
+      alt="good design award" 
+      layout="responsive" 
+      priority 
+      style={{ borderRadius: '10px' }} 
+    />
+  </div>
+</div>
+
+        </Row>
+        <br />
+      </div>
+      </div>
+
+      <div className="section-spacing">
 
       <div className="backgrounduce">
         <div className="card-scroll-container" style={{ paddingLeft: "30%" }}>
@@ -324,9 +339,9 @@ const page = () => {
           ))}
         </div>
       </div>
-
-      <br />
-
+</div>
+      
+<div className="section-spacing">
       <Container>
         <Row className="g-5">
           <Col
@@ -526,9 +541,9 @@ const page = () => {
           </Col>
         </Row>
       </Container>
-
-      <br />
-
+</div>
+      
+<div className="section-spacing">
       <h2 className="text-center">
         <b>
           First customizable design display in a <br /> water ionizer{" "}
@@ -547,9 +562,12 @@ const page = () => {
         <NightModeDispay />
         </div>
       </div>
-      <br/>
-      <br/>
+      
+</div>
 
+
+
+<div className="section-spacing">
       <div className="container">
         <Row className="custom-card-uce-interface">
           <Col
@@ -685,6 +703,8 @@ const page = () => {
             </div>
           </Col>
 
+
+
           <Col md={4}>
             <div style={{ position: "relative" }}>
               <UceTopMachine />
@@ -706,7 +726,9 @@ const page = () => {
           </Col>
         </Row>
       </div>
+</div>
 
+<div className="section-spacing">
       <Container>
         <h2
           className="text-center"
@@ -780,11 +802,62 @@ const page = () => {
           </div>
         </div>
       </Container>
-       
-       <br/>
-       <br/>
+  </div>     
 
-      <div>
+
+
+
+  <div className="section-spacing">
+      <Container>
+        <Row className="water-outlet">
+
+          <Col xs={12} md={6}>
+            <div
+              style={{ width: "100%", height: "auto", position: "relative" }}
+            >
+              <Image
+                src={machine}
+                alt="uce iamge"
+                layout="responsive"
+                priority
+              />
+              <div style={{ position: "absolute", top: "30%", left: "42%" }}>
+                <div style={{ width: "70%" }}>
+                  <UceTopMachine />
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col
+            xs={12}
+            md={6}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <div>
+              
+              <h2 className="m-2">
+                <b>Independently separated water outlet.</b>
+              </h2>
+              <p className="m-2">
+              Tyent’s independently separated water outlets for alkaline and acidic water ensure safety and convenience. This innovative design provides dedicated outlets, making it easier and safer to access the right water type for your needs.
+              </p>
+              <p className="m-2">
+                Equipped with 9 Japanese solid hybrid mesh plates/electrodes
+                from Permelac, Japan (since 1969), made of titanium and coated
+                in platinum for 99.9% purity, Offering seven different water
+                levels, it generates selective antioxidant-rich molecular
+                hydrogen up to 1800 PPB and -ORP up to -1050. Backed by a 3-year
+                machine warranty, a 15-years plates/electrode warranty, and a
+                45+ year lifespan.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      </div>
+
+      
+  <div className="section-spacing">
         <Image
           src={ucecableimage}
           alt="uce cable explain"
@@ -793,7 +866,78 @@ const page = () => {
         />
       </div>
 
+
+      <div className="section-spacing">
+      <Container>
+        <Row className="water-outlet">
+
+          <Col xs={12} md={6}>
+            <div
+              style={{ width: "100%", height: "auto", position: "relative" }}
+            >
+              <Image
+                src={machine}
+                alt="uce iamge"
+                layout="responsive"
+                priority
+              />
+              <div style={{ position: "absolute", top: "30%", left: "42%" }}>
+                <div style={{ width: "70%" }}>
+                  <UceTopMachine />
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col
+            xs={12}
+            md={6}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <div>
+              <h2 style={{fontWeight:500}}><b>SMART</b> safety Diagnosis function</h2>
+
+              <h4 className="m-2 mt-4">
+                <b>Automatic Stop Function</b>
+              </h4>
+              
+              <p className="m-2">
+              The water outflow automatically stops to prevent overflow or flooding. No waiting is required - simply resume use immediately after the unit shuts off for added safety and convenience.
+              </p>
+              <h4 className="m-2 mt-4">
+                <b>Temperature sensor</b>
+              </h4>
+              
+              <p className="m-2">
+              The unit features a temperature sensor that prevents accidental hot water inflow, ensuring safety and protection.
+              </p>
+              <h4 className="m-2 mt-4">
+                <b>Sensing function of supplied raw water</b>
+              </h4>
+              
+              <p className="m-2">
+              The unit automatically stops functional water outflow when raw water is unavailable, protecting the electrolytic cell and power supply from damage, preventing water waste, and avoiding accidental leaks.
+              </p>
+              <h4 className="m-2 mt-4">
+                <b>Detects if filter door is open</b>
+              </h4>
+              
+              <p className="m-2">
+              The water supply automatically stops when the door is open, ensuring your safety.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      </div>
+
+
+      <div className="section-spacing">
       <OneTouchUceDisplay />
+      </div>
+
+
+
+      
 
       <Container>
         <h2
@@ -837,9 +981,12 @@ const page = () => {
           </tbody>
         </Table>
 
+        <div className="section-spacing">
         <Certifications />
-        <br />
-        <br />
+        </div>
+        <div className="section-spacing">
+          <Filter />
+        </div>
       </Container>
     </div>
   );
