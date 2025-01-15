@@ -10,6 +10,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 const Display = ({ displayColor, phValues }) => {
   const svgRef = useRef(null);
 
+
   useEffect(() => {
     const svgElement = svgRef.current;
 
@@ -34,11 +35,11 @@ const Display = ({ displayColor, phValues }) => {
       displayColour.style.fill = displayColor;
       textColorElement.style.fill = displayColor;
 
-      dataDisplay.style.opacity = 1;
-      textDisplay.style.opacity = 1;
+      // Ensure #dataDisplay is hidden only for color #797A83
+      dataDisplay.style.display = displayColor === "#797A83" ? "none" : "block";
 
-      // Use the provided phValues or default to "ER"
-      textDisplay.textContent = phValues || "ER";
+      textDisplay.style.opacity = 1;
+      textDisplay.textContent = phValues || "ER"; // Use provided phValues or default to "ER"
 
       return; // Skip animation logic
     }
@@ -69,59 +70,53 @@ const Display = ({ displayColor, phValues }) => {
       "12:33", // Gray
     ];
 
-    const timeline = gsap.timeline({
-      repeat: -1,
-      repeatDelay,
-    });
+    // Animation starts after 6 seconds delay
+    setTimeout(() => {
+      const timeline = gsap.timeline({
+        repeat: -1,
+        repeatDelay,
+      });
 
-    colors.forEach((color, index) => {
-      timeline.to(
-        [displayColour, textColorElement],
-        {
-          fill: color,
-          duration: durationPerStep,
-          ease: "power4.out",
-          onStart: () => {
-            if (index === 0) {
-              gsap.to(dataDisplay, {
+      colors.forEach((color, index) => {
+        timeline.to(
+          [displayColour, textColorElement],
+          {
+            fill: color,
+            duration: durationPerStep,
+            ease: "power4.out",
+            onStart: () => {
+              // Toggle #dataDisplay visibility
+              if (color === "#797A83") {
+                dataDisplay.style.display = "none"; // Hide only for #797A83
+              } else {
+                dataDisplay.style.display = "block"; // Show for all other colors
+              }
+
+              const value = animationPhValues[index % animationPhValues.length];
+              textDisplay.textContent = value;
+
+              gsap.to(textDisplay, {
                 opacity: 1,
                 duration: 1,
-                ease: "power4.inOut",
+                ease: "power4.out",
               });
-            }
-
-            const value = animationPhValues[index % animationPhValues.length];
-            textDisplay.textContent = value;
-
-            gsap.to(textDisplay, {
-              opacity: 1,
-              duration: 1,
-              ease: "power4.out",
-            });
-          },
-          onComplete: () => {
-            if (index === colors.length - 1) {
-              gsap.to(dataDisplay, {
+            },
+            onComplete: () => {
+              gsap.to(textDisplay, {
                 opacity: 0,
                 duration: 1,
                 ease: "power4.inOut",
               });
-            }
-
-            gsap.to(textDisplay, {
-              opacity: 0,
-              duration: 1,
-              ease: "power4.inOut",
-            });
+            },
           },
-        },
-        index * durationPerStep
-      );
-    });
+          index * durationPerStep
+        );
+      });
 
-    return () => {
-      timeline.kill();
-    };
+      return () => {
+        timeline.kill();
+      };
+    }, 6000); // Start animation after 6 seconds delay
   }, [displayColor, phValues]);
 
 
@@ -132,7 +127,7 @@ const Display = ({ displayColor, phValues }) => {
         width="100%"
         height="auto"
         ref={svgRef}
-        viewBox="0 0 660 497"
+        viewBox="0 0 128 197"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -141,13 +136,13 @@ const Display = ({ displayColor, phValues }) => {
               <rect
                 x="17.6172"
                 y="17.2617"
-                width="393.8077"
-                height="458.885"
+               width="93.8077"
+               height="158.885"
                 id="displayColour"
                 fill="red"
               />
               
-              <g  id="allData" transform="translate(285, 0)">
+              <g  id="allData">
               <g id="dataDisplay">
               <rect
                 x="22.4531"
