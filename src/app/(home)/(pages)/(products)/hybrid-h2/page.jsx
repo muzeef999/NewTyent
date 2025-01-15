@@ -617,6 +617,58 @@ const page = () => {
         </Row>
       </div>
 
+
+      
+      <Container>
+        <h2
+          className="text-center mb-4"
+          style={{
+            color: "#000",
+            fontWeight: "600",
+            fontSize: "2rem", // Default for large screens
+          }}
+        >
+          Tyent UCE-9 plus Specification's
+        </h2>
+
+        <Table className="custom-table" hover responsive>
+          <tbody>
+            {specifications.map((item, idx) => (
+              <tr key={idx}>
+                <td
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "16px",
+                    color: "#000",
+                    textAlign: "left",
+                    padding: "10px",
+                  }}
+                >
+                  {item.label}
+                </td>
+                <td
+                  style={{
+                    fontSize: "16px",
+                    color: "#333",
+                    textAlign: "left",
+                    padding: "10px",
+                  }}
+                >
+                  : {item.name}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+
+        <div className="section-spacing">
+        <Certifications />
+        </div>
+        <div className="section-spacing">
+          <Filter />
+        </div>
+      </Container>
+
     </div>
   );
 };
