@@ -90,7 +90,7 @@ const Home = () => {
       <div className="section-spacing">
         <SectionTwo />
       </div>
-
+ 
       <div className="section-spacing">
         <Container>
           <Row className="align-items-center">
@@ -173,6 +173,7 @@ const Home = () => {
         </Container>
       </div>
 
+      <div className="section-spacing">
       <p
         className="text-center"
         style={{
@@ -193,6 +194,9 @@ const Home = () => {
       </p>
 
       <TyentvsKAngan />
+
+
+      </div>
 
       <Certifications />
       <h1

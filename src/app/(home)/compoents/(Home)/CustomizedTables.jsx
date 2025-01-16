@@ -1,8 +1,12 @@
 import React from 'react';
-import { Table, Container } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 import "@/app/style/AppBar.css"
+import Image from 'next/image';
+import tyent from "@/asserts/tyent.png";
+import  kangen  from "@/asserts/kangen.png"
+
 
 function CustomizedTables() {
   // Table data
@@ -117,8 +121,21 @@ function CustomizedTables() {
         <tbody>
           <tr>
                  <td><p>Descrpition</p></td>
-                 <td colSpan={2}><p>tyent</p></td>
-                 <td style={{backgroundColor:'#f6f6f6'}} colSpan={2}><p>kagan</p></td>
+                 <td colSpan={2}>
+                  <center>
+                  <div style={{width:'50%'}}>
+                   <Image src={tyent} alt="tyent" layout='responsive' priority />
+                  </div>
+                  </center>
+                 </td>
+                 <td colSpan={2}>
+                  <center>
+                  <div style={{width:'50%'}}>
+                  <Image src={kangen} alt="tyent" layout='responsive' priority />
+                  </div>
+                  </center>
+                 </td>
+                 
           </tr>
           {rows.map((row, index) => (
             <tr  key={index}>
