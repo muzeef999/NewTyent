@@ -809,8 +809,10 @@ const page = () => {
               </p>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={6} className="d-flex justify-content-end align-items-center">
+          <div style={{width:'80%', height:'auto'}}>
             <DisplayPatter />
+            </div>
           </Col>
         </Row>
       </div>
