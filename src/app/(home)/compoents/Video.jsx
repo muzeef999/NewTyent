@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { FaPlay, FaStop } from "react-icons/fa6";
+import RWebShareComp from './RWebShare';
 
 const videos = [
   {
@@ -23,17 +23,7 @@ const videos = [
 
 const VideoCard = ({ src, description }) => {
   const iframeRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlayStop = () => {
-    if (isPlaying) {
-      iframeRef.current.src = src; // Reset the iframe source
-      setIsPlaying(false);
-    } else {
-      iframeRef.current.src = `${src}&autoplay=1`; // Add autoplay parameter
-      setIsPlaying(true);
-    }
-  };
+  
 
   return (
     <div>
@@ -46,7 +36,7 @@ const VideoCard = ({ src, description }) => {
           ref={iframeRef}
           className="embed-responsive-item"
           src={src}
-          style={{ borderRadius: "8px", width: "100%", height: "220px" }}
+          style={{ borderRadius: "18px", width: "100%", height: "220px" }}
           allowFullScreen
           title="Video"
         />
@@ -55,19 +45,7 @@ const VideoCard = ({ src, description }) => {
         <h6 className="text-start" style={{ flexGrow: 1 }}>
           {description}
         </h6>
-        <button
-          onClick={togglePlayStop}
-          style={{
-            backgroundColor: isPlaying ? '#FF4B5C' : '#008ac7',
-            width: '50px',
-            height: '40px',
-            borderRadius: '50%',
-            border: 'none',
-            color: "#FFF",
-          }}
-        >
-          {isPlaying ? <FaStop size={20} /> : <FaPlay size={20} />}
-        </button>
+        <RWebShareComp text={description} link={src} />
       </div>
     </div>
     </div>

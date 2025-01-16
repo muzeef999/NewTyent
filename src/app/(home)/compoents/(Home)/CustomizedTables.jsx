@@ -6,6 +6,7 @@ import "@/app/style/AppBar.css"
 import Image from 'next/image';
 import tyent from "@/asserts/tyent.png";
 import  kangen  from "@/asserts/kangen.png"
+import vs from "@/asserts/vs.png";
 
 
 function CustomizedTables() {
@@ -120,7 +121,13 @@ function CustomizedTables() {
        
         <tbody>
           <tr>
-                 <td><p>Descrpition</p></td>
+                 <td>
+                 <center>
+                  <div style={{width:'50%'}}>
+                   <Image src={vs} alt="tyent" layout='responsive' priority />
+                  </div>
+                  </center>
+                 </td>
                  <td colSpan={2}>
                   <center>
                   <div style={{width:'50%'}}>

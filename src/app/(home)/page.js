@@ -192,13 +192,16 @@ const Home = () => {
         </span>{" "}
         <span style={{ color: "#7B7B7B" }}>Kangen</span>
       </p>
-
       <TyentvsKAngan />
-
-
       </div>
 
+
+      <div className="section-spacing">
       <Certifications />
+       </div>
+
+       <div className="section-spacing">
+
       <h1
         className="text-center"
         style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
@@ -206,6 +209,8 @@ const Home = () => {
         Technical excellence with global availability
       </h1>
       <Video />
+      </div>
+
       <h1
         className="text-center"
         style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}

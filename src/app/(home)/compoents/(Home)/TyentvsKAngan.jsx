@@ -13,7 +13,7 @@ const TyentvsKAngan = () => {
           id="uncontrolled-tab-example" className="m-0 p-0"
           style={{margin:'0px !imortant', padding: '0px !important'}}
         >
-          <Tab eventKey="home" className="tabcontentdesign" title="Technical Comparison">
+          <Tab eventKey="home" className="tabcontentdesign" title="Technical Overview">
             <CustomizedTables />
           </Tab>
           <Tab eventKey="profile" className="tabcontentdesign"  title="Detail Comparison">
