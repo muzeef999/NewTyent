@@ -350,9 +350,21 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
     margin: 2px;
   }
 
+  .sectiontwo {
+    width: 95%;
+  }
+  
+  @media (min-width: 992px) { /* Large screens (LG) and above */
+    .sectiontwo {
+      width: 80%;
+    }
+  }
+
   .big-number {
     font-family: 'HalenoirEx', 'Poppins';
     font-size: 110px; 
+    transform: scaleY(1.2); /* Stretch vertically by 2x */
+
   }
 
   .nav-tabs .nav-item {

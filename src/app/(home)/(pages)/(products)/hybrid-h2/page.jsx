@@ -15,8 +15,8 @@ import hybridDisplay from "@/asserts/hybrid/hybridDisplay.webp";
 import h2jogdaily from "@/asserts/hybrid/h2jog.png";
 import cellplate from "@/asserts/hybrid/cellplates.png"
 import waterflow from "@/asserts/hybrid/pro_04.png"
-import Touchpreview from "@/app/(home)/compoents/(products)/Touchpreview";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
+import HybridTouchPreview from "./HybridTouchPreview";
 
 const page = () => {
   const products = [
@@ -872,7 +872,7 @@ const page = () => {
       
         <div className="section-spacing">
           <Container>
-          <Touchpreview />
+          <HybridTouchPreview />
           </Container>
         </div>
 
