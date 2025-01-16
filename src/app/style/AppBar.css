@@ -28,7 +28,10 @@ body {
   }
 
 
- 
+  p {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  
 
 .marquee {
   display: flex;
@@ -405,15 +408,15 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }
 
 
-.whytentfont{
-  width:38px;
-  height:38px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:#c8e0eb;
-  
+.whytentfont {
+  width: 30px; /* Set the width of the circle */
+  height: 30px; /* Set the height of the circle */
+  border-radius: 50%; /* Make it circular */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 8px; /* Inner padding */
+  background-color: #c8e0eb; /* Light blue background color */
 }
 
 .custom-table thead, .custom-table tbody, .custom-table tr, .custom-table td {
@@ -597,3 +600,36 @@ background-color: transparent;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
+.explore-link {
+  display: inline-block;
+  border: 1px solid #405261;
+  padding: 8px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #405261;
+  transition: all 0.3s ease;
+}
+
+.explore-link:hover {
+  background-color: #008ac7;
+  color: #fff;
+}
+
+.custom-arrow {
+  rotate: 0deg;
+  transition: transform 0.3s ease; /* Smooth default state transition */
+}
+
+.custom-card:hover ~ .custom-arrow {
+  animation: arrow-rotate 0.6s infinite alternate;
+}
+
+/* Keyframes for Arrow Rotation */
+@keyframes arrow-rotate {
+  0% {
+    rotate: -20deg;
+  }
+  100% {
+    rotate: 20deg;
+  }
+}

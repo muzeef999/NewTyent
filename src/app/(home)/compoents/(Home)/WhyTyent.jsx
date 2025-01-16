@@ -4,22 +4,30 @@ import "@/app/style/AppBar.css";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
-
 const WhyTyent = () => {
   return (
     <section className="container py-5">
       <Row className="align-items-center">
         {/* Left Section */}
         <Col md={6} className="mb-4 justify-content-top">
-        <h2  style={{ fontSize: '42px', fontWeight: '500', margin:'0px' }}>
-            Why <span style={{ color: '#008AC7', fontWeight: '600', fontSize: '72px' }}>Tyent ?</span>
+          <h2 style={{ fontSize: "40px", fontWeight: "500"}}>
+            Why
+            <span
+              style={{ color: "#008AC7", fontWeight: "600", fontSize: "70px" }}
+            >
+              Tyent ?
+            </span>
           </h2>
           <p>
-            With over three decades of expertise, Tyent delivers the most advanced, slim, and sleek water ionizers with updated Japanese technology, available in{" "}
-            <span className="highlight">86+ countries</span> and renowned for exceptional customer satisfaction worldwide.
+            With over three decades of expertise, Tyent delivers the most
+            advanced, slim, and sleek water ionizers with updated Japanese
+            technology, available in{" "}
+            <span className="highlight">86+ countries</span> and renowned for
+            exceptional customer satisfaction worldwide.
           </p>
-          <div className="video-wrapper mt-4" style={{borderRadius:'20px'}}>
-            <iframe style={{borderRadius:'20px'}}
+          <div className="video-wrapper mt-4" style={{ borderRadius: "20px" }}>
+            <iframe
+              style={{ borderRadius: "20px" }}
               width="100%"
               height="295"
               src="https://www.youtube.com/embed/VA82Xf6jfv4?rel=0"
@@ -52,26 +60,35 @@ const WhyTyent = () => {
                 "Tyent water ionizers are available at affordable prices, offering 100% transparency and doorstep service to ensure maximum customer satisfaction and unwavering brand trust.",
             },
           ].map((item, index) => (
-            <Row key={index} className="align-items-start">
-               <Col xs={1} className="text-center">
-              <div className="whytentfont">
-                <SiTicktick size={20} color="#008AC7" />
-              </div>
-            </Col>
-            <Col xs={11} >
+            <div key={index} className="d-flex align-items-start gap-3">
+              
+                <div className="whytentfont">
+                  <SiTicktick size={20} color="#008AC7" />
+                </div>
+              
+
               <div>
-              <h3 className="m-0" style={{ fontWeight: '700', color: '#008AC7' }}>Affordable and Transparent</h3>
-              <p style={{ fontSize: '20px' }}>
-                Tyent water ionizers are available at affordable prices, offering 100% transparency and doorstep service to ensure maximum customer satisfaction and unwavering
-                brand trust.
-              </p>
+                <h3
+                  className="m-0"
+                  style={{ fontWeight: "700", color: "#008AC7" }}
+                >
+                  {item.title}
+                </h3>
+                <p>
+                  {item.description}
+                </p>
               </div>
-            </Col>
-            </Row>
+            </div>
           ))}
-             <Link style={{textDecoration:'none', color:'#565959'}} className='d-flex justify-content-end' href={"/why-tyent"}>View All &nbsp; <FaArrowRight/></Link>
-     
+          
         </Col>
+        <Link
+            style={{ textDecoration: "none", color: "#565959" }}
+            className="d-flex justify-content-end"
+            href={"/why-tyent"}
+          >
+            View All &nbsp; <FaArrowRight />
+          </Link>
       </Row>
     </section>
   );

@@ -28,24 +28,8 @@ const SectionTwo = () => {
             <h3 style={{ color: "#008AC7" }}>
               <b>1,000,000+ Users </b>
             </h3>
-            <Link
-              href={"/why-tyent"}
-              style={{
-                textDecoration: "none",
-                cursor: "pointer",
-                color: "#405261",
-              }}
-            >
-              <p
-                style={{
-                  border: "1px solid #405261",
-                  display: "inline-block",
-                  padding: "5px 10px",
-                  borderRadius: "50px",
-                }}
-              >
-                Explore the <span style={{ color: "#008AC7" }}>Tyent.</span>
-              </p>
+            <Link href="/why-tyent" className="explore-link">
+              Explore the Tyent.
             </Link>
           </div>
         </Col>

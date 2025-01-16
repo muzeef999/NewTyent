@@ -137,7 +137,7 @@ const Home = () => {
             >
               <div style={{ padding: "60px" }}>
                 <h2 style={{ fontWeight: 600 }}>Why Tyent ?</h2>
-                <p style={{ fontSize: "18px" }}>
+                <p>
                   Tyent, a medical-grade water ionizer manufactured by TAEYOUNG
                   E&T, is available in 86+ countries. Since more than 3 decades
                   Tyent is known for its advanced Japanese technology, Tyent
@@ -159,7 +159,7 @@ const Home = () => {
             >
               <div style={{ padding: "60px" }}>
                 <h2 style={{ fontWeight: 600 }}>What is Kangen ?</h2>
-                <p style={{ fontSize: "18px" }}>
+                <p >
                   Kangen, a medical-grade water ionizer manufactured by Enagic &
                   Co, is available in 26+ countries., relies on an MLM business
                   model, doubling prices as 49% of costs go to commissions for
