@@ -13,6 +13,10 @@ import Certifications from "@/app/(home)/compoents/Certifications";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import hybridDisplay from "@/asserts/hybrid/hybridDisplay.webp";
 import h2jogdaily from "@/asserts/hybrid/h2jog.png";
+import cellplate from "@/asserts/hybrid/cellplates.png"
+import waterflow from "@/asserts/hybrid/pro_04.png"
+import Touchpreview from "@/app/(home)/compoents/(products)/Touchpreview";
+import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 
 const page = () => {
   const products = [
@@ -86,6 +90,7 @@ const page = () => {
       name: "Taeyoung E&T Co., Ltd, 908 Ungsang-daero, Yangsan-si, Gyeongsangnam-do, Korea - 50537",
     },
   ];
+
   return (
     <div className="hybridbackground">
       <Container>
@@ -793,8 +798,8 @@ const page = () => {
         </Container>
       </div>
 
-      <div className="section-spacing">
-        <Row style={{ backgroundColor: "#FFF" }}>
+      <div className="section-spacing" style={{ backgroundColor: "#FFF" }}>
+        <Row>
           <Col
             md={6}
             className="d-flex justify-content-center align-items-center"
@@ -817,6 +822,62 @@ const page = () => {
         </Row>
       </div>
 
+ 
+      <div className="section-spacing">
+        <Container>
+          <OneTouchDispaly />
+          </Container>
+        </div>
+
+     
+
+      <div className="section-spacing">
+
+    <Container>
+      <Row>
+        <Col md={8} className="d-flex justify-content-center align-items-center">
+         <div>
+          <h2><b>The specially developed HYBRID water cell</b></h2>
+          <p>Technology Patent [10-2017-00903670] PCT International patent application [PCT/KR2017/011890]</p>
+          <p>{"Tyent's H2-Hybrid is a revolutionary innovation featuring patented dual electrolysis chambers. The first chamber, controlled by a one-touch display, produces 7 types of hydrogen-rich alkaline water with pH levels ranging from 11.5 to 2.5. The second chamber, equipped with advanced PEM (Proton Exchange Membrane) technology and operated via a jog dial, delivers water rich in selective antioxidant molecular hydrogen at a neutral pH without alkalinity."}</p>
+         <p>{"The H2-Hybrid is the world’s only black box edition with patented twin-cell technology, offering unlimited access to ideal water for the entire family."}</p>
+        
+         </div>
+        </Col>
+        <Col md={4} className="d-flex justify-content-center align-items-center">
+         <div style={{width:'50%', height:'auto'}}>
+          <Image src={cellplate} alt="cell plate" layout="responsive" priority  style={{
+      filter: 'drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5))', // Shadow effect
+    }} />
+         </div>
+        </Col>
+      </Row>
+    </Container>
+
+      </div>
+
+
+      <div className="section-spacing">
+        <Container> 
+          <div>
+            <h2 className="text-center"><b>Automatic flow switching ensures safe cleaning <br/> function</b></h2>
+            <p className="text-center">This feature helps to provide you a healthier and more effective functional water by keeping the water cell clean at all times. <br/> Not only does it provide more effective functional water, it also proactively prevents scale in the water cell and extends its <br/>lifespan.</p>
+            <div style={{width:'100%', height:'auto'}}>
+              <Image src={waterflow} alt="water flow" layout="responsive" responsive />
+            </div>
+          </div>
+
+        </Container>
+        </div>
+      
+        <div className="section-spacing">
+          <Container>
+          <Touchpreview />
+          </Container>
+        </div>
+
+
+     
       <Container>
         <h2
           className="text-center mb-4"
@@ -826,7 +887,7 @@ const page = () => {
             fontSize: "2rem", // Default for large screens
           }}
         >
-          Tyent UCE-9 plus Specification's
+          Tyent H2-Hybrid Specification's
         </h2>
 
         <Table className="custom-table" hover responsive>
