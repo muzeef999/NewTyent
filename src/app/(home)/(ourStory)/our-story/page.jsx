@@ -12,9 +12,10 @@ import Management from '../../compoents/(story)/Management';
 const page = () => {
   return (
     <div>
+      
+      <div className="section-spacing">
       <div className='container'>
-        <br/>
-        <br/>
+        
       <Row>
         {/* Left Column: Image */}
         <Col md={6} className='d-flex justify-content-center align-items-center'>
@@ -51,17 +52,24 @@ const page = () => {
               ensuring unparalleled service and satisfaction.
             </p>
             <br/>
-            <Vision />
+           
           </div>
         </Col>
       </Row>
 
       </div>
+      </div>
+
+      <div className="section-spacing">
+      <Vision />
+      </div>
     
+      <div className="section-spacing">
       <Mission />
+      </div>
+      <div className="section-spacing">
       <Management/>
-      <br/>
-      <Form />
+      </div>
     </div>
   )
 }

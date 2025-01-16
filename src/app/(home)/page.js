@@ -201,7 +201,6 @@ const Home = () => {
        </div>
 
        <div className="section-spacing">
-
       <h1
         className="text-center"
         style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
@@ -211,6 +210,8 @@ const Home = () => {
       <Video />
       </div>
 
+
+      <div className="section-spacing">
       <h1
         className="text-center"
         style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
@@ -218,9 +219,14 @@ const Home = () => {
         {" "}
         Our Valued Clients
       </h1>
+      
       <SlickSlider />
+      </div>
+      
+      <div className="section-spacing">
       <Maps />
-      <ContactSection />
+      </div>
+     
     </div>
   );
 };

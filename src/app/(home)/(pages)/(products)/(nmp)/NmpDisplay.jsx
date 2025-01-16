@@ -104,8 +104,9 @@ const NmpDisplay = () => {
           Easy To Use One Touch Display
         </h2>
         <p style={{ fontSize: "15.5px", fontWeight: 500 }}>
-          Each function has distinct icons, and you can start or stop the <br />{" "}
-          desired water with one touch.
+        Tyent water ionizers offer a user-friendly one-touch display with clear icons,<br/>
+        making it easy to select and activate your desired water type effortlessly for<br/>
+        convenient, customizable hydration.
         </p>
         <p>To Know How To Use</p>
         <Link className={"appbardemo"} style={{textDecoration:'none'}}  href={"/7-types-of-Tyent-water"}>

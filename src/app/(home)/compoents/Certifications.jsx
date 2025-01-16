@@ -6,6 +6,7 @@ import icon3 from "@/asserts/certifications/3.png";
 import icon4 from "@/asserts/certifications/4.png";
 import icon5 from "@/asserts/certifications/5.png";
 import icon6 from "@/asserts/certifications/6.png";
+import waterQuality from "@/asserts/certifications/waterQuality.png"
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -29,7 +30,7 @@ const Certifications = () => {
         </center>
         <center>
           <div className="row justify-content-center">
-            {[icon1, icon2, icon3, icon4, icon5, icon6].map((icon, index) => (
+            {[icon1, icon2, icon3,waterQuality, icon4, icon5].map((icon, index) => (
               <div
                 key={index}
                 className="col-6 col-sm-4 col-md-2 mb-3 d-flex justify-content-center"

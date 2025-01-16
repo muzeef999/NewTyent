@@ -1,106 +1,170 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import datamap from "@/asserts/map.png"
-import Image from 'next/image'
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import Image from "next/image";
+import logo from "@/asserts/logo.png";
+import "@/app/style/Story.css";
+import { PiPlantLight } from "react-icons/pi";
+import { IoHappyOutline } from "react-icons/io5";
+import { PiWifiNoneDuotone } from "react-icons/pi";
+import { MdOutlineTouchApp } from "react-icons/md";
 
-const page = () => {
+
+const KeyFactCard = ({ value, title, description }) => {
+  return (
+    <Col md={3} className="text-center">
+      <h3>{value}</h3>
+      <p>{title}</p>
+      <p>{description}</p>
+    </Col>
+  );
+};
+
+
+const CoreValueCard = ({ icon: Icon, title, description }) => {
+  return (
+    
+      <div className="d-flex align-items-center">
+        <div className="global-point">
+          <Icon size={32}  />
+        </div>
+        <div className="m-2 d-flex justify-content-center align-items-center">
+          <div>
+          <h5 className="mt-3" style={{color:'#008AC7'}}><b>{title}</b></h5>
+          <p>{description}</p>
+          </div>
+        </div>
+      </div>
+    
+  );
+};
+
+
+const Page = () => {
   return (
     <div>
-       <section>
-
-<Row>
-  <Col md={6}>
-  <div>
-    <h3>Who we are</h3>
-  </div>
-  </Col>
-  <Col md={6}>
-  <div style={{width:'100%'}}>
-    <Image className='rotate-360' src={datamap} alt="googlemap"  layout='responsive' priority />
-  </div>
-  </Col>
-</Row>
-
-        <Container>
-          <Row className="text-center">
-            <h2>Global Presence</h2>
-            <p>We are present across multiple continents.</p>
-            <img src="/map.png" alt="Global Map" className="img-fluid" />
-          </Row>
-        </Container>
-      </section>
+      {/* Who We Are Section */}
+      <Container>
+        <Row className="text-center">
+          <h2>Who We Are</h2>
+          <center>
+            <div style={{width:'20%', height:'auto'}}>
+              <Image src={logo} alt="logo" layout="responsive" priority />
+            </div>
+          </center>
+        </Row>
+      </Container>
 
       {/* Core Values */}
-      <section className="py-5 bg-white">
-        <Container>
-          <h2 className="text-center mb-4">Core Values</h2>
-          <Row>
-            <Col md={6}>
-              <p><strong>Our Management Value:</strong> Nature and environment focused.</p>
-              <p><strong>Be Happy:</strong> Products designed to bring health and happiness.</p>
-              <p><strong>Fair & Transparent:</strong> Ensuring fair practices across the company.</p>
-              <p><strong>Customer Satisfaction:</strong> Driving satisfaction and loyalty.</p>
-            </Col>
-            <Col md={6} className="text-center">
-              <img src="/product-1.png" alt="Product" className="img-fluid rounded" />
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Container>
+        <Row>
+          <Col md={8}>
+            <h2><b>Core Values</b></h2>
+            <p className="section-description">
+              Right from helping you understand the latest procedures to when
+              you get discharged, Medfin will assist you every step of the way.
+            </p>
+            <CoreValueCard
+              icon={PiPlantLight}
+              title="Our Management value is considered nature and environment"
+              description="Nature cycle is the most important for our products."
+            />
+            <CoreValueCard
+              icon={IoHappyOutline}
+              title="Be happy? More happy!"
+              description="Our products make people more healthy and happier."
+            />
+            <CoreValueCard
+              icon={PiWifiNoneDuotone}
+              title="We are Fair and Transparent"
+              description="We make fair and transparent culture in the company."
+            />
+            <CoreValueCard
+              icon={MdOutlineTouchApp}
+              title="Our mission is 'customer satisfaction'"
+              description="We create value for customers and conduct customer satisfaction."
+            />
+          </Col>
+          <Col md={4} className="text-center">
+            <img
+              src="/product-1.png"
+              alt="Product"
+              className="img-fluid rounded"
+            />
+          </Col>
+        </Row>
+      </Container>
 
       {/* Core Strategy */}
-      <section className="py-5 bg-dark text-white">
-        <Container>
-          <h2 className="text-center mb-4">Core Strategy</h2>
-          <Row>
-            <Col md={6}>
-              <h4>Strategy for Growth</h4>
-              <ul>
-                <li>Continuous investment in R&D</li>
-                <li>Expanding export competitiveness</li>
-                <li>Development of future business</li>
-                <li>Establishment of abroad corporations</li>
-              </ul>
-            </Col>
-            <Col md={6}>
-              <h4>Strategy for Competitiveness Enhancement</h4>
-              <ul>
-                <li>Customer-oriented marketing</li>
-                <li>Improving brand awareness</li>
-                <li>Globalization of technology</li>
-                <li>Improving brand value</li>
-              </ul>
-            </Col>
-          </Row>
+      <div style={{backgroundColor:'#F8F8F8'}}>
+      <Container>
+        <div className="m-4">
+        <h2 className="text-center mb-6"><b>Core Strategy</b></h2>
+        <Row >
+          <Col md={6}>
+            <h4><b>Strategy for Growth</b></h4>
+            <ul>
+              <li>Continuous investment in R&D</li>
+              <li>Expanding export competitiveness</li>
+              <li>Development of future business</li>
+              <li>Establishment of abroad corporations</li>
+            </ul>
+          </Col>
+          <Col md={6}>
+           
+          </Col>
+        </Row>
+        </div>
         </Container>
-      </section>
+        </div>
+
+      <div style={{backgroundColor:'#111827', color:'#FFF'}}>
+        <Container>
+          <div className="m-6">
+        <Row >
+          <Col md={6}></Col>
+          <Col md={6}>
+          <h4><b>Strategy for Competitiveness Enhancement</b></h4>
+            <ul>
+              <li>Customer-oriented marketing</li>
+              <li>Improving brand awareness</li>
+              <li>Globalization of technology</li>
+              <li>Improving brand value</li>
+            </ul>
+          </Col>
+        </Row>
+        </div>
+        </Container>
+        </div>
+      
 
       {/* Key Facts */}
-      <section className="py-5 bg-light">
-        <Container>
-          <h2 className="text-center mb-4">Key Facts</h2>
-          <Row>
-            <Col md={3} className="text-center">
-              <h3>86+</h3>
-              <p>Global Presence</p>
-            </Col>
-            <Col md={3} className="text-center">
-              <h3>160+</h3>
-              <p>Technology Patents</p>
-            </Col>
-            <Col md={3} className="text-center">
-              <h3>29+</h3>
-              <p>Years of R&D</p>
-            </Col>
-            <Col md={3} className="text-center">
-              <h3>15</h3>
-              <p>Years Warranty</p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Container>
+  <h2 className="text-center mb-4">Key Facts</h2>
+  <Row>
+    <KeyFactCard
+      value="86+"
+      title="Global Presence"
+      description="To provide innovative water solutions that improve the health and well-being of individuals and families across India."
+    />
+    <KeyFactCard
+      value="160+"
+      title="Technology Patents"
+      description="Tyent holds 160+ technology patents, showcasing its commitment to groundbreaking advancements in water ionization."
+    />
+    <KeyFactCard
+      value="29+"
+      title="Years of R&D"
+      description="Over 29 years of cutting-edge research and development delivering innovative water solutions globally."
+    />
+    <KeyFactCard
+      value="15"
+      title="Years Warranty"
+      description="Recipient of prestigious design awards, blending innovation and aesthetics for advanced, luxury water ionizers worldwide."
+    />
+  </Row>
+</Container>;
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

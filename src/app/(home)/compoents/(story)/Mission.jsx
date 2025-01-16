@@ -1,9 +1,7 @@
 "use client"
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap';
-import { FaDroplet } from 'react-icons/fa6';
 import animationData from '@/asserts/icons/Business Goal.json'; 
-import Lottie from 'react-lottie';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/all";
@@ -31,11 +29,6 @@ const Mission = () => {
       ]; 
 
 
-      const defaultOptions = {
-        loop: true, // You can set loop: true for continuous loop
-        autoplay: true, // Start automatically
-        animationData: animationData, // Import the JSON animation data
-      };
 
 
 
@@ -84,7 +77,6 @@ const Mission = () => {
 <div className='container'>
 <center>
   <div>
-  <Lottie options={defaultOptions} width={100} height={100} style={{display: 'inline-block', verticalAlign: 'middle'}} />
   <h1 className='text-center' style={{ color: '#008AC7', fontWeight: '600',margin:'0', display: 'inline-block', verticalAlign:'middle',}}>
       Mission
   </h1>  

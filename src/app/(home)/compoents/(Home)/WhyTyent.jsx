@@ -10,7 +10,7 @@ const WhyTyent = () => {
       <Row className="align-items-center">
         {/* Left Section */}
         <Col md={6} className="mb-4 justify-content-top">
-          <h2 style={{ fontSize: "40px", fontWeight: "500"}}>
+          <h2 className="m-0" style={{ fontSize: "40px", fontWeight: "500"}}>
             Why
             <span
               style={{ color: "#008AC7", fontWeight: "600", fontSize: "70px" }}
@@ -18,6 +18,7 @@ const WhyTyent = () => {
               Tyent ?
             </span>
           </h2>
+          <br/>
           <p>
             With over three decades of expertise, Tyent delivers the most
             advanced, slim, and sleek water ionizers with updated Japanese

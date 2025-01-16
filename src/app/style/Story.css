@@ -1,0 +1,25 @@
+.global-point {
+    width: 60px;
+    height: 60px;
+    background-color: #008ac7; /* Blue background */
+    border-radius: 50%; /* Makes it circular */
+    color: #fff; /* White icon color */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .d-flex {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      gap: 10px; /* Space between stacked elements */
+      text-align: center; /* Center-align text */
+    }
+  
+    .global-point {
+      margin: 0 auto; /* Center the icon in the container */
+    }
+  }
+  
