@@ -65,7 +65,7 @@
 
   .custom-card-benfts {
     background-color: #f9f9f9;
-    box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
+    box-shadow: 0 0 8px 0 rgba(35, 0, 76, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
     border-radius: 20px;
     display: flex;
