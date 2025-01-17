@@ -1,3 +1,26 @@
+.backgroundplate {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  font-weight: 600;
+  background-color: #e9f1f5; /* Blue background */
+    border-radius: 50%; /* Makes it circular */
+    color: #000; /* White icon color */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+}
+
+.custom-col {
+  flex: 3 0 20%;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
 .global-point {
     width: 60px;
     height: 60px;

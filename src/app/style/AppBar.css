@@ -281,6 +281,7 @@ body {
   width: 75%; /* Width of the underline */
   height: 2px; /* Thickness of the underline */
   background-color: #008AC7; /* Color of the underline */
+ 
 }
 
 .navbar-toggler-icon {

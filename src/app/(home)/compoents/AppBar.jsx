@@ -215,34 +215,42 @@ const handleSubmenuLeave = () => {
                     </Link>
                   </li>
                  
-                       <li
-                          className={`nav-item dropdown ${isAboutDropdownOpen ? "show" : ""}`}
-                          onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                          onMouseLeave={() => setIsAboutDropdownOpen(false)}
-                        >
-                          <Link
-                            href="#"
-                            className={`dropdown-toggle nav-link ${
-                              pathname === "/our-story" || pathname === "/tyent-global" ? "active" : ""
-                            }`}
-                            role="button"
-                            aria-expanded={isAboutDropdownOpen}
-                          >
-                            About Us
-                          </Link>
-                          <ul className={`dropdown-menu dropdown-menu-end ${isAboutDropdownOpen ? "show" : ""}`}>
-                            <li>
-                              <Link href="/our-story" className="dropdown-item" onClick={closeOffcanvas}>
-                                Our Story
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
-                                Tyent Global
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
+                  <li
+  className={`nav-item dropdown ${isAboutDropdownOpen ? "show" : ""}`}
+  onMouseEnter={() => setIsAboutDropdownOpen(true)}
+  onMouseLeave={() => setIsAboutDropdownOpen(false)}
+>
+  <Link
+    href="#"
+    className={`dropdown-toggle nav-link ${
+      ["/our-story", "/tyent-global"].includes(pathname) ? "active" : ""
+    }`}
+    aria-expanded={isAboutDropdownOpen}
+  >
+    About Us
+  </Link>
+  <ul className={`dropdown-menu dropdown-menu-end ${isAboutDropdownOpen ? "show" : ""}`}>
+    <li>
+      <Link
+        href="/our-story"
+        className={`dropdown-item ${pathname === "/our-story" ? "active" : ""}`}
+        onClick={closeOffcanvas}
+      >
+        Our Story
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="/tyent-global"
+        className={`dropdown-item ${pathname === "/tyent-global" ? "active" : ""}`}
+        onClick={closeOffcanvas}
+      >
+        Tyent Global
+      </Link>
+    </li>
+  </ul>
+</li>
+
 
                         <li
                           className={`d-block d-lg-none nav-item dropdown ${isProductsDropdownOpen ? "show" : ""}`}

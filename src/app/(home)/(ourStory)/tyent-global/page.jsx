@@ -7,15 +7,19 @@ import { PiPlantLight } from "react-icons/pi";
 import { IoHappyOutline } from "react-icons/io5";
 import { PiWifiNoneDuotone } from "react-icons/pi";
 import { MdOutlineTouchApp } from "react-icons/md";
+import corevalues from "@/asserts/aboutus/corevalues.png"
+import CoreStrategy from "@/asserts/aboutus/CoreStrategy.png"
 
 
 const KeyFactCard = ({ value, title, description }) => {
   return (
-    <Col md={3} className="text-center">
-      <h3>{value}</h3>
-      <p>{title}</p>
+    <div className="custom-col">
+    <Col xs={12} sm={6} md={4} lg={2} className="text-center">
+      <h3 className="backgroundplate">{value}</h3>
+      <h6>{title}</h6>
       <p>{description}</p>
     </Col>
+    </div>
   );
 };
 
@@ -85,11 +89,9 @@ const Page = () => {
             />
           </Col>
           <Col md={4} className="text-center">
-            <img
-              src="/product-1.png"
-              alt="Product"
-              className="img-fluid rounded"
-            />
+           <div style={{width:'100%', height:'auto'}}>
+            <Image src ={corevalues} alt="corevalues" layout="responsive" priority />
+           </div>
           </Col>
         </Row>
       </Container>
@@ -97,9 +99,14 @@ const Page = () => {
       {/* Core Strategy */}
       <div style={{backgroundColor:'#F8F8F8'}}>
       <Container>
-        <div className="m-4">
+        <div style={{padding:'50px'}}>
         <h2 className="text-center mb-6"><b>Core Strategy</b></h2>
         <Row >
+        <Col md={6} className="d-flex justify-content-center align-items-center">
+          <div style={{width:'60%', height:'auto'}}>
+            <Image src ={CoreStrategy} alt="corevalues" layout="responsive" priority />
+           </div>
+          </Col>
           <Col md={6}>
             <h4><b>Strategy for Growth</b></h4>
             <ul>
@@ -109,32 +116,37 @@ const Page = () => {
               <li>Establishment of abroad corporations</li>
             </ul>
           </Col>
-          <Col md={6}>
-           
-          </Col>
+          
         </Row>
         </div>
         </Container>
         </div>
 
-      <div style={{backgroundColor:'#111827', color:'#FFF'}}>
-        <Container>
-          <div className="m-6">
-        <Row >
-          <Col md={6}></Col>
-          <Col md={6}>
-          <h4><b>Strategy for Competitiveness Enhancement</b></h4>
-            <ul>
-              <li>Customer-oriented marketing</li>
-              <li>Improving brand awareness</li>
-              <li>Globalization of technology</li>
-              <li>Improving brand value</li>
-            </ul>
-          </Col>
-        </Row>
-        </div>
-        </Container>
-        </div>
+        <div style={{ backgroundColor: '#111827', color: '#FFF' }}>
+  <Container>
+    <div style={{ padding: '50px' }}> {/* Wrapper with padding */}
+      <Row>
+        <Col md={6}>
+          <h4>
+            <b>Strategy for Competitiveness Enhancement</b>
+          </h4>
+          <ul>
+            <li>Customer-oriented marketing</li>
+            <li>Improving brand awareness</li>
+            <li>Globalization of technology</li>
+            <li>Improving brand value</li>
+          </ul>
+        </Col>
+        <Col md={6} className="d-flex justify-content-center align-items-center">
+          <div style={{ width: '60%', height: 'auto' }}>
+            <Image src={CoreStrategy} alt="corevalues" layout="responsive" priority />
+          </div>
+        </Col>
+      </Row>
+    </div>
+  </Container>
+</div>
+
       
 
       {/* Key Facts */}
@@ -159,6 +171,11 @@ const Page = () => {
     <KeyFactCard
       value="15"
       title="Years Warranty"
+      description="Recipient of prestigious design awards, blending innovation and aesthetics for advanced, luxury water ionizers worldwide."
+    />
+    <KeyFactCard
+      value="26"
+      title="Design Awards"
       description="Recipient of prestigious design awards, blending innovation and aesthetics for advanced, luxury water ionizers worldwide."
     />
   </Row>

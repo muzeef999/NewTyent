@@ -157,7 +157,7 @@ const page = () => {
             <Row>
               <Col
                 md={6}
-                className="d-flex justify-content-center align-items-center"
+                className="d-flex justify-content-center align-items-center order-2 order-md-1"
               >
                 <div
                   style={{ width: "60%", height: "auto", position: "relative" }}
@@ -191,7 +191,7 @@ const page = () => {
               </Col>
               <Col
                 md={6}
-                className="d-flex justify-content-center align-items-center"
+                className="d-flex justify-content-center align-items-center order-1 order-md-2"
               >
                 <div>
                   <h2>
@@ -303,7 +303,7 @@ const page = () => {
               <Row>
                 <Col
                   md={6}
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center order-2 order-md-1"
                 >
                   <div
                     style={{
@@ -341,7 +341,7 @@ const page = () => {
                 </Col>
                 <Col
                   md={6}
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center order-1 order-md-2"
                 >
                   <div>
                     <h2>
@@ -441,7 +441,7 @@ const page = () => {
             <Row>
               <Col
                 md={6}
-                className="d-flex justify-content-center align-items-center"
+                className="d-flex justify-content-center align-items-center order-2 order-md-1"
               >
                 <div
                   style={{ width: "50%", height: "auto", position: "relative" }}
@@ -473,7 +473,7 @@ const page = () => {
               </Col>
               <Col
                 md={6}
-                className="d-flex justify-content-center align-items-center"
+                className="d-flex justify-content-center align-items-center order-1 order-md-2"
               >
                 <div>
                   <h2>
@@ -611,7 +611,7 @@ const page = () => {
               <Row>
                 <Col
                   md={6}
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center order-2 order-md-1"
                 >
                   <div
                     style={{
@@ -695,7 +695,7 @@ const page = () => {
                 </Col>
                 <Col
                   md={6}
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center order-1 order-md-2"
                 >
                   <div>
                     <h2>

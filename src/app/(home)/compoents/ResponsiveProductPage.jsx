@@ -6,12 +6,15 @@ import nmp5 from "@/asserts/NMP5.webp";
 import nmp9 from "@/asserts/NMP9.webp";
 import uce from "@/asserts/Uce.webp";
 import hybrid from "@/asserts/Hybrid.webp";
+import soap from "@/asserts/soap/soap.png"
+import bottle from "@/asserts/bottle/bottle-500ml.jpg";
+import filter from "@/asserts/filter/filter2.webp"
+import TIEN20 from "@/asserts/watergen/TIE_N20.webp"
 import "../../style/Nmp.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import soap from "@/asserts/soap/soap.png"
-import bottle from "@/asserts/bottle/bottle-500ml.jpg";
 import "@/app/style/AppBar.css"
+
 
 
 const ProductData = [
@@ -121,7 +124,7 @@ const ProductData = [
     products: [
       {
         title: "Filter",
-        image: hybrid,
+        image: filter,
         link: "/filter-1",
       },
     ],
@@ -130,8 +133,8 @@ const ProductData = [
     category: "Sterilizing water generator",
     products: [
       {
-        title: "Tyent UCE-9 Plus",
-        image:uce,
+        title: "Sterilizing-water-generator",
+        image:TIEN20,
         link:"/Sterilizing-water-generator",
       },
     ],
