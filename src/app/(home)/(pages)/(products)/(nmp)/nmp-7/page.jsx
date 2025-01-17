@@ -49,6 +49,10 @@ const TyentNMP5 = () => {
     { label: "Hydrogen Range", name: "Up to 1550 PPB*" },
     { label: "Generates", name: "7 types of water levels" },
     {
+      label: "Warranty",
+      name: "3 Years on ionizer & 15 years on electrodes/plates",
+    },
+    {
       label: "pH Levels",
       name: "3 alkaline, 2 acidic, 1 neutral, & 1 Turbo (Strong alkaline 11.5 pH)",
     },
@@ -75,10 +79,7 @@ const TyentNMP5 = () => {
       label: "Input Water Parameters Required",
       name: "Input water TDS: 90 - 160, Input water pH: 7 pH, Input water Pressure: 5 - 7 L/Min",
     },
-    {
-      label: "Warranty",
-      name: "3 Years on ionizer & 15 years on electrodes/plates",
-    },
+   
     {
       label: "General Services",
       name: "3 services per year, 9 free services in 3 years in warranty period (PAN INDIA)",

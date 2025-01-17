@@ -1,0 +1,16 @@
+.soapbutton{
+    border-radius: 20px;
+    border: 1px solid #CCCCCC;
+    padding: 10px 14px;
+    color: #565959;
+    background-color: #FFF;
+}
+
+.soapbutton:hover{
+    border: 1px solid #008AC7;
+    color: #008AC7;
+    background-color: #FFF;
+}
+.image-saop {
+    border-radius: 50%;
+}

@@ -51,16 +51,7 @@ const ProductSection = ({ products, specifications }) => {
     }
   };
 
-  const selectedSpecifications = specifications.filter((item) =>
-    [
-      "Electrode/Plates",
-      "pH Range",
-      "ORP Range",
-      "Hydrogen Range",
-      "Generates",
-      "Warranty",
-    ].includes(item.label)
-  );
+  const selectedSpecifications = specifications.filter((item) => true).slice(2,8);
 
 
   

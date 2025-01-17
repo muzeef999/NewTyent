@@ -50,6 +50,10 @@ const TyentNMP5 = () => {
     { label: "Hydrogen Range", name: "Up to 1550 PPB*" },
     { label: "Generates", name: "7 types of water levels" },
     {
+      label: "Warranty",
+      name: "3 Years on ionizer & 15 years on electrodes/plates",
+    },
+    {
       label: "pH Levels",
       name: "3 alkaline, 2 acidic, 1 neutral, & 1 Turbo (Strong alkaline 11.5 pH)",
     },
