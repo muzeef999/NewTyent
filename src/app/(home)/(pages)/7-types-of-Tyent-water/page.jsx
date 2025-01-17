@@ -20,33 +20,81 @@ import Drinking_water_during_food from "@/asserts/7-types-of-water/Drinking_wate
 import Baby_Food from "@/asserts/7-types-of-water/Baby_Food.png";
 import Medication from "@/asserts/7-types-of-water/Medication.png";
 
+import CoffeeTeaSoups from "@/asserts/7-types-of-water/CoffeeTeaSoups.png";
+import Cooking from "@/asserts/7-types-of-water/Cooking.png";
+import Plants from "@/asserts/7-types-of-water/Plants.png";
 
 import ToxinRemovalfromFruitsandVegetables from "@/asserts/7-types-of-water/ToxinRemovalfromFruitsandVegetables.png";
 import DishCleaning from "@/asserts/7-types-of-water/DishCleaning.png";
 import StainRemoval from "@/asserts/7-types-of-water/StainRemoval.png";
 
-
-
+import { FaDotCircle } from "react-icons/fa";
+import { color } from "framer-motion";
 
 const page = () => {
   const Turbo = [
     {
       image: ToxinRemovalfromFruitsandVegetables,
-      title: "Drinking water during food",
+      title: "Toxin Removal from Fruits and Vegetables",
       description:
-        "Tyent's H2O water, with a neutral 7.0 pH, is perfect for drinking during meals, ensuring easy digestion.",
-    },
-    {
-      image: DishCleaning,
-      title: "Drinking water during food",
-      description:
-        "Tyent's H2O water, with a neutral 7.0 pH, is perfect for drinking during meals, ensuring easy digestion.",
+        "The extra strength and deeper absorption power effectively remove pesticides, insecticides, wax, and color coatings from fruits and vegetables. These harmful substances are known to be major contributors to cancer.",
     },
     {
       image: StainRemoval,
-      title: "Drinking water during food",
+      title: "Stain Removal",
       description:
-        "Tyent's H2O water, with a neutral 7.0 pH, is perfect for drinking during meals, ensuring easy digestion.",
+        "The powerful absorption of Tyent's water easily removes tough stains like coffee, soy sauce, and oil. It’s also incredibly effective at tackling stubborn toilet bowl stains, leaving surfaces clean and refreshed with minimal effort.",
+    },
+    {
+      image:  DishCleaning,
+      title: "Dish Cleaning",
+      description:
+        "Save water and reduce costs with Tyent’s water. Use significantly less detergent for washing dishes, and only one-third to one-fourth of the usual water is needed for rinsing, cutting down on water bills while maintaining sparkling clean results.",
+    },
+  ];
+
+  const Drinking = [
+    {
+      image: CoffeeTeaSoups,
+      title: "Coffee, Tea & Soups",
+      description:
+        "Bring out deeper color, taste, and aroma in your coffee, tea, or soups with Tyent Water. Its exceptional ability to extract flavors means you can use less coffee or tea while still achieving a rich, full-bodied taste.",
+    },
+    {
+      image: Cooking,
+      title: "Cooking",
+      description:
+        "Tyent Water enhances the natural flavors of your ingredients, making them more tender and juicy. This allows you to cut down on seasoning and avoid excess salt, resulting in healthier, more flavorful meals.",
+    },
+    {
+      image: Plants,
+      title: "Plants",
+      description:
+        "Tyent water helps bring virality and freshness to your plants. Its unique properties stimulate germination and promote healthier seeding growth, ensuring your plants thrive with every drop.",
+    },
+  ];
+
+  const Level = [
+    {
+      color: "#00D1FE",
+      mainHeading: "Alk Level 1 (8.5 pH)",
+      title: "Initial drinking water",
+      description:
+        "Start with this level as your initial drinking water. Consume regularly for the first 15 days to gently introduce alkaline water into your routine.  ",
+    },
+    {
+      color: "#6594DC",
+      mainHeading: "Alk Level 2 (9.0 pH)",
+      title: "Intermediate drinking water ",
+      description:
+        "Transition to this intermediate level after 15 days of drinking 8.5 pH water. Gradually incorporate it into your routine for enhanced benefits.",
+    },
+    {
+      color: "#A567CD",
+      mainHeading: "Alk Level 3 (9.5 pH)",
+      title: "Regular drinking water",
+      description:
+        "Use this as your regular drinking water after 30 - 40 days of installation. Ensure you have used 8.5 pH and 9.0 pH water for at least 30 days before transitioning to this level.",
     },
   ];
 
@@ -163,12 +211,23 @@ const page = () => {
               </b>
             </h2>
             <h4 className="text-center m-0">Strong alkaline water</h4>
+
+            <h2 className="text-center">
+              <FaDotCircle color="#FE0000" />
+              &nbsp;Strictly{" "}
+              <span style={{ color: "#FE0000" }}>
+                <b>Not</b>
+              </span>{" "}
+              for drinking
+            </h2>
+
             <br />
             <p className="text-center">
               A powerful cleaning agent for removing pesticides, insecticides,
               wax, and color coatings from fruits, vegetables, and <br /> leafy
               greens as well as removing stains from dishes.
             </p>
+            <br />
             <Row className="g-5 d-flex justify-content-center align-items-center">
               {Turbo.map((item, index) => (
                 <Col md={4} key={index}>
@@ -195,11 +254,82 @@ const page = () => {
         <div className="section-spacing">
           <div>
             <h2 className="text-center m-3">
+              <b style={{ color: "#008AC7" }}>Daily Drinking Alkaline water</b>
+            </h2>
+            <h4 className="text-center m-0">
+              Do not drink during food and medicine
+            </h4>
+            <br />
+            <p className="text-center">
+              Use this as your regular drinking water after 45 days of
+              installation. Ensure you have used 8.5 pH and 9.0 pH <br /> water
+              for at least 30 days before transitioning to this level.
+            </p>
+            <br />
+            <h1 className="text-center">
+              <b>How to Use ?</b>
+            </h1>
+            <br />
+
+            <Row className="g-5 d-flex justify-content-center align-items-center">
+              {Level.map((item, index) => (
+                <Col md={4} key={index}>
+                  <div className="box-shadow-alk">
+                    <div className="position-relative">
+                      <h3>{item.mainHeading}</h3>
+                      <p>{item.title}</p>
+                      <h2
+                        className="big-number positionvalue"
+                        style={{
+                          color: item.color,
+                          position: "absolute",
+                          right: "-5%",
+                          top: "-100%",
+                        }}
+                      >
+                        {index +1}
+                      </h2>{" "}
+                      {/* Corrected class name */}
+                    </div>
+                    <div>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+
+            <Row className="g-5 d-flex justify-content-center align-items-center">
+              {Drinking.map((item, index) => (
+                <Col md={4} key={index}>
+                  <div className="box-shadow">
+                    <div style={{ width: "100%", height: "auto" }}>
+                      <Image
+                        src={item.image}
+                        alt="oralcare"
+                        layout="responsive"
+                        priority
+                      />
+                    </div>
+                    <div className="p-3">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        </div>
+
+        <div className="section-spacing">
+          <div>
+            <h3 className="text-center m-3">
               <b>
                 {" "}
                 <span style={{ color: "#00FD12" }}>H20</span> water{" "}
               </b>
-            </h2>
+            </h3>
             <h4 className="text-center m-0">
               H20 water Purified water or Neutral Water{" "}
             </h4>
@@ -210,6 +340,7 @@ const page = () => {
               <br /> a safe and gentle option for daily hydration and
               nourishment.
             </p>
+            <br />
             <Row className="g-5 d-flex justify-content-center align-items-center">
               {H20.map((item, index) => (
                 <Col md={4} key={index}>
@@ -250,6 +381,7 @@ const page = () => {
               utensils, countertops, and surfaces, ensuring a <br />
               hygienic environment and preventing cross-contamination.
             </p>
+            <br />
             <Row className="g-5 d-flex justify-content-center align-items-center">
               {ACD.map((item, index) => (
                 <Col md={4} key={index}>
@@ -263,7 +395,7 @@ const page = () => {
                       />
                     </div>
                     <div className="p-3">
-                      <h2>{item.title}</h2>
+                      <h3>{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
                   </div>
@@ -303,7 +435,7 @@ const page = () => {
                       />
                     </div>
                     <div className="p-3">
-                      <h2>{item.title}</h2>
+                      <h3>{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
                   </div>
