@@ -1,7 +1,6 @@
 import React from "react";
 import "@/app/style/Nmp.css";
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
-import Display from "@/app/(home)/compoents/(products)/Display";
 import Touchpreview from "@/app/(home)/compoents/(products)/Touchpreview";
 import Features from "@/app/(home)/compoents/(products)/Features";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
@@ -23,6 +22,13 @@ import BoosttheBody from "../BoosttheBody";
 import PRODUCTNMP91 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-1.webp";
 import PRODUCTNMP92 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-2.webp";
 import PRODUCTNMP93 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-3.webp";
+import Image from "next/image";
+import NMP7_BANNER_DESKTOP from "@/asserts/nmp/nmp5&7/NMP7_BANNER_DESKTOP.webp";
+import NMP7_BANNER_MOBILE from "@/asserts/nmp/nmp5&7/NMP7_BANNER_MOBILE.webp";
+import Display from "@/app/(home)/compoents/(products)/Display";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
+import "@/app/style/ResponsiveBanner.css"
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -81,7 +87,7 @@ const TyentNMP5 = () => {
       label: "Input Water Parameters Required",
       name: "Input water TDS: 90 - 160, Input water pH: 7 pH, Input water Pressure: 5 - 7 L/Min",
     },
-    
+
     {
       label: "General Services",
       name: "3 services per year, 9 free services in 3 years in warranty period (PAN INDIA)",
@@ -166,8 +172,72 @@ const TyentNMP5 = () => {
     },
   ];
 
+  const onetouch = {
+    title: "Easy To Use One Touch Display",
+    subTitle:
+      "Tyent water ionizers offer a user-friendly one-touch display with clear icons, making it easy to select and activate your desired water type effortlessly for convenient, customizable hydration.",
+    link: "//7-types-of-Tyent-water",
+  };
+
   return (
     <div>
+      <div style={{ width: "100%", height: "auto", position: "relative" }}>
+        {/* Mobile and Tablet View */}
+        <div className="d-block d-lg-none">
+          <Image
+            src={NMP7_BANNER_MOBILE}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          {/* NmpDispalayfinal for Mobile and Tablet */}
+          <div
+            style={{
+              position: "absolute",
+              width: "25.3%", // Adjusted for mobile responsiveness
+              height: "auto",
+              top: "59.5%", // Adjusted for better alignment
+              right: "16%", // Adjusted for mobile spacing
+              zIndex: 0,
+            }}
+          >
+            <Display />
+          </div>
+        </div>
+
+        {/* Desktop and Larger Devices */}
+        <div className="d-none d-lg-block">
+          <Image
+            src={NMP7_BANNER_DESKTOP}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          {/* NmpDispalayfinal for Desktop */}
+          <div
+            style={{
+              position: "absolute",
+              width: "15.8%", // Adjusted width for desktop
+              height: "auto",
+              top: "29%", // Fine-tuned for alignment
+              right: "8.4%", // Align for desktop view
+              zIndex: 0,
+            }}
+          >
+            <Display />
+          </div>
+        </div>
+      </div>
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
@@ -206,7 +276,7 @@ const TyentNMP5 = () => {
           </h2>
           <Row className="row g-3">
             {features.map((data, index) => (
-              <Col md={4} key={data.id}>
+              <Col xs={12} sm={12} md={6} lg={4} key={data.id}>
                 <Features data={data} delay={index * 100} />
               </Col>
             ))}
@@ -217,7 +287,88 @@ const TyentNMP5 = () => {
         </div>
       </Container>
       <div className="section-spacing">
-        <Display />
+        <div style={{ width: "100%", height: "auto", position: "relative" }}>
+          {/* Mobile and Tablet View */}
+          <div className="d-block d-lg-none">
+            <Image
+              src={NMP7_BANNER_MOBILE}
+              alt="nmp-5 banner"
+              layout="responsive"
+              priority
+              style={{
+                position: "relative",
+                zIndex: 10, // Ensure the image is on top
+              }}
+            />
+
+            {/* NmpDispalayfinal for Mobile and Tablet */}
+            <div
+              style={{
+                position: "absolute",
+                width: "25%", // Adjusted for mobile responsiveness
+                height: "auto",
+                top: "35.7%", // Adjusted for better alignment
+                right: "12.5%", // Adjusted for mobile spacing
+                zIndex: 0,
+              }}
+            >
+              <Display />
+            </div>
+          </div>
+
+          {/* Desktop and Larger Devices */}
+          <div className="d-none d-lg-block">
+            <Image
+              src={NMP7_BANNER_DESKTOP}
+              alt="nmp-5 banner"
+              layout="responsive"
+              priority
+              style={{
+                position: "relative",
+                zIndex: 10, // Ensure the image is on top
+              }}
+            />
+
+            {/* NmpDispalayfinal for Desktop */}
+            <div
+              style={{
+                position: "absolute",
+                width: "15.8%", // Adjusted width for desktop
+                height: "auto",
+                top: "29%", // Fine-tuned for alignment
+                right: "8.4%", // Align for desktop view
+                zIndex: 0,
+              }}
+            >
+              <Display />
+            </div>
+
+            <div
+              style={{
+                position: "absolute",
+                left: "10%",
+                top: "10%",
+                width: "50%",
+                zIndex: 999,
+              }}
+            >
+              <div className="container text-center nmp-11-desktop-banner">
+                <h2>{onetouch.title}</h2>
+                <p>
+                  {onetouch.subTitle}
+                </p>
+                <p>To Know How To Use</p>
+                <Link
+                  className={"appbardemo"}
+                  style={{ textDecoration: "none" }}
+                  href={`${onetouch.link}`}
+                >
+                  &nbsp;Click here <GoArrowRight />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Container>

@@ -1,0 +1,13 @@
+.nmp-11-desktop-banner h2{
+  color: #008AC7;
+  font-weight: 700;
+  font-size: 45px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.nmp-11-desktop-banner p{
+    font-size: 20px;
+    color: #444; /* Slightly darker text for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+
+  }

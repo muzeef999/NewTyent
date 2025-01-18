@@ -11,8 +11,8 @@ const BoosttheBody = ({Boost}) => {
         <div className="custom-card-background-image">
           <Row className="nmpboostbackground"
           >
-            <Col
-              md={6}
+            <Col sm={12} md={12}
+              lg={6}
               className="d-flex justify-content-center align-items-center"
             >
               <div style={{ width: "70%", height: "auto" }}>
@@ -24,7 +24,8 @@ const BoosttheBody = ({Boost}) => {
                 />
               </div>
             </Col>
-            <Col md={6}  className="d-flex justify-content-center align-items-center">
+            <Col sm={12} md={12}
+              lg={6}  className="d-flex justify-content-center align-items-center">
               
               <div 
               >

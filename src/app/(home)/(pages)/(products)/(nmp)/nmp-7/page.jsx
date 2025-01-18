@@ -16,11 +16,14 @@ import AnimatedSVG from "@/app/(home)/compoents/(products)/AnimatedSVG";
 import Certifications from "@/app/(home)/compoents/Certifications";
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import leftIamge from "@/asserts/nmp/leftboost1.webp";
-import NmpDisplay from "../NmpDisplay";
 import BoosttheBody from "../BoosttheBody";
 import productnmp1 from "@/asserts/nmp/PRODUCTNMP1.webp";
 import productnmp2 from "@/asserts/nmp/PRODUCTNMP2.webp";
 import productnmp3 from "@/asserts/nmp/PRODUCTNMP3.webp";
+import NMP5_BANNER_DESKTOP from "@/asserts/nmp/NMP5_BANNER_DESKTOP.webp";
+import NMP5_BANNER_MOBILE from "@/asserts/nmp/NMP5_BANNER_MOBILE.webp";
+import Image from "next/image";
+import NmpDispalayfinal from "../NmpDispalayfinal";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -79,7 +82,7 @@ const TyentNMP5 = () => {
       label: "Input Water Parameters Required",
       name: "Input water TDS: 90 - 160, Input water pH: 7 pH, Input water Pressure: 5 - 7 L/Min",
     },
-   
+
     {
       label: "General Services",
       name: "3 services per year, 9 free services in 3 years in warranty period (PAN INDIA)",
@@ -160,6 +163,63 @@ const TyentNMP5 = () => {
 
   return (
     <div>
+      <div style={{ width: "100%", height: "auto", position: "relative" }}>
+        {/* Mobile and Tablet View */}
+        <div className="d-block d-lg-none">
+          <Image
+            src={NMP5_BANNER_MOBILE}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          {/* NmpDispalayfinal for Mobile and Tablet */}
+          <div
+            style={{
+              position: "absolute",
+              width: "25%", // Adjusted for mobile responsiveness
+              height: "auto",
+              top: "35.7%", // Adjusted for better alignment
+              right: "12.5%", // Adjusted for mobile spacing
+              zIndex: 0,
+            }}
+          >
+            <NmpDispalayfinal />
+          </div>
+        </div>
+
+        {/* Desktop and Larger Devices */}
+        <div className="d-none d-lg-block">
+          <Image
+            src={NMP5_BANNER_DESKTOP}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          {/* NmpDispalayfinal for Desktop */}
+          <div
+            style={{
+              position: "absolute",
+              width: "12.3%", // Adjusted width for desktop
+              height: "auto",
+              top: "19%", // Fine-tuned for alignment
+              right: "13%", // Align for desktop view
+              zIndex: 0,
+            }}
+          >
+            <NmpDispalayfinal />
+          </div>
+        </div>
+      </div>
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
@@ -200,7 +260,7 @@ const TyentNMP5 = () => {
 
           <Row className="row g-3">
             {features.map((data, index) => (
-              <Col md={4} key={data.id}>
+              <Col xs={12} sm={12} md={6} lg={4} key={data.id}>
                 <Features data={data} delay={index * 100} />
               </Col>
             ))}
@@ -213,7 +273,63 @@ const TyentNMP5 = () => {
       </Container>
 
       <div className="section-spacing">
-        <NmpDisplay />
+        <div style={{ width: "100%", height: "auto", position: "relative" }}>
+          {/* Mobile and Tablet View */}
+          <div className="d-block d-lg-none">
+            <Image
+              src={NMP5_BANNER_MOBILE}
+              alt="nmp-5 banner"
+              layout="responsive"
+              priority
+              style={{
+                position: "relative",
+                zIndex: 10, // Ensure the image is on top
+              }}
+            />
+
+            {/* NmpDispalayfinal for Mobile and Tablet */}
+            <div
+              style={{
+                position: "absolute",
+                width: "25%", // Adjusted for mobile responsiveness
+                height: "auto",
+                top: "35.7%", // Adjusted for better alignment
+                right: "12.5%", // Adjusted for mobile spacing
+                zIndex: 0,
+              }}
+            >
+              <NmpDispalayfinal />
+            </div>
+          </div>
+
+          {/* Desktop and Larger Devices */}
+          <div className="d-none d-lg-block">
+            <Image
+              src={NMP5_BANNER_DESKTOP}
+              alt="nmp-5 banner"
+              layout="responsive"
+              priority
+              style={{
+                position: "relative",
+                zIndex: 10, // Ensure the image is on top
+              }}
+            />
+
+            {/* NmpDispalayfinal for Desktop */}
+            <div
+              style={{
+                position: "absolute",
+                width: "12.3%", // Adjusted width for desktop
+                height: "auto",
+                top: "19%", // Fine-tuned for alignment
+                right: "13%", // Align for desktop view
+                zIndex: 0,
+              }}
+            >
+              <NmpDispalayfinal />
+            </div>
+          </div>
+        </div>
       </div>
 
       <Container>

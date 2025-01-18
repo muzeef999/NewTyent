@@ -76,7 +76,7 @@ const ProductSection = ({ products, specifications }) => {
     <div>
       {/* Header Section */}
       <Row className="mb-5 align-items-top">
-        <Col md={6}>
+        <Col sm={12} md={12} lg={6} xl={6}>
           <div style={{ width: "100%", position: "relative" }}>
             {products.map((item, itemIndex) => (
               <div
@@ -128,7 +128,7 @@ const ProductSection = ({ products, specifications }) => {
             </button>
           </div>
         </Col>
-        <Col md={6}>
+        <Col sm={12} md={12} lg={6} xl={6}>
           <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
           <hr />
           <h4 className="m-2">

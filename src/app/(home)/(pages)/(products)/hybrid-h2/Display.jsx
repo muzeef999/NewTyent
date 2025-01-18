@@ -391,8 +391,8 @@ const Display = ({ displayColor, phValues }) => {
             
             
               </g>
-              <g>
-                          <text id="textcolor" fill="transparent" >
+                          <g id="textcolor">
+                          <text id="textDisplay" fill="transparent" >
                             <tspan x="50" y="31.5" fontSize="6.5" fontWeight="900">
                             ALKALINE
                             </tspan>
