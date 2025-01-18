@@ -10,7 +10,7 @@ import Cleaning_Reducing_Germs from "@/asserts/7-types-of-water/Cleaning_Reducin
 import Chemical_free_sanitizer from "@/asserts/7-types-of-water/Chemical_free_sanitizer.png";
 
 import FaceWash from "@/asserts/7-types-of-water/FaceWash.png";
-import Haircare from "@/asserts/7-types-of-water/Haircare.png";
+import Haircare from "@/asserts/7-types-of-water/HairCare.png";
 import Polishing from "@/asserts/7-types-of-water/Polishing.png";
 import Cleaning from "@/asserts/7-types-of-water/Cleaning.png";
 import Beauty_water_for_pets from "@/asserts/7-types-of-water/Beauty_water_for_pets.png";
@@ -29,7 +29,6 @@ import DishCleaning from "@/asserts/7-types-of-water/DishCleaning.png";
 import StainRemoval from "@/asserts/7-types-of-water/StainRemoval.png";
 
 import { FaDotCircle } from "react-icons/fa";
-import { color } from "framer-motion";
 
 const page = () => {
   const Turbo = [
