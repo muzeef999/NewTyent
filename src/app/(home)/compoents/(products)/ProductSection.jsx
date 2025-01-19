@@ -75,7 +75,7 @@ const ProductSection = ({ products, specifications }) => {
   return (
     <div>
       {/* Header Section */}
-      <Row className="mb-5 align-items-top">
+      <Row className="mb-5 align-items-top justify-content-between">
         <Col sm={12} md={12} lg={6} xl={6}>
           <div style={{ width: "100%", position: "relative" }}>
             {products.map((item, itemIndex) => (

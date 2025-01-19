@@ -107,3 +107,69 @@
 
 }
 
+
+
+/* For small devices (up to 576px) */
+@media (max-width: 767px) {
+  .nmp5Display{
+    position: absolute;
+    width: 25%;
+    height: auto;
+    top: calc(34.7% + 1px);
+    right: 12.5%;
+    z-index: 0;
+   }
+
+   
+.nmp-5-desktop-one-touch h2{
+  color: #008AC7;
+  font-weight: 700;
+  font-size: clamp(16px, 2.08vw, 45px);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.nmp-5-desktop-one-touch p{
+  font-size: clamp(12px, 1.56vw, 16px);
+    color: #444; /* Slightly darker text for contrast */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+}
+
+
+/* For larger screens (1200px and above) */
+@media (min-width: 768px) {
+  .nmp5Display {
+    position: absolute;
+    width: 12.4%;
+    height: auto;
+    top: calc(18.9% + -2px);
+    right: 12.9%;
+    z-index: 0;
+  }
+
+  
+.nmp-5-desktop-one-touch h2{
+  color: #008AC7;
+  font-weight: 700;
+  font-size: clamp(14px, 2vw, 45px);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.nmp-5-desktop-one-touch p{
+  font-size: clamp(14px, 4vw, 20px);
+    color: #444; /* Slightly darker text for contrast */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+}
+
+
+
+.nmp-5-desktop-one-touch{
+  position: absolute;
+  top:2%;
+  left:10%;
+  width:50%;
+  z-index: 999;
+  text-align: center;
+}
+

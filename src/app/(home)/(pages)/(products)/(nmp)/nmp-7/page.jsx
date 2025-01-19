@@ -161,11 +161,18 @@ const TyentNMP5 = () => {
     },
   ];
 
+  const onetouch = {
+    title: "Easy To Use One Touch Display",
+    subTitle:
+      "Tyent water ionizers offer a user-friendly one-touch display with clear icons, making it easy to select and activate your desired water type effortlessly for convenient, customizable hydration.",
+    link: "/7-types-of-Tyent-water",
+  };
+
   return (
     <div>
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
         {/* Mobile and Tablet View */}
-        <div className="d-block d-lg-none">
+        <div className="d-block d-md-none">
           <Image
             src={NMP5_BANNER_MOBILE}
             alt="nmp-5 banner"
@@ -193,7 +200,7 @@ const TyentNMP5 = () => {
         </div>
 
         {/* Desktop and Larger Devices */}
-        <div className="d-none d-lg-block">
+        <div className="d-none d-md-block">
           <Image
             src={NMP5_BANNER_DESKTOP}
             alt="nmp-5 banner"
@@ -247,7 +254,7 @@ const TyentNMP5 = () => {
                 water effortlessly.
               </p>
             </Col>
-          </Row>
+          </Row> 
         </div>
 
         <div className="section-spacing">

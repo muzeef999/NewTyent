@@ -12,6 +12,15 @@
    
 }
 
+
+
+.product-Display {
+    position: absolute;
+    left: 65%;
+    top:21%;
+    width: 18%;
+}
+
 .jogdaily-ighting {
     background-color: green;
     width: 170px;
@@ -79,4 +88,36 @@
     }
   }
   
+
+
+
+
+
+  
+/* For small devices (up to 576px) */
+@media (max-width: 767px) {
+    .hybridDisplay {
+      position: absolute;
+      width: 10.1%;
+      height: auto;
+      top: 52.6%;
+      right: 14%;
+      z-index: 99;
+    }
+  }
+  
+  
+  /* For larger screens (1200px and above) */
+  @media (min-width: 768px) {
+    .hybridDisplay {
+      position: absolute;
+      width: 5.1%;
+      height: auto;
+      top: 19.3%;
+      right: 14.2%;
+      z-index: 99;
+    }
+  }
+  
+
   

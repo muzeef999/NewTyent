@@ -26,6 +26,8 @@ import NMP5_BANNER_DESKTOP from "@/asserts/nmp/NMP5_BANNER_DESKTOP.webp";
 import NMP5_BANNER_MOBILE from "@/asserts/nmp/NMP5_BANNER_MOBILE.webp";
 
 import Image from "next/image";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -166,66 +168,54 @@ const TyentNMP5 = () => {
     },
   ];
 
+  const onetouch = {
+    title: "Easy To Use One Touch Display",
+    subTitle:
+      "Tyent water ionizers offer a user-friendly one-touch display with clear icons, enabling effortless selection of your desired water type for  convenient, customizable hydration.",
+    link: "/7-types-of-Tyent-water",
+  };
+
   return (
     <div>
-     <div style={{ width: "100%", height: "auto", position: "relative" }}>
-  {/* Mobile and Tablet View */}
-  <div className="d-block d-lg-none">
-    <Image
-      src={NMP5_BANNER_MOBILE}
-      alt="nmp-5 banner"
-      layout="responsive"
-      priority
-      style={{
-        position: "relative",
-        zIndex: 10, // Ensure the image is on top
-      }}
-    />
+      <div style={{ width: "100%", height: "auto", position: "relative" }}>
+        {/* Mobile and Tablet View */}
+        <div className="d-block d-md-none">
+          <Image
+            src={NMP5_BANNER_MOBILE}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
 
-    {/* NmpDispalayfinal for Mobile and Tablet */}
-    <div
-      style={{
-        position: "absolute",
-        width: "25%", // Adjusted for mobile responsiveness
-        height: "auto",
-        top: "35.7%", // Adjusted for better alignment
-        right: "12.5%", // Adjusted for mobile spacing
-        zIndex: 0,
-      }}
-    >
-      <NmpDispalayfinal />
-    </div>
-  </div>
+          {/* NmpDispalayfinal for Mobile and Tablet */}
+          <div className="nmp5Display">
+            <NmpDispalayfinal />
+          </div>
+        </div>
 
-  {/* Desktop and Larger Devices */}
-  <div className="d-none d-lg-block">
-    <Image
-      src={NMP5_BANNER_DESKTOP}
-      alt="nmp-5 banner"
-      layout="responsive"
-      priority
-      style={{
-        position: "relative",
-        zIndex: 10, // Ensure the image is on top
-      }}
-    />
+        {/* Desktop and Larger Devices */}
+        <div className="d-none d-md-block">
+          <Image
+            src={NMP5_BANNER_DESKTOP}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
 
-    {/* NmpDispalayfinal for Desktop */}
-    <div
-      style={{
-        position: "absolute",
-        width: "12.3%", // Adjusted width for desktop
-        height: "auto",
-        top: "19%", // Fine-tuned for alignment
-        right: "13%", // Align for desktop view
-        zIndex: 0,
-      }}
-    >
-      <NmpDispalayfinal />
-    </div>
-  </div>
-</div>
-
+          {/* NmpDispalayfinal for Desktop */}
+          <div className="nmp5Display">
+            <NmpDispalayfinal />
+          </div>
+        </div>
+      </div>
 
       <Container>
         <div className="section-spacing">
@@ -280,74 +270,72 @@ const TyentNMP5 = () => {
       </Container>
 
       <div className="section-spacing">
-        
+        <div className="d-block d-md-none" style={{ position: "relative" }}>
+          <Image
+            src={NMP5_BANNER_MOBILE}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
 
+          <div className="nmp-5-desktop-one-touch container">
+            <div>
+              <h2>{onetouch.title}</h2>
+              <p>{onetouch.subTitle}</p>
+              <p>To Know How To Use</p>
+              <Link
+                className={"appbardemo"}
+                style={{ textDecoration: "none" }}
+                href={`${onetouch.link}`}
+              >
+                &nbsp;Click here <GoArrowRight />
+              </Link>
+            </div>
+          </div>
 
+          {/* NmpDispalayfinal for Mobile and Tablet */}
+          <div className="nmp5Display">
+            <NmpDispalayfinal />
+          </div>
+        </div>
 
-      <div style={{ width: "100%", height: "auto", position: "relative" }}>
-  {/* Mobile and Tablet View */}
-  <div className="d-block d-lg-none">
-    <Image
-      src={NMP5_BANNER_MOBILE}
-      alt="nmp-5 banner"
-      layout="responsive"
-      priority
-      style={{
-        position: "relative",
-        zIndex: 10, // Ensure the image is on top
-      }}
-    />
+        {/* Desktop and Larger Devices */}
+        <div className="d-none d-md-block" style={{ position: "relative" }}>
+          <Image
+            src={NMP5_BANNER_DESKTOP}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
 
-    {/* NmpDispalayfinal for Mobile and Tablet */}
-    <div
-      style={{
-        position: "absolute",
-        width: "25%", // Adjusted for mobile responsiveness
-        height: "auto",
-        top: "35.7%", // Adjusted for better alignment
-        right: "12.5%", // Adjusted for mobile spacing
-        zIndex: 0,
-      }}
-    >
-      <NmpDispalayfinal />
-    </div>
-  </div>
+          <div className="nmp-5-desktop-one-touch container">
+            <div>
+              <h2>{onetouch.title}</h2>
+              <p>{onetouch.subTitle}</p>
+              <p>To Know How To Use</p>
+              <Link
+                className={"appbardemo"}
+                style={{ textDecoration: "none" }}
+                href={`${onetouch.link}`}
+              >
+                &nbsp;Click here <GoArrowRight />
+              </Link>
+            </div>
+          </div>
 
-  {/* Desktop and Larger Devices */}
-  <div className="d-none d-lg-block">
-    <Image
-      src={NMP5_BANNER_DESKTOP}
-      alt="nmp-5 banner"
-      layout="responsive"
-      priority
-      style={{
-        position: "relative",
-        zIndex: 10, // Ensure the image is on top
-      }}
-    />
-
-    {/* NmpDispalayfinal for Desktop */}
-    <div
-      style={{
-        position: "absolute",
-        width: "12.3%", // Adjusted width for desktop
-        height: "auto",
-        top: "19%", // Fine-tuned for alignment
-        right: "13%", // Align for desktop view
-        zIndex: 0,
-      }}
-    >
-      <NmpDispalayfinal />
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
+          {/* NmpDispalayfinal for Desktop */}
+          <div className="nmp5Display">
+            <NmpDispalayfinal />
+          </div>
+        </div>
       </div>
 
       <Container>

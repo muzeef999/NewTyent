@@ -6,14 +6,14 @@ import Image from 'next/image';
 
 const BoosttheBody = ({Boost}) => {
   return (
-    <div>
+    <div className='p-4'>
         
-        <div className="custom-card-background-image">
+        <div className="custom-card-background-image ">
           <Row className="nmpboostbackground"
           >
             <Col sm={12} md={12}
               lg={6}
-              className="d-flex justify-content-center align-items-center"
+              className="d-flex justify-content-center align-items-center order-2 order-lg-1"
             >
               <div style={{ width: "70%", height: "auto" }}>
                 <Image
@@ -25,7 +25,7 @@ const BoosttheBody = ({Boost}) => {
               </div>
             </Col>
             <Col sm={12} md={12}
-              lg={6}  className="d-flex justify-content-center align-items-center">
+              lg={6}  className="d-flex justify-content-center align-items-center  order-1 order-lg-2">
               
               <div 
               >

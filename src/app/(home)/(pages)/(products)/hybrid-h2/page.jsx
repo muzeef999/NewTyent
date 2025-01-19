@@ -13,10 +13,12 @@ import Certifications from "@/app/(home)/compoents/Certifications";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import hybridDisplay from "@/asserts/hybrid/hybridDisplay.webp";
 import h2jogdaily from "@/asserts/hybrid/h2jog.png";
-import cellplate from "@/asserts/hybrid/cellplates.png"
-import waterflow from "@/asserts/hybrid/pro_04.png"
+import cellplate from "@/asserts/hybrid/cellplates.png";
+import waterflow from "@/asserts/hybrid/pro_04.png";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import HybridTouchPreview from "./HybridTouchPreview";
+import Hybrid_Desktop from "@/asserts/hybrid/Hybrid_Desktop.webp";
+import Hybrid_Mobile from "@/asserts/hybrid/Hybrid_Mobile.webp";
 
 const page = () => {
   const products = [
@@ -93,6 +95,45 @@ const page = () => {
 
   return (
     <div className="hybridbackground">
+      <div style={{ width: "100%", height: "auto", position: "relative" }}>
+        {/* Mobile and Tablet View */}
+        <div className="d-block d-md-none">
+          <Image
+            src={Hybrid_Mobile}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          {/* NmpDispalayfinal for Mobile and Tablet */}
+          <div className="hybridDisplay">
+            <Display />
+          </div>
+        </div>
+
+        {/* Desktop and Larger Devices */}
+        <div className="d-none d-md-block">
+          <Image
+            src={Hybrid_Desktop}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          {/* NmpDispalayfinal for Desktop */}
+          <div className="hybridDisplay">
+            <Display />
+          </div>
+        </div>
+      </div>
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
@@ -141,14 +182,7 @@ const page = () => {
 
                   <div className="jogdaily-ighting-all"></div>
 
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "63.5%",
-                      top: "17%",
-                      width: "19.8%",
-                    }}
-                  >
+                  <div className="product-Display">
                     <Display />
                   </div>
                 </div>
@@ -176,15 +210,7 @@ const page = () => {
                   <div className="jogdaily-ighting-all"></div>
 
                   {/* Display component is in the background */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "63.5%",
-                      top: "17%",
-                      width: "19.8%",
-                      zIndex: 1, // Display is behind the image
-                    }}
-                  >
+                  <div className="product-Display">
                     <Display />
                   </div>
                 </div>
@@ -284,15 +310,7 @@ const page = () => {
                   </div>
 
                   {/* Display component is in the background */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "63.5%",
-                      top: "17%",
-                      width: "19.8%",
-                      zIndex: 1, // Display is behind the image
-                    }}
-                  >
+                  <div className="product-Display">
                     <Display displayColor="#5FA2FD" phValues="9.0" />
                   </div>
                 </div>
@@ -326,15 +344,7 @@ const page = () => {
                     <div className="jogdaily-ighting-all"></div>
 
                     {/* Display component is in the background */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        left: "63.5%",
-                        top: "17%",
-                        width: "19.8%",
-                        zIndex: 1, // Display is behind the image
-                      }}
-                    >
+                    <div className="product-Display">
                       <Display displayColor="#FF0000" phValues="11.5" />
                     </div>
                   </div>
@@ -425,14 +435,7 @@ const page = () => {
 
                   <div className="jogdaily-ighting"></div>
 
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "63.5%",
-                      top: "17%",
-                      width: "19.8%",
-                    }}
-                  >
+                  <div className="product-Display">
                     <Display displayColor="#00FF12" phValues="7.0" />
                   </div>
                 </div>
@@ -535,16 +538,7 @@ const page = () => {
                   />
 
                   {/* Display component is in the background */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      position: "absolute",
-                      left: "63.5%",
-                      top: "17%",
-                      width: "19.8%",
-                      zIndex: 1, // Display is behind the image
-                    }}
-                  >
+                  <div className="product-Display">
                     <Display displayColor="#ff1aff" phValues="9.5" />
                   </div>
 
@@ -632,16 +626,7 @@ const page = () => {
                     />
 
                     {/* Display component is in the background */}
-                    <div
-                      style={{
-                        position: "absolute",
-                        position: "absolute",
-                        left: "63.5%",
-                        top: "17%",
-                        width: "19.8%",
-                        zIndex: 1, // Display is behind the image
-                      }}
-                    >
+                    <div className="product-Display">
                       <Display displayColor="#5FA2FD" phValues="9.0" />
                     </div>
 
@@ -734,63 +719,59 @@ const page = () => {
                   className="d-flex justify-content-center align-items-center"
                 >
                   <div
-                  style={{ width: "60%", height: "auto", position: "relative" }}
-                >
-                  <Image
-                    src={hybrid}
-                    alt="hybrid image"
-                    layout="responsive"
-                    priority
                     style={{
-                      position: "relative",
-                      zIndex: 2, // Image is above the Display component
-                    }}
-                  />
-
-                  <div className="jogdaily-ighting-all"></div>
-                  <div
-                    style={{
-                      width: "50%",
+                      width: "60%",
                       height: "auto",
-                      position: "absolute",
-                      left: "-20%",
-                      bottom: "-20%",
-                      zIndex: 6,
+                      position: "relative",
                     }}
                   >
                     <Image
-                      src={hybridDisplay}
+                      src={hybrid}
                       alt="hybrid image"
                       layout="responsive"
                       priority
+                      style={{
+                        position: "relative",
+                        zIndex: 2, // Image is above the Display component
+                      }}
                     />
-                  </div>
 
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "-20%",
-                      bottom: "-22%",
-                      width: "50%",
-                      zIndex: 3, // Display is behind the image
-                    }}
-                  >
-                    <Display displayColor="#797A83" phValues="12:33"/>
-                  </div>
+                    <div className="jogdaily-ighting-all"></div>
+                    <div
+                      style={{
+                        width: "50%",
+                        height: "auto",
+                        position: "absolute",
+                        left: "-20%",
+                        bottom: "-20%",
+                        zIndex: 6,
+                      }}
+                    >
+                      <Image
+                        src={hybridDisplay}
+                        alt="hybrid image"
+                        layout="responsive"
+                        priority
+                      />
+                    </div>
 
-                  {/* Display component is in the background */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "63.5%",
-                      top: "17%",
-                      width: "19.8%",
-                      zIndex: 1, // Display is behind the image
-                    }}
-                  >
-                    <Display displayColor="#797A83" phValues="12:33" />
+                    <div
+                      style={{
+                        position: "absolute",
+                        left: "-20%",
+                        bottom: "-22%",
+                        width: "50%",
+                        zIndex: 3, // Display is behind the image
+                      }}
+                    >
+                      <Display displayColor="#797A83" phValues="12:33" />
+                    </div>
+
+                    {/* Display component is in the background */}
+                    <div className="product-Display">
+                      <Display displayColor="#797A83" phValues="12:33" />
+                    </div>
                   </div>
-                </div>
                 </Col>
               </Row>
             </div>
@@ -815,69 +796,100 @@ const page = () => {
             </div>
           </Col>
           <Col md={6} className="d-flex justify-content-end align-items-center">
-          <div style={{width:'80%', height:'auto'}}>
-            <DisplayPatter />
+            <div style={{ width: "80%", height: "auto" }}>
+              <DisplayPatter />
             </div>
           </Col>
         </Row>
       </div>
 
- 
       <div className="section-spacing">
         <Container>
           <OneTouchDispaly />
-          </Container>
-        </div>
-
-     
-
-      <div className="section-spacing">
-
-    <Container>
-      <Row>
-        <Col md={8} className="d-flex justify-content-center align-items-center">
-         <div>
-          <h2><b>The specially developed HYBRID water cell</b></h2>
-          <p>Technology Patent [10-2017-00903670] PCT International patent application [PCT/KR2017/011890]</p>
-          <p>{"Tyent's H2-Hybrid is a revolutionary innovation featuring patented dual electrolysis chambers. The first chamber, controlled by a one-touch display, produces 7 types of hydrogen-rich alkaline water with pH levels ranging from 11.5 to 2.5. The second chamber, equipped with advanced PEM (Proton Exchange Membrane) technology and operated via a jog dial, delivers water rich in selective antioxidant molecular hydrogen at a neutral pH without alkalinity."}</p>
-         <p>{"The H2-Hybrid is the world’s only black box edition with patented twin-cell technology, offering unlimited access to ideal water for the entire family."}</p>
-        
-         </div>
-        </Col>
-        <Col md={4} className="d-flex justify-content-center align-items-center">
-         <div style={{width:'50%', height:'auto'}}>
-          <Image src={cellplate} alt="cell plate" layout="responsive" priority  style={{
-      filter: 'drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5))', // Shadow effect
-    }} />
-         </div>
-        </Col>
-      </Row>
-    </Container>
-
+        </Container>
       </div>
 
+      <div className="section-spacing">
+        <Container>
+          <Row>
+            <Col
+              md={8}
+              className="d-flex justify-content-center align-items-center"
+            >
+              <div>
+                <h2>
+                  <b>The specially developed HYBRID water cell</b>
+                </h2>
+                <p>
+                  Technology Patent [10-2017-00903670] PCT International patent
+                  application [PCT/KR2017/011890]
+                </p>
+                <p>
+                  {
+                    "Tyent's H2-Hybrid is a revolutionary innovation featuring patented dual electrolysis chambers. The first chamber, controlled by a one-touch display, produces 7 types of hydrogen-rich alkaline water with pH levels ranging from 11.5 to 2.5. The second chamber, equipped with advanced PEM (Proton Exchange Membrane) technology and operated via a jog dial, delivers water rich in selective antioxidant molecular hydrogen at a neutral pH without alkalinity."
+                  }
+                </p>
+                <p>
+                  {
+                    "The H2-Hybrid is the world’s only black box edition with patented twin-cell technology, offering unlimited access to ideal water for the entire family."
+                  }
+                </p>
+              </div>
+            </Col>
+            <Col
+              md={4}
+              className="d-flex justify-content-center align-items-center"
+            >
+              <div style={{ width: "50%", height: "auto" }}>
+                <Image
+                  src={cellplate}
+                  alt="cell plate"
+                  layout="responsive"
+                  priority
+                  style={{
+                    filter: "drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5))", // Shadow effect
+                  }}
+                />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
       <div className="section-spacing">
-        <Container> 
+        <Container>
           <div>
-            <h2 className="text-center"><b>Automatic flow switching ensures safe cleaning <br/> function</b></h2>
-            <p className="text-center">This feature helps to provide you a healthier and more effective functional water by keeping the water cell clean at all times. <br/> Not only does it provide more effective functional water, it also proactively prevents scale in the water cell and extends its <br/>lifespan.</p>
-            <div style={{width:'100%', height:'auto'}}>
-              <Image src={waterflow} alt="water flow" layout="responsive" responsive />
+            <h2 className="text-center">
+              <b>
+                Automatic flow switching ensures safe cleaning <br /> function
+              </b>
+            </h2>
+            <p className="text-center">
+              This feature helps to provide you a healthier and more effective
+              functional water by keeping the water cell clean at all times.{" "}
+              <br /> Not only does it provide more effective functional water,
+              it also proactively prevents scale in the water cell and extends
+              its <br />
+              lifespan.
+            </p>
+            <div style={{ width: "100%", height: "auto" }}>
+              <Image
+                src={waterflow}
+                alt="water flow"
+                layout="responsive"
+                responsive
+              />
             </div>
           </div>
-
         </Container>
-        </div>
-      
-        <div className="section-spacing">
-          <Container>
+      </div>
+
+      <div className="section-spacing">
+        <Container>
           <HybridTouchPreview />
-          </Container>
-        </div>
+        </Container>
+      </div>
 
-
-     
       <Container>
         <h2
           className="text-center mb-4"

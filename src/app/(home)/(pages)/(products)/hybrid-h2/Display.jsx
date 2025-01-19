@@ -13,41 +13,45 @@ const Display = ({ displayColor, phValues }) => {
 
   useEffect(() => {
     const svgElement = svgRef.current;
-
+  
     if (!svgElement) {
       console.error("SVG element not found!");
       return;
     }
-
+  
     // Select required elements
     const dataDisplay = svgElement.querySelector("#dataDisplay");
     const displayColour = svgElement.querySelector("#displayColour");
     const textDisplay = svgElement.querySelector("#textDisplay");
-    const textColorElement = svgElement.querySelector("#textcolor");
-
-    if (!dataDisplay || !displayColour || !textDisplay || !textColorElement) {
+    const textColorElements = svgElement.querySelectorAll("#textcolor tspan"); // Select all <tspan> elements
+  
+    if (!dataDisplay || !displayColour || !textDisplay || textColorElements.length === 0) {
       console.error("One or more required SVG elements are missing.");
       return;
     }
-
+  
     // Handle static color and content behavior
     if (displayColor) {
       displayColour.style.fill = displayColor;
-      textColorElement.style.fill = displayColor;
-
+  
+      // Apply color to all <tspan> elements
+      textColorElements.forEach((tspan) => {
+        tspan.style.fill = displayColor;
+      });
+  
       // Ensure #dataDisplay is hidden only for color #797A83
       dataDisplay.style.display = displayColor === "#797A83" ? "none" : "block";
-
+  
       textDisplay.style.opacity = 1;
       textDisplay.textContent = phValues || "ER"; // Use provided phValues or default to "ER"
-
+  
       return; // Skip animation logic
     }
-
+  
     // Animation logic
     const durationPerStep = 2;
     const repeatDelay = 1;
-
+  
     const colors = [
       "#FF0000", // Red
       "#ff1aff", // Purple
@@ -58,28 +62,28 @@ const Display = ({ displayColor, phValues }) => {
       "#FFA500", // Orange
       "#797A83", // Gray
     ];
-
+  
     const animationPhValues = [
       "11.5", // Red
-      "9.5",  // Purple
-      "9.0",  // Dark Blue
-      "8.5",  // Light Blue
-      "7.0",  // Green
-      "5.5",  // Yellow
-      "4.0",  // Orange
+      "9.5", // Purple
+      "9.0", // Dark Blue
+      "8.5", // Light Blue
+      "7.0", // Green
+      "5.5", // Yellow
+      "4.0", // Orange
       "12:33", // Gray
     ];
-
+  
     // Animation starts after 6 seconds delay
     setTimeout(() => {
       const timeline = gsap.timeline({
         repeat: -1,
         repeatDelay,
       });
-
+  
       colors.forEach((color, index) => {
         timeline.to(
-          [displayColour, textColorElement],
+          [displayColour, ...textColorElements], // Spread textColorElements to include all <tspan>
           {
             fill: color,
             duration: durationPerStep,
@@ -91,10 +95,10 @@ const Display = ({ displayColor, phValues }) => {
               } else {
                 dataDisplay.style.display = "block"; // Show for all other colors
               }
-
+  
               const value = animationPhValues[index % animationPhValues.length];
               textDisplay.textContent = value;
-
+  
               gsap.to(textDisplay, {
                 opacity: 1,
                 duration: 1,
@@ -112,14 +116,12 @@ const Display = ({ displayColor, phValues }) => {
           index * durationPerStep
         );
       });
-
+  
       return () => {
         timeline.kill();
       };
     }, 6000); // Start animation after 6 seconds delay
   }, [displayColor, phValues]);
-
-
   
   return (
     <div>
@@ -132,27 +134,27 @@ const Display = ({ displayColor, phValues }) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g>
-            <g>
-              <rect
-                x="17.6172"
-                y="17.2617"
-               width="93.8077"
-               height="158.885"
-                id="displayColour"
-                fill="red"
-              />
-              
-              <g  id="allData">
+          <g>
+            <rect
+              x="17.6172"
+              y="17.2617"
+              width="93.8077"
+              height="158.885"
+              id="displayColour"
+              fill="red"
+            />
+
+            <g id="allData">
               <g id="dataDisplay">
-              <rect
-                x="22.4531"
-                y="25.9219"
-                width="83.0769"
-                height="6.23077"
-                rx="1.38462"
-                fill="#050E82"
-              />
-                
+                <rect
+                  x="22.4531"
+                  y="25.9219"
+                  width="83.0769"
+                  height="6.23077"
+                  rx="1.38462"
+                  fill="#050E82"
+                />
+
                 <path
                   d="M47.2773 45.9826C47.2773 46.4395 47.1123 46.805 46.7823 47.0792C46.4574 47.3483 46.0284 47.4828 45.4953 47.4828C44.9165 47.4828 44.4368 47.3736 44.056 47.1553V46.173C44.4926 46.4877 44.9698 46.6451 45.4877 46.6451C45.7212 46.6451 45.9091 46.5893 46.0512 46.4776C46.1934 46.3608 46.2644 46.206 46.2644 46.013C46.2644 45.9216 46.2467 45.8404 46.2111 45.7693C46.1756 45.6983 46.102 45.6272 45.9903 45.5561C45.8837 45.485 45.7999 45.4343 45.739 45.4038C45.6831 45.3733 45.5638 45.3175 45.3811 45.2363C45.3303 45.2109 45.2922 45.1931 45.2668 45.183C45.079 45.0966 44.9267 45.0205 44.8099 44.9545C44.6931 44.8834 44.5662 44.7895 44.4291 44.6727C44.2921 44.556 44.188 44.4163 44.1169 44.2539C44.0509 44.0914 44.0179 43.9061 44.0179 43.698C44.0179 43.2613 44.1778 42.911 44.4977 42.647C44.8226 42.383 45.2516 42.251 45.7847 42.251C46.267 42.251 46.6833 42.3348 47.0336 42.5023V43.4314C46.6528 43.203 46.2467 43.0887 45.8151 43.0887C45.5765 43.0887 45.3887 43.142 45.2516 43.2486C45.1196 43.3553 45.0536 43.4923 45.0536 43.6599C45.0536 43.8274 45.1247 43.967 45.2668 44.0787C45.4141 44.1853 45.6324 44.3046 45.9218 44.4366C46.1248 44.528 46.2898 44.6093 46.4168 44.6803C46.5437 44.7463 46.6808 44.8403 46.828 44.9621C46.9803 45.084 47.092 45.2312 47.1631 45.4038C47.2392 45.5713 47.2773 45.7643 47.2773 45.9826ZM51.3559 43.0811H50.0537V47.4219H49.0865V43.0811H47.7843V42.2891H51.3559V43.0811Z"
                   fill="#050E82"
@@ -197,7 +199,7 @@ const Display = ({ displayColor, phValues }) => {
                   rx="2.07692"
                   fill="#050E82"
                 />
-                
+
                 <rect
                   x="22.4531"
                   y="80.2656"
@@ -206,7 +208,7 @@ const Display = ({ displayColor, phValues }) => {
                   rx="2.07692"
                   fill="#050E82"
                 />
-                
+
                 <rect
                   x="53.2656"
                   y="80.2656"
@@ -215,7 +217,7 @@ const Display = ({ displayColor, phValues }) => {
                   rx="1.38462"
                   fill="#0B1382"
                 />
-                
+
                 <path
                   d="M32.1572 98.1523H30.4402V95.1727H27.7042V98.1523H25.9984V90.6865H27.7042V93.7216H30.4402V90.6865H32.1572V98.1523ZM36.7435 98.1523H33.1214V97.2136C33.7195 96.8037 34.2457 96.3496 34.6998 95.8511C35.1595 95.3527 35.3894 94.9123 35.3894 94.5302C35.3894 94.2976 35.3201 94.1148 35.1817 93.9819C35.0432 93.8434 34.8328 93.7742 34.5503 93.7742C34.0795 93.7742 33.6337 93.9487 33.2128 94.2976V93.1262C33.3955 92.9933 33.6337 92.8797 33.9272 92.7856C34.2208 92.6914 34.5088 92.6443 34.7912 92.6443C35.3561 92.6443 35.8048 92.7939 36.1371 93.093C36.4749 93.3865 36.6438 93.7991 36.6438 94.3308C36.6438 95.289 36.0346 96.2194 34.8161 97.1222H36.7435V98.1523ZM44.7436 94.3973C44.7436 95.5419 44.4113 96.4687 43.7467 97.1776C43.0895 97.8791 42.2107 98.2299 41.1104 98.2299C40.0027 98.2299 39.1203 97.8791 38.463 97.1776C37.8058 96.476 37.4772 95.5493 37.4772 94.3973C37.4772 93.2527 37.8058 92.3296 38.463 91.628C39.1276 90.9191 40.0101 90.5646 41.1104 90.5646C42.2181 90.5646 43.1006 90.9154 43.7578 91.617C44.415 92.3185 44.7436 93.2453 44.7436 94.3973ZM39.7923 92.7357C39.4673 93.1419 39.3049 93.6957 39.3049 94.3973C39.3049 95.0988 39.4673 95.6563 39.7923 96.0699C40.1172 96.476 40.5566 96.6791 41.1104 96.6791C41.6643 96.6791 42.1036 96.476 42.4286 96.0699C42.7535 95.6563 42.916 95.0988 42.916 94.3973C42.916 93.6957 42.7535 93.1419 42.4286 92.7357C42.1036 92.3222 41.6643 92.1154 41.1104 92.1154C40.5566 92.1154 40.1172 92.3222 39.7923 92.7357Z"
                   fill="#0B1382"
@@ -368,46 +370,29 @@ const Display = ({ displayColor, phValues }) => {
                   fill="#0B1382"
                 />
                 <rect
-              x="22.9724"
-              y="146.558"
-              width="82.0385"
-              height="12.4615"
-              rx="2.59615"
-              stroke="#050E82"
-              stroke-width="1.03846"
-            />
-            <path
-              d="M25.2344 139.117H71.2728"
-              stroke="#0B1382"
-              stroke-width="2.07692"
-              stroke-linecap="round"
-              stroke-dasharray="4.15 4.15"
-            />
-            <path
-              d="M47.8156 113.437C47.8156 113.276 47.8044 113.037 47.782 112.719L48.2782 112.652L48.3385 113.014C48.4279 112.938 48.5195 112.871 48.6134 112.813C48.7117 112.751 48.8168 112.699 48.9285 112.659C49.0447 112.614 49.1676 112.592 49.2973 112.592C49.4805 112.592 49.6526 112.623 49.8135 112.686C49.9789 112.748 50.1219 112.849 50.2426 112.987C50.3677 113.126 50.4661 113.307 50.5376 113.53C50.6091 113.75 50.6448 114.02 50.6448 114.342C50.6448 114.668 50.5957 114.945 50.4974 115.173C50.4035 115.397 50.2783 115.58 50.1219 115.723C49.9699 115.861 49.7956 115.962 49.599 116.025C49.4068 116.087 49.2101 116.118 49.009 116.118C48.7944 116.114 48.5754 116.087 48.3519 116.038V117.493L47.8156 117.56V113.437ZM49.009 115.649C49.1967 115.649 49.3576 115.616 49.4917 115.549C49.6258 115.481 49.7353 115.39 49.8202 115.274C49.9096 115.153 49.9744 115.017 50.0146 114.865C50.0549 114.708 50.075 114.543 50.075 114.369C50.075 114.212 50.0593 114.056 50.028 113.899C50.0012 113.743 49.9543 113.604 49.8872 113.484C49.8247 113.358 49.7397 113.258 49.6325 113.182C49.5252 113.101 49.3934 113.061 49.2369 113.061C49.1207 113.061 49.0112 113.084 48.9084 113.128C48.8056 113.168 48.7073 113.22 48.6134 113.282C48.524 113.341 48.4368 113.408 48.3519 113.484V115.542C48.4011 115.56 48.4547 115.578 48.5128 115.595C48.5754 115.609 48.6469 115.622 48.7274 115.636C48.8123 115.645 48.9062 115.649 49.009 115.649ZM50.9481 111.459H51.5112V113.437H53.8243V111.459H54.3875V116.031H53.8243V113.939H51.5112V116.031H50.9481V111.459Z"
-              fill="#260067"
-            />
+                  x="22.9724"
+                  y="146.558"
+                  width="82.0385"
+                  height="12.4615"
+                  rx="2.59615"
+                  stroke="#050E82"
+                  stroke-width="1.03846"
+                />
+                <path
+                  d="M25.2344 139.117H71.2728"
+                  stroke="#0B1382"
+                  stroke-width="2.07692"
+                  stroke-linecap="round"
+                  stroke-dasharray="4.15 4.15"
+                />
+                <path
+                  d="M47.8156 113.437C47.8156 113.276 47.8044 113.037 47.782 112.719L48.2782 112.652L48.3385 113.014C48.4279 112.938 48.5195 112.871 48.6134 112.813C48.7117 112.751 48.8168 112.699 48.9285 112.659C49.0447 112.614 49.1676 112.592 49.2973 112.592C49.4805 112.592 49.6526 112.623 49.8135 112.686C49.9789 112.748 50.1219 112.849 50.2426 112.987C50.3677 113.126 50.4661 113.307 50.5376 113.53C50.6091 113.75 50.6448 114.02 50.6448 114.342C50.6448 114.668 50.5957 114.945 50.4974 115.173C50.4035 115.397 50.2783 115.58 50.1219 115.723C49.9699 115.861 49.7956 115.962 49.599 116.025C49.4068 116.087 49.2101 116.118 49.009 116.118C48.7944 116.114 48.5754 116.087 48.3519 116.038V117.493L47.8156 117.56V113.437ZM49.009 115.649C49.1967 115.649 49.3576 115.616 49.4917 115.549C49.6258 115.481 49.7353 115.39 49.8202 115.274C49.9096 115.153 49.9744 115.017 50.0146 114.865C50.0549 114.708 50.075 114.543 50.075 114.369C50.075 114.212 50.0593 114.056 50.028 113.899C50.0012 113.743 49.9543 113.604 49.8872 113.484C49.8247 113.358 49.7397 113.258 49.6325 113.182C49.5252 113.101 49.3934 113.061 49.2369 113.061C49.1207 113.061 49.0112 113.084 48.9084 113.128C48.8056 113.168 48.7073 113.22 48.6134 113.282C48.524 113.341 48.4368 113.408 48.3519 113.484V115.542C48.4011 115.56 48.4547 115.578 48.5128 115.595C48.5754 115.609 48.6469 115.622 48.7274 115.636C48.8123 115.645 48.9062 115.649 49.009 115.649ZM50.9481 111.459H51.5112V113.437H53.8243V111.459H54.3875V116.031H53.8243V113.939H51.5112V116.031H50.9481V111.459Z"
+                  fill="#260067"
+                />
+              </g>
 
-            
-            
-              </g>
-                          <g id="textcolor">
-                          <text id="textDisplay" fill="transparent" >
-                            <tspan x="50" y="31.5" fontSize="6.5" fontWeight="900">
-                            ALKALINE
-                            </tspan>
-                            <tspan x="76" y="57" fontSize="5.5" fontWeight="900">
-                            TURBO
-                            </tspan>
-                            <tspan x="27.5" y="85.5" fontSize="5.5" fontWeight="900">
-                            CLEAN
-                            </tspan>
-                            <tspan x="68" y="85.5" fontSize="5.5" fontWeight="900">
-                            ACIDIC
-                            </tspan>
-                          </text>
-              </g>
-              <text id="textDisplay"
+              <text
+                id="textDisplay"
                 fill="#0B1382"
                 fontFamily="'MyCustomFont', sans-serif"
                 fontSize="22"
@@ -418,8 +403,49 @@ const Display = ({ displayColor, phValues }) => {
               >
                 9.5
               </text>
+
+              <g id="textcolor">
+                <text>
+                  <tspan
+                    x="50"
+                    y="31.5"
+                    fontSize="6.5"
+                    fontWeight="900"
+                    fill="transparent"
+                  >
+                    ALKALINE
+                  </tspan>
+                  <tspan
+                    x="76"
+                    y="57"
+                    fontSize="5.5"
+                    fontWeight="900"
+                    fill="transparent"
+                  >
+                    TURBO
+                  </tspan>
+                  <tspan
+                    x="27.5"
+                    y="85.5"
+                    fontSize="5.5"
+                    fontWeight="900"
+                    fill="transparent"
+                  >
+                    CLEAN
+                  </tspan>
+                  <tspan
+                    x="68"
+                    y="85.5"
+                    fontSize="5.5"
+                    fontWeight="900"
+                    fill="transparent"
+                  >
+                    ACIDIC
+                  </tspan>
+                </text>
               </g>
             </g>
+          </g>
         </g>
       </svg>
     </div>

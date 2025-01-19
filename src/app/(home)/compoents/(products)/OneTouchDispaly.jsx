@@ -4,14 +4,20 @@ import { FaDroplet } from "react-icons/fa6";
 
 const OneTouchDispaly = () => {
   const waterTypes = [
-    { name: "Surface Cleaner", type: "Acid Level 1", color: "#FFA500" },
-    { name: "Beauty water", type: "Acid Level 2", color: "#e6e600" },
-    { name: "Purified water", type: "H2O", color: "#00FF12" },
+    { name: "Vegetable clean water", type: "Turbo", color: "#FF0000" },
+    { name: "Regular drinking water", type: "Alk Level 3", color: "#ff1aff" },
     { name: "Initial drinking water", type: "Alk Level 1", color: "#6595DD" },
     { name: "Moderate drinking water", type: "Alk Level2", color: "#00D2FF" },
-    { name: "Regular drinking water", type: "Alk Level 3", color: "#A667CE" },
-    { name: "Vegetable clean water", type: "Turbo", color: "red" },
+    { name: "Purified water", type: "H2O", color: "#00FF12" },
+    { name: "Beauty water", type: "Acid Level 2", color: "#e6e600" },
+    { name: "Surface Cleaner", type: "Acid Level 1", color: "#FFA500" },  
   ];
+
+    
+
+
+
+  
 
   return (
     <div>
@@ -32,9 +38,11 @@ const OneTouchDispaly = () => {
           <Row className="justify-content-center">
             {waterTypes.map((type, idx) => (
               <Col
-                md={3}
-                sm={6}
-                xs={12}
+              xs={6} 
+              sm={6}
+              md={3}
+                
+                
                 key={idx}
                 className="d-flex justify-content-center align-items-center mb-4"
               >
@@ -47,7 +55,6 @@ const OneTouchDispaly = () => {
                   >
                   <div
                     style={{
-                      
                       backgroundColor: `${type.color}`,
                       width: "54px",
                       height: "54px",
@@ -56,9 +63,11 @@ const OneTouchDispaly = () => {
                       justifyContent: "center",
                       alignItems: "center",
                       marginBottom: "10px",
+                      whiteSpace: "nowrap", 
+                       textOverflow: "ellipsis",
                     }}
                   >
-                    <FaDroplet style={{ color: "#FFF" }} size={40} />
+                    <FaDroplet style={{ color: "#FFF" }} size={30} />
                   </div>
 
                   {/* Water Type Details */}
