@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import slider1img from "@/asserts/slider/slide1.png"
 import Image from "next/image";
+import  homebanner1 from "@/asserts/homeBanners/home_Banner1.jpg"
 
 const Slider = () => {
   return (
@@ -53,14 +54,9 @@ const Slider = () => {
           </Row>
         </div>
         <div className="carousel-item">
-          <Row>
-            <Col md={6}>
-              <div>
-                <h1>Hello2</h1>
-              </div>
-            </Col>
-            <Col md={6}></Col>
-          </Row>
+        <div style={{width:'100%'}}>
+               <Image src={homebanner1} alt="slider npm top counter"  layout="responsive" priority/>
+            </div>
         </div>
         <div className="carousel-item">
           <Row>
