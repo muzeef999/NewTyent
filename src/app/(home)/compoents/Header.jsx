@@ -23,7 +23,7 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
     <div>
       <Row
         style={{
-          background: "linear-gradient(to right, #f1f8fb, #4cacd7)",
+          background: "linear-gradient(to right, #f1f8fb,rgb(196, 219, 229))",
           margin: "40px",
           borderRadius: "20px",
         }}

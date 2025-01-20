@@ -115,7 +115,8 @@
     position: absolute;
     width: 25%;
     height: auto;
-    top: calc(34.7% + 1px);
+     top:34vh; 
+   
     right: 12.5%;
     z-index: 0;
    }
