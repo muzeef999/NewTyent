@@ -191,6 +191,48 @@ const TyentNMP5 = () => {
             }}
           />
 
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                Build Resilience with <span>Every Drop</span>
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Benefits */}
+
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="80">
+                    <line
+                      x1="10"
+                      y1="0"
+                      x2="10"
+                      y2="80"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+
+                <div className="mt-3">
+                  <h1 className={"nmp-banner-title"}>Tyent Water</h1>
+                  <p className={"nmp-banner-benefits"}>
+                    <span>For Stronger Immunity</span>
+                    <br />
+                    and <span>Natural Protection</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* NmpDispalayfinal for Mobile and Tablet */}
           <div className="nmp5Display">
             <NmpDispalayfinal />
@@ -210,37 +252,43 @@ const TyentNMP5 = () => {
             }}
           />
 
-          <div data-aos="fade-left" className={"nmp-5-desktop-one-touch-main-banner"}>
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
               {/* Resilience Message */}
-              <h2 className={"nmp-banner-resilience"}>
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
                 Build Resilience with <span>Every Drop</span>
               </h2>
 
               {/* Tyent Water Title */}
-              <h1 className={"nmp-banner-title"}>Tyent Water</h1>
 
-              <div className="d-flex justify-content-end align-items-center">
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-end align-items-center"
+              >
                 {/* Benefits */}
-                <p className={"nmp-banner-benefits"}>
-                  <span>For Stronger Immunity</span>
-                  <br />
-                  and <span>Natural Protection.</span>
-                </p>
+                <div className="mt-2">
+                  <h1 className={"nmp-banner-title"}>Tyent Water</h1>
+                  <p className={"nmp-banner-benefits"}>
+                    <span>For Stronger Immunity</span>
+                    <br />
+                    and <span>Natural Protection</span>
+                  </p>
+                </div>
 
                 {/* Decorative Line */}
-
-                <svg width="20" height="75">
-                  <line
-                    x1="10"
-                    y1="0"
-                    x2="10"
-                    y2="75"
-                    stroke="#008ac7"
-                    strokeWidth="4"
-                  />
-                </svg>
+                <div className="d-flex justify-content-top align-items-top">
+                  <svg width="20" height="115">
+                    <line
+                      x1="10"
+                      y1="0"
+                      x2="10"
+                      y2="115"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
