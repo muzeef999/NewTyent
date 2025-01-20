@@ -32,99 +32,116 @@ async function fetchData() {
   const data = [
     {
       id: "1",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Solid Hybrid Mesh Plate Technology",
-      description: 'All Tyent Water Ionizers come with standard medical-grade Solid Hybrid Mesh Plate technology. Solid Hybrid Mesh Plate plates offer more strength, durability & more surface area because of Solid Hybrid Mesh Plate design. Our engineers begin the Tyent plate-making process with the thickest and longest plates in the industry, and then they incorporate cutting-edge electrolysis distribution methods for maximum electrical conductivity. Most ionizers have plates that are either solid or mesh. Tyent engineers were not satisfied with either design. Here’s why: Solid plates offer strength but lack premium electrical distribution. Since electricity is drawn to edges (which is why a lightning rod has a pointed edge) a solid plate’s electrical current will only be transmitted around the outer edge of the plate. The edges are key, which is why mesh plates seem ideal; but since they lack durability, they do not meet Tyent’s high standards. Since neither of the available plate styles was sufficient, our Tyent engineers developed the cutting-edge Tyent Solid Hybrid Mesh Plates. The Tyent Solid Hybrid Mesh Plate was engineered according to Faraday’s electrolysis distribution methods.',
-      icon : platess
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>When it comes to water ionization, one of the most crucial components is the plate design. The effectiveness of a water ionizer is largely determined by the quality, surface area, and strength of its plates.</p>
+          <ul>
+            <li><strong>Strength:</strong> Tyent plates are the thickest, longest, and have more surface area than any in the industry.</li>
+            <li><strong>Durability:</strong> These plates will never break, crumble, or leach.</li>
+            <li><strong>Design:</strong> Combines solid plates' strength with mesh plates' conductivity for superior performance.</li>
+          </ul>
+          <p>Tyent’s Solid Hybrid Mesh Plates are exclusive to their water ionizers and are backed by a 15-year warranty in India and a lifetime warranty in the USA.</p>
+        </div>`,
+      icon: platess
     },
     {
       id: "2",
       color1: '#f8fbfe',
-      heading: "Plates with more surface area in the Industry",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-     icon: plateSurfaceArea
+      heading: "Plates with More Surface Area in the Industry",
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>Plates are the core of a water ionizer, and the key factor is their surface area, not their size. Tyent ionizers utilize <strong>Solid Hybrid Mesh Plate technology</strong>, offering:</p>
+          <ul>
+            <li>Superior strength and durability</li>
+            <li>The largest surface area in the industry</li>
+            <li>Better overall performance with higher antioxidant production and accurate pH levels</li>
+          </ul>
+        </div>`,
+      icon: plateSurfaceArea
     },
     {
       id: "3",
       color1: '#f8fbfe',
       heading: "Patented SMPS PLUS® Power",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon : smpsplus
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>Tyent uses the revolutionary <strong>SMPS PLUS® Power</strong>, which allows for 55 adjustable power settings to deliver the perfect glass of alkaline water.</p>
+          <ol>
+            <li><strong>Transformers:</strong> Older and less efficient technology.</li>
+            <li><strong>SMPS:</strong> Modern, efficient, and lightweight technology but with limited voltage adjustability.</li>
+            <li><strong>SMPS PLUS:</strong> Enhanced SMPS technology providing unmatched power and efficiency for creating strong alkaline and acidic water without chemicals.</li>
+          </ol>
+        </div>`,
+      icon: smpsplus
     },
     {
       id: "4",
       color1: '#f8fbfe',
       heading: "Super Water Capability",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon : phscale
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>Tyent coined the term “Super Water,” offering a pH range of <strong>2.5 to 11.5*</strong>, ideal for various uses:</p>
+          <ul>
+            <li><strong>Low pH (2.5 - 3.5):</strong> Antiseptic and all-natural sanitizer for surfaces.</li>
+            <li><strong>High pH (11+):</strong> Removes oil-based pesticides, wax from fruits, and stains.</li>
+          </ul>
+        </div>`,
+      icon: phscale
     },
     {
       id: "5",
       color1: '#f8fbfe',
       heading: "Extreme Filtration Capacity",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon : tyentFilters
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>Tyent ionizers boast an <strong>extreme filtration capacity</strong>, offering water purity like no other, ensuring the removal of harmful substances while retaining essential minerals.</p>
+        </div>`,
+      icon: tyentFilters
     },
     {
       id: "6",
       color1: '#f8fbfe',
       heading: "PAST Cleaning System",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-    icon : RTR
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>The <strong>PAST Cleaning System</strong> ensures the longevity of your water ionizer by thoroughly cleaning the plates and maintaining performance efficiency.</p>
+        </div>`,
+      icon: RTR
     },
     {
       id: "7",
       color1: '#f8fbfe',
-      heading: "International quality Certifications",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon:International
+      heading: "International Quality Certifications",
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>Tyent ionizers are recognized globally, holding multiple <strong>international quality certifications</strong> for their unmatched performance and durability.</p>
+        </div>`,
+      icon: International
     },
     {
       id: "8",
       color1: '#f8fbfe',
-      heading: "Certified medical device",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
+      heading: "Certified Medical Device",
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>Tyent ionizers are <strong>certified as medical devices</strong>, ensuring safety and effectiveness for household and professional use.</p>
+        </div>`,
       icon: Certified
     },
     {
       id: "9",
       color1: '#f8fbfe',
       heading: "Better Business Bureau A+ Rating",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon:BBB
-    },
-    {
-      id: "10",
-      color1: '#f8fbfe',
-      heading: "Highest Antioxidant Production Levels",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon:Antioxidant
-    },
-    {
-      id: "11",
-      color1: '#f8fbfe',
-      heading: "One-Touch display Technology",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon: display
-    },
-    {
-      id: "12",
-      color1: '#f8fbfe',
-      heading: "Chemical and Lead-Free",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon : Chemical
-    },
-    {
-      id: "13",
-      color1: '#f8fbfe',
-      heading: "Warranty & doorstep service",
-      description: 'Tyent coined the term “Super Water,” and we are still the ONLY machine with the largest Solid Hybrid Mesh plates and enough power to produce super water without chemicals. Super Water means that Tyent ionizer\'s have a range of 2.5 to 11.5* on the pH scale, while our water ionizers have a range of 10.0 to 4.0* on the pH scale. On the low end of this scale, water with a pH of 2.5 - 3.5 works as an antiseptic and can be used as an all-natural sanitizer on surfaces. On the high end of this scale, water with a pH of 11 and higher is great to use for removing oil-based herbicides, pesticides & wax content from fruits and vegetables. It also can be used for Stain Removal.',
-      icon :doorstep
-    },
-    
-    
+      description: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <p>With a <strong>BBB A+ Rating</strong>, Tyent ensures trust and quality for its customers globally.</p>
+        </div>`,
+      icon: BBB
+    }
   ];
-
+  
 
   return data;
 }
@@ -136,8 +153,6 @@ const Page = async () => {
     basic: "Trust, Satisfaction & Transformations",
     preheading: "Hear From Our Real",
     afterheading: "Satisfied Tyent India Customers",
-    content:
-      "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
     img: "path/to/image.jpg", // Add image URL if needed
     animatedText: "Health, Wellness, Transformation", // Pass the animated text here
   };

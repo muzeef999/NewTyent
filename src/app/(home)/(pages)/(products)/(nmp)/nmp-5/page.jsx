@@ -210,6 +210,41 @@ const TyentNMP5 = () => {
             }}
           />
 
+          <div data-aos="fade-left" className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 className={"nmp-banner-resilience"}>
+                Build Resilience with <span>Every Drop</span>
+              </h2>
+
+              {/* Tyent Water Title */}
+              <h1 className={"nmp-banner-title"}>Tyent Water</h1>
+
+              <div className="d-flex justify-content-end align-items-center">
+                {/* Benefits */}
+                <p className={"nmp-banner-benefits"}>
+                  <span>For Stronger Immunity</span>
+                  <br />
+                  and <span>Natural Protection.</span>
+                </p>
+
+                {/* Decorative Line */}
+
+                <svg width="20" height="75">
+                  <line
+                    x1="10"
+                    y1="0"
+                    x2="10"
+                    y2="75"
+                    stroke="#008ac7"
+                    strokeWidth="4"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
           {/* NmpDispalayfinal for Desktop */}
           <div className="nmp5Display">
             <NmpDispalayfinal />
@@ -282,7 +317,7 @@ const TyentNMP5 = () => {
             }}
           />
 
-          <div className="nmp-5-desktop-one-touch container">
+          <div className="nmp-5-desktop-one-touch">
             <div>
               <h2>{onetouch.title}</h2>
               <p>{onetouch.subTitle}</p>
@@ -316,7 +351,7 @@ const TyentNMP5 = () => {
             }}
           />
 
-          <div className="nmp-5-desktop-one-touch container">
+          <div className="nmp-5-desktop-one-touch">
             <div>
               <h2>{onetouch.title}</h2>
               <p>{onetouch.subTitle}</p>

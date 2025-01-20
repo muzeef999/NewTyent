@@ -21,9 +21,10 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
 
   return (
     <div>
+     <br/>
       <Row
         style={{
-          background: "linear-gradient(to right, #f1f8fb,rgb(196, 219, 229))",
+          background: "linear-gradient(to right, #f1f8fb, #99e0ff)",
           margin: "40px",
           borderRadius: "20px",
         }}
@@ -51,8 +52,7 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
               {afterheading}
               <br />
             </h2>
-            <br />
-            <p>{content}</p>
+            
           </div>
         </Col>
 

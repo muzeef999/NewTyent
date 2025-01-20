@@ -108,16 +108,34 @@
 }
 
 
+.nmp-5-desktop-one-touch{
+  position: absolute;
+  top:50px;
+  right:3%;
+  width:33%;
+  z-index: 999;
+  text-align: justify;
+}
+
+.nmp-5-desktop-one-touch-main-banner {
+  position: absolute;
+  top:2%;
+  right:3%;
+  width:50%;
+  z-index: 999;
+  text-align: right;
+}
+
 
 /* For small devices (up to 576px) */
 @media (max-width: 767px) {
   .nmp5Display{
     position: absolute;
-    width: 25%;
+    width: 24%;
     height: auto;
-     top:34vh; 
-   
-    right: 12.5%;
+    top:49.2%; 
+    right: 1.5%;
+    transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
    }
 
@@ -125,11 +143,12 @@
 .nmp-5-desktop-one-touch h2{
   color: #008AC7;
   font-weight: 700;
-  font-size: clamp(16px, 2.08vw, 45px);
+  font-size: clamp(16px, 2.08vw, 50px);
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .nmp-5-desktop-one-touch p{
+  font-weight: 500;
   font-size: clamp(12px, 1.56vw, 16px);
     color: #444; /* Slightly darker text for contrast */
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -143,17 +162,69 @@
     position: absolute;
     width: 12.4%;
     height: auto;
-    top: calc(18.9% + -2px);
-    right: 12.9%;
+    top: 36.6%;
+    right: 33.6%;
+    transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
   }
+
+
+  /* Main container for the banner */
+.nmp-5-desktop-one-touch-main-banner {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+/* Right-aligned content container */
+.nmp-banner-content {
+  text-align: right;
+  max-width: 600px;
+  margin-left: auto;
+}
+
+/* Resilience message styling */
+.nmp-banner-resilience {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: bold;
+  color: #00b3ff;
+  letter-spacing: 1px;
+}
+
+.nmp-banner-resilience span {
+  color: #008ac7;
+}
+
+/* Tyent Water title styling */
+.nmp-banner-title {
+  font-size: clamp(16px, 4vw, 40px);
+  font-weight: 900;
+  color: #008ac7;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+/* Benefits paragraph styling */
+.nmp-banner-benefits {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  color:  #008ac7;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.nmp-banner-benefits span {
+  font-weight: bold;
+}
+
+
+
 
   
 .nmp-5-desktop-one-touch h2{
   color: #008AC7;
   font-weight: 700;
   font-size: clamp(14px, 2vw, 45px);
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  text-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .nmp-5-desktop-one-touch p{
@@ -165,12 +236,4 @@
 
 
 
-.nmp-5-desktop-one-touch{
-  position: absolute;
-  top:2%;
-  left:10%;
-  width:50%;
-  z-index: 999;
-  text-align: center;
-}
 
