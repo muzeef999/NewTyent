@@ -635,3 +635,24 @@ background-color: transparent;
     rotate: 20deg;
   }
 }
+
+.fixed-vertical-button {
+  position: fixed;  /* Fixes the button's position on the screen */
+  right: -95px;          /* Attach it to the right edge of the page */
+  top: 50%;          /* Position it vertically centered */
+  transform: translateY(-50%) rotate(270deg); /* Rotate the button by 270 degrees (vertical) and center it */
+  padding: 10px 20px;  /* Add padding to the button */
+  background-color: #008ac7;  /* Background color */
+  color: white;      /* Button text color */
+  border: none;      /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;   /* Add pointer cursor on hover */
+  z-index: 1000;     /* Ensure it's above other content */
+}
+
+.fixed-vertical-button:hover {
+  background-color: #FFF; /* Change background on hover */
+ color: #008ac7;
+ border: 1px solid #008ac7;
+
+}

@@ -300,11 +300,12 @@ const TyentNMP5 = () => {
         </div>
       </div>
 
-      <Container>
+      
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
         </div>
 
+        <Container>
         <div className="section-spacing">
           <Row>
             <Col>

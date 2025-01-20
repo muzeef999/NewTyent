@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button, Col, Row, Table } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import { IoCallOutline } from "react-icons/io5";
 import { RxDownload } from "react-icons/rx";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -75,16 +75,31 @@ const ProductSection = ({ products, specifications }) => {
   return (
     <div>
       {/* Header Section */}
+      <Container>
       <Row className="mb-5 align-items-top justify-content-between">
         <Col sm={12} md={12} lg={6} xl={6}>
           <div style={{ width: "100%", position: "relative" }}>
             {products.map((item, itemIndex) => (
               <div
-                className="d-flex justify-content-center align-items-top"
+                className="justify-content-center align-items-top"
                 key={itemIndex}
               >
+                
+
+                {/* Main Image */}
+                <div className="justify-content-center align-items-top" style={{borderRadius:'22px'}}>
+                  <div style={{width:'100%', height:'auto'}}>
+                  <Image 
+                    src={item.src[currentIndex]}
+                    alt={`Product ${currentIndex + 1}`}
+                    layout="responsive" priority
+                    style={{ borderRadius: "22px", padding: "16px" }}
+                  />
+                  </div>
+                </div>
+
                 {/* Thumbnail Images */}
-                <div className="thumb d-flex flex-column mt-3">
+                <div className="thumb  mt-3">
                   {item.src.map((img, index) => (
                     <Image className={
                       currentIndex === index 
@@ -100,33 +115,10 @@ const ProductSection = ({ products, specifications }) => {
                     />
                   ))}
                 </div>
-
-                {/* Main Image */}
-                <div className="d-flex justify-content-center align-items-top" style={{borderRadius:'22px'}}>
-                  <div style={{width:'100%', height:'auto'}}>
-                  <Image 
-                    src={item.src[currentIndex]}
-                    alt={`Product ${currentIndex + 1}`}
-                    layout="responsive" priority
-                    style={{ borderRadius: "22px", padding: "16px" }}
-                  />
-                  </div>
-                </div>
               </div>
             ))}
           </div>
 
-          <div className="d-flex gap-3 justify-content-center align-items-center">
-            <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"  }`}>
-              <IoCallOutline />
-              &nbsp;Call to Order
-            </button>
-
-            <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"   }`} onClick={() => addToCart()}>
-              <MdOutlineShoppingCart />
-              &nbsp;Add to Cart
-            </button>
-          </div>
         </Col>
         <Col sm={12} md={12} lg={6} xl={6}>
           <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
@@ -147,10 +139,20 @@ const ProductSection = ({ products, specifications }) => {
               ))}
             </tbody>
           </Table>
-          <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"  }`}>
-            <RxDownload />
-            &nbsp;Download Brochure
-          </button>
+
+          
+          <div className="d-flex gap-3 justify-content-start align-items-center">
+            <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"  }`}>
+              <IoCallOutline />
+              &nbsp;Call to Order
+            </button>
+
+            <button className={`${ urlFound ===  "hybrid-h2" ? "appbarhybrid" : urlFound === "uce" ? "appbardemoblack" : "appbardemo"   }`} onClick={() => addToCart()}>
+              <MdOutlineShoppingCart />
+              &nbsp;Add to Cart
+            </button>
+          </div>
+          
           <hr />
           <h6>
             *Depends on input water quality and Flow rate (No use of external
@@ -163,8 +165,17 @@ const ProductSection = ({ products, specifications }) => {
             chemicals, artificial enhancers, or salts.
           </h6>
           <hr />
+          
+          
         </Col>
+        
       </Row>
+      </Container>
+      <button className={`fixed-vertical-button`}>
+           
+            Download Brochure&nbsp;{"   "}
+            <RxDownload size={20} style={{ transform: 'rotate(90deg)' }}/>
+          </button>
     </div>
   );
 };
