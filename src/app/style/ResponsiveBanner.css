@@ -12,7 +12,16 @@
 
   }
 
-  .home_banner_bg {
+  .responsive-container {
+    position: absolute;
+    top: 41.5%;
+    right: 2.5%;
+    transform: translate(-50%, -50%); /* Adjust to center the element */
+    width: 11%;
+    overflow: hidden; /* Ensures content does not spill outside the rounded edges */
+  }
+
+  .home_banner_bg_1 {
     background-image: url("../../asserts/homeBanners/home_Banner_Bg.jpg");
     width: 100%;
     background-size: contain; /* Makes the image cover the entire container */
@@ -21,14 +30,14 @@
     height: 76.6vh; 
     position: relative;
   }
-  .home_banner_bg h2 {
+  .home_banner_bg_1 h2 {
     font-weight: 900;
     font-size: 60px;
     padding-left: 20px;
     color: #008AC7;
     margin: 0px;
   }
-  .home_banner_bg p {
+  .home_banner_bg_1 p {
     font-weight: 200;
     padding-left: 20px;
     font-size: 50px;
@@ -36,7 +45,7 @@
   }
   .sky_Movie {
     overflow: hidden;
-    animation: flowAnimation 60s linear infinite; /* Animation with 10s duration and infinite loop */
+    animation: flowAnimation 90s linear infinite; /* Animation with 10s duration and infinite loop */
  
   }
 
