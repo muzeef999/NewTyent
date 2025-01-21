@@ -112,17 +112,17 @@ const TyentNMP5 = () => {
 
   const features = [
     {
-      title: "7 Japanese Plates",
-      description:
-        "The Tyent NMP-7 features seven platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, -ORP up to -950*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
-      icon: Plates, // Replace with the actual path to your icon
-    },
-    {
-      title: "Advanced Power Supply",
-      description:
-        "Tyent's patented SMPS Plus power system, with 55+ adjustable settings, ensures consistent performance. Exclusively designed for ionizers, it allows Tyent to produce strong alkaline (11.5-2.5 pH) and acidic water without chemicals, enhancing both efficiency and lifespan.",
-      icon: SMPS, // Replace with the actual path to your icon
-    },
+          title: "7 Japanese Plates",
+          description:
+         "The Tyent NMP-7 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -950*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
+          icon: Plates, // Replace with the actual path to your icon
+        },
+        {
+          title: "Advanced Power Supply",
+          description:
+            "Tyent's patented SMPS Plus power system, with 55+ adjustable settings, ensures consistent performance. Exclusively designed only for Tyent ionizers, it allows Tyent to produce strong alkaline (11.5-2.5 pH) and acidic water without chemicals, enhancing both efficiency and lifespan.",
+          icon: SMPS, // Replace with the actual path to your icon
+        },
     {
       title: "Produces 7 Water Levels",
       description:
@@ -130,11 +130,11 @@ const TyentNMP5 = () => {
       icon: display, // Replace with the actual path to your icon
     },
     {
-      title: "PAST Cleaning Technology",
-      description:
-        "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering healthy, ionized water.",
-      icon: rtr, // Replace with the actual path to your icon
-    },
+          title: "PAST Cleaning Technology",
+          description:
+            "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering ionized water with more molecular hydrogen.",
+          icon: rtr, // Replace with the actual path to your icon
+        },
     {
       title: "Fixed Quantity Output",
       description:
@@ -154,11 +154,11 @@ const TyentNMP5 = () => {
       icon: filterIndication, // Replace with the actual path to your icon
     },
     {
-      title: "TURBO Mode",
-      description:
-        "The Tyent water ionizer’s features a user-friendly LCD display that tracks real-time filter usage, alerting you when replacements are needed. This convenient monitoring system helps maintain optimal performance and ensures clean, healthy water at all times.",
-      icon: turbo, // Replace with the actual path to your icon
-    },
+          title: "TURBO Mode",
+          description:
+         "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
+          icon: turbo, // Replace with the actual path to your icon
+        },
   ];
 
   const onetouch = {
