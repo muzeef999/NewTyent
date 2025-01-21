@@ -35,14 +35,28 @@ async function fetchData() {
       color1: "#f8fbfe",
       heading: "Solid Hybrid Mesh Plate Technology",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>When it comes to water ionization, one of the most crucial components is the plate design. The effectiveness of a water ionizer is largely determined by the quality, surface area, and strength of its plates.</p>
-          <ul>
-            <li><strong>Strength:</strong> Tyent plates are the thickest, longest, and have more surface area than any in the industry.</li>
-            <li><strong>Durability:</strong> These plates will never break, crumble, or leach.</li>
-            <li><strong>Design:</strong> Combines solid plates' strength with mesh plates' conductivity for superior performance.</li>
-          </ul>
-          <p>Tyent’s Solid Hybrid Mesh Plates are exclusive to their water ionizers and are backed by a 15-year warranty in India and a lifetime warranty in the USA.</p>
+        <div style="line-height: 1.6;">
+         <p>
+    When it comes to water ionization, one of the most crucial components is the plate design. The effectiveness of a water ionizer is largely determined by the quality, surface area, and strength of its plates. All Tyent Water Ionizers feature medical-grade Solid Hybrid Mesh Plate technology, offering the strength of solid plates and the extensive surface area of mesh designs. Our engineers designed Tyent plates to be the thickest, longest, and with more surface area in the industry, incorporating advanced electrolysis distribution for superior conductivity.
+  </p>
+
+  <p>
+    While most ionizers use either solid or mesh plates, Tyent’s engineers found both designs lacking. Solid plates are strong but have poor electrical distribution, as electricity tends to flow around the outer edge like a lightning rod. Mesh plates provide more edges for better electrical distribution but are not durable enough to last.
+  </p>
+
+  <p>
+    To overcome these limitations, Tyent developed the Solid Hybrid Mesh Plate, designed according to Faraday’s electrolysis principles. This unique plate combines the strength of solid plates with the superior conductivity of mesh design. Small holes are drilled into the solid plate to increase surface area for electrolysis, then the plate is dipped multiple times in platinum and baked for enhanced performance.
+  </p>
+
+  <p>
+    Tyent’s Solid Hybrid Mesh Plates offer the best of both worlds: unmatched strength and exceptional electrolysis power. These plates will never break, crumble, or leach and are exclusive to Tyent water ionizers.
+  </p>
+
+  <p>
+    The plates are sourced from Permelac, a renowned Japanese company founded in 1969 and known for producing the industry's strongest plates. Tyent backs these plates with a 15-year warranty in India and a lifetime warranty in the USA. Made from titanium and coated with platinum, these plates undergo multiple dipping and baking processes for unmatched durability. Tyent is also the only ionizer brand that proudly discloses its plate manufacturer.
+  </p>
+
+  <h3>Strength + Durability + More Surface Area + More Antioxidants = Solid Hybrid Mesh Plates</h3>
         </div>`,
       icon: platess
     },
@@ -51,13 +65,10 @@ async function fetchData() {
       color1: '#f8fbfe',
       heading: "Plates with More Surface Area in the Industry",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>Plates are the core of a water ionizer, and the key factor is their surface area, not their size. Tyent ionizers utilize <strong>Solid Hybrid Mesh Plate technology</strong>, offering:</p>
-          <ul>
-            <li>Superior strength and durability</li>
-            <li>The largest surface area in the industry</li>
-            <li>Better overall performance with higher antioxidant production and accurate pH levels</li>
-          </ul>
+        <div style="line-height: 1.6;">
+          <p>
+          Plates are the core of a water ionizer, and the key factor is their surface area, not their height, width, or diameter. For instance, the size of a plate doesn’t directly impact the production of antioxidants. Some brands claim to have the largest plates, yet produce lesser antioxidants (-ORP). Tyent water ionizers utilize Solid Hybrid Mesh Plate technology, offering superior strength, durability and largest surface area in the industry, enabling higher antioxidant production and more accurate pH levels, delivering better overall performance. 
+          </p>
         </div>`,
       icon: plateSurfaceArea
     },
@@ -81,12 +92,15 @@ async function fetchData() {
       color1: '#f8fbfe',
       heading: "Super Water Capability",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>Tyent coined the term “Super Water,” offering a pH range of <strong>2.5 to 11.5*</strong>, ideal for various uses:</p>
-          <ul>
-            <li><strong>Low pH (2.5 - 3.5):</strong> Antiseptic and all-natural sanitizer for surfaces.</li>
-            <li><strong>High pH (11+):</strong> Removes oil-based pesticides, wax from fruits, and stains.</li>
-          </ul>
+        <div style="line-height: 1.6;">
+         <p>
+         Ionized, hydrogen-rich alkaline water is highly beneficial, but its effectiveness depends on the purity of your drinking water. Tyent Water Ionizers feature two .01 micron filters, creating a multi-stage, customized system designed to remove impurities, bacteria, viruses, contaminants, and heavy metals from your tap water.
+
+Our Tyent-filters use .01 micron filter media, similar to those used in kidney dialysis machines, and are the largest in the industry. The increased size of our filters ensures even greater water purity. Tyent water ionizers effectively eliminate contaminants, viruses, bacteria, and microorganisms.
+
+As water passes lengthwise through the filters, the extended length provides more filtration media for the water to pass through, resulting in even purer water. Tyent stands as the industry leader in water filtration technology.
+
+         </p>
         </div>`,
       icon: phscale
     },
@@ -95,8 +109,10 @@ async function fetchData() {
       color1: '#f8fbfe',
       heading: "Extreme Filtration Capacity",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>Tyent ionizers boast an <strong>extreme filtration capacity</strong>, offering water purity like no other, ensuring the removal of harmful substances while retaining essential minerals.</p>
+        <div style="line-height: 1.6;">
+             <p>
+             Tyent Water Ionizers use an automated Polarity Anti Scale Technology (PAST)- one of the most advanced cleaning systems in the industry. This automated cleaning cycle is triggered by both a timer and an internal sensor to ensure minimal mineral scale buildup on the electrodes for long-term performance. Better cleaning means longer-lasting components and healthier water.
+             </p>
         </div>`,
       icon: tyentFilters
     },
@@ -105,8 +121,10 @@ async function fetchData() {
       color1: '#f8fbfe',
       heading: "PAST Cleaning System",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>The <strong>PAST Cleaning System</strong> ensures the longevity of your water ionizer by thoroughly cleaning the plates and maintaining performance efficiency.</p>
+        <div style="line-height: 1.6;">
+        <p>Tyent water ionizers stand out as the only ionizers in the industry featuring true one-touch longest display technology. Designed with modern customer needs in mind, Tyent’s advanced one-touch display ensures a simplified and user-friendly experience. With a single touch on the intuitive touch control panel, users can easily select their desired pH level and enjoy clean, healthy water whenever they want.</p>
+        <p>Tyent water ionizers are so simple to use that they’re perfect for children, seniors, and everyone in between. The one-touch display also allows users to auto-clean, select the required water quantity, and access many other convenient features. </p>
+        <p>For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-touch longest display is unmatched in both functionality and convenience.</p>
         </div>`,
       icon: RTR
     },
@@ -116,7 +134,8 @@ async function fetchData() {
       heading: "International Quality Certifications",
       description: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>Tyent ionizers are recognized globally, holding multiple <strong>international quality certifications</strong> for their unmatched performance and durability.</p>
+        <p></p>
+        <p></p>
         </div>`,
       icon: International
     },

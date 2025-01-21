@@ -11,3 +11,45 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 
   }
+
+  .home_banner_bg {
+    background-image: url("../../asserts/homeBanners/home_Banner_Bg.jpg");
+    width: 100%;
+    background-size: contain; /* Makes the image cover the entire container */
+    background-position: top center; /* Aligns the image to the top and horizontally centers it */
+    background-repeat: no-repeat;
+    height: 76.6vh; 
+    position: relative;
+  }
+  .home_banner_bg h2 {
+    font-weight: 900;
+    font-size: 60px;
+    padding-left: 20px;
+    color: #008AC7;
+    margin: 0px;
+  }
+  .home_banner_bg p {
+    font-weight: 200;
+    padding-left: 20px;
+    font-size: 50px;
+    color: #008AC7;
+  }
+  .sky_Movie {
+    overflow: hidden;
+    animation: flowAnimation 60s linear infinite; /* Animation with 10s duration and infinite loop */
+ 
+  }
+
+  @keyframes flowAnimation {
+    0% {
+      right: -200px; /* Start off-screen on the left */
+    }
+    50% {
+      left: 50%; /* Image moves to the center of the container */
+      transform: translateX(-50%); /* Center the image in the viewport */
+    }
+    100% {
+      right: 100%; /* Move off-screen on the right */
+    }
+  }
+

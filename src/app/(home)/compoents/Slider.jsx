@@ -1,94 +1,66 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
-import slider1img from "@/asserts/slider/slide1.png"
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import  homebanner1 from "@/asserts/homeBanners/home_Banner1.jpg"
+import homebanner1 from "@/asserts/homeBanners/home_Banner1.jpg";
+import "@/app/style/ResponsiveBanner.css";
+import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.png";
 
 const Slider = () => {
+  const [bannerClass, setBannerClass] = useState("");
+
+  const bannerClasses = [
+    "home_banner_bg_1",
+    "home_banner_bg_2",
+    "home_banner_bg_3",
+  ];
+
+  useEffect(() => {
+    const randomClass =
+      bannerClasses[Math.floor(Math.random() * bannerClasses.length)];
+    setBannerClass(randomClass);
+  }, []); // Empty dependency array means it runs once on component mount
+
   return (
-    <div
-      id="carouselExampleIndicators"
-      className="carousel slide"
-      data-bs-ride="carousel"
-    >
-      {/* Carousel Indicators */}
-      <div className="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
+    <div>
+      <div className={bannerClass}>
+        <div className="home_banner_bg_1">
+          <div className="sky_Movie" style={{ width: "100%", height: "auto" }}>
+            <Image
+              src={Banner1_sky}
+              alt="Home_banner"
+              layout="responsive"
+              priority
+            />
+          </div>
+          <h2>Don't Just Drink Water - Drink Life!</h2>
+          <p>
+            Boost Immunity, Health, and Vitality <br /> with Tyent Water
+          </p>
+        </div>
+     
 
-      {/* Carousel Inner */}
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <Row>
-            <Col md={6} className="d-flex justify-content-center align-items-center">
-              <div>
-                <h1>Happiness comes from </h1>
-                <h1 style={{fontWeight:'700', color:'#008ac7'}}>Healthiness</h1>
-                <p>Since 2016, Tyent in India has been delivering the best in hydrogen-rich <br/> alkaline water solutions. Discover advanced Japanese technology in water <br/> ionizers and hydrogen generators, delivering pure, enriched water to promote<br/> health and wellness.</p>
-              </div>
-            </Col>
-            <Col md={6}>
-            <div style={{width:'100%'}}>
-               <Image src={slider1img} alt="slider npm top counter"  layout="responsive" priority/>
-            </div>
-            </Col>
-          </Row>
-        </div>
-        <div className="carousel-item">
-        <div style={{width:'100%'}}>
-               <Image src={homebanner1} alt="slider npm top counter"  layout="responsive" priority/>
-            </div>
-        </div>
-        <div className="carousel-item">
-          <Row>
-            <Col md={6}>
-              <div>
-                <h1>Hello2</h1>
-              </div>
-            </Col>
-            <Col md={6}></Col>
-          </Row>
+      <div className="home_banner_bg_2">
+        <div style={{ width: "100%" }}>
+          <Image
+            src={homebanner1}
+            alt="slider npm top counter"
+            layout="responsive"
+            priority
+          />
         </div>
       </div>
 
-      {/* Carousel Controls */}
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+      <div className="home_banner_bg_3">
+        <div style={{ width: "100%" }}>
+          <Image
+            src={homebanner1}
+            alt="slider npm top counter"
+            layout="responsive"
+            priority
+          />
+        </div>
+        </div>
+      </div>
     </div>
   );
 };
