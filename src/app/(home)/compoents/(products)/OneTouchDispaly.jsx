@@ -27,8 +27,8 @@ const OneTouchDispaly = () => {
           <h2 className="text-center" style={{ color: '#008AC7', fontWeight: '600' }}>
             Discover Tyent’s 7 Water Types
           </h2>
-          <p className="text-center" style={{ fontSize: '14px', fontWeight: 500 }}>
-            Tyent NMP-5 water ionizer produces a continuous stream of 7 different water levels,
+          <p className="text-center" style={{ fontWeight: 500 }}>
+          Every  Tyent water ionizer produces a continuous stream of 7 different water levels,
             <br />
             ranging from strong alkaline water (11.5 pH) to strong acidic water (2.5 pH) to meet all your family’s needs.
           </p>

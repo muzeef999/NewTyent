@@ -37,31 +37,36 @@ const data = [
     icon: machine,
     title: "9 Japanese Plates",
     content:
-      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+ "The Tyent NMP-9 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -1050*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years."
+         
   },
   {
     icon: machine,
     title: "Advanced power supply",
     content:
-      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+    "Tyent's patented SMPS Plus power system, with 55+ adjustable settings, ensures consistent performance. Exclusively designed only for Tyent ionizers, it allows Tyent to produce strong alkaline (11.5-2.5 pH) and acidic water without chemicals, enhancing both efficiency and lifespan.",
+         
   },
   {
     icon: machine,
     title: "Past cleaning Technology",
     content:
-      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+    "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering ionized water with more molecular hydrogen.",
+      
   },
   {
     icon: machine,
     title: "Turbo mode",
     content:
-      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+    "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
+        
   },
   {
     icon: machine,
     title: "Eco mode",
     content:
-      "The Tyent UCE-9 PLUS features 9 platinum-coated, 99.99% pure solid hybrid mesh electrode/plates crafted with advanced Japanese technology, ensuring stable oxygen levels, Molecular hydrogen upto 1800 PPB,-ORP up to-1050*, and superior micro-clustering. Includes 15-year warranty, 45+ years lifespan.",
+    "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
+    
   },
 ];
 
@@ -109,12 +114,12 @@ const page = () => {
   ];
 
   const specifications = [
-    { label: "Model", name: "Tyent UCE-9 plus" },
-    { label: "Price", name: "325000" },
-    { label: "Electrode/Plates", name: "5" },
-    { label: "pH Range", name: "2.5 - 11.5" },
-    { label: "ORP Range", name: "Up to -1050" },
-    { label: "Hydrogen Range", name: "Up to 1800 PPB" },
+    { label: "Model", name: "Tyent UCE-11 Plus" },
+    { label: "Price", name: "346000" },
+    { label: "Electrode/Plates", name: "11" },
+    { label: "pH Range", name: "2.5 - 11.5*" },
+    { label: "ORP Range", name: "Up to -1150*" },
+    { label: "Hydrogen Range", name: "Up to 1800* PPB" },
     { label: "Generates", name: "7 types of water levels" },
     {
       label: "Warranty",
@@ -223,7 +228,7 @@ const page = () => {
                 <b>TYENT UCE-13 PLUS</b>
               </h2>
               <p className="m-2">
-                The <b>Tyent UCE-13 PLUS</b> is a best-selling, space-saving
+                The <b>Tyent UCE-9 PLUS</b> is a best-selling, space-saving
                 flagship under counter water ionizer, crafted to elevate your
                 high-end kitchen with its advanced technology and sleek,
                 aesthetic design. Its compact form and modern look blend
@@ -236,7 +241,7 @@ const page = () => {
                 from Permelac, Japan (since 1969), made of titanium and coated
                 in platinum for 99.9% purity, Offering seven different water
                 levels, it generates selective antioxidant-rich molecular
-                hydrogen up to 1800 PPB and -ORP up to -1050. Backed by a 3-year
+                hydrogen up to 1800* PPB and -ORP up to -1050*. Backed by a 3-year
                 machine warranty, a 15-years plates/electrode warranty, and a
                 45+ year lifespan.
               </p>

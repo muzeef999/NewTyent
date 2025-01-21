@@ -25,8 +25,8 @@ const Touchpreview = () => {
     { id: 16, text: "System setup" },
     { id: 17, text: "Manual Cleaning" },
     { id: 18, text: "Voice ON/OFF" },
-    { id: 19, text: "1st Filter indicator & reset" },
-    { id: 20, text: "2nd Filter indicator & reset" },
+    { id: 19, text: "1st Filter indicator" },
+    { id: 20, text: "2nd Filter indicator" },
   ];
   
 
@@ -48,7 +48,7 @@ const Touchpreview = () => {
     <div className="position-absolute d-flex justify-content-center align-items-center" style={{
                       top: "24.5%",
                       left: "14%",
-                      width:'72%',
+                      width:'73%',
                       zIndex:-9
                     }}
                   >

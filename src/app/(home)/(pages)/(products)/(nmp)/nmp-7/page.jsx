@@ -247,7 +247,7 @@ const TyentNMP5 = () => {
                 99.9% purity. With an expanded surface area, it maintains stable
                 oxygen levels and enhances micro-clustering. Offering seven
                 different water levels, it generates selective antioxidant
-                molecular hydrogen up to 1550 PPB and an ORP of up to -950. It
+                molecular hydrogen up to 1550* PPB and an ORP of up to -950*. It
                 includes a 3-year warranty on the machine, a 15-year warranty on
                 the electrodes/plates, and a lifespan exceeding 45 years. Ideal
                 for small households, it provides clean, healthy ionized
