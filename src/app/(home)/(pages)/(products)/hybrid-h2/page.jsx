@@ -29,11 +29,11 @@ const page = () => {
 
   const specifications = [
     { label: "Model", name: "Tyent H2-Hybrid" },
-    { label: "Price", name: "325000" },
-    { label: "Electrode/Plates", name: "5" },
-    { label: "pH Range", name: "2.5 - 11.5" },
-    { label: "ORP Range", name: "Up to -1050" },
-    { label: "Hydrogen Range", name: "Up to 1800 PPB" },
+    { label: "Price", name: "367000" },
+    { label: "Electrode Type", name: "Twin cell Technology" },
+    { label: "pH Range", name: "2.5 - 11.5*" },
+    { label: "ORP Range", name: "Up to -1250*" },
+    { label: "Hydrogen Range", name: "Up to 1850* PPB" },
     { label: "Generates", name: "7 types of water levels" },
     {
       label: "Warranty",
@@ -157,7 +157,7 @@ const page = () => {
                     delivers advanced water ionization, producing high levels of
                     molecular hydrogen and antioxidants, enhancing hydration
                     with optimal purity and health benefits, Molecular hydrogen
-                    upto 1850 PPB,-ORP up to-1050*, and superior micro
+                    upto 1850 PPB,-ORP up to-1250*, and superior micro
                     clustering. Includes 15-year warranty, 45+ years lifespan
                   </p>
                 </div>
@@ -820,10 +820,9 @@ const page = () => {
                 <h2>
                   <b>The specially developed HYBRID water cell</b>
                 </h2>
-                <p>
-                  Technology Patent [10-2017-00903670] PCT International patent
-                  application [PCT/KR2017/011890]
-                </p>
+                <p><b>
+                   PCT International patent application [PCT/KR2017/011890] </b></p> <p><b> Technology Patent [10-2017-00903670]</b> </p>
+                
                 <p>
                   {
                     "Tyent's H2-Hybrid is a revolutionary innovation featuring patented dual electrolysis chambers. The first chamber, controlled by a one-touch display, produces 7 types of hydrogen-rich alkaline water with pH levels ranging from 11.5 to 2.5. The second chamber, equipped with advanced PEM (Proton Exchange Membrane) technology and operated via a jog dial, delivers water rich in selective antioxidant molecular hydrogen at a neutral pH without alkalinity."
@@ -847,7 +846,7 @@ const page = () => {
                   layout="responsive"
                   priority
                   style={{
-                    filter: "drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5))", // Shadow effect
+                    filter: "drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.1))", // Shadow effect
                   }}
                 />
               </div>

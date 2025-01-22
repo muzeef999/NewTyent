@@ -12,40 +12,101 @@
 
   }
 
-  .responsive-container {
+  .responsive-container { 
     position: absolute;
-    top: 41.5%;
-    right: 2.5%;
+    top: 39.9%;
+    right: 14.2%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
-    width: 11%;
-    overflow: hidden; /* Ensures content does not spill outside the rounded edges */
+    width: 10.8%;
+    transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+    z-index: 1;
+    background-color: #424c58;
+   
   }
 
-  .home_banner_bg_1 {
-    background-image: url("../../asserts/homeBanners/home_Banner_Bg.jpg");
-    width: 100%;
-    background-size: contain; /* Makes the image cover the entire container */
-    background-position: top center; /* Aligns the image to the top and horizontally centers it */
-    background-repeat: no-repeat;
-    height: 76.6vh; 
-    position: relative;
+
+  .home_banner_bg_spalsh{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    right: 9%;
+    animation: rotateAnimation 60s linear infinite; /* Infinite loop rotation */
+
   }
-  .home_banner_bg_1 h2 {
+
+  /* mobile view */
+  @media (max-width: 767px) {
+    .home_banner_bg_1 {
+      background-image: url("../../asserts/homeBanners/home_Banner_mobile_Bg.png");
+      width: 100%;
+      background-size: contain; /* Makes the image cover the entire container */
+      background-position: top center; /* Aligns the image to the top and horizontally centers it */
+      background-repeat: no-repeat;
+      height: 76.6vh; 
+      position: relative;
+      z-index: 99;
+    }
+    .home_banner_bg_2 {
+      background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
+      width: 100%;
+      background-size: contain; /* Makes the image cover the entire container */
+      background-position: top center; /* Aligns the image to the top and horizontally centers it */
+      background-repeat: no-repeat;
+      height: 76.6vh; 
+      position: relative;
+      z-index: 99;
+    }
+
+
+
+  }
+
+  /* desktop view */
+  @media (min-width: 768px) {
+    .home_banner_bg_1 {
+      background-image: url("../../asserts/homeBanners/home_Banner_Bg.png");
+      width: 100%;
+      background-size: contain; /* Makes the image cover the entire container */
+      background-position: top center; /* Aligns the image to the top and horizontally centers it */
+      background-repeat: no-repeat;
+      height: 76.6vh; 
+      position: relative;
+      z-index: 99;
+    }
+    .home_banner_bg_2 {
+      background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
+      width: 100%;
+      background-size: contain; /* Makes the image cover the entire container */
+      background-position: top center; /* Aligns the image to the top and horizontally centers it */
+      background-repeat: no-repeat;
+      height: 76.6vh; 
+      position: relative;
+      z-index: 99;
+    }
+  
+  
+  }
+  
+  
+.water-animation h1 {
+  font-size: 25px;
+}
+  
+  .water-animation h2 {
     font-weight: 900;
-    font-size: 60px;
-    padding-left: 20px;
+    font-size: 14px;
     color: #008AC7;
     margin: 0px;
   }
-  .home_banner_bg_1 p {
+  .water-animation p {
     font-weight: 200;
-    padding-left: 20px;
-    font-size: 50px;
+    font-size: 14px;
     color: #008AC7;
   }
   .sky_Movie {
     overflow: hidden;
-    animation: flowAnimation 90s linear infinite; /* Animation with 10s duration and infinite loop */
+    animation: flowAnimation 160s linear infinite; /* Animation with 10s duration and infinite loop */
  
   }
 
@@ -61,4 +122,39 @@
       right: 100%; /* Move off-screen on the right */
     }
   }
+
+
+
+  
+  .animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #38b6ff; /* Glow effect */
+    animation: float 3s infinite ease-in-out, glowing-text 3s infinite alternate ease-in-out;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Move up slightly */
+    }
+    100% {
+      transform: translateY(0); /* Return to the original position */
+    }
+  }
+
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
 

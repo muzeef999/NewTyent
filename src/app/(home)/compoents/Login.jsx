@@ -14,7 +14,7 @@ import Signup from "./Signup";
 
 const Login = () => {
   const [showRequestComponent, setShowRequestComponent] = useState(false);
-  const [email, setEmail] = useState(""); // State for email
+  const [phoneNumber, setPhoneNumber] = useState(""); // State for phone number
   const [password, setPassword] = useState(""); // State for password
   const [callbackUrl, setCallbackUrl] = useState("/dashboard");
 
@@ -35,8 +35,7 @@ const Login = () => {
 
     try {
       const data = await signIn("credentials", {
-        
-        email, // Pass email state
+        phoneNumber, // Pass phone number state
         password, // Pass password state
         callbackUrl,
         redirect: false,
@@ -44,7 +43,7 @@ const Login = () => {
 
       if (data?.error) {
         console.error(data.error);
-        alert("Invalid email or password");
+        alert("Invalid phone number or password");
       } else {
         console.log("Login success");
         router.push(data.url || callbackUrl);
@@ -61,54 +60,38 @@ const Login = () => {
         <Signup />
       ) : (
         <>
-        <form onSubmit={submitHandler}>
-          <p className="text-center">
-            Hey, enter your details to sign in to your account
-          </p>
+          <form onSubmit={submitHandler}>
+            <p className="text-center">
+              Hey, enter your details to sign in to your account
+            </p>
 
-          <Input
-            type="text"
-            name="email"
-            label="Enter Email"
-            placeholder="Enter Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+            <Input
+              type="text"
+              name="phoneNumber"
+              label="Enter Phone Number"
+              placeholder="Enter Phone Number"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
 
-          <Input
-            type="password"
-            name="password"
-            label="Password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            <Input
+              type="password"
+              name="password"
+              label="Password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-          <br />
-          <p>Having trouble signing in?</p>
+            <br />
+            <p>Having trouble signing in?</p>
 
-          <Button type="submit" name="Submit" />
+            <Button type="submit" name="Submit" />
           </form>
           <br />
           <div className="text-center">
             <p>- Or sign in with -</p>
-            <div className="d-flex">
-              <GoogleLoginButton
-                onClick={() => signIn("google", { callbackUrl })}
-              >
-                <span>Google</span>
-              </GoogleLoginButton>
-              <FacebookLoginButton
-                onClick={() => signIn("facebook", { callbackUrl })}
-              >
-                Facebook
-              </FacebookLoginButton>
-              <LinkedInLoginButton
-                onClick={() => signIn("linkedin", { callbackUrl })}
-              >
-                LinkedIn
-              </LinkedInLoginButton>
-            </div>
+
             <br />
             <p
               style={{ cursor: "pointer" }}
@@ -117,8 +100,7 @@ const Login = () => {
               Don't have an account? Request now
             </p>
           </div>
-          </>
-       
+        </>
       )}
     </div>
   );

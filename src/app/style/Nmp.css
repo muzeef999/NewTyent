@@ -125,7 +125,7 @@
   .nmp5Display{
     position: absolute;
     width: 24%;
-    height: auto;
+    height: auto; 
     top:34.2%; 
     right: 1.5%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
@@ -191,6 +191,17 @@
     height: auto;
     top: 36.6%;
     right: 33.6%;
+    transform: translate(-50%, -50%); /* Adjust to center the element */
+    z-index: 0;
+  }
+
+
+  .nmp9Display {
+    position: absolute;
+    width: 14.5%;
+    height: auto;
+    top: 54.5%;
+    right: 32%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
   }

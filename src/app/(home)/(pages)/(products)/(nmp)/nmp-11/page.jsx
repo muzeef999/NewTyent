@@ -161,7 +161,7 @@ const TyentNMP5 = () => {
     {
           title: "TURBO Mode",
           description:
-         "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
+         "Tyent is the only water ionizer in the industry that produces strong alkaline water at 11.5 pH without the use of chemicals, salts, or enhancers, thanks to its patented SMPS PLUS technology. This powerful water is ideal for cleaning fruits and vegetables, removing pesticides, insecticides, wax, and color coatings.",
           icon: turbo, // Replace with the actual path to your icon
         },
     {
@@ -223,17 +223,51 @@ const TyentNMP5 = () => {
             }}
           />
 
+          
+<div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+              Globally Trusted, Scientifically Proven
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-end align-items-center"
+              >
+                {/* Benefits */}
+                <div className="mt-2">
+                  
+                  <p className={"nmp-banner-benefits m-0"}>
+                    <span>Drink Smarter</span>
+                    <br />
+                    <span> Live Healthier </span>
+                  </p>
+                  <h1 className={"nmp-banner-title m-0"}>Tyent Water</h1>
+                </div>
+
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-top align-items-top">
+                  <svg width="20" height="115">
+                    <line
+                      x1="10"
+                      y1="0"
+                      x2="10"
+                      y2="115"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* NmpDispalayfinal for Desktop */}
-          <div
-            style={{
-              position: "absolute",
-              width: "15.8%", // Adjusted width for desktop
-              height: "auto",
-              top: "29%", // Fine-tuned for alignment
-              right: "8.4%", // Align for desktop view
-              zIndex: 0,
-            }}
-          >
+          <div className="nmp9Display">
             <Display />
           </div>
         </div>

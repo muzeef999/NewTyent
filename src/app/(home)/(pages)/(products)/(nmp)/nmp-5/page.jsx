@@ -121,7 +121,7 @@ const TyentNMP5 = () => {
     {
       title: "5 Japanese Plates",
       description:
-     "The Tyent NMP-5 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -850*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
+        "The Tyent NMP-5 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -850*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
       icon: Plates, // Replace with the actual path to your icon
     },
     {
@@ -163,7 +163,7 @@ const TyentNMP5 = () => {
     {
       title: "TURBO Mode",
       description:
-     "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
+        "Tyent is the only water ionizer in the industry that produces strong alkaline water at 11.5 pH without the use of chemicals, salts, or enhancers, thanks to its patented SMPS PLUS technology. This powerful water is ideal for cleaning fruits and vegetables, removing pesticides, insecticides, wax, and color coatings.",
       icon: turbo, // Replace with the actual path to your icon
     },
   ];
@@ -300,12 +300,11 @@ const TyentNMP5 = () => {
         </div>
       </div>
 
-      
-        <div className="section-spacing">
-          <ProductSection products={products} specifications={specifications} />
-        </div>
+      <div className="section-spacing">
+        <ProductSection products={products} specifications={specifications} />
+      </div>
 
-        <Container>
+      <Container>
         <div className="section-spacing">
           <Row>
             <Col>
@@ -321,8 +320,8 @@ const TyentNMP5 = () => {
                 With an increased surface area, it delivers stable oxygen levels
                 and improved micro-clustering. It offers seven different water
                 ionization levels, It generates selective antioxidant molecular
-                hydrogen up to 1550* PPB and an ORP of up to -850* and comes with
-                a 3 year warranty on the machine, a 15 year warranty on the
+                hydrogen up to 1550* PPB and an ORP of up to -850* and comes
+                with a 3 year warranty on the machine, a 15 year warranty on the
                 electrodes/plates, and a lifespan of over 45+ years. Perfect for
                 small households, it effortlessly provides clean,
                 healthy ionized water.
@@ -366,18 +365,46 @@ const TyentNMP5 = () => {
             }}
           />
 
-          <div className="nmp-5-desktop-one-touch">
-            <div>
-              <h2>{onetouch.title}</h2>
-              <p>{onetouch.subTitle}</p>
-              <p>To Know How To Use</p>
-              <Link
-                className={"appbardemo"}
-                style={{ textDecoration: "none" }}
-                href={`${onetouch.link}`}
+
+<div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                Build Resilience with <span>Every Drop</span>
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
               >
-                &nbsp;Click here <GoArrowRight />
-              </Link>
+                {/* Benefits */}
+
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="80">
+                    <line
+                      x1="10"
+                      y1="0"
+                      x2="10"
+                      y2="80"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+
+                <div className="mt-3">
+                  <h1 className={"nmp-banner-title"}>Tyent Water</h1>
+                  <p className={"nmp-banner-benefits"}>
+                    <span>For Stronger Immunity</span>
+                    <br />
+                    and <span>Natural Protection</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -400,18 +427,50 @@ const TyentNMP5 = () => {
             }}
           />
 
-          <div className="nmp-5-desktop-one-touch">
-            <div>
-              <h2>{onetouch.title}</h2>
-              <p>{onetouch.subTitle}</p>
-              <p>To Know How To Use</p>
-              <Link
-                className={"appbardemo"}
-                style={{ textDecoration: "none" }}
-                href={`${onetouch.link}`}
+
+
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                {onetouch.title}
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
               >
-                &nbsp;Click here <GoArrowRight />
-              </Link>
+                {/* Benefits */}                
+                <div className="mt-3">
+                  <div>
+                  <p style={{width:'30%', float: 'right'}} >{onetouch.subTitle}</p>
+                  <p>To Know How To Use</p>
+                  <Link
+                    className={"appbardemo"}
+                    style={{ textDecoration: "none" }}
+                    href={`${onetouch.link}`}
+                  >
+                    &nbsp;Click here <GoArrowRight />
+                  </Link>
+                  </div>
+                </div>
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="80">
+                    <line
+                      x1="10"
+                      y1="0"
+                      x2="10"
+                      y2="80"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 

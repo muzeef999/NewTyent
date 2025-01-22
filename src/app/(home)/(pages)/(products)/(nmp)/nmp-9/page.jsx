@@ -156,12 +156,12 @@ const TyentNMP5 = () => {
         "The Tyent water ionizer’s features a user-friendly LCD display that tracks real-time filter usage, alerting you when replacements are needed. This convenient monitoring system helps maintain optimal performance and ensures clean, healthy water at all times.",
       icon: filterIndication, // Replace with the actual path to your icon
     },
-    {
-          title: "TURBO Mode",
-          description:
-         "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
-          icon: turbo, // Replace with the actual path to your icon
-        },
+   {
+         title: "TURBO Mode",
+         description:
+        "Tyent is the only water ionizer in the industry that produces strong alkaline water at 11.5 pH without the use of chemicals, salts, or enhancers, thanks to its patented SMPS PLUS technology. This powerful water is ideal for cleaning fruits and vegetables, removing pesticides, insecticides, wax, and color coatings.",
+         icon: turbo, // Replace with the actual path to your icon
+       },
     {
       title: "Jog Dail",
       description:
@@ -223,17 +223,50 @@ const TyentNMP5 = () => {
             }}
           />
 
+          
+<div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+              Sustainable Hydration, Sustainable Health
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-end align-items-center"
+              >
+                {/* Benefits */}
+                <div className="mt-2">
+                  <h1 className={"nmp-banner-title"}>Tyent Ionizers </h1>
+                  <p className={"nmp-banner-benefits m-0"}>
+                    <span>For a Greener</span>
+                    <br />
+                    and <span>Cleaner Tomorrow</span>
+                  </p>
+                </div>
+
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-top align-items-top">
+                  <svg width="20" height="115">
+                    <line
+                      x1="10"
+                      y1="0"
+                      x2="10"
+                      y2="115"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* NmpDispalayfinal for Desktop */}
-          <div
-            style={{
-              position: "absolute",
-              width: "12.3%", // Adjusted width for desktop
-              height: "auto",
-              top: "19%", // Fine-tuned for alignment
-              right: "13%", // Align for desktop view
-              zIndex: 0,
-            }}
-          >
+          <div className="nmp9Display">
             <Display />
           </div>
         </div>
