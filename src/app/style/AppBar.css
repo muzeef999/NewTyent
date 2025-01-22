@@ -637,18 +637,24 @@ background-color: transparent;
 }
 
 .fixed-vertical-button {
-  position: fixed;  /* Fixes the button's position on the screen */
-  right: -95px;          /* Attach it to the right edge of the page */
-  top: 50%;          /* Position it vertically centered */
-  transform: translateY(-50%) rotate(270deg); /* Rotate the button by 270 degrees (vertical) and center it */
-  padding: 10px 20px;  /* Add padding to the button */
+  writing-mode: vertical-rl; /* Rotate text vertically from right to left */
+  transform: rotate(180deg); /* Flip the text for proper alignment */  
+  text-align: center; /* Center align text */
+  position: fixed;  /* Fixes the button's position on the screen */          /* Attach it to the right edge of the page */
+  top: 50%;
+  right: 0;          /* Position it vertically centered */
+  padding: 10px;  /* Add padding to the button */
   background-color: #008ac7;  /* Background color */
   color: white;      /* Button text color */
   border: none;      /* Remove border */
-  border-radius: 5px; /* Rounded corners */
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   cursor: pointer;   /* Add pointer cursor on hover */
+  display: inline-block;
+  vertical-align: middle; /* Align it vertically with the text */
   z-index: 1000;     /* Ensure it's above other content */
 }
+
 
 .fixed-vertical-button:hover {
   background-color: #FFF; /* Change background on hover */

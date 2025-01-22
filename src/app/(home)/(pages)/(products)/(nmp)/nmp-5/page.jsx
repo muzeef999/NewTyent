@@ -442,7 +442,7 @@ const TyentNMP5 = () => {
               >
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="80">
+                  <svg width="8" height="80">
                     <line
                       x1="0"
                       y1="0"
