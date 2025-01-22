@@ -206,12 +206,12 @@ const TyentNMP5 = () => {
               >
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="70">
+                  <svg width="8" height="40">
                     <line
                       x1="0"
                       y1="0"
                       x2="0"
-                      y2="70"
+                      y2="40"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
@@ -264,7 +264,7 @@ const TyentNMP5 = () => {
               >
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="70">
+                  <svg width="8" height="70">
                     <line
                       x1="0"
                       y1="0"
@@ -375,12 +375,12 @@ const TyentNMP5 = () => {
               >
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="80">
+                  <svg width="8" height="70">
                     <line
                       x1="0"
                       y1="0"
                       x2="0"
-                      y2="80"
+                      y2="70"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
