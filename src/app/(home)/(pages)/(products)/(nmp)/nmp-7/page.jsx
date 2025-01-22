@@ -24,6 +24,9 @@ import NMP5_BANNER_DESKTOP from "@/asserts/nmp/NMP5_BANNER_DESKTOP.webp";
 import NMP5_BANNER_MOBILE from "@/asserts/nmp/NMP5_BANNER_MOBILE.webp";
 import Image from "next/image";
 import NmpDispalayfinal from "../NmpDispalayfinal";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
+
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -146,7 +149,7 @@ const TyentNMP5 = () => {
       description:
         "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
       icon: ECOMode, // Replace with the actual path to your icon
-    },
+    }, 
     {
       title: "Real-Time Filter Indication",
       description:
@@ -216,32 +219,33 @@ const TyentNMP5 = () => {
 
               <div
                 data-aos="fade-left"
-                className="d-flex justify-content-end align-items-center"
+                className="d-flex justify-content-start align-items-center"
               >
-                {/* Benefits */}
-                <div className="mt-2">
-                  
-                  <p className={"nmp-banner-benefits m-0"}>
-                    <span> 25+ Years of </span>
-                    <br />
-                    <span>Innovation in Every Sip of </span>
-                  </p>
-                  <h1 className={"nmp-banner-title m-0"}>Tyent Water</h1>
-                </div>
-
+                
                 {/* Decorative Line */}
-                <div className="d-flex justify-content-top align-items-top">
-                  <svg width="20" height="115">
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="70">
                     <line
-                      x1="10"
+                      x1="0"
                       y1="0"
-                      x2="10"
-                      y2="115"
+                      x2="0"
+                      y2="70"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
                   </svg>
                 </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  
+                  <p className={"nmp-banner-benefits"}>
+                    <span>Innovation in Every Sip of </span>
+                    <br/>
+                    <span> 25+ Years of </span>
+                  </p>
+                  
+                </div>
+
               </div>
             </div>
           </div>
@@ -261,7 +265,7 @@ const TyentNMP5 = () => {
           <Row className="mb-5">
             <Col>
               <p
-                className="text-center"
+                className="text-start"
                 style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
               >
                 The Tyent NMP-7 is engineered with cutting-edge technology,
@@ -347,17 +351,52 @@ const TyentNMP5 = () => {
               }}
             />
 
+            
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                {onetouch.title}
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="70">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="70"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"nmp-banner-benefits-touch"}>
+                    {onetouch.subTitle}
+                    <br />
+                  </p>
+                </div>
+              </div>
+              <br/>
+              <Link className="appbardemo" style={{textDecoration:'none'}} href={"/7-types-of-Tyent-water"}>
+                Click Here &nbsp;
+                <GoArrowRight />
+              </Link>
+            </div>
+          </div>
+
             {/* NmpDispalayfinal for Desktop */}
-            <div
-              style={{
-                position: "absolute",
-                width: "12.3%", // Adjusted width for desktop
-                height: "auto",
-                top: "19%", // Fine-tuned for alignment
-                right: "13%", // Align for desktop view
-                zIndex: 0,
-              }}
-            >
+            <div className="nmp5Display" >
               <NmpDispalayfinal />
             </div>
           </div>

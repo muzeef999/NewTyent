@@ -40,26 +40,23 @@
     .home_banner_bg_1 {
       background-image: url("../../asserts/homeBanners/home_Banner_mobile_Bg.png");
       width: 100%;
-      background-size: contain; /* Makes the image cover the entire container */
+      background-size: cover; /* Makes the image cover the entire container */
       background-position: top center; /* Aligns the image to the top and horizontally centers it */
       background-repeat: no-repeat;
-      height: 76.6vh; 
+      height: 50vh; 
       position: relative;
       z-index: 99;
     }
     .home_banner_bg_2 {
       background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
       width: 100%;
-      background-size: contain; /* Makes the image cover the entire container */
+      background-size: cover; /* Makes the image cover the entire container */
       background-position: top center; /* Aligns the image to the top and horizontally centers it */
       background-repeat: no-repeat;
-      height: 76.6vh; 
+      height: 50vh; 
       position: relative;
       z-index: 99;
     }
-
-
-
   }
 
   /* desktop view */
@@ -67,20 +64,20 @@
     .home_banner_bg_1 {
       background-image: url("../../asserts/homeBanners/home_Banner_Bg.png");
       width: 100%;
-      background-size: contain; /* Makes the image cover the entire container */
+      background-size: cover; /* Makes the image cover the entire container */
       background-position: top center; /* Aligns the image to the top and horizontally centers it */
       background-repeat: no-repeat;
-      height: 76.6vh; 
+      height: 80vh; 
       position: relative;
       z-index: 99;
     }
     .home_banner_bg_2 {
       background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
       width: 100%;
-      background-size: contain; /* Makes the image cover the entire container */
+      background-size: cover; /* Makes the image cover the entire container */
       background-position: top center; /* Aligns the image to the top and horizontally centers it */
       background-repeat: no-repeat;
-      height: 76.6vh; 
+      height: 80vh; 
       position: relative;
       z-index: 99;
     }
@@ -122,9 +119,6 @@
       right: 100%; /* Move off-screen on the right */
     }
   }
-
-
-
   
   .animated-text {
     font-size: 2rem;
@@ -156,5 +150,18 @@
     }
   }
   
-  
+
+  .water-animation h1 {
+    font-size: clamp(23px, 2.99vw, 70px);
+    padding-left: 20px;
+  }
+  .water-animation h2 {
+    font-size: clamp(14px, 1.8vw, 60px);
+    padding-left: 20px;
+  }
+  .water-animation p {
+    font-size: clamp(14px, 1.8vw, 50px);
+    padding-left: 20px;
+  }
+
 

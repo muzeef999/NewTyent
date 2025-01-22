@@ -26,7 +26,8 @@ import Image from "next/image";
 import NMP7_BANNER_DESKTOP from "@/asserts/nmp/nmp5&7/NMP7_BANNER_DESKTOP.webp";
 import NMP7_BANNER_MOBILE from "@/asserts/nmp/nmp5&7/NMP7_BANNER_MOBILE.webp";
 import Display from "@/app/(home)/compoents/(products)/Display";
-
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -85,7 +86,7 @@ const TyentNMP5 = () => {
       label: "Input Water Parameters Required",
       name: "Input water TDS: 90 - 160, Input water pH: 7 pH, Input water Pressure: 5 - 7 L/Min",
     },
-    
+
     {
       label: "General Services",
       name: "3 services per year, 9 free services in 3 years in warranty period (PAN INDIA)",
@@ -115,17 +116,17 @@ const TyentNMP5 = () => {
 
   const features = [
     {
-          title: "9 Japanese Plates",
-          description:
-         "The Tyent NMP-9 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -1050*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
-          icon: Plates, // Replace with the actual path to your icon
-        },
-        {
-          title: "Advanced Power Supply",
-          description:
-            "Tyent's patented SMPS Plus power system, with 55+ adjustable settings, ensures consistent performance. Exclusively designed only for Tyent ionizers, it allows Tyent to produce strong alkaline (11.5-2.5 pH) and acidic water without chemicals, enhancing both efficiency and lifespan.",
-          icon: SMPS, // Replace with the actual path to your icon
-        },
+      title: "9 Japanese Plates",
+      description:
+        "The Tyent NMP-9 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -1050*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
+      icon: Plates, // Replace with the actual path to your icon
+    },
+    {
+      title: "Advanced Power Supply",
+      description:
+        "Tyent's patented SMPS Plus power system, with 55+ adjustable settings, ensures consistent performance. Exclusively designed only for Tyent ionizers, it allows Tyent to produce strong alkaline (11.5-2.5 pH) and acidic water without chemicals, enhancing both efficiency and lifespan.",
+      icon: SMPS, // Replace with the actual path to your icon
+    },
     {
       title: "Produces 7 Water Levels",
       description:
@@ -133,11 +134,11 @@ const TyentNMP5 = () => {
       icon: display, // Replace with the actual path to your icon
     },
     {
-          title: "PAST Cleaning Technology",
-          description:
-            "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering ionized water with more molecular hydrogen.",
-          icon: rtr, // Replace with the actual path to your icon
-        },
+      title: "PAST Cleaning Technology",
+      description:
+        "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering ionized water with more molecular hydrogen.",
+      icon: rtr, // Replace with the actual path to your icon
+    },
     {
       title: "Fixed Quantity Output",
       description:
@@ -156,20 +157,19 @@ const TyentNMP5 = () => {
         "The Tyent water ionizer’s features a user-friendly LCD display that tracks real-time filter usage, alerting you when replacements are needed. This convenient monitoring system helps maintain optimal performance and ensures clean, healthy water at all times.",
       icon: filterIndication, // Replace with the actual path to your icon
     },
-   {
-         title: "TURBO Mode",
-         description:
+    {
+      title: "TURBO Mode",
+      description:
         "Tyent is the only water ionizer in the industry that produces strong alkaline water at 11.5 pH without the use of chemicals, salts, or enhancers, thanks to its patented SMPS PLUS technology. This powerful water is ideal for cleaning fruits and vegetables, removing pesticides, insecticides, wax, and color coatings.",
-         icon: turbo, // Replace with the actual path to your icon
-       },
+      icon: turbo, // Replace with the actual path to your icon
+    },
     {
       title: "Jog Dail",
       description:
-      "The jog dial is designed for effortless operation, allowing you to select the desired pH level with a simple rotation and click. A soft LED light changes color based on the outflow stage, combining safety with visual appeal.",
+        "The jog dial is designed for effortless operation, allowing you to select the desired pH level with a simple rotation and click. A soft LED light changes color based on the outflow stage, combining safety with visual appeal.",
       icon: jogDail, // Replace with the actual path to your icon
     },
   ];
-
 
   const onetouch = {
     title: "Easy To Use One Touch Display",
@@ -180,8 +180,7 @@ const TyentNMP5 = () => {
 
   return (
     <div>
-
-<div style={{ width: "100%", height: "auto", position: "relative" }}>
+      <div style={{ width: "100%", height: "auto", position: "relative" }}>
         {/* Mobile and Tablet View */}
         <div className="d-block d-md-none">
           <Image
@@ -223,43 +222,40 @@ const TyentNMP5 = () => {
             }}
           />
 
-          
-<div className={"nmp-5-desktop-one-touch-main-banner"}>
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
               {/* Resilience Message */}
               <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-              Sustainable Hydration, Sustainable Health
+                Sustainable Hydration, Sustainable Health
               </h2>
 
               {/* Tyent Water Title */}
 
               <div
                 data-aos="fade-left"
-                className="d-flex justify-content-end align-items-center"
+                className="d-flex justify-content-start align-items-center"
               >
-                {/* Benefits */}
-                <div className="mt-2">
-                  <h1 className={"nmp-banner-title"}>Tyent Ionizers </h1>
-                  <p className={"nmp-banner-benefits m-0"}>
-                    <span>For a Greener</span>
-                    <br />
-                    and <span>Cleaner Tomorrow</span>
-                  </p>
-                </div>
-
                 {/* Decorative Line */}
-                <div className="d-flex justify-content-top align-items-top">
-                  <svg width="20" height="115">
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="70">
                     <line
-                      x1="10"
+                      x1="0"
                       y1="0"
-                      x2="10"
-                      y2="115"
+                      x2="0"
+                      y2="70"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
                   </svg>
+                </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"nmp-banner-benefits"}>
+                    <span>For a Greener</span>
+                    <br />
+                    and <span>Cleaner Tomorrow</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -279,7 +275,7 @@ const TyentNMP5 = () => {
           <Row className="mb-5">
             <Col>
               <p
-                className="text-center"
+                className="text-start"
                 style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
               >
                 The Tyent NMP-9 is engineered with cutting-edge technology,
@@ -299,7 +295,7 @@ const TyentNMP5 = () => {
             </Col>
           </Row>
         </div>
- 
+
         <div className="section-spacing">
           <h2 style={{ color: "#5ac4f2" }}>
             <b>
@@ -322,64 +318,106 @@ const TyentNMP5 = () => {
       </Container>
 
       <div className="section-spacing">
-      
-<div style={{ width: "100%", height: "auto", position: "relative" }}>
-        {/* Mobile and Tablet View */}
-        <div className="d-block d-lg-none">
-          <Image
-            src={NMP7_BANNER_MOBILE}
-            alt="nmp-5 banner"
-            layout="responsive"
-            priority
-            style={{
-              position: "relative",
-              zIndex: 10, // Ensure the image is on top
-            }}
-          />
+        <div style={{ width: "100%", height: "auto", position: "relative" }}>
+          {/* Mobile and Tablet View */}
+          <div className="d-block d-lg-none">
+            <Image
+              src={NMP7_BANNER_MOBILE}
+              alt="nmp-5 banner"
+              layout="responsive"
+              priority
+              style={{
+                position: "relative",
+                zIndex: 10, // Ensure the image is on top
+              }}
+            />
 
-          {/* NmpDispalayfinal for Mobile and Tablet */}
-          <div
-            style={{
-              position: "absolute",
-              width: "25%", // Adjusted for mobile responsiveness
-              height: "auto",
-              top: "35.7%", // Adjusted for better alignment
-              right: "12.5%", // Adjusted for mobile spacing
-              zIndex: 0,
-            }}
-          >
-            <Display />
+            {/* NmpDispalayfinal for Mobile and Tablet */}
+            <div
+              style={{
+                position: "absolute",
+                width: "25%", // Adjusted for mobile responsiveness
+                height: "auto",
+                top: "35.7%", // Adjusted for better alignment
+                right: "12.5%", // Adjusted for mobile spacing
+                zIndex: 0,
+              }}
+            >
+              <Display />
+            </div>
+          </div>
+
+          {/* Desktop and Larger Devices */}
+          <div className="d-none d-lg-block">
+            <Image
+              src={NMP7_BANNER_DESKTOP}
+              alt="nmp-5 banner"
+              layout="responsive"
+              priority
+              style={{
+                position: "relative",
+                zIndex: 10, // Ensure the image is on top
+              }}
+            />
+            <div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                {onetouch.title}
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="70">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="70"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"nmp-banner-benefits-touch"}>
+                    {onetouch.subTitle}
+                    <br />
+                  </p>
+                </div>
+              </div>
+              <br/>
+              <Link className="appbardemo" style={{textDecoration:'none'}} href={"/7-types-of-Tyent-water"}>
+                Click Here &nbsp;
+                <GoArrowRight />
+              </Link>
+            </div>
+          </div>
+          <br />
+
+            {/* NmpDispalayfinal for Desktop */}
+            <div
+              style={{
+                position: "absolute",
+                width: "12.3%", // Adjusted width for desktop
+                height: "auto",
+                top: "19%", // Fine-tuned for alignment
+                right: "13%", // Align for desktop view
+                zIndex: 0,
+              }}
+            >
+              <Display />
+            </div>
           </div>
         </div>
-
-        {/* Desktop and Larger Devices */}
-        <div className="d-none d-lg-block">
-          <Image
-            src={NMP7_BANNER_DESKTOP}
-            alt="nmp-5 banner"
-            layout="responsive"
-            priority
-            style={{
-              position: "relative",
-              zIndex: 10, // Ensure the image is on top
-            }}
-          />
-
-          {/* NmpDispalayfinal for Desktop */}
-          <div
-            style={{
-              position: "absolute",
-              width: "12.3%", // Adjusted width for desktop
-              height: "auto",
-              top: "19%", // Fine-tuned for alignment
-              right: "13%", // Align for desktop view
-              zIndex: 0,
-            }}
-          >
-            <Display />
-          </div>
-        </div>
-      </div>
       </div>
 
       <Container>

@@ -34,7 +34,7 @@ const TyentNMP5 = () => {
   const handleTab = (index) => {
     setCurrentIndex(index);
   };
-
+ 
   const products = [
     {
       src: [PRODUCTNMP91, PRODUCTNMP92, PRODUCTNMP93],
@@ -236,32 +236,32 @@ const TyentNMP5 = () => {
 
               <div
                 data-aos="fade-left"
-                className="d-flex justify-content-end align-items-center"
+                className="d-flex justify-content-start align-items-center"
               >
-                {/* Benefits */}
-                <div className="mt-2">
-                  
-                  <p className={"nmp-banner-benefits m-0"}>
-                    <span>Drink Smarter</span>
-                    <br />
-                    <span> Live Healthier </span>
-                  </p>
-                  <h1 className={"nmp-banner-title m-0"}>Tyent Water</h1>
-                </div>
-
+                
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-top align-items-top">
-                  <svg width="20" height="115">
+                  <svg width="20" height="70">
                     <line
-                      x1="10"
+                      x1="0"
                       y1="0"
-                      x2="10"
-                      y2="115"
+                      x2="0"
+                      y2="70"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
                   </svg>
                 </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  
+                  <p className={"nmp-banner-benefits"}>
+                    <span>Drink Smarter</span>
+                    <br />
+                    <span> Live Healthier </span>
+                  </p>
+                </div>
+
               </div>
             </div>
           </div>
@@ -362,6 +362,50 @@ const TyentNMP5 = () => {
                 zIndex: 10, // Ensure the image is on top
               }}
             />
+
+<div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                {onetouch.title}
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="70">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="70"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"nmp-banner-benefits-touch"}>
+                    {onetouch.subTitle}
+                    <br />
+                  </p>
+                </div>
+              </div>
+              <br/>
+              <Link className="appbardemo" style={{textDecoration:'none'}} href={"/7-types-of-Tyent-water"}>
+                Click Here &nbsp;
+                <GoArrowRight />
+              </Link>
+            </div>
+          </div>
+          <br />
  
             {/* NmpDispalayfinal for Desktop */}
             <div
@@ -377,30 +421,6 @@ const TyentNMP5 = () => {
               <Display />
             </div>
 
-            <div className="nmp-11-desktop-banner"
-              style={{
-                position: "absolute",
-                left: "10%",
-                top: "10%",
-                width: "50%",
-                zIndex: 999,
-              }}
-            >
-              <div className="container text-center">
-                <h2>{onetouch.title}</h2>
-                <p>
-                  {onetouch.subTitle}
-                </p>
-                <p>To Know How To Use</p>
-                <Link
-                  className={"appbardemo"}
-                  style={{ textDecoration: "none" }}
-                  href={`${onetouch.link}`}
-                >
-                  &nbsp;Click here <GoArrowRight />
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>

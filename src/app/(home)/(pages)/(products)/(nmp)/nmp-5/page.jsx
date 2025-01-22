@@ -24,7 +24,6 @@ import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import NmpDispalayfinal from "../NmpDispalayfinal";
 import NMP5_BANNER_DESKTOP from "@/asserts/nmp/NMP5_BANNER_DESKTOP.webp";
 import NMP5_BANNER_MOBILE from "@/asserts/nmp/NMP5_BANNER_MOBILE.webp";
-
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -205,24 +204,21 @@ const TyentNMP5 = () => {
                 data-aos="fade-left"
                 className="d-flex justify-content-start align-items-center"
               >
-                {/* Benefits */}
-
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="80">
+                  <svg width="20" height="70">
                     <line
-                      x1="10"
+                      x1="0"
                       y1="0"
-                      x2="10"
-                      y2="80"
+                      x2="0"
+                      y2="70"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
                   </svg>
                 </div>
-
+                {/* Benefits */}
                 <div className="mt-3">
-                  <h1 className={"nmp-banner-title"}>Tyent Water</h1>
                   <p className={"nmp-banner-benefits"}>
                     <span>For Stronger Immunity</span>
                     <br />
@@ -264,30 +260,28 @@ const TyentNMP5 = () => {
 
               <div
                 data-aos="fade-left"
-                className="d-flex justify-content-end align-items-center"
+                className="d-flex justify-content-start align-items-center"
               >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="20" height="70">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="70"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
                 {/* Benefits */}
-                <div className="mt-2">
-                  <h1 className={"nmp-banner-title"}>Tyent Water</h1>
+                <div className="mt-3">
                   <p className={"nmp-banner-benefits"}>
                     <span>For Stronger Immunity</span>
                     <br />
                     and <span>Natural Protection</span>
                   </p>
-                </div>
-
-                {/* Decorative Line */}
-                <div className="d-flex justify-content-top align-items-top">
-                  <svg width="20" height="115">
-                    <line
-                      x1="10"
-                      y1="0"
-                      x2="10"
-                      y2="115"
-                      stroke="#008ac7"
-                      strokeWidth="4"
-                    />
-                  </svg>
                 </div>
               </div>
             </div>
@@ -309,7 +303,7 @@ const TyentNMP5 = () => {
           <Row>
             <Col>
               <p
-                className="text-center"
+                className="text-start"
                 style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
               >
                 The Tyent NMP-5 is expertly crafted with advanced technology,
@@ -365,13 +359,12 @@ const TyentNMP5 = () => {
             }}
           />
 
-
-<div className={"nmp-5-desktop-one-touch-main-banner"}>
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
               {/* Resilience Message */}
               <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-                Build Resilience with <span>Every Drop</span>
+                {onetouch.title}
               </h2>
 
               {/* Tyent Water Title */}
@@ -380,33 +373,39 @@ const TyentNMP5 = () => {
                 data-aos="fade-left"
                 className="d-flex justify-content-start align-items-center"
               >
-                {/* Benefits */}
-
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
                   <svg width="20" height="80">
                     <line
-                      x1="10"
+                      x1="0"
                       y1="0"
-                      x2="10"
+                      x2="0"
                       y2="80"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
                   </svg>
                 </div>
-
+                {/* Benefits */}
                 <div className="mt-3">
-                  <h1 className={"nmp-banner-title"}>Tyent Water</h1>
-                  <p className={"nmp-banner-benefits"}>
-                    <span>For Stronger Immunity</span>
+                  <p className={"nmp-banner-benefits-touch"}>
+                    {onetouch.subTitle}
                     <br />
-                    and <span>Natural Protection</span>
                   </p>
                 </div>
               </div>
+              <br />
+              <Link
+                className="appbardemo"
+                style={{ textDecoration: "none" }}
+                href={"/7-types-of-Tyent-water"}
+              >
+                Click Here &nbsp;
+                <GoArrowRight />
+              </Link>
             </div>
           </div>
+          <br />
 
           {/* NmpDispalayfinal for Mobile and Tablet */}
           <div className="nmp5Display">
@@ -427,8 +426,6 @@ const TyentNMP5 = () => {
             }}
           />
 
-
-
           <div className={"nmp-5-desktop-one-touch-main-banner"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
@@ -443,37 +440,39 @@ const TyentNMP5 = () => {
                 data-aos="fade-left"
                 className="d-flex justify-content-start align-items-center"
               >
-                {/* Benefits */}                
-                <div className="mt-3">
-                  <div>
-                  <p style={{width:'30%', float: 'right'}} >{onetouch.subTitle}</p>
-                  <p>To Know How To Use</p>
-                  <Link
-                    className={"appbardemo"}
-                    style={{ textDecoration: "none" }}
-                    href={`${onetouch.link}`}
-                  >
-                    &nbsp;Click here <GoArrowRight />
-                  </Link>
-                  </div>
-                </div>
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
                   <svg width="20" height="80">
                     <line
-                      x1="10"
+                      x1="0"
                       y1="0"
-                      x2="10"
+                      x2="0"
                       y2="80"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
                   </svg>
                 </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"nmp-banner-benefits-touch"}>
+                    {onetouch.subTitle}
+                    <br />
+                  </p>
+                </div>
               </div>
+              <br />
+              <Link
+                className="appbardemo"
+                style={{ textDecoration: "none" }}
+                href={"/7-types-of-Tyent-water"}
+              >
+                Click Here &nbsp;
+                <GoArrowRight />
+              </Link>
             </div>
           </div>
-
+          <br />
           {/* NmpDispalayfinal for Desktop */}
           <div className="nmp5Display">
             <NmpDispalayfinal />
