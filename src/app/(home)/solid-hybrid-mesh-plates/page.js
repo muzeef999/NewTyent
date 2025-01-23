@@ -4,7 +4,7 @@ import smps from '@/asserts/smps.png'
 import { Col, Row } from 'react-bootstrap';
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
-
+ 
 
 const RegularReplacement = [
   {

@@ -36,18 +36,17 @@ const Slider = () => {
                 layout="responsive"
                 priority
               />
-            </div>
+            </div> 
 
-            <div className="responsive-container">
-              <div className="nmp-display-wrapper">
-                <NmpDispalayfinal />
-              </div>
-            </div>
 
             <div className="water-animation">
               <h1>Don't Just Drink Water - Drink Life!</h1>
               <h2>Boost Immunity, Health, and Vitality</h2>
               <p>with Tyent Water</p>
+            </div>
+            
+            <div className="responsive-container">
+                <NmpDispalayfinal />
             </div>
           </div>
         )}
@@ -63,10 +62,10 @@ const Slider = () => {
               />
             </div>
 
-            <div className="responsive-container">
-              <div className="nmp-display-wrapper">
+            <div className="responsive-container-banner2">
+          
                 <Display />
-              </div>
+      
             </div>
 
             <div className="water-animation">

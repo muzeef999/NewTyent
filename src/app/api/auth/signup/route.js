@@ -3,6 +3,7 @@ import { verifyOtp } from "@/app/lib/otpService";
 import User from "@/models/User"; // Correct import for the User model
 import bcrypt from "bcrypt";
 import { ObjectId } from "mongodb"; // For handling ObjectId
+import { ConnectionStates } from "mongoose";
 
 export const POST = async (request) => {
   try {

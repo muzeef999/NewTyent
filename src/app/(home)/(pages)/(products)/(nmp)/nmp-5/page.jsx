@@ -27,6 +27,7 @@ import NMP5_BANNER_MOBILE from "@/asserts/nmp/NMP5_BANNER_MOBILE.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import { RxDownload } from "react-icons/rx";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -170,13 +171,20 @@ const TyentNMP5 = () => {
   const onetouch = {
     title: "Easy To Use One Touch Display",
     subTitle:
-      "Tyent water ionizers offer a user-friendly one-touch display with clear icons, enabling effortless selection of your desired water type for  convenient, customizable hydration.",
+      "Tyent offer a user-friendly one-touch display with clear icons, enabling effortless selection of your desired water type for  convenient, customizable hydration.",
     link: "/7-types-of-Tyent-water",
   };
 
   return (
-    <div>
+    <div style={{overflow:'hidden'}}>
+      
+      <button className={`fixed-vertical-button`}>
+           
+           Download Brochure&nbsp;{"   "}
+           <RxDownload size={20} style={{ transform: 'rotate(180deg)' }}/>
+         </button>
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
+
         {/* Mobile and Tablet View */}
         <div className="d-block d-md-none">
           <Image

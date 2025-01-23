@@ -14,7 +14,7 @@ const NmpDispalayfinal = () => {
     useEffect(() => {
         const svgElement = svgRef.current;
     
-        const durationPerStep = 1.2;
+        const durationPerStep = 4;
         const repeatDelay = 0.5;
         const colors = [
           "#ff1aff",

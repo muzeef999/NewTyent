@@ -22,6 +22,7 @@ import BoosttheBody from "../BoosttheBody";
 import PRODUCTNMP91 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-1.webp";
 import PRODUCTNMP92 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-2.webp";
 import PRODUCTNMP93 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-3.webp";
+import PRODUCTNMP94 from "@/asserts/nmp/nmp5&7/PRODUCTNMP9-4.webp";
 import Image from "next/image";
 import NMP7_BANNER_DESKTOP from "@/asserts/nmp/nmp5&7/NMP7_BANNER_DESKTOP.webp";
 import NMP7_BANNER_MOBILE from "@/asserts/nmp/nmp5&7/NMP7_BANNER_MOBILE.webp";
@@ -36,7 +37,7 @@ const TyentNMP5 = () => {
 
   const products = [
     {
-      src: [PRODUCTNMP91, PRODUCTNMP92, PRODUCTNMP93],
+      src: [PRODUCTNMP91, PRODUCTNMP92,PRODUCTNMP94, PRODUCTNMP93, ],
     },
   ];
 

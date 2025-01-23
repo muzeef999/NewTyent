@@ -10,9 +10,10 @@ import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
 import minerals from "@/asserts/why ionizer/minerals.png";
+import puredrink from "@/asserts/health/puredrink.png";
 import Molecular from "@/asserts/health/Molecular.png";
-import alkaline from "@/asserts/alkaline.png";
-import watersoda from "@/asserts/water.png";
+import alkaline from "@/asserts/health/Natural minerals.png";
+import watersoda from "@/asserts/health/Micro-clustered water.png";
 import Leaf from "./compoents/(Home)/Leaf";
 
 const TyentvsKAngan = dynamic(
@@ -82,12 +83,18 @@ const Home = () => {
         metabolism.
       `,
     },
+    {
+      icon: puredrink,
+      title: "Pure Healthy water",
+      content: `
+        The Tyent water ionizer, equipped with .01-micron filtration, delivers the purest and safest healthy water, free from bacteria, nano-viruses, nano-plastics, contaminants, chlorine, and more.
+      `,
+    },
   ];
 
   return (
     <div>
       <Slider />
-
 
       <Leaf />
 
@@ -110,7 +117,7 @@ const Home = () => {
           </Row>
           <Row className="g-4">
             {cardDetails.map((card, index) => (
-              <Col key={index} xs={12} sm={6} md={3}>
+              <Col key={index} xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}>
                 <WhyDrinkTyentWater
                   icon={card.icon}
                   title={card.title}

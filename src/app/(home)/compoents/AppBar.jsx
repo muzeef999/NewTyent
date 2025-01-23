@@ -108,8 +108,8 @@ const handleSubmenuLeave = () => {
       {/* Top Bar */}
       <div className="sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
-          className="d-flex justify-content-between align-items-center" 
-          style={{backgroundColor: "#008AC7", color: "#FFF", height: "40px"}}
+          className="d-flex justify-content-between align-items-center p-2" 
+          style={{backgroundColor: "#008AC7", color: "#FFF", }}
         >
           <div 
             className="d-flex align-items-center marquee"
@@ -281,19 +281,19 @@ const handleSubmenuLeave = () => {
                                     NMP-5 Plates 
                                   </Link>
                                 </li>
-                                <div class="dropdown-divider"></div>
+                                <div className="dropdown-divider"></div>
                                 <li>
                                   <Link href="/nmp-6" className="dropdown-item" onClick={closeOffcanvas}>
                                     NMP-6 Plates
                                   </Link>
                                 </li>
-                                <div class="dropdown-divider"></div>
+                                <div className="dropdown-divider"></div>
                                 <li>
                                   <Link href="/nmp-9" className="dropdown-item" onClick={closeOffcanvas}>
                                     NMP-9 Plates
                                   </Link>
                                 </li>
-                                <div class="dropdown-divider"></div>
+                                <div className="dropdown-divider"></div>
                                 <li>
                                   <Link href="/nmp-11" className="dropdown-item" onClick={closeOffcanvas}>
                                     NMP-11 Plates
@@ -301,7 +301,7 @@ const handleSubmenuLeave = () => {
                                 </li>
                               </ul>
                             </li>
-                            <div class="dropdown-divider"></div>
+                            <div className="dropdown-divider"></div>
                             <li
                               className={`dropdown-submenu ${activeSubmenu === "uce" ? "show" : ""}`}
                               onMouseEnter={() => handleSubmenuEnter("uce")}
@@ -316,14 +316,14 @@ const handleSubmenuLeave = () => {
                                     UCE-9 Plates
                                   </Link>
                                 </li>
-                                <div class="dropdown-divider"></div>
+                                <div className="dropdown-divider"></div>
                                 <li>
 
                                   <Link href="/uce-11" className="dropdown-item" onClick={closeOffcanvas}>
                                     UCE-11 Plates
                                   </Link>
                                 </li>
-                                <div class="dropdown-divider"></div>
+                                <div className="dropdown-divider"></div>
                                 <li>
                                   <Link href="/uce-12" className="dropdown-item" onClick={closeOffcanvas}>
                                     UCE-12 Plates
@@ -331,13 +331,13 @@ const handleSubmenuLeave = () => {
                                 </li>
                               </ul>
                             </li>
-                            <div class="dropdown-divider"></div>
+                            <div className="dropdown-divider"></div>
                             <li>
                               <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
                                 Tyent H2
                               </Link>
                             </li>
-                            <div class="dropdown-divider"></div>
+                            <div className="dropdown-divider"></div>
                             <li>
                               <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
                                 Soap

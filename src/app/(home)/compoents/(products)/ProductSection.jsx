@@ -171,11 +171,7 @@ const ProductSection = ({ products, specifications }) => {
         
       </Row>
       </Container>
-      <button className={`fixed-vertical-button`}>
-           
-            Download Brochure&nbsp;{"   "}
-            <RxDownload size={20} style={{ transform: 'rotate(180deg)' }}/>
-          </button>
+      
     </div>
   );
 };
