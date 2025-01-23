@@ -13,6 +13,7 @@ import minerals from "@/asserts/why ionizer/minerals.png";
 import Molecular from "@/asserts/health/Molecular.png";
 import alkaline from "@/asserts/alkaline.png";
 import watersoda from "@/asserts/water.png";
+import Leaf from "./compoents/(Home)/Leaf";
 
 const TyentvsKAngan = dynamic(
   () => import("./compoents/(Home)/TyentvsKAngan"),
@@ -86,6 +87,9 @@ const Home = () => {
   return (
     <div>
       <Slider />
+
+
+      <Leaf />
 
       <div className="section-spacing">
         <SectionTwo />

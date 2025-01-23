@@ -87,6 +87,8 @@
   
   
 .water-animation h1 {
+  color: #373737;
+  font-weight: 600;
   font-size: 25px;
 }
   
@@ -96,6 +98,7 @@
     color: #008AC7;
     margin: 0px;
   }
+  
   .water-animation p {
     font-weight: 200;
     font-size: 14px;
