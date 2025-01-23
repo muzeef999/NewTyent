@@ -368,12 +368,12 @@ const TyentNMP5 = () => {
               >
                 {/* Decorative Line */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="70">
+                  <svg width="8" height="80">
                     <line
                       x1="0"
                       y1="0"
                       x2="0"
-                      y2="70"
+                      y2="80"
                       stroke="#008ac7"
                       strokeWidth="4"
                     />
@@ -387,13 +387,18 @@ const TyentNMP5 = () => {
                   </p>
                 </div>
               </div>
-              <br/>
-              <Link className="appbardemo" style={{textDecoration:'none'}} href={"/7-types-of-Tyent-water"}>
+              <br />
+              <Link
+                className="appbardemo"
+                style={{ textDecoration: "none" }}
+                href={"/7-types-of-Tyent-water"}
+              >
                 Click Here &nbsp;
                 <GoArrowRight />
               </Link>
             </div>
           </div>
+          <br />
 
             {/* NmpDispalayfinal for Desktop */}
             <div className="nmp5Display" >
