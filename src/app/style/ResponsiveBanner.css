@@ -12,6 +12,8 @@
 
   }
 
+
+  
   .nav-container-home {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping */
@@ -34,9 +36,7 @@
   }
   
   /* Items inside the container */
-  .nav-item {
-    margin-right: 15px; /* Space between items */
-  }
+  
   
   .product-selection-filter-Home {
     cursor: pointer;
@@ -47,8 +47,16 @@
   
   .product-selection-filter-Home.active-Home {
     font-weight: bold;
-    color: #007bff; /* Active color */
+    font-size: 20px;
+    color: #008AC7; /* Active color */
+    text-decoration: underline; /* Add underline */
+    text-decoration-thickness: 2px; /* Thickness of the underline */
+    text-underline-offset: 6px; /* Adjust spacing between text and underline */
   }
+
+
+
+
 
 
   .home_banner_bg_spalsh{
@@ -178,47 +186,40 @@
     }
   }
 
-  .home-banner-text {
-    color: #000; /* Sky Blue color for the text */
-    font-family: 'Poppins', sans-serif; /* Modern font for a clean look */
-    line-height: 1.6; /* Comfortable line spacing */
-    padding: 20px; /* Add some spacing */
-  }
-  
-  .home-banner-text h1 {
-    font-size: clamp(23px, 2.99vw, 70px);
-    font-weight: 700; /* Bold for emphasis */
-    color: #000; /* Sky Blue */
-  }
-  
-  .home-banner-text h1 span {
-    color: #008AC7; /* Lighter Sky Blue for contrast */
-    font-style: italic; /* Add a unique style */
-  }
-  
-  .home-banner-text p {
-    font-size: 1.5rem; /* Slightly smaller size for subtext */
-    margin-top: 10px; /* Add spacing between lines */
-    color: #000; /* Darker shade for better readability */
-  }
-  
-  .home-banner-text p span {
-    color: #008AC7; /* Highlighted words in light sky blue */
-    font-weight: bold; /* Emphasize key terms */
-  }
-  
-  
-  
 
-  .water-animation h1 {
-    padding-left: 20px;
-  }
-  .water-animation h2 {
-    padding-left: 20px;
-  }
-  .water-animation p {
-    font-size: clamp(14px, 1.8vw, 50px);
-    padding-left: 20px;
-  }
+/* Container to position the text */
+.home-banner-text {
+  position: absolute;
+  top: 50%; /* Vertical center */
+  left: 1%; /* Horizontal center */
+  transform: translate(-0%, -50%); /* Adjust for accurate centering */
+}
+
+/* Header Styling */
+.home-banner-text h1 {
+  font-size: clamp(23px, 2.99vw, 70px);
+  font-weight: 800;
+  font-family: 'HalenoirEx', sans-serif;
+  margin-bottom: 20px;
+  color: #008AC7;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the text in animation */
+.tagline .changing-text {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 800;
+  color: #008AC7;
+  opacity: 0; /* Start with invisible text */
+}
+
+.home-banner-text .brand-highlight {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 800;
+  color: #008AC7;
+}
 
 

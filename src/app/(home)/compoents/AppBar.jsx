@@ -283,8 +283,8 @@ const handleSubmenuLeave = () => {
                                 </li>
                                 <div className="dropdown-divider"></div>
                                 <li>
-                                  <Link href="/nmp-6" className="dropdown-item" onClick={closeOffcanvas}>
-                                    NMP-6 Plates
+                                  <Link href="/nmp-7" className="dropdown-item" onClick={closeOffcanvas}>
+                                    NMP-7 Plates
                                   </Link>
                                 </li>
                                 <div className="dropdown-divider"></div>

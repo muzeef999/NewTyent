@@ -195,16 +195,50 @@ const TyentNMP5 = () => {
             }}
           />
 
+<div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                Sustainable Hydration, Sustainable Health
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="8" height="40">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="40"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+                {/* Benefits */}
+                <div className="mt-1">
+                  <p className={"nmp-banner-benefits"}>
+                    <span>For a Greener</span>
+                    <br />
+                    and <span>Cleaner Tomorrow</span>
+                  </p>
+                </div>
+              </div>
+              <br/>
+            </div>
+          </div>
+
+
           {/* NmpDispalayfinal for Mobile and Tablet */}
           <div
-            style={{
-              position: "absolute",
-              width: "25%", // Adjusted for mobile responsiveness
-              height: "auto",
-              top: "35.7%", // Adjusted for better alignment
-              right: "12.5%", // Adjusted for mobile spacing
-              zIndex: 0,
-            }}
+            className="nmp-9-mobile-display"
           >
             <Display />
           </div>
@@ -335,14 +369,7 @@ const TyentNMP5 = () => {
 
             {/* NmpDispalayfinal for Mobile and Tablet */}
             <div
-              style={{
-                position: "absolute",
-                width: "25%", // Adjusted for mobile responsiveness
-                height: "auto",
-                top: "35.7%", // Adjusted for better alignment
-                right: "12.5%", // Adjusted for mobile spacing
-                zIndex: 0,
-              }}
+              className="nmp-9-mobile-display"                
             >
               <Display />
             </div>

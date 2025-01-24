@@ -122,6 +122,7 @@
 
 /* For small devices (up to 576px) */
 @media (max-width: 767px) {
+
   .nmp5Display{
     position: absolute;
     width: 24%;
@@ -180,6 +181,15 @@
 
 .nmp-banner-benefits span {
   font-weight: bold;
+}
+
+.nmp-9-mobile-display {
+  position: absolute;
+  top: 56.5%;
+  right: 3.6%;
+  width: 25%;
+  transform: translate(-50%, -50%); /* Adjust to center the element */
+  z-index: 0;
 }
 
 }

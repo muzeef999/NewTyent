@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -12,25 +12,30 @@ const FallingLeaves = () => {
 
         // Random values for each leaf
         const startPositionX = Math.random() * window.innerWidth; // Random horizontal start
-        const fallDuration = Math.random() * 4 + 6; // Random fall duration (6-10 seconds)
-        const zigzagAmount = Math.random() * 150 - 75; // Random horizontal zigzag movement
+        const startPositionY = Math.random() * -200 - 50; // Random vertical start, above the screen
+        const fallDuration = Math.random() * 4 + 12; // Random fall duration (6-10 seconds)
+        const zigzagDistance = Math.random() * 300 + 100; // Random zigzag distance for horizontal movement
+        const rotationAmount = Math.random() * 30 - 1.5; // Random rotation to make the leaf spin
+        const leafSize = Math.random() * 0.5 + 0.5; // Random scale size
 
-        // Smooth falling animation with random values for rotation and size
+        // Ensure each leaf starts at a different position
         gsap.fromTo(
           leaf,
           {
-            x: startPositionX, // Random start position
-            y: -100, // Start above the screen
-            rotation: Math.random() * 10 - 5, // Random rotation at start
-            scale: Math.random() * 0.5 + 0.5, // Random scale size
+            x: startPositionX, // Random start position horizontally
+            y: startPositionY, // Start from above the screen
+            rotation: rotationAmount, // Random rotation at start
+            scale: leafSize, // Random scale size
           },
           {
-            x: `+=${zigzagAmount}`, // Add random zigzag motion
-            y: window.innerHeight - leaf.getBoundingClientRect().height, // Fall to the ground
-            rotation: `+=${Math.random() * 5 - 2.5}`, // Slight rotation during fall
+            x: `+=${zigzagDistance}`, // Move horizontally with zigzag
+            y: window.innerHeight - leaf.getBoundingClientRect().height, // Fall to the bottom of the screen
+            rotation: `+=${Math.random() * 20 - 10}`, // Slight rotation during fall
             scale: 1, // Set leaf to normal size when it lands
             duration: fallDuration, // Random fall duration
             ease: "power2.out", // Smooth easing
+            repeat: -1, // Make the animation loop
+            yoyo: true, // Enable reverse motion to create zigzag effect
             onComplete: () => {
               // Keep leaf on the ground once it lands
               gsap.to(leaf, {
@@ -74,7 +79,7 @@ const FallingLeaves = () => {
   }, []);
 
   // Array of leaves
-  const leaves = Array.from({ length: 20 }); // Create 20 leaves
+  const leaves = Array.from({ length: 10 }); // Create 20 leaves
 
   return (
     <div style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
@@ -82,7 +87,7 @@ const FallingLeaves = () => {
         <svg
           key={index}
           ref={(el) => (leavesContainerRef.current[index] = el)} // Add each leaf to ref
-         width="6%" // Slightly larger leaves for better visibility
+          width="1%" // Adjusted leaf size for better visibility
           height="auto"
           viewBox="0 0 702 840"
           fill="none"
@@ -91,6 +96,7 @@ const FallingLeaves = () => {
             position: "absolute",
             pointerEvents: "none",
             zIndex: 1, // Ensure the leaves are behind
+            transformOrigin: "center", // Center the rotation on each leaf
           }}
         >
           {/* Simple leaf shape */}

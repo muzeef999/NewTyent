@@ -99,46 +99,7 @@ const ProductData = [
     ],
   },
 
-  {
-    category: "Soap",
-    products: [
-      {
-        title: "TM-X Beauty Soap",
-        image:soap,
-        link:'/soap'
-      },
-    ]
-    },
-  {
-    category: "Water Bottle",
-    products: [
-      {
-        title: "Stainless Steel Water Bottle",
-        image: bottle,
-        link: "/water-bottle-1",
-      },
-    ],
-  },
-  {
-    category: "Filter",
-    products: [
-      {
-        title: "Filter",
-        image: filter,
-        link: "/filter-1",
-      },
-    ],
-  },
-  {
-    category: "Sterilizing water generator",
-    products: [
-      {
-        title: "Sterilizing-water-generator",
-        image:TIEN20,
-        link:"/Sterilizing-water-generator",
-      },
-    ],
-  },
+  
 ];
 
 const HomeProduct = ({ isProductOpen }) => {
@@ -163,9 +124,9 @@ const HomeProduct = ({ isProductOpen }) => {
         {/* Filter Tabs */}
 <Nav className="d-flex  justify-content-center align-items-center  nav-container-home">
   {ProductData.map((section, idx) => (
-    <Nav.Item key={section.category || `section-${idx}`}>
-      <h5
-        className={`product-selection-filte-Home ${
+    <Nav.Item key={section.category || `section-${idx}`} style={{padding:'10px'}}>
+      <h5 style={{fontSize:'20px'}}
+        className={`product-selection-filter-Home ${
           activeCategory === section.category ? "active-Home" : ""
         }`}
         onClick={() => setActiveCategory(section.category)}
