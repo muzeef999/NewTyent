@@ -21,20 +21,28 @@ const ProductSection = ({ products, specifications }) => {
 
 
   const handleTab = (index) => {
-    // Get the selected thumbnail element
-    const thumbItems = thumbRef.current.children;
-    const selectedThumb = thumbItems[index];
-
-    // Scroll the selected thumbnail into view, centered horizontally
-    selectedThumb.scrollIntoView({
+    const thumbItems = thumbRef.current.children; // Get all thumbnail elements
+    const selectedThumb = thumbItems[index]; // Get the clicked thumbnail
+    const container = thumbRef.current; // The scrollable container
+  
+    // Calculate the position to scroll to
+    const containerWidth = container.offsetWidth; // Visible width of the container
+    const thumbWidth = selectedThumb.offsetWidth; // Width of a single thumbnail
+    const thumbLeft = selectedThumb.offsetLeft; // Distance of the thumbnail from the container's left edge
+  
+    // Calculate the scroll position to center the thumbnail
+    const scrollTo = thumbLeft - (containerWidth / 2) + (thumbWidth / 2);
+  
+    // Smoothly scroll to the calculated position
+    container.scrollTo({
+      left: Math.max(0, scrollTo), // Prevent scrolling to a negative position
       behavior: "smooth",
-      inline: "center", // Ensures the selected item is centered
     });
-
+  
     // Update the currentIndex
     setCurrentIndex(index);
   };
-
+  
 
   
 
