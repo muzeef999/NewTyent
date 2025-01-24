@@ -150,6 +150,16 @@ body {
 }
 
 
+.thumb {
+  display: flex;
+  gap: 10px; /* Space between thumbnails */
+  align-items: center;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable scroll snapping */
+  width: 100%; /* Full width container */
+  justify-content: flex-start; /* Keep the items aligned to the left initially */
+}
+
 .thumbnail {
   cursor: pointer;
   margin: 10px;

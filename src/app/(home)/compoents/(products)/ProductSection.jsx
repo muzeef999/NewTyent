@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import { IoCallOutline } from "react-icons/io5";
-import { RxDownload } from "react-icons/rx";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { postCart } from "@/app/Redux/cartSlice";
 import Image from "next/image";
+import "@/app/style/AppBar.css"
 
 const ProductSection = ({ products, specifications }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +17,21 @@ const ProductSection = ({ products, specifications }) => {
 
   const userData = useSelector((state) => state.auth.user); // Access user data from Redux
 
+  const thumbRef = useRef(null);
+
+
   const handleTab = (index) => {
+    // Get the selected thumbnail element
+    const thumbItems = thumbRef.current.children;
+    const selectedThumb = thumbItems[index];
+
+    // Scroll the selected thumbnail into view, centered horizontally
+    selectedThumb.scrollIntoView({
+      behavior: "smooth",
+      inline: "center", // Ensures the selected item is centered
+    });
+
+    // Update the currentIndex
     setCurrentIndex(index);
   };
 
@@ -83,9 +97,7 @@ const ProductSection = ({ products, specifications }) => {
               <div
                 className="justify-content-center align-items-top"
                 key={itemIndex}
-              >
-                
-
+              >     
                 {/* Main Image */}
                 <div className="justify-content-center align-items-top" style={{borderRadius:'22px'}}>
                   <div style={{width:'100%', height:'auto'}}>
@@ -99,7 +111,7 @@ const ProductSection = ({ products, specifications }) => {
                 </div>
 
                 {/* Thumbnail Images */}
-                <div className="thumb  mt-3">
+                <div className="mt-3 thumb" ref={thumbRef}>
                   {item.src.map((img, index) => (
                     <Image className={
                       currentIndex === index 
