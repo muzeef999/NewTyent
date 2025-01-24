@@ -6,21 +6,22 @@ const { Schema } = mongoose;
 const UserSchema = new Schema(
   {
     name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
+    phoneNumber: { type: String, required: true, unique: true },
     password: { type: String },
+    password: { type: String, required: true }, // Password is now required
     image: { type: String }, 
-    role: { type: String, default: "user", require:true }, 
-    provider: { type: String }, 
+    role: { type: String, default: "user", required: true },
+    provider: { type: String },
   },
   { timestamps: true } // Automatically adds createdAt and updatedAt fields
 );
 
 let User;
 
-try{
+try {
   User = mongoose.model("User");
-}catch{
-   User = mongoose.model("User", UserSchema);
+} catch {
+  User = mongoose.model("User", UserSchema);
 }
 
-export default  User;
+export default User;

@@ -15,16 +15,16 @@ const myNextAuthOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "text" },
+        phoneNumber: { label: "phoneNumber", type: "phoneNumber" },
         password: { label: "Password", type: "password" },
       },
 
       async authorize(credentials) {
-        const { email, password } = credentials;
+        const { phoneNumber, password } = credentials;
 
         try {
           await connect();
-          const user = await User.findOne({ email });
+          const user = await User.findOne({ phoneNumber });
 
 
           if (!user) {
@@ -37,44 +37,14 @@ const myNextAuthOptions = {
             throw new Error("Invalid email or password");
           }
 
-          return { id: user._id, name: user.name, email: user.email, role: user.role };
+          return { id: user._id, name: user.name, phoneNumber: user.phoneNumber, role: user.role };
         } catch (error) {
           console.log("Error: ", error);
         }
       },
     }),
 
-    LinkedInProvider({
-      clientId: process.env.LINKEDIN_CLIENT_ID,
-      clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
-      wellKnown:
-        "https://www.linkedin.com/oauth/.well-known/openid-configuration",
-      authorization: {
-        params: { scope: "openid profile email" },
-      },
-      issuer: "https://www.linkedin.com",
-      jwks_endpoint: "https://www.linkedin.com/oauth/openid/jwks",
-      profile(profile, tokens) {
-        const defaultImage =
-          "https://cdn-icons-png.flaticon.com/512/174/174857.png";
-        return {
-          id: profile.sub,
-          name: profile.name,
-          email: profile.email,
-          image: profile.picture ?? defaultImage,
-        };
-      },
-    }),
 
-    FacebookProvider({
-      clientId: process.env.FACEBOOK_CLIENT_ID,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-    }),
-
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
   ],
 
   callbacks: {
@@ -83,7 +53,7 @@ const myNextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.name = user.name;
-        token.email = user.email;
+        token.phoneNumber = user.phoneNumber;
         token.role = user.role; // Include role
       }
       return token;
@@ -94,7 +64,7 @@ const myNextAuthOptions = {
         session.user = {
           id: token.id,
           name: token.name,
-          email: token.email,
+          phoneNumber: token.phoneNumber,
           role: token.role, // Include role
         };
       }

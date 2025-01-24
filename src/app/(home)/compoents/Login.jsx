@@ -1,20 +1,17 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
-import {
-  FacebookLoginButton,
-  GoogleLoginButton,
-  LinkedInLoginButton,
-} from "react-social-login-buttons";
 import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import Input from "./Input/Input";
 import Button from "./Button/Button";
 import Signup from "./Signup";
+import "react-phone-input-2/lib/style.css"; // Import styles for phone input
+import PhoneInput from "react-phone-input-2"; // Phone input component
 
 const Login = () => {
   const [showRequestComponent, setShowRequestComponent] = useState(false);
-  const [phoneNumber, setPhoneNumber] = useState(""); // State for phone number
+  const [phoneNumber, setPhoneNumber] = useState(""); // State for phone number with country code
   const [password, setPassword] = useState(""); // State for password
   const [callbackUrl, setCallbackUrl] = useState("/dashboard");
 
@@ -55,46 +52,60 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
       {showRequestComponent ? (
         <Signup />
       ) : (
         <>
-          <form onSubmit={submitHandler}>
-            <p className="text-center">
-              Hey, enter your details to sign in to your account
+          <form onSubmit={submitHandler} style={{ textAlign: "center" }}>
+            <h2 className="text-center">Welcome Back</h2>
+            <p className="text-center">Enter your details to sign in</p>
+
+            {/* Phone Number Input with Country Code and Flag */}
+             <PhoneInput
+                country={"in"} // Default country
+                value={phoneNumber}
+                onChange={(value) => setPhoneNumber(value)}
+                placeholder="Enter phone number"
+                inputStyle={{
+                  width: "100%",
+                  borderRadius: "8px",
+                  padding: "12px 14px",
+                  border: "1px solid #ccc",
+                }}
+                inputClass="custom-phone-input" // Optional: Add custom classes if needed
+                enableSearch={true} // Allow searching for countries
+                disableDropdown={false} // Keep the dropdown visible
+              />
+             <br/>
+              <Input
+                type="password"
+                name="password"
+                label="Password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            
+            {/* Forgot Password Link */}
+            <p style={{ textAlign: "right", margin: "10px 0", color: "#007bff", cursor: "pointer" }}>
+              Having trouble signing in?
             </p>
 
-            <Input
-              type="text"
-              name="phoneNumber"
-              label="Enter Phone Number"
-              placeholder="Enter Phone Number"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-            />
+            {/* Submit Button */}
+            <Button type="submit" name="Sign In" />
 
-            <Input
-              type="password"
-              name="password"
-              label="Password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            {/* Divider for social login */}
+            <div style={{ margin: "20px 0", textAlign: "center" }}>
+              <p>Or sign in with</p>
+            </div>
 
-            <br />
-            <p>Having trouble signing in?</p>
-
-            <Button type="submit" name="Submit" />
           </form>
-          <br />
-          <div className="text-center">
-            <p>- Or sign in with -</p>
 
-            <br />
+          {/* Sign Up Link */}
+          <div className="text-center" style={{ marginTop: "20px" }}>
             <p
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", color: "#007bff" }}
               onClick={() => setShowRequestComponent(true)}
             >
               Don't have an account? Request now

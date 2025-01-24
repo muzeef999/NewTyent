@@ -1,35 +1,43 @@
 import connect from "@/app/lib/mongoDB";
-import { verifyOtp } from "@/app/lib/otpService";
+import { sendOtpToPhone } from "@/app/lib/otpService";
+import Otp from "@/models/Otp";
 import User from "@/models/User"; // Correct import for the User model
-import bcrypt from "bcrypt";
 import { ObjectId } from "mongodb"; // For handling ObjectId
-import { ConnectionStates } from "mongoose";
 
 export async function POST(request) {
   try {
+
+    connect();
+
     const body = await request.json();
+
     const { phoneNumber } = body;
 
     if (!phoneNumber) {
-      return new Response(
-        JSON.stringify({ error: "Phone number is required" }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ error: "Phone number is required" }), { status: 400 });
     }
 
-    await sendOtpToPhone(phoneNumber);
-    return new Response(
-      JSON.stringify({ message: "OTP sent successfully" }),
-      { status: 200 }
+    // Generate OTP
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const expiration = new Date(Date.now() + 10 * 60 * 1000); // Expires in 10 minutes
+
+    // Save OTP to the database
+    await Otp.findOneAndUpdate(
+      { phoneNumber },
+      { otp, expiration },
+      { upsert: true, new: true }
     );
+
+    // Simulate sending OTP (integrate Twilio/other service in production)
+    await sendOtpToPhone(phoneNumber, otp);
+
+    return new Response(JSON.stringify({ message: "OTP sent successfully" }), { status: 200 });
   } catch (error) {
     console.error("Error sending OTP:", error);
-    return new Response(
-      JSON.stringify({ error: "Failed to send OTP" }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: "Failed to send OTP" }), { status: 500 });
   }
 }
+
 
 export const GET = async (request) => {
   try {

@@ -1,108 +1,106 @@
-"use client";
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { color } from "framer-motion";
+import React from "react"; 
+import { Col, Row, Table } from "react-bootstrap";
 
-
-const ComparisonTable = () => {
-  const comparisonData = [
+const PriceComp = () => {
+  const tableData = [
     {
-      features: [
-        {feature: "Feature", tyent: "Tyent NMP-5", kangen: "Kangen Jr4" },
-        { feature: "Price", tyent: "160,000/-", kangen: "218,000/-" },
-        { feature: "Generates", tyent: "7 Water types", kangen: "5 Water types" },
-        { feature: "Plates", tyent: "5", kangen: "4" },
-        { feature: "ORP", tyent: "-850", kangen: "-450" },
-        { feature: "Warranty", tyent: "3 yr & 15 yr on plates", kangen: "3 years" },
+      title: "TYENT NMP-5",
+      bgColor: "#c3e6fa",
+      color: "#008ac7",
+      details: [
+        { label: "Price:", value: "160,000/-" },
+        { label: "Generates:", value: "7 Water types" },
+        { label: "Plates:", value: "5" },
+        { label: "ORP:", value: "-850" },
+        { label: "Warranty:", value: "3 yr & 15 yr on plates" },
       ],
     },
     {
-      features: [
-        {feature: "Feature", tyent: "Tyent NMP-7", kangen: "Kangen SD501" },
-        { feature: "Price", tyent: "195,000/-", kangen: "277,000/-" },
-        { feature: "Generates", tyent: "7 Water types", kangen: "5 Water types" },
-        { feature: "Plates", tyent: "7", kangen: "7" },
-        { feature: "ORP", tyent: "-950", kangen: "-631" },
-        { feature: "Warranty", tyent: "3 yr & 15 yr on plates", kangen: "3 years" },
-      ],
-    },
-    { 
-      features: [
-        {feature: "Feature", tyent: "Tyent NMP-9", kangen: "Kangen k8" },
-        { feature: "Price", tyent: "227,000/-", kangen: "345,000/-" },
-        { feature: "Generates", tyent: "7 Water types", kangen: "5 Water types" },
-        { feature: "Plates", tyent: "9", kangen: "8" },
-        { feature: "ORP", tyent: "-1050", kangen: "-720" },
-        { feature: "Warranty", tyent: "3 yr & 15 yr on plates", kangen: "3 years" },
+      title: "ENAGIC KANGEN Jr4",
+      bgColor: "#d9dbda",
+      color: "#000",
+      details: [
+        { label: "Price:", value: "218,000/-" },
+        { label: "Generates:", value: "5 Water types" },
+        { label: "Plates:", value: "4" },
+        { label: "ORP:", value: "-450" },
+        { label: "Warranty:", value: "3 years" },
       ],
     },
     {
-      features: [
-        {feature: "Feature", tyent: "Tyent NMP-11", kangen: "Kangen SD501" },
-        { feature: "Price", tyent: "260,000/-", kangen: "378,000/-" },
-        { feature: "Generates", tyent: "7 Water types", kangen: "5 Water types" },
-        { feature: "Plates", tyent: "11", kangen: "12" },
-        { feature: "ORP", tyent: "-1200", kangen: "-800" },
-        { feature: "Warranty", tyent: "3 yr & 15 yr on plates", kangen: "3 years" },
+      title: "TYENT NMP-7",
+      bgColor: "#c3e6fa",
+      color: "#008ac7",
+      details: [
+        { label: "Price:", value: "195,000/-" },
+        { label: "Generates:", value: "7 Water types" },
+        { label: "Plates:", value: "7" },
+        { label: "ORP:", value: "-950" },
+        { label: "Warranty:", value: "3 yr & 15 yr on plates" },
+      ],
+    },
+    {
+      title: "ENAGIC KANGEN SD501",
+      bgColor: "#d9dbda",
+      color: "#000",
+      details: [
+        { label: "Price:", value: "277,000/-" },
+        { label: "Generates:", value: "5 Water types" },
+        { label: "Plates:", value: "7" },
+        { label: "ORP:", value: "-631" },
+        { label: "Warranty:", value: "5 years" },
       ],
     },
   ];
 
   return (
-    <div className="container">
-    <div style={{borderRadius:'15px', border:'1px solid #bfbfbf', overflow: 'hidden', }}>
+    <div className="price-comp">
+     <br/>
       <Row>
-        {comparisonData.map((product, index) => (
-          <Col md={6} key={index} className="mb-4">
-            <table className="table table-bordered w-100">
-             
-            <tbody>
-  {product.features.map((row, idx) => (
-    <tr key={idx}>
-      <td
-        style={{
-          backgroundColor: idx === 0 ? "#e9ecef" : "#FFF",
-          fontWeight: idx === 0 ? "bold" : "500", // First row bold
-          padding: "10px",
-          fontSize: idx === 0 ? "1.1rem" : "1rem", // Slightly larger font for the first row
-        }}
-      >
-        {row.feature}:
-      </td>
-      <td
-        style={{
-          color: "#008AC7",
-          padding: "10px",
-          backgroundColor: idx === 0 ? "#e9ecef" : "#FFF",
-          fontWeight: idx === 0 ? "bold" : "normal", // First row bold
-          textAlign: idx === 0 ? "center" : "start", // Center-align for the first row
-        }}
-        className={idx === 0 ? "text-center" : "text-start"}
-      >
-        {row.tyent}
-      </td>
-      <td
-        style={{
-          color: "#565959",
-          padding: "10px",
-          backgroundColor: idx === 0 ? "#e9ecef" : "#FFF",
-          fontWeight: idx === 0 ? "bold" : "normal", // First row bold
-          textAlign: idx === 0 ? "center" : "start", // Center-align for the first row
-        }}
-        className={idx === 0 ? "text-center" : "text-start"}
-      >
-        {row.kangen}
-      </td>
-    </tr>
-  ))}
-</tbody>
-
-            </table>
+        {tableData.map((data, index) => (
+          <Col
+            xs={12}
+            md={6}
+            key={index}
+            className="d-flex align-items-center justify-content-center text-center"
+          >
+            <Table 
+              bordered 
+              hover 
+              className="custom-table"
+              style={{
+                borderRadius: "4px", 
+                overflow: "hidden", 
+                backgroundColor:'#FFF'
+              }}
+            >
+              <thead>
+                <tr>
+                  <th
+                    style={{
+                      color: data.color,
+                    }}
+                    colSpan="2"
+                  >
+                    <b>{data.title}</b>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.details.map((detail, idx) => (
+                  <tr key={idx}>
+                    <td style={{ color:data.color, textAlign:'start' }}>{detail.label}</td> {/* Blue heading color */}
+                    <td style={{textAlign:'start'}}>{detail.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
           </Col>
         ))}
       </Row>
     </div>
-  </div>
-);
+  );
 };
 
-export default ComparisonTable;
+export default PriceComp;

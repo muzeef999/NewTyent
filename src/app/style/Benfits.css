@@ -121,13 +121,13 @@
 
 .custom-image-benfts {
   object-fit: cover;
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
   .benfitsheading{
-    font-size: clamp(20px, 2.6vh, 30px);
+    font-size: clamp(19px, 2.6vh, 30px);
   }
   .benfitsubheading{
-    font-size: clamp(12px, 1.56vh, 16px);
+    font-size: clamp(11px, 1.43vh, 16px);
   }

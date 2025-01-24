@@ -263,7 +263,7 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
     <div>
       <div
         style={{ backgroundColor: "#FFF" }}
-        className="d-flex justify-content-center align-items-center custom-card-benfts"
+        className="d-flex justify-content-between align-items-center custom-card-benfts"
       >
         <Image
           className="custom-image-benfts"
@@ -272,9 +272,9 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
           layout="fixed"
           alt={Heading}
         />
-        <div className="ml-4 align-items-center">
+        <div className="ml-4 align-items-center" style={{paddingLeft:'2px'}}>
           <h3
-            className="m-4 text-start benfitsheading"
+            className="text-start benfitsheading"
             style={{ color: "#008AC7" }}
           >
             <b>
@@ -592,37 +592,56 @@ const Page = () => {
         </p>
         <br />
 
-        <Table className="custom-table" hover responsive>
-          <tbody>
-            <tr>
-              <th className="text-start">Beverage</th>
-              <th className="text-center">Ph Range</th>
-              <th className="text-center">ORP Level (Approx)</th>
-              <th className="text-center">Remarks</th>
-            </tr>
-            {tableData.map((row, index) => (
-              <tr key={index}>
-                <td className="text-start d-flex align-items-center">
-                  <Image style={{display:'flex justift-content-center align-items-center'}}
-                    src={row.icon}
-                    alt={row.title}
-                    width={40}
-                    height={40}
-                  />{" "}
-                  &nbsp;&nbsp;
-                  {row.beverage}
-                </td>
-                <td className="text-center align-items-center">
-                  {row.phRange}
-                </td>
-                <td className="text-center align-items-center">
-                  {row.orpLevel}
-                </td>
-                <td className="text-start align-items-center">{row.remarks}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+        <Table 
+  className="custom-table table-sm" 
+  hover 
+  responsive 
+  style={{ fontSize: '14px', width: '100%' }}
+>
+  <tbody>
+    <tr>
+      <th style={{ textAlign: 'start', whiteSpace: 'nowrap', padding: '8px' }}>Beverage</th>
+      <th style={{ textAlign: 'center', whiteSpace: 'nowrap', padding: '8px' }}>Ph Range</th>
+      <th style={{ textAlign: 'center', whiteSpace: 'nowrap', padding: '8px' }}>ORP Level (Approx)</th>
+      <th style={{ textAlign: 'center', whiteSpace: 'nowrap', padding: '8px' }}>Remarks</th>
+    </tr>
+    {tableData.map((row, index) => (
+      <tr key={index}>
+        <td 
+          style={{ 
+            textAlign: 'start', 
+            display: 'flex', 
+            alignItems: 'center', 
+            padding: '8px', 
+            whiteSpace: 'normal' 
+          }}
+        >
+          <Image
+            style={{ 
+              objectFit: 'cover', 
+              width: '40px', 
+              height: '40px', 
+              marginRight: '10px' 
+            }}
+            src={row.icon}
+            alt={row.title}
+          />
+          {row.beverage}
+        </td>
+        <td style={{ textAlign: 'center', padding: '8px', verticalAlign: 'middle' }}>
+          {row.phRange}
+        </td>
+        <td style={{ textAlign: 'center', padding: '8px', verticalAlign: 'middle' }}>
+          {row.orpLevel}
+        </td>
+        <td style={{ textAlign: 'start', padding: '8px', verticalAlign: 'middle' }}>
+          {row.remarks}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</Table>
+
       </div>
 
       <Row className="align-items-center">

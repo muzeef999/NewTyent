@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Input from "./Input/Input";
 import Button from "./Button/Button";
+import { Spinner } from "react-bootstrap"; // You can use this to show a loading spinner
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -55,14 +56,20 @@ const Signup = () => {
       return;
     }
 
+    const phoneNumber = `${countryCode}${form.phoneNumber}`;
+    if (!/^\+?\d{10,15}$/.test(phoneNumber)) {
+      setAlertMessage("Please enter a valid phone number.");
+      return;
+    }
+
     const requestBody = {
-      phoneNumber: `${countryCode}${form.phoneNumber}`,
+      phoneNumber: phoneNumber,
     };
 
     console.log("Request Body for OTP:", requestBody);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/send-otp`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),
@@ -82,9 +89,7 @@ const Signup = () => {
   };
 
   const verifyOtpAndSubmit = async () => {
-
-    console.log("Request Body for Signup:"); 
-
+    console.log("Request Body for Signup:");
 
     const requestBody = {
       name: form.name || "",
@@ -101,7 +106,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/signup`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/verifyOtp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),
@@ -127,42 +132,40 @@ const Signup = () => {
 
       <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
         {/* Name Field */}
+        <Input
+          type="text"
+          name="name"
+          label="Name"
+          placeholder="Enter your name"
+          className="form-control"
+          value={form.name}
+          onChange={handleChange}
+        />
 
+        {/* Phone Number Field */}
+        <div className="d-flex">
+          <select
+            className="form-select me-2"
+            style={{ maxWidth: "120px" }}
+            value={countryCode}
+            onChange={(e) => setCountryCode(e.target.value)}
+          >
+            <option value="+1">+1 (USA)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+91">+91 (India)</option>
+            <option value="+61">+61 (Australia)</option>
+            <option value="+81">+81 (Japan)</option>
+          </select>
+          <Input
+            type="text"
+            name="phoneNumber"
+            placeholder="Enter phone number"
+            className="form-control"
+            value={form.phoneNumber}
+            onChange={handleChange}
+          />
+        </div>
 
-{/* Name Field */}
-  <Input
-    type="text"
-    name="name"
-    label="Name"
-    placeholder="Enter your name"
-    className="form-control"
-    value={form.name}
-    onChange={handleChange}
-  />
-
-{/* Phone Number Field */}
-  <div className="d-flex">
-    <select
-      className="form-select me-2"
-      style={{ maxWidth: "120px" }}
-      value={countryCode}
-      onChange={(e) => setCountryCode(e.target.value)}
-    >
-      <option value="+1">+1 (USA)</option>
-      <option value="+44">+44 (UK)</option>
-      <option value="+91">+91 (India)</option>
-      <option value="+61">+61 (Australia)</option>
-      <option value="+81">+81 (Japan)</option>
-    </select>
-    <Input
-      type="text"
-      name="phoneNumber"
-      placeholder="Enter phone number"
-      className="form-control"
-      value={form.phoneNumber}
-      onChange={handleChange}
-    />
-  </div>
         {/* OTP Field */}
         {isOtpSent && (
           <div className="form-group">
@@ -197,7 +200,7 @@ const Signup = () => {
         {/* Submit Button */}
         <Button
           type="submit"
-          name={loading ? "Loading..." : isOtpSent ? "Verify OTP & Sign Up" : "Send OTP"}
+          name={loading ? <Spinner animation="border" size="sm" /> : isOtpSent ? "Verify OTP & Sign Up" : "Send OTP"}
           className={`btn w-100 ${loading ? "btn-secondary" : "btn-primary"}`}
           disabled={loading}
         />
