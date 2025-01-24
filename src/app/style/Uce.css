@@ -270,33 +270,6 @@
 }
 
 
-
-@media (max-width: 767px) {
-  .uce9Display{
-    position: absolute;
-    width: 100%;
-    height: auto; 
-    top:34.2%; 
-    right: 1.5%;
-    transform: translate(-50%, -50%); /* Adjust to center the element */
-    z-index: 9999;
-   }
-  }
-
-  /* For larger screens (1200px and above) */
-@media (min-width: 768px) {
-  .uce9Display {
-    position: absolute;
-    width: 3.4%;
-    height: auto;
-    top: 47.7%;
-    right: 23.5%;
-    transform: translate(-50%, -50%); /* Adjust to center the element */
-    z-index: 0;
-  }
-}
-
-/* Resilience message styling */
 .uce9-banner-resilience {
   font-size: clamp(24px, 3.12vw, 80px);
   font-weight: 800;
@@ -317,3 +290,32 @@
   width: 38%;
   font-size: clamp(10px, 1.04vw, 44px);
 }
+
+
+
+@media (max-width: 767px) {
+  .uce9Display-mobile {
+    position: absolute;
+    width: 4.6%;
+    height: auto; 
+    top:37%; 
+    right: 6.1%;
+    transform: translate(-50%, -50%); /* Adjust to center the element */
+    z-index: 0;
+   }
+  }
+
+  /* For larger screens (1200px and above) */
+@media (min-width: 768px) {
+  .uce9Display {
+    position: absolute;
+    width: 3.4%;
+    height: auto;
+    top: 47.7%;
+    right: 23.5%;
+    transform: translate(-50%, -50%); /* Adjust to center the element */
+    z-index: 0;
+  }
+}
+
+/* Resilience message styling */

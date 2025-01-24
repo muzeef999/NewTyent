@@ -282,7 +282,7 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
             </b>
           </h3>
           <p
-            className="text-start m-4 benfitsubheading"
+            className="text-start m-1 benfitsubheading"
             style={{ color: "#565959" }}
           >
             {Descrpition}
@@ -603,7 +603,7 @@ const Page = () => {
             {tableData.map((row, index) => (
               <tr key={index}>
                 <td className="text-start d-flex align-items-center">
-                  <Image
+                  <Image style={{display:'flex justift-content-center align-items-center'}}
                     src={row.icon}
                     alt={row.title}
                     width={40}

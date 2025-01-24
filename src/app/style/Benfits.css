@@ -70,7 +70,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
     border-radius: 20px;
     display: flex;
-    height: 240px; /* Ensures all cards have the same height */
+    height: auto; /* Ensures all cards have the same height */
     overflow: hidden;
     margin-bottom: 20px;
   }
@@ -81,11 +81,7 @@
   transform: translateY(-8px);
   } */
 
-.custom-image-benfts {
-  object-fit: fill;
-  width: 100%;
-  height: 240px;
-}
+
 
 .custom-table {
   table-layout: auto;
@@ -123,15 +119,15 @@
 }
 
 
-
-@media (max-width: 768px) {
+.custom-image-benfts {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+}
 
   .benfitsheading{
-    font-size: 18px;
+    font-size: clamp(20px, 2.6vh, 30px);
   }
   .benfitsubheading{
-    font-size: 14px;
+    font-size: clamp(12px, 1.56vh, 16px);
   }
-
-
-}
