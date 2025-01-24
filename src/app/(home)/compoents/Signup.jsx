@@ -127,42 +127,42 @@ const Signup = () => {
 
       <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
         {/* Name Field */}
-        <Input
-          type="text"
-          name="name"
-          label="Name"
-          placeholder="Enter your name"
-          value={form.name}
-          onChange={handleChange}
-        />
 
-        {/* Phone Number Field */}
-        <div className="form-group">
-          <label>Phone Number</label>
-          <div className="d-flex align-items-center">
-            <select
-              className="form-select me-2"
-              style={{ maxWidth: "100px" }}
-              value={countryCode}
-              onChange={(e) => setCountryCode(e.target.value)}
-            >
-              <option value="+1">+1 (USA)</option>
-              <option value="+44">+44 (UK)</option>
-              <option value="+91">+91 (India)</option>
-              <option value="+61">+61 (Australia)</option>
-              <option value="+81">+81 (Japan)</option>
-            </select>
-            <input
-              type="text"
-              name="phoneNumber"
-              className="form-control"
-              placeholder="Enter phone number"
-              value={form.phoneNumber}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
 
+{/* Name Field */}
+  <Input
+    type="text"
+    name="name"
+    label="Name"
+    placeholder="Enter your name"
+    className="form-control"
+    value={form.name}
+    onChange={handleChange}
+  />
+
+{/* Phone Number Field */}
+  <div className="d-flex">
+    <select
+      className="form-select me-2"
+      style={{ maxWidth: "120px" }}
+      value={countryCode}
+      onChange={(e) => setCountryCode(e.target.value)}
+    >
+      <option value="+1">+1 (USA)</option>
+      <option value="+44">+44 (UK)</option>
+      <option value="+91">+91 (India)</option>
+      <option value="+61">+61 (Australia)</option>
+      <option value="+81">+81 (Japan)</option>
+    </select>
+    <Input
+      type="text"
+      name="phoneNumber"
+      placeholder="Enter phone number"
+      className="form-control"
+      value={form.phoneNumber}
+      onChange={handleChange}
+    />
+  </div>
         {/* OTP Field */}
         {isOtpSent && (
           <div className="form-group">

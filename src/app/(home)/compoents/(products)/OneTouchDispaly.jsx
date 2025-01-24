@@ -60,7 +60,7 @@ const OneTouchDispaly = () => {
                       height: "54px",
                       borderRadius: "50%",
                       display: "flex",
-                      padding:'2px',
+                      padding:'6px',
                       justifyContent: "center",
                       alignItems: "center",
                       marginBottom: "10px",

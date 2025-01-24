@@ -2,6 +2,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css"; 
 import "@/app/style/AppBar.css"; 
 import dynamic from "next/dynamic";
+import { Poppins} from 'next/font/google'
+ 
+const poppins = Poppins({
+  weight: '400',
+  subsets: ['latin'],
+})
+ 
 const ClientComponent = dynamic(() => import("./(pages)/ClientComponent"),{ssr:false})
 
 
@@ -17,7 +24,7 @@ export default function RootLayout({ children, session }) {
 
   return (
     <html lang="en">
-      <body>
+      <body  className={poppins.className}>
         <ClientComponent session={session}>
           {children}
         </ClientComponent>

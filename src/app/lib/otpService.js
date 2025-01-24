@@ -1,27 +1,34 @@
-import twilio from "twilio"; // Correct import
+import twilio from "twilio";
+import connect from "@/app/lib/mongoDB";
+import Otp from "@/models/Otp";
 
 const client = twilio(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
 
-// Temporary store for OTPs (In production, use a database or Redis)
-let otpStore = {};
-
+// Send OTP to phone number
 export const sendOtpToPhone = async (phoneNumber) => {
   const otp = Math.floor(100000 + Math.random() * 900000); // Generate a 6-digit OTP
-  const otpExpiration = Date.now() + 5 * 60 * 1000; // Set OTP expiration time (5 minutes)
+  const expiration = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes expiration
 
   try {
+    await connect();
+
     // Send OTP via Twilio
     await client.messages.create({
       body: `Your OTP is: ${otp}`,
-      from: "+16813217500", // Replace with your Twilio phone number
+      from: "+16813217500", // Replace with your Twilio number
       to: phoneNumber,
     });
 
-    // Store OTP and expiration time temporarily
-    otpStore[phoneNumber] = { otp, expiration: otpExpiration };
+    // Save OTP in MongoDB
+    await Otp.findOneAndUpdate(
+      { phoneNumber },
+      { otp, expiration },
+      { upsert: true, new: true }
+    );
+
     console.log(`OTP sent to ${phoneNumber}: ${otp}`);
   } catch (error) {
     console.error("Error sending OTP:", error);
@@ -29,31 +36,38 @@ export const sendOtpToPhone = async (phoneNumber) => {
   }
 };
 
-export const verifyOtp = async (phoneNumber, otp) => {
+// Verify OTP
+export const verifyOtp = async (phoneNumber, enteredOtp) => {
+  try {
+    await connect();
 
-  const otp = otpStore[phoneNumber];
+    const otpRecord = await Otp.findOne({ phoneNumber });
 
-  if (!otpData) {
-    console.log("No OTP found for phone number:", phoneNumber);
-    return false; // OTP not found
-  }
+    if (!otpRecord) {
+      console.error("No OTP found for:", phoneNumber);
+      return false;
+    }
 
-  const { otp, expiration } = otpData;
+    const { otp, expiration } = otpRecord;
 
-  // Check if OTP is expired
-  if (Date.now() > expiration) {
-    console.log("OTP expired for phone number:", phoneNumber);
-    delete otpStore[phoneNumber]; // OTP expired, remove it
+    // Check if OTP is expired
+    if (new Date() > expiration) {
+      console.error("OTP expired for:", phoneNumber);
+      await Otp.deleteOne({ phoneNumber });
+      return false;
+    }
+
+    // Check if OTP matches
+    if (String(otp) === String(enteredOtp)) {
+      console.log("OTP verified for:", phoneNumber);
+      await Otp.deleteOne({ phoneNumber }); // Remove OTP after verification
+      return true;
+    } else {
+      console.error("Invalid OTP for:", phoneNumber);
+      return false;
+    }
+  } catch (error) {
+    console.error("Error verifying OTP:", error);
     return false;
-  }
-
-  // Check if the entered OTP matches
-  if (String(otp) === String(enteredOtp)) {
-    console.log("OTP verified successfully for phone number:", phoneNumber);
-    delete otpStore[phoneNumber]; // OTP is valid, remove it
-    return true;
-  } else {
-    console.log("Invalid OTP for phone number:", phoneNumber);
-    return false; // OTP is invalid
   }
 };

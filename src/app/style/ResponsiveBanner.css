@@ -12,6 +12,43 @@
 
   }
 
+  .nav-container-home {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    padding: 10px; /* Add padding for better touch usability */
+    scrollbar-width: thin; /* For modern browsers */
+  }
+  
+  /* Optional: Style the scrollbar for better appearance */
+  .nav-container-home::-webkit-scrollbar {
+    height: 6px; /* Scrollbar height for horizontal scrolling */
+  }
+  .nav-container-home::-webkit-scrollbar-thumb {
+    background: #ccc; /* Thumb color */
+    border-radius: 3px;
+  }
+  .nav-container-home::-webkit-scrollbar-track {
+    background: transparent; /* Track background */
+  }
+  
+  /* Items inside the container */
+  .nav-item {
+    margin-right: 15px; /* Space between items */
+  }
+  
+  .product-selection-filter-Home {
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .product-selection-filter-Home.active-Home {
+    font-weight: bold;
+    color: #007bff; /* Active color */
+  }
 
 
   .home_banner_bg_spalsh{
@@ -49,18 +86,20 @@
       background-repeat: no-repeat;
       height: 80vh; 
       position: relative; /* This creates a stacking context */
-      z-index: 999; /* set higher z-index for the below */
+      z-index: auto; /* set higher z-index for the below */
   }
   
   .responsive-container { 
       position: absolute;
-      top: 39.9%;
-      right: 14.2%;
+      top: 39.3%;
+      right: 12.5%;
       transform: translate(-50%, -50%); /* Adjust to center the element */
-      width: 10.8%;
+      width: 11.5%;
       transform: skewY(1.2deg); /* Skew to give a dynamic shape */
-      z-index: 0; /* se lower  z-index to ensure it appears background */
-  }
+      z-index: -9; /* se lower  z-index to ensure it appears background */
+        background-color: #000;
+        padding: 5px;
+    }
 
 
     .home_banner_bg_2 {
@@ -71,17 +110,17 @@
       background-repeat: no-repeat;
       height: 80vh; 
       position: relative;
-      z-index: 99;
+      z-index: auto;
     }
 
     .responsive-container-banner2{
       position: absolute;
-      top: 39.9%;
-      right: 16.2%;
+      top: 51%;
+      right: 16.5%;
       transform: translate(-50%, -50%); /* Adjust to center the element */
-      width: 5.8%;
+      width: 4.2%;
       transform: skewY(1.2deg); /* Skew to give a dynamic shape */
-      z-index: 0; /* se lower  z-index to ensure it appears background */
+      z-index: -9; /* se lower  z-index to ensure it appears background */
     }
   
   
@@ -89,24 +128,7 @@
   }
   
   
-.water-animation h1 {
-  color: #373737;
-  font-weight: 600;
-  font-size: 25px;
-}
-  
-  .water-animation h2 {
-    font-weight: 900;
-    font-size: 14px;
-    color: #008AC7;
-    margin: 0px;
-  }
-  
-  .water-animation p {
-    font-weight: 200;
-    font-size: 14px;
-    color: #008AC7;
-  }
+
   .sky_Movie {
     overflow: hidden;
     animation: flowAnimation 160s linear infinite; /* Animation with 10s duration and infinite loop */
@@ -155,14 +177,43 @@
       transform: rotate(360deg);
     }
   }
+
+  .home-banner-text {
+    color: #000; /* Sky Blue color for the text */
+    font-family: 'Poppins', sans-serif; /* Modern font for a clean look */
+    line-height: 1.6; /* Comfortable line spacing */
+    padding: 20px; /* Add some spacing */
+  }
+  
+  .home-banner-text h1 {
+    font-size: clamp(23px, 2.99vw, 70px);
+    font-weight: 700; /* Bold for emphasis */
+    color: #000; /* Sky Blue */
+  }
+  
+  .home-banner-text h1 span {
+    color: #008AC7; /* Lighter Sky Blue for contrast */
+    font-style: italic; /* Add a unique style */
+  }
+  
+  .home-banner-text p {
+    font-size: 1.5rem; /* Slightly smaller size for subtext */
+    margin-top: 10px; /* Add spacing between lines */
+    color: #000; /* Darker shade for better readability */
+  }
+  
+  .home-banner-text p span {
+    color: #008AC7; /* Highlighted words in light sky blue */
+    font-weight: bold; /* Emphasize key terms */
+  }
+  
+  
   
 
   .water-animation h1 {
-    font-size: clamp(23px, 2.99vw, 70px);
     padding-left: 20px;
   }
   .water-animation h2 {
-    font-size: clamp(14px, 1.8vw, 60px);
     padding-left: 20px;
   }
   .water-animation p {

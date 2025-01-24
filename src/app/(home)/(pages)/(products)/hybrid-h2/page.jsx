@@ -7,6 +7,7 @@ import Display from "./Display";
 import PRODUCTHYBRID1 from "@/asserts/hybrid/PRODUCTHYBRID-1.webp";
 import PRODUCTHYBRID2 from "@/asserts/hybrid/PRODUCTHYBRID-2.webp";
 import PRODUCTHYBRID3 from "@/asserts/hybrid/PRODUCTHYBRID-3.webp";
+import PRODUCTHYBRID4 from "@/asserts/hybrid/PRODUCTHYBRID-4.webp";
 import DisplayPatter from "./DisplayPatter";
 import "@/app/style/hybridBackground.css";
 import Certifications from "@/app/(home)/compoents/Certifications";
@@ -23,7 +24,7 @@ import Hybrid_Mobile from "@/asserts/hybrid/Hybrid_Mobile.webp";
 const page = () => {
   const products = [
     {
-      src: [PRODUCTHYBRID1, PRODUCTHYBRID2, PRODUCTHYBRID3],
+      src: [PRODUCTHYBRID1, PRODUCTHYBRID2, PRODUCTHYBRID3, PRODUCTHYBRID4],
     },
   ];
 

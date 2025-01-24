@@ -6,21 +6,22 @@ html {
     margin: 0;
 }
 
-@font-face {
-  font-family: 'Poppins'; /* Define the font name */
-  src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
-}
 
 @font-face {
   font-family: 'HalenoirEx'; /* Define the font name */
   src: url('../../fonts/HalenoirEx-BlackOutline.otf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Poppins'; /* Define the font name */
+  src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
 
 body {
      margin: 0;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+     font-family: 'Poppins', sans-serif; /* Add a fallback font */
+     overflow-x: hidden; /* Hide horizontal scrollbar */
     width: 100%;
     height: 100%;
     line-height: 1.5; /* Ensures readability and vertical rhythm */
@@ -396,9 +397,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
     border-bottom: none; /* Remove the bottom border */
   }
 
-  .tabcontentdesign{
-        border-top: 1px solid #008AC7; /* Only the top border */
-  }
+  
 
 
   

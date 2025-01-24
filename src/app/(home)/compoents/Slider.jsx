@@ -8,6 +8,7 @@ import "@/app/style/ResponsiveBanner.css";
 import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.png";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
 import Display from "../(pages)/(products)/hybrid-h2/Display";
+import Leaf from "../compoents/(Home)/Leaf";
 
 const Slider = () => {
   const [bannerClass, setBannerClass] = useState("");
@@ -39,11 +40,12 @@ const Slider = () => {
             </div> 
 
 
-            <div className="water-animation">
-              <h1>Don't Just Drink Water - Drink Life!</h1>
-              <h2>Boost Immunity, Health, and Vitality</h2>
-              <p>with Tyent Water</p>
-            </div>
+            <div class="home-banner-text">
+  <h1>Don't Just <span>Drink Water</span> - Drink Life!</h1>
+  <p>Boost Immunity, Health, and Vitality</p>
+  <p>with <span>Tyent Water</span></p>
+</div>
+
             
             <div className="responsive-container">
                 <NmpDispalayfinal />
@@ -67,6 +69,9 @@ const Slider = () => {
                 <Display />
       
             </div>
+
+            
+              <Leaf />
 
             <div className="water-animation">
               <h1>Hydration That Heals</h1>

@@ -33,8 +33,6 @@ export default function ClientComponent({ children, session }) {
         {/* <SvgBackground /> */}
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>
-        <br/>
-        <br/>
         <div className="section-spacing">
         {!shouldExcludeLayout && <Form />}
         </div>

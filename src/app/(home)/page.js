@@ -14,7 +14,8 @@ import puredrink from "@/asserts/health/puredrink.png";
 import Molecular from "@/asserts/health/Molecular.png";
 import alkaline from "@/asserts/health/Natural minerals.png";
 import watersoda from "@/asserts/health/Micro-clustered water.png";
-import Leaf from "./compoents/(Home)/Leaf";
+
+import HomeProduct from "./compoents/(Home)/HomeProduct";
 
 const TyentvsKAngan = dynamic(
   () => import("./compoents/(Home)/TyentvsKAngan"),
@@ -96,7 +97,6 @@ const Home = () => {
     <div>
       <Slider />
 
-      <Leaf />
 
       <div className="section-spacing">
         <SectionTwo />
@@ -206,6 +206,13 @@ const Home = () => {
       <TyentvsKAngan />
       </div>
 
+
+      <div className="section-spacing">
+      <h2  style={{ color: '#008AC7', fontWeight: '600', textAlign:'center' }}>This Week’s Highlights</h2>
+      <Container>
+        <HomeProduct />
+      </Container>
+      </div>
 
       <div className="section-spacing">
       <Certifications />

@@ -20,6 +20,7 @@ import BoosttheBody from "../BoosttheBody";
 import productnmp1 from "@/asserts/nmp/PRODUCTNMP1.webp";
 import productnmp2 from "@/asserts/nmp/PRODUCTNMP2.webp";
 import productnmp3 from "@/asserts/nmp/PRODUCTNMP3.webp";
+import productnmp4 from "@/asserts/nmp/PRODUCTNMP4.webp";
 import NMP5_BANNER_DESKTOP from "@/asserts/nmp/NMP5_BANNER_DESKTOP.webp";
 import NMP5_BANNER_MOBILE from "@/asserts/nmp/NMP5_BANNER_MOBILE.webp";
 import Image from "next/image";
@@ -35,7 +36,7 @@ const TyentNMP5 = () => {
 
   const products = [
     {
-      src: [productnmp1, productnmp2, productnmp3],
+      src: [productnmp1, productnmp2, productnmp3, productnmp4],
     },
   ];
 

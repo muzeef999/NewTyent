@@ -5,65 +5,31 @@ import bcrypt from "bcrypt";
 import { ObjectId } from "mongodb"; // For handling ObjectId
 import { ConnectionStates } from "mongoose";
 
-export const POST = async (request) => {
+export async function POST(request) {
   try {
-    await connect();
-
-    // Parse the request body
     const body = await request.json();
-    const { name, phoneNumber, password, otp } = body;
+    const { phoneNumber } = body;
 
-    // Validate request data
-    if (!name || !phoneNumber || !password || !otp) {
+    if (!phoneNumber) {
       return new Response(
-        JSON.stringify({ error: "All fields are required" }),
+        JSON.stringify({ error: "Phone number is required" }),
         { status: 400 }
       );
     }
 
-    // Verify the OTP entered by the user
-    const isOtpValid = await verifyOtp(phoneNumber, otp);
-    if (!isOtpValid) {
-      return new Response(
-        JSON.stringify({ error: "Invalid OTP" }),
-        { status: 400 }
-      );
-    }
-
-    // Check if the phone number is already registered
-    const existingUser = await User.findOne({ phoneNumber });
-    if (existingUser) {
-      return new Response(
-        JSON.stringify({ error: "Phone number is already registered" }),
-        { status: 409 }
-      );
-    }
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Create a new user
-    const newUser = new User({
-      name,
-      phoneNumber,
-      password: hashedPassword,
-    });
-
-    await newUser.save();
-
-    // Return success response
+    await sendOtpToPhone(phoneNumber);
     return new Response(
-      JSON.stringify({ message: "User created successfully" }),
-      { status: 201 }
+      JSON.stringify({ message: "OTP sent successfully" }),
+      { status: 200 }
     );
   } catch (error) {
-    console.error("Signup API Error:", error);
+    console.error("Error sending OTP:", error);
     return new Response(
-      JSON.stringify({ error: "Server error. Please try again later." }),
+      JSON.stringify({ error: "Failed to send OTP" }),
       { status: 500 }
     );
   }
-};
+}
 
 export const GET = async (request) => {
   try {

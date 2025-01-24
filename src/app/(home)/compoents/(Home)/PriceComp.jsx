@@ -48,8 +48,8 @@ const ComparisonTable = () => {
   ];
 
   return (
-    <div className="container mt-4">
-    <div style={{ borderRadius: "17px", padding: "20px", backgroundColor: "#f9f9f9" }}>
+    <div className="container">
+    <div style={{borderRadius:'15px', border:'1px solid #bfbfbf', overflow: 'hidden', }}>
       <Row>
         {comparisonData.map((product, index) => (
           <Col md={6} key={index} className="mb-4">

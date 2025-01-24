@@ -3,7 +3,7 @@ import Certifications from "@/app/(home)/compoents/Certifications";
 import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "@/app/style/Uce.css";
-import machine from "@/asserts/uce/uce.png";
+import machine from "@/asserts/uce/USE_SINGELE.webp";
 import Image from "next/image";
 import UceTopMachine from "../UceTopMachine";
 import d1 from "@/asserts/uce/d1.png";
@@ -28,8 +28,11 @@ import goodDesignaward from "@/asserts/uce/good-design-gold-award.png";
 import goodDesign from "@/asserts/uce/good-desig.png";
 import PRODUCTUCE1 from "@/asserts/uce/PRODUCTUCE-1.webp"
 import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp"
+import PRODUCTUCE3 from "@/asserts/uce/PRODUCTUCE-3.webp"
 import { RxDownload } from "react-icons/rx";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
+import uceBannerBlack from "@/asserts/uce/uceBannerBlack.png"
+import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.png"
 
 
 const data = [
@@ -108,7 +111,8 @@ const page = () => {
     {
       src: [
            PRODUCTUCE1,
-           PRODUCTUCE2
+           PRODUCTUCE2,
+           PRODUCTUCE3
       ],
     },
   ];
@@ -182,6 +186,124 @@ const page = () => {
 
   return (
     <div>
+
+      
+        {/* Mobile and Tablet View */}
+        <div className="d-block d-md-none">
+          <Image
+            src={uceBannerBlackMobile}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          <div className={"nmp-5-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"nmp-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
+                Build Resilience with <span>Every Drop</span>
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="8" height="40">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="40"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"nmp-banner-benefits"}>
+                    <span>For Stronger Immunity</span>
+                    <br />
+                    and <span>Natural Protection</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* NmpDispalayfinal for Mobile and Tablet */}
+          <div className="uce9Display">
+            <DisplayAnimation />
+          </div>
+        </div>
+
+        {/* Desktop and Larger Devices */}
+        <div className="d-none d-md-block">
+          <Image
+            src={uceBannerBlack}
+            alt="nmp-5 banner"
+            layout="responsive"
+            priority
+            style={{
+              position: "relative",
+              zIndex: 10, // Ensure the image is on top
+            }}
+          />
+
+          <div className={"nmp-9-desktop-one-touch-main-banner"}>
+            {/* Right-Aligned Content */}
+            <div className={"uc9-banner-content"}>
+              {/* Resilience Message */}
+              <h2 data-aos="fade-right" className={"uce9-banner-resilience"}>
+              Elevate your kitchen with Tyent UCE
+              </h2>
+
+              {/* Tyent Water Title */}
+
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-start align-items-center"
+              >
+                {/* Decorative Line */}
+                <div className="d-flex justify-content-center align-items-center">
+                  <svg width="8" height="70">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="70"
+                      stroke="#008ac7"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                   
+                </div>
+                {/* Benefits */}
+                <div className="mt-3">
+                  <p className={"uce9-banner-benefits"}>
+                    <span>where luxury meets</span>
+                    <br />
+                    with <span>cutting-edge design</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* NmpDispalayfinal for Desktop */}
+          <div className="uce9Display">
+            <DisplayAnimation />
+          </div>
+        </div>
       <Container>
       <div className="section-spacing">
         <ProductSection products={products} specifications={specifications} />
@@ -198,9 +320,9 @@ const page = () => {
       <Container>
         <Row>
 
-          <Col xs={12} md={6}>
+          <Col xs={12} md={6} className="d-flex">
             <div
-              style={{ width: "100%", height: "auto", position: "relative" }}
+              style={{ width: "60%", height: "auto", position: "relative" }}
             >
               <Image
                 src={machine}
@@ -208,7 +330,7 @@ const page = () => {
                 layout="responsive"
                 priority
               />
-              <div style={{ position: "absolute", top: "30%", left: "42%" }}>
+              <div style={{ position: "absolute", top: "25%", right: "12%" }}>
                 <div style={{ width: "70%" }}>
                   <UceTopMachine />
                 </div>
@@ -354,7 +476,7 @@ const page = () => {
             md={6}
             className="d-flex flex-column justify-content-center align-items-center text-center"
           >
-            <div style={{ width: "60%" }}>
+            <div style={{ width: "40%" }}>
               <UceTopMachine />
             </div>
             <h3>
@@ -369,7 +491,7 @@ const page = () => {
             md={6}
             className="d-flex flex-column justify-content-center align-items-center text-center"
           >
-            <div style={{ width: "60%" }}>
+            <div style={{ width: "40%" }}>
               <UceTopMachine />
             </div>
             <h3>
@@ -384,7 +506,7 @@ const page = () => {
             md={6}
             className="d-flex flex-column justify-content-center align-items-center text-center"
           >
-            <div style={{ width: "60%", position: "relative" }}>
+            <div style={{ width: "40%", position: "relative" }}>
               <UceTopMachine />
 
               <div
@@ -455,7 +577,7 @@ const page = () => {
             md={6}
             className="d-flex flex-column justify-content-center align-items-center text-center"
           >
-            <div style={{ width: "60%", position: "relative" }}>
+            <div style={{ width: "40%", position: "relative" }}>
               <UceTopMachine />
 
               <div

@@ -10,13 +10,12 @@ const TyentvsKAngan = () => {
         <div className="container">
         <Tabs variant="tabs"
           defaultActiveKey="home"
-          id="uncontrolled-tab-example" className="m-0 p-0"
-          style={{margin:'0px !imortant', padding: '0px !important'}}
+          id="uncontrolled-tab-example"   className="d-flex justify-content-center align-items-center m-0 p-0 custom-tabs"
         >
-          <Tab eventKey="home" className="tabcontentdesign" title="Technical Overview">
+          <Tab eventKey="home"  title="Technical Overview">
             <CustomizedTables />
           </Tab>
-          <Tab eventKey="profile" className="tabcontentdesign"  title="Detail Comparison">
+          <Tab eventKey="profile"   title="Detail Comparison">
             <PriceComp />
           </Tab>
         </Tabs>
