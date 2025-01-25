@@ -72,59 +72,48 @@ display: flex;
 
   }
 
-  /* mobile view */
-  @media (max-width: 767px) {
-   
-    .home_banner_bg_1 {
-      background-image: url("../../asserts/homeBanners/home_Banner_mobile_Bg.png");
-      width: 100%;
-      height: auto; /* Allow height to adapt automatically */
-      background-size: contain; /* Ensure the whole image fits inside the container */
-      background-position: top center; /* Aligns the image to the top and horizontally centers it */
-      background-repeat: no-repeat;
-      position: relative;
-      z-index: 99;
-    }
-  
-    
 
-    .home_banner_bg_2 {
-      background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
-      width: 100%;
-      height: auto; /* Allow height to adapt automatically */
-      background-size: contain; /* Ensure the whole image fits inside the container */
-      background-position: top center; /* Aligns the image to the top and horizontally centers it */
-      background-repeat: no-repeat;
-      position: relative;
-      z-index: 99;
-    }
-  }
-
-  /* desktop view */
-  @media (min-width: 768px) {
-    .home_banner_bg_1 {
-      background-image: url("../../asserts/homeBanners/home_Banner_Bg.png");
-      width: 100%;
-      height: auto; /* Allow height to adapt automatically */
-      background-size: contain; /* Ensure the whole image fits inside the container */ 
-      background-position: top center; /* Aligns the image to the top and horizontally centers it */
-      background-repeat: no-repeat;
-      position: relative; /* This creates a stacking context */
-      z-index: auto; /* set higher z-index for the below */
-      display: block; /* Removes inline spacing issues */  
-  }
-
-  .home_banner_bg_2 {
-    background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
+  .home_banner_bg {
     width: 100%;
-    height: auto;
-    background-size: contain; /* Makes the image cover the entire container */
-    background-position: top center; /* Aligns the image to the top and horizontally centers it */
+    height: auto; /* Allow height to adjust automatically */
+    background-size: cover;
+    background-position: top center;
     background-repeat: no-repeat;
     position: relative;
-    z-index: auto;
+    z-index: auto; /* Default stacking order */
   }
+  
+  /* Desktop View */
+  @media (min-width: 768px) {
+    .home_banner_bg_one {
+      background-image: url("../../asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png");
+      aspect-ratio: 16/9;
+    }
+  
+    .home_banner_bg_two {
+      background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
+      
+      aspect-ratio: 16/9;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 767px) {
+    .home_banner_bg_one {
+      background-image: url("../../asserts/homeBanners/banner1/home_Banner_mobile_Bg.png");
+      aspect-ratio: 1/1;
+    }
+  
+    .home_banner_bg_two {
+      background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
+      aspect-ratio: 1/1;
+    }
+  }
+  
 
+  /* mobile view */
+  /* desktop view */
+ 
   .responsive-container { 
       position: absolute;
       top: 39.3%;
@@ -150,8 +139,6 @@ display: flex;
     }
   
   
-  
-  }
   
   
 

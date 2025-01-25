@@ -3,17 +3,14 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import watersplash from "@/asserts/homeBanners/banner2/water_splash.png";
 import "@/app/style/ResponsiveBanner.css";
 import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.png";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
-import Display from "../(pages)/(products)/hybrid-h2/Display";
-import Leaf from "../compoents/(Home)/Leaf";
 
 const Slider = () => {
   const [bannerClass, setBannerClass] = useState("");
 
-  const bannerClasses = ["home_banner_bg_1", "home_banner_bg_2"];
+  const bannerClasses = ["home_banner_bg_one", "home_banner_bg_two"];
 
   // Randomize banner class
   useEffect(() => {
@@ -68,52 +65,43 @@ const Slider = () => {
 
   return (
     <div>
-      <div className={bannerClass}>
-        {bannerClass === "home_banner_bg_1" && (
+      <div className={`home_banner_bg ${bannerClass}`}>
+        {bannerClass === "home_banner_bg_one" && (
           <div>
-            
-
-            <div className="responsive-container">
-              <NmpDispalayfinal />
-            </div>
-
-
-            
-            <div class="home-banner-text">
-              <h1>Drink Life, Not Just Water!</h1>
-              <div class="d-flex">
-                <p class="tagline">
-                  <span class="changing-text">{currentText}</span>
-                </p>
-                <p class="brand-highlight">&nbsp; With Tyent Water</p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {bannerClass === "home_banner_bg_2" && (
-          <div>
-            
-            <Leaf />
-            <div className="home_banner_bg_spalsh">
+            <div className="sky_Movie">
               <Image
-                src={watersplash}
-                alt="slider npm top counter"
+                src={Banner1_sky}
+                alt="Home_banner"
                 layout="responsive"
                 priority
               />
             </div>
 
-            <div className="responsive-container-banner2">
-              <Display />
+            <div className="home-banner-text">
+              <h1>Drink Life, Not Just Water!</h1>
+              <div className="d-flex">
+                <p className="tagline">
+                  <span className="changing-text">{currentText}</span>
+                </p>
+                <p className="brand-highlight">&nbsp; With Tyent Water</p>
+              </div>
             </div>
 
+            <div className="responsive-container">
+              <NmpDispalayfinal />
+            </div>
+          </div>
+        )}
+
+        {bannerClass === "home_banner_bg_two" && (
+          <div>
+           
+          
             <div className="home-banner-text">
               <h1>Hydration That Heals</h1>
-              <h2>Anti-Inflammatory Benefits Backend by Science</h2>
+              <h2>Anti-Inflammatory Benefits Backed by Science</h2>
               <p>powered by Tyent</p>
             </div>
-
           </div>
         )}
       </div>
