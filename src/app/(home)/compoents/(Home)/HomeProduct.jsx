@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Row, Col, Nav } from "react-bootstrap";
 import Image from "next/image";
 import nmp5 from "@/asserts/NMP5.webp";
@@ -15,7 +15,9 @@ import home_small_banner_Desktop from "@/asserts/homeBanners/home_small_banner_D
 
 const ProductData = [
   {
+    category: "Recommended Products",
     products: [
+      
       {
         title: "NMP-5",
         image: nmp5,
@@ -96,15 +98,31 @@ const ProductData = [
 ];
 
 const HomeProduct = ({ isProductOpen }) => {
-  const [activeCategory, setActiveCategory] = useState(ProductData[0].category);
-
+  const [activeCategory, setActiveCategory] = useState("Recommended Products");
   const router = useRouter();
+  const thumbRef = useRef(null);
+
+  const scrollToActiveCategory = (index) => {
+    const thumbItems = thumbRef.current.children;
+    const selectedThumb = thumbItems[index];
+    const container = thumbRef.current;
+
+    const containerWidth = container.offsetWidth;
+    const thumbWidth = selectedThumb.offsetWidth;
+    const thumbLeft = selectedThumb.offsetLeft;
+
+    const scrollTo = thumbLeft - containerWidth / 2 + thumbWidth / 2;
+    container.scrollTo({
+      left: Math.max(0, scrollTo),
+      behavior: "smooth",
+    });
+  };
 
   const sendData = (event, link) => {
-    event.preventDefault(); // Prevent default link behavior
-    isProductOpen(false); // Close the product menu
+    event.preventDefault();
+    isProductOpen(false);
     if (link) {
-      router.push(link); // Navigate to the specified link
+      router.push(link);
     }
   };
 
@@ -114,7 +132,7 @@ const HomeProduct = ({ isProductOpen }) => {
         <div>
           <br />
           {/* Filter Tabs */}
-          <Nav className="d-flex  justify-content-center align-items-center  nav-container-home">
+          <Nav ref={thumbRef} className="d-flex  justify-content-center align-items-center nav-container-home">
             {ProductData.map((section, idx) => (
               <Nav.Item
                 key={section.category || `section-${idx}`}
@@ -125,9 +143,12 @@ const HomeProduct = ({ isProductOpen }) => {
                   className={`product-selection-filter-Home ${
                     activeCategory === section.category ? "active-Home" : ""
                   }`}
-                  onClick={() => setActiveCategory(section.category)}
+                  onClick={() => {
+                    setActiveCategory(section.category);
+                    scrollToActiveCategory(idx);
+                  }}
                 >
-                  {section.category || "All Products"}
+                  {section.category}
                 </h5>
               </Nav.Item>
             ))}
@@ -140,28 +161,28 @@ const HomeProduct = ({ isProductOpen }) => {
             <div className="d-block d-md-none">
               <Image
                 src={home_small_banner_Desktop}
-                alt="nmp-5 banner"
+                alt="NMP-5 Banner"
                 layout="responsive"
                 priority
                 style={{
-                  borderRadius:'15px',
+                  borderRadius: "15px",
                   position: "relative",
-                  zIndex: 10, // Ensure the image is on top
+                  zIndex: 10,
                 }}
               />
+              <br/>
             </div>
-
             {/* Desktop and Larger Devices */}
             <div className="d-none d-md-block">
               <Image
                 src={home_small_banner_Mobile}
-                alt="nmp-5 banner"
+                alt="NMP-5 Banner"
                 layout="responsive"
                 priority
                 style={{
-                  borderRadius:'15px',
+                  borderRadius: "15px",
                   position: "relative",
-                  zIndex: 10, // Ensure the image is on top
+                  zIndex: 10,
                 }}
               />
             </div>
@@ -169,7 +190,6 @@ const HomeProduct = ({ isProductOpen }) => {
         </Col>
         <Col md={6}>
           {/* Product Sections */}
-
           {ProductData.map(
             (section, idx) =>
               activeCategory === section.category && (
@@ -183,10 +203,7 @@ const HomeProduct = ({ isProductOpen }) => {
                           onClick={(event) => sendData(event, product.link)}
                           style={{ textDecoration: "none" }}
                         >
-                          <div
-                            className="d-flex flex-column justify-content-center"
-                            onClick={(event) => sendData(event, product.link)}
-                          >
+                          <div className="d-flex flex-column justify-content-center">
                             {/* Product Image */}
                             <Image
                               src={product.image}
@@ -223,3 +240,5 @@ const HomeProduct = ({ isProductOpen }) => {
 };
 
 export default HomeProduct;
+
+

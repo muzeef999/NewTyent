@@ -9,6 +9,7 @@ import icon6 from "@/asserts/certifications/6.png";
 import waterQuality from "@/asserts/certifications/waterQuality.png"
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa6";
+import { Col, Row } from 'react-bootstrap';
 
 
 const Certifications = () => {
@@ -29,23 +30,23 @@ const Certifications = () => {
           </p>
         </center>
         <center>
-          <div className="row justify-content-center">
+          <Row className="row justify-content-center">
             {[icon1, icon2, icon3,waterQuality, icon4, icon5].map((icon, index) => (
-              <div
-                key={index}
-                className="col-6 col-sm-4 col-md-2 mb-3 d-flex justify-content-center"
+              <Col xs={4} sm={4} md={2}
+                key={index} 
+                className="mb-3 d-flex justify-content-center"
               >
                  <Image
                   src={icon}
                   alt={`Certification ${index + 1}`}
-                  width={150}
-                  height={150}
+                  layout='responsive'
+                  priority
                   style={{ objectFit: 'contain' }}
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 100px" // Use responsive sizes based on screen width
                 />
-              </div>
+              </Col>
             ))}
-          </div>
+          </Row>
         </center>
      
      <Link style={{textDecoration:'none', color:'#565959'}} className='float-end' href={"/certifications"}>View All &nbsp; <FaArrowRight/></Link>

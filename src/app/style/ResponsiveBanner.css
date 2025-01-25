@@ -15,12 +15,15 @@
 
   
   .nav-container-home {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent line breaks */
-    padding: 10px; /* Add padding for better touch usability */
-    scrollbar-width: thin; /* For modern browsers */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  justify-content: flex-start;
+
   }
   
   /* Optional: Style the scrollbar for better appearance */

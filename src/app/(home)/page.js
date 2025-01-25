@@ -190,7 +190,7 @@ const Home = () => {
         style={{
           marginTop: "-20px",
           fontWeight: 600,
-          fontSize: "70px",
+          fontSize: "clamp(24px, 5vw, 70px)", // 24px is the min, 5vw is preferred, 70px is the max
           color: "#008AC7",
         }}
       >
@@ -221,7 +221,7 @@ const Home = () => {
        <div className="section-spacing">
       <h1
         className="text-center"
-        style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
+        style={{ fontSize: "clamp(24px, 5vw, 3rem)", fontWeight: "bold", color: "#333" }}
       >
         Technical excellence with global availability
       </h1>
@@ -232,11 +232,12 @@ const Home = () => {
       <div className="section-spacing">
       <h1
         className="text-center"
-        style={{ fontSize: "3rem", fontWeight: "bold", color: "#333" }}
+        style={{ fontSize: "clamp(24px, 5vw, 3rem)", fontWeight: "bold", color: "#333" }}
       >
         {" "}
         Our Valued Clients
       </h1>
+      <br/>
       
       <SlickSlider />
       </div>

@@ -54,8 +54,8 @@ const VideoCard = ({ src, description }) => {
 
 const Video = () => {
   return (
-    <div className="container py-4">
-      <Row>
+    <div className="container">
+      <Row className='g-4'>
         {videos.map((video) => (
           <Col md={4} key={video.id}>
             <VideoCard src={video.src} description={video.description} />
