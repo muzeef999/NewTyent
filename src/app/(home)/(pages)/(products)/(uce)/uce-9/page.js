@@ -33,34 +33,43 @@ import { RxDownload } from "react-icons/rx";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import uceBannerBlack from "@/asserts/uce/uceBannerBlack.png";
 import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.png";
+import list01 from "@/asserts/uce/list-01.webp";
+import UceDisplay from "../UceDisplay";
+import smpsplus from "@/asserts/whyTent/smpsplus.webp";
+import plates_uce from "@/asserts/uce/plates_uce.webp"
+import PAST_UCE from "@/asserts/uce/PAST_UCE.webp"
+import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
+import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
+
+
 
 const data = [
   {
-    icon: machine,
+    icon: plates_uce,
     title: "9 Japanese Plates",
     content:
       "The Tyent NMP-9 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -1050*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
   },
   {
-    icon: machine,
+    icon: smpsplus,
     title: "Advanced power supply",
     content:
       "Tyent's patented SMPS Plus power system, with 55+ adjustable settings, ensures consistent performance. Exclusively designed only for Tyent ionizers, it allows Tyent to produce strong alkaline (11.5-2.5 pH) and acidic water without chemicals, enhancing both efficiency and lifespan.",
   },
   {
-    icon: machine,
+    icon: PAST_UCE,
     title: "Past cleaning Technology",
     content:
       "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering ionized water with more molecular hydrogen.",
   },
   {
-    icon: machine,
+    icon: TURBO_UCE,
     title: "Turbo mode",
     content:
       "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
   },
   {
-    icon: machine,
+    icon: ECO_UCE,
     title: "Eco mode",
     content:
       "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
@@ -70,33 +79,42 @@ const data = [
 const WaterFilterCards = ({ icon, title, content }) => {
   return (
     <div className="custom-card-uce-scroll">
-      <div className="ml-4 align-items-center">
-        <div style={{ width: "100%", height: "auto" }}>
-          <Image src={icon} alt="machine" layout="responsive" priority />
-        </div>
-        <h3 className="text-start" style={{ color: "#000" }}>
-          <b>{title}</b>
-        </h3>
-        <div style={{ maxWidth: "600px" }}>
-          <p
-            style={{
-              fontWeight: 400,
-              fontSize: "16px",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              lineHeight: "1.5",
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-              WebkitLineClamp: 6,
-              wordWrap: "break-word",
-              margin: "0 10px",
-            }}
-          >
-            {content}
-          </p>
-        </div>
-      </div>
+  <div
+    className="d-flex flex-column justify-content-center align-items-center ml-4"
+  >
+    {/* Image Container */}
+    <div style={{ width: "80%", height: "auto", display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Image src={icon} alt="machine" layout="responsive" priority />
     </div>
+     <br/>
+    {/* Title */}
+    <h3 className="text-start" style={{ color: "#000", textAlign:'start' }}>
+      <b>{title}</b>
+    </h3>
+    
+    {/* Content */}
+    <div style={{ maxWidth: "600px" }}>
+      <p
+        style={{
+          textAlign:'start',
+          fontWeight: 400,
+          fontSize: "16px",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          lineHeight: "1.5",
+          display: "-webkit-box",
+          WebkitBoxOrient: "vertical",
+          WebkitLineClamp: 7,
+          wordWrap: "break-word",
+          margin: "0 10px",
+        }}
+      >
+        {content}
+      </p>
+    </div>
+  </div>
+</div>
+
   );
 };
 
@@ -311,19 +329,26 @@ const page = () => {
               className="d-flex justify-content-center align-items-center"
             >
               {/* Container for the first image */}
-              <div style={{ width: "58%" }}>
-                <Image
-                  src={machine}
-                  alt="machine image"
-                  layout="responsive"
-                  priority
-                />
-              </div>
+              <div style={{ width: "100%", position: "relative" }}>
+                <div style={{ width: "100%", zIndex: 2 }}>
+                  <Image
+                    src={list01}
+                    alt="machine image"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
 
-              {/* Container for the second image */}
-              <div style={{ position: "relative" }}>
-                <div style={{ width: "38%", marginLeft: "-90px" }}>
-                  <UceTopMachine />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "17.5%",
+                    right: "16.5%",
+                    width: "12.4%",
+                    zIndex: 0, // Adjust z-index to place it behind
+                  }}
+                >
+                  <UceDisplay />
                 </div>
               </div>
             </Col>
@@ -392,25 +417,35 @@ const page = () => {
               </div>
             </Col>
             <Col
+              xs={12}
               md={6}
               className="d-flex justify-content-center align-items-center"
             >
-              <div style={{ width: "58%" }}>
-                <Image
-                  src={machine}
-                  alt="machine image"
-                  layout="responsive"
-                  priority
-                />
-              </div>
+              {/* Container for the first image */}
+              <div style={{ width: "70%", position: "relative" }}>
+                <div style={{ width: "100%", zIndex: 2 }}>
+                  <Image
+                    src={list01}
+                    alt="machine image"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
 
-              {/* Container for the second image */}
-              <div style={{ position: "relative" }}>
-                <div style={{ width: "38%", marginLeft: "-90px" }}>
-                  <UceTopMachine />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "17.5%",
+                    right: "16.5%",
+                    width: "12.4%",
+                    zIndex: 0, // Adjust z-index to place it behind
+                  }}
+                >
+                  <UceDisplay />
                 </div>
               </div>
             </Col>
+
             <div className="d-flex justify-content-end">
               <div style={{ width: "15%", marginRight: "10px" }}>
                 <Image

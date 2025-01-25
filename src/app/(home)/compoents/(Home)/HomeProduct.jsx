@@ -6,17 +6,12 @@ import nmp5 from "@/asserts/NMP5.webp";
 import nmp9 from "@/asserts/NMP9.webp";
 import uce from "@/asserts/Uce.webp";
 import hybrid from "@/asserts/Hybrid.webp";
-import soap from "@/asserts/soap/soap.png"
-import bottle from "@/asserts/bottle/bottle-500ml.jpg";
-import filter from "@/asserts/filter/filter2.webp"
-import TIEN20 from "@/asserts/watergen/TIE_N20.webp"
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import "@/app/style/AppBar.css"
-import "@/app/style/ResponsiveBanner.css"
-import home_small_banner from "@/asserts/home_small_banner.webp"
-
-
+import "@/app/style/AppBar.css";
+import "@/app/style/ResponsiveBanner.css";
+import home_small_banner_Mobile from "@/asserts/homeBanners/home_small_banner_Mobile.webp";
+import home_small_banner_Desktop from "@/asserts/homeBanners/home_small_banner_Desktop.webp";
 
 const ProductData = [
   {
@@ -98,14 +93,12 @@ const ProductData = [
       },
     ],
   },
-
-  
 ];
 
 const HomeProduct = ({ isProductOpen }) => {
   const [activeCategory, setActiveCategory] = useState(ProductData[0].category);
 
-  const router = useRouter(); 
+  const router = useRouter();
 
   const sendData = (event, link) => {
     event.preventDefault(); // Prevent default link behavior
@@ -115,33 +108,64 @@ const HomeProduct = ({ isProductOpen }) => {
     }
   };
 
-
   return (
     <div className="container">
       <Row>
-      <div>
-        <br/>
-        {/* Filter Tabs */}
-<Nav className="d-flex  justify-content-center align-items-center  nav-container-home">
-  {ProductData.map((section, idx) => (
-    <Nav.Item key={section.category || `section-${idx}`} style={{padding:'10px'}}>
-      <h5 style={{fontSize:'20px'}}
-        className={`product-selection-filter-Home ${
-          activeCategory === section.category ? "active-Home" : ""
-        }`}
-        onClick={() => setActiveCategory(section.category)}
-      >
-        {section.category || "All Products"}
-      </h5>
-    </Nav.Item>
-  ))}
-</Nav>
-            <br/>
-          </div>
+        <div>
+          <br />
+          {/* Filter Tabs */}
+          <Nav className="d-flex  justify-content-center align-items-center  nav-container-home">
+            {ProductData.map((section, idx) => (
+              <Nav.Item
+                key={section.category || `section-${idx}`}
+                style={{ padding: "10px" }}
+              >
+                <h5
+                  style={{ fontSize: "20px" }}
+                  className={`product-selection-filter-Home ${
+                    activeCategory === section.category ? "active-Home" : ""
+                  }`}
+                  onClick={() => setActiveCategory(section.category)}
+                >
+                  {section.category || "All Products"}
+                </h5>
+              </Nav.Item>
+            ))}
+          </Nav>
+          <br />
+        </div>
         <Col md={6} className="d-flex justify-content-center align-item-center">
-           <div style={{width:'100%', height:'auto'}}>
-            <Image src={home_small_banner} alt="home_small_banner" layout="responsive" priority  style={{objectFit:'cover', borderRadius:'10px'}}/>
-           </div>
+          <div style={{ width: "100%", height: "auto", position: "relative" }}>
+            {/* Mobile and Tablet View */}
+            <div className="d-block d-md-none">
+              <Image
+                src={home_small_banner_Desktop}
+                alt="nmp-5 banner"
+                layout="responsive"
+                priority
+                style={{
+                  borderRadius:'15px',
+                  position: "relative",
+                  zIndex: 10, // Ensure the image is on top
+                }}
+              />
+            </div>
+
+            {/* Desktop and Larger Devices */}
+            <div className="d-none d-md-block">
+              <Image
+                src={home_small_banner_Mobile}
+                alt="nmp-5 banner"
+                layout="responsive"
+                priority
+                style={{
+                  borderRadius:'15px',
+                  position: "relative",
+                  zIndex: 10, // Ensure the image is on top
+                }}
+              />
+            </div>
+          </div>
         </Col>
         <Col md={6}>
           {/* Product Sections */}
@@ -153,41 +177,40 @@ const HomeProduct = ({ isProductOpen }) => {
                   <Row>
                     {section.products.map((product, index) => (
                       <Col key={index} xs={6} sm={6} md={6} lg={6}>
-                      <Link
-                        href={product.link || "#"}
-                        passHref
-                        onClick={(event) => sendData(event, product.link)}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <div
-                          className="d-flex flex-column justify-content-center"
+                        <Link
+                          href={product.link || "#"}
+                          passHref
                           onClick={(event) => sendData(event, product.link)}
+                          style={{ textDecoration: "none" }}
                         >
-                          {/* Product Image */}
-                          <Image
-                            src={product.image}
-                            alt={product.title}
-                            className="img-fluid product-card"
-                            style={{
-                              maxWidth: "95%",
-                              height: "auto",
-                              borderRadius: "10px",
-                            }}
-                          />
-                          <p
-                            className="text-start mt-2"
-                            style={{
-                              color: "#000",
-                              fontWeight: "300",
-                              fontSize: "16px",
-                            }}
+                          <div
+                            className="d-flex flex-column justify-content-center"
+                            onClick={(event) => sendData(event, product.link)}
                           >
-                            {product.title}
-                          </p>
-                        </div>
-                      </Link>
-                    </Col>
-                    
+                            {/* Product Image */}
+                            <Image
+                              src={product.image}
+                              alt={product.title}
+                              className="img-fluid product-card"
+                              style={{
+                                maxWidth: "95%",
+                                height: "auto",
+                                borderRadius: "10px",
+                              }}
+                            />
+                            <p
+                              className="text-start mt-2"
+                              style={{
+                                color: "#000",
+                                fontWeight: "300",
+                                fontSize: "16px",
+                              }}
+                            >
+                              {product.title}
+                            </p>
+                          </div>
+                        </Link>
+                      </Col>
                     ))}
                   </Row>
                 </div>

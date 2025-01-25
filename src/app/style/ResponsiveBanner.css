@@ -71,14 +71,27 @@
 
   /* mobile view */
   @media (max-width: 767px) {
+   
+    .home_banner_bg_1 {
+      background-image: url("../../asserts/homeBanners/home_Banner_mobile_Bg.png");
+      width: 100%;
+      height: auto; /* Allow height to adapt automatically */
+      background-size: contain; /* Ensure the whole image fits inside the container */
+      background-position: top center; /* Aligns the image to the top and horizontally centers it */
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 99;
+    }
+  
     
+
     .home_banner_bg_2 {
       background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
       width: 100%;
-      background-size: cover; /* Makes the image cover the entire container */
+      height: auto; /* Allow height to adapt automatically */
+      background-size: contain; /* Ensure the whole image fits inside the container */
       background-position: top center; /* Aligns the image to the top and horizontally centers it */
       background-repeat: no-repeat;
-      height: 50vh; 
       position: relative;
       z-index: 99;
     }
@@ -89,14 +102,26 @@
     .home_banner_bg_1 {
       background-image: url("../../asserts/homeBanners/home_Banner_Bg.png");
       width: 100%;
-      background-size: cover; /* Only one background image */
+      height: auto; /* Allow height to adapt automatically */
+      background-size: contain; /* Ensure the whole image fits inside the container */ 
       background-position: top center; /* Aligns the image to the top and horizontally centers it */
       background-repeat: no-repeat;
-      height: 80vh; 
       position: relative; /* This creates a stacking context */
       z-index: auto; /* set higher z-index for the below */
+      display: block; /* Removes inline spacing issues */  
   }
-  
+
+  .home_banner_bg_2 {
+    background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
+    width: 100%;
+    height: auto;
+    background-size: contain; /* Makes the image cover the entire container */
+    background-position: top center; /* Aligns the image to the top and horizontally centers it */
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: auto;
+  }
+
   .responsive-container { 
       position: absolute;
       top: 39.3%;
@@ -110,16 +135,6 @@
     }
 
 
-    .home_banner_bg_2 {
-      background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
-      width: 100%;
-      background-size: cover; /* Makes the image cover the entire container */
-      background-position: top center; /* Aligns the image to the top and horizontally centers it */
-      background-repeat: no-repeat;
-      height: 80vh; 
-      position: relative;
-      z-index: auto;
-    }
 
     .responsive-container-banner2{
       position: absolute;

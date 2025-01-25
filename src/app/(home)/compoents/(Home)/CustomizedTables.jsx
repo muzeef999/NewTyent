@@ -4,9 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 import "@/app/style/AppBar.css"
 import Image from 'next/image';
-import tyent from "@/asserts/tyent.png";
-import  kangen  from "@/asserts/kangen.png"
-import vs from "@/asserts/vs.png";
+import vs from "@/asserts/tyentkengan.webp";
 
 
 function CustomizedTables() {
@@ -117,33 +115,29 @@ function CustomizedTables() {
  
   return (
     <>
-      <Table className='table-borderless p-1' style={{borderRadius:'15px', border:'1px solid #bfbfbf', overflow: 'hidden', background:'#bfbfbf' }} hover responsive  >
+      <Table className='table-borderless' style={{borderRadius:'15px', border:'1px solid #bfbfbf', overflow: 'hidden', background:'#bfbfbf' }} hover responsive  >
        
         <tbody>
-          <tr>
-                 <td>
-                 <center>
-                  <div style={{width:'50%'}}>
-                   <Image src={vs} alt="tyent" layout='responsive' priority />
-                  </div>
-                  </center>
-                 </td>
-                 <td colSpan={2}>
-                  <center>
-                  <div style={{width:'50%'}}>
-                   <Image src={tyent} alt="tyent" layout='responsive' priority />
-                  </div>
-                  </center>
-                 </td>
-                 <td colSpan={2}>
-                  <center>
-                  <div style={{width:'50%'}}>
-                  <Image src={kangen} alt="tyent" layout='responsive' priority />
-                  </div>
-                  </center>
-                 </td>
-                 
-          </tr>
+        <tr className="p-0">
+      <td colSpan={5} style={{ padding: 0 }}>
+        <div
+          style={{
+            width: '100%',
+            overflow: 'hidden', // Ensures the image respects the radius
+          }}
+        >
+          <Image
+            src={vs}
+            alt="tyent"
+            layout="responsive"
+            priority
+            style={{
+              display: 'block', // Ensures no unexpected gaps
+            }}
+          />
+        </div>
+      </td>
+    </tr>
           {rows.map((row, index) => (
             <tr  key={index}>
                <td style={{ width: '26%', color:'#008AC7' }}>

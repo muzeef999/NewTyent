@@ -71,18 +71,14 @@ const Slider = () => {
       <div className={bannerClass}>
         {bannerClass === "home_banner_bg_1" && (
           <div>
-            <div
-              className="sky_Movie"
-              style={{ width: "100%", height: "auto" }}
-            >
-              <Image
-                src={Banner1_sky}
-                alt="Home_banner"
-                layout="responsive"
-                priority
-              />
+            
+
+            <div className="responsive-container">
+              <NmpDispalayfinal />
             </div>
 
+
+            
             <div class="home-banner-text">
               <h1>Drink Life, Not Just Water!</h1>
               <div class="d-flex">
@@ -91,10 +87,6 @@ const Slider = () => {
                 </p>
                 <p class="brand-highlight">&nbsp; With Tyent Water</p>
               </div>
-            </div>
-
-            <div className="responsive-container">
-              <NmpDispalayfinal />
             </div>
           </div>
         )}
