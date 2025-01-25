@@ -45,7 +45,7 @@ const SlickSlider = () => {
       {
         breakpoint: 1024, // Tablet and below
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 1,
           centerPadding: "30px",
         },
@@ -53,7 +53,7 @@ const SlickSlider = () => {
       {
         breakpoint: 768, // Mobile
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           centerPadding: "20px",
         },
@@ -61,7 +61,7 @@ const SlickSlider = () => {
       {
         breakpoint: 480, // Smallest screens
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           centerPadding: "10px",
         },

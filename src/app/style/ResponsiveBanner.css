@@ -15,14 +15,14 @@
 
   
   .nav-container-home {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+display: flex;
+  flex-wrap: nowrap;
   overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  width: 100%;
-  justify-content: flex-start;
+  white-space: nowrap;
+  padding: 10px 0;
+  gap: 15px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
 
   }
   

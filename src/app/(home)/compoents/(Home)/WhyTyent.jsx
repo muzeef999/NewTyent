@@ -26,23 +26,29 @@ const WhyTyent = () => {
             <span className="highlight">86+ countries</span> and renowned for
             exceptional customer satisfaction worldwide.
           </p>
-          <div className="video-wrapper mt-4" style={{ borderRadius: "20px" }}>
-            <iframe
-              style={{ borderRadius: "20px" }}
-              width="100%"
-              height="295"
-              src="https://www.youtube.com/embed/VA82Xf6jfv4?rel=0"
-              title="YouTube video player"
-              className="video-frame"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
+          <div className="video-wrapper mt-4" style={{ borderRadius: "20px", overflow: "hidden" }}>
+  <div
+    className="ratio ratio-16x9"
+    style={{
+      borderRadius: "20px",
+      overflow: "hidden",
+    }}
+  >
+    <iframe
+      src="https://www.youtube.com/embed/VA82Xf6jfv4?rel=0"
+      title="YouTube video player"
+      className="video-frame"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
         </Col>
 
         {/* Right Section */}
-        <Col md={6} className="d-flex flex-column gap-4">
+        <Col md={6} className="d-flex flex-column gap-4 judtify-contend-end align-items-center">
           {/* Content Items */}
           {[
             {

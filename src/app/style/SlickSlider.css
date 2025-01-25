@@ -35,4 +35,8 @@
       right: 15px !important;
     }
   }
+
+  .slick-prev:before, .slick-next:before{
+    color: #008AC7;
+  }
   

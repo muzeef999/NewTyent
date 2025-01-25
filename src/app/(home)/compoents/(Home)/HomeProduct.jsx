@@ -132,33 +132,48 @@ const HomeProduct = ({ isProductOpen }) => {
         <div>
           <br />
           {/* Filter Tabs */}
-          <Nav ref={thumbRef} className="d-flex  justify-content-center align-items-center nav-container-home">
-            {ProductData.map((section, idx) => (
-              <Nav.Item
-                key={section.category || `section-${idx}`}
-                style={{ padding: "10px" }}
-              >
-                <h5
-                  style={{ fontSize: "20px" }}
-                  className={`product-selection-filter-Home ${
-                    activeCategory === section.category ? "active-Home" : ""
-                  }`}
-                  onClick={() => {
-                    setActiveCategory(section.category);
-                    scrollToActiveCategory(idx);
-                  }}
-                >
-                  {section.category}
-                </h5>
-              </Nav.Item>
-            ))}
-          </Nav>
+          <Nav
+  ref={thumbRef}
+  className="d-flex justify-content-center align-items-center nav-container-home ms-0 ms-md-5 ms-xl-0"
+  style={{
+    display: "flex",
+    flexWrap: "nowrap",
+    overflowX: "auto",
+    whiteSpace: "nowrap",
+    padding: "10px 0",
+    gap: "15px",
+    scrollbarWidth: "none", // For Firefox
+    msOverflowStyle: "none", // For Internet Explorer and Edge
+
+  }}
+>
+  {ProductData.map((section, idx) => (
+    <Nav.Item
+      key={section.category || `section-${idx}`}
+      style={{ padding: "10px", flex: "0 0 auto" }}
+    >
+      <h5
+        style={{ fontSize: "20px", cursor: "pointer" }}
+        className={`product-selection-filter-Home ${
+          activeCategory === section.category ? "active-Home" : ""
+        }`}
+        onClick={() => {
+          setActiveCategory(section.category);
+          scrollToActiveCategory(idx);
+        }}
+      >
+        {section.category}
+      </h5>
+    </Nav.Item>
+  ))}
+</Nav>
+
           <br />
         </div>
         <Col md={6} className="d-flex justify-content-center align-item-center">
           <div style={{ width: "100%", height: "auto", position: "relative" }}>
             {/* Mobile and Tablet View */}
-            <div className="d-block d-md-none">
+            <div className="d-block d-md-none pb-2">
               <Image
                 src={home_small_banner_Desktop}
                 alt="NMP-5 Banner"
@@ -170,7 +185,7 @@ const HomeProduct = ({ isProductOpen }) => {
                   zIndex: 10,
                 }}
               />
-              <br/>
+              
             </div>
             {/* Desktop and Larger Devices */}
             <div className="d-none d-md-block">
@@ -185,8 +200,10 @@ const HomeProduct = ({ isProductOpen }) => {
                   zIndex: 10,
                 }}
               />
+             
             </div>
           </div>
+          
         </Col>
         <Col md={6}>
           {/* Product Sections */}
