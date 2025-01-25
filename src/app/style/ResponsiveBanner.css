@@ -85,6 +85,15 @@ display: flex;
   
   /* Desktop View */
   @media (min-width: 768px) {
+
+    .home-banner-text {
+      position: absolute;
+      top: 50%; /* Vertical center */
+      left: 2%; /* Horizontal center */
+      transform: translate(-0%, -50%); /* Adjust for accurate centering */
+    }
+
+
     .home_banner_bg_one {
       background-image: url("../../asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png");
       aspect-ratio: 16/9;
@@ -120,6 +129,18 @@ display: flex;
   
   /* Mobile View */
   @media (max-width: 767px) {
+
+    .home_banner2_text1 span {
+      word-wrap: break-word;
+    }
+
+    .home-banner-text {
+      position: absolute;
+      top: 35%; /* Vertical center */
+      left: 2%; /* Horizontal center */
+      transform: translate(-0%, -50%); /* Adjust for accurate centering */
+    }
+
     .home_banner_bg_one {
       background-image: url("../../asserts/homeBanners/banner1/home_Banner_mobile_Bg.png");
       aspect-ratio: 1/1;
@@ -212,12 +233,7 @@ display: flex;
 
 
 /* Container to position the text */
-.home-banner-text {
-  position: absolute;
-  top: 40%; /* Vertical center */
-  left: 2%; /* Horizontal center */
-  transform: translate(-0%, -50%); /* Adjust for accurate centering */
-}
+
 
 /* Header Styling */
 .home_banner1_text1 {
@@ -237,7 +253,7 @@ display: flex;
   font-size: 38px;
   font-weight: 800;
   color: #008AC7;
-  text-transform: uppercase;
+  text-transform: uppercase; 
 }
 
 @keyframes animatewater  {

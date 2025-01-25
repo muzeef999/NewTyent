@@ -61,20 +61,35 @@ const CartPage = () => {
   useEffect(() => {
     if (user?.id) {
       dispatch(fetchCart(user.id));
-    }
+    } 
   }, [user?.id, dispatch]);
 
+  
   const deleteProduct = async (productName) => {
+
     try {
+
       if (!user?.id) {
-        console.error("User is not logged in.");
+        console.error("User ID is missing. Redirecting to login...");
+        router.push("/Signin");
         return;
       }
-      await dispatch(deleteProductAction({ userId: user.id, productName:productName })).unwrap();
+  
+      if (!productName) {
+        console.error("Product name is missing.");
+        return;
+      }
+  
+  
+      await dispatch(
+        deleteProductAction({ userId: user.id, productName })
+      ).unwrap();
+  
     } catch (error) {
       console.error("Failed to delete product:", error);
     }
   };
+  
   
 
   const handleQtyChange = async (productName, newQuantity) => {

@@ -40,9 +40,10 @@ export const updateItemQuantity = createAsyncThunk(
 export const deleteProductAction = createAsyncThunk(
   "cart/delCart",
   async ({ userId, productName }, { rejectWithValue }) => {
+    
     try {
       const response = await axios.delete(`${apiUrl}/api/cart/${userId}`, {
-        data: { productName },
+        data: {userId, productName },
       });
       return response.data;
     } catch (error) {

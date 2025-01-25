@@ -65,7 +65,7 @@ const Login = () => {
              <PhoneInput
                 country={"in"} // Default country
                 value={phoneNumber}
-                onChange={(value) => setPhoneNumber(value)}
+                onChange={(value) => setPhoneNumber("+" + value)}
                 placeholder="Enter phone number"
                 inputStyle={{
                   width: "100%",

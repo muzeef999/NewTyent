@@ -159,10 +159,14 @@ export const PUT = async (request, { params }) => {
 
 
 export const DELETE = async (request, { params }) => {
-const { userId, productName } = await request.json();
+  // Parse the incoming JSON body
+  const { userId, productName } = await request.json();
+
+  // Check if both userId and productName are provided
   if (!userId || !productName) {
     return new NextResponse("User ID and Product Name are required", { status: 400 });
   }
+
   try {
     await connect();
 
