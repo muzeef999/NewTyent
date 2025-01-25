@@ -6,6 +6,7 @@ import gsap from "gsap";
 import "@/app/style/ResponsiveBanner.css";
 import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.png";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
+import Display from "../(pages)/(products)/hybrid-h2/Display";
 
 const Slider = () => {
   const [bannerClass, setBannerClass] = useState("");
@@ -95,12 +96,13 @@ const Slider = () => {
 
         {bannerClass === "home_banner_bg_two" && (
           <div>
-           
-          
             <div className="home-banner-text">
               <h1>Hydration That Heals</h1>
               <h2>Anti-Inflammatory Benefits Backed by Science</h2>
               <p>powered by Tyent</p>
+            </div>
+            <div className="responsive-container-hybrid">
+              <Display/>
             </div>
           </div>
         )}

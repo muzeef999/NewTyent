@@ -89,11 +89,32 @@ display: flex;
       background-image: url("../../asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png");
       aspect-ratio: 16/9;
     }
+
+    .responsive-container { 
+      position: absolute;
+      top: 34.8%;
+      right: 4.1%;
+      width: 13.9%;
+      aspect-ratio: 16/9;
+      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      z-index: -9; /* se lower  z-index to ensure it appears background */
+    }
+
+
   
     .home_banner_bg_two {
       background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
-      
       aspect-ratio: 16/9;
+    }
+
+    .responsive-container-hybrid {
+      position: absolute;
+      top: 51%;
+      right: 9.2%;
+      width: 5%;
+      aspect-ratio: 16/9;
+      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      z-index: -9; /* se lower  z-index to ensure it appears background */  
     }
   }
   
@@ -104,39 +125,37 @@ display: flex;
       aspect-ratio: 1/1;
     }
   
+    .responsive-container { 
+      position: absolute;
+      top: 35.2%;
+      right: 13.3%;
+      aspect-ratio: 1/1;
+      width: 22%;
+      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      z-index: -9; /* se lower  z-index to ensure it appears background */
+      
+    }
+
+
     .home_banner_bg_two {
       background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
       aspect-ratio: 1/1;
     }
+
+    .responsive-container-hybrid {
+      position: absolute;
+      top: 54.5%;
+      right: 20.5%;
+      width: 8.5%;
+      aspect-ratio: 1/1;
+      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      z-index: -9; /* se lower  z-index to ensure it appears background */  
+    }
+  
   }
   
 
-  /* mobile view */
-  /* desktop view */
- 
-  .responsive-container { 
-      position: absolute;
-      top: 39.3%;
-      right: 12.5%;
-      transform: translate(-50%, -50%); /* Adjust to center the element */
-      width: 11.5%;
-      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
-      z-index: -9; /* se lower  z-index to ensure it appears background */
-        background-color: #000;
-        padding: 5px;
-    }
 
-
-
-    .responsive-container-banner2{
-      position: absolute;
-      top: 51%;
-      right: 16.5%;
-      transform: translate(-50%, -50%); /* Adjust to center the element */
-      width: 4.2%;
-      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
-      z-index: -9; /* se lower  z-index to ensure it appears background */
-    }
   
   
   
