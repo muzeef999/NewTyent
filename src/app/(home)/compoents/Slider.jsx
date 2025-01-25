@@ -20,48 +20,7 @@ const Slider = () => {
     setBannerClass(randomClass);
   }, []);
 
-  const [currentText, setCurrentText] = useState('Boost Immunity'); // State for the text
 
-  useEffect(() => {
-    const textArray = ['Immunity', 'Health', 'Vitality'];
-    let currentIndex = 0;
-
-    // Function to change the text content
-    const changeText = () => {
-      currentIndex = (currentIndex + 1) % textArray.length;
-      setCurrentText(textArray[currentIndex]); // Update the text in state
-    };
-
-    // GSAP animation for fade-out and fade-in effect with a smoother transition
-    const animateTextChange = () => {
-      gsap.to('.changing-text', {
-        opacity: 0,
-        duration: 1,
-        ease: 'power2.inOut', // Smooth easing
-        onComplete: () => {
-          changeText(); // Change text when fade-out is complete
-          gsap.fromTo('.changing-text', 
-            { opacity: 0 }, 
-            { opacity: 1, duration: 1, ease: 'power2.out' } // Fade in the new text smoothly
-          );
-        }
-      });
-    };
-
-    // Initial fade-in effect when the component is mounted
-    gsap.fromTo('.changing-text', 
-      { opacity: 0 }, 
-      { opacity: 1, duration: 1, ease: 'power2.out' }
-    );
-
-    // Change text every 3 seconds with smoother transitions
-    const intervalId = setInterval(() => {
-      animateTextChange(); // Trigger the text change animation
-    }, 4000); // Change text every 4 seconds (3-second display + 1-second animation)
-
-    // Clean up the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, []);
 
 
   return (
@@ -79,13 +38,8 @@ const Slider = () => {
             </div>
 
             <div className="home-banner-text">
-              <h1>Drink Life, Not Just Water!</h1>
-              <div className="d-flex">
-                <p className="tagline">
-                  <span className="changing-text">{currentText}</span>
-                </p>
-                <p className="brand-highlight">&nbsp; With Tyent Water</p>
-              </div>
+              <h1 style={{fontSize:"clamp(25px, 5vw, 70px)"}} className="home_banner1_text1">Drink Life, Not Just Water!</h1>
+              <h1 style={{fontSize:"clamp(20px, 4vw, 50px)"}} className="home_banner2_text1">Boost Immunity with Tyent Water</h1>  
             </div>
 
             <div className="responsive-container">
@@ -97,9 +51,9 @@ const Slider = () => {
         {bannerClass === "home_banner_bg_two" && (
           <div>
             <div className="home-banner-text">
-              <h1>Hydration That Heals</h1>
-              <h2>Anti-Inflammatory Benefits Backed by Science</h2>
-              <p>powered by Tyent</p>
+              <h1 style={{fontSize:"clamp(30px, 5vw, 80px)"}} className="home_banner1_text1">Hydration That Heals</h1>
+              <h1 style={{fontSize:"clamp(16px, 4vw, 26px)"}} className="home_banner1_text1">Anti-Inflammatory Benefits Backed by Science powered by Tyent</h1>
+            
             </div>
             <div className="responsive-container-hybrid">
               <Display/>

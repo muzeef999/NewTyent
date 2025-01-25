@@ -214,36 +214,45 @@ display: flex;
 /* Container to position the text */
 .home-banner-text {
   position: absolute;
-  top: 50%; /* Vertical center */
-  left: 1%; /* Horizontal center */
+  top: 40%; /* Vertical center */
+  left: 2%; /* Horizontal center */
   transform: translate(-0%, -50%); /* Adjust for accurate centering */
 }
 
 /* Header Styling */
-.home-banner-text h1 {
-  font-size: clamp(23px, 2.99vw, 70px);
+.home_banner1_text1 {
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.1);
+  background-image: url("../../asserts/homeBanners/water.png");
+  background-repeat: repeat-x;
+  text-transform: uppercase;
+ background-size: cover;
+ background-size: 100%;
+  -webkit-background-clip: text;
+  animation: animatewater 15s linear infinite;
+  
+}
+
+.home_banner2_text1 {
+  font-size: 38px;
   font-weight: 800;
-  font-family: 'HalenoirEx', sans-serif;
-  margin-bottom: 20px;
   color: #008AC7;
   text-transform: uppercase;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Styling for the text in animation */
-.tagline .changing-text {
-  display: inline-block;
-  font-size: 40px;
-  font-weight: 800;
-  color: #008AC7;
-  opacity: 0; /* Start with invisible text */
+@keyframes animatewater  {
+  
+  0% {
+    background-position: left 0px top 80px;
+  }
+  40% {
+    background-position: left 800px top -50px;
+  }
+  80% {
+    background-position: left 1800px top -50px;
+  }
+  100% {
+    background-position: left 2400px top 80px;
+  }
 }
-
-.home-banner-text .brand-highlight {
-  display: inline-block;
-  font-size: 40px;
-  font-weight: 800;
-  color: #008AC7;
-}
-
 
