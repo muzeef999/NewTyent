@@ -54,6 +54,7 @@ const myNextAuthOptions = {
         token.role = user.role; // Include role
       }
       return token;
+      
     },
     async session({ session, token }) {
       // Include token details in session

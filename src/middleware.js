@@ -15,10 +15,27 @@ const roleRedirects = {
   employee: '/complains',
 };
 
+// CORS Headers
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*', // Allow requests from all origins
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Allowed headers
+};
+
 export async function middleware(request) {
-  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
   const url = request.nextUrl.clone();
 
+  // Handle CORS preflight requests
+  if (request.method === 'OPTIONS') {
+    const response = NextResponse.next();
+    Object.entries(corsHeaders).forEach(([key, value]) => {
+      response.headers.set(key, value);
+    });
+    return response;
+  }
+
+  // Authentication and role-based access control
+  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
   if (!token) {
     // Redirect unauthenticated users to home
     url.pathname = '/';
@@ -31,12 +48,22 @@ export async function middleware(request) {
 
   // Check if the path is allowed for the role
   if (allowedPaths.some(path => url.pathname.startsWith(path))) {
-    return NextResponse.next();
+    const response = NextResponse.next();
+    // Add CORS headers to the response
+    Object.entries(corsHeaders).forEach(([key, value]) => {
+      response.headers.set(key, value);
+    });
+    return response;
   }
 
   // Redirect to the default page for the role if path is not allowed
   url.pathname = defaultRedirect;
-  return NextResponse.redirect(url);
+  const response = NextResponse.redirect(url);
+  // Add CORS headers to the response
+  Object.entries(corsHeaders).forEach(([key, value]) => {
+    response.headers.set(key, value);
+  });
+  return response;
 }
 
 export const config = {
