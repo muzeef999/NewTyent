@@ -104,6 +104,16 @@
       right: 14%;
       z-index: 0;
     }
+    .hybrid-desktop-one-touch-main-banner{
+      position: absolute;
+      top:15%;
+      left:5%;
+      z-index: 999;
+      text-align: left;
+      transform: translate(-3%, -50%); /* Adjust to center the element */
+      color: #FFF;
+    }
+    
   }
   
   
@@ -118,18 +128,23 @@
       z-index: 0
       ;
     }
+    .hybrid-desktop-one-touch-main-banner{
+      position: absolute;
+      top:20%;
+      left:25%;
+      z-index: 999;
+      text-align: left;
+      transform: translate(-3%, -50%); /* Adjust to center the element */
+      color: #FFF;
+    }
+    
+  }
+
+  .hybrid-banner-benefits {
+    font-size: clamp(16px, 2vw, 26px);
   }
 
 
-  .hybrid-desktop-one-touch-main-banner{
-    position: absolute;
-    top:30%;
-    left:25%;
-    z-index: 999;
-    text-align: left;
-    transform: translate(-3%, -50%); /* Adjust to center the element */
-    color: #FFF;
-  }
   
 
   

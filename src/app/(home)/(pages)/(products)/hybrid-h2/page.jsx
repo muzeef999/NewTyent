@@ -109,7 +109,48 @@ const page = () => {
               position: "relative",
               zIndex: 10, // Ensure the image is on top
             }}
-          />
+          /> 
+
+<div className={"hybrid-desktop-one-touch-main-banner"}>
+          {/* Right-Aligned Content */}
+          <div className={"uc9-banner-content"}>
+            {/* Resilience Message */}
+            <h2 data-aos="fade-right" className={"uce9-banner-resilience"}>
+            The Future of Hydration is Here
+            </h2>
+
+            {/* Tyent Water Title */}
+
+            <div
+              data-aos="fade-left"
+              className="d-flex justify-content-start align-items-center"
+            >
+              {/* Decorative Line */}
+              <div className="d-flex justify-content-center align-items-center">
+                <svg width="8" height="40">
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="40"
+                    stroke="#008ac7"
+                    strokeWidth="4"
+                  />
+                </svg>
+              </div>
+              {/* Benefits */}
+              <div className="mt-3">
+               
+                <p className={"hybrid-banner-benefits"}>
+                  <span>Tyent H2-Hybrid with</span>
+                  <br />
+                  <span>patented Twin cell Technology</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
           {/* NmpDispalayfinal for Mobile and Tablet */}
           <div className="hybridDisplay">
@@ -160,7 +201,7 @@ const page = () => {
               {/* Benefits */}
               <div className="mt-3">
                
-                <p className={"uce9-banner-benefits"}>
+                <p className={"hybrid-banner-benefits"}>
                   <span>Tyent H2-Hybrid with</span>
                   <br />
                   <span>patented Twin cell Technology</span>

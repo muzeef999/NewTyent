@@ -339,7 +339,7 @@ const handleSubmenuLeave = () => {
                             </li>
                             <div className="dropdown-divider"></div>
                             <li>
-                              <Link href="/tyent-global" className="dropdown-item" onClick={closeOffcanvas}>
+                              <Link href="/soap" className="dropdown-item" onClick={closeOffcanvas}>
                                 Soap
                               </Link>
                             </li>
