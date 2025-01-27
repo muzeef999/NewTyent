@@ -1,19 +1,54 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import smps from "@/asserts/smps.png";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 import tyentPlates from "@/asserts/tyentvskangen/tyentPlates.png";
 import kangenPlates from "@/asserts/tyentvskangen/kangenPlates.png";
 import kangenSmps from "@/asserts/tyentvskangen/kangenSmps.png";
 import smpsplus from "@/asserts/whyTent/smpsplus.webp";
-import tyentFilters from "@/asserts/whyTent/tyentFilters.webp";
+import tyentFilters from "@/asserts/filter2.png";
 import kangenFilter from "@/asserts/tyentvskangen/kangenFilter.png";
-import doorstep from "@/asserts/tyentvskangen/doorstep.png"
-import callmute from "@/asserts/tyentvskangen/callmute.png"
+import doorstep from "@/asserts/tyentvskangen/doorstep.png";
+import callmute from "@/asserts/tyentvskangen/callmute.png";
 import Image from "next/image";
 import PriceComp from "../compoents/(Home)/PriceComp";
-import vs from "@/asserts/tyentvskangen/vs.png"
+import vs from "@/asserts/tyentvskangen/vs.png";
+import phscale from "@/asserts/tyentvskangen/phscale.png";
+
+const tableData = [
+  {
+    title: "Tyent NMP Series",
+    bgColor: "#c3e6fa",
+    color: "#008ac7",
+    details: [
+      { label: "Tyent NMP-5", value: "52.9*5 = 264.5 sq inches" },
+      { label: "Tyent NMP-7", value: "52.9*7 = 370.3 sq inches" },
+      { label: "Tyent NMP-9", value: "52.9*9 = 476.1 sq inches" },
+      { label: "Tyent NMP-11", value: "52.9*11 = 581.59 sq inches" },
+      { label: "Tyent plate type", value: "Solid hybrid mesh plate" },
+      { label: "Tyent plates warranty", value: "15 years" },
+      { label: "Tyent each plate surface area", value: "52.9 sq inches." },
+    ],
+  },
+  {
+    title: "Enagic Kangen ",
+    bgColor: "#d9dbda",
+    color: "#000",
+    details: [
+      { label: "Enagic kangen J4", value: "38.5*4 = 153.6  sq inches" },
+      { label: "Enagic kangen SD501", value: "38.5*7 = 269.5  sq inches" },
+      { label: "Enagic kangen K8", value: "38.5*8 = 308  sq inches" },
+      { label: "Enagic kangen Super SD 501", value: "38.5*7 = 462  sq inches" },
+      { label: "Enagic Kangen plate type", value: "Solid plate" },
+      { label: "Enagic Kangen plates warranty", value: "5 years." },
+      {
+        label: "Enagic Kangen each plate surface area",
+        value: "38.5 sq inches.",
+      },
+    ],
+  },
+];
 
 const page = () => {
   const headerData = {
@@ -213,10 +248,11 @@ const page = () => {
                 }}
               >
                 <div
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center mb-5"
                   style={{ width: "60%", height: "auto", margin: "0 auto" }}
                 >
                   <Image
+                    style={{ borderRadius: "18px" }}
                     src={smpsplus}
                     alt="tyentPlates"
                     layout="responsive"
@@ -249,7 +285,7 @@ const page = () => {
                 }}
               >
                 <div
-                  className="d-flex justify-content-center align-items-center"
+                  className="d-flex justify-content-center align-items-center  mb-5"
                   style={{ width: "60%", height: "auto", margin: "0 auto" }}
                 >
                   <Image
@@ -281,8 +317,6 @@ const page = () => {
         <br />
         <br />
         <h2 style={{ color: "#008AC7" }}>
-
-          
           <b>3. Replacement Filters</b>
         </h2>
         <p style={{ fontSize: "14px" }}>
@@ -312,16 +346,16 @@ const page = () => {
                 }}
               >
                 <div
-              className="d-flex justify-content-center align-items-center"
-              style={{ width: "60%", height: "auto", margin: "0 auto" }}
-            >
-              <Image
-                src={tyentFilters}
-                alt="tyentPlates"
-                layout="responsive"
-                priority
-              />
-            </div>
+                  className="d-flex justify-content-center align-items-center  mb-5"
+                  style={{ width: "30%", height: "auto", margin: "0 auto" }}
+                >
+                  <Image
+                    src={tyentFilters}
+                    alt="tyentPlates"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
                 <b>Tyent: .01 Micron Ultra filtration</b>
               </h4>
 
@@ -361,16 +395,16 @@ const page = () => {
                 }}
               >
                 <div
-              className="d-flex justify-content-center align-items-center"
-              style={{ width: "60%", height: "auto", margin: "0 auto" }}
-            >
-              <Image
-                src={kangenFilter}
-                alt="tyentPlates"
-                layout="responsive"
-                priority
-              />
-            </div>
+                  className="d-flex justify-content-center align-items-center  mb-5"
+                  style={{ width: "60%", height: "auto", margin: "0 auto" }}
+                >
+                  <Image
+                    src={kangenFilter}
+                    alt="tyentPlates"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
                 <b>Kangen: Carbon Filter</b>
               </h4>
 
@@ -401,6 +435,10 @@ const page = () => {
         <h2 style={{ color: "#008AC7" }}>
           <b>4. Production of Strong Alkaline water & Strong Acidic water</b>
         </h2>
+
+        <div style={{ width: "80%", height: "auto", margin: "0 auto" }}>
+          <Image src={phscale} alt="phScale" layout="responsive" priority />
+        </div>
         <p style={{ fontSize: "14px" }}>
           Strong alkaline water (11.5 pH) and strong acidic water (2.5 pH) offer
           essential benefits for various uses. Strong alkaline water is
@@ -464,7 +502,7 @@ const page = () => {
         <h2 style={{ color: "#008AC7" }}>
           <b>5. Reasonable cost & Doorstep service:</b>
         </h2>
-        
+
         <p style={{ fontSize: "14px" }}>
           Price & doorstep service plays a crucial role in selecting a water
           ionizer, affecting both the upfront cost and long-term value.
@@ -486,7 +524,7 @@ const page = () => {
               padding: "30px",
             }}
           >
-              <div
+            <div
               className="d-flex justify-content-center align-items-center"
               style={{ width: "60%", height: "auto", margin: "0 auto" }}
             >
@@ -516,7 +554,7 @@ const page = () => {
             </div>
           </Col>
           <Col md={6} style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
-          <div
+            <div
               className="d-flex justify-content-center align-items-center"
               style={{ width: "60%", height: "auto", margin: "0 auto" }}
             >
@@ -546,8 +584,64 @@ const page = () => {
             </div>
           </Col>
         </Row>
+        <br/>
+
+        <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
+          Price Comparison
+        </p>
 
         <PriceComp />
+        <br/>
+
+        <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
+          Plates/Electrodes Surface area
+        </p>
+
+        <Row>
+          {tableData.map((data, index) => (
+            <Col
+              xs={12}
+              md={6}
+              key={index}
+              className="d-flex align-items-center justify-content-center text-center"
+            >
+              <Table
+                bordered
+                hover
+                className="custom-table"
+                style={{
+                  borderRadius: "4px",
+                  overflow: "hidden",
+                  backgroundColor: "#FFF",
+                }}
+              >
+                <thead>
+                  <tr>
+                    <th
+                      style={{
+                        color: data.color,
+                      }}
+                      colSpan="2"
+                    >
+                      <b>{data.title}</b>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.details.map((detail, idx) => (
+                    <tr key={idx}>
+                      <td style={{ color: data.color, textAlign: "start" }}>
+                        {detail.label}
+                      </td>{" "}
+                      {/* Blue heading color */}
+                      <td style={{ textAlign: "start" }}>{detail.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Col>
+          ))}
+        </Row>
       </div>
     </div>
   );

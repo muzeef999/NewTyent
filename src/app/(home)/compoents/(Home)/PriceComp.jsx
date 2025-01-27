@@ -9,7 +9,7 @@ const PriceComp = () => {
       bgColor: "#c3e6fa",
       color: "#008ac7",
       details: [
-        { label: "Price:", value: "160,000/-" },
+        { label: "Price:", value: "168,000/-" },
         { label: "Generates:", value: "7 Water types" },
         { label: "Plates:", value: "5" },
         { label: "ORP:", value: "-850" },
@@ -25,7 +25,7 @@ const PriceComp = () => {
         { label: "Generates:", value: "5 Water types" },
         { label: "Plates:", value: "4" },
         { label: "ORP:", value: "-450" },
-        { label: "Warranty:", value: "3 years" },
+        { label: "Warranty:", value: "5 years" },
       ],
     },
     {
@@ -33,7 +33,7 @@ const PriceComp = () => {
       bgColor: "#c3e6fa",
       color: "#008ac7",
       details: [
-        { label: "Price:", value: "195,000/-" },
+        { label: "Price:", value: "205,000/-" },
         { label: "Generates:", value: "7 Water types" },
         { label: "Plates:", value: "7" },
         { label: "ORP:", value: "-950" },
@@ -52,6 +52,55 @@ const PriceComp = () => {
         { label: "Warranty:", value: "5 years" },
       ],
     },
+    {
+      title: "TYENT NMP-9",
+      bgColor: "#c3e6fa",
+      color: "#008ac7",
+      details: [
+        { label: "Price:", value: "238,000/-" },
+        { label: "Generates:", value: "7 Water types" },
+        { label: "Plates:", value: "9" },
+        { label: "ORP:", value: "-1050" },
+        { label: "Warranty:", value: "3 yr & 15 yr on plates" },
+      ],
+    },
+    {
+      title: "ENAGIC KANGEN K8",
+      bgColor: "#d9dbda",
+      color: "#000",
+      details: [
+        { label: "Price:", value: "345,000/-" },
+        { label: "Generates:", value: "5 Water types" },
+        { label: "Plates:", value: "8" },
+        { label: "ORP:", value: "-722" },
+        { label: "Warranty:", value: "5 years" },
+      ],
+    },
+    {
+      title: "TYENT NMP-11",
+      bgColor: "#c3e6fa",
+      color: "#008ac7",
+      details: [
+        { label: "Price:", value: "272,000/-" },
+        { label: "Generates:", value: "7 Water types" },
+        { label: "Plates:", value: "11" },
+        { label: "ORP:", value: "-1150" },
+        { label: "Warranty:", value: "3 yr & 15 yr on plates" },
+      ],
+    },
+    {
+      title: "ENAGIC KANGEN SUPER SD501",
+      bgColor: "#d9dbda",
+      color: "#000",
+      details: [
+        { label: "Price:", value: "378,000/-" },
+        { label: "Generates:", value: "5 Water types" },
+        { label: "Plates:", value: "12" },
+        { label: "ORP:", value: "-800" },
+        { label: "Warranty:", value: "5 years" },
+      ],
+    },
+    
   ];
 
   return (
