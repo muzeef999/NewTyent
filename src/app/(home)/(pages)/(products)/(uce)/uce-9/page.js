@@ -76,6 +76,7 @@ const data = [
   },
 ];
 
+
 const WaterFilterCards = ({ icon, title, content }) => {
   return (
     <div className="custom-card-uce-scroll">

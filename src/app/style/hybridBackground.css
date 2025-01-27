@@ -119,6 +119,17 @@
       ;
     }
   }
+
+
+  .hybrid-desktop-one-touch-main-banner{
+    position: absolute;
+    top:30%;
+    left:25%;
+    z-index: 999;
+    text-align: left;
+    transform: translate(-3%, -50%); /* Adjust to center the element */
+    color: #FFF;
+  }
   
 
   
