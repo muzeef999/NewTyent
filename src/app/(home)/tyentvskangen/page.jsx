@@ -13,6 +13,7 @@ import doorstep from "@/asserts/tyentvskangen/doorstep.png"
 import callmute from "@/asserts/tyentvskangen/callmute.png"
 import Image from "next/image";
 import PriceComp from "../compoents/(Home)/PriceComp";
+import vs from "@/asserts/tyentvskangen/vs.png"
 
 const page = () => {
   const headerData = {
@@ -21,7 +22,7 @@ const page = () => {
     afterheading: "Satisfied Tyent India Customers",
     content:
       "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
-    img: smps,
+    img: vs,
     animatedText: "Health, Wellness, Transformation",
   };
 
