@@ -75,7 +75,6 @@ const NightModeDispay = () => {
                       rx="7.61443"
                       fill="url(#paint0_linear_4826_3862)"
                     />
-                    <rect width="67.2608" height="67.2608" fill="#00FF12" />
                     <g id="alk1">
                       <rect
                         width="67.2608"

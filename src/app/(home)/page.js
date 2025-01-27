@@ -119,7 +119,6 @@ const Home = () => {
             {cardDetails.map((card, index) => (
               <Col key={index }  
               data-aos={index === 0 ? "fade-up" : index === 1 ? "fade-right" : index === 2 ? "fade-left" : "zoom-in"}
-        
               xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}
               >
                 <WhyDrinkTyentWater

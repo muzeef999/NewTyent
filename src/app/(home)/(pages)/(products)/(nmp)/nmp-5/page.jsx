@@ -109,7 +109,7 @@ const TyentNMP5 = () => {
       name: "Solid-Hybrid mesh plate design (Titanium & Platinum)",
     },
     { label: "Electrode Material", name: "Platinum-coated Titanium" },
-    { label: "Purity of Plates", name: "99.99% (Permelac, Japan)" },
+    { label: "Purity of Plates", name: "99.9 (Permelac, Japan)" },
     { label: "Plates Manufacturing", name: "Permelac, Japan" },
     { label: "Additional Use of Chemicals/Salt", name: "No" },
     {
@@ -319,7 +319,7 @@ const TyentNMP5 = () => {
                 modern design, and an user friendly interface, making it the
                 ideal beginner model, featuring five advanced Japanese solid
                 hybrid mesh plates/electrodes from Permelac, Japan (Since 1969)
-                made of titanium coated with platinum, ensuring 99.99% purity.
+                made of titanium coated with platinum, ensuring 99.9 purity.
                 With an increased surface area, it delivers stable oxygen levels
                 and improved micro-clustering. It offers seven different water
                 ionization levels, It generates selective antioxidant molecular

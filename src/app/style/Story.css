@@ -35,11 +35,6 @@
   
   /* Responsive Adjustments */
   @media (max-width: 768px) {
-    .d-flex {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
-      gap: 10px; /* Space between stacked elements */
-      text-align: center; /* Center-align text */
-    }
   
     .global-point {
       margin: 0 auto; /* Center the icon in the container */

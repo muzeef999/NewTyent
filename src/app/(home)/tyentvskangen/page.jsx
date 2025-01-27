@@ -83,8 +83,11 @@ const page = () => {
             healthier,high-quality water.
           </p>
         </div>
-        <br />
-        <br />
+         
+
+
+         <div className="section-spacing">
+
 
         <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
           Detailed Comparison
@@ -219,8 +222,11 @@ const page = () => {
             </div>
           </Col>
         </Row>
-        <br />
-        <br />
+        
+
+        </div>
+
+        <div className="section-spacing"> 
         <h2 style={{ color: "#008AC7" }}>
           <b>2. Power supply</b>
         </h2>
@@ -314,8 +320,10 @@ const page = () => {
             </div>
           </Col>
         </Row>
-        <br />
-        <br />
+        </div>
+
+        
+        <div className="section-spacing"> 
         <h2 style={{ color: "#008AC7" }}>
           <b>3. Replacement Filters</b>
         </h2>
@@ -430,13 +438,15 @@ const page = () => {
             </div>
           </Col>
         </Row>
-        <br />
-        <br />
+        </div>
+        
+
+        <div className="section-spacing"> 
         <h2 style={{ color: "#008AC7" }}>
           <b>4. Production of Strong Alkaline water & Strong Acidic water</b>
         </h2>
 
-        <div style={{ width: "80%", height: "auto", margin: "0 auto" }}>
+        <div style={{ width: "80%", height: "auto", padding:'20px', margin: "0 auto" }}>
           <Image src={phscale} alt="phScale" layout="responsive" priority />
         </div>
         <p style={{ fontSize: "14px" }}>
@@ -497,8 +507,12 @@ const page = () => {
             </div>
           </Col>
         </Row>
-        <br />
-        <br />
+
+        </div>
+        
+
+        
+        <div className="section-spacing"> 
         <h2 style={{ color: "#008AC7" }}>
           <b>5. Reasonable cost & Doorstep service:</b>
         </h2>
@@ -584,15 +598,18 @@ const page = () => {
             </div>
           </Col>
         </Row>
-        <br/>
+        </div>
 
-        <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
+        
+        <div className="section-spacing">
+        <h2 style={{textAlign: "center", fontWeight:600 }}>
           Price Comparison
-        </p>
+        </h2>
 
         <PriceComp />
-        <br/>
+        </div>
 
+        
         <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
           Plates/Electrodes Surface area
         </p>

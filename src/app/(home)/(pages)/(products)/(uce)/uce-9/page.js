@@ -40,6 +40,7 @@ import plates_uce from "@/asserts/uce/plates_uce.webp"
 import PAST_UCE from "@/asserts/uce/PAST_UCE.webp"
 import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
 import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
+import JOGDail from "@/asserts/uce/JOGDail.png"
 
 
 
@@ -184,7 +185,7 @@ const page = () => {
       name: "Solid-Hybrid mesh plate design (Titanium & Platinum)",
     },
     { label: "Electrode Material", name: "Platinum-coated Titanium" },
-    { label: "Purity of Plates", name: "99.99% (Permelac, Japan)" },
+    { label: "Purity of Plates", name: "99.9 (Permelac, Japan)" },
     { label: "Plates Manufacturing", name: "Permelac, Japan" },
     { label: "Additional Use of Chemicals/Salt", name: "No" },
     {
@@ -310,6 +311,7 @@ const page = () => {
           <DisplayAnimation />
         </div>
       </div>
+
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
@@ -519,8 +521,19 @@ const page = () => {
               md={6}
               className="d-flex flex-column justify-content-center align-items-center text-center"
             >
-              <div style={{ width: "40%" }}>
+              <div style={{ width: "40%", position: "relative" }}>
                 <UceTopMachine />
+                
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "-20%",
+                    top: "0%",
+                    width: "60%",
+                  }}
+                >
+                  <Image src={JOGDail}  alt="jog Dail" layout="responsive" priority/>
+                </div>
               </div>
               <h3>
                 <b>Jog Dail</b>
@@ -540,8 +553,8 @@ const page = () => {
                 <div
                   style={{
                     position: "absolute",
-                    left: "1%",
-                    top: "29%",
+                    left: "-4%",
+                    top: "28%",
                     width: "60%",
                   }}
                 >
@@ -613,7 +626,7 @@ const page = () => {
                   style={{
                     position: "absolute",
                     left: "68%",
-                    top: "37%",
+                    top: "34%",
                     width: "70%",
                   }}
                 >
@@ -898,32 +911,7 @@ const page = () => {
             <div style={{ position: "relative", width: "40%" }}>
               <UceTopMachine />
               <div style={{ position: "absolute", top: "40%", left: "30.5%" }}>
-                <svg
-                  id="rotatearrow1"
-                  width="100%"
-                  height="auto"
-                  viewBox="0 0 311 84"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g opacity="0.46">
-                    <path
-                      d="M52.2172 19.4531C6 24.4792 6 42.394 6 42.394C16.8452 99.7851 283.408 75.3481 301.673 54.9008C319.939 34.4535 257.038 19.4536 257.038 19.4536"
-                      stroke="#6988BE"
-                      stroke-width="11"
-                    />
-                    <path
-                      d="M41.6094 5L60.6004 15.5946L46.5636 33"
-                      stroke="#6988BE"
-                      stroke-width="11"
-                    />
-                    <path
-                      d="M265.941 7L248.137 18.6757L258.974 34"
-                      stroke="#6988BE"
-                      stroke-width="11"
-                    />
-                  </g>
-                </svg>
+
 
                 <br />
                 <svg
@@ -962,21 +950,31 @@ const page = () => {
         <Container>
           <Row className="water-outlet">
             <Col xs={12} md={6}>
-              <div
-                style={{ width: "100%", height: "auto", position: "relative" }}
-              >
-                <Image
-                  src={machine}
-                  alt="uce iamge"
-                  layout="responsive"
-                  priority
-                />
-                <div style={{ position: "absolute", top: "30%", left: "42%" }}>
-                  <div style={{ width: "70%" }}>
-                    <UceTopMachine />
-                  </div>
+              {/* Container for the first image */}
+              <div style={{ width: "100%", position: "relative" }}>
+                <div style={{ width: "100%", zIndex: 2 }}>
+                  <Image
+                    src={list01}
+                    alt="machine image"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "17.5%",
+                    right: "16.5%",
+                    width: "12.4%",
+                    zIndex: 0, // Adjust z-index to place it behind
+                  }}
+                >
+                  <UceDisplay />
                 </div>
               </div>
+
+
             </Col>
             <Col
               xs={12}
@@ -1021,19 +1019,27 @@ const page = () => {
         <Container>
           <Row className="water-outlet">
             <Col xs={12} md={6}>
-              <div
-                style={{ width: "100%", height: "auto", position: "relative" }}
-              >
-                <Image
-                  src={machine}
-                  alt="uce iamge"
-                  layout="responsive"
-                  priority
-                />
-                <div style={{ position: "absolute", top: "30%", left: "42%" }}>
-                  <div style={{ width: "70%" }}>
-                    <UceTopMachine />
-                  </div>
+              {/* Container for the first image */}
+              <div style={{ width: "100%", position: "relative" }}>
+                <div style={{ width: "100%", zIndex: 2 }}>
+                  <Image
+                    src={list01}
+                    alt="machine image"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "17.5%",
+                    right: "16.5%",
+                    width: "12.4%",
+                    zIndex: 0, // Adjust z-index to place it behind
+                  }}
+                >
+                  <UceDisplay />
                 </div>
               </div>
             </Col>

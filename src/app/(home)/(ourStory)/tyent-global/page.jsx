@@ -13,11 +13,11 @@ import CoreStrategy from "@/asserts/aboutus/CoreStrategy.png"
 
 const KeyFactCard = ({ value, title, description }) => {
   return (
-    <div className="custom-col">
-    <Col xs={12} sm={6} md={4} lg={2} className="text-center">
+    <div>
+    <Col  className="d-flex flex-column justify-content-center align-items-center">
       <h3 className="backgroundplate">{value}</h3>
       <h6>{title}</h6>
-      <p>{description}</p>
+      <p className="text-center">{description}</p>
     </Col>
     </div>
   );
@@ -147,39 +147,48 @@ const Page = () => {
   </Container>
 </div>
 
-      
 
-      {/* Key Facts */}
-      <Container>
-  <h2 className="text-center mb-4">Key Facts</h2>
-  <Row>
-    <KeyFactCard
-      value="86+"
-      title="Global Presence"
-      description="To provide innovative water solutions that improve the health and well-being of individuals and families across India."
-    />
-    <KeyFactCard
-      value="160+"
-      title="Technology Patents"
-      description="Tyent holds 160+ technology patents, showcasing its commitment to groundbreaking advancements in water ionization."
-    />
-    <KeyFactCard
-      value="29+"
-      title="Years of R&D"
-      description="Over 29 years of cutting-edge research and development delivering innovative water solutions globally."
-    />
-    <KeyFactCard
-      value="15"
-      title="Years Warranty"
-      description="Recipient of prestigious design awards, blending innovation and aesthetics for advanced, luxury water ionizers worldwide."
-    />
-    <KeyFactCard
-      value="26"
-      title="Design Awards"
-      description="Recipient of prestigious design awards, blending innovation and aesthetics for advanced, luxury water ionizers worldwide."
-    />
-  </Row>
-</Container>;
+<Container className="py-5">
+      <h2 className="text-center mb-5 fw-bold">Key Facts</h2>
+      <Row className="g-4">
+        <Col xs={12} sm={6} md={4} lg={3}>
+          <KeyFactCard
+            value="86+"
+            title="Global Presence"
+            description="Providing innovative water solutions that improve health and well-being across India."
+          />
+        </Col>
+        <Col xs={12} sm={6} md={4} lg={3}>
+          <KeyFactCard
+            value="160+"
+            title="Technology Patents"
+            description="160+ patents, showcasing groundbreaking advancements in water ionization."
+          />
+        </Col>
+        <Col xs={12} sm={6} md={4} lg={3}>
+          <KeyFactCard
+            value="29+"
+            title="Years of R&D"
+            description="29 years of cutting-edge research delivering innovative water solutions globally."
+          />
+        </Col>
+        <Col xs={12} sm={6} md={4} lg={3}>
+          <KeyFactCard
+            value="15"
+            title="Years Warranty"
+            description="Prestigious design awards blending innovation and aesthetics in luxury water ionizers."
+          />
+        </Col>
+        <Col xs={12} sm={6} md={4} lg={3}>
+          <KeyFactCard
+            value="26"
+            title="Design Awards"
+            description="Recognized for design excellence in advanced, luxury water ionizers worldwide."
+          />
+        </Col>
+      </Row>
+    </Container>      
+
     </div>
   );
 };

@@ -106,7 +106,7 @@ const TyentNMP5 = () => {
       name: "Solid-Hybrid mesh plate design (Titanium & Platinum)",
     },
     { label: "Electrode Material", name: "Platinum-coated Titanium" },
-    { label: "Purity of Plates", name: "99.99% (Permelac, Japan)" },
+    { label: "Purity of Plates", name: "99.9 (Permelac, Japan)" },
     { label: "Plates Manufacturing", name: "Permelac, Japan" },
     { label: "Additional Use of Chemicals/Salt", name: "No" },
     {
