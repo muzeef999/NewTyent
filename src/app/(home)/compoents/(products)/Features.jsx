@@ -7,11 +7,6 @@ import 'aos/dist/aos.css';
 
 const Features = ({data, delay }) => {
 
-  useEffect(() => {
-    Aos.init({
-      duration: 1000, // You can customize duration or other settings here
-    });
-  }, []);
 
 
   return (

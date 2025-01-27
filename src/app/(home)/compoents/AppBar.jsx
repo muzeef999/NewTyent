@@ -108,7 +108,7 @@ const handleSubmenuLeave = () => {
       {/* Top Bar */}
       <div className="sticky-top" style={{position:'fixed', width:'100%'}}>
         <div
-          className="d-flex justify-content-between align-items-center p-2" 
+          className="d-flex justify-content-between align-items-center p-1" 
           style={{backgroundColor: "#008AC7", color: "#FFF", }}
         >
           <div 
@@ -133,7 +133,7 @@ const handleSubmenuLeave = () => {
                 <button
                   style={{ textDecoration: "none" }}
                   type="button"
-                  className="btn btn-link text-white dropdown-toggle"
+                  className="btn btn-link text-white dropdown-toggle p-0"
                   data-bs-toggle="dropdown"
                 >
                   Hi, {userData.name || "User"}

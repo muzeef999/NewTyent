@@ -117,11 +117,14 @@ const Home = () => {
           </Row>
           <Row className="g-4">
             {cardDetails.map((card, index) => (
-              <Col key={index }  xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}
+              <Col key={index }  
+              data-aos={index === 0 ? "fade-up" : index === 1 ? "fade-right" : index === 2 ? "fade-left" : "zoom-in"}
+        
+              xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}
               >
                 <WhyDrinkTyentWater
                   icon={card.icon}
-                  title={card.title}
+                  title={card.title}m
                   content={card.content}
                 />{" "}
                 {/* Individual card */}
