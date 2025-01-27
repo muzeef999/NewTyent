@@ -52,7 +52,7 @@ const Slider = () => {
           <div>
             <div className="home-banner-text">
               <h1 style={{fontSize:"clamp(30px, 5vw, 80px)"}} className="home_banner1_text1">Hydration That Heals</h1>
-              <h1 style={{fontSize:"clamp(16px, 4vw, 26px)"}} className="home_banner2_text1">Anti-Inflammatory Benefits Backed by Science powered by Tyent</h1>
+              <h1 style={{fontSize:"clamp(16px, 4vw, 26px)"}} className="home_banner2_text1">Anti-Inflammatory Benefits <span> Backed by Science powered by Tyent</span></h1>
             
             </div>
             <div className="responsive-container-hybrid">
