@@ -399,32 +399,32 @@ const HybridTouchPreview = () => {
 
 
               
-                    <circle cx="30" cy="43" r="6" fill="#3C9AF3" />
-                    <circle cx="70" cy="43" r="6" fill="#3C9AF3" />
-                    <circle cx="30" cy="68" r="6" fill="#3C9AF3" />
-                    <circle cx="70" cy="68" r="6" fill="#3C9AF3" />
-                    <circle cx="20" cy="85" r="6" fill="#3C9AF3" />
-                    <circle cx="55" cy="85" r="6" fill="#3C9AF3" />
-                    <circle cx="100" cy="85" r="6" fill="#3C9AF3" />
-                    <circle cx="45" cy="105" r="6" fill="#3C9AF3" />
-                    <circle cx="65" cy="105" r="6" fill="#3C9AF3" />
-                    <circle cx="20" cy="120" r="6" fill="#3C9AF3" />
-                    <circle cx="20" cy="135" r="6" fill="#3C9AF3" />
-                    <circle cx="30" cy="105" r="6" fill="#3C9AF3" />
-                    <circle cx="20" cy="153" r="6" fill="#3C9AF3" />
+                    <circle cx="30" cy="43" r="4" fill="#3C9AF3" />
+                    <circle cx="70" cy="43" r="4" fill="#3C9AF3" />
+                    <circle cx="30" cy="68" r="4" fill="#3C9AF3" />
+                    <circle cx="70" cy="68" r="4" fill="#3C9AF3" />
+                    <circle cx="20" cy="85" r="4" fill="#3C9AF3" />
+                    <circle cx="55" cy="85" r="4" fill="#3C9AF3" />
+                    <circle cx="100" cy="85" r="4" fill="#3C9AF3" />
+                    <circle cx="45" cy="105" r="4" fill="#3C9AF3" />
+                    <circle cx="65" cy="105" r="4" fill="#3C9AF3" />
+                    <circle cx="20" cy="120" r="4" fill="#3C9AF3" />
+                    <circle cx="20" cy="135" r="4" fill="#3C9AF3" />
+                    <circle cx="30" cy="105" r="4" fill="#3C9AF3" />
+                    <circle cx="20" cy="153" r="4" fill="#3C9AF3" />
 
-                    <circle cx="108" cy="113" r="6" fill="#3C9AF3" />
-                    <circle cx="78" cy="133" r="6" fill="#3C9AF3" /> 
-                    <circle cx="108" cy="133" r="6" fill="#3C9AF3" />
+                    <circle cx="108" cy="113" r="4" fill="#3C9AF3" />
+                    <circle cx="78" cy="133" r="4" fill="#3C9AF3" /> 
+                    <circle cx="108" cy="133" r="4" fill="#3C9AF3" />
 
-                    <circle cx="50" cy="153" r="6" fill="#3C9AF3" />
-                    <circle cx="108" cy="153" r="6" fill="#3C9AF3" />
-                    <circle cx="35" cy="175" r="6" fill="#3C9AF3" />
-                    <circle cx="85" cy="175" r="6" fill="#3C9AF3" />
+                    <circle cx="50" cy="153" r="4" fill="#3C9AF3" />
+                    <circle cx="108" cy="153" r="4" fill="#3C9AF3" />
+                    <circle cx="35" cy="175" r="4" fill="#3C9AF3" />
+                    <circle cx="85" cy="175" r="4" fill="#3C9AF3" />
                     <text
                       x="30"
                       y="46"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -434,7 +434,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="70"
                       y="46"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -444,7 +444,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="30"
                       y="71"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -454,7 +454,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="70"
                       y="71"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -464,7 +464,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="20"
                       y="88"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -474,7 +474,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="55"
                       y="88"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -484,7 +484,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="100"
                       y="88"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -494,7 +494,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="30"
                       y="108"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -504,7 +504,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="45"
                       y="108"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -514,7 +514,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="65"
                       y="108"
-                      font-size="8"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -524,7 +524,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="20"
                       y="122"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -534,7 +534,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="20"
                       y="138"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -544,7 +544,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="108"
                       y="116"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -554,7 +554,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="78"
                       y="136"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -564,7 +564,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="108"
                       y="136"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -574,7 +574,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="20"
                       y="155"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -584,7 +584,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="50"
                       y="155"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -594,7 +594,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="108"
                       y="155"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -604,7 +604,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="35"
                       y="178"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"
@@ -614,7 +614,7 @@ const HybridTouchPreview = () => {
                     <text
                       x="85"
                       y="178"
-                      font-size="7"
+                      font-size="6"
                       text-anchor="middle"
                       fill="#FFF"
                       font-weight="900"

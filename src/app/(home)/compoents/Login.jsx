@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -52,43 +52,52 @@ const Login = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
+    <div>
       {showRequestComponent ? (
         <Signup />
       ) : (
         <>
-          <form onSubmit={submitHandler} style={{ textAlign: "center" }}>
-            <h2 className="text-center">Welcome Back</h2>
-            <p className="text-center">Enter your details to sign in</p>
+          <h2 className="text-center">Welcome Back</h2>
+          <p className="text-center">Enter your details to sign in</p>
 
-            {/* Phone Number Input with Country Code and Flag */}
-             <PhoneInput
-                country={"in"} // Default country
-                value={phoneNumber}
-                onChange={(value) => setPhoneNumber("+" + value)}
-                placeholder="Enter phone number"
-                inputStyle={{
-                  width: "100%",
-                  borderRadius: "8px",
-                  padding: "12px 14px",
-                  border: "1px solid #ccc",
-                }}
-                inputClass="custom-phone-input" // Optional: Add custom classes if needed
-                enableSearch={true} // Allow searching for countries
-                disableDropdown={false} // Keep the dropdown visible
-              />
-             <br/>
-              <Input
-                type="password"
-                name="password"
-                label="Password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            
+          <form onSubmit={submitHandler} className="d-flex flex-column">
+            <label htmlFor="phoneNumber" className="form-label">
+    Enter phone number
+  </label>
+            <PhoneInput
+                id="phoneNumber"
+              country={"in"} // Default country
+              value={phoneNumber}
+              onChange={(value) => setPhoneNumber("+" + value)}
+              placeholder="Enter phone number"
+              inputStyle={{
+               width:'95%',
+               padding:'8px 14px',
+               borderRadius: '8px',
+               boxSizing: 'border-box'
+              }}
+              inputClass="custom-phone-input" // Optional: Add custom classes if needed
+              enableSearch={true} // Allow searching for countries
+            />
+            <br/>
+            <Input
+              type="password"
+              name="password"
+              label="Password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
             {/* Forgot Password Link */}
-            <p style={{ textAlign: "right", margin: "10px 0", color: "#007bff", cursor: "pointer" }}>
+            <p
+              style={{
+                textAlign: "right",
+                margin: "10px 0",
+                color: "#007bff",
+                cursor: "pointer",
+              }}
+            >
               Having trouble signing in?
             </p>
 
@@ -99,7 +108,6 @@ const Login = () => {
             <div style={{ margin: "20px 0", textAlign: "center" }}>
               <p>Or sign in with</p>
             </div>
-
           </form>
 
           {/* Sign Up Link */}

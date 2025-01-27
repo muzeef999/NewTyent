@@ -117,7 +117,8 @@ const Home = () => {
           </Row>
           <Row className="g-4">
             {cardDetails.map((card, index) => (
-              <Col key={index} xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}>
+              <Col key={index }  xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}
+              >
                 <WhyDrinkTyentWater
                   icon={card.icon}
                   title={card.title}

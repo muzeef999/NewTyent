@@ -138,7 +138,7 @@ const handleSubmenuLeave = () => {
                 >
                   Hi, {userData.name || "User"}
                 </button>
-                <ul className="dropdown-menu dropdown-menu-end">
+                <ul className="dropdown-menu dropdown-menu-end" style={{zIndex:'9999'}}>
                   <li>
                     <button className="dropdown-item">
                       <IoBagHandleOutline /> Your Orders

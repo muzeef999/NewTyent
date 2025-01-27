@@ -20,6 +20,7 @@ import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import HybridTouchPreview from "./HybridTouchPreview";
 import Hybrid_Desktop from "@/asserts/hybrid/Hybrid_Desktop.webp";
 import Hybrid_Mobile from "@/asserts/hybrid/Hybrid_Mobile.webp";
+import Halfhybrid from "@/asserts/hybrid/Halfhybrid.webp"
 
 const page = () => {
   const products = [
@@ -779,14 +780,13 @@ const page = () => {
           </div>
         </Container>
       </div>
-
+          <br/>
       <div className="section-spacing" style={{ backgroundColor: "#FFF" }}>
         <Row>
           <Col
-            md={6}
-            className="d-flex justify-content-center align-items-center"
-          >
-            <div>
+            md={6}>
+            <div className="d-flex flex-column justify-content-end align-items-center">
+              <div>
               <h2 className="text-center">
                 <b>One Touch Display</b>
               </h2>
@@ -794,9 +794,26 @@ const page = () => {
                 Each function has distinct icons,and you can start or stop the{" "}
                 <br /> desired water with one touch.
               </p>
+              </div>
+              <div style={{width:'100%', height:'auto', position:'relative'}}>
+               <Image src={Halfhybrid} alt="hybrid" layout="responsive" priority />
+
+               <div
+                    style={{
+                      position: "absolute",
+                      right: "17%",
+                      top: "30.5%",
+                      width: "18%",
+                      zIndex: 0, // Display is behind the image
+                    }}
+                  >
+                    <Display  />
+                  </div>
+              </div>
             </div>
           </Col>
-          <Col md={6} className="d-flex justify-content-end align-items-center">
+          <Col md={6} className="d-flex justify-content-end p-3 align-items-center">
+          
             <div style={{ width: "80%", height: "auto" }}>
               <DisplayPatter />
             </div>

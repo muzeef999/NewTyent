@@ -100,9 +100,9 @@
       position: absolute;
       width: 10.1%;
       height: auto;
-      top: 52.6%;
+      top: 41.5%;
       right: 14%;
-      z-index: 99;
+      z-index: 0;
     }
   }
   
@@ -113,9 +113,10 @@
       position: absolute;
       width: 5.1%;
       height: auto;
-      top: 19.3%;
+      top: 27.5%;
       right: 14.2%;
-      z-index: 99;
+      z-index: 0
+      ;
     }
   }
   

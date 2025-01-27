@@ -12,7 +12,7 @@ import "@/app/style/Shipping.css";
 import { IoMdRadioButtonOn } from "react-icons/io";
 import { IoMdAdd } from "react-icons/io";
 import dynamic from "next/dynamic";
-import { RiArrowUpSLine,RiArrowDownSLine } from "react-icons/ri";
+import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
 
 const CartItems = dynamic(() => import("@/app/(home)/compoents/CartItems"), {
   srr: false,
@@ -46,7 +46,6 @@ const Page = () => {
   const [totalItemsShows, setTotalItemsShows] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [showAll, setShowAll] = useState(false);
-
 
   const handlePaymentSelect = (method) => {
     setPaymentMethod(method);
@@ -208,8 +207,8 @@ const Page = () => {
                             {shippingAddress.addresses
                               ?.slice(
                                 0,
-                                showAll ? shippingAddress.addresses.length : 3
-                              ) // Show 3 items or all
+                                showAll ? shippingAddress.addresses.length : 3 // Show all or only 3
+                              )
                               .map((address) => (
                                 <div
                                   key={address._id}
@@ -245,7 +244,7 @@ const Page = () => {
                                         </div>
                                         <div className="w-100 pl-3">
                                           <p className="font-weight-bold">
-                                            {address.fullName} &nbsp;
+                                            {address.fullName} &nbsp;{" "}
                                             {address.mobileNumber}
                                           </p>
                                           <p>
@@ -261,7 +260,7 @@ const Page = () => {
                                             type="button"
                                             onClick={() =>
                                               handleDeliverHereClick(address)
-                                            } // Handle button click
+                                            }
                                           >
                                             DELIVER HERE
                                           </button>
@@ -293,9 +292,22 @@ const Page = () => {
                               <button
                                 className="btn btn-link"
                                 onClick={() => setShowAll(!showAll)}
-                                style={{ textAlign: "left" }}
+                                style={{
+                                  textAlign: "left",
+                                  textDecoration: "none",
+                                  color: "#008AC7",
+                                }}
                               >
-                                {showAll ? `${<RiArrowUpSLine/>}Show fewer addresses` : `${<RiArrowUpSLine/>}View all ${0} addresses`}
+                                {showAll ? (
+                                  <>
+                                    <RiArrowUpSLine /> Show fewer addresses
+                                  </>
+                                ) : (
+                                  <>
+                                    <RiArrowUpSLine /> View all{" "}
+                                    {shippingAddress.addresses.length  + 2} addresses
+                                  </>
+                                )}
                               </button>
                             )}
                           </div>

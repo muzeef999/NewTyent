@@ -4,10 +4,11 @@
     margin-bottom: 5px;
   }
 
-  
+
+
 .formInput {
     width: 95%;
-    padding: 8px 14px;
+    padding: 6px 13px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
@@ -22,7 +23,6 @@
 .inputbox {
     width: 100%;
     border-radius: 20px !important;
-    padding: 20px;
     border: 1px solid #52525B40;
 }
 

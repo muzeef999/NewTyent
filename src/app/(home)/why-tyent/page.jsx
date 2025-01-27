@@ -77,7 +77,7 @@ async function fetchData() {
       color1: '#f8fbfe',
       heading: "Patented SMPS PLUS® Power",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <div style="line-height: 1.6; color: #2ebb46 !important">
           <p>Tyent uses the revolutionary <strong>SMPS PLUS® Power</strong>, which allows for 55 adjustable power settings to deliver the perfect glass of alkaline water.</p>
           <ol>
             <li><strong>Transformers:</strong> Older and less efficient technology.</li>
