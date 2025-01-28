@@ -182,8 +182,10 @@ const TyentNMP5 = () => {
       
       <button className={`fixed-vertical-button`}>
            
-           Download Brochure&nbsp;{"   "}
-           <RxDownload size={20} style={{ transform: 'rotate(180deg)' }}/>
+      <a href={"../../../../../../asserts/Tyent New catalog.pdf"}  style={{textDecoration:'none', color:'#FFF'}} download className="download-link">
+    Download Brochure&nbsp;{" "}
+    <RxDownload size={20} style={{ transform: 'rotate(180deg)' }} />
+  </a>
          </button>
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
 

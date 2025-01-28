@@ -7,7 +7,7 @@ import Aos from "aos";
 
 const Touchpreview = () => {
   const items = [
-    { id: 1, text: "Turbo water (11.5pH)" },
+    { id: 1, text: "Turbo water (11.5 pH)" },
     { id: 2, text: "Acid level 2 (5-5.5 pH)" },
     { id: 3, text: "Acid level 1 (4-5 pH)" },
     { id: 4, text: "Purified water (7pH)" },

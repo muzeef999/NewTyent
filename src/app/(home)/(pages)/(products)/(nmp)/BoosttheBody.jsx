@@ -31,7 +31,7 @@ const BoosttheBody = ({Boost}) => {
               >
                 <h1
                   style={{
-                    fontSize: "clamp(22px, 5vw + 18px, 36px)",
+                    fontSize: "clamp(20px, 5vw + 18px, 36px)",
                     fontWeight: "700",
                     lineHeight: "56px",
                     marginBottom: "16px",

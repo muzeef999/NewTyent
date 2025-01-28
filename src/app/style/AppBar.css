@@ -655,7 +655,9 @@ background-color: transparent;
   }
 }
 
-.fixed-vertical-button {
+.fixed-vertical-button
+ {
+  border: 1px solid #FFF;
   writing-mode: vertical-rl; /* Rotate text vertically from right to left */
   transform: rotate(180deg); /* Flip the text for proper alignment */  
   text-align: center; /* Center align text */
@@ -676,8 +678,8 @@ background-color: transparent;
 
 
 .fixed-vertical-button:hover {
-  background-color: #FFF; /* Change background on hover */
- color: #008ac7;
- border: 1px solid #008ac7;
+ color: #FFF;
+ background-color: #008ac7;
+
 
 }
