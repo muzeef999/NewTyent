@@ -47,6 +47,13 @@ const InfoCard = ({ icon: Icon, title, text }) => (
 );
 
 const Page = () => {
+
+  const items = [
+    { src: productDemo, alt: "Product Demo", title: "Product Demo" },
+    { src: DealerEnquiry, alt: "Dealer Enquiry", title: "Dealer Enquiry" },
+    { src: ServiceRequest, alt: "Service Request", title: "Service Request" },
+    { src: AskyourQuery, alt: "Ask your Query", title: "Ask your Query" },
+  ];
   return (
     <div>
       <Header 
@@ -63,32 +70,24 @@ const Page = () => {
          <h3 className='m-0 text-center' style={{color:'#008AC7', fontWeight:'600'}}>You can find us here! </h3>
          <p className='text-center' style={{fontSize:'20px'}}>We would love to connect with you</p>
          <br/>
-         <Row>
-          <Col md={3} xs={2} className='p-3'>
+         <Row className="g-4">
+      {items.map((item, index) => (
+        <Col key={index} md={3} sm={6} xs={6} className="text-center">
           <div>
-          <Image src={productDemo} alt="AskyourQuery"  layout="responsive" priority  style={{borderRadius:'20px'}}/>
-          <h5 className='text-center m-4'><b>Product Demo</b></h5>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              layout="responsive"
+              priority
+              style={{ borderRadius: "20px" }}
+            />
+            <h5 className="mt-3">
+              <b>{item.title}</b>
+            </h5>
           </div>
-          </Col>
-          <Col md={3} xs={2} className='p-3'>
-          <div>
-          <Image src={DealerEnquiry} alt="AskyourQuery"  layout="responsive" priority  style={{borderRadius:'20px'}}/>
-          <h5 className='text-center m-4'><b>Dealer Enquiry</b></h5>
-          </div>
-          </Col>
-          <Col md={3} xs={2} className='p-3'>
-          <div>
-          <Image src={ServiceRequest} alt="AskyourQuery"  layout="responsive" priority style={{borderRadius:'20px'}}/>
-           <h5 className='text-center m-4'><b>Service Request</b></h5>
-          </div>
-          </Col>
-          <Col md={3} xs={2} className='p-3'>
-          <div>
-          <Image src={AskyourQuery} alt="AskyourQuery"  layout="responsive" priority style={{borderRadius:'20px'}}/>
-          <h5 className='text-center m-4'><b>Ask your Query</b></h5>
-          </div>
-          </Col>
-         </Row>
+        </Col>
+      ))}
+    </Row>
 
         <br/>
         
