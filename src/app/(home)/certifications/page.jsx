@@ -24,7 +24,7 @@ import { useState } from 'react';
 import { RWebShare } from 'react-web-share';
 import { IoShareSocial } from "react-icons/io5";
 import dynamic from 'next/dynamic';
-import certification from "@/asserts/certifications/certification.png"
+import certification from "@/asserts/certifications/certification.webp"
 const Header = dynamic(() => import('../compoents/Header'), {
   ssr: false,
 });

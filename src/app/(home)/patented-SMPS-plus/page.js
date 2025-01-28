@@ -7,6 +7,7 @@ import { SlEnergy } from "react-icons/sl";
 import { GoDotFill } from "react-icons/go";
 import { BiSolidJoystickButton } from "react-icons/bi";
 import "@/app/style/Benfits.css"
+import smpsplus from "@/asserts/smps.png"
 
 
 
@@ -146,6 +147,7 @@ const Controls = ({ title, content }) => {
   };
   
 
+
 const page = () => {
 
     const headerData = {
@@ -154,7 +156,7 @@ const page = () => {
         afterheading: "Satisfied Tyent India Customers",
         content:
           "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
-        img: smps,
+        img: smpsplus,
         animatedText: "Health, Wellness, Transformation",
       };
 

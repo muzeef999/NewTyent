@@ -116,7 +116,7 @@ const handleSubmenuLeave = () => {
             style={{ overflow: "hidden", whiteSpace: "nowrap" }}
           >
             <div className="marquee-content">
-              <p className="mb-0">1000+ customers</p>
+              <p className="mb-0">86+ Countries</p>
               <span className="mx-2">|</span>
               <p className="mb-0">
                 3 years warranty on ionizer & 15 years warranty on plates.

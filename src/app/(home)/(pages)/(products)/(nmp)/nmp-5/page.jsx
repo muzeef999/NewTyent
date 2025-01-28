@@ -29,6 +29,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxDownload } from "react-icons/rx";
+import Humanbody1 from "@/asserts/Humanbody1.png"
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {

@@ -1,8 +1,11 @@
 import dynamic from 'next/dynamic';
 import React from 'react'
-import smps from '@/asserts/smps.png'
 import { Col, Row } from 'react-bootstrap';
+import Image from 'next/image';
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
+import hydrogen from "@/asserts/why ionizer/hydrogen.webp";
+import platesBanner from "@/asserts/platesBanner.png"
+import platesvs from "@/asserts/platesvs.png"
 
  
 
@@ -61,14 +64,17 @@ const page = () => {
             afterheading: "Satisfied Tyent India Customers",
             content:
               "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
-            img: smps,
+            img: platesBanner,
             animatedText: "Health, Wellness, Transformation",
           };
   
           return (
     <div>
         <Header {...headerData} />
+
+       
         <div className='container'>
+        <div className="section-spacing">
             <Row>
               <Col md={6} className='d-flex justify-content-center align-items-center'>
               <div>
@@ -77,11 +83,14 @@ const page = () => {
                 <p>It’s important to choose a water ionizer with an advanced plate design and high-quality electrodes to ensure optimal hydrogen-rich alkaline water production. This not only enhances health benefits but also provides long-term cost savings by reducing reliance on expensive bottled water.</p>
               </div>
               </Col>
-              <Col md={6}></Col>
+              <Col md={6}>
+               <div style={{width:'100%', height:'auto'}}>
+                <Image src={platesvs} alt="platesvs" layout='responsive' priority />
+               </div>
+              </Col>
             </Row>
- 
-            <br/>
-            <br/>
+            </div>
+            <div className="section-spacing">
             <Row>
             <Col md={6} className='d-flex jjustify-content-center align-items-center'>
             <div className='m-4'>
@@ -97,9 +106,8 @@ const page = () => {
                 </div>
               </Col>
             </Row>
-
-            <br/>
-            <br/>
+            </div>
+            <div className="section-spacing">
 
             <h2 className='text-center'>The<b style={{color:'#008AC7'}}> Advantage</b> of Tyent’s Solid <br/> Hybrid Mesh Plates</h2>
         <p className='text-center'>Tyent’s use of advanced Japanese technology ensures that its plates are some of the most effective in the industry. Sourced from <br/> Permelec, a prestigious Japanese company (Since 1969) specializing in high-quality electrodes, Tyent's plates benefit from <br/> superior manufacturing processes that make them durable, efficient, and reliable for long-term use.</p>
@@ -114,9 +122,8 @@ const page = () => {
                      </Col>
                    ))}
                  </Row>
-        
-        <br/>
-        <br/>
+                 </div>
+                 <div className="section-spacing">
         <h2 className='text-center'>Why Say<b style={{color:'red'}}> No</b> to Solid Plates and Mesh Plates?</h2>
         <p className='text-center'>While both solid and mesh plates have their own advantages, each has limitations that Tyent's Solid Hybrid Mesh Plates aim to overcome:</p>
        <br/>
@@ -147,6 +154,62 @@ const page = () => {
           </Col>
           
         </Row>
+        </div>
+
+        <div className="section-spacing">
+
+         <Row>
+                  <Col
+                    md={6}
+                    sm={12}
+                    className="d-flex justify-content-center align-items-center"
+                  >
+                    <div>
+                      <h3>
+                        Molecular Hydrogen -{" "}
+                        <span
+                          style={{
+                            color: "#008AC7",
+                            fontSize: "40px",
+                            fontWeight: "600",
+                          }}
+                        >
+                          An emerging medical Gas
+                        </span>
+                      </h3>
+                      <p>
+                        Although the research is early, the 1000+ scientific articles
+                        suggest that H2 has therapeutic potential in over 170 different
+                        human and animal disease models, and essentially every organ of
+                        the human body. Molecular hydrogen (H2) or diatomic hydrogen is
+                        a tasteless, odorless, flammable gas.
+                        <br />
+                        H2 reduces oxidative stress and improves redox homeostasis
+                        partly mediated via the Nrf2 pathway, which regulates levels of
+                        glutathione, superoxide dismutase, catalase, etc. *H2, like
+                        other gaseous-signaling molecules (e.g. NO, CO, H2 S), modulates
+                        signal transduction, protein phosphorylation, and gene
+                        expression, which provides its anti-inflammatory, anti-allergy,
+                        and anti-apoptotic protective effects.
+                      </p>
+                    </div> 
+                  </Col>
+                  <Col
+                    md={6}
+                    sm={12}
+                    className="d-flex justify-content-center align-items-center"
+                  >
+                    <div style={{ width: "70%" }}>
+                      <Image
+                        src={hydrogen}
+                        alt="hydrogen"
+                        layout="responsive"
+                        priority
+                      />
+                    </div>
+                  </Col>
+                </Row>
+                </div>
         
 
         </div>

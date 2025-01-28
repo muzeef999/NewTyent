@@ -1,12 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import icon1 from "@/asserts/certifications/1.png";
-import icon2 from "@/asserts/certifications/2.png";
-import icon3 from "@/asserts/certifications/3.png";
-import icon4 from "@/asserts/certifications/4.png";
-import icon5 from "@/asserts/certifications/5.png";
-import icon6 from "@/asserts/certifications/6.png";
-import waterQuality from "@/asserts/certifications/waterQuality.png"
+import icon1 from "@/asserts/certifications/1.webp";
+import icon2 from "@/asserts/certifications/2.webp";
+import icon3 from "@/asserts/certifications/3.webp";
+import waterQuality from "@/asserts/certifications/waterQuality.webp";
+import icon4 from "@/asserts/certifications/4.webp";
+import icon5 from "@/asserts/certifications/5.webp";
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa6";
 import { Col, Row } from 'react-bootstrap';

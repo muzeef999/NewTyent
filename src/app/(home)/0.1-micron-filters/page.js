@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { Col, Row } from "react-bootstrap";
 import filter from "@/asserts/filter.png";
-import filter2 from "@/asserts/filter2.png";
+import filterbackboor from "@/asserts/filterbackboor.png";
 import Image from "next/image";
 import { MdWaterDrop } from "react-icons/md";
 
@@ -172,7 +172,7 @@ const Page = () => {
           </Col>
           <Col md={4} className="d-flex justify-content-center align-items-center">
           <div style={{width:'50%'}}>
-          <Image src={filter2} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
+          <Image src={filter} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
           </div>
           </Col>
           <p><MdWaterDrop color="#008AC7"/>&nbsp;ANSI, EPA & ANSI certified.</p>
@@ -234,8 +234,8 @@ const Page = () => {
 
         <Row>
         <Col md={4} className="d-flex justify-content-center align-items-center">
-          <div style={{width:'30%'}}>
-          <Image src={filter2} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
+          <div style={{width:'80%'}}>
+          <Image src={filterbackboor} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
           </div>
           </Col>
           <Col md={8} className="d-flex align-items-center justify-content-center">
