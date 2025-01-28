@@ -133,15 +133,19 @@ display: flex;
 
     .home-banner-text {
       position: absolute;
-      top: 120px; /* Vertical center */
+      top: 110px; /* Vertical center */
       left: 2%; /* Horizontal center */
       transform: translate(-0%, -50%); /* Adjust for accurate centering */
     }
 
-    .home-banner-text .home_banner2_text1 span {
-      word-wrap: break-word !important;
+    .home_banner2_text1 {
+      white-space: normal;
+      word-wrap: break-word;
     }
-
+    
+    .home_banner2_text1 span {
+      display: inline-block;  /* Optional: to force wrapping */
+    }
     
     .home_banner_bg_one {
       background-image: url("../../asserts/homeBanners/banner1/home_Banner_mobile_Bg.png");
