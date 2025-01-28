@@ -87,9 +87,10 @@ const CertificationsPage = () => {
         animatedText={headerData.animatedText} // Passing dynamic animated text
       />
     
+
+     <div className="section-spacing">
     <div className="container">
       
-      <br/>
       <Row className="g-5">
         {iconImages.map((image, index) => (
           <Col
@@ -144,6 +145,7 @@ const CertificationsPage = () => {
       </RWebShare>
         </Modal.Footer>
       </Modal>
+    </div>
     </div>
     </div>
   );

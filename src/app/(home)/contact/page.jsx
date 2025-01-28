@@ -86,6 +86,7 @@ const Page = () => {
         <h3
           className="m-0 text-center"
           style={{ color: "#008AC7", fontWeight: "600" }}
+           data-aos="fade-down"
         >
           You can find us here!{" "}
         </h3>
@@ -95,7 +96,7 @@ const Page = () => {
         <br />
         <Row className="g-4">
           {items.map((item, index) => (
-            <Col key={index} md={3} sm={6} xs={6} className="text-center">
+            <Col key={index} md={3} sm={6} xs={6} className="text-center"   data-aos="zoom-in">
               <div>
                 <Image
                   src={item.src}
@@ -113,7 +114,7 @@ const Page = () => {
         </Row>
         </div>
 
-        <div className="section-spacing">
+        <div className="section-spacing"  data-aos="fade-up">
         {/* First Row */}
         <Row>
           {" "}
