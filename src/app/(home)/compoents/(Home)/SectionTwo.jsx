@@ -10,13 +10,14 @@ const SectionTwo = () => {
     <div className="container d-flex justify-content-center align-items-center">
       <Row className="sectiontwo" style={{ height: "auto" }}>
         <Col
-          md={6}
+          lg={6}
+          md={12}
           xs={12}
           sm={12}
           style={{ aspectRatio: "1/1" }}
           className="d-flex justify-content-center align-items-center"
         >
-          <div className="align-items-center text-center mx-auto">
+          <div className="align-items-center text-center mx-auto mb-3">
             <h2 className="align-center" style={{ fontWeight: "600" }}>
               Improving <span style={{ color: "#008AC7" }}>Health</span> and{" "}
               <br /> preserving <span style={{ color: "#008AC7" }}>Nature</span>
@@ -32,14 +33,13 @@ const SectionTwo = () => {
               Explore the Tyent.
             </Link>
           </div>
-          <br/>
         </Col>
-        <Col md={6} xs={12} sm={12}>
+        <Col md={12} xs={12} sm={12} lg={6}>
           <div
             className="text-white py-4"
             style={{
               background:
-                "linear-gradient(to left, #008AC7 40%, transparent 40%)",
+                "linear-gradient(to left, #008AC7 60%, transparent 40%)",
               borderRadius: "32px",
               height: "auto",
             }}
@@ -48,7 +48,8 @@ const SectionTwo = () => {
               <div className="d-flex flex-column justify-content-end align-items-end">
                 <div
                   className="custom-card shadow-lg p-4 mb-4 bg-white"
-                  style={{ width: "90%",aspectRatio:'1/1', display:'flex', justifyContent:'center' }}
+                  style={{aspectRatio:'1/1', display:'flex', justifyContent:'center',    width: "clamp(100%, 80vw, 70%)", 
+                  }}
                 >
                   <h5 className="card-title fw-bold">Tyent Global</h5>
                   <p className="card-text">
@@ -62,7 +63,8 @@ const SectionTwo = () => {
 
                 <div
                   className="custom-card shadow-lg p-4 bg-white "
-                  style={{ width: "90%",aspectRatio:'1/1', display:'flex', justifyContent:'center'  }}
+                  style={{aspectRatio:'1/1', display:'flex', justifyContent:'center',   width: "clamp(100%, 80vw, 70%)", 
+                  }}
                 >
                   <h5 className="card-title fw-bold">Tyent India</h5>
                   <p className="card-text">
@@ -75,10 +77,10 @@ const SectionTwo = () => {
                   </p>
                 </div>
               </div>
+              <div className="custom-arrow p-4 d-none d-lg-block">
+  <Image src={arraow} width={50} alt="arrow" />
+</div>
 
-              <div className="custom-arrow p-4">
-                <Image src={arraow} width={50} alt="arrow" />
-              </div>
             </div>
           </div>
         </Col>
