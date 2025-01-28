@@ -102,7 +102,7 @@ const Home = () => {
         <SectionTwo />
       </div>
  
-      <div className="section-spacing">
+      <div className="section-spacing" style={{overflow:'hidden'}}>
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={3} className="text-start mb-3 mb-md-0">

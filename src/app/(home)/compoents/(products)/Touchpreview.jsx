@@ -43,13 +43,14 @@ const Touchpreview = () => {
 
  <div className="position-relative">
     <div className="image-container">
-  <Image src={spec} alt="specifications" className="responsive-image" />
+  <Image src={spec} alt="specifications" className="responsive-image"  />
     </div>
     <div className="position-absolute d-flex justify-content-center align-items-center" style={{
-                      top: "24.5%",
+                      top: "25%",
                       left: "14%",
                       width:'73%',
-                      zIndex:-9
+                      zIndex:-9,
+backgroundColor:'#e9c5fd'
                     }}
                   >
     <svg width="100%" height="auto" viewBox="0 0 3000 420" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -222,7 +223,7 @@ const Touchpreview = () => {
 
     </center>
     
-    <div className="grid-containerdisplay d-flex flex-wrap justify-content-center align-items-center">
+    <div className="d-flex flex-wrap justify-content-center align-items-center">
   {items.map((item, index) => (
     <div key={item.id} className="custom-card m-2" data-aos={index % 2 === 0 ? "fade-up" : "zoom-in"}
     data-aos-delay={`${index * 50}`}>
