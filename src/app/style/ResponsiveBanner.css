@@ -133,7 +133,7 @@ display: flex;
 
     .home-banner-text {
       position: absolute;
-      top: 190px; /* Vertical center */
+      top: 120px; /* Vertical center */
       left: 2%; /* Horizontal center */
       transform: translate(-0%, -50%); /* Adjust for accurate centering */
     }
