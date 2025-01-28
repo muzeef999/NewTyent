@@ -314,7 +314,7 @@ const TyentNMP5 = () => {
             <Col>
               <p
                 className="text-start"
-                style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
+                style={{ color: "#008AC7", fontWeight: 400, fontSize: "13px"}}
               >
                 The Tyent NMP-5 is expertly crafted with advanced technology,
                 modern design, and an user friendly interface, making it the
@@ -399,7 +399,7 @@ const TyentNMP5 = () => {
                 {/* Benefits */}
                 <div className="mt-3">
                   <p className={"nmp-banner-benefits-touch"}>
-                    {onetouch.subTitle}
+                    Tyent’s one-touch display with clear icons ensures effortless selection of your desired water type for convenient hydration.
                     <br />
                   </p>
                 </div>
