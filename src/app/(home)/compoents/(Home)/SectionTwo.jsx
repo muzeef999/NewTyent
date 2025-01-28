@@ -32,8 +32,9 @@ const SectionTwo = () => {
               Explore the Tyent.
             </Link>
           </div>
+          <br/>
         </Col>
-        <Col md={6} xs={12} sm={12} style={{ aspectRatio: "1/1" }}>
+        <Col md={6} xs={12} sm={12}>
           <div
             className="text-white py-4"
             style={{
@@ -47,7 +48,7 @@ const SectionTwo = () => {
               <div className="d-flex flex-column justify-content-end align-items-end">
                 <div
                   className="custom-card shadow-lg p-4 mb-4 bg-white"
-                  style={{ width: "100%", }}
+                  style={{ width: "90%",aspectRatio:'1/1', display:'flex', justifyContent:'center' }}
                 >
                   <h5 className="card-title fw-bold">Tyent Global</h5>
                   <p className="card-text">
@@ -61,7 +62,7 @@ const SectionTwo = () => {
 
                 <div
                   className="custom-card shadow-lg p-4 bg-white "
-                  style={{ width: "100%",  }}
+                  style={{ width: "90%",aspectRatio:'1/1', display:'flex', justifyContent:'center'  }}
                 >
                   <h5 className="card-title fw-bold">Tyent India</h5>
                   <p className="card-text">
