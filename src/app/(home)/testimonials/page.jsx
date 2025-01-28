@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { Col, Row } from "react-bootstrap";
 import icon from "@/asserts/Testmonials/icon1.png";
 import Image from "next/image";
-import certification from "@/asserts/certifications/certification.png";
 const RWebShareComp = dynamic(() => import("../compoents/RWebShare"), {
   ssr: false,
 });

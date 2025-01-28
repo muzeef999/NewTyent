@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { CiLocationOn } from "react-icons/ci";
 import dynamic from "next/dynamic";
-import certification from "@/asserts/certifications/certification.png"
 import AskyourQuery  from "@/asserts/contact/AskyourQuery.webp"
 import DealerEnquiry  from "@/asserts/contact/DealerEnquiry.webp"
 import productDemo   from "@/asserts/contact/productDemo.webp"
