@@ -314,7 +314,7 @@ const TyentNMP5 = () => {
             <Col>
               <p
                 className="text-start"
-                style={{ color: "#008AC7", fontWeight: 400, fontSize: "13px"}}
+                style={{ color: "#008AC7", fontWeight: 400, fontSize: "14px"}}
               >
                 The Tyent NMP-5 is expertly crafted with advanced technology,
                 modern design, and an user friendly interface, making it the

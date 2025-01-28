@@ -56,8 +56,8 @@ const OneTouchDispaly = () => {
                   <div
                     style={{
                       backgroundColor: `${type.color}`,
-                      width: "54px",
-                      height: "54px",
+                      width: "50px",
+                      height: "50px",
                       borderRadius: "50%",
                       display: "flex",
                       padding:'10px',
@@ -68,7 +68,7 @@ const OneTouchDispaly = () => {
                        textOverflow: "ellipsis",
                     }}
                   >
-                    <FaDroplet style={{ color: "#FFF" }} size={30} />
+                    <FaDroplet style={{ color: "#FFF" }} size={25} />
                   </div>
 
                   {/* Water Type Details */}
@@ -77,7 +77,7 @@ const OneTouchDispaly = () => {
                       style={{
                         color: `${type.color}`,
                         fontWeight: "700",
-                        fontSize: "18px",
+                        fontSize: "clamp(12px, 2.5vw, 16px)",
                         marginBottom: "5px",
                       }}
                     >
