@@ -15,8 +15,8 @@ const BoosttheBody = ({Boost}) => {
               lg={6}
               className="d-flex justify-content-center align-items-center order-2 order-lg-1"
             >
-              <div style={{ width: "70%", height: "auto" }}>
-                <Image
+              <div style={{ width: "60%", height: "auto", padding:'40px' }}>
+                <Image style={{filter: "drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.5))"}}
                   src={Boost.image}
                   alt="image data"
                   layout="responsive"
@@ -31,7 +31,7 @@ const BoosttheBody = ({Boost}) => {
               >
                 <h1
                   style={{
-                    fontSize: "38px",
+                    fontSize: "clamp(22px, 5vw + 18px, 36px)",
                     fontWeight: "700",
                     lineHeight: "56px",
                     marginBottom: "16px",
