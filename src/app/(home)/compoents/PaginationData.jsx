@@ -28,8 +28,8 @@ const PaginationData = ({ data, itemsPerPage }) => {
   return (
     <div>
       {/* Display current paginated items */}
-      <div className="item-list">
-        <Row>
+      <div className="item-list" >
+        <Row style={{overflow:'hidden'}}>
           {currentItems?.length > 0 ? (
             currentItems.map((blog, index) => (
               <Col key={blog.slug} md={4} className="mb-4" data-aos={

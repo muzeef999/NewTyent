@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const WhyTyent = () => {
   return (
-    <section className="container py-5">
+    <section className="container">
       <Row className="align-items-center">
         {/* Left Section */}
         <Col md={6} className="mb-4 justify-content-top">

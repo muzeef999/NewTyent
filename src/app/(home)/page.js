@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap";
-import ContactSection from "./compoents/(Home)/ContactSection";
 import WhyTyent from "./compoents/(Home)/WhyTyent";
 import SectionTwo from "./compoents/(Home)/SectionTwo";
 import Certifications from "./compoents/Certifications";
@@ -14,7 +13,6 @@ import puredrink from "@/asserts/health/puredrink.png";
 import Molecular from "@/asserts/health/Molecular.png";
 import alkaline from "@/asserts/health/Natural minerals.png";
 import watersoda from "@/asserts/health/Micro-clustered water.png";
-
 import HomeProduct from "./compoents/(Home)/HomeProduct";
 
 const TyentvsKAngan = dynamic(

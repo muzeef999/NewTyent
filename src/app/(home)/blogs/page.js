@@ -57,13 +57,16 @@ const Page = async () => {
   
 
     <div className="container">
-      {/* Pagination Component */}
+
+      
+    <div className="section-spacing">
       {blogs.length > 0 ? (
           <PaginationData data={blogs} itemsPerPage={blogsPerPage} />
       )
           : (
           <p>No blogs available at the moment. Please check back later.</p>
         )}
+    </div>
     </div>
     </div>
   );
