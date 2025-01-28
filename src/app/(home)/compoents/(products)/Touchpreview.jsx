@@ -8,12 +8,12 @@ import Aos from "aos";
 const Touchpreview = () => {
   const items = [
     { id: 1, text: "Turbo water (11.5pH)" },
-    { id: 2, text: "Acidic level 2 (5 - 5.5 pH)" },
-    { id: 3, text: "Acidic level 1 (4 - 5 pH)" },
+    { id: 2, text: "Acid level 2 (5-5.5 pH)" },
+    { id: 3, text: "Acid level 1 (4-5 pH)" },
     { id: 4, text: "Purified water (7pH)" },
-    { id: 5, text: "Alkaline level 1 (8.5 pH)" },
-    { id: 6, text: "Alkaline level 2 (9 pH)" },
-    { id: 7, text: "Alkaline level 3 (9.5 pH)" },
+    { id: 5, text: "Alk level 1 (8.5 pH)" },
+    { id: 6, text: "Alk level 2 (9 pH)" },
+    { id: 7, text: "Alk level 3 (9.5 pH)" },
     { id: 8, text: "Time" },
     { id: 9, text: "pH" },
     { id: 10, text: "Water Flowrate" },
@@ -46,11 +46,13 @@ const Touchpreview = () => {
   <Image src={spec} alt="specifications" className="responsive-image"  />
     </div>
     <div className="position-absolute d-flex justify-content-center align-items-center" style={{
-                      top: "25%",
-                      left: "14%",
-                      width:'73%',
+                       top: "49%",   /* Adjust to 50% to center vertically */
+                       left: "50%",  /* Adjust to 50% to center horizontally */
+                       width:'70%',
+                       transform: "translate(-50%, -50%)", /* This ensures exact centering */
                       zIndex:-9,
-backgroundColor:'#e9c5fd'
+                      
+                      backgroundColor:'#e9c5fd'
                     }}
                   >
     <svg width="100%" height="auto" viewBox="0 0 3000 420" fill="none" xmlns="http://www.w3.org/2000/svg">

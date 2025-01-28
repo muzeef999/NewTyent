@@ -15,7 +15,7 @@ const BoosttheBody = ({Boost}) => {
               lg={6}
               className="d-flex justify-content-center align-items-center order-2 order-lg-1"
             >
-              <div style={{ width: "60%", height: "auto", padding:'40px' }}>
+              <div style={{ width: "70%", height: "auto",  }}>
                 <Image style={{filter: "drop-shadow(10px 0px 15px rgba(0, 0, 0, 0.5))"}}
                   src={Boost.image}
                   alt="image data"
@@ -25,7 +25,7 @@ const BoosttheBody = ({Boost}) => {
               </div>
             </Col>
             <Col sm={12} md={12}
-              lg={6}  className="d-flex justify-content-center align-items-center  order-1 order-lg-2">
+              lg={6}  className="d-flex justify-content-center align-items-center  order-1 order-lg-2 p-3">
               
               <div 
               >
