@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { Col, Row } from "react-bootstrap";
 import icon from "@/asserts/Testmonials/icon1.png";
 import Image from "next/image";
+
 const RWebShareComp = dynamic(() => import("../compoents/RWebShare"), {
   ssr: false,
 });
@@ -539,7 +540,7 @@ const Page = () => {
     afterheading: "Satisfied Tyent India Customers",
     content:
       "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
-    img: "path/to/image.jpg", // Add image URL if needed
+    img: icon, // Add image URL if needed
     animatedText: "Health, Wellness, Transformation", // Pass the animated text here
   };
 
@@ -550,7 +551,7 @@ const Page = () => {
         preheading={headerData.preheading}
         afterheading={headerData.afterheading}
         content={headerData.content}
-        img={certification}
+        img={icon}
         animatedText={headerData.animatedText}
       />
       <div className="container">
