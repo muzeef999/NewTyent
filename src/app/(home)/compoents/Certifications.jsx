@@ -15,9 +15,10 @@ const Certifications = () => {
   return (
     <>
       <div className="container text-center">
-        <h2 style={{ color: '#008AC7', fontWeight: '600' }}>Certifications</h2>
+        <h2 data-aos="fade-up"  style={{ color: '#008AC7', fontWeight: '600' }}>Certifications</h2>
         <center>
           <p
+           data-aos="fade-in"
             style={{
               fontSize: '16px',
               fontWeight: 500,
@@ -33,6 +34,7 @@ const Certifications = () => {
             {[icon1, icon2, icon3,waterQuality, icon4, icon5].map((icon, index) => (
               <Col xs={4} sm={4} md={2}
                 key={index} 
+                 data-aos="zoom-in"
                 className="mb-3 d-flex justify-content-center"
               >
                  <Image
@@ -48,7 +50,7 @@ const Certifications = () => {
           </Row>
         </center>
      
-     <Link style={{textDecoration:'none', color:'#565959'}} className='float-end' href={"/certifications"}>View All &nbsp; <FaArrowRight/></Link>
+     <Link  data-aos="fade-up"  style={{textDecoration:'none', color:'#565959'}} className='float-end' href={"/certifications"}>View All &nbsp; <FaArrowRight/></Link>
 
       </div>
     </>

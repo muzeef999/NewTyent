@@ -118,7 +118,7 @@ function CustomizedTables() {
       <Table className='table-borderless' style={{borderRadius:'15px', border:'1px solid #bfbfbf', overflow: 'hidden', background:'#bfbfbf' }} hover responsive  >
        
         <tbody>
-        <tr className="p-0">
+        <tr className="p-0"  data-aos="zoom-in">
       <td colSpan={5} style={{ padding: 0 }}>
         <div
           style={{
@@ -140,15 +140,15 @@ function CustomizedTables() {
     </tr>
           {rows.map((row, index) => (
             <tr  key={index}>
-               <td style={{ width: '26%', color:'#008AC7' }}>
+               <td data-aos="flip-left" style={{ width: '26%', color:'#008AC7' }}>
                 <p><strong>{row.description}</strong></p>
               </td>
 
-              <td><p>{row.check}</p></td>
-              <td style={{ width: '32%' }}><p>{row.image}</p></td>
+              <td data-aos="fade-left"><p>{row.check}</p></td>
+              <td  data-aos="fade-left" style={{ width: '32%' }}><p>{row.image}</p></td>
               
-              <td style={{backgroundColor:'#f6f6f6'}}><p>{row.wrong}</p></td>
-              <td style={{ width: '32%', backgroundColor:'#f6f6f6' }}><p>{row.details}</p></td>
+              <td style={{backgroundColor:'#f6f6f6'}}  data-aos="fade-left"><p>{row.wrong}</p></td>
+              <td style={{ width: '32%', backgroundColor:'#f6f6f6' }}  data-aos="fade-left"><p>{row.details}</p></td>
             </tr>
           ))}
         </tbody>

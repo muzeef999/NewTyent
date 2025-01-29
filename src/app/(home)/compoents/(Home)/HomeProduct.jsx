@@ -152,7 +152,8 @@ const HomeProduct = ({ isProductOpen }) => {
       key={section.category || `section-${idx}`}
       style={{ padding: "10px", flex: "0 0 auto" }}
     >
-      <h5
+      <h5   data-aos="fade-in"
+
         style={{ fontSize: "20px", cursor: "pointer" }}
         className={`product-selection-filter-Home ${
           activeCategory === section.category ? "active-Home" : ""
@@ -178,6 +179,8 @@ const HomeProduct = ({ isProductOpen }) => {
                 src={home_small_banner_Desktop}
                 alt="NMP-5 Banner"
                 layout="responsive"
+                data-aos="zoom-in"
+
                 priority
                 style={{
                   borderRadius: "15px",
@@ -223,8 +226,11 @@ const HomeProduct = ({ isProductOpen }) => {
                           <div className="d-flex flex-column justify-content-center">
                             {/* Product Image */}
                             <Image
+
                               src={product.image}
                               alt={product.title}
+                              data-aos="fade-up"
+
                               className="img-fluid product-card"
                               style={{
                                 maxWidth: "95%",

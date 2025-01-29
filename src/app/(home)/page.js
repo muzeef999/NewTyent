@@ -92,15 +92,14 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <Slider />
-
 
       <div className="section-spacing">
         <SectionTwo />
       </div>
- 
-      <div className="section-spacing" style={{overflow:'hidden'}}>
+
+      <div className="section-spacing">
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={3} className="text-start mb-3 mb-md-0">
@@ -115,13 +114,25 @@ const Home = () => {
           </Row>
           <Row className="g-4">
             {cardDetails.map((card, index) => (
-              <Col key={index }  
-              data-aos={index === 0 ? "fade-up" : index === 1 ? "fade-right" : index === 2 ? "fade-left" : "zoom-in"}
-              xs={12} sm={6} md={index < 3 ? 4 : index === 3 ? 7 : 5}
+              <Col
+                key={index}
+                data-aos={
+                  index === 0
+                    ? "fade-up"
+                    : index === 1
+                    ? "fade-right"
+                    : index === 2
+                    ? "fade-left"
+                    : "zoom-in"
+                }
+                xs={12}
+                sm={6}
+                md={index < 3 ? 4 : index === 3 ? 7 : 5}
               >
                 <WhyDrinkTyentWater
                   icon={card.icon}
-                  title={card.title}m
+                  title={card.title}
+                  m
                   content={card.content}
                 />{" "}
                 {/* Individual card */}
@@ -140,6 +151,7 @@ const Home = () => {
           <Row>
             <Col
               md={6}
+              data-aos="fade-right" // Fade right animation for the left column
               className="d-flex justify-content-center align-items-center"
               style={{
                 backgroundColor: "#008AC7",
@@ -162,6 +174,7 @@ const Home = () => {
             </Col>
             <Col
               md={6}
+              data-aos="fade-left" // Fade left animation for the right column
               className="d-flex justify-content-center align-items-center"
               style={{
                 backgroundColor: "#f2f2f2",
@@ -171,7 +184,7 @@ const Home = () => {
             >
               <div style={{ padding: "60px" }}>
                 <h2 style={{ fontWeight: 600 }}>What is Kangen ?</h2>
-                <p >
+                <p>
                   Kangen, a medical-grade water ionizer manufactured by Enagic &
                   Co, is available in 26+ countries., relies on an MLM business
                   model, doubling prices as 49% of costs go to commissions for
@@ -186,67 +199,76 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-      <p
-        className="text-center"
-        style={{
-          marginTop: "-20px",
-          fontWeight: 600,
-          fontSize: "clamp(24px, 5vw, 70px)", // 24px is the min, 5vw is preferred, 70px is the max
-          color: "#008AC7",
-        }}
-      >
-        Tyent
-        <span
-          style={{ color: "#7B7B7B", fontSize: "44px", fontWeight: "normal" }}
+        <p
+          className="text-center"
+          style={{
+            marginTop: "-20px",
+            fontWeight: 600,
+            fontSize: "clamp(24px, 5vw, 70px)", // 24px is the min, 5vw is preferred, 70px is the max
+            color: "#008AC7",
+          }}
+        >
+          Tyent
+          <span
+            style={{ color: "#7B7B7B", fontSize: "44px", fontWeight: "normal" }}
+          >
+            {" "}
+            VS{" "}
+          </span>{" "}
+          <span style={{ color: "#7B7B7B" }}>Kangen</span>
+        </p>
+        <TyentvsKAngan />
+      </div>
+
+      <div className="section-spacing">
+        <h2
+          style={{ color: "#008AC7", fontWeight: "600", textAlign: "center" }}
+        >
+          This Week’s Highlights
+        </h2>
+        <Container>
+          <HomeProduct />
+        </Container>
+      </div>
+
+      <div className="section-spacing">
+        <Certifications />
+      </div>
+
+      <div className="section-spacing">
+        <h1
+          className="text-center"
+          style={{
+            fontSize: "clamp(24px, 5vw, 3rem)",
+            fontWeight: "bold",
+            color: "#333",
+          }}
+        >
+          Technical excellence with global availability
+        </h1>
+        <Video />
+      </div>
+
+      <div className="section-spacing">
+        <h1
+          className="text-center"
+          style={{
+            fontSize: "clamp(24px, 5vw, 3rem)",
+            fontWeight: "bold",
+            color: "#333",
+          }}
         >
           {" "}
-          VS{" "}
-        </span>{" "}
-        <span style={{ color: "#7B7B7B" }}>Kangen</span>
-      </p>
-      <TyentvsKAngan />
-      </div>
+          Our Valued Clients
+        </h1>
+        <br />
 
-
-      <div className="section-spacing">
-      <h2  style={{ color: '#008AC7', fontWeight: '600', textAlign:'center' }}>This Week’s Highlights</h2>
-      <Container>
-        <HomeProduct />
-      </Container>
+        <SlickSlider />
       </div>
 
       <div className="section-spacing">
-      <Certifications />
-       </div>
-
-       <div className="section-spacing">
-      <h1
-        className="text-center"
-        style={{ fontSize: "clamp(24px, 5vw, 3rem)", fontWeight: "bold", color: "#333" }}
-      >
-        Technical excellence with global availability
-      </h1>
-      <Video />
+        <Maps />
       </div>
-
-
-      <div className="section-spacing">
-      <h1
-        className="text-center"
-        style={{ fontSize: "clamp(24px, 5vw, 3rem)", fontWeight: "bold", color: "#333" }}
-      >
-        {" "}
-        Our Valued Clients
-      </h1>
-      <br/>
-      
-      <SlickSlider />
-      </div>
-      
-      <div className="section-spacing">
-      <Maps />
-      </div>
-     
     </div>
   );
 };

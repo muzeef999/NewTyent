@@ -78,7 +78,7 @@ const SectionTwo = () => {
                   </p>
                 </div>
               </div>
-              <div className="custom-arrow p-4 d-none d-lg-block">
+              <div className="custom-arrow d-none d-lg-block" style={{paddingRight:'16px'}}>
   <Image src={arraow} width={50} alt="arrow" />
 </div>
 

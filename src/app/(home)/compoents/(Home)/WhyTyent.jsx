@@ -9,7 +9,7 @@ const WhyTyent = () => {
     <section className="container">
       <Row className="align-items-center">
         {/* Left Section */}
-        <Col md={6} className="mb-4 justify-content-top">
+        <Col md={6}   data-aos="fade-right" className="mb-4 justify-content-top">
           <h2 className="m-0" style={{ fontSize: "40px", fontWeight: "500"}}>
             Why
             <span
@@ -48,7 +48,7 @@ const WhyTyent = () => {
         </Col>
 
         {/* Right Section */}
-        <Col md={6} className="d-flex flex-column gap-4 judtify-contend-end align-items-center">
+        <Col md={6}  data-aos="fade-left" className="d-flex flex-column gap-4 judtify-contend-end align-items-center">
           {/* Content Items */}
           {[
             {
@@ -67,7 +67,7 @@ const WhyTyent = () => {
                 "Tyent water ionizers are available at affordable prices, offering 100% transparency and doorstep service to ensure maximum customer satisfaction and unwavering brand trust.",
             },
           ].map((item, index) => (
-            <div key={index} className="d-flex align-items-start gap-3">
+            <div key={index} data-aos="zoom-in" className="d-flex align-items-start gap-3">
               
                 <div className="whytentfont">
                   <SiTicktick size={20} color="#008AC7" />
@@ -93,6 +93,7 @@ const WhyTyent = () => {
             style={{ textDecoration: "none", color: "#565959" }}
             className="d-flex justify-content-end"
             href={"/why-tyent"}
+             data-aos="fade-up"
           >
             View All &nbsp; <FaArrowRight />
           </Link>
