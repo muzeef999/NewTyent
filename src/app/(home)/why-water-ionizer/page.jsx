@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import im from "@/asserts/im.png";
+import im from "@/asserts/why ionizer/im.webp";
 import Image from "next/image";
 import TyentLineAnimation from "@/app/(home)/compoents/TyentLineAnimation";
 import WhyDrinkTyentWater from "@/app/(home)/compoents/(Home)/WhyDrinkTyentWater";
@@ -11,6 +11,7 @@ import whyIonizer from "@/asserts/why ionizer/whyIonizer.png";
 import minerals from "@/asserts/why ionizer/minerals.png";
 import purity from "@/asserts/why ionizer/purity.png";
 import hydrogenicon from "@/asserts/why ionizer/hydrogenicon.png";
+import "@/app/style/WhyDrinkTyentWater.css"
 
 export const metadata = {
   title: "Why Water Ionizer",
@@ -52,8 +53,8 @@ const page = () => {
   return (
     <div>
       <div className="container">
-        <br />
-        <div className="section-spacing" data-aos="fade-up">
+    
+        <div className="section-spacing" style={{overflow:'hidden'}} data-aos="fade-up">
           <h2 className="text-center" style={{ fontWeight: "600" }}>
             Your Health Is An Investment Not An{" "}
             <span style={{ color: "#008AC7" }}>Expense</span>
@@ -72,7 +73,7 @@ const page = () => {
 
 
 
-        <div className="section-spacing">
+        <div className="section-spacing" style={{overflow:'hidden'}}>
           <Row>
             <Col md={4} data-aos="fade-right">
               <div>
@@ -141,9 +142,11 @@ const page = () => {
           </div>
         </div>
 
-        <div className="section-spacing">
+
+
+        <div className="section-spacing" style={{overflow:'hidden'}}>
           <Row>
-            <Col
+            <Col xs={12} ms={12}
               md={4}
               data-aos="fade-up"
               className="d-flex justify-content-center align-items-center"
@@ -174,9 +177,9 @@ const page = () => {
                 />
               </svg>
             </Col>
-            <Col md={8}>
+            <Col md={8} xs={12} ms={12}>
               <div className="d-flex justify-content-start align-items-start" data-aos="fade-up">
-                <div style={{ width: "60%" }}>
+                <div className="inonzerBoreWater">
                   <div>
                     <h3>
                       <span
@@ -211,7 +214,7 @@ const page = () => {
               </div>
 
               <div className="d-flex justify-content-end align-items-end"  data-aos="fade-left">
-                <div style={{ width: "60%" }}>
+                <div className="inonzerBoreWater">
                   <div>
                     <h3>
                       <span
@@ -246,7 +249,7 @@ const page = () => {
               </div>
 
               <div className="d-flex justify-content-start align-items-start"  data-aos="fade-right">
-                <div style={{ width: "70%" }}>
+                <div className="inonzerBoreWater">
                   <div>
                     <h3>
                       <span
@@ -286,7 +289,7 @@ const page = () => {
 
 
 
-        <div className="section-spacing">
+        <div className="section-spacing" style={{overflow:'hidden'}}>
           <Row>
             <Col
               md={6}
@@ -341,7 +344,7 @@ const page = () => {
             </Col>
           </Row>
         </div>
-        <div className="section-spacing">
+        <div className="section-spacing" style={{overflow:'hidden'}}>
           <Row>
             <Col
               data-aos="fade-up"
@@ -396,7 +399,7 @@ const page = () => {
             </Col>
           </Row>
         </div>
-        <div className="section-spacing">
+        <div className="section-spacing" style={{overflow:'hidden'}}>
           <Row>
             <Col
               data-aos="fade-left"
@@ -455,7 +458,7 @@ const page = () => {
           </Row>
         </div>
       </div>
-      <div className="section-spacing">
+      <div className="section-spacing" style={{overflow:'hidden'}}>
         <Row className="align-items-center">
           <div className="background-container">
             <div className="background-overlay"></div>

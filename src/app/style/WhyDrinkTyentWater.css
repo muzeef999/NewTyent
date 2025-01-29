@@ -68,3 +68,19 @@
   margin-bottom: 20px; /* Spacing below the text */
 }
   
+
+/* DesktopView */
+@media (min-width: 768px) {
+  .inonzerBoreWater {
+    width: 60%;
+  }
+}
+
+
+/* mobileView */
+@media (max-width: 768px) {
+  .inonzerBoreWater {
+    width: 100%;
+  }
+}
+

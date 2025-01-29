@@ -63,7 +63,7 @@ async function fetchData() {
     {
       id: "2",
       color1: '#f8fbfe',
-      heading: "Plates with More Surface Area in the Industry",
+      heading: "Largest Plate Surface Area in the Industry",
       description: `
         <div style="line-height: 1.6;">
           <p>
@@ -78,40 +78,54 @@ async function fetchData() {
       heading: "Patented SMPS PLUS® Power",
       description: `
         <div style="line-height: 1.6; color: #2ebb46 !important">
-          <p>Tyent uses the revolutionary <strong>SMPS PLUS® Power</strong>, which allows for 55 adjustable power settings to deliver the perfect glass of alkaline water.</p>
-          <ol>
-            <li><strong>Transformers:</strong> Older and less efficient technology.</li>
-            <li><strong>SMPS:</strong> Modern, efficient, and lightweight technology but with limited voltage adjustability.</li>
-            <li><strong>SMPS PLUS:</strong> Enhanced SMPS technology providing unmatched power and efficiency for creating strong alkaline and acidic water without chemicals.</li>
-          </ol>
+           <h5>Three Types of Power Supplies Used in Water Ionizers</h5>
+
+  <p>The following are the three types of power supplies used in water ionizers:</p>
+
+  <ol>
+    <li>The older technology - Power Supply Unit's (PSU's) Transformer</li>
+    <li>The power technology - Switch Mode Power Supply (SMPS)</li>
+    <li>The Patented technology - Patented SMPS PLUS Power supply</li>
+  </ol>
+
+  <h2>Transformers</h2>
+  <p>The older linear power supply units - known as PSUs with heavy transformers - are hefty and prone to overheating. Due to their simplicity, linear PSU’s do not allow for voltage adjustability. The technology behind linear PSU’s was developed in the early 1900’s. This ancient circuit design is less efficient than newer technology. However, some ionizer companies still use PSU’s simply because they are less expensive.</p>
+
+  <h2>SMPS</h2>
+  <p>SMPS's are an updated version of transformers. SMPS is the same technology used in flat-panel televisions, audio systems, laptops, computers, and other modern electronic devices. Compared to linear PSUs, SMPS units are lighter, smaller, and more efficient overall. SMPS also has a limitation to voltage adjustability.</p>
+
+  <h2>SMPS PLUS</h2>
+  <p>Tyent engineers wanted a better solution for our customers. They pooled their extensive knowledge and expertise and enhanced a traditional SMPS to work specifically in a water ionizer. The unit they created was named SMPS Plus. Tyent’s SMPS Plus gives you 55 adjustable power settings so you can create the perfect glass of alkaline water. The power and efficiency of SMPS Plus enables Tyent ionizer to create strong alkaline and acidic water without using chemicals from 11.5 pH to 2.5 pH.</p>
+
         </div>`,
       icon: smpsplus
     },
     {
       id: "4",
       color1: '#f8fbfe',
-      heading: "Super Water Capability",
+      heading: "Extreme filtration capability",
       description: `
         <div style="line-height: 1.6;">
-         <p>
-         Ionized, hydrogen-rich alkaline water is highly beneficial, but its effectiveness depends on the purity of your drinking water. Tyent Water Ionizers feature two .01 micron filters, creating a multi-stage, customized system designed to remove impurities, bacteria, viruses, contaminants, and heavy metals from your tap water.
-
+         <p>Ionized, hydrogen-rich alkaline water is highly beneficial, but its effectiveness depends on the purity of your drinking water. Tyent Water Ionizers feature two .01 micron filters, creating a multi-stage, customized system designed to remove impurities, bacteria, viruses, contaminants, and heavy metals from your tap water.
+</p>
+<p>
 Our Tyent-filters use .01 micron filter media, similar to those used in kidney dialysis machines, and are the largest in the industry. The increased size of our filters ensures even greater water purity. Tyent water ionizers effectively eliminate contaminants, viruses, bacteria, and microorganisms.
-
+</p>
+<p>
 As water passes lengthwise through the filters, the extended length provides more filtration media for the water to pass through, resulting in even purer water. Tyent stands as the industry leader in water filtration technology.
-
-         </p>
+</p>
+        
         </div>`,
       icon: phscale
     },
     {
       id: "5",
       color1: '#f8fbfe',
-      heading: "Extreme Filtration Capacity",
+      heading: "Automated PAST cleaning system",
       description: `
         <div style="line-height: 1.6;">
              <p>
-             Tyent Water Ionizers use an automated Polarity Anti Scale Technology (PAST)- one of the most advanced cleaning systems in the industry. This automated cleaning cycle is triggered by both a timer and an internal sensor to ensure minimal mineral scale buildup on the electrodes for long-term performance. Better cleaning means longer-lasting components and healthier water.
+            Tyent Water Ionizers use an automated Polarity Anti Scale Technology (PAST)- one of the most advanced cleaning systems in the industry. This automated cleaning cycle is triggered by both a timer and an internal sensor to ensure minimal mineral scale buildup on the electrodes for long-term performance. Better cleaning means longer-lasting components and healthier water. 
              </p>
         </div>`,
       icon: tyentFilters
@@ -119,12 +133,18 @@ As water passes lengthwise through the filters, the extended length provides mor
     {
       id: "6",
       color1: '#f8fbfe',
-      heading: "PAST Cleaning System",
+      heading: "Largest one touch display",
       description: `
         <div style="line-height: 1.6;">
-        <p>Tyent water ionizers stand out as the only ionizers in the industry featuring true one-touch longest display technology. Designed with modern customer needs in mind, Tyent’s advanced one-touch display ensures a simplified and user-friendly experience. With a single touch on the intuitive touch control panel, users can easily select their desired pH level and enjoy clean, healthy water whenever they want.</p>
-        <p>Tyent water ionizers are so simple to use that they’re perfect for children, seniors, and everyone in between. The one-touch display also allows users to auto-clean, select the required water quantity, and access many other convenient features. </p>
-        <p>For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-touch longest display is unmatched in both functionality and convenience.</p>
+         <p>Tyent water ionizers stand out as the only ionizers in the industry featuring true one-touch longest display technology. Designed with modern customer needs in mind, Tyent’s advanced one-touch display ensures a simplified and user-friendly experience. With a single touch on the intuitive touch control panel, users can easily select their desired pH level and enjoy clean, healthy water whenever they want.
+</p>
+<p>
+
+Tyent water ionizers are so simple to use that they’re perfect for children, seniors, and everyone in between. The one-touch display also allows users to auto-clean, select the required water quantity, and access many other convenient features. 
+</p>
+<p>
+For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-touch longest display is unmatched in both functionality and convenience.
+</p>
         </div>`,
       icon: RTR
     },
@@ -154,8 +174,13 @@ As water passes lengthwise through the filters, the extended length provides mor
       color1: '#f8fbfe',
       heading: "Better Business Bureau A+ Rating",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>With a <strong>BBB A+ Rating</strong>, Tyent ensures trust and quality for its customers globally.</p>
+        <div style="line-height: 1.6, color:'#FFF">
+         <h5>A+ Rating from the Better Business Bureau (BBB)</h5>
+
+  <p>An A+ rating from the Better Business Bureau (BBB) is a coveted achievement for companies, symbolizing a commitment to excellence. The BBB’s mission is to foster an ethical marketplace where buyers and sellers can trust one another. As a highly respected organization, the BBB evaluates businesses based on its rigorous Standards of Trust.</p>
+
+  <p>Tyent is proud to hold an A+ rating from the BBB, reflecting our dedication to integrity, customer service, and quality.</p>
+
         </div>`,
       icon: BBB
     }

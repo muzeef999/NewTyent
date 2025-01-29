@@ -223,8 +223,6 @@ const FeatureCard = ({ data }) => {
               color:
                 item.id == 3
                   ? "#2ebb46"
-                  : item.id == 12
-                  ? "#FFF"
                   : item.id == 9
                   ? "#FFF"
                   : "#008AC7",
