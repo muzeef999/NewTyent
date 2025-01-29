@@ -15,7 +15,7 @@
 
   .custom-title {
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     color: #565959;
     max-width: 300px; /* Adjust as needed */
     word-wrap: break-word; /* Break long words if necessary */

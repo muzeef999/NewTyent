@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import platess from '@/asserts/whyTent/platess.webp'
 import smpsplus from '@/asserts/whyTent/smpsplus.webp'
 import phscale from '@/asserts/whyTent/phscale.webp'
-import tyentFilters from '@/asserts/whyTent/tyentFilters.webp'
+import tyentFilters from '@/asserts/filterbackboor.webp'
 import RTR from '@/asserts/whyTent/RTR.webp'
 import BBB from '@/asserts/whyTent/BBB.webp'
 import International from '@/asserts/whyTent/International.webp'
@@ -116,7 +116,7 @@ As water passes lengthwise through the filters, the extended length provides mor
 </p>
         
         </div>`,
-      icon: phscale
+      icon: tyentFilters,
     },
     {
       id: "5",
@@ -128,7 +128,7 @@ As water passes lengthwise through the filters, the extended length provides mor
             Tyent Water Ionizers use an automated Polarity Anti Scale Technology (PAST)- one of the most advanced cleaning systems in the industry. This automated cleaning cycle is triggered by both a timer and an internal sensor to ensure minimal mineral scale buildup on the electrodes for long-term performance. Better cleaning means longer-lasting components and healthier water. 
              </p>
         </div>`,
-      icon: tyentFilters
+      icon: RTR,
     },
     {
       id: "6",
@@ -146,7 +146,7 @@ Tyent water ionizers are so simple to use that they’re perfect for children, s
 For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-touch longest display is unmatched in both functionality and convenience.
 </p>
         </div>`,
-      icon: RTR
+      icon: display
     },
     {
       id: "7",

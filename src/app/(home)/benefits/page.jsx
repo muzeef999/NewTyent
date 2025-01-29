@@ -634,7 +634,7 @@ const Page = () => {
         <td style={{ textAlign: 'center', padding: '8px', verticalAlign: 'middle' }}>
           {row.orpLevel}
         </td>
-        <td style={{ textAlign: 'start', padding: '8px', verticalAlign: 'middle' }}>
+        <td style={{ textAlign: 'start',  padding: '8px', verticalAlign: 'middle', whiteSpace:'normal', wordBreak:'break-word', maxWidth:'150px' }}>
           {row.remarks}
         </td>
       </tr>
