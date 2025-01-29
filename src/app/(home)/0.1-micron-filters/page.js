@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { Col, Row } from "react-bootstrap";
 import filter from "@/asserts/filter.png";
-import filterbackboor from "@/asserts/filterbackboor.png";
+import filterbackboor from "@/asserts/filterbackboor.webp";
 import Image from "next/image";
 import { MdWaterDrop } from "react-icons/md";
 
