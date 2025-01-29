@@ -1,5 +1,4 @@
 
-import Form from '@/app/(home)/compoents/Form/Form'
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import React from 'react'
@@ -11,14 +10,12 @@ import Management from '../../compoents/(story)/Management';
 
 const page = () => {
   return (
-    <div>
-      
-      <div className="section-spacing">
+    <div style={{marginTop:'120px'}}>
       <div className='container'>
-        
+      <div className="section-spacing">  
       <Row>
         {/* Left Column: Image */}
-        <Col md={6} className='d-flex justify-content-center align-items-center'>
+        <Col md={6} className='d-flex justify-content-center align-items-center' data-aos="fade-right">
           <div style={{width:'90%'}}>
             <Image style={{borderTopLeftRadius:'50%', borderBottomLeftRadius:'50%', borderBottomRightRadius:'50%'}}
               src={whoweare}
@@ -30,7 +27,7 @@ const page = () => {
         </Col>
 
         {/* Right Column: Text */}
-        <Col md={6} className='d-flex justify-content-center align-items-center'>
+        <Col md={6}  data-aos="fade-left" className='d-flex justify-content-center align-items-center'>
           <div>
             <h5 className='m-0'>Who We Are?</h5>
             <h3 style={{fontWeight:'600', fontSize:'40px', color:'#008ac7'}} className='m-0'>About Us</h3>
@@ -60,11 +57,11 @@ const page = () => {
       </div>
       </div>
 
-      <div className="section-spacing">
+      <div className="section-spacing" data-aos="fade-up">
       <Vision />
       </div>
     
-      <div className="section-spacing">
+      <div className="section-spacing" data-aos="fade-up">
       <Mission />
       </div>
       <div className="section-spacing">

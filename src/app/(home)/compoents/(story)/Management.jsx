@@ -18,7 +18,9 @@ const Management = () => {
       <div className="container">
         <Row className="g-3">
           {managementData.map((person, index) => (
-            <Col key={index} xs={6} sm={6} md={3} lg={3}>
+            <Col key={index} xs={6} sm={6} md={3} lg={3}
+            data-aos={index % 3 === 0 ? "fade-up" : index % 3 === 1 ? "zoom-in" : "flip-left"} 
+            >
               <div className="custom-card text-center">
                 <Image
                   src={person.image}
