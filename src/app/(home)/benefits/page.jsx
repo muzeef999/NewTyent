@@ -257,43 +257,49 @@ const BenfitsOnisedAlkaline = [
 
 const IconTest = ({ Heading, id, icon, Descrpition }) => {
   return (
-    <div>
-      <Row 
-        style={{ backgroundColor: "#FFF" }}
-        className="d-flex justify-content-between align-items-center custom-card-benfts"
+    <div
+      style={{ backgroundColor: "#FFF" }}
+      className="d-flex custom-card-benfts"
+    >
+      {/* Image Container */}
+      <div
+        style={{
+          overflow: "hidden", // Keeps image within bounds
+          position:'relative',
+          width:'100%',
+          alignItems: "stretch", // Stretches image to fill container
+        }}
       >
-        <Col>
-        <div className="image-container">
         <Image
-               style={{ display: 'block', width: '100%' }}
-
-          className="custom-image-benfts"
           src={icon}
+          alt="tyent"
+          layout="fill"
           priority
-          layout="intrinsic"
-          alt={Heading}
+          style={{
+            borderTopLeftRadius: "20px",
+            borderBottomLeftRadius: "20px",
+            display: "block",
+          }}
         />
-        </div>
-        </Col>
-        <Col>
-        <div className="ml-4 align-items-center" style={{paddingLeft:'2px'}}>
-          <h3
-            className="text-start benfitsheading p-2"
-            style={{ color: "#008AC7" }}
-          >
-            <b>
-              {id}.{Heading}
-            </b>
-          </h3>
-          <p
-            className="text-start m-1 benfitsubheading"
-            style={{ color: "#565959" }}
-          >
-            {Descrpition}
-          </p>
-        </div>
-        </Col>
-      </Row>
+      </div>
+
+      {/* Text Content */}
+      <div className="d-flex flex-column justify-content-center align-items-start flex-grow-1 p-3">
+        <h3
+          className="text-start m-0"
+          style={{ color: "#008AC7", fontSize: "clamp(22px, 4vw, 28px)" }}
+        >
+          <b>
+            {id}. {Heading}
+          </b>
+        </h3>
+        <p
+          className="text-start m-1"
+          style={{ color: "#565959", fontSize: "clamp(14px, 2vw, 16px)" }}
+        >
+          {Descrpition}
+        </p>
+      </div>
     </div>
   );
 };
@@ -501,10 +507,10 @@ const Page = () => {
               {icons.map((iconItem) => (
                 <Col
                   key={iconItem.id}
-                  xs={12} // Full width on extra-small screens
-                  sm={12} // Two columns on small screens
-                  md={6} // Three columns on medium screens
-                  lg={6} // Four columns on large screens
+                  xs={12}
+                  sm={12}
+                  md={6}
+                  lg={6}
                   data-aos="zoom-in"
                 >
                   {/* Apply AOS here */}
@@ -597,56 +603,108 @@ const Page = () => {
         </p>
         <br />
 
-        <Table 
-  className="custom-table table-sm" 
-  hover 
-  responsive 
-  style={{ fontSize: '14px', width: '100%' }}
->
-  <tbody>
-    <tr>
-      <th style={{ textAlign: 'start', whiteSpace: 'nowrap', padding: '8px' }}>Beverage</th>
-      <th style={{ textAlign: 'center', whiteSpace: 'nowrap', padding: '8px' }}>Ph Range</th>
-      <th style={{ textAlign: 'center', whiteSpace: 'nowrap', padding: '8px' }}>ORP Level (Approx)</th>
-      <th style={{ textAlign: 'center', whiteSpace: 'nowrap', padding: '8px' }}>Remarks</th>
-    </tr>
-    {tableData.map((row, index) => (
-      <tr key={index}>
-        <td 
-          style={{ 
-            textAlign: 'start', 
-            display: 'flex', 
-            alignItems: 'center', 
-            padding: '8px', 
-            whiteSpace: 'normal' 
-          }}
+        <Table
+          className="custom-table table-sm"
+          hover
+          responsive
+          style={{ fontSize: "14px", width: "100%" }}
         >
-          <Image
-            style={{ 
-              objectFit: 'cover', 
-              width: '40px', 
-              height: '40px', 
-              marginRight: '10px' 
-            }}
-            src={row.icon}
-            alt={row.title}
-          />
-          {row.beverage}
-        </td>
-        <td style={{ textAlign: 'center', padding: '8px', verticalAlign: 'middle' }}>
-          {row.phRange}
-        </td>
-        <td style={{ textAlign: 'center', padding: '8px', verticalAlign: 'middle' }}>
-          {row.orpLevel}
-        </td>
-        <td style={{ textAlign: 'start',  padding: '8px', verticalAlign: 'middle', whiteSpace:'normal', wordBreak:'break-word', maxWidth:'150px' }}>
-          {row.remarks}
-        </td>
-      </tr>
-    ))}
-  </tbody>
-</Table>
-
+          <tbody>
+            <tr>
+              <th
+                style={{
+                  textAlign: "start",
+                  whiteSpace: "nowrap",
+                  padding: "8px",
+                }}
+              >
+                Beverage
+              </th>
+              <th
+                style={{
+                  textAlign: "center",
+                  whiteSpace: "nowrap",
+                  padding: "8px",
+                }}
+              >
+                Ph Range
+              </th>
+              <th
+                style={{
+                  textAlign: "center",
+                  whiteSpace: "nowrap",
+                  padding: "8px",
+                }}
+              >
+                ORP Level (Approx)
+              </th>
+              <th
+                style={{
+                  textAlign: "center",
+                  whiteSpace: "nowrap",
+                  padding: "8px",
+                }}
+              >
+                Remarks
+              </th>
+            </tr>
+            {tableData.map((row, index) => (
+              <tr key={index}>
+                <td
+                  style={{
+                    textAlign: "start",
+                    display: "flex",
+                    alignItems: "center",
+                    padding: "8px",
+                    whiteSpace: "normal",
+                  }}
+                >
+                  <Image
+                    style={{
+                      objectFit: "cover",
+                      width: "40px",
+                      height: "40px",
+                      marginRight: "10px",
+                    }}
+                    src={row.icon}
+                    alt={row.title}
+                  />
+                  {row.beverage}
+                </td>
+                <td
+                  style={{
+                    textAlign: "center",
+                    padding: "8px",
+                    verticalAlign: "middle",
+                  }}
+                >
+                  {row.phRange}
+                </td>
+                <td
+                  style={{
+                    textAlign: "center",
+                    padding: "8px",
+                    verticalAlign: "middle",
+                  }}
+                >
+                  {row.orpLevel}
+                </td>
+                <td
+                  style={{
+                    textAlign: "start",
+                    padding: "8px",
+                    verticalAlign: "middle",
+                    whiteSpace: "normal",
+                    wordBreak: "break-word",
+                    maxWidth: "150px",
+                  }}
+                >
+                  {row.remarks}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </div>
 
       <Row className="align-items-center">
