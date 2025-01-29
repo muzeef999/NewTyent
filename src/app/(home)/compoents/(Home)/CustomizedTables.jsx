@@ -140,6 +140,7 @@ function CustomizedTables() {
             <td colSpan={5} style={{ padding: 0 }}>
               <div
                 style={{
+                  position: "relative",
                   width: "100%",
                   overflow: "hidden", // Ensures the image respects the radius
                 }}
@@ -153,6 +154,44 @@ function CustomizedTables() {
                     display: "block", // Ensures no unexpected gaps
                   }}
                 />
+                <div
+                  data-aos="fade-up" // Smooth fade-up effect
+                  data-aos-duration="1200" // Duration of animation in milliseconds
+                  data-aos-delay="300" // Slight delay for better effect
+                  style={{
+                    position: "absolute",
+                    top: "20%", // Adjusted for better visibility
+                    left: "2%", // Small margin from the left
+                    display: "flex",
+                    flexDirection: "column",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    lineHeight: "1.2",
+                    color: "#008AC7", // Theme color
+                  }}
+                >
+                  <p
+                    data-aos="flip-left"
+                    data-aos-duration="1000"
+                    style={{ margin: "4px 0", color:'#000',  fontSize: "clamp(16px, 3vw, 32px)"}}
+                  >
+                    Think Once
+                  </p>
+                  <p
+                    data-aos="flip-left"
+                    data-aos-duration="1200"
+                    style={{ margin: "4px 0", color:'#000', fontSize: "clamp(16px, 3vw, 32px)" }}
+                  >
+                    before
+                  </p>
+                  <p
+                    data-aos="flip-left"
+                    data-aos-duration="1400"
+                    style={{ margin: "4px 0", fontSize: "clamp(16px, 3vw, 32px)" }}
+                  >
+                    buying
+                  </p>
+                </div>
               </div>
             </td>
           </tr>

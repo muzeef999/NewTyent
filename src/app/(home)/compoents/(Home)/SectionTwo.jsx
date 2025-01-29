@@ -1,9 +1,12 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import arraow from "@/asserts/arrowVector.png";
 import { Col, Row } from "react-bootstrap";
 import "@/app/style/WhyDrinkTyentWater.css";
 import Link from "next/link";
+import CountUp from "react-countup";
+
 
 const SectionTwo = () => {
   return (
@@ -15,27 +18,28 @@ const SectionTwo = () => {
   xs={12}
   sm={12}
   className="d-flex flex-column justify-content-center align-items-center text-center"
+ data-aos="fade-left"
 >
-  <h2 className="mt-4 mb-4" style={{ fontWeight: "600", lineHeight: "1.3" }}>
+  <h2 className="mt-4 mb-4" data-aos="fade-up" style={{ fontWeight: "600", lineHeight: "1.3" }}>
     Improving <span style={{ color: "#008AC7" }}>Health</span> and <br />
     preserving <span style={{ color: "#008AC7" }}>Nature</span>
   </h2>
 
-  <h1 className="big-number" style={{ color: "#008AC7", fontSize: "160px", fontWeight: "bold" }}>
-    9
+  <h1  data-aos="zoom-in" className="big-number" style={{ color: "#008AC7", fontSize: "160px", fontWeight: "bold" }}>
+  <CountUp start={0} end={9} duration={1.5} />
   </h1>
 
-  <p className="mb-4" style={{ fontSize: "18px", fontWeight: "500" }}>YEARS OF EXCELLENCE</p>
+  <p data-aos="fade-in" className="mb-4" style={{ fontSize: "18px", fontWeight: "500" }}>YEARS OF EXCELLENCE</p>
 
-  <h3 style={{ color: "#008AC7", fontSize: "22px", fontWeight: "bold" }}>
+  <h3  data-aos="fade-in" style={{ color: "#008AC7", fontSize: "22px", fontWeight: "bold" }}>
     1,000,000+ Users
   </h3>
 
-  <Link href="/why-tyent" className="explore-link mt-3 mb-4" style={{ fontSize: "18px", textDecoration: "none" }}>
+  <Link  data-aos="slide-up" href="/why-tyent" className="explore-link mt-3 mb-4" style={{ fontSize: "18px", textDecoration: "none" }}>
     Explore the Tyent
   </Link>
 </Col>
-        <Col md={12} xs={12} sm={12} lg={6}>
+        <Col md={12} xs={12} sm={12} lg={6} data-aos="fade-right">
           <div
             className="text-white py-4"
             style={{
@@ -51,6 +55,7 @@ const SectionTwo = () => {
                   className="custom-card shadow-lg p-4 mb-4 bg-white section2boxwidth"
                   style={{aspectRatio:'1/1', display:'flex', justifyContent:'center', 
                   }}
+                   data-aos="flip-up"
                 >
                   <h5 className="card-title fw-bold">Tyent Global</h5>
                   <p className="card-text">
@@ -63,8 +68,10 @@ const SectionTwo = () => {
                 </div>
 
                 <div
+                 data-aos="flip-up"
                   className="custom-card shadow-lg p-4 bg-white section2boxwidth"
                   style={{aspectRatio:'1/1', display:'flex', justifyContent:'center',
+                 
                   }}
                 >
                   <h5 className="card-title fw-bold">Tyent India</h5>
@@ -78,7 +85,7 @@ const SectionTwo = () => {
                   </p>
                 </div>
               </div>
-              <div className="custom-arrow d-none d-lg-block" style={{paddingRight:'16px'}}>
+              <div data-aos="fade-right" className="custom-arrow d-none d-lg-block" style={{paddingRight:'16px'}}>
   <Image src={arraow} width={50} alt="arrow" />
 </div>
 

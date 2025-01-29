@@ -138,13 +138,16 @@ display: flex;
     }
 
     .home_banner2_text1 {
-      white-space: normal;
-      word-wrap: break-word;
-    }
-    
-    .home_banner2_text1 span {
-      display: inline-block;  /* Optional: to force wrapping */
-    }
+  white-space: normal;
+  word-wrap: break-word;
+  display: block; /* Ensures text respects wrapping */
+  max-width: 100%; /* Ensures responsiveness */
+}
+
+.home_banner2_text1 span {
+  display: block; /* Forces the <span> to break onto a new line */
+}
+
     
     .home_banner_bg_one {
       background-image: url("../../asserts/homeBanners/banner1/home_Banner_mobile_Bg.png");

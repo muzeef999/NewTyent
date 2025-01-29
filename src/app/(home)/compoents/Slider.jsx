@@ -13,16 +13,22 @@ const Slider = () => {
 
   const bannerClasses = ["home_banner_bg_one", "home_banner_bg_two"];
 
-  // Randomize banner class
+
   useEffect(() => {
-    const randomClass =
-      bannerClasses[Math.floor(Math.random() * bannerClasses.length)];
-    setBannerClass(randomClass);
-  }, []);
+    if (bannerClasses.length === 0) return; // Avoid running if array is empty
+  
+    const storedBannerClass = localStorage.getItem("selectedBanner");
+    if (storedBannerClass) {
+      setBannerClass(storedBannerClass);
+    } else {
+      const randomClass =
+        bannerClasses[Math.floor(Math.random() * bannerClasses.length)];
+      setBannerClass(randomClass);
+      localStorage.setItem("selectedBanner", randomClass);
+    }
+  }, [bannerClasses]); // Depend on `bannerClasses` in case it loads asynchronously
 
-
-
-
+  
   return (
     <div>
       <div className={`home_banner_bg ${bannerClass}`}>
@@ -50,6 +56,15 @@ const Slider = () => {
 
         {bannerClass === "home_banner_bg_two" && (
           <div>
+            
+            <div className="sky_Movie">
+              <Image
+                src={Banner1_sky}
+                alt="Home_banner"
+                layout="responsive"
+                priority
+              />
+            </div>
             <Leaf />
             <div className="home-banner-text">
               <h1 style={{fontSize:"clamp(30px, 5vw, 80px)"}} className="home_banner1_text1">Hydration That Heals</h1>

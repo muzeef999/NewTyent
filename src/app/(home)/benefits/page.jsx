@@ -503,7 +503,7 @@ const Page = () => {
           </p>
 
           <div className="container">
-            <Row className="d-flex flex-wrap g-5">
+            <Row className="d-flex flex-wrap g-4">
               {icons.map((iconItem) => (
                 <Col
                   key={iconItem.id}
