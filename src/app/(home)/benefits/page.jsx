@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import React from "react";
-import icon from "@/asserts/Testmonials/icon1.png";
 import Image from "next/image";
 import { Col, Row, Table } from "react-bootstrap";
 import "@/app/style/Benfits.css";
@@ -21,7 +20,6 @@ import chemistry from "@/asserts/health/chemistry.png";
 import glands from "@/asserts/health/glands.png";
 import eye from "@/asserts/health/eye.png";
 import protection from "@/asserts/health/protection.png";
-
 import coffe from "@/asserts/health/Coffee.png";
 import milktea from "@/asserts/health/milktea.png";
 import greentea from "@/asserts/health/greentea.png";
@@ -32,7 +30,6 @@ import tap from "@/asserts/health/tap.png";
 import mineralwater from "@/asserts/health/mineral-water.png";
 import tyentwater from "@/asserts/health/tyentwater.png";
 import fracture from "@/asserts/health/fracture.png";
-
 import policy from "@/asserts/health/policy.png";
 import bpp from "@/asserts/health/bpp.png";
 import Diabetes from "@/asserts/health/Diabetesp.png";
@@ -261,20 +258,26 @@ const BenfitsOnisedAlkaline = [
 const IconTest = ({ Heading, id, icon, Descrpition }) => {
   return (
     <div>
-      <div
+      <Row 
         style={{ backgroundColor: "#FFF" }}
         className="d-flex justify-content-between align-items-center custom-card-benfts"
       >
+        <Col>
+        <div className="image-container">
         <Image
+        style={{display: 'block',}}
           className="custom-image-benfts"
           src={icon}
           priority
-          layout="fixed"
+          layout="responsive"
           alt={Heading}
         />
+        </div>
+        </Col>
+        <Col>
         <div className="ml-4 align-items-center" style={{paddingLeft:'2px'}}>
           <h3
-            className="text-start benfitsheading"
+            className="text-start benfitsheading p-2"
             style={{ color: "#008AC7" }}
           >
             <b>
@@ -288,7 +291,8 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
             {Descrpition}
           </p>
         </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   );
 };
@@ -492,7 +496,7 @@ const Page = () => {
           </p>
 
           <div className="container">
-            <Row className="d-flex flex-wrap">
+            <Row className="d-flex flex-wrap g-5">
               {icons.map((iconItem) => (
                 <Col
                   key={iconItem.id}

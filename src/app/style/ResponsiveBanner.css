@@ -119,10 +119,9 @@ display: flex;
     .responsive-container-hybrid {
       position: absolute;
       top: 51%;
-      right: 8.2%;
+      right: 9.1%;
       width: 5.1%;
-      aspect-ratio: 16/9;
-      
+      aspect-ratio: 16/9;      
       z-index: -9; /* se lower  z-index to ensure it appears background */  
     }
   }

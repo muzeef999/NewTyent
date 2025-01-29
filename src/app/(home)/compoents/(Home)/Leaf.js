@@ -82,7 +82,7 @@ const FallingLeaves = () => {
   const leaves = Array.from({ length: 10 }); // Create 20 leaves
 
   return (
-    <div style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
+    <div style={{ position: "absolute", width:'100%', top:'0%', left:'0%', overflow: "hidden" }}>
       {leaves.map((_, index) => (
         <svg
           key={index}
