@@ -52,6 +52,7 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
       }}
     >
       {preheading} &nbsp;
+      <br/>
       <span style={{ color: "#008AC7" }}>
         <TypeAnimation
           sequence={sequence}   // Use the dynamic sequence here

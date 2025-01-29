@@ -7,7 +7,7 @@ import WhyDrinkTyentWater from "@/app/(home)/compoents/(Home)/WhyDrinkTyentWater
 import { FaQuestion } from "react-icons/fa";
 import hydrogen from "@/asserts/why ionizer/hydrogen.webp";
 import NMP from "@/asserts/NMP5.webp";
-import whyIonizer from "@/asserts/why ionizer/whyIonizer.png";
+import whyIonizer from "@/asserts/why ionizer/whyIonizer.webp";
 import minerals from "@/asserts/why ionizer/minerals.png";
 import purity from "@/asserts/why ionizer/purity.png";
 import hydrogenicon from "@/asserts/why ionizer/hydrogenicon.png";
@@ -200,19 +200,15 @@ const page = () => {
                     </h3>
                   </div>
                   <ul className="list-unstyled section-content">
-                    <li>
+                    <p>
                       Bore water often contains high levels of hardness (calcium
                       and magnesium salts) and toxic heavy metals like lead and
                       arsenic.
-                    </li>
-                    <li>
                       It may be contaminated with industrial waste and
                       pesticides, making it unsafe for long-term consumption.
-                    </li>
-                    <li>
                       Consuming untreated bore water can lead to kidney stones,
                       digestive issues, and other health problems.
-                    </li>
+                    </p>
                   </ul>
                 </div>
                 <br />
@@ -238,19 +234,16 @@ const page = () => {
                     </h3>
                   </div>
                   <ul className="list-unstyled section-content">
-                    <li>
+                    <p>
                       Municipal water undergoes treatment with chlorine and
                       other chemicals to disinfect, but this can result in
                       byproducts like trihalomethanes (THMs), which are harmful.
-                    </li>
-                    <li>
+                    
                       Aging pipelines can leach lead and rust into the water.
-                    </li>
-                    <li>
                       Treated municipal water often lacks the minerals essential
                       for health, and long-term exposure to contaminants can
                       weaken immunity.
-                    </li>
+                    </p>
                   </ul>
                 </div>
                 <br />
@@ -276,18 +269,17 @@ const page = () => {
                     </h3>
                   </div>
                   <ul className="list-unstyled section-content">
-                    <li>
+                    <li className="mb-2">
                       <b>Devoid of Minerals:</b> RO systems strip away
                       beneficial minerals, leaving water "dead" and acidic.
                     </li>
-                    <li>
-                      <b>Wastage : </b>RO systems waste about 2–3 liters of
-                      water for every liter purified.
+                    <li className="mb-2">
+                      <b>Wastage : </b>RO water purifier's waste about 3–5 liters of
+                      water for every 1 liter purified.
                     </li>
-                    <li>
+                    <li className="mb-2">
                       <b>Acidic Water :</b> Consuming acidic water can disrupt
-                      the body's pH balance, leading to health issues like bone
-                      loss and fatigue.
+                      the body's pH balance, leading to health issues like diabetes, artharities, thyroid etc. Acidic nature is the key sign for all health disorders.
                     </li>
                   </ul>
                 </div>

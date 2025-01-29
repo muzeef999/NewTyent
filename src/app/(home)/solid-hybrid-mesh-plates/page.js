@@ -59,13 +59,11 @@ const WaterFilterCards = ({ title, content }) => {
 const page = () => {
 
      const headerData = {
-            basic: "Trust, Satisfaction & Transformations",
-            preheading: "Hear From Our Real",
-            afterheading: "Satisfied Tyent India Customers",
-            content:
-              "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
+            basic: "Japanese Technology",
+            preheading: "Advanced Design",
+            afterheading: "With Tyent's Solid Hybrid Mesh Plates",
             img: platesBanner,
-            animatedText: "Health, Wellness, Transformation",
+            animatedText: "More Surface Area, More Anti-Oxidants, More Durability,",
           };
   
           return (

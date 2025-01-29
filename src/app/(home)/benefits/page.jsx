@@ -265,11 +265,12 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
         <Col>
         <div className="image-container">
         <Image
-        style={{display: 'block',}}
+               style={{ display: 'block', width: '100%' }}
+
           className="custom-image-benfts"
           src={icon}
           priority
-          layout="responsive"
+          layout="intrinsic"
           alt={Heading}
         />
         </div>
@@ -379,10 +380,10 @@ const tableData = [
 const Page = () => {
   const headerData = {
     basic: "Trust, Satisfaction & Transformations",
-    preheading: "Hear From Our Real",
-    afterheading: "Satisfied Tyent India Customers",
+    preheading: "Looking For",
+    afterheading: "Tyent Water Does It All!",
     img: benfitsBanner, // Replace with actual image path if different
-    animatedText: "Health, Wellness, Transformation",
+    animatedText: "Stronger Immunity, Better Digestion, Radiant Skin",
   };
 
   const getJustifyClass = (index) => {

@@ -19,14 +19,13 @@ export const metadata = {
 };
 
 const headerData = {
-  basic: "Trust, Satisfaction & Transformations",
-  preheading: "Hear From Our Real",
-  afterheading: "Satisfied Tyent India Customers",
-  content:
-    "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water. Our cutting-edge water ionizers are designed to provide superior antioxidant support, better hydration, and long-term wellness. But don’t just take our word for it - hear it from those who matter most, our valued customers!",
+  preheading:'Trust, Care & Commitment',
+  afterheading: "We're happy to help!",
   img: contactUsBanner,
-  animatedText: "Health, Wellness, Transformation", // Pass the animated text here
+  animatedText: "Have Questions ?, Need Assistance ? ",
 };
+
+
 
 const InfoCard = ({ icon: Icon, title, text }) => (
   <Col xs={12} md={4} style={{ padding: "20px" }}>
@@ -63,12 +62,15 @@ const InfoCard = ({ icon: Icon, title, text }) => (
 );
 
 const Page = () => {
+
   const items = [
     { src: productDemo, alt: "Product Demo", title: "Product Demo" },
     { src: DealerEnquiry, alt: "Dealer Enquiry", title: "Dealer Enquiry" },
     { src: ServiceRequest, alt: "Service Request", title: "Service Request" },
     { src: AskyourQuery, alt: "Ask your Query", title: "Ask your Query" },
   ];
+
+
   return (
     <div>
       <Header

@@ -151,13 +151,11 @@ const Controls = ({ title, content }) => {
 const page = () => {
 
     const headerData = {
-        basic: "Trust, Satisfaction & Transformations",
-        preheading: "Hear From Our Real",
-        afterheading: "Satisfied Tyent India Customers",
-        content:
-          "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
+        basic: "Reliable & High-Performance ",
+        preheading: "Advanced Design",
+        afterheading: "With Tyent’s Patented SMPS PLUS",
         img: smpsplus,
-        animatedText: "Health, Wellness, Transformation",
+        animatedText: "More Power, More Efficiency,  More Performance",
       };
 
   return (

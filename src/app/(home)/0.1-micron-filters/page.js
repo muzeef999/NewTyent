@@ -141,13 +141,13 @@ const benefits = [
 
 const Page = () => {
   const headerData = {
-    basic: "Trust, Satisfaction & Transformations",
-    preheading: "Hear From Our Real",
-    afterheading: "Satisfied Tyent India Customers",
+    basic: "Purest, Healthiest & Safest Water",
+    preheading: "Advanced Design",
+    afterheading: "With Tyent's .01 Micron Dual Filters",
     content:
       "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
     img: filter,
-    animatedText: "Health, Wellness, Transformation",
+    animatedText: "NO Nano Virus, NO Micro Plastics, NO Contamimation",
   };
 
   return (

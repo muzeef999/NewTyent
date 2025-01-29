@@ -1,34 +1,32 @@
-import React from 'react';
-import { Container, Row } from 'react-bootstrap';
-import dynamic from 'next/dynamic';
-import platess from '@/asserts/whyTent/platess.webp'
-import smpsplus from '@/asserts/whyTent/smpsplus.webp'
-import phscale from '@/asserts/whyTent/phscale.webp'
-import tyentFilters from '@/asserts/filterbackboor.webp'
-import RTR from '@/asserts/whyTent/RTR.webp'
-import BBB from '@/asserts/whyTent/BBB.webp'
-import International from '@/asserts/whyTent/International.webp'
-import Antioxidant  from  '@/asserts/whyTent/Antioxidant.webp'
-import Chemical  from  '@/asserts/whyTent/Chemical.webp'
-import doorstep  from  '@/asserts/whyTent/doorstep.webp'
-import Certified from  '@/asserts/whyTent/Certified.webp'
-import display from '@/asserts/whyTent/display.webp'
-import plateSurfaceArea from '@/asserts/whyTent/plateSurfaceArea.webp'
+import React from "react";
+import { Container, Row } from "react-bootstrap";
+import dynamic from "next/dynamic";
+import platess from "@/asserts/whyTent/platess.webp";
+import smpsplus from "@/asserts/whyTent/smpsplus.webp";
+import phscale from "@/asserts/whyTent/phscale.webp";
+import tyentFilters from "@/asserts/filterbackboor.webp";
+import RTR from "@/asserts/whyTent/RTR.webp";
+import BBB from "@/asserts/whyTent/BBB.webp";
+import International from "@/asserts/whyTent/International.webp";
+import Antioxidant from "@/asserts/whyTent/Antioxidant.webp";
+import Chemical from "@/asserts/whyTent/Chemical.webp";
+import doorstep from "@/asserts/whyTent/doorstep.webp";
+import Certified from "@/asserts/whyTent/Certified.webp";
+import display from "@/asserts/whyTent/display.webp";
+import plateSurfaceArea from "@/asserts/whyTent/plateSurfaceArea.webp";
 
-
-
-
-import why from '@/asserts/whyTyeny.png'
-const Header = dynamic(() => import("../compoents/Header"), {ssr: false});
-const FeatureCard = dynamic(() => import("../compoents/FeatureCard"), {srr:false})
+import why from "@/asserts/whyTyeny.png";
+const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
+const FeatureCard = dynamic(() => import("../compoents/FeatureCard"), {
+  srr: false,
+});
 
 export const metadata = {
-  title: 'Why Tyent',
-  description: 'Discover the features of Tyent water ionizers.',
+  title: "Why Tyent",
+  description: "Discover the features of Tyent water ionizers.",
 };
 
 async function fetchData() {
-  
   const data = [
     {
       id: "1",
@@ -58,11 +56,11 @@ async function fetchData() {
 
   <h3>Strength + Durability + More Surface Area + More Antioxidants = Solid Hybrid Mesh Plates</h3>
         </div>`,
-      icon: platess
+      icon: platess,
     },
     {
       id: "2",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Largest Plate Surface Area in the Industry",
       description: `
         <div style="line-height: 1.6;">
@@ -70,11 +68,11 @@ async function fetchData() {
           Plates are the core of a water ionizer, and the key factor is their surface area, not their height, width, or diameter. For instance, the size of a plate doesn’t directly impact the production of antioxidants. Some brands claim to have the largest plates, yet produce lesser antioxidants (-ORP). Tyent water ionizers utilize Solid Hybrid Mesh Plate technology, offering superior strength, durability and largest surface area in the industry, enabling higher antioxidant production and more accurate pH levels, delivering better overall performance. 
           </p>
         </div>`,
-      icon: plateSurfaceArea
+      icon: plateSurfaceArea,
     },
     {
       id: "3",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Patented SMPS PLUS® Power",
       description: `
         <div style="line-height: 1.6; color: #2ebb46 !important">
@@ -98,11 +96,11 @@ async function fetchData() {
   <p>Tyent engineers wanted a better solution for our customers. They pooled their extensive knowledge and expertise and enhanced a traditional SMPS to work specifically in a water ionizer. The unit they created was named SMPS Plus. Tyent’s SMPS Plus gives you 55 adjustable power settings so you can create the perfect glass of alkaline water. The power and efficiency of SMPS Plus enables Tyent ionizer to create strong alkaline and acidic water without using chemicals from 11.5 pH to 2.5 pH.</p>
 
         </div>`,
-      icon: smpsplus
+      icon: smpsplus,
     },
     {
       id: "4",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Extreme filtration capability",
       description: `
         <div style="line-height: 1.6;">
@@ -120,7 +118,7 @@ As water passes lengthwise through the filters, the extended length provides mor
     },
     {
       id: "5",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Automated PAST cleaning system",
       description: `
         <div style="line-height: 1.6;">
@@ -132,7 +130,7 @@ As water passes lengthwise through the filters, the extended length provides mor
     },
     {
       id: "6",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Largest one touch display",
       description: `
         <div style="line-height: 1.6;">
@@ -146,32 +144,32 @@ Tyent water ionizers are so simple to use that they’re perfect for children, s
 For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-touch longest display is unmatched in both functionality and convenience.
 </p>
         </div>`,
-      icon: display
+      icon: display,
     },
     {
       id: "7",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "International Quality Certifications",
       description: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
         <p></p>
         <p></p>
         </div>`,
-      icon: International
+      icon: International,
     },
     {
       id: "8",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Certified Medical Device",
       description: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
           <p>Tyent ionizers are <strong>certified as medical devices</strong>, ensuring safety and effectiveness for household and professional use.</p>
         </div>`,
-      icon: Certified
+      icon: Certified,
     },
     {
       id: "9",
-      color1: '#f8fbfe',
+      color1: "#f8fbfe",
       heading: "Better Business Bureau A+ Rating",
       description: `
         <div style="line-height: 1.6, color:'#FFF">
@@ -182,10 +180,9 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
   <p>Tyent is proud to hold an A+ rating from the BBB, reflecting our dedication to integrity, customer service, and quality.</p>
 
         </div>`,
-      icon: BBB
-    }
+      icon: BBB,
+    },
   ];
-  
 
   return data;
 }
@@ -194,25 +191,25 @@ const Page = async () => {
   const data = await fetchData(); // Fetch data inside the component
 
   const headerData = {
-    basic: "Trust, Satisfaction & Transformations",
-    preheading: "Hear From Our Real",
-    afterheading: "Satisfied Tyent India Customers",
+    basic: "Trusted Worldwide, ❤ in India!",
+    preheading: "Tyent Water ionizer",
+    afterheading: "The Only Choice",
     img: "path/to/image.jpg", // Add image URL if needed
-    animatedText: "Health, Wellness, Transformation", // Pass the animated text here
+    animatedText: "Purity, Performance, Perfection", // Pass the animated text here
   };
+
 
 
   return (
     <>
-
-     <Header
-            basic={headerData.basic}
-            preheading={headerData.preheading}
-            afterheading={headerData.afterheading}
-            content={headerData.content}
-            img={why}
-            animatedText={headerData.animatedText}
-          />
+      <Header
+        basic={headerData.basic}
+        preheading={headerData.preheading}
+        afterheading={headerData.afterheading}
+        content={headerData.content}
+        img={why}
+        animatedText={headerData.animatedText}
+      />
       <FeatureCard data={data} />
     </>
   );

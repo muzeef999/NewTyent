@@ -52,13 +52,11 @@ const tableData = [
 
 const page = () => {
   const headerData = {
-    basic: "Trust, Satisfaction & Transformations",
-    preheading: "Hear From Our Real",
-    afterheading: "Satisfied Tyent India Customers",
-    content:
-      "At Tyent India, we take immense pride in the health transformations and positive lifestyle changes our customers experience through our hydrogen-rich alkaline water.",
+    basic: "The Clear Choice for Superior Health Benefits",
+    preheading: "Tyent Water Ionizers",
+    afterheading: "The Future of Ionizer",
     img: vs,
-    animatedText: "Health, Wellness, Transformation",
+    animatedText: "Updated Technology, Superior Water Quality, chemical-less usage",
   };
 
   return (

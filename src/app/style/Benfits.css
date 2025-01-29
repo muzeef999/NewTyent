@@ -116,13 +116,14 @@
 
 .custom-image-benfts {
   width: 100%;
-  height: auto;
-  overflow: hidden;
+  height: 100%; /* Ensure the image takes up the full height of the container */
   object-fit: cover; /* Ensure the image covers the container */
+  display: block; /* Ensures no extra space below the image */
 }
 
 .image-container {
   width: 100%;
- border-radius: 20px;
+  height: 100%; /* Ensure container takes up full height */
+  border-radius: 20px;
   overflow: hidden;
 }
