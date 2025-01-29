@@ -11,7 +11,7 @@ import whyIonizer from "@/asserts/why ionizer/whyIonizer.png";
 import minerals from "@/asserts/why ionizer/minerals.png";
 import purity from "@/asserts/why ionizer/purity.png";
 import hydrogenicon from "@/asserts/why ionizer/hydrogenicon.png";
-import "@/app/style/WhyDrinkTyentWater.css"
+import "@/app/style/WhyDrinkTyentWater.css";
 
 export const metadata = {
   title: "Why Water Ionizer",
@@ -53,8 +53,11 @@ const page = () => {
   return (
     <div>
       <div className="container">
-    
-        <div className="section-spacing" style={{overflow:'hidden'}} data-aos="fade-up">
+        <div
+          className="section-spacing"
+          style={{ overflow: "hidden" }}
+          data-aos="fade-up"
+        >
           <h2 className="text-center" style={{ fontWeight: "600" }}>
             Your Health Is An Investment Not An{" "}
             <span style={{ color: "#008AC7" }}>Expense</span>
@@ -71,9 +74,7 @@ const page = () => {
           </Row>
         </div>
 
-
-
-        <div className="section-spacing" style={{overflow:'hidden'}}>
+        <div className="section-spacing" style={{ overflow: "hidden" }}>
           <Row>
             <Col md={4} data-aos="fade-right">
               <div>
@@ -87,10 +88,12 @@ const page = () => {
                   {" "}
                   The Human Body Is WATER ?
                 </h2>
+                <br/>
               </div>
             </Col>
             <Col
-              md={8}           data-aos="fade-left" 
+              md={8}
+              data-aos="fade-left"
               className="d-flex justify-content-center align-items-center"
             >
               <div>
@@ -128,8 +131,7 @@ const page = () => {
             <br />
             <Row className="g-4">
               {cardDetails.map((card, index) => (
-                <Col key={index}               data-aos="fade-up"
-                xs={12} sm={6} md={3}>
+                <Col key={index} data-aos="fade-up" xs={12} sm={6} md={3}>
                   <WhyDrinkTyentWater
                     icon={card.icon}
                     title={card.title}
@@ -142,11 +144,11 @@ const page = () => {
           </div>
         </div>
 
-
-
-        <div className="section-spacing" style={{overflow:'hidden'}}>
+        <div className="section-spacing" style={{ overflow: "hidden" }}>
           <Row>
-            <Col xs={12} ms={12}
+            <Col
+              xs={12}
+              ms={12}
               md={4}
               data-aos="fade-up"
               className="d-flex justify-content-center align-items-center"
@@ -178,7 +180,10 @@ const page = () => {
               </svg>
             </Col>
             <Col md={8} xs={12} ms={12}>
-              <div className="d-flex justify-content-start align-items-start" data-aos="fade-up">
+              <div
+                className="d-flex justify-content-start align-items-start"
+                data-aos="fade-up"
+              >
                 <div className="inonzerBoreWater">
                   <div>
                     <h3>
@@ -213,7 +218,10 @@ const page = () => {
                 <br />
               </div>
 
-              <div className="d-flex justify-content-end align-items-end"  data-aos="fade-left">
+              <div
+                className="d-flex justify-content-end align-items-end"
+                data-aos="fade-left"
+              >
                 <div className="inonzerBoreWater">
                   <div>
                     <h3>
@@ -248,7 +256,10 @@ const page = () => {
                 <br />
               </div>
 
-              <div className="d-flex justify-content-start align-items-start"  data-aos="fade-right">
+              <div
+                className="d-flex justify-content-start align-items-start"
+                data-aos="fade-right"
+              >
                 <div className="inonzerBoreWater">
                   <div>
                     <h3>
@@ -286,10 +297,7 @@ const page = () => {
           </Row>
         </div>
 
-
-
-
-        <div className="section-spacing" style={{overflow:'hidden'}}>
+        <div className="section-spacing" style={{ overflow: "hidden" }}>
           <Row>
             <Col
               md={6}
@@ -344,7 +352,7 @@ const page = () => {
             </Col>
           </Row>
         </div>
-        <div className="section-spacing" style={{overflow:'hidden'}}>
+        <div className="section-spacing" style={{ overflow: "hidden" }}>
           <Row>
             <Col
               data-aos="fade-up"
@@ -399,7 +407,7 @@ const page = () => {
             </Col>
           </Row>
         </div>
-        <div className="section-spacing" style={{overflow:'hidden'}}>
+        <div className="section-spacing" style={{ overflow: "hidden" }}>
           <Row>
             <Col
               data-aos="fade-left"
@@ -458,7 +466,7 @@ const page = () => {
           </Row>
         </div>
       </div>
-      <div className="section-spacing" style={{overflow:'hidden'}}>
+      <div className="section-spacing" style={{ overflow: "hidden" }}>
         <Row className="align-items-center">
           <div className="background-container">
             <div className="background-overlay"></div>

@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
 import "@/app/style/ResponsiveBanner.css";
 import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.png";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
 import Display from "../(pages)/(products)/hybrid-h2/Display";
+import Leaf from "@/app/(home)/compoents/(Home)/Leaf";
 
 const Slider = () => {
   const [bannerClass, setBannerClass] = useState("");
@@ -50,6 +50,7 @@ const Slider = () => {
 
         {bannerClass === "home_banner_bg_two" && (
           <div>
+            <Leaf />
             <div className="home-banner-text">
               <h1 style={{fontSize:"clamp(30px, 5vw, 80px)"}} className="home_banner1_text1">Hydration That Heals</h1>
               <h1 style={{fontSize:"clamp(16px, 4vw, 26px)"}} className="home_banner2_text1">Anti-Inflammatory Benefits <span> Backed by Science powered by Tyent</span></h1>

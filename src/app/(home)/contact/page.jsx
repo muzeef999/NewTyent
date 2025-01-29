@@ -79,99 +79,104 @@ const Page = () => {
         img={headerData.img}
         animatedText={headerData.animatedText} // Passing dynamic animated text
       />
-      <Container> 
-      
-
-      <div className="section-spacing">
-        <h3
-          className="m-0 text-center"
-          style={{ color: "#008AC7", fontWeight: "600" }}
-           data-aos="fade-down"
-        >
-          You can find us here!{" "}
-        </h3>
-        <p className="text-center" style={{ fontSize: "20px" }}>
-          We would love to connect with you
-        </p>
-        <br />
-        <Row className="g-4">
-          {items.map((item, index) => (
-            <Col key={index} md={3} sm={6} xs={6} className="text-center"   data-aos="zoom-in">
-              <div>
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  layout="responsive"
-                  priority
-                  style={{ borderRadius: "20px" }}
-                />
-                <h5 className="mt-3">
-                  <b>{item.title}</b>
-                </h5>
-              </div>
-            </Col>
-          ))}
-        </Row>
+      <Container>
+        <div className="section-spacing">
+          <h3
+            className="m-0 text-center"
+            style={{ color: "#008AC7", fontWeight: "600" }}
+            data-aos="fade-down"
+          >
+            You can find us here!{" "}
+          </h3>
+          <p className="text-center" style={{ fontSize: "20px" }}>
+            We would love to connect with you
+          </p>
+          <br />
+          <Row className="g-4">
+            {items.map((item, index) => (
+              <Col
+                key={index}
+                md={3}
+                sm={6}
+                xs={6}
+                className="text-center"
+                data-aos="zoom-in"
+              >
+                <div>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    layout="responsive"
+                    priority
+                    style={{ borderRadius: "20px" }}
+                  />
+                  <h5 className="mt-3">
+                    <b>{item.title}</b>
+                  </h5>
+                </div>
+              </Col>
+            ))}
+          </Row>
         </div>
 
-        <div className="section-spacing"  data-aos="fade-up">
-        {/* First Row */}
-        <Row>
-          {" "}
-          {/* Added grid gap and bottom margin for row */}
-          <InfoCard
-            icon={CiLocationOn}
-            title="Corporate Head office:"
-            text="8-277/45, UBI Colony,
+        <div className="section-spacing" data-aos="fade-up">
+          {/* First Row */}
+          <Row>
+            {" "}
+            {/* Added grid gap and bottom margin for row */}
+            <InfoCard
+              icon={CiLocationOn}
+              title="Corporate Head office:"
+              text="8-277/45, UBI Colony,
            Banjara Hills Rd Number 3, Hyderabad, Telangana - 500034.
            Landmark:  Near TV9 news office"
-          />
-          <InfoCard
-            icon={CiLocationOn}
-            title="Tyent Delhi"
-            text=" Mahadev Enterprises, 
+            />
+            <InfoCard
+              icon={CiLocationOn}
+              title="Tyent Delhi"
+              text=" Mahadev Enterprises, 
               Room no 2 , Merry building, 
             Liberty garden no 3, 
               Near moreshwar dham Building,
             Malad west Mumbai - 400064."
-          />
-          <InfoCard
-            icon={CiLocationOn}
-            title="Tyent Mumbai"
-            text={`Mahadev Enterprises, 
+            />
+            <InfoCard
+              icon={CiLocationOn}
+              title="Tyent Mumbai"
+              text={`Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
 Near moreshwar dham Building,
 Malad west Mumbai - 400064.`}
-          />
-          <InfoCard
-            icon={CiLocationOn}
-            title="Tyent Ahmadabad"
-            text="Mahadev Enterprises, 
+            />
+            <InfoCard
+              icon={CiLocationOn}
+              title="Tyent Ahmadabad"
+              text="Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
 Near moreshwar dham Building,
 Malad west Mumbai - 400064."
-          />
-          <InfoCard
-            icon={CiLocationOn}
-            title="Tyent Sikhar"
-            text={`Mahadev Enterprises, 
+            />
+            <InfoCard
+              icon={CiLocationOn}
+              title="Tyent Sikhar"
+              text={`Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
 Near moreshwar dham Building,
 Malad west Mumbai - 400064.`}
-          />
-          <InfoCard
-            icon={CiLocationOn}
-            title="Tyent UP"
-            text="Mahadev Enterprises, 
+            />
+            <InfoCard
+              icon={CiLocationOn}
+              title="Tyent UP"
+              text="Mahadev Enterprises, 
 Room no 2 , Merry building, 
 Liberty garden no 3, 
 Near moreshwar dham Building,
 Malad west Mumbai - 400064."
-          />
-        </Row>
+            />
+          </Row>
         </div>
       </Container>
     </div>

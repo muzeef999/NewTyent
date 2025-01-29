@@ -9,46 +9,47 @@ const SectionTwo = () => {
   return (
     <div className="container d-flex justify-content-center align-items-center">
       <Row className="sectiontwo" style={{ height: "auto" }}>
-        <Col
-          lg={6}
-          md={12}
-          xs={12}
-          sm={12}
-          style={{ aspectRatio: "1/1" }}
-          className="d-flex justify-content-center align-items-center"
-        >
-          <div className="align-items-center text-center mx-auto mb-3">
-            <h2 className="align-center" style={{ fontWeight: "600" }}>
-              Improving <span style={{ color: "#008AC7" }}>Health</span> and{" "}
-              <br /> preserving <span style={{ color: "#008AC7" }}>Nature</span>
-            </h2>
-            <h1 className="big-number" style={{ color: "#008AC7" }}>
-              9
-            </h1>
-            <p>YEARS OF EXCELLENCE</p>
-            <h3 style={{ color: "#008AC7" }}>
-              <b>1,000,000+ Users </b>
-            </h3>
-            <Link href="/why-tyent" className="explore-link">
-              Explore the Tyent.
-            </Link>
-          </div>
-        </Col>
+      <Col
+  lg={6}
+  md={12}
+  xs={12}
+  sm={12}
+  className="d-flex flex-column justify-content-center align-items-center text-center"
+>
+  <h2 className="mt-4 mb-4" style={{ fontWeight: "600", lineHeight: "1.3" }}>
+    Improving <span style={{ color: "#008AC7" }}>Health</span> and <br />
+    preserving <span style={{ color: "#008AC7" }}>Nature</span>
+  </h2>
+
+  <h1 className="big-number" style={{ color: "#008AC7", fontSize: "160px", fontWeight: "bold" }}>
+    9
+  </h1>
+
+  <p className="mb-4" style={{ fontSize: "18px", fontWeight: "500" }}>YEARS OF EXCELLENCE</p>
+
+  <h3 style={{ color: "#008AC7", fontSize: "22px", fontWeight: "bold" }}>
+    1,000,000+ Users
+  </h3>
+
+  <Link href="/why-tyent" className="explore-link mt-3 mb-4" style={{ fontSize: "18px", textDecoration: "none" }}>
+    Explore the Tyent
+  </Link>
+</Col>
         <Col md={12} xs={12} sm={12} lg={6}>
           <div
             className="text-white py-4"
             style={{
               background:
-                "linear-gradient(to left, #008AC7 60%, transparent 40%)",
+                "linear-gradient(to left, #008AC7 50%, transparent 50%)",
               borderRadius: "32px",
               height: "auto",
             }}
           >
             <div className="d-flex justify-content-center align-items-center">
-              <div className="d-flex flex-column justify-content-end align-items-end">
+              <div className="d-flex flex-column justify-content-end align-items-center">
                 <div
-                  className="custom-card shadow-lg p-4 mb-4 bg-white"
-                  style={{aspectRatio:'1/1', display:'flex', justifyContent:'center',    width: "clamp(100%, 80vw, 70%)", 
+                  className="custom-card shadow-lg p-4 mb-4 bg-white section2boxwidth"
+                  style={{aspectRatio:'1/1', display:'flex', justifyContent:'center', 
                   }}
                 >
                   <h5 className="card-title fw-bold">Tyent Global</h5>
@@ -62,8 +63,8 @@ const SectionTwo = () => {
                 </div>
 
                 <div
-                  className="custom-card shadow-lg p-4 bg-white "
-                  style={{aspectRatio:'1/1', display:'flex', justifyContent:'center',   width: "clamp(100%, 80vw, 70%)", 
+                  className="custom-card shadow-lg p-4 bg-white section2boxwidth"
+                  style={{aspectRatio:'1/1', display:'flex', justifyContent:'center',
                   }}
                 >
                   <h5 className="card-title fw-bold">Tyent India</h5>

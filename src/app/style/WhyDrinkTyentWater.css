@@ -71,6 +71,10 @@
 
 /* DesktopView */
 @media (min-width: 768px) {
+
+  .section2boxwidth {
+    width: 80%;
+  }
   .inonzerBoreWater {
     width: 60%;
   }
@@ -79,6 +83,11 @@
 
 /* mobileView */
 @media (max-width: 768px) {
+
+  
+  .section2boxwidth {
+    width: 95%;
+  }
   .inonzerBoreWater {
     width: 100%;
   }
