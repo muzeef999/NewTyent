@@ -119,10 +119,10 @@ display: flex;
     .responsive-container-hybrid {
       position: absolute;
       top: 51%;
-      right: 9.2%;
-      width: 5%;
+      right: 8.2%;
+      width: 5.1%;
       aspect-ratio: 16/9;
-      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      
       z-index: -9; /* se lower  z-index to ensure it appears background */  
     }
   }

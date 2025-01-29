@@ -15,7 +15,7 @@ const Certifications = () => {
   return (
     <>
       <div className="container text-center">
-        <h2 data-aos="fade-up"  style={{ color: '#008AC7', fontWeight: '600' }}>Certifications</h2>
+        <h2  style={{ color: '#008AC7', fontWeight: '600' }}>Certifications</h2>
         <center>
           <p
            data-aos="fade-in"
