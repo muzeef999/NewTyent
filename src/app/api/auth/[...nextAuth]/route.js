@@ -10,7 +10,7 @@ const myNextAuthOptions = {
   },
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      name: "credentials",
       credentials: {
         phoneNumber: { label: "phoneNumber", type: "phoneNumber" },
         password: { label: "Password", type: "password" },
@@ -25,7 +25,7 @@ const myNextAuthOptions = {
 
 
           if (!user) {
-            return null;
+            throw new Error("User not found"); // Ensure error is thrown
           }
 
           const isValid = await bcrypt.compare(password, user.password);
@@ -36,7 +36,8 @@ const myNextAuthOptions = {
 
           return { id: user._id, name: user.name, phoneNumber: user.phoneNumber, role: user.role };
         } catch (error) {
-          console.log("Error: ", error);
+          throw new Error(error.message || "Authentication failed"); // Ensure error is propagated
+
         }
       },
     }),

@@ -3,17 +3,21 @@ import React, { useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
-import Input from "./Input/Input";
+import Input from "./Input/Input"; 
 import Button from "./Button/Button";
 import Signup from "./Signup";
 import "react-phone-input-2/lib/style.css"; // Import styles for phone input
 import PhoneInput from "react-phone-input-2"; // Phone input component
+import { Spinner } from "react-bootstrap";
 
-const Login = () => {
+const Login = ({ setShowLoginModal }) => {
   const [showRequestComponent, setShowRequestComponent] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState(""); // State for phone number with country code
   const [password, setPassword] = useState(""); // State for password
   const [callbackUrl, setCallbackUrl] = useState("/dashboard");
+  const [loading, setLoading] = useState(false);
+    const [alertMessage, setAlertMessage] = useState("");
+  
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -23,40 +27,48 @@ const Login = () => {
     if (url) {
       const decodedUrl = decodeURIComponent(url);
       setCallbackUrl(decodedUrl);
-      console.log("Decoded Callback URL:", decodedUrl);
+      setAlertMessage("Decoded Callback URL:", decodedUrl)
+  
     }
   }, [searchParams]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
+  
     try {
-      const data = await signIn("credentials", {
-        phoneNumber, // Pass phone number state
-        password, // Pass password state
-        callbackUrl,
-        redirect: false,
+      // ✅ Store the return value of signIn
+      const response = await signIn("credentials", { 
+        redirect: false, 
+        phoneNumber, 
+        password 
       });
-
-      if (data?.error) {
-        console.error(data.error);
-        alert("Invalid phone number or password");
+  
+      // ✅ Check response properly
+      if (!response || response.error) {
+        setAlertMessage("Invalid phone number or password");
       } else {
-        console.log("Login success");
-        router.push(data.url || callbackUrl);
+        setAlertMessage("Login success");
+        setShowLoginModal(false);
       }
     } catch (error) {
-      console.error("Login error:", error);
-      alert("An error occurred during login.");
+      setAlertMessage("An error occurred during login: " + error.message);
+    } finally {
+      setLoading(false);
     }
   };
+  
+  
 
   return (
     <div>
+
       {showRequestComponent ? (
         <Signup />
       ) : (
         <>
+              {alertMessage && <div className="alert alert-info text-center">{alertMessage}</div>}
+
           <h2 className="text-center">Welcome Back</h2>
           <p className="text-center">Enter your details to sign in</p>
 
@@ -101,8 +113,7 @@ const Login = () => {
               Having trouble signing in?
             </p>
 
-            {/* Submit Button */}
-            <Button type="submit" name="Sign In" />
+            <Button type="submit" name={loading ? <Spinner animation="border" size="sm" /> : "Sign In"} disabled={loading} />
 
             {/* Divider for social login */}
             <div style={{ margin: "20px 0", textAlign: "center" }}>

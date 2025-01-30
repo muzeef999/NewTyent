@@ -121,8 +121,8 @@ const Signup = () => {
         setAlertMessage(data.error || "Signup failed.");
       }
     } catch (err) {
-      console.error("API Error:", err);
-      setAlertMessage("An error occurred. Please try again later.");
+      
+      setAlertMessage("An error occurred. Please try again later." + err);
     }
   };
 
