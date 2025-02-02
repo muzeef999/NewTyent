@@ -111,6 +111,7 @@ const PriceComp = () => {
           <Col
             xs={12}
             md={6}
+            data-aos="zoom-in"
             key={index}
             className="d-flex align-items-center justify-content-center text-center"
           >

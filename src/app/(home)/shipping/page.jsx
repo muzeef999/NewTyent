@@ -13,6 +13,7 @@ import { IoMdRadioButtonOn } from "react-icons/io";
 import { IoMdAdd } from "react-icons/io";
 import dynamic from "next/dynamic";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
+import OrderComponent from "./OrderComponent";
 
 const CartItems = dynamic(() => import("@/app/(home)/compoents/CartItems"), {
   srr: false,
@@ -32,10 +33,8 @@ const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"), {
 const Page = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  const { products, loading } = useSelector((state) => state.cart);
-  const { totalAmount, deliverCharge, totalItems } = useSelector(
-    (state) => state.cart
-  );
+  const { products, loading, totalAmount, deliverCharge, totalItems } =
+    useSelector((state) => state.cart);
 
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [activeAccordion, setActiveAccordion] = useState("flush-collapseOne");
@@ -47,34 +46,6 @@ const Page = () => {
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [showAll, setShowAll] = useState(false);
 
-  const handlePaymentSelect = (method) => {
-    setPaymentMethod(method);
-  };
-
-  const handleDeliverHereClick = (address) => {
-    setSelectedAddress(address);
-    setActiveAccordion("flush-collapseThree");
-  };
-
-  const handleAccordionChange = (accordionId) => {
-    setActiveAccordion(accordionId);
-  };
-
-  const handleitemsHereClick = (totalItems) => {
-    setTotalItemsShows(totalItems);
-    handleAccordionClick("flush-collapseFour");
-  };
-
-  const handleAccordionClick = (accordionId) => {
-    if (accordionId === "flush-collapseTwo") {
-      setIsSecondAccordionActive(!isSecondAccordionActive);
-    }
-
-    setActiveAccordion((prevAccordion) =>
-      prevAccordion === accordionId ? null : accordionId
-    );
-  };
-
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data: shippingData, isLoading } = useSWR(
@@ -82,24 +53,71 @@ const Page = () => {
     fetcher
   );
 
+  // **Fetch Cart Data on User Change**
   useEffect(() => {
     if (user?.id) {
       dispatch(fetchCart(user.id));
     }
   }, [user?.id, dispatch]);
 
-  if (!user) return <Loading />;
+  // **Ensure Default Address Selection**
+  useEffect(() => {
+    if (shippingData?.shippingAddresses?.length > 0) {
+      const firstAddress = shippingData.shippingAddresses[0]?.addresses[0];
+      if (firstAddress) {
+        setSelectedAddressId(firstAddress._id);
+        setSelectedAddress(firstAddress);
+      }
+    }
+  }, [shippingData]);
 
-  if (!totalAmount) return <Loading />;
+  // **Handle Address Selection**
+  const handleAddressSelect = (id) => {
+    const address = shippingData?.shippingAddresses
+      ?.flatMap((shipping) => shipping.addresses)
+      ?.find((addr) => addr._id === id);
 
-  const handleAddressSelect = (addressId) => {
-    setSelectedAddressId(addressId);
+    if (address) {
+      setSelectedAddressId(id);
+      setSelectedAddress(address);
+    }
   };
 
+  const handleAccordionClick = (accordionId) => {
+    if (accordionId === "flush-collapseTwo") {
+      setIsSecondAccordionActive((prev) => !prev);
+    }
+    setActiveAccordion((prev) => (prev === accordionId ? null : accordionId));
+  };
+
+  // **Handle Accordion Toggle**
+  const handleAccordionChange = (id) => {
+    setActiveAccordion((prev) => (prev === id ? "" : id));
+  };
+
+  // **Handle Payment Selection**
+  const handlePaymentSelect = (method) => {
+    setPaymentMethod(method);
+  };
+
+  // **Handle Deliver Here Click**
+  const handleDeliverHereClick = (address) => {
+    setSelectedAddress(address);
+    setActiveAccordion("flush-collapseThree");
+  };
+
+  // **Handle Total Items Selection**
+  const handleitemsHereClick = (totalItems) => {
+    setTotalItemsShows(totalItems);
+    setActiveAccordion("flush-collapseFour");
+  };
+
+  // **Handle Edit Accordion Close**
   const handleEditAccordionClose = () => {
-    setEditingAddressId(null); // Close the edit form
+    setEditingAddressId(null);
   };
 
+  // **Handle Quantity Change**
   const handleQtyChange = async (productName, newQuantity) => {
     if (!user?.id) {
       router.push("/Signin");
@@ -122,6 +140,7 @@ const Page = () => {
     }
   };
 
+  // **Handle Product Deletion**
   const deleteProduct = async (productName) => {
     try {
       if (!user?.id) {
@@ -129,17 +148,25 @@ const Page = () => {
         return;
       }
       await dispatch(
-        deleteProductAction({ userId: user.id, productName: productName })
+        deleteProductAction({ userId: user.id, productName })
       ).unwrap();
     } catch (error) {
       console.error("Failed to delete product:", error);
     }
   };
 
+  // **Handle Show More/Show Less Toggle**
+  const toggleShowAll = () => {
+    setShowAll((prev) => !prev);
+  };
+
+  // **Show Loading if User or Total Amount is Missing**
+  if (!user || !totalAmount) return <Loading />;
+
   return (
     <div className="container">
       <Row>
-        <Col md={8}>
+        <Col xl={8}>
           <div
             className="accordion accordion-flush"
             id="accordionPanelsStayOpenExample"
@@ -161,7 +188,7 @@ const Page = () => {
 
                 {selectedAddress && activeAccordion !== "flush-collapseOne" && (
                   <span
-                    className="ml-3 d-flex justify-content-between align-items-center "
+                    className="ml-3 d-flex justify-content-between align-items-center"
                     style={{ fontSize: "16px", color: "#000" }}
                   >
                     <div style={{ marginLeft: "12px" }}>
@@ -201,14 +228,90 @@ const Page = () => {
                     <p>Loading...</p>
                   ) : shippingData?.shippingAddresses?.length > 0 ? (
                     <>
-                      {shippingData.shippingAddresses?.map(
-                        (shippingAddress) => (
-                          <div key={shippingAddress._id} className="m-0">
-                            {shippingAddress.addresses
-                              ?.slice(
-                                0,
-                                showAll ? shippingAddress.addresses.length : 3 // Show all or only 3
-                              )
+                      {shippingData.shippingAddresses.map((shippingAddress) => (
+                        <div key={shippingAddress._id} className="m-0">
+                          {shippingAddress.addresses
+                            .slice(0, 3)
+                            .map((address) => (
+                              <div
+                                key={address._id}
+                                className={`address-card align-items-start ${
+                                  selectedAddressId === address._id
+                                    ? "selected"
+                                    : ""
+                                }`}
+                              >
+                                {editingAddressId === address._id ? (
+                                  <EditShippingAddress
+                                    editAddress={address}
+                                    handleEditAccordionClose={() =>
+                                      setEditingAddressId(null)
+                                    }
+                                  />
+                                ) : (
+                                  <div className="d-flex align-items-center">
+                                    <div className="flex-grow-1 d-flex align-items-start m-3">
+                                      <div className="form-check">
+                                        <input
+                                          className="form-check-input"
+                                          type="radio"
+                                          name="addressRadio"
+                                          id={address._id}
+                                          onChange={() =>
+                                            handleAddressSelect(address._id)
+                                          }
+                                          checked={
+                                            selectedAddressId === address._id
+                                          }
+                                        />
+                                      </div>
+                                      <div className="w-100 pl-3">
+                                        <p className="font-weight-bold">
+                                          {address.fullName} &nbsp;{" "}
+                                          {address.mobileNumber}
+                                        </p>
+                                        <p>
+                                          Address: {address.address},{" "}
+                                          {address.city}, {address.postalCode}
+                                        </p>
+                                        <p className="m-0">
+                                          Country: {address.country}
+                                        </p>
+                                        <button
+                                          className="saveanddelivery m-3"
+                                          type="button"
+                                          onClick={() =>
+                                            handleDeliverHereClick(address)
+                                          }
+                                        >
+                                          DELIVER HERE
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div className="w-10 float-end">
+                                      <p
+                                        className="text-end m-4"
+                                        onClick={() =>
+                                          setEditingAddressId(address._id)
+                                        }
+                                        style={{
+                                          color: "#008AC7",
+                                          cursor: "pointer",
+                                          fontSize: "18px",
+                                        }}
+                                      >
+                                        Edit
+                                      </p>
+                                    </div>
+                                  </div>
+                                )}
+                                <hr className="m-0" />
+                              </div>
+                            ))}
+
+                          {showAll &&
+                            shippingAddress.addresses
+                              .slice(3)
                               .map((address) => (
                                 <div
                                   key={address._id}
@@ -221,8 +324,8 @@ const Page = () => {
                                   {editingAddressId === address._id ? (
                                     <EditShippingAddress
                                       editAddress={address}
-                                      handleEditAccordionClose={
-                                        handleEditAccordionClose
+                                      handleEditAccordionClose={() =>
+                                        setEditingAddressId(null)
                                       }
                                     />
                                   ) : (
@@ -254,7 +357,6 @@ const Page = () => {
                                           <p className="m-0">
                                             Country: {address.country}
                                           </p>
-
                                           <button
                                             className="saveanddelivery m-3"
                                             type="button"
@@ -287,32 +389,24 @@ const Page = () => {
                                 </div>
                               ))}
 
-                            {/* Show More / Show Less Button */}
-                            {shippingAddress.addresses.length > 3 && (
-                              <button
-                                className="btn btn-link"
-                                onClick={() => setShowAll(!showAll)}
-                                style={{
-                                  textAlign: "left",
-                                  textDecoration: "none",
-                                  color: "#008AC7",
-                                }}
-                              >
-                                {showAll ? (
-                                  <>
-                                    <RiArrowUpSLine /> Show fewer addresses
-                                  </>
-                                ) : (
-                                  <>
-                                    <RiArrowUpSLine /> View all{" "}
-                                    {shippingAddress.addresses.length  + 2} addresses
-                                  </>
-                                )}
-                              </button>
-                            )}
-                          </div>
-                        )
-                      )}
+                          {/* Show More / Show Less Button */}
+                          {shippingAddress.addresses.length > 3 && (
+                            <button
+                              className="btn btn-link"
+                              onClick={() => setShowAll(!showAll)}
+                              style={{
+                                textAlign: "left",
+                                textDecoration: "none",
+                                color: "#008AC7",
+                              }}
+                            >
+                              {showAll
+                                ? "Show fewer addresses"
+                                : `View all ${shippingAddress.addresses.length} addresses`}
+                            </button>
+                          )}
+                        </div>
+                      ))}
                     </>
                   ) : (
                     <p>No delivery addresses available.</p>
@@ -461,26 +555,11 @@ const Page = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="paymentMethod"
-                      id="cod"
-                      onChange={() => handlePaymentSelect("Cash on Delivery")}
-                      checked={paymentMethod === "Cash on Delivery"}
-                    />
-                    <label className="form-check-label" htmlFor="cod">
-                      Cash on Delivery
-                    </label>
 
-                    <br />
-
-                    <button className="saveanddelivery m-3" type="button">
-                      CONFIRM ORDER
-                    </button>
-                  </div>
-                  {/* Add more payment options if needed */}
+                  <OrderComponent
+                    selectedAddress={selectedAddress}
+                    paymentMethod={paymentMethod}
+                  />
                 </div>
               </div>
             </div>
@@ -488,7 +567,7 @@ const Page = () => {
         </Col>
 
         {/* Sidebar Summary */}
-        <Col md={4}>
+        <Col xl={4}>
           <div className="customPriceCard">
             <h5 className="fw-bold text-start" style={{ color: "#878787" }}>
               Order Summary

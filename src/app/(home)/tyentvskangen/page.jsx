@@ -65,7 +65,7 @@ const page = () => {
 
       <div className="container">
         <br />
-        <div className="custom-card">
+        <div className="custom-card"  data-aos="fade-up">
           <p className="p-2">
             <b style={{ color: "#008AC7" }}>Tyent</b> and <b>Enagic Kangen</b>{" "}
             are leading companies in the medical-grade water ionizer industry,
@@ -87,11 +87,11 @@ const page = () => {
          <div className="section-spacing">
 
 
-        <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
+        <p data-aos="fade-down" style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
           Detailed Comparison
         </p>
-        <p
-          className="text-center"
+        <p data-aos="zoom-in"
+          className="text-center" 
           style={{
             marginTop: "-20px",
             fontWeight: 600,
@@ -112,10 +112,10 @@ const page = () => {
         <br />
         <br />
 
-        <h2 style={{ color: "#008AC7" }}>
+        <h2 style={{ color: "#008AC7" }}  data-aos="fade-right">
           <b>1. Electrodes/Plates</b>
         </h2>
-        <p style={{ fontSize: "14px" }}>
+        <p  data-aos="fade-up">
           Electrodes, or plates, are the heart of a water ionizer and play a
           critical role in the ionization process. Electrodes, or plates, are
           essential to a water ionizer's performance, driving the electrolysis
@@ -128,7 +128,7 @@ const page = () => {
         </p>
         <Row className="m-2">
           <Col
-            md={6}
+            md={6} data-aos="flip-left"
             style={{
               backgroundColor: "#008AC7",
               color: "#FFF",
@@ -152,6 +152,7 @@ const page = () => {
                 style={{
                   textDecoration: "underline",
                   textDecorationThickness: "4px",
+                  lineHeight:'40px',
                   textUnderlineOffset: "12px",
                 }}
               >
@@ -176,12 +177,13 @@ const page = () => {
           </Col>
           <Col
             md={6}
+            data-aos="flip-right"
             style={{
               backgroundColor: "#f2f2f2",
               padding: "30px",
-              position: "relative",
             }}
           >
+          
             <div
               className="d-flex justify-content-center align-items-center"
               style={{ width: "60%", height: "auto", margin: "0 auto" }}
@@ -197,6 +199,7 @@ const page = () => {
               <h4
                 style={{
                   textDecoration: "underline",
+                  lineHeight:'40px',
                   textDecorationThickness: "4px",
                   textUnderlineOffset: "12px",
                 }}
@@ -213,7 +216,7 @@ const page = () => {
                 plates come with only a 5-year warranty, offering less longevity
                 compared to more advanced technologies.
               </p>
-              <b style={{ position: "absolute", bottom: 25, left: 22 }}>
+              <b>
                 Strength - Less surface area - Less anti antioxidants = Solid
                 plates.{" "}
               </b>
@@ -225,10 +228,10 @@ const page = () => {
         </div>
 
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }}>
+        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
           <b>2. Power supply</b>
         </h2>
-        <p style={{ fontSize: "14px" }}>
+        <p data-aos="fade-up">
           The power supply is crucial for producing accurate pH levels in water
           ionizers.It ensures consistent and reliable electrolysis, which
           directly impacts the quality of ionized water, including pH precision
@@ -236,7 +239,7 @@ const page = () => {
         </p>
         <Row className="m-2">
           <Col
-            md={6}
+            md={6} data-aos="flip-left"
             style={{
               backgroundColor: "#008AC7",
               color: "#FFF",
@@ -248,6 +251,7 @@ const page = () => {
                 style={{
                   textDecoration: "underline",
                   textDecorationThickness: "4px",
+                  lineHeight:'40px',
                   textUnderlineOffset: "12px",
                 }}
               >
@@ -279,12 +283,13 @@ const page = () => {
               </p>
             </div>
           </Col>
-          <Col md={6} style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
+          <Col md={6} data-aos="flip-right" style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
             <div>
               <h4
                 style={{
                   textDecoration: "underline",
                   textDecorationThickness: "4px",
+                  lineHeight:'40px',
                   textUnderlineOffset: "12px",
                 }}
               >
@@ -322,10 +327,10 @@ const page = () => {
 
         
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }}>
+        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
           <b>3. Replacement Filters</b>
         </h2>
-        <p style={{ fontSize: "14px" }}>
+        <p data-aos="fade-up" style={{ fontSize: "14px", }}>
           Replacement filters play’s a crucial role in water ionizers, ensuring
           that the water you drink is not only ionized but also free from
           harmful contaminants. The primary function of filters in a water
@@ -336,7 +341,7 @@ const page = () => {
         </p>
         <Row className="m-2">
           <Col
-            md={6}
+            md={6} data-aos="flip-left"
             style={{
               backgroundColor: "#008AC7",
               color: "#FFF",
@@ -348,6 +353,7 @@ const page = () => {
                 style={{
                   textDecoration: "underline",
                   textDecorationThickness: "4px",
+                  lineHeight:'40px',
                   textUnderlineOffset: "12px",
                 }}
               >
@@ -386,6 +392,7 @@ const page = () => {
           </Col>
           <Col
             md={6}
+            data-aos="flip-right"
             style={{
               backgroundColor: "#f2f2f2",
               padding: "30px",
@@ -397,6 +404,7 @@ const page = () => {
                 style={{
                   textDecoration: "underline",
                   textDecorationThickness: "4px",
+                  lineHeight:'40px',
                   textUnderlineOffset: "12px",
                 }}
               >
@@ -422,7 +430,7 @@ const page = () => {
                 heavy metals, making it less efficient than Tyent's
                 ultra-filtration.
               </p>
-              <div style={{ position: "absolute", bottom: 25, left: 22 }}>
+              <div>
                 <p>
                   <b>Chlorine removal: 95%</b>
                 </p>
@@ -440,14 +448,14 @@ const page = () => {
         
 
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }}>
+        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
           <b>4. Production of Strong Alkaline water & Strong Acidic water</b>
         </h2>
 
         <div style={{ width: "80%", height: "auto", padding:'20px', margin: "0 auto" }}>
           <Image src={phscale} alt="phScale" layout="responsive" priority />
         </div>
-        <p style={{ fontSize: "14px" }}>
+        <p data-aos="fade-up">
           Strong alkaline water (11.5 pH) and strong acidic water (2.5 pH) offer
           essential benefits for various uses. Strong alkaline water is
           excellent for cleaning produce, removing pesticides, and neutralizing
@@ -463,7 +471,7 @@ const page = () => {
 
         <Row className="m-2">
           <Col
-            md={6}
+            md={6} data-aos="flip-left"
             style={{
               backgroundColor: "#008AC7",
               color: "#FFF",
@@ -486,7 +494,7 @@ const page = () => {
               </p>
             </div>
           </Col>
-          <Col md={6} style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
+          <Col data-aos="flip-right" md={6} style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
             <div>
               <p>
                 Enagic Kangen ionizers require a chemical enhancer to produce
@@ -511,11 +519,11 @@ const page = () => {
 
         
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }}>
+        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
           <b>5. Reasonable cost & Doorstep service:</b>
         </h2>
 
-        <p style={{ fontSize: "14px" }}>
+        <p data-aos="fade-up">
           Price & doorstep service plays a crucial role in selecting a water
           ionizer, affecting both the upfront cost and long-term value.
           Higher-priced models typically offer advanced features like durable
@@ -529,7 +537,7 @@ const page = () => {
 
         <Row className="m-2">
           <Col
-            md={6}
+            md={6} data-aos="flip-left"
             style={{
               backgroundColor: "#008AC7",
               color: "#FFF",
@@ -565,7 +573,7 @@ const page = () => {
               </p>
             </div>
           </Col>
-          <Col md={6} style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
+          <Col data-aos="flip-right" md={6} style={{ backgroundColor: "#f2f2f2", padding: "30px" }}>
             <div
               className="d-flex justify-content-center align-items-center"
               style={{ width: "60%", height: "auto", margin: "0 auto" }}
@@ -617,6 +625,8 @@ const page = () => {
             <Col
               xs={12}
               md={6}
+
+              data-aos="zoom-in"
               key={index}
               className="d-flex align-items-center justify-content-center text-center"
             >
