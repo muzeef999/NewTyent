@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import React from 'react'
-import smps from '@/asserts/smps.png'
 import { Col, Row } from 'react-bootstrap';
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 import { SlEnergy } from "react-icons/sl";
@@ -13,7 +12,7 @@ import smpsplus from "@/asserts/smps.png"
 
 
 
-const controls = [
+  const controls = [
     {
       title: "Advanced Power Control",
       content:
@@ -103,10 +102,9 @@ const controls = [
 
   const TransformerPower = ({ title, content }) => {
     return (
-      <div
+      <div data-aos="fade-up"
         className="d-flex justify-content-center align-items-center"
-      >
-        
+      >     
         <div className="ml-4 align-items-center hover-effect" style={{cursor:'pointer'}}>
           <br/>
           <br/>
@@ -130,7 +128,7 @@ const controls = [
   
 const Controls = ({ title, content }) => {
     return (
-      <div
+      <div data-aos="zoom-in"
         style={{ backgroundColor: "#e9f4fb", height:'270px', borderRadius:'20px' }}
         className="d-flex justify-content-center align-items-center"
       >
@@ -162,7 +160,7 @@ const page = () => {
     <div>
     <Header {...headerData} />
 
-    <div className='container'>
+    <div className='container'  data-aos="fade-down">
         <h2 className='text-center'>Why Say <b style={{color:'#008AC7'}}>YES to Tyent's</b> SMPS <br/> PLUS Power Supply</h2>
         <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality water ionization. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
     </div>
@@ -179,9 +177,9 @@ const page = () => {
           ))}
         </Row>
         </div>
-        <br/>
-        <br/>
-        <div className='container'>
+       
+        <div className='container' data-aos="fade-up">
+        <div className='section-spacing'>
         <h2 className='text-center'>Why Say<b style={{color:'red'}}> No</b> to Transformer Power Supply <br/>in Water Ionizers ?</h2>
         <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality water ionization. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
         <Row className='g-2'>
@@ -202,11 +200,13 @@ const page = () => {
                   ))}
           </Col>
         </Row>
-        <br/>
-        <br/>
+        </div>
+      
+        
+        <div className='section-spacing'>
         <h2 className='text-center'>Why Say<b style={{color:'red'}}> No</b> to Standard SMPS Power <br/> Supply in Water Ionizers?</h2>
         <p className='text-center'>SMPS (Switch Mode Power Supply) is a step up from transformers, offering better energy efficiency and compact design.<br/> However, conventional SMPS still has limitations that affect water ionization.</p>
-        <Row className='g-2'>
+        <Row  data-aos="fade-up" className='g-2'>
           <Col md={6} className='d-flex justify-content-center align-items-center'> 
            <div className='m-3'>
             <h1><GoDotFill color='red'/>Drawbacks of Standard SMPS Power Supply</h1>
@@ -223,6 +223,7 @@ const page = () => {
                   ))}
           </Col>
         </Row>
+        </div>
 
         
 

@@ -151,7 +151,7 @@ const Form = () => {
   <div style={{backgroundColor:'transparent'}}>
     <div className="container">
       <div className="row">
-        <div className="col-md-6 d-flex justify-content-center align-items-center">
+        <div data-aos="fade-right" className="col-md-6  d-flex justify-content-center align-items-center">
           <div className={style.card}>
             <Image
               className={style.conimg}
@@ -161,14 +161,14 @@ const Form = () => {
             />
           </div>
         </div>
-        <div className="col-md-6  flex-column justify-content-center align-items-center">
+        <div  data-aos="fade-left" className="col-md-6  flex-column justify-content-center align-items-center">
         {!loading ? (<>
-          <h3 className={formStyle.heading}>Fill Out the Form – We'll Get in Touch</h3>
-          <h5>Start Your Journey Today!</h5>
+          <h3 data-aos="fade-up" className={formStyle.heading}>Fill Out the Form – We'll Get in Touch</h3>
+          <h5 data-aos="fade-up" >Start Your Journey Today!</h5>
           <br/>
           <form onSubmit={handleSubmit}>
             <div className="d-flex justify-content-between">
-              <div style={{ flex: "0 0 48%" }}>
+              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
                 <Input
                   type="text"
                   name="name"
@@ -179,7 +179,7 @@ const Form = () => {
                 />
                 {error.name && <div style={{ color: "red", fontSize: "0.9em" }}>{error.name}</div>}
               </div>
-              <div style={{ flex: "0 0 48%" }}>
+              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
                 <Input
                   type="email"
                   name="email"
@@ -193,7 +193,7 @@ const Form = () => {
             </div>
             <br />
             <div className="d-flex justify-content-between">
-              <div style={{ flex: "0 0 48%" }}>
+              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
                 <Input
                   type="text"
                   name="number"
@@ -204,7 +204,7 @@ const Form = () => {
                 />
                 {error.number && <div style={{ color: "red", fontSize: "0.9em" }}>{error.number}</div>}
               </div>
-              <div style={{ flex: "0 0 48%" }}>
+              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
                 <Input
                   type="text"
                   name="location"
@@ -221,7 +221,7 @@ const Form = () => {
               <label htmlFor="message" className="form-label">
                 Message
               </label>
-              <textarea
+              <textarea data-aos="fade-right"
                 id="message"
                 name="message"
                 className={`${formStyle.textarea} form-control`}
@@ -232,7 +232,7 @@ const Form = () => {
               {error.message && <div style={{ color: "red", fontSize: "0.9em" }}>{error.message}</div>}
             </div>
             <br />
-            <Button type="submit" name="A healthier life is just one click away" />
+            <Button data-aos="fade-right" type="submit" name="A healthier life is just one click away" />
           </form>
         
         </>) :(<>

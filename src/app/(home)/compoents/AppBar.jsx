@@ -390,11 +390,11 @@ const AppBar = () => {
                           <div className="dropdown-divider"></div>
                           <li>
                             <Link
-                              href="/uce-12"
+                              href="/uce-13"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
                             >
-                              UCE-12 Plates
+                              UCE-13 Plates
                             </Link>
                           </li>
                         </ul>
@@ -402,7 +402,7 @@ const AppBar = () => {
                       <div className="dropdown-divider"></div>
                       <li>
                         <Link
-                          href="/tyent-global"
+                          href="/hybrid-h2"
                           className="dropdown-item"
                           onClick={closeOffcanvas}
                         >

@@ -157,7 +157,7 @@ const Page = () => {
       <div className="container">
         {/* Intro Section */}
         <Row>
-          <Col md={8} className="d-flex align-items-center">
+          <Col md={8} className="d-flex align-items-center" data-aos="fade-right">
           <div>
             <p>
             Experience the <b>Purest, Healthiest,</b> and <b>Safest Water</b> with Tyent’s .01 Micron Filtration. Turn your dream of drinking water that is safe, healthy, and free from contaminants into reality with Tyent’s advanced .01 Micron filtration technology. 
@@ -170,8 +170,8 @@ const Page = () => {
             </p>
             </div>
           </Col>
-          <Col md={4} className="d-flex justify-content-center align-items-center">
-          <div style={{width:'50%'}}>
+          <Col md={4}  data-aos="zoom-in" className="d-flex justify-content-center align-items-center">
+          <div style={{width:'70%'}}>
           <Image src={filter} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
           </div>
           </Col>
@@ -185,7 +185,7 @@ const Page = () => {
         {/* Water Filter Cards */}
         <Row className="d-flex flex-wrap g-3">
           {waterFilterCards.map((iconItem, index) => (
-            <Col key={index} md={index < 2 ? 6 : 4} xs={12} sm={12}>
+            <Col key={index} md={index < 2 ? 6 : 4} xs={12} sm={12}  data-aos="flip-left">
               <WaterFilterCards
                 title={iconItem.title}
                 content={iconItem.content}
