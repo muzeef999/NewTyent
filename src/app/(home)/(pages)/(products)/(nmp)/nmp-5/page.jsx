@@ -190,7 +190,7 @@ const TyentNMP5 = () => {
           <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
         </a>
       </button>
-      <div style={{ width: "100%", height: "auto", position: "relative" }}>
+      <div style={{ width: "100%", height: "auto", position: "relative", overflow:'hidden' }}>
         {/* Mobile and Tablet View */}
         <div className="d-block d-md-none">
           <Image
@@ -313,7 +313,7 @@ const TyentNMP5 = () => {
       </div>
 
       <Container>
-        <div className="section-spacing">
+        <div className="section-spacing" >
           <Row>
             <Col>
               <p
@@ -359,7 +359,7 @@ const TyentNMP5 = () => {
           </Row>
         </div>
 
-        <div className="section-spacing">
+        <div className="section-spacing" >
           <BoosttheBody Boost={Boost} />
         </div>
       </Container>

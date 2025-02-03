@@ -568,6 +568,7 @@ const Page = () => {
 
         {/* Sidebar Summary */}
         <Col xl={4}>
+        <div style={{position:'relative'}}>
           <div className="customPriceCard">
             <h5 className="fw-bold text-start" style={{ color: "#878787" }}>
               Order Summary
@@ -597,6 +598,7 @@ const Page = () => {
                 /-
               </p>
             </div>
+          </div>
           </div>
         </Col>
       </Row>

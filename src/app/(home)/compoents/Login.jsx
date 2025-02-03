@@ -11,7 +11,7 @@ import "react-phone-input-2/lib/style.css"; // Import styles for phone input
 import PhoneInput from "react-phone-input-2"; // Phone input component
 import { Spinner } from "react-bootstrap";
 
-const Login = ({ setShowLoginModal, setModalTitle  }) => {
+const Login = ({ setShowLoginModal, setModalTitle }) => {
   const [showRequestComponent, setShowRequestComponent] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState(""); // State for phone number with country code
   const [password, setPassword] = useState(""); // State for password
@@ -19,7 +19,7 @@ const Login = ({ setShowLoginModal, setModalTitle  }) => {
   const [loading, setLoading] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [showForgotPassword, setShowForgotPassword] = useState(false);
-
+  const [isOtpSent, setIsOtpSent] = useState(false);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -75,7 +75,7 @@ const Login = ({ setShowLoginModal, setModalTitle  }) => {
         <Signup />
       ) : showForgotPassword ? (
         <ForgotPassword />
-      ) :(
+      ) : (
         <>
           {alertMessage && (
             <div className="alert alert-info text-center">{alertMessage}</div>
@@ -86,19 +86,18 @@ const Login = ({ setShowLoginModal, setModalTitle  }) => {
 
           <form onSubmit={submitHandler} className="d-flex flex-column">
             <label htmlFor="phoneNumber" className="form-label">
-              Enter phone number
+              phone number
             </label>
             <PhoneInput
               id="phoneNumber"
-              inputProps={{
-                required: true,
-                placeholder: "phone Number",
-              }}
               country={"in"} // Default country
+              placeholder={"Enter your phone number"}
+              autoFormat={true}
+              countryCodeEditable={true}
               value={phoneNumber}
               onChange={(value) => setPhoneNumber("+" + value)}
               inputStyle={{
-                width: "95%",
+                width: "100%",
                 padding: "8px 14px",
                 borderRadius: "8px",
                 boxSizing: "border-box",
@@ -118,7 +117,7 @@ const Login = ({ setShowLoginModal, setModalTitle  }) => {
 
             <div className="text-center" style={{ marginTop: "20px" }}>
               <p
-                 style={{
+                style={{
                   textAlign: "right",
                   margin: "10px 0",
                   color: "#008AC7",
@@ -129,7 +128,7 @@ const Login = ({ setShowLoginModal, setModalTitle  }) => {
                 Forgot Password ?
               </p>
             </div>
-           
+
             <Button
               type="submit"
               name={

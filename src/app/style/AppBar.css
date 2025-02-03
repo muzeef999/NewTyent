@@ -685,11 +685,15 @@ background-color: transparent;
 }
 
 .custom-phone-input{
-  caret-color: #008ac7 !important; /* Ensure cursor color is applied */
+  
+    caret-color: #008ac7 !important; /* Ensure cursor color is applied */
 }
-.custom-phone-input::placeholder {
-  color: gray !important;
-  opacity: 1 !important;
+.react-tel-input .flag-dropdown {
+    border-radius: 8px 0px 0px 8px !important;
+
+}
+.react-tel-input .form-control {
+padding-left: 48px !important;
 }
 
 
@@ -708,6 +712,13 @@ background-color: transparent;
   }
 }
 
+.floating {
+   position: fixed; /* Fixed position to stay at bottom-right */
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+}
+
 /* Styles for the button */
 .floating-button {
   padding: 10px;
@@ -717,9 +728,6 @@ background-color: transparent;
   height: 60px;
   border: none;
   border-radius: 50%; /* Circular shape */
-  position: fixed; /* Fixed position to stay at bottom-right */
-  bottom: 2rem;
-  right: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;

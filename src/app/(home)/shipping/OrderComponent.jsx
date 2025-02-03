@@ -69,9 +69,9 @@ const OrderComponent = ({ selectedAddress }) => {
         prefill: {
           name: user.name,
           email: user.email,
-          contact: "+919959456647",
+          contact: user.phoneNumber,
         },
-        theme: { color: "#3399cc" },
+        theme: { color: "#008ac7" },
       };
 
       const rzp = new window.Razorpay(options);
@@ -85,8 +85,9 @@ const OrderComponent = ({ selectedAddress }) => {
 
   return (
     <div className="order-section">
-      <button 
-        className="btn btn-primary" 
+      <button
+      style={{backgroundColor:'#008ac7', color:'#FFF'}} 
+        className="btn" 
         onClick={placeOrder} 
         disabled={isPlacingOrder}
       >

@@ -151,12 +151,12 @@ const Signup = () => {
             inputProps={{
               required: true,
               placeholder:'phone Number'
-            }}
+            }} 
             country={"in"}
             value={form.phoneNumber}
             onChange={(value) => setForm({ ...form, phoneNumber: "+"+value })}
             inputStyle={{
-              width: "95%",
+              width: "100%",
               padding: "8px 14px",
               borderRadius: "8px",
               boxSizing: "border-box",

@@ -1,20 +1,33 @@
 "use client";
+
 import { Provider } from "react-redux";
 import { SessionProvider } from "next-auth/react";
 import { store } from "@/app/Redux/store";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Footer from "../compoents/Footer";
 import AppBar from "../compoents/AppBar";
 import Form from "../compoents/Form/Form";
 import { IoIosCall } from "react-icons/io";
+import { MdOutlineMessage } from "react-icons/md";
+import { Modal, Button } from "react-bootstrap";
+import '@/app/style/Animation.css'; // Import the animation CSS
+import FormOnly from "../compoents/Form/FormOnly";
 
 export default function ClientComponent({ children, session }) {
   const pathname = usePathname();
-  // Pages where Navbar and Footer are excluded
   const noLayoutPages = ["/shipping"];
   const shouldExcludeLayout = noLayoutPages.includes(pathname);
+  
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState("");
+  const [buttonRef, setButtonRef] = useState(null); // Store button reference
+
+  const handleShowModal = (content, event) => {
+    setModalContent(content);
+    setShowModal(true);
+  };
 
   useEffect(() => {
     Aos.init({
@@ -25,13 +38,12 @@ export default function ClientComponent({ children, session }) {
   }, []);
 
   const handleCallClick = () => {
-    window.location.href = "tel:+919182414181"; // Replace with the phone number you want to dial
+    window.location.href = "tel:+919182414181";
   };
 
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
-        {/* <SvgBackground /> */}
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>
         <div className="section-spacing">
@@ -39,14 +51,61 @@ export default function ClientComponent({ children, session }) {
         </div>
         <Footer />
 
-        <button
-         className="floating-button" // Apply the CSS class
-         title="Click to call" // Accessibility improvement
-         onClick={handleCallClick} // Trigger phone call on click
+        {/* Floating Buttons */}
+        <center>
+          <div
+            className="floating d-flex justify-content-between align-items-center"
+            style={{ width: "100%", paddingLeft: "2rem", paddingRight: "2rem" }}
+          >
+            <button
+              className="floating-button"
+              title="Click to message"
+              onClick={(e) => handleShowModal("This is a messaging modal.", e)}
+              ref={setButtonRef} // Attach button ref for modal placement
+            >
+              <MdOutlineMessage size={30} />
+            </button>
 
-        >
-          <IoIosCall size={30} /> {/* Adjusted icon size for better fit */}
-        </button>
+            <button
+              className="floating-button"
+              title="Click to call"
+              onClick={handleCallClick}
+            >
+              <IoIosCall size={30} />
+            </button>
+          </div>
+        </center>
+
+        {/* Modal Animation */}
+        {showModal && buttonRef && (
+          <div
+            className="modal-container"
+            style={{
+              position: "fixed",  // Fixed position
+              bottom: "0",         // Move to the bottom-left
+              left: "0",   
+              transform: "translate(0, 0)", // No transform needed for left-bottom
+              zIndex: 9999,        // Keep it on top of other content
+
+              transition: "all 0.3s ease-out",
+            }}
+          >
+            <Modal
+              show={showModal}
+              onHide={() => setShowModal(false)}
+              centered
+              className="animate-modal"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title>Form</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <FormOnly />
+              </Modal.Body>
+              
+            </Modal>
+          </div>
+        )}
       </Provider>
     </SessionProvider>
   );

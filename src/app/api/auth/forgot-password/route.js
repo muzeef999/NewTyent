@@ -1,4 +1,5 @@
 import connect from "@/app/lib/mongoDB";
+import { sendOtpToPhone } from "@/app/lib/otpService";
 import User from "@/models/User";
 
 // Forgot Password API (POST request)
