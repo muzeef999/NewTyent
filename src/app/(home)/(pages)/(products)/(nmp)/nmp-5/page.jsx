@@ -29,7 +29,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxDownload } from "react-icons/rx";
-import Humanbody1 from "@/asserts/Humanbody1.png"
+import Humanbody1 from "@/asserts/Humanbody1.png";
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -178,17 +178,19 @@ const TyentNMP5 = () => {
   };
 
   return (
-    <div style={{width:'100% !important', overflow:'hidden !important'}}>
-      
+    <div style={{ width: "100% !important", overflow: "hidden !important" }}>
       <button className={`fixed-vertical-button`}>
-           
-      <a href={"/public/assets/Tyent New catalog.pdf"}  style={{textDecoration:'none', color:'#FFF'}} download className="download-link">
-    Download Brochure&nbsp;{" "}
-    <RxDownload size={20} style={{ transform: 'rotate(180deg)' }} />
-  </a>
-         </button>
+        <a
+          href={"/public/assets/Tyent New catalog.pdf"}
+          style={{ textDecoration: "none", color: "#FFF" }}
+          download
+          className="download-link"
+        >
+          Download Brochure&nbsp;{" "}
+          <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
+        </a>
+      </button>
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
-
         {/* Mobile and Tablet View */}
         <div className="d-block d-md-none">
           <Image
@@ -316,7 +318,11 @@ const TyentNMP5 = () => {
             <Col>
               <p
                 className="text-start"
-                style={{ color: "#008AC7", fontWeight: 400, fontSize: "clamp(14px, 1vw, 16px)"}}
+                style={{
+                  color: "#008AC7",
+                  fontWeight: 400,
+                  fontSize: "clamp(14px, 1vw, 16px)",
+                }}
               >
                 The Tyent NMP-5 is expertly crafted with advanced technology,
                 modern design, and an user friendly interface, making it the
@@ -370,7 +376,7 @@ const TyentNMP5 = () => {
               zIndex: 10, // Ensure the image is on top
             }}
           />
-            
+
           <div className={"nmp-5-desktop-one-touch-main-banner mt-2"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
@@ -401,7 +407,9 @@ const TyentNMP5 = () => {
                 {/* Benefits */}
                 <div className="mt-3">
                   <p className={"nmp-banner-benefits-touch"}>
-                    Tyent’s one-touch display with clear icons ensures effortless selection of your desired water type for convenient hydration.
+                    Tyent’s one-touch display with clear icons ensures
+                    effortless selection of your desired water type for
+                    convenient hydration.
                     <br />
                   </p>
                 </div>
@@ -474,7 +482,7 @@ const TyentNMP5 = () => {
                 </div>
               </div>
               <br />
-              <Link 
+              <Link
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
                 href={"/7-types-of-Tyent-water"}
