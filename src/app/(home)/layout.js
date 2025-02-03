@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import "@/app/style/AppBar.css"; 
 import dynamic from "next/dynamic";
 import { Poppins} from 'next/font/google'
+import Head from "next/head";
  
 const poppins = Poppins({
   weight: '400',
@@ -24,7 +25,8 @@ export default function RootLayout({ children, session }) {
 
   return (
     <html lang="en">
-      <body  className={poppins.className} style={{backgroundColor:'#f8fbfe'}}>
+     
+      <body  className={poppins.className} style={{backgroundColor:'#f8fbfe', overflowX:'hidden', width:'100%'}}>
         <ClientComponent session={session}>
           {children}
         </ClientComponent>

@@ -95,6 +95,7 @@ const Home = () => {
     <div style={{width:'100%',  overflow: "hidden", position: 'relative' }}>
       <Slider />
 
+    
       <div className="section-spacing">
         <SectionTwo />
       </div>

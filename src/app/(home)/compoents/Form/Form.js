@@ -148,7 +148,7 @@ const Form = () => {
   };
 
   return (
-  <div style={{backgroundColor:'transparent'}}>
+  <div style={{backgroundColor:'transparent', width:'100%', overflow:'hidden'}}>
     <div className="container">
       <div className="row">
         <div data-aos="fade-right" className="col-md-6  d-flex justify-content-center align-items-center">
