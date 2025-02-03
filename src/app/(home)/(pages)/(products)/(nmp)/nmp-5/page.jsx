@@ -370,8 +370,8 @@ const TyentNMP5 = () => {
               zIndex: 10, // Ensure the image is on top
             }}
           />
-            <br/>
-          <div className={"nmp-5-desktop-one-touch-main-banner"}>
+            
+          <div className={"nmp-5-desktop-one-touch-main-banner mt-2"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
               {/* Resilience Message */}
