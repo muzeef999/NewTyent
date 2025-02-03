@@ -438,15 +438,8 @@ const TyentNMP5 = () => {
           <br />
 
             {/* NmpDispalayfinal for Desktop */}
-            <div
-              style={{
-                position: "absolute",
-                width: "12.3%", // Adjusted width for desktop
-                height: "auto",
-                top: "19%", // Fine-tuned for alignment
-                right: "13%", // Align for desktop view
-                zIndex: 0,
-              }}
+            <div className="nmp9Display" 
+           
             >
               <Display />
             </div>
