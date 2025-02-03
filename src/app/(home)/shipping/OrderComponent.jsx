@@ -1,39 +1,81 @@
 "use client";
 import React, { useState } from "react";
-import useSWR from "swr";
-import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 import { clearCart } from "@/app/Redux/cartSlice";
 
-const OrderComponent = ({ selectedAddress, paymentMethod }) => {
+const OrderComponent = ({ selectedAddress }) => {
   const { user } = useSelector((state) => state.auth);
   const { products, totalAmount, totalItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  
+
   const [isPlacingOrder, setIsPlacingOrder] = useState(false);
   const [orderResponse, setOrderResponse] = useState(null);
 
+  const loadRazorpayScript = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
+  };
+
   const placeOrder = async () => {
-    if (!user || !selectedAddress || !paymentMethod) {
-      alert("Please select an address and payment method.");
+    if (!user || !selectedAddress) {
+      alert("Please select an address.");
       return;
     }
 
     setIsPlacingOrder(true);
 
-    const orderData = {
-      userId: user.id,
-      items: products,
-      totalAmount,
-      totalItems,
-      address: selectedAddress,
-      paymentMethod,
-    };
-
     try {
-      const response = await axios.post("/api/orders", orderData);
-      setOrderResponse(response.data);
-      dispatch(clearCart()); // Clear the cart after successful order
+      const { data } = await axios.post("/api/create-order", {
+        userId: user.id,
+        products,
+        address: selectedAddress,
+      });
+
+      const res = await loadRazorpayScript();
+      if (!res) {
+        alert("Failed to load Razorpay SDK.");
+        setIsPlacingOrder(false);
+        return;
+      }
+
+      const options = {
+        key: process.env.RAZORPAY_KEY_ID,
+        amount: data.amount,
+        currency: "INR",
+        name: "Your Store",
+        description: "Order Payment",
+        order_id: data.orderId,
+        handler: async function (response) {
+          const verifyRes = await axios.post("/api/verify-payment", {
+            orderId: data.orderId,
+            paymentId: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+          });
+
+          if (verifyRes.data.success) {
+            alert("Payment successful!");
+            dispatch(clearCart());
+            setOrderResponse(verifyRes.data);
+          } else {
+            alert("Payment verification failed.");
+          }
+        },
+        prefill: {
+          name: user.name,
+          email: user.email,
+          contact: "+919959456647",
+        },
+        theme: { color: "#3399cc" },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
     } catch (error) {
       console.error("Order placement failed:", error);
     } finally {
@@ -43,37 +85,18 @@ const OrderComponent = ({ selectedAddress, paymentMethod }) => {
 
   return (
     <div className="order-section">
-      <h3>Order Summary</h3>
-      <p>Total Amount: ₹{totalAmount}</p>
-      <p>Total Items: {totalItems}</p>
-
-      <h1>
-        {selectedAddress ? (
-          <div>
-            <p>{selectedAddress.fullName}</p>
-            <p>{selectedAddress.address}</p>
-            <p>{selectedAddress.city}</p>
-            <p>{selectedAddress.postalCode}</p>
-            <p>{selectedAddress.country}</p>
-          </div>
-        ) : (
-          "No address selected"
-        )}
-      </h1>
-
       <button 
         className="btn btn-primary" 
         onClick={placeOrder} 
         disabled={isPlacingOrder}
       >
-        {isPlacingOrder ? "Placing Order..." : "Place Order"}
+        {isPlacingOrder ? "Processing..." : "Pay with Razorpay"}
       </button>
 
       {orderResponse && (
         <div className="order-confirmation">
           <h4>Order Placed Successfully!</h4>
           <p>Order ID: {orderResponse.orderId}</p>
-          <p>Estimated Delivery: {orderResponse.estimatedDelivery}</p>
         </div>
       )}
     </div>

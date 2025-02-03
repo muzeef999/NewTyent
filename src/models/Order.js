@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const OrderSchema = new mongoose.Schema({
   userId: { type: String, required: true },
@@ -7,16 +7,17 @@ const OrderSchema = new mongoose.Schema({
       productName: String,
       quantity: Number,
       price: Number,
-    },
+    }
   ],
   totalAmount: { type: Number, required: true },
   address: {
-    street: { type: String, required: true },
-    city: { type: String, required: true },
-    state: { type: String, required: true },
-    zipcode: { type: String, required: true },
+    street: String,
+    city: String,
+    state: String,
+    zipcode: String,
   },
-  status: { type: String, default: 'Pending' },
-});
+  razorpayOrderId: { type: String, required: true },
+  status: { type: String, default: "Pending" },
+}, { timestamps: true });
 
-export default mongoose.models.Order || mongoose.model('Order', OrderSchema);
+export default mongoose.models.Order || mongoose.model("Order", OrderSchema);
