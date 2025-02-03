@@ -691,3 +691,45 @@ background-color: transparent;
   color: gray !important;
   opacity: 1 !important;
 }
+
+
+/* Button.css */
+
+/* Floating animation for the button */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves the button up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Styles for the button */
+.floating-button {
+  padding: 10px;
+  background-color: #008ac7; /* Primary button color */
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  position: fixed; /* Fixed position to stay at bottom-right */
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  cursor: pointer; /* Pointer cursor for button */
+  transition: transform 0.3s ease; /* Smooth animation for scale effect */
+  animation: floating 2s ease-in-out infinite; /* Floating animation */
+}
+
+/* Hover effect to scale */
+.floating-button:hover {
+  transform: scale(1.1);
+}
