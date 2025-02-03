@@ -17,6 +17,13 @@ export async function POST(request) {
       return new Response(JSON.stringify({ error: "Phone number is required" }), { status: 400 });
     }
 
+     // Check if the phone number already exists
+     const existingUser = await User.findOne({ phoneNumber });
+     if (existingUser) {
+       return new Response(JSON.stringify({ message: "Phone number already exists, please login" }), { status: 409 });
+     }
+
+     
     // Generate OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const expiration = new Date(Date.now() + 10 * 60 * 1000); // Expires in 10 minutes

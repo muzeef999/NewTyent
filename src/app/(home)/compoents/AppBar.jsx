@@ -19,6 +19,7 @@ import Cartpage from "./Cart";
 import "@/app/style/AppBar.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 
+
 const AppBar = () => {
   const { data: session } = useSession();
   const dispatch = useDispatch();
@@ -27,6 +28,8 @@ const AppBar = () => {
 
   const userData = useSelector((state) => state.auth.user);
   const { totalItems } = useSelector((state) => state.cart);
+
+  const [modalTitle, setModalTitle] = useState("Login");
 
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
@@ -510,10 +513,10 @@ const AppBar = () => {
        
         <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
           <Modal.Header closeButton>
-            <Modal.Title>Login</Modal.Title>
+          <Modal.Title>{modalTitle}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Login setShowLoginModal={setShowLoginModal} />
+            <Login setShowLoginModal={setShowLoginModal} setModalTitle={setModalTitle}/>
           </Modal.Body>
         </Modal>
 

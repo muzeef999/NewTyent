@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import Input from "./Input/Input";
 import Button from "./Button/Button";
-import { Spinner } from "react-bootstrap"; // You can use this to show a loading spinner
+import { Spinner } from "react-bootstrap";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2";
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -11,8 +13,7 @@ const Signup = () => {
     phoneNumber: "",
     password: "",
   });
-  const [countryCode, setCountryCode] = useState("+91");
-  const [otp, setOtp] = useState(new Array(6).fill("")); // OTP as an array
+  const [otp, setOtp] = useState(new Array(6).fill(""));
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
@@ -23,7 +24,7 @@ const Signup = () => {
 
   const handleOtpChange = (value, index) => {
     const otpArray = [...otp];
-    otpArray[index] = value.slice(0, 1); // Ensure only one digit is entered
+    otpArray[index] = value.slice(0, 1);
     setOtp(otpArray);
 
     if (value && index < otp.length - 1) {
@@ -56,31 +57,29 @@ const Signup = () => {
       return;
     }
 
-    const phoneNumber = `${countryCode}${form.phoneNumber}`;
-    if (!/^\+?\d{10,15}$/.test(phoneNumber)) {
+    if (!/^\+?\d{10,15}$/.test(form.phoneNumber)) {
       setAlertMessage("Please enter a valid phone number.");
       return;
     }
 
-    const requestBody = {
-      phoneNumber: phoneNumber,
-    };
-
-    console.log("Request Body for OTP:", requestBody);
+    const requestBody = { phoneNumber: form.phoneNumber };
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/signup`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(requestBody),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/signup`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
       const data = await res.json();
       if (res.ok) {
         setIsOtpSent(true);
         setAlertMessage("OTP sent successfully!");
       } else {
-        setAlertMessage(data.error || "Failed to send OTP.");
+        setAlertMessage(data.message || data.error || "Failed to send OTP.");
       }
     } catch (err) {
       console.error("Error during OTP request:", err);
@@ -89,49 +88,50 @@ const Signup = () => {
   };
 
   const verifyOtpAndSubmit = async () => {
-    console.log("Request Body for Signup:");
-
-    const requestBody = {
-      name: form.name || "",
-      phoneNumber: `${countryCode}${form.phoneNumber}` || "",
-      password: form.password || "",
-      otp: otp.join("") || "",
-    };
-
-    console.log("Request Body for Signup:", requestBody);
-
-    if (!form.name || !form.phoneNumber || !form.password || otp.some((digit) => digit === "")) {
+    if (!form.name || !form.phoneNumber || !form.password || otp.includes("")) {
       setAlertMessage("Please fill in all fields.");
       return;
     }
 
+    const requestBody = {
+      name: form.name,
+      phoneNumber: form.phoneNumber,
+      password: form.password,
+      otp: otp.join(""),
+    };
+
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/verifyOtp`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(requestBody),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/verifyOtp`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
       const data = await res.json();
-      console.log("API Response:", res.status, data);
 
       if (res.ok) {
         setAlertMessage("Signup successful! You can now log in.");
+      } else if (data.message && data.message.includes("already registered")) {
+        setAlertMessage("Already signed up. Please log in.");
       } else {
-        setAlertMessage(data.error || "Signup failed.");
+        setAlertMessage(data.error || data.message || "Signup failed.");
       }
     } catch (err) {
-      
-      setAlertMessage("An error occurred. Please try again later." + err);
+      console.error("Verification error:", err);
+      setAlertMessage("An error occurred. Please try again later.");
     }
   };
 
   return (
     <div className="container">
-      {alertMessage && <div className="alert alert-info text-center">{alertMessage}</div>}
+      {alertMessage && (
+        <div className="alert alert-info text-center">{alertMessage}</div>
+      )}
 
       <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
-        {/* Name Field */}
         <Input
           type="text"
           name="name"
@@ -142,31 +142,30 @@ const Signup = () => {
           onChange={handleChange}
         />
 
-        {/* Phone Number Field */}
-        <div className="d-flex">
-          <select
-            className="form-select me-2"
-            style={{ maxWidth: "120px" }}
-            value={countryCode}
-            onChange={(e) => setCountryCode(e.target.value)}
-          >
-            <option value="+1">+1 (USA)</option>
-            <option value="+44">+44 (UK)</option>
-            <option value="+91">+91 (India)</option>
-            <option value="+61">+61 (Australia)</option>
-            <option value="+81">+81 (Japan)</option>
-          </select>
-          <Input
-            type="text"
-            name="phoneNumber"
-            placeholder="Enter phone number"
-            className="form-control"
+        <div>
+          <label htmlFor="phoneNumber" className="form-label">
+            Enter phone number
+          </label>
+          <PhoneInput
+            id="phoneNumber"
+            inputProps={{
+              required: true,
+              placeholder:'phone Number'
+            }}
+            country={"in"}
             value={form.phoneNumber}
-            onChange={handleChange}
+            onChange={(value) => setForm({ ...form, phoneNumber: "+"+value })}
+            inputStyle={{
+              width: "95%",
+              padding: "8px 14px",
+              borderRadius: "8px",
+              boxSizing: "border-box",
+            }}
+            inputClass="custom-phone-input"
+            enableSearch={true}
           />
         </div>
 
-        {/* OTP Field */}
         {isOtpSent && (
           <div className="form-group">
             <label>Enter OTP</label>
@@ -187,7 +186,6 @@ const Signup = () => {
           </div>
         )}
 
-        {/* Password Field */}
         <Input
           type="password"
           name="password"
@@ -197,10 +195,17 @@ const Signup = () => {
           onChange={handleChange}
         />
 
-        {/* Submit Button */}
         <Button
           type="submit"
-          name={loading ? <Spinner animation="border" size="sm" /> : isOtpSent ? "Verify OTP & Sign Up" : "Send OTP"}
+          name={
+            loading ? (
+              <Spinner animation="border" size="sm" />
+            ) : isOtpSent ? (
+              "Verify OTP & Sign Up"
+            ) : (
+              "Send OTP"
+            )
+          }
           className={`btn w-100 ${loading ? "btn-secondary" : "btn-primary"}`}
           disabled={loading}
         />

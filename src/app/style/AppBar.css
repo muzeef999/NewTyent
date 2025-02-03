@@ -683,3 +683,11 @@ background-color: transparent;
 
 
 }
+
+.custom-phone-input{
+  caret-color: #008ac7 !important; /* Ensure cursor color is applied */
+}
+.custom-phone-input::placeholder {
+  color: gray !important;
+  opacity: 1 !important;
+}

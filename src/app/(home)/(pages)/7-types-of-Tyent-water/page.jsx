@@ -45,7 +45,7 @@ const page = () => {
         "The powerful absorption of Tyent's water easily removes tough stains like coffee, soy sauce, and oil. It’s also incredibly effective at tackling stubborn toilet bowl stains, leaving surfaces clean and refreshed with minimal effort.",
     },
     {
-      image:  DishCleaning,
+      image: DishCleaning,
       title: "Dish Cleaning",
       description:
         "Save water and reduce costs with Tyent’s water. Use significantly less detergent for washing dishes, and only one-third to one-fourth of the usual water is needed for rinsing, cutting down on water bills while maintaining sparkling clean results.",
@@ -189,29 +189,34 @@ const page = () => {
         "Tyent's 2.5 pH water can be used as an effective sanitizer. Its strong acidic properties make it highly efficient at killing bacteria, viruses, and other harmful pathogens",
     },
   ];
+
   return (
     <div>
       <Container>
-        <p className="text-center">
-          The human body is over 70% water, making quality hydration essential
-          for vitality and longevity. Tyent water ionizers offer 7 <br />
-          unique and safe water levels, including hydrogen-rich water, for
-          improved health, enhanced beauty, effective cleaning, and <br />{" "}
-          better-tasting cuisine. Experience the transformative power of pure,
-          ionized water with Tyent.
-        </p>
+        <div className="section-spacing">
+          <p className="text-center" data-aos="fade-up">
+            The human body is over 70% water, making quality hydration essential
+            for vitality and longevity. Tyent water ionizers offer 7 <br />
+            unique and safe water levels, including hydrogen-rich water, for
+            improved health, enhanced beauty, effective cleaning, and <br />{" "}
+            better-tasting cuisine. Experience the transformative power of pure,
+            ionized water with Tyent.
+          </p>
+        </div>
 
         <div className="section-spacing">
           <div>
-            <h2 className="text-center m-3">
+            <h2 className="text-center" data-aos="fade-up">
               <b>
                 Turbo
                 <span style={{ color: "#FF0000" }}>(11.5 pH)</span>
               </b>
             </h2>
-            <h4 className="text-center m-0">Strong alkaline water</h4>
+            <h4 className="text-center m-0" data-aos="fade-up">
+              Strong alkaline water
+            </h4>
 
-            <h2 className="text-center">
+            <h2 className="text-center" data-aos="fade-up">
               <FaDotCircle color="#FE0000" />
               &nbsp;Strictly{" "}
               <span style={{ color: "#FE0000" }}>
@@ -221,16 +226,19 @@ const page = () => {
             </h2>
 
             <br />
-            <p className="text-center">
+            <p className="text-center" data-aos="fade-up">
               A powerful cleaning agent for removing pesticides, insecticides,
               wax, and color coatings from fruits, vegetables, and <br /> leafy
               greens as well as removing stains from dishes.
             </p>
             <br />
-            <Row className="g-5 d-flex justify-content-center align-items-center">
+            <Row
+              data-aos="fade-up"
+              className="g-5 d-flex justify-content-center align-items-center"
+            >
               {Turbo.map((item, index) => (
                 <Col md={4} key={index}>
-                  <div className="box-shadow">
+                  <div className="box-shadow" data-aos="zoom-in">
                     <div style={{ width: "100%", height: "auto" }}>
                       <Image
                         src={item.image}
@@ -240,7 +248,7 @@ const page = () => {
                       />
                     </div>
                     <div className="p-3">
-                      <h2>{item.title}</h2>
+                      <h2 className="my-3">{item.title}</h2>
                       <p>{item.description}</p>
                     </div>
                   </div>
@@ -252,31 +260,36 @@ const page = () => {
 
         <div className="section-spacing">
           <div>
-            <h2 className="text-center m-3">
+            <h2 data-aos="fade-up" className="text-center m-3">
               <b style={{ color: "#008AC7" }}>Daily Drinking Alkaline water</b>
             </h2>
-            <h4 className="text-center m-0">
+            <h4 className="text-center m-0" data-aos="fade-up">
               Do not drink during food and medicine
             </h4>
             <br />
-            <p className="text-center">
+            <p className="text-center" data-aos="fade-up">
               Use this as your regular drinking water after 45 days of
               installation. Ensure you have used 8.5 pH and 9.0 pH <br /> water
               for at least 30 days before transitioning to this level.
             </p>
             <br />
-            <h1 className="text-center">
+            <h1 className="text-center" data-aos="fade-up">
               <b>How to Use ?</b>
             </h1>
             <br />
 
-            <Row className="g-5 d-flex justify-content-center align-items-center">
+            <Row
+              data-aos="fade-up"
+              className="g-5 d-flex justify-content-center align-items-center"
+            >
               {Level.map((item, index) => (
-                <Col md={4} key={index}>
+                <Col md={4} data-aos="zoom-in" key={index}>
                   <div className="box-shadow-alk">
                     <div className="position-relative">
-                      <h3>{item.mainHeading}</h3>
-                      <p>{item.title}</p>
+                      <h3 className="my-3">{item.mainHeading}</h3>
+                      <p>
+                        <b>{item.title}</b>
+                      </p>
                       <h2
                         className="big-number positionvalue"
                         style={{
@@ -286,7 +299,7 @@ const page = () => {
                           top: "-100%",
                         }}
                       >
-                        {index +1}
+                        {index + 1}
                       </h2>{" "}
                       {/* Corrected class name */}
                     </div>
@@ -297,10 +310,14 @@ const page = () => {
                 </Col>
               ))}
             </Row>
+            <br />
 
-            <Row className="g-5 d-flex justify-content-center align-items-center">
+            <Row
+              ata-aos="fade-up"
+              className="g-5 d-flex justify-content-center align-items-center"
+            >
               {Drinking.map((item, index) => (
-                <Col md={4} key={index}>
+                <Col md={4} data-aos="zoom-in" key={index}>
                   <div className="box-shadow">
                     <div style={{ width: "100%", height: "auto" }}>
                       <Image
@@ -323,26 +340,29 @@ const page = () => {
 
         <div className="section-spacing">
           <div>
-            <h3 className="text-center m-3">
+            <h3 data-aos="fade-up" className="text-center m-3">
               <b>
                 {" "}
                 <span style={{ color: "#00FD12" }}>H20</span> water{" "}
               </b>
             </h3>
-            <h4 className="text-center m-0">
+            <h4 data-aos="fade-up" className="text-center m-0">
               H20 water Purified water or Neutral Water{" "}
             </h4>
             <br />
-            <p className="text-center">
+            <p data-aos="fade-up" className="text-center">
               Neutral water, perfect for drinking during meals, taking
               medication, and preparing baby formula for infants. It provides{" "}
               <br /> a safe and gentle option for daily hydration and
               nourishment.
             </p>
             <br />
-            <Row className="g-5 d-flex justify-content-center align-items-center">
+            <Row
+              data-aos="fade-up"
+              className="g-5 d-flex justify-content-center align-items-center"
+            >
               {H20.map((item, index) => (
-                <Col md={4} key={index}>
+                <Col md={4} data-aos="zoom-in" key={index}>
                   <div className="box-shadow">
                     <div style={{ width: "100%", height: "auto" }}>
                       <Image
@@ -362,18 +382,21 @@ const page = () => {
             </Row>
           </div>
         </div>
+
         <div className="section-spacing">
           <div>
-            <h2 className="text-center m-3">
+            <h2 data-aos="fade-up" className="text-center m-3">
               <b>
                 {" "}
                 ACD level <span style={{ color: "#FEFE00" }}>1</span> & ACD
                 level <span style={{ color: "#FFA500" }}>2</span>
               </b>
             </h2>
-            <h4 className="text-center m-0">Not for drinking</h4>
+            <h4 data-aos="fade-up" className="text-center m-0">
+              Not for drinking
+            </h4>
             <br />
-            <p className="text-center">
+            <p data-aos="fade-up" className="text-center">
               Tyent’s Strong Acidic Water is a versatile solution for oral care,
               managing severe skin conditions, and thorough cleaning. <br /> Its
               potent cleansing properties make it perfect for sanitizing kitchen
@@ -381,9 +404,12 @@ const page = () => {
               hygienic environment and preventing cross-contamination.
             </p>
             <br />
-            <Row className="g-5 d-flex justify-content-center align-items-center">
+            <Row
+              data-aos="fade-up"
+              className="g-5 d-flex justify-content-center align-items-center"
+            >
               {ACD.map((item, index) => (
-                <Col md={4} key={index}>
+                <Col md={4} data-aos="zoom-in" key={index}>
                   <div className="box-shadow">
                     <div style={{ width: "100%", height: "auto" }}>
                       <Image
@@ -403,17 +429,24 @@ const page = () => {
             </Row>
           </div>
         </div>
+
         <div className="section-spacing">
           <div>
-            <h2 className="text-center m-2" style={{ color: "red" }}>
+            <h2
+              data-aos="fade-up"
+              className="text-center m-2"
+              style={{ color: "red" }}
+            >
               <b>2.5 PH</b>
             </h2>
-            <h2 className="text-center m-3">
+            <h2 data-aos="fade-up" className="text-center m-3">
               <b>strong acidic water</b>
             </h2>
-            <h4 className="text-center m-0">Not for drinking</h4>
+            <h4 data-aos="fade-up" className="text-center m-0">
+              Not for drinking
+            </h4>
             <br />
-            <p className="text-center">
+            <p data-aos="fade-up" className="text-center">
               Tyent’s Strong Acidic Water is a versatile solution for oral care,
               managing severe skin conditions, and thorough cleaning. <br /> Its
               potent cleansing properties make it perfect for sanitizing kitchen
@@ -421,9 +454,12 @@ const page = () => {
               hygienic environment and preventing cross-contamination.
             </p>
             <br />
-            <Row className="g-5 d-flex justify-content-center align-items-center">
+            <Row
+              data-aos="fade-up"
+              className="g-5 d-flex justify-content-center align-items-center"
+            >
               {strongAcidicWater.map((item, index) => (
-                <Col md={4} key={index}>
+                <Col md={4} data-aos="zoom-in" key={index}>
                   <div className="box-shadow">
                     <div style={{ width: "100%", height: "auto" }}>
                       <Image
