@@ -178,7 +178,7 @@ const TyentNMP5 = () => {
   };
 
   return (
-    <div style={{overflow:'hidden'}}>
+    <div style={{width:'100% !important', overflow:'hidden !important'}}>
       
       <button className={`fixed-vertical-button`}>
            
@@ -474,7 +474,7 @@ const TyentNMP5 = () => {
                 </div>
               </div>
               <br />
-              <Link
+              <Link 
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
                 href={"/7-types-of-Tyent-water"}

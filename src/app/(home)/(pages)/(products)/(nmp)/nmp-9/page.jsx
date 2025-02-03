@@ -10,7 +10,7 @@ import rtr from "@/asserts/nmp/rtr.webp";
 import turbo from "@/asserts/nmp/turbo.webp";
 import ECOMode from "@/asserts/nmp/ECO-Mode.webp";
 import display from "@/asserts/nmp/display.webp";
-import Plates from "@/asserts/nmp/Plates.webp";
+import Plates from "@/asserts/nmp/Plates.webp"; 
 import jogDail from "@/asserts/nmp/jogDail.png";
 import SMPS from "@/asserts/nmp/SMPS.webp";
 import filterIndication from "@/asserts/nmp/filterIndication.webp";
@@ -180,7 +180,7 @@ const TyentNMP5 = () => {
   };
 
   return (
-    <div>
+    <div style={{width:'100% !important', overflow:'hidden !important'}}>
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
         {/* Mobile and Tablet View */}
         <div className="d-block d-md-none">
