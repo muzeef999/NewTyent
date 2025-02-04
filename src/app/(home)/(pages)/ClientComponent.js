@@ -14,6 +14,7 @@ import { MdOutlineMessage } from "react-icons/md";
 import { Modal, Button } from "react-bootstrap";
 import '@/app/style/Animation.css'; // Import the animation CSS
 import FormOnly from "../compoents/Form/FormOnly";
+import { Toaster } from "sonner";
 
 export default function ClientComponent({ children, session }) {
   const pathname = usePathname();
@@ -43,6 +44,7 @@ export default function ClientComponent({ children, session }) {
 
   return (
     <SessionProvider session={session}>
+       <Toaster richColors position="top-right" />
       <Provider store={store}>
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>

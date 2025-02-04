@@ -5,8 +5,10 @@ import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import { Spinner } from "react-bootstrap";
 import Button from "./Button/Button";
+import { IoMdClose } from "react-icons/io";
+import { toast } from "sonner";
 
-const ForgotPassword = ({ setShowLogin }) => {
+const ForgotPassword = ({ setShowLoginModal }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [newPassword, setNewPassword] = useState("");
@@ -30,7 +32,7 @@ const ForgotPassword = ({ setShowLogin }) => {
   // Step 1: Request OTP
   const requestOtp = async () => {
     if (!phoneNumber) {
-      setMessage("Please enter a valid phone number.");
+      toast.error("Please enter a valid phone number.")
       return;
     }
 
@@ -47,12 +49,12 @@ const ForgotPassword = ({ setShowLogin }) => {
       const data = await res.json();
       if (res.ok) {
         setStep(2);
-        setMessage("OTP sent to your phone.");
+        toast.success("OTP sent to your phone.")
       } else {
-        setMessage(data.error || "Failed to send OTP.");
+        toast.error(data.error || "Failed to send OTP.")
       }
     } catch (error) {
-      setMessage("Network error. Please try again.");
+      toast.error("Network error. Please try again.")
     }
 
     setLoading(false);
@@ -61,7 +63,7 @@ const ForgotPassword = ({ setShowLogin }) => {
   // Step 2: Verify OTP and Reset Password
   const resetPassword = async () => {
     if (otp.includes("") || !newPassword) {
-      setMessage("Please enter OTP and new password.");
+      toast.error("Please enter OTP and new password.")
       return;
     }
 
@@ -77,21 +79,30 @@ const ForgotPassword = ({ setShowLogin }) => {
 
       const data = await res.json();
       if (res.ok) {
-        setMessage("Password updated! Redirecting...");
-        setTimeout(() => setShowLogin(true), 2000);
-      } else {
-        setMessage(data.error || "Failed to reset password.");
+        toast.success("Password reset successfully.")
+        setShowLoginModal(false);
+             } else {
+              toast.error(data.error || "Failed to reset password.")
       }
     } catch (error) {
-      setMessage("Network error. Please try again.");
+      toast.error("Network error. Please try again.");
+  
     }
 
     setLoading(false);
   };
 
+  const closeModal = () => {
+    setShowLoginModal(false); // Close the modal
+  };
+
   return (
     <div className="forgot-password-container">
-      {message && <div className="alert alert-info text-center">{message}</div>}
+      <div className="d-flex justify-content-between align-items-center">
+        <h2 className="m-0">Forgot password</h2>
+        <IoMdClose size={25} onClick={closeModal} style={{ cursor: "pointer" }} /> {/* Close the modal */}
+      </div>
+      <hr />
 
       {step === 1 ? (
         <form
@@ -102,26 +113,26 @@ const ForgotPassword = ({ setShowLogin }) => {
           className="d-flex flex-column gap-4"
         >
           <div>
-          <label htmlFor="phoneNumber" className="form-label">
-            Enter phone number
-          </label>
-          <PhoneInput
-            id="phoneNumber"
-            inputProps={{ required: true, placeholder: "Phone Number" }}
-            country="in"
-            value={phoneNumber}
-            onChange={(value) => setPhoneNumber(value.startsWith("+") ? value : "+" + value)}
-            inputStyle={{
-              width: "100%",
-              padding: "10px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              boxSizing: "border-box",
-            }}
-            enableSearch={true}
-          />
+            <label htmlFor="phoneNumber" className="form-label">
+              Enter phone number
+            </label>
+            <PhoneInput
+              id="phoneNumber"
+              inputProps={{ required: true, placeholder: "Phone Number" }}
+              country="in"
+              value={phoneNumber}
+              onChange={(value) => setPhoneNumber(value.startsWith("+") ? value : "+" + value)}
+              inputStyle={{
+                width: "100%",
+                padding: "10px",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                boxSizing: "border-box",
+              }}
+              enableSearch={true}
+            />
           </div>
-          <Button type="submit" name={loading ? <Spinner size="sm" /> : "Send OTP"} disabled={loading} />
+          <Button type="submit" name={loading ? (<><Spinner size="sm" /> &nbsp; {"Send OTP"} </>) : "Send OTP"} disabled={loading} />
         </form>
       ) : (
         <form
@@ -156,7 +167,7 @@ const ForgotPassword = ({ setShowLogin }) => {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
-          <Button type="submit" name={loading ? <Spinner size="sm" /> : "Reset Password"} disabled={loading} />
+          <Button type="submit" name={loading ? (<><Spinner size="sm" /> &nbsp; {"Reset Password"} </>)  : "Reset Password"} disabled={loading} />
         </form>
       )}
     </div>

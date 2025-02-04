@@ -19,7 +19,6 @@ import Cartpage from "./Cart";
 import "@/app/style/AppBar.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 
-
 const AppBar = () => {
   const { data: session } = useSession();
   const dispatch = useDispatch();
@@ -28,15 +27,12 @@ const AppBar = () => {
 
   const userData = useSelector((state) => state.auth.user);
   const { totalItems } = useSelector((state) => state.cart);
-
-  const [modalTitle, setModalTitle] = useState("Login");
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [offcanvasOpen, setOffcanvasOpen] = useState(false);
-
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
@@ -509,18 +505,13 @@ const AppBar = () => {
           </Offcanvas.Body>
         </Offcanvas>
 
- {/* Login Modal */}
-       
+        {/* Login Modal */}
+
         <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
-          <Modal.Header closeButton>
-          <Modal.Title>{modalTitle}</Modal.Title>
-          </Modal.Header>
           <Modal.Body>
-            <Login setShowLoginModal={setShowLoginModal} setModalTitle={setModalTitle}/>
+            <Login setShowLoginModal={setShowLoginModal} />
           </Modal.Body>
         </Modal>
-
-       
       </div>
     </div>
   );
