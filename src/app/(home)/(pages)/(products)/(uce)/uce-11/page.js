@@ -13,7 +13,7 @@ import d4 from "@/asserts/uce/d4.png";
 import d5 from "@/asserts/uce/d5.png";
 import d6 from "@/asserts/uce/d6.png";
 import d7 from "@/asserts/uce/d7.png";
-import d8 from "@/asserts/uce/d8.png";
+import d8 from "@/asserts/uce/d8.png"; 
 import d9 from "@/asserts/uce/d9.png";
 import d10 from "@/asserts/uce/d10.png";
 import d11 from "@/asserts/uce/d11.png";

@@ -474,8 +474,7 @@ const page = () => {
                   </h2>
                   <p>
                     The H2 Button in Tyent’s H2-Hybrid water ionizer is designed
-                    for easy operation, with a jog dial that allows for a simple
-                    rotation and click action. Selecting this option produces
+                    for easy operation, with a jog dial. Selecting this option produces
                     targeted antioxidant molecular hydrogen at a neutral pH,
                     enhancing both safety and aesthetic appeal.
                   </p>

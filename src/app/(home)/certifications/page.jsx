@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import {  Col, Modal, Row } from 'react-bootstrap';
+import icon1 from '@/asserts/certifications/iso1.webp';
 import icon2 from '@/asserts/certifications/iso2.webp';
 import icon3 from '@/asserts/certifications/iso3.webp';
 import icon4 from '@/asserts/certifications/iso4.webp';
@@ -32,10 +33,11 @@ const Header = dynamic(() => import('../compoents/Header'), {
 
 // Static icon images array
 const iconImages = [
+  { src: icon1, alt: 'Icon 1' },
   { src: icon2, alt: 'Icon 2' },
   { src: icon3, alt: 'Icon 3' },
-  { src: icon4, alt: 'Icon 4' },
   { src: icon5, alt: 'Icon 5' },
+  { src: icon4, alt: 'Icon 4' },
   { src: icon6, alt: 'Icon 6' },
   { src: icon7, alt: 'Icon 7' },
   { src: icon8, alt: 'Icon 8' },
@@ -109,6 +111,7 @@ const CertificationsPage = () => {
                 : "fade-up"
             }
           >
+            <div>
             <div className="certificate-container">
               <div className="certificate-content">
                 <Image onClick={imagesrcsend} style={{cursor:'pointer'}}
@@ -121,6 +124,9 @@ const CertificationsPage = () => {
                 />
               </div>
             </div>
+            <p className='text-center mt-2' style={{color:'#008AC7'}}><b>{image.alt}</b></p>
+            </div>
+            
           </Col>
         ))}
       </Row>
