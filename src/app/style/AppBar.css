@@ -147,8 +147,6 @@ html {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-
-
 .thumb {
   display: flex;
   gap: 10px;
@@ -158,6 +156,8 @@ html {
   scroll-snap-type: x mandatory;
   width: 100%;
   justify-content: flex-start;
+  padding: 10px; /* Add padding to avoid cutting off thumbnails */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .thumbnail, .thumbnail-none {
@@ -166,8 +166,7 @@ html {
 
 .thumbnail {
   cursor: pointer;
-  margin: 10px;
-  width: 80px; /* Thumbnail size */
+  width: 80px; 
   height: 80px;
   object-fit: cover;
   border-radius: 12px;

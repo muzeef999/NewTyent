@@ -14,8 +14,8 @@ export async function generateMetadata() {
     if (!res.ok) throw new Error("API request failed");
 
     return {
-      title: "Blog Posts",
-      description: "All the latest blog posts.",
+      title: "Tyent Blog - Latest News & Health Tips",
+      description: " Explore our blog for expert insights on alkaline water, health benefits, and water ionization technology.",
     };
   } catch (error) {
     return {

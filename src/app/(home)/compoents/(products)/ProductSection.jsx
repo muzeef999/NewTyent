@@ -95,7 +95,7 @@ const ProductSection = ({ products, specifications }) => {
 
  
   return (
-    <div>
+    <div style={{width:'100%', overflow:"hidden"}}>
       {/* Header Section */}
       <Container style={{overflowX:'hidden'}}>
       <Row className="mb-5 align-items-top justify-content-between">

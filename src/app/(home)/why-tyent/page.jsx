@@ -22,8 +22,8 @@ const FeatureCard = dynamic(() => import("../compoents/FeatureCard"), {
 });
 
 export const metadata = {
-  title: "Why Tyent",
-  description: "Discover the features of Tyent water ionizers.",
+  title: "Why Choose Tyent Water Ionizers?",
+  description: " Tyent stands out with industry-leading technology, premium filtration, and superior customer support.",
 };
 
 async function fetchData() {

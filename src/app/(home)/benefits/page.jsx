@@ -53,8 +53,8 @@ import ChronicFatigue from "@/asserts/health/ChronicFatigue.png";
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
 export const metadata = {
-  title: "Benefit Page",
-  description: "Discover the features of Tyent water ionizers.",
+  title: "Benefits of Alkaline Water - Why Choose Tyent?",
+  description: " Discover the health benefits of alkaline, hydrogen-rich water from Tyent water ionizers. Stay hydrated and energized.",
 };
 
 const icons = [

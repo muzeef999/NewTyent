@@ -10,6 +10,12 @@ import { MdOutlineTouchApp } from "react-icons/md";
 import corevalues from "@/asserts/aboutus/corevalues.png";
 import CoreStrategy from "@/asserts/aboutus/CoreStrategy.png";
 
+export const metadata = {
+  title: "Tyent Global Presence - Trusted Worldwide",
+  description: "Tyent is a globally recognized brand, delivering premium water ionizers to homes and businesses across the world.",
+};
+
+
 const KeyFactCard = ({ value, title, description }) => {
   return (
     <div>

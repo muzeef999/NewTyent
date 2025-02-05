@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import Input from "../Input/Input";
 import formStyle from "../Form/Form.module.css";
 import Button from "../Button/Button";
-import contact from "@/asserts/contactlady.png";
-import Image from "next/image";
-import style from "../../compoents/Form/Form.module.css";
 import axios from "axios";
 import Link from "next/link";
 import { FaCheckCircle, FaFacebook, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -29,7 +26,7 @@ const FormOnly = () => {
         location: "",
         message: ""
       });
-    
+     
       const [error, setError] = useState({
         name: "",
         email: "",
@@ -39,6 +36,7 @@ const FormOnly = () => {
       });
     
       const [loading, setLoading] = useState(false);
+      const [loadingData, setLoadingData] = useState(false);
     
       const inputHandler = (e) => {
         const { name, value } = e.target;
@@ -82,6 +80,7 @@ const FormOnly = () => {
     
         e.preventDefault();
         setLoading(true);
+        setLoadingData(true);
         if (validateForm()) {
           try {
             const payload = {
@@ -149,6 +148,7 @@ const FormOnly = () => {
             console.error("Error sending message:", error.message); // Log the error
           }finally {
             setLoading(false);
+            setLoadingData(false);
           }
           
         }
@@ -227,8 +227,8 @@ const FormOnly = () => {
               {error.message && <div style={{ color: "red", fontSize: "0.9em" }}>{error.message}</div>}
             </div>
             <br />
-            <Button  disabled={loading} data-aos="fade-right" type="submit" name= {loading ? (
-            <Spinner  size="sm" />) : ("A healthier life is just one click away")}/>
+            <Button type="submit" disabled={loadingData} data-aos="fade-right" 
+             name= {loadingData ? (<> <Spinner  size="sm" />{"A healthier life is just one click away"} </>) : ("A healthier life is just one click away")}/>
  
           </form>
         

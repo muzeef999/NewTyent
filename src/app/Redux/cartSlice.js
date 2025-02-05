@@ -1,26 +1,43 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "sonner";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
 
 // Async thunks
-export const fetchCart = createAsyncThunk("cart/fetchCart", async (userId, thunkAPI) => {
-  try {
-    const response = await axios.get(`${apiUrl}/api/cart/${userId}`);
-    return response.data.cart; // Return the cart object
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.response?.data || "Error fetching cart");
+export const fetchCart = createAsyncThunk(
+  "cart/fetchCart",
+  async (userId, thunkAPI) => {
+    try {
+      const response = await axios.get(`${apiUrl}/api/cart/${userId}`);
+      return response.data.cart; // Return the cart object
+    } catch (error) {
+      toast.error(error.response?.data || "Error fetching cart");
+      return thunkAPI.rejectWithValue(
+        error.response?.data || "Error fetching cart"
+      );
+    }
   }
-});
+);
 
-export const postCart = createAsyncThunk("cart/postCart", async (cartData, { rejectWithValue }) => {
-  try {
-    const response = await axios.post(`${apiUrl}/api/cart/${cartData.userId}`, cartData);
-    return response.data;
-  } catch (error) {
-    return rejectWithValue(error.response?.data || "Failed to add product to cart");
+export const postCart = createAsyncThunk(
+  "cart/postCart",
+  async (cartData, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(
+        `${apiUrl}/api/cart/${cartData.userId}`,
+        cartData
+      );
+      toast.success("Product added to cart!");
+      return response.data;
+    } catch (error) {
+      toast.error(error.response?.data || "Failed to add product to cart");
+      return rejectWithValue(
+        error.response?.data || "Failed to add product to cart"
+      );
+    }
   }
-});
+);
 
 export const updateItemQuantity = createAsyncThunk(
   "cart/updateQuantity",
@@ -30,9 +47,15 @@ export const updateItemQuantity = createAsyncThunk(
         productName,
         quantity,
       });
+      toast.success("Item quantity updated!");
+
       return response.data;
     } catch (error) {
-      return rejectWithValue(error.response?.data || "Error updating item quantity");
+      toast.error(error.response?.data || "Error updating item quantity");
+
+      return rejectWithValue(
+        error.response?.data || "Error updating item quantity"
+      );
     }
   }
 );
@@ -40,14 +63,19 @@ export const updateItemQuantity = createAsyncThunk(
 export const deleteProductAction = createAsyncThunk(
   "cart/delCart",
   async ({ userId, productName }, { rejectWithValue }) => {
-    
     try {
       const response = await axios.delete(`${apiUrl}/api/cart/${userId}`, {
-        data: {userId, productName },
+        data: { userId, productName },
       });
+      toast.success("Product removed from cart!");
+
       return response.data;
     } catch (error) {
-      return rejectWithValue(error.response?.data || "Failed to delete product from cart");
+      toast.error(error.response?.data || "Failed to delete product from cart");
+
+      return rejectWithValue(
+        error.response?.data || "Failed to delete product from cart"
+      );
     }
   }
 );
@@ -157,5 +185,6 @@ export const selectTotalAmount = (state) => state.cart.totalAmount;
 export const selectLoadingIds = (state) => state.cart.loadingIds;
 
 // Actions
-export const { clearCart, setItemLoading, clearItemLoading } = cartSlice.actions;
+export const { clearCart, setItemLoading, clearItemLoading } =
+  cartSlice.actions;
 export default cartSlice.reducer;

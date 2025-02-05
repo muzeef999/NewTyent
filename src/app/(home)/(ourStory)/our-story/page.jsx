@@ -8,6 +8,12 @@ import whoweare from "@/asserts/about.jpg"
 import Vision from '../../compoents/(story)/Vision';
 import Management from '../../compoents/(story)/Management';
 
+export const metadata = {
+  title: "About Tyent - Pioneering Water Ionization Technology",
+  description: "Learn about Tyent’s journey in revolutionizing water purification with advanced ionization and filtration technology.",
+};
+
+
 const page = () => {
   return (
     <div style={{marginTop:'120px'}}>
