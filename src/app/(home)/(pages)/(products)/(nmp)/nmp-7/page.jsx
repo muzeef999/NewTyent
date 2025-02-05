@@ -173,6 +173,19 @@ const TyentNMP5 = () => {
 
   return (
     <div style={{ width: "100% !important", overflow: "hidden !important" }}>
+
+      <button className={`fixed-vertical-button`}>
+              <a
+                href={"/assets/Tyent_New_catalog.pdf"}
+                style={{ textDecoration: "none", color: "#FFF" }}
+                download
+                className="download-link"
+              >
+                Download Brochure&nbsp;{" "}
+                <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
+              </a>
+            </button>
+            
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
         {/* Mobile and Tablet View */}
         <div className="d-block d-md-none">
