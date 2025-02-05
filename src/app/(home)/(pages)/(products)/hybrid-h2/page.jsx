@@ -683,7 +683,7 @@ const page = () => {
                 </div>
               </Col>
             </Row>
-
+            </div>
             <div className="section-spacing">
               <Row>
                 <Col
@@ -779,8 +779,9 @@ const page = () => {
                   </div>
                 </Col>
               </Row>
+              </div>
 
-              
+                <div className="section-spacing">
               <Row>
                 <Col
                   md={6}
@@ -820,7 +821,7 @@ const page = () => {
                         zIndex: 2, // Image is above the Display component
                       }}
                     />
-
+                    
                     <div className="jogdaily-ighting-all"></div>
                     <div
                       style={{
@@ -859,8 +860,8 @@ const page = () => {
                   </div>
                 </Col>
               </Row>
-            </div>
-          </div>
+                </div>            
+          
         </Container>
       </div>
           <br/>

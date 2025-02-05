@@ -134,7 +134,7 @@ const Signup = ({ setShowLoginModal }) => {
   return (
     <div className="container">
       {showRequestComponent ? (
-  <Login setModalTitle={setModalTitle} setShowRequestComponent={setShowRequestComponent} />
+  <Login setShowRequestComponent={setShowRequestComponent} />
 ) : (
  
         <>
@@ -214,13 +214,13 @@ const Signup = ({ setShowLoginModal }) => {
             <Button
               type="submit"
               name={
-                loading ? (
-                  <Spinner animation="border" size="sm" />
-                ) : isOtpSent ? (
-                  "Verify OTP & Sign Up"
-                ) : (
-                  "Send OTP"
-                )
+                loading ? (<>
+                  <Spinner animation="border" size="sm" /> &nbsp;
+                   {isOtpSent ? ("Verify OTP & Sign Up") :("Send OTP")}
+                  </>
+                ):(
+                  ("Send OTP")
+                ) 
               }
               className={`btn w-100 ${
                 loading ? "btn-secondary" : "btn-primary"
@@ -234,7 +234,6 @@ const Signup = ({ setShowLoginModal }) => {
               style={{ cursor: "pointer", color: "#008AC7" }}
               onClick={() => {
                 setShowRequestComponent(true);
-                setModalTitle("Login"); // Ensure title changes
               }}
             >
               Login

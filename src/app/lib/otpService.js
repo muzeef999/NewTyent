@@ -18,7 +18,7 @@ export const sendOtpToPhone = async (phoneNumber) => {
     // Send OTP via Twilio
     await client.messages.create({
       body: `Tyent India: Your verification OTP is ${otp}.`,
-      from: "+12542766503", // Replace with your Twilio number
+      from: process.env.TWILIO_PHONE_NUMBER, // Replace with your Twilio number
       to: phoneNumber,
     });
 

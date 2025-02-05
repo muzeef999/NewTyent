@@ -19,7 +19,7 @@ const Login = ({ setShowLoginModal }) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
-  
+
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -42,14 +42,13 @@ const Login = ({ setShowLoginModal }) => {
       });
 
       if (!response || response.error) {
-        toast.error('Invalid phone number or password')
+        toast.error("Invalid phone number or password");
       } else {
-        toast.success("Login success")
+        toast.success("Login success");
         setShowLoginModal(false); // Close the modal on success
       }
     } catch (error) {
-    toast.error("An error occurred: " + error.message);
-     
+      toast.error("An error occurred: " + error.message);
     } finally {
       setLoading(false);
     }
@@ -61,7 +60,6 @@ const Login = ({ setShowLoginModal }) => {
 
   return (
     <div>
-
       {showSignup ? (
         <Signup setShowLoginModal={setShowLoginModal} />
       ) : showForgotPassword ? (
@@ -70,14 +68,20 @@ const Login = ({ setShowLoginModal }) => {
         <>
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="m-0">Login</h2>
-            <IoMdClose size={25} onClick={closeModal} style={{ cursor: "pointer" }} />
+            <IoMdClose
+              size={25}
+              onClick={closeModal}
+              style={{ cursor: "pointer" }}
+            />
           </div>
           <hr />
           <h2 className="text-center">Welcome Back</h2>
           <p className="text-center">Enter your details to sign in</p>
 
           <form onSubmit={handleSubmit} className="d-flex flex-column">
-            <label htmlFor="phoneNumber" className="form-label">Phone number</label>
+            <label htmlFor="phoneNumber" className="form-label">
+              Phone number
+            </label>
             <PhoneInput
               id="phoneNumber"
               country={"in"}
@@ -86,7 +90,11 @@ const Login = ({ setShowLoginModal }) => {
               countryCodeEditable
               value={phoneNumber}
               onChange={(value) => setPhoneNumber("+" + value)}
-              inputStyle={{ width: "100%", padding: "8px 14px", borderRadius: "8px" }}
+              inputStyle={{
+                width: "100%",
+                padding: "8px 14px",
+                borderRadius: "8px",
+              }}
               enableSearch
             />
             <br />
@@ -100,7 +108,12 @@ const Login = ({ setShowLoginModal }) => {
             />
 
             <p
-              style={{ textAlign: "right", margin: "10px 0", color: "#008AC7", cursor: "pointer" }}
+              style={{
+                textAlign: "right",
+                margin: "10px 0",
+                color: "#008AC7",
+                cursor: "pointer",
+              }}
               onClick={() => setShowForgotPassword(true)}
             >
               Forgot Password?
@@ -108,13 +121,26 @@ const Login = ({ setShowLoginModal }) => {
 
             <Button
               type="submit"
-              name={loading ? (<> <Spinner animation="border" size="sm" /> &nbsp; {"Sign In"} </> ) : ("Sign In")}
+              name={
+                loading ? (
+                  <>
+                    <Spinner animation="border" size="sm" /> &nbsp; Sign In
+                  </>
+                ) : (
+                  "Sign In"
+                )
+              }
               disabled={loading}
             />
           </form>
 
           <p
-            style={{ cursor: "pointer", color: "#008AC7", textAlign: "center", marginTop: "20px" }}
+            style={{
+              cursor: "pointer",
+              color: "#008AC7",
+              textAlign: "center",
+              marginTop: "20px",
+            }}
             onClick={() => setShowSignup(true)}
           >
             Don't have an account? Sign up
@@ -125,4 +151,4 @@ const Login = ({ setShowLoginModal }) => {
   );
 };
 
-export default Login; 
+export default Login;
