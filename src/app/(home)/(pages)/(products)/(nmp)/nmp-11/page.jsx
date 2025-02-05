@@ -329,7 +329,7 @@ const TyentNMP5 = () => {
         </div>
 
         <div className="section-spacing">
-          <h2 style={{ color: "#5ac4f2" }}>
+          <h2 style={{ color: "#5ac4f2" }}> 
             <b>
               <span style={{ color: "#008AC7" }}>Loud and clear.</span> Tyent’s
               unparalleled specifications - no other ionizer comes close!
@@ -347,7 +347,7 @@ const TyentNMP5 = () => {
           <BoosttheBody Boost={Boost} />
         </div>
       </Container>
-      <div className="section-spacing">
+      <div className="section-spacing" style={{overflowX:'hidden'}}>
         <div style={{ width: "100%", height: "auto", position: "relative" }}>
           {/* Mobile and Tablet View */}
           <div className="d-block d-lg-none">

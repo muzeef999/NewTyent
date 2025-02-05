@@ -352,7 +352,7 @@ const TyentNMP5 = () => {
         </div>
       </Container>
 
-      <div className="section-spacing">
+      <div className="section-spacing" style={{overflowX:'hidden'}}>
         <div style={{ width: "100%", height: "auto", position: "relative" }}>
           {/* Mobile and Tablet View */}
           <div className="d-block d-lg-none">
@@ -364,7 +364,7 @@ const TyentNMP5 = () => {
               style={{
                 position: "relative",
                 zIndex: 10, // Ensure the image is on top
-              }}
+              }} 
             />
 
             {/* NmpDispalayfinal for Mobile and Tablet */}

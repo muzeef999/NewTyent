@@ -371,8 +371,8 @@ const TyentNMP5 = () => {
         </div>
       </Container>
 
-      <div className="section-spacing">
-        <div className="d-block d-md-none" style={{ position: "relative" }}>
+      <div className="section-spacing" style={{overflowX:'hidden'}}>
+        <div className="d-block d-md-none" style={{ position: "relative", overflowX:'hidden' }}>
           <Image
             src={NMP5_BANNER_MOBILE}
             alt="nmp-5 banner"

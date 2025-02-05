@@ -43,7 +43,6 @@ const BoosttheBody = ({Boost}) => {
 
                 <p
                   style={{
-                    fontSize: "18px",
                     fontWeight: "400",
                     color: "#FFF",
                   }}

@@ -342,7 +342,7 @@ const TyentNMP5 = () => {
         </div>
       </Container>
 
-      <div className="section-spacing">
+      <div className="section-spacing" style={{overflowX:'hidden'}}>
         <div style={{ width: "100%", height: "auto", position: "relative" }}>
           {/* Mobile and Tablet View */}
           <div className="d-block d-lg-none">
@@ -396,7 +396,7 @@ const TyentNMP5 = () => {
                 </div>
               </div>
               <br />
-              <Link
+              <Link 
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
                 href={"/7-types-of-Tyent-water"}
