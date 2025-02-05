@@ -29,6 +29,8 @@ import NMP7_BANNER_MOBILE from "@/asserts/nmp/nmp5&7/NMP7_BANNER_MOBILE.webp";
 import Display from "@/app/(home)/compoents/(products)/Display";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import { RxDownload } from "react-icons/rx";
+
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {

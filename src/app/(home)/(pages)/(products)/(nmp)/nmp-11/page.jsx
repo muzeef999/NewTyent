@@ -29,6 +29,8 @@ import Display from "@/app/(home)/compoents/(products)/Display";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import "@/app/style/ResponsiveBanner.css";
+import { RxDownload } from "react-icons/rx";
+
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {

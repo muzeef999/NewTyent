@@ -27,6 +27,8 @@ import Image from "next/image";
 import NmpDispalayfinal from "../NmpDispalayfinal";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import { RxDownload } from "react-icons/rx";
+
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
