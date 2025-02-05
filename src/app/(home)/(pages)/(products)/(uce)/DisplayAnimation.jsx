@@ -191,8 +191,8 @@ const DisplayAnimation = () => {
                       <path
                         d="M132.723 192.992C135.527 193.652 136.462 194.822 136.847 198.068V216.153C137.626 219.526 138.881 220.898 141.923 222.498C148.225 223.09 151.631 223.067 157.47 222.498C161.18 221.526 162.189 219.916 163.18 216.153V192.992"
                         stroke="#6DC1F7"
-                        stroke-width="2.53814"
-                        stroke-linecap="round"
+                        strokeWidth="2.53814"
+                        strokeLinecap="round"
                       />
                       <line
                         x1="148.585"
@@ -200,8 +200,8 @@ const DisplayAnimation = () => {
                         x2="156.834"
                         y2="199.34"
                         stroke="#6DC1F7"
-                        stroke-width="2.53814"
-                        stroke-linecap="round"
+                        strokeWidth="2.53814"
+                        strokeLinecap="round"
                       />
                       <line
                         x1="152.394"
@@ -209,8 +209,8 @@ const DisplayAnimation = () => {
                         x2="156.836"
                         y2="206.317"
                         stroke="#6DC1F7"
-                        stroke-width="2.53814"
-                        stroke-linecap="round"
+                        strokeWidth="2.53814"
+                        strokeLinecap="round"
                       />
                       <line
                         x1="147.953"
@@ -218,8 +218,8 @@ const DisplayAnimation = () => {
                         x2="156.836"
                         y2="212.661"
                         stroke="#6DC1F7"
-                        stroke-width="2.53814"
-                        stroke-linecap="round"
+                        strokeWidth="2.53814"
+                        strokeLinecap="round"
                       />
                       <text
                         x="150"
@@ -445,12 +445,12 @@ const DisplayAnimation = () => {
                     height="296.963"
                     rx="5.07629"
                     stroke="#D7D7D7"
-                    stroke-width="5.07629"
+                    strokeWidth="5.07629"
                   />
                   <path
                     d="M160.802 27.3043C142.202 14.2745 121.802 9.78372 96.6016 22.8043M150.002 25.2734C129.002 13.7656 112.802 19.2656 102.602 23.763"
                     stroke="url(#paint1_linear_4826_3862)"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                   />
                   
                   <path
@@ -523,7 +523,7 @@ const DisplayAnimation = () => {
                   height="401.027"
                   rx="15.2289"
                   stroke="#E7E9E8"
-                  stroke-width="3.80722"
+                  strokeWidth="3.80722"
                 />
               </g>
             </svg>

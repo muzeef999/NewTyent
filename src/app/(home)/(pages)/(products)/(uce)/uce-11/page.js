@@ -509,7 +509,7 @@ const page = () => {
                     height="36.3506"
                     rx="3.60862"
                     stroke="#212121"
-                    stroke-width="1.98276"
+                    strokeWidth="1.98276"
                   />
                   <rect
                     x="67.9914"
@@ -519,7 +519,7 @@ const page = () => {
                     rx="3.60862"
                     stroke="black"
                     stroke-opacity="0.2"
-                    stroke-width="1.98276"
+                    strokeWidth="1.98276"
                   />
                   <defs>
                     <clipPath id="clip0_4882_1789">
@@ -763,17 +763,17 @@ const page = () => {
                   <path
                     d="M52.2172 19.4531C6 24.4792 6 42.394 6 42.394C16.8452 99.7851 283.408 75.3481 301.673 54.9008C319.939 34.4535 257.038 19.4536 257.038 19.4536"
                     stroke="#6988BE"
-                    stroke-width="11"
+                    strokeWidth="11"
                   />
                   <path
                     d="M41.6094 5L60.6004 15.5946L46.5636 33"
                     stroke="#6988BE"
-                    stroke-width="11"
+                    strokeWidth="11"
                   />
                   <path
                     d="M265.941 7L248.137 18.6757L258.974 34"
                     stroke="#6988BE"
-                    stroke-width="11"
+                    strokeWidth="11"
                   />
                 </g>
               </svg>
@@ -790,17 +790,17 @@ const page = () => {
                   <path
                     d="M52.2172 19.4531C6 24.4792 6 42.394 6 42.394C16.8452 99.7851 283.408 75.3481 301.673 54.9008C319.939 34.4535 257.038 19.4536 257.038 19.4536"
                     stroke="#6988BE"
-                    stroke-width="11"
+                    strokeWidth="11"
                   />
                   <path
                     d="M41.6094 5L60.6004 15.5946L46.5636 33"
                     stroke="#6988BE"
-                    stroke-width="11"
+                    strokeWidth="11"
                   />
                   <path
                     d="M265.941 7L248.137 18.6757L258.974 34"
                     stroke="#6988BE"
-                    stroke-width="11"
+                    strokeWidth="11"
                   />
                 </g>
               </svg>

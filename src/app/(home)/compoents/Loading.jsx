@@ -1,17 +1,19 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Lottie from "react-lottie";
 import animationData from '@/asserts/icons/security-research.json'; // Path to your Lottie JSON file
 import { gsap } from "gsap";
 
 const MyComponent = () => {
   const [caption, setCaption] = useState("Wait a bit, I am working...");
-  const captions = [
+
+  // Use useMemo to ensure captions is stable and doesn't trigger useEffect
+  const captions = useMemo(() => [
     "Wait a bit, I am working...",
     "Please wait, we are processing your request...",
     "Almost there, finalizing the data...",
     "Processing complete!",
-  ];
+  ], []);
 
   const options = {
     loop: true,
@@ -31,7 +33,7 @@ const MyComponent = () => {
     }, 3000); // Change caption every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+  }, [captions]); // Now useMemo ensures this doesn't cause unnecessary re-renders
 
   // GSAP rotation effect for the box/container
   useEffect(() => {
@@ -45,7 +47,7 @@ const MyComponent = () => {
   return (
     <div
       style={{
-        overflow:'hidden',
+        overflow: 'hidden',
         display: "flex",
         justifyContent: "center", // Centers horizontally
         alignItems: "center", // Centers vertically
@@ -63,9 +65,7 @@ const MyComponent = () => {
         />
       </div>
 
-      <div
-        className="caption-box"
-      >
+      <div className="caption-box">
         <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#008AC7" }}>
           {caption}
         </h2>

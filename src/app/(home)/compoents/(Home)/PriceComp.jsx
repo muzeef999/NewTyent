@@ -106,49 +106,52 @@ const PriceComp = () => {
   return (
     <div className="price-comp">
      <br/>
-      <Row>
-        {tableData.map((data, index) => (
-          <Col
-            xs={12}
-            md={6}
-            data-aos="zoom-in"
-            key={index}
-            className="d-flex align-items-center justify-content-center text-center"
-          >
-            <Table 
-              bordered 
-              hover 
-              className="custom-table"
+     <Row>
+  {tableData.map((data, index) => (
+    <Col
+      xs={12}
+      md={6}
+      data-aos="zoom-in"
+      key={index}
+      className="d-flex align-items-center justify-content-center text-center"
+    >
+      <Table
+        bordered
+        hover
+        className="custom-table"
+        style={{
+          borderRadius: "4px",
+          overflow: "hidden",
+          backgroundColor: "#FFF",
+        }}
+      >
+        <thead>
+          <tr>
+            <th
               style={{
-                borderRadius: "4px", 
-                overflow: "hidden", 
-                backgroundColor:'#FFF'
+                color: data.color,
               }}
+              colSpan="2"
             >
-              <thead>
-                <tr>
-                  <th
-                    style={{
-                      color: data.color,
-                    }}
-                    colSpan="2"
-                  >
-                    <b>{data.title}</b>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.details.map((detail, idx) => (
-                  <tr key={idx}>
-                    <td style={{ color:data.color, textAlign:'start' }}>{detail.label}</td> {/* Blue heading color */}
-                    <td style={{textAlign:'start'}}>{detail.value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </Col>
-        ))}
-      </Row>
+              <b>{data.title}</b>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.details.map((detail, idx) => (
+            <tr key={idx}>
+              <td style={{ color: data.color, textAlign: "start" }}>
+                {detail.label}
+              </td>
+              <td style={{ textAlign: "start" }}>{detail.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </Col>
+  ))}
+</Row>
+
     </div>
   );
 };

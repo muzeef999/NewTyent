@@ -26,7 +26,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
      
-      <body  className={poppins.className} style={{backgroundColor:'#f8fbfe', overflowX:'hidden', width:'100%', position:'relative'}}>
+      <body  className={poppins.className}>
         <ClientComponent session={session}>
           {children}
         </ClientComponent>

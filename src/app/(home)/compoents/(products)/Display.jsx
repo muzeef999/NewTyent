@@ -111,43 +111,43 @@ const Display = () => {
             id="Line 88"
             d="M282 89L283 225"
             stroke="#2A0261"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <path
             id="Line 89"
             d="M527 89L528 225"
             stroke="#260067"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <path
             id="Line 90"
             d="M712 89L713 225"
             stroke="#260067"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <path
             id="Line 91"
             d="M959 89L960 225"
             stroke="#260067"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <path
             id="Line 92"
             d="M1136 89L1137 225"
             stroke="#260067"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <path
             id="Line 93"
             d="M1341 89L1342 225"
             stroke="#260067"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <g id="Group 772543494">
             <g id="Vector 8">
@@ -158,22 +158,22 @@ const Display = () => {
               id="Vector 9"
               d="M2835 104.5C2853 119 2853.32 142.133 2835 158.5"
               stroke="#360373"
-              stroke-width="7"
-              stroke-linecap="round"
+              strokeWidth="7"
+              strokeLinecap="round"
             />
             <path
               id="Vector 11"
               d="M2823 116.5C2831.5 123 2831.5 137.5 2824.5 145.5"
               stroke="#360373"
-              stroke-width="7"
-              stroke-linecap="round"
+              strokeWidth="7"
+              strokeLinecap="round"
             />
             <path
               id="Vector 10"
               d="M2850.5 95C2873.5 111 2877 148.5 2850.5 169"
               stroke="#360373"
-              stroke-width="7"
-              stroke-linecap="round"
+              strokeWidth="7"
+              strokeLinecap="round"
             />
           </g>
           <g id="Group 772543493">
@@ -195,8 +195,8 @@ const Display = () => {
               id="Vector 7"
               d="M2140 126L2145 213C2147.66 224.121 2150.82 229.425 2158.5 238C2176.45 239.436 2186.8 239.673 2206 238C2214.66 231.975 2217.91 226.5 2221.5 213L2225.5 126"
               stroke="#2A0261"
-              stroke-width="7"
-              stroke-linecap="round"
+              strokeWidth="7"
+              strokeLinecap="round"
             />
           </g>
           <g id="turboIcon">
@@ -223,7 +223,7 @@ const Display = () => {
             x2="2538.5"
             y2="171"
             stroke="#260067"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <line
             id="Line 85"
@@ -232,7 +232,7 @@ const Display = () => {
             x2="2729.5"
             y2="178"
             stroke="#260067"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <rect
             id="Rectangle 34624256"
@@ -242,7 +242,7 @@ const Display = () => {
             height="129"
             rx="20.5"
             stroke="#1C005F"
-            stroke-width="7"
+            strokeWidth="7"
           />
           <rect
             id="Rectangle 34624257"
@@ -252,13 +252,13 @@ const Display = () => {
             height="129"
             rx="20.5"
             stroke="#1C005F"
-            stroke-width="7"
+            strokeWidth="7"
           />
           <path
             id="Rectangle 34624258"
             d="M2073.5 94C2073.5 79.3644 2085.36 67.5 2100 67.5H2281C2295.64 67.5 2307.5 79.3645 2307.5 94V337C2307.5 351.636 2295.64 363.5 2281 363.5H2100C2085.36 363.5 2073.5 351.636 2073.5 337V94Z"
             stroke="#1D005C"
-            stroke-width="7"
+            strokeWidth="7"
           />
           <rect
             id="Rectangle 34624257_2"
@@ -268,7 +268,7 @@ const Display = () => {
             height="129"
             rx="20.5"
             stroke="#1C005F"
-            stroke-width="7"
+            strokeWidth="7"
           />
           <path
             id="SET"
@@ -422,9 +422,9 @@ const Display = () => {
             id="Line 87"
             d="M1642 332L1982 331"
             stroke="#260067"
-            stroke-width="8"
-            stroke-linecap="round"
-            stroke-dasharray="12 12"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeDasharray="12 12"
           />
         </g>
         <defs></defs>
