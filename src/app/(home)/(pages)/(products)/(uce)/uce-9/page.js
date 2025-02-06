@@ -40,6 +40,7 @@ import PAST_UCE from "@/asserts/uce/PAST_UCE.webp"
 import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
 import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
 import JOGDail from "@/asserts/uce/JOGDail.png"
+import ucerotate from "@/asserts/uce/ucerotate.png"
 
 export const metadata = {
   title: "Tyent UCE Water Ionizer | Advanced Alkaline Water System",
@@ -908,8 +909,7 @@ const page = () => {
             be <br /> conveniently used anywhere, and anyhow.
           </p>
           <br />
-          <div>
-            <div></div>
+          <div className="d-flex justify-content-between align-items-center">
             <div style={{ position: "relative", width: "40%" }}>
               <UceTopMachine />
               <div style={{ position: "absolute", top: "40%", left: "30.5%" }}>
@@ -927,23 +927,27 @@ const page = () => {
                   <g opacity="0.46">
                     <path
                       d="M52.2172 19.4531C6 24.4792 6 42.394 6 42.394C16.8452 99.7851 283.408 75.3481 301.673 54.9008C319.939 34.4535 257.038 19.4536 257.038 19.4536"
-                      stroke="#6988BE"
+                      stroke="#168bc8"
                       strokeWidth="11"
                     />
                     <path
                       d="M41.6094 5L60.6004 15.5946L46.5636 33"
-                      stroke="#6988BE"
+                      stroke="#168bc8"
                       strokeWidth="11"
                     />
                     <path
                       d="M265.941 7L248.137 18.6757L258.974 34"
-                      stroke="#6988BE"
+                      stroke="#168bc8"
                       strokeWidth="11"
                     />
                   </g>
                 </svg>
               </div>
+             
             </div>
+            <div style={{width:'30%'}}>
+                <Image src={ucerotate} alt="Ultimate convenience"  layout="responsive" priority/>
+              </div>
           </div>
         </Container>
       </div>

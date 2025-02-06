@@ -30,6 +30,7 @@ import PRODUCTUCE1 from "@/asserts/uce/PRODUCTUCE-1.webp"
 import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp"
 import { RxDownload } from "react-icons/rx";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
+import ucerotate from "@/asserts/uce/ucerotate.png"
 
 import uceBannerBlack from "@/asserts/uce/uceBannerBlack.png";
 import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.png";
@@ -868,8 +869,8 @@ const page = () => {
           <br /> conveniently used anywhere, and anyhow.
         </p>
         <br />
-        <div>
-          <div></div>
+        <div className="d-flex justify-content-between align-items-center">
+        
           <div style={{ position: "relative", width: "40%" }}>
             <UceTopMachine />
             <div style={{ position: "absolute", top: "40%", left: "30.5%" }}>
@@ -927,6 +928,10 @@ const page = () => {
               </svg>
             </div>
           </div>
+
+          <div style={{width:'30%'}}>
+                          <Image src={ucerotate} alt="Ultimate convenience"  layout="responsive" priority/>
+                        </div>
         </div>
       </Container>
   </div>     
