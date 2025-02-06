@@ -27,7 +27,7 @@ export default function RootLayout({ children, session }) {
       <DashboardBar  toggleSidebar={toggleSidebar}/>
     <div className={`App d-flex`}>
       <Sidebar isOpen={showSidebar} toggleSidebar={toggleSidebar} />
-      <div style={{marginTop:'80px'}} className={`main-content-container p-2 ${showSidebar ? 'expanded' : 'collapsed'}`}>
+      <div style={{marginTop:'80px', overflow:'hidden'}} className={`main-content-container p-2 ${showSidebar ? 'expanded' : 'collapsed'}`}>
         {children}
         <ToastContainer />
       </div>

@@ -8,7 +8,10 @@ import dynamic from "next/dynamic";
 import certification from "@/asserts/certifications/certification.webp";
 
 // Importing images
+import kuv from "@/asserts/certifications/15.webp"
+import G_pass from "@/asserts/certifications/G-PASS.webp"
 import icon1 from "@/asserts/certifications/iso1.webp";
+import Tyent_FDA_1 from "@/asserts/certifications/TyentFDA.webp";
 import icon2 from "@/asserts/certifications/iso2.webp";
 import icon3 from "@/asserts/certifications/iso3.webp";
 import icon4 from "@/asserts/certifications/iso4.webp";
@@ -28,6 +31,11 @@ import icon18 from "@/asserts/certifications/iso18.webp";
 import icon19 from "@/asserts/certifications/iso19.webp";
 import icon20 from "@/asserts/certifications/iso20.webp";
 import icon21 from "@/asserts/certifications/iso21.webp";
+import C_91 from "@/asserts/certifications/91.webp"
+import C_92 from "@/asserts/certifications/92.webp"
+import C_93 from "@/asserts/certifications/93.webp"
+import C_94 from "@/asserts/certifications/94.webp"
+import C_95 from "@/asserts/certifications/94.webp"
 
 // Dynamic import for Header to avoid SSR issues
 const Header = dynamic(() => import("../compoents/Header"), {
@@ -36,26 +44,34 @@ const Header = dynamic(() => import("../compoents/Header"), {
 
 // Array of image objects
 const iconImages = [
-  { src: icon1, alt: "Icon 1" },
-  { src: icon2, alt: "Icon 2" },
-  { src: icon3, alt: "Icon 3" },
-  { src: icon4, alt: "Icon 4" },
-  { src: icon5, alt: "Icon 5" },
-  { src: icon6, alt: "Icon 6" },
-  { src: icon7, alt: "Icon 7" },
-  { src: icon8, alt: "Icon 8" },
-  { src: icon9, alt: "Icon 9" },
-  { src: icon10, alt: "Icon 10" },
-  { src: icon11, alt: "Icon 11" },
-  { src: icon12, alt: "Icon 12" },
-  { src: icon13, alt: "Icon 13" },
-  { src: icon14, alt: "Icon 14" },
-  { src: icon16, alt: "Icon 16" },
-  { src: icon17, alt: "Icon 17" },
-  { src: icon18, alt: "Icon 18" },
-  { src: icon19, alt: "Icon 19" },
-  { src: icon20, alt: "Icon 20" },
-  { src: icon21, alt: "Icon 21" },
+  { src: icon1, alt: "ISO 9001 - International standard for quality management" },
+  { src: icon2, alt: "ISO 14001 - International standard for quality management" },
+  { src: icon3, alt: "ISO 13485 - Medical Device Certificate" },
+  { src: icon21, alt: "Tyent Plates/Electrodes Certificate" },
+  {src:Tyent_FDA_1, alt: "US FDA - Medical Device manufacturer"},
+  { src: icon6, alt: "KFDA - Medical Device manufacturer" },
+  { src: icon4, alt: "GMP - Medical Device manufacturer" },
+  { src: icon5, alt: "Inno-Biz certification" },
+  { src: icon8, alt: "Certificate of Designation of an excellent company - Water Generator" },
+  { src: G_pass, alt: "Certificate of Designation of an excellent company - Water  ionizer" },
+  { src: icon16, alt: "Tyent certificate of Free sales" },
+  { src: icon17, alt: "Tyent - KITA Membership certificate" },
+  { src: kuv, alt: "TUV - Tyent European Directives Certificate - Tyent YT-Series " },
+  { src: icon7, alt: "TUV - Tyent European Directives Certificate - Tyent NMP-Series" },
+  { src: icon19, alt: "TUV - Tyent European Directives Certificate - Tyent UCE PLUS-Series" },
+  { src: icon9, alt: "CB Test Certifacte - NMP Series - Safety of electrical and electronic products" },
+  { src: icon10, alt: "CB Test Certifacte - UCE Series - Safety of electrical and electronic products" },
+  { src: icon18, alt: "CB Test Certifacte - H2- Hybrid Series - Safety of electrical and electronic products" },
+  { src: icon11, alt: "RoHS compliant - NMP Series" },
+  { src: icon12, alt: "RoHS compliant - UCE Series" },
+  { src: icon13, alt: "RoHS compliant - H2- Hybrid, YT Series" },
+  { src: icon14, alt: "Tyent R&D certificate" },
+  { src: icon20, alt: "Tyent CE certificate - H2-Hybrid" },
+  { src: C_91, alt: "EMC Directive certificate" },
+  { src: C_92, alt: "EC Declaration of Confirmity Certificate - Hybrid water ionizer" },
+  { src: C_93, alt: "EC Declaration of Confirmity Certificate - NMP Series & YT Series." },
+  { src: C_94, alt: "EC Declaration of Confirmity Certificate - UCE-Series" },
+  { src: C_95, alt: "Promising Company Certificate" },
 ];
 
 const CertificationsPage = () => {
@@ -121,7 +137,7 @@ const CertificationsPage = () => {
                       />
                     </div>
                   </div>
-                  <p className="text-center mt-2" style={{ color: "#008AC7" }}>
+                  <p className="text-center w-60 mt-2" style={{ color: "#008AC7" }}>
                     <b>{image.alt}</b>
                   </p>
                 </div>

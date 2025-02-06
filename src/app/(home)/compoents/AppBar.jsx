@@ -8,7 +8,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Modal, Offcanvas } from "react-bootstrap";
 import { FaUser } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
-import { IoBagHandleOutline } from "react-icons/io5";
+import {
+  IoBagHandleOutline,
+  IoGridOutline,
+  IoPeopleOutline,
+} from "react-icons/io5";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { setUser } from "@/app/Redux/authSlice";
 import { fetchCart } from "@/app/Redux/cartSlice";
@@ -19,6 +23,8 @@ import Cartpage from "./Cart";
 import "@/app/style/AppBar.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { toast } from "sonner";
+import { IoPeopleCircleOutline } from "react-icons/io5";
+
 
 const AppBar = () => {
   const { data: session } = useSession();
@@ -135,11 +141,29 @@ const AppBar = () => {
                   className="dropdown-menu dropdown-menu-end"
                   style={{ zIndex: "9999" }}
                 >
-                  <li>
-                    <button className="dropdown-item">
-                      <IoBagHandleOutline /> Your Orders
-                    </button>
-                  </li>
+                  {userData.role === "user" && (
+                    <li>
+                      <button className="dropdown-item">
+                        <IoBagHandleOutline /> Your Orders
+                      </button>
+                    </li>
+                  )}
+                  {userData.role === "admin" && (
+                    <Link className="dropdown-item" href={"/dashboard"}>
+                      <IoGridOutline /> Dashboard
+                    </Link>
+                  )}
+                  {userData.role === "manager" && (
+                     <Link className="dropdown-item" href={"/leads"}>
+                       <IoPeopleOutline /> Leads
+                   </Link>
+                  )}
+                  {userData.role === "employee" && (
+                    <Link className="dropdown-item" href={"/complains"}>
+                    <IoPeopleCircleOutline /> complains
+                    </Link>
+                    
+                  )}
                   <li>
                     <button className="dropdown-item" onClick={handleLogout}>
                       <LuLogOut /> Logout

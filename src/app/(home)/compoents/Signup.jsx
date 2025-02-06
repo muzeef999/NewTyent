@@ -83,6 +83,8 @@ const Signup = ({ setShowLoginModal }) => {
       if (res.ok) {
         setIsOtpSent(true);
         toast.success("OTP sent successfully!");
+        // navigtor another page
+
       } else {
         toast.error(data.message || data.error || "Failed to send OTP.");
       }
@@ -216,7 +218,7 @@ const Signup = ({ setShowLoginModal }) => {
               name={
                 loading ? (<>
                   <Spinner animation="border" size="sm" /> &nbsp;
-                   {isOtpSent ? ("Verify OTP & Sign Up") :("Send OTP")}
+                   {isOtpSent ? ("Verify OTP & Sign Up") :("processing...")}
                   </>
                 ):(
                   ("Send OTP")

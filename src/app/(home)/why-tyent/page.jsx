@@ -151,9 +151,29 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
       color1: "#f8fbfe",
       heading: "International Quality Certifications",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-        <p></p>
-        <p></p>
+        <div>
+        <p><strong>Tyent Water Ionizers</strong> are built with <em>cutting-edge technology, superior craftsmanship,</em> and the highest safety standards. Our products undergo rigorous testing and are certified by internationally recognized organizations, ensuring <strong>purity, safety, and performance</strong>.</p>
+        
+        <h3 style="color: #0077cc;">Globally Recognized Certifications</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">ISO 9001 & ISO 14001 Certified</strong> - Ensuring <em>premium quality control</em> and <em>eco-friendly manufacturing practices</em>.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">FDA-Approved Components</strong> - Tyent uses <em>medical-grade materials</em> that meet FDA safety standards.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">CE Certification (Europe)</strong> - Indicates compliance with <em>European health, safety, and environmental protection standards</em>.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">NSF/ANSI Standards</strong> - Certified for water safety, filtration quality, and performance reliability.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">US-FDA (American FDA) Approved</strong> - Recognized by the American Food & Drug Administration for high safety and quality in water ionization.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">KFDA (Korean FDA) Approved</strong> - Recognized by the Korean Food & Drug Administration for high safety and quality in water ionization.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">UL Certification</strong> - Ensures electrical safety and durability, meeting stringent US safety standards.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">WQA (Water Quality Association) Certification</strong> - Verifies the effectiveness of filtration technology and water purity.</li>
+        </ul>
+        
+        <h3 style="color: #0077cc;">Why Certifications Matter?</h3>
+        <ul>
+            <li>✔ Guaranteed safe and clean alkaline hydrogen-rich water.</li>
+            <li>✔ Assured long-lasting performance with medical-grade materials.</li>
+            <li>✔ Internationally recognized quality and safety standards.</li>
+        </ul>
+        
+        <p><strong>Tyent – Setting the Global Standard for Water Ionization! 💧🌎</strong></p>
         </div>`,
       icon: International,
     },
@@ -162,8 +182,26 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
       color1: "#f8fbfe",
       heading: "Certified Medical Device",
       description: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <p>Tyent ionizers are <strong>certified as medical devices</strong>, ensuring safety and effectiveness for household and professional use.</p>
+        <div style="line-height: 1.6;">
+          <p><strong>Tyent Water Ionizers</strong> are <em>certified medical devices</em> by the <strong>American Ministry of Food and Drug Safety (USFDA)</strong> and the <strong>South Korean Ministry of Food and Drug Safety (MFDS)</strong>. Trusted by thousands of doctors worldwide, they play a crucial role in <em>preventing and managing various health conditions</em>.</p>
+        
+        <h3 style="color: #0077cc;">Unmatched Quality & Safety Certifications</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">USFDA Certified Medical Device</strong> – Recognized for its health benefits and medical-grade quality.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">MFDS Certified Medical Device</strong> – Recognized for its health benefits and medical-grade quality.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">ISO 9001 & ISO 14001</strong> – Ensuring top-tier quality control and eco-friendly manufacturing.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">ISO 13485</strong> – Compliance with international medical device standards.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">GMP Certified</strong> – Manufactured under Good Manufacturing Practices for superior safety and consistency.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">FTA & Innobiz Certified</strong> – Acknowledging innovation and advanced technology in water ionization.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">UL Listed (E334893)</strong> – Meeting the highest safety standards set by Underwriters Laboratories (UL).</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">CSA Certified</strong> – Recognized by the Canadian Standards Association for electrical safety.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">ANSI & IEC Compliance</strong> – Adhering to global safety and performance regulations.</li>
+        </ul>
+        
+        <p><strong>Tyent’s certifications ensure <em>superior water quality, medical-grade safety, and cutting-edge technology</em>, making our ionizers the <em>most trusted choice for safe, healthy, and effective alkaline water</em>.</strong></p>
+        
+        <p style="font-size: 1.2em; font-weight: bold; color: #0077cc;">Tyent – The Gold Standard in Water Ionization! 💧</p>
+   
         </div>`,
       icon: Certified,
     },
@@ -172,7 +210,7 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
       color1: "#f8fbfe",
       heading: "Better Business Bureau A+ Rating",
       description: `
-        <div style="line-height: 1.6, color:'#FFF">
+        <div style="line-height: 1.6, color:#FFF">
          <h5>A+ Rating from the Better Business Bureau (BBB)</h5>
 
   <p>An A+ rating from the Better Business Bureau (BBB) is a coveted achievement for companies, symbolizing a commitment to excellence. The BBB’s mission is to foster an ethical marketplace where buyers and sellers can trust one another. As a highly respected organization, the BBB evaluates businesses based on its rigorous Standards of Trust.</p>
@@ -182,6 +220,32 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
         </div>`,
       icon: BBB,
     },
+    {
+      id: "10",
+      color1: "#f8fbfe",
+      heading: "Tyent Aesthetics",
+      description: `
+        <div style="line-height: 1.6;">
+          <p><strong>Tyent Water Ionizers</strong> are not just high-performance medical devices—they are designed to complement modern lifestyles with their sleek, sophisticated, and futuristic aesthetics. Engineered to blend seamlessly into any kitchen or commercial space, Tyent ionizers combine cutting-edge technology with premium design elements for an unmatched user experience.</p>
+        
+        <h3 style="color: #0077cc;">Premium Design Features</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">Sleek & Modern Look</strong> – Crafted with high-quality stainless steel and polished finishes to enhance your kitchen’s elegance.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">Intuitive Touchscreen Interface</strong> – Advanced smart touch displays with high-resolution screens for effortless control and a futuristic feel.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">Compact & Space-Saving</strong> – Designed to fit seamlessly on countertops or under the sink without cluttering your space.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">LED Accent Lighting</strong> – Aesthetically pleasing soft LED indicators add a touch of luxury while enhancing visibility.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">High-End Build Quality</strong> – Made with durable, medical-grade materials for a premium feel and long-lasting performance.</li>
+            <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">Customizable Finish Options</strong> – Available in classic stainless steel, matte black, and elegant white to match your kitchen decor.</li>
+        </ul>
+        
+        <p><strong>Tyent doesn’t just revolutionize hydration—it elevates your space with style and sophistication.</strong></p>
+        
+        <p style="font-size: 1.2em; font-weight: bold; color: #0077cc;">Experience the perfect blend of technology, luxury, and innovation with Tyent! 💎💧</p>
+  
+        </div>`,
+      icon: Certified,
+    },
+    
   ];
 
   return data;

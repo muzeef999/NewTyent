@@ -538,7 +538,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 .certificate-content {
   border: 20px solid #eef7fc; 
   border-radius: 20px; 
- height: auto;
+  height: auto;
 }
 
 .cartqty{

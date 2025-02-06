@@ -3,6 +3,7 @@ import { sendOtpToPhone } from "@/app/lib/otpService";
 import Otp from "@/models/Otp";
 import User from "@/models/User"; // Correct import for the User model
 import { ObjectId } from "mongodb"; // For handling ObjectId
+import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
@@ -45,25 +46,74 @@ export async function POST(request) {
   }
 }
 
-
+// Search user by phone number
 export const GET = async (request) => {
   try {
     await connect();
 
-    // Fetch all users from the database
-    const users = await User.find();
+    const { searchParams } = new URL(request.url);
+    let phoneNumber = searchParams.get("phoneNumber");
 
-    // Return success response with users data
-    return new Response(JSON.stringify({ users }), { status: 200 });
+    if (!phoneNumber) {
+      return NextResponse.json({ error: "Phone number is required." }, { status: 400 });
+    }
+
+    // Trim spaces and sanitize input
+    phoneNumber = phoneNumber.trim();
+
+    // Ensure the phone number starts with +91
+    if (!phoneNumber.startsWith("+91")) {
+      phoneNumber = `+91${phoneNumber}`;
+    }
+
+
+    // Escape "+" in regex to avoid errors
+    const escapedPhoneNumber = phoneNumber.replace("+", "\\+");
+
+    // Find user by phone number (exact match)
+    const user = await User.findOne({ phoneNumber: new RegExp(`^${escapedPhoneNumber}$`, "i") });
+
+    if (!user) {
+      return NextResponse.json({ error: "User not found." }, { status: 404 });
+    }
+
+    return NextResponse.json({ user }, { status: 200 });
   } catch (error) {
-    console.error("Get Users API Error:", error);
-    return new Response(
-      JSON.stringify({ error: "Server error. Please try again later." }),
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Server error. Please try again later." }, { status: 500 });
   }
 };
 
+// Update user role
+export const PUT = async (request) => {
+  try {
+    await connect();
+    const { phoneNumber, role } = await request.json();
+
+    if (!phoneNumber || !role) {
+      return new Response(JSON.stringify({ error: "Phone number and role are required." }), { status: 400 });
+    }
+
+    const allowedRoles = ["Admin", "Manager", "Employee"];
+    if (!allowedRoles.includes(role)) {
+      return new Response(JSON.stringify({ error: "Invalid role." }), { status: 400 });
+    }
+
+    const updatedUser = await User.findOneAndUpdate(
+      { phoneNumber },
+      { role },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      return new Response(JSON.stringify({ error: "User not found." }), { status: 404 });
+    }
+
+    return new Response(JSON.stringify({ message: "Role updated successfully.", user: updatedUser }), { status: 200 });
+  } catch (error) {
+    console.error("Update Role API Error:", error);
+    return new Response(JSON.stringify({ error: "Server error. Try again later." }), { status: 500 });
+  }
+};
 
 
 export const DELETE = async (request) => {
