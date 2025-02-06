@@ -119,7 +119,7 @@ const CertificationsPage = () => {
                 md={6}
                 lg={4}
                 xl={4}
-                className="d-flex justify-content-center"
+                className="d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-up"
               >
                 <div>
@@ -137,10 +137,11 @@ const CertificationsPage = () => {
                       />
                     </div>
                   </div>
-                  <p className="text-center w-60 mt-2" style={{ color: "#008AC7" }}>
+                  
+                </div>
+                <p className="text-center  mt-2" style={{ color: "#008AC7", width:"90%" }}>
                     <b>{image.alt}</b>
                   </p>
-                </div>
               </Col>
             ))}
           </Row>

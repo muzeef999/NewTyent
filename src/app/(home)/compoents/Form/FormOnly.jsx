@@ -78,9 +78,11 @@ const FormOnly = () => {
       const handleSubmit = async(e) => {
     
         e.preventDefault();
-        setLoading(true);
-        setLoadingData(true);
+        
         if (validateForm()) {
+          setLoading(true);
+        setLoadingData(true);
+        
           try {
             const payload = {
               "messaging_product": "whatsapp",

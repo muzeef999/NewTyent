@@ -10,7 +10,6 @@ import Login from "./Login";
 import { IoMdClose } from "react-icons/io";
 import { toast } from "sonner";
 
-
 const Signup = ({ setShowLoginModal }) => {
   const [form, setForm] = useState({
     name: "",
@@ -58,12 +57,12 @@ const Signup = ({ setShowLoginModal }) => {
 
   const sendOtp = async () => {
     if (!form.phoneNumber) {
-      toast.error("Please enter your phone number.")
+      toast.error("Please enter your phone number.");
       return;
     }
 
     if (!/^\+?\d{10,15}$/.test(form.phoneNumber)) {
-    toast.error("Please enter a valid phone number.");
+      toast.error("Please enter a valid phone number.");
       return;
     }
 
@@ -83,8 +82,9 @@ const Signup = ({ setShowLoginModal }) => {
       if (res.ok) {
         setIsOtpSent(true);
         toast.success("OTP sent successfully!");
-        // navigtor another page
-
+      } else if (res.status === 409) {
+        // Handle already existing phone number
+        toast.error("Phone number already exists, please login.");
       } else {
         toast.error(data.message || data.error || "Failed to send OTP.");
       }
@@ -95,7 +95,7 @@ const Signup = ({ setShowLoginModal }) => {
 
   const verifyOtpAndSubmit = async () => {
     if (!form.name || !form.phoneNumber || !form.password || otp.includes("")) {
-      toast.error("Please fill in all fields.")
+      toast.error("Please fill in all fields.");
       return;
     }
 
@@ -119,33 +119,36 @@ const Signup = ({ setShowLoginModal }) => {
       const data = await res.json();
 
       if (res.ok) {
-        toast.success("Signup successful! You can now log in.")
-      } else if (data.message && data.message.includes("already registered")) {
-        toast.error("Phone number already registered, Please log in")
+        toast.success("Signup successful! You can now log in.");
+        setShowRequestComponent(true); // Show the login form after signup
       } else {
         toast.error(data.message || data.error || "Failed to verify OTP.");
       }
     } catch (err) {
-      toast.error("Please try again later, Verification error:", err)
+      toast.error("Please try again later, Verification error:", err);
     }
   };
   const closeModal = () => {
     setShowLoginModal(false); // Close the modal
   };
-  
+
   return (
     <div className="container">
       {showRequestComponent ? (
-  <Login setShowRequestComponent={setShowRequestComponent} />
-) : (
- 
+        <Login setShowRequestComponent={setShowRequestComponent} />
+      ) : (
         <>
-
-<div className="d-flex justify-content-between align-items-center">
-            <h2 className="m-0" style={{color:'#000'}}>Signup</h2>
-             <IoMdClose size={25} onClick={closeModal} style={{ cursor: "pointer" }}/>
+          <div className="d-flex justify-content-between align-items-center">
+            <h2 className="m-0" style={{ color: "#000" }}>
+              Sign Up
+            </h2>
+            <IoMdClose
+              size={25}
+              onClick={closeModal}
+              style={{ cursor: "pointer" }}
+            />
           </div>
-          <hr/>
+          <hr />
 
           <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
             <Input
@@ -183,9 +186,12 @@ const Signup = ({ setShowLoginModal }) => {
                 enableSearch={true}
               />
             </div>
-
+                         
             {isOtpSent && (
+              
               <div className="form-group">
+                 <p>For your security, we have sent the code to your phone ***_***_**{phoneNumber.slice(-2)}.</p>
+         
                 <label>Enter OTP</label>
                 <div className="d-flex justify-content-between">
                   {otp.map((digit, index) => (
@@ -216,13 +222,14 @@ const Signup = ({ setShowLoginModal }) => {
             <Button
               type="submit"
               name={
-                loading ? (<>
-                  <Spinner animation="border" size="sm" /> &nbsp;
-                   {isOtpSent ? ("Verify OTP & Sign Up") :("processing...")}
+                loading ? (
+                  <>
+                    <Spinner animation="border" size="sm" /> &nbsp;
+                    {isOtpSent ? "Verify OTP & Sign Up" : "processing..."}
                   </>
-                ):(
-                  ("Send OTP")
-                ) 
+                ) : (
+                  "CONTINUE"
+                )
               }
               className={`btn w-100 ${
                 loading ? "btn-secondary" : "btn-primary"
@@ -238,7 +245,7 @@ const Signup = ({ setShowLoginModal }) => {
                 setShowRequestComponent(true);
               }}
             >
-              Login
+              Existing User? Log in
             </p>
           </div>
         </>

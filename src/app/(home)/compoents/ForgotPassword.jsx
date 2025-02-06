@@ -132,7 +132,7 @@ const ForgotPassword = ({ setShowLoginModal }) => {
               enableSearch={true}
             />
           </div>
-          <Button type="submit" name={loading ? (<><Spinner size="sm" /> &nbsp; {"Send OTP"} </>) : "Send OTP"} disabled={loading} />
+          <Button type="submit" name={loading ? (<><Spinner size="sm" /> &nbsp; {"CONTINUE"} </>) : "CONTINUE"} disabled={loading} />
         </form>
       ) : (
         <form
@@ -143,6 +143,8 @@ const ForgotPassword = ({ setShowLoginModal }) => {
           className="d-flex flex-column gap-4"
         >
           <div className="form-group">
+          <p>For your security, we have sent the code to your phone ***_***_**{phoneNumber.slice(-2)}.</p>
+         
             <label>Enter OTP</label>
             <div className="d-flex justify-content-between">
               {otp.map((digit, index) => (

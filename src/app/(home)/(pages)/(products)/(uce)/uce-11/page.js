@@ -18,6 +18,9 @@ import d9 from "@/asserts/uce/d9.png";
 import d10 from "@/asserts/uce/d10.png";
 import d11 from "@/asserts/uce/d11.png";
 import d12 from "@/asserts/uce/d12.png";
+import list01 from "@/asserts/uce/list-01.webp";
+import UceDisplay from "../UceDisplay";
+
 import d13 from "@/asserts/uce/d13.png";
 import d14 from "@/asserts/uce/d14.png";
 import ucecableimage from "@/asserts/uce/ucecableimage.png";
@@ -823,7 +826,7 @@ const page = () => {
             </Col>
 
             <Col md={4}>
-              <div style={{ position: "relative" }}>
+              <div style={{ position: "relative", width:'60%'}}>
                 <UceTopMachine />
                 <div class="image img1"></div>
                 <div class="image img2"></div>
@@ -858,9 +861,8 @@ const page = () => {
             be <br /> conveniently used anywhere, and anyhow.
           </p>
           <br />
-          <div className="d-flex justify-content-between align-items-center">
-          
-            <div style={{ position: "relative", width: "40%" }}>
+          <div className="d-flex justify-content-center align-items-center">
+            <div style={{ position: "relative", width: "25%" }}>
               <UceTopMachine />
               <div style={{ position: "absolute", top: "40%", left: "30.5%" }}>
                 <svg
@@ -920,30 +922,42 @@ const page = () => {
               </div>
             </div>
 
-            <div style={{width:'30%'}}>
-                            <Image src={ucerotate} alt="Ultimate convenience"  layout="responsive" priority/>
-                          </div>
+            <div style={{ width: "20%" }}>
+              <Image
+                src={ucerotate}
+                alt="Ultimate convenience"
+                layout="responsive"
+                priority
+              />
+            </div>
           </div>
         </Container>
       </div>
 
-      <div className="section-spacing">
+      <div>
         <Container>
           <Row className="water-outlet">
             <Col xs={12} md={6}>
-              <div
-                style={{ width: "100%", height: "auto", position: "relative" }}
-              >
-                <Image
-                  src={machine}
-                  alt="uce iamge"
-                  layout="responsive"
-                  priority
-                />
-                <div style={{ position: "absolute", top: "30%", left: "42%" }}>
-                  <div style={{ width: "70%" }}>
-                    <UceTopMachine />
-                  </div>
+            <div style={{ width: "100%", position: "relative" }}>
+                <div style={{ width: "100%", zIndex: 2 }}>
+                  <Image
+                    src={list01}
+                    alt="machine image"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "17.5%",
+                    right: "16.5%",
+                    width: "12.4%",
+                    zIndex: 0, // Adjust z-index to place it behind
+                  }}
+                >
+                  <UceDisplay />
                 </div>
               </div>
             </Col>
@@ -986,23 +1000,30 @@ const page = () => {
         />
       </div>
 
-      <div className="section-spacing">
+      <div>
         <Container>
           <Row className="water-outlet">
             <Col xs={12} md={6}>
-              <div
-                style={{ width: "100%", height: "auto", position: "relative" }}
-              >
-                <Image
-                  src={machine}
-                  alt="uce iamge"
-                  layout="responsive"
-                  priority
-                />
-                <div style={{ position: "absolute", top: "30%", left: "42%" }}>
-                  <div style={{ width: "70%" }}>
-                    <UceTopMachine />
-                  </div>
+              <div style={{ width: "100%", position: "relative" }}>
+                <div style={{ width: "100%", zIndex: 2 }}>
+                  <Image
+                    src={list01}
+                    alt="machine image"
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "17.5%",
+                    right: "16.5%",
+                    width: "12.4%",
+                    zIndex: 0, // Adjust z-index to place it behind
+                  }}
+                >
+                  <UceDisplay />
                 </div>
               </div>
             </Col>

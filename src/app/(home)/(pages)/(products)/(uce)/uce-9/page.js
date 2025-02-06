@@ -874,7 +874,7 @@ const page = () => {
             </Col>
 
             <Col md={4}>
-              <div style={{ position: "relative" }}>
+              <div style={{ position: "relative", width:'60%' }}>
                 <UceTopMachine />
                 <div class="image img1"></div>
                 <div class="image img2"></div>
@@ -909,8 +909,8 @@ const page = () => {
             be <br /> conveniently used anywhere, and anyhow.
           </p>
           <br />
-          <div className="d-flex justify-content-between align-items-center">
-            <div style={{ position: "relative", width: "40%" }}>
+          <div className="d-flex justify-content-center align-items-center">
+            <div style={{ position: "relative", width: "25%" }}>
               <UceTopMachine />
               <div style={{ position: "absolute", top: "40%", left: "30.5%" }}>
 
@@ -943,16 +943,15 @@ const page = () => {
                   </g>
                 </svg>
               </div>
-             
             </div>
-            <div style={{width:'30%'}}>
+            <div style={{width:'20%'}}>
                 <Image src={ucerotate} alt="Ultimate convenience"  layout="responsive" priority/>
               </div>
           </div>
         </Container>
       </div>
 
-      <div className="section-spacing">
+      <div>
         <Container>
           <Row className="water-outlet">
             <Col xs={12} md={6}>
@@ -1021,7 +1020,7 @@ const page = () => {
         />
       </div>
 
-      <div className="section-spacing">
+      <div>
         <Container>
           <Row className="water-outlet">
             <Col xs={12} md={6}>

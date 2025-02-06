@@ -143,7 +143,7 @@ const Login = ({ setShowLoginModal }) => {
             }}
             onClick={() => setShowSignup(true)}
           >
-            Don't have an account? Sign up
+            New to Tyent India? Create an account
           </p>
         </>
       )}
