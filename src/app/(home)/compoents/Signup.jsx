@@ -140,7 +140,7 @@ const Signup = ({ setShowLoginModal }) => {
         <>
 
 <div className="d-flex justify-content-between align-items-center">
-            <h2 className="m-0">Signup</h2>
+            <h2 className="m-0" style={{color:'#000'}}>Signup</h2>
              <IoMdClose size={25} onClick={closeModal} style={{ cursor: "pointer" }}/>
           </div>
           <hr/>

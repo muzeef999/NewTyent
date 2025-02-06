@@ -31,6 +31,10 @@ import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxDownload } from "react-icons/rx";
 
+export const metadata = {
+  title: "Tyent NMP-9 Water Ionizer - Advanced 9-Plate Technology",
+  description: " Experience powerful hydration with the Tyent NMP9 water ionizer, featuring advanced filtration and cutting-edge ionization technology.",
+}; 
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -180,6 +184,7 @@ const TyentNMP5 = () => {
       "Tyent water ionizers offer a user-friendly one-touch display with clear icons, making it easy to select and activate your desired water type effortlessly for convenient, customizable hydration.",
     link: "/7-types-of-Tyent-water",
   };
+
 
   return (
     <div style={{width:'100% !important', overflow:'hidden !important'}}>

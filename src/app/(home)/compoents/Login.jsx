@@ -67,7 +67,7 @@ const Login = ({ setShowLoginModal }) => {
       ) : (
         <>
           <div className="d-flex justify-content-between align-items-center">
-            <h2 className="m-0">Login</h2>
+            <h2 className="m-0" style={{color:'#000'}}>Login</h2>
             <IoMdClose
               size={25}
               onClick={closeModal}

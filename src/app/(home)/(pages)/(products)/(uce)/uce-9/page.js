@@ -3,7 +3,6 @@ import Certifications from "@/app/(home)/compoents/Certifications";
 import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "@/app/style/Uce.css";
-import machine from "@/asserts/uce/USE_SINGELE.webp";
 import Image from "next/image";
 import UceTopMachine from "../UceTopMachine";
 import d1 from "@/asserts/uce/d1.png";
@@ -42,7 +41,10 @@ import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
 import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
 import JOGDail from "@/asserts/uce/JOGDail.png"
 
-
+export const metadata = {
+  title: "Tyent UCE Water Ionizer | Advanced Alkaline Water System",
+  description: "Discover the Tyent UCE Water Ionizer – a state-of-the-art under-counter system that delivers antioxidant-rich, alkaline water for a healthier lifestyle. Experience superior hydration today!",
+};
 
 const data = [
   {

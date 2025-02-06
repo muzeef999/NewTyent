@@ -99,7 +99,7 @@ const ForgotPassword = ({ setShowLoginModal }) => {
   return (
     <div className="forgot-password-container">
       <div className="d-flex justify-content-between align-items-center">
-        <h2 className="m-0">Forgot password</h2>
+        <h2 className="m-0" style={{color:'#000'}}>Forgot password</h2>
         <IoMdClose size={25} onClick={closeModal} style={{ cursor: "pointer" }} /> {/* Close the modal */}
       </div>
       <hr />

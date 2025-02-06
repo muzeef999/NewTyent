@@ -18,6 +18,7 @@ import ResponsiveProductPage from "./ResponsiveProductPage";
 import Cartpage from "./Cart";
 import "@/app/style/AppBar.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+import { toast } from "sonner";
 
 const AppBar = () => {
   const { data: session } = useSession();
@@ -86,6 +87,7 @@ const AppBar = () => {
 
   const handleLogout = () => {
     signOut();
+    toast.success("You have successfully logged out!");
     router.push("/");
   };
 
