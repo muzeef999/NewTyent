@@ -93,7 +93,7 @@ export const PUT = async (request) => {
       return new Response(JSON.stringify({ error: "Phone number and role are required." }), { status: 400 });
     }
 
-    const allowedRoles = ["Admin", "Manager", "Employee"];
+    const allowedRoles = ["admin", "manager", "employee"];
     if (!allowedRoles.includes(role)) {
       return new Response(JSON.stringify({ error: "Invalid role." }), { status: 400 });
     }

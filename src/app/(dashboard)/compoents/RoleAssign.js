@@ -95,9 +95,9 @@ const RoleAssign = () => {
               value={role}
               onChange={(e) => setRole(e.target.value)}
             >
-              <option value="Admin">Admin</option>
-              <option value="Manager">Manager</option>
-              <option value="Employee">Employee</option>
+              <option value="admin">admin</option>
+              <option value="manager">manager</option>
+              <option value="employee">employee</option>
             </Form.Select>
 
             {/* Update Button */}
