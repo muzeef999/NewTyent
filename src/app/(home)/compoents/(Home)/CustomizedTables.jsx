@@ -202,15 +202,16 @@ function CustomizedTables() {
         </td>
 
         <td data-aos="fade-left">{row.check}</td>
+      
         <td data-aos="fade-left" style={{ width: "32%" }}>
-          {row.image}
+          <p className="m-0" style={{fontSize:'clamp(10px, 1vw, 16px)'}}>{row.image}</p>
         </td>
 
         <td style={{ backgroundColor: "#f6f6f6" }} data-aos="fade-left">
           {row.wrong}
         </td>
         <td style={{ width: "32%", backgroundColor: "#f6f6f6" }} data-aos="fade-left">
-          {row.details}
+          <p className="m-0" style={{fontSize:'clamp(10px, 1vw, 16px)'}}>{row.details}</p>
         </td>
       </tr>
     ))}

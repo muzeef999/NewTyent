@@ -128,6 +128,7 @@ const Signup = ({ setShowLoginModal }) => {
       toast.error("Please try again later, Verification error:", err);
     }
   };
+
   const closeModal = () => {
     setShowLoginModal(false); // Close the modal
   };
@@ -135,7 +136,7 @@ const Signup = ({ setShowLoginModal }) => {
   return (
     <div className="container">
       {showRequestComponent ? (
-        <Login setShowRequestComponent={setShowRequestComponent} />
+        <Login setShowLoginModal={setShowLoginModal} />
       ) : (
         <>
           <div className="d-flex justify-content-between align-items-center">
@@ -186,12 +187,13 @@ const Signup = ({ setShowLoginModal }) => {
                 enableSearch={true}
               />
             </div>
-                         
+
             {isOtpSent && (
-              
               <div className="form-group">
-                 <p>For your security, we have sent the code to your phone ***_***_**{form.phoneNumber.slice(-2)}.</p>
-         
+                <p>
+                  For your security, we have sent the code to your phone ***_***_**{form.phoneNumber.slice(-2)}.
+                </p>
+
                 <label>Enter OTP</label>
                 <div className="d-flex justify-content-between">
                   {otp.map((digit, index) => (
@@ -231,9 +233,7 @@ const Signup = ({ setShowLoginModal }) => {
                   "CONTINUE"
                 )
               }
-              className={`btn w-100 ${
-                loading ? "btn-secondary" : "btn-primary"
-              }`}
+              className={`btn w-100 ${loading ? "btn-secondary" : "btn-primary"}`}
               disabled={loading}
             />
           </form>

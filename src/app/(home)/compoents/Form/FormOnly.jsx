@@ -13,8 +13,7 @@ import { Spinner } from "react-bootstrap";
 
 
 const ACCESS_TOKEN =
- "EAAbf0TX5ZBsoBOZCFTLpU21Is4muXfIjd6TYxDwzzYuWcVwvmFFh95dFZAODHwk2fOZAuXMi8q0OZBOVDBhg6GfstQWV8YDhnAtdFswhHO8DUr0XbHNNaFPV4NvovG4QcE3PKg7LYhGWClopKohMpZBmsayEgzZBXEefcnq3hFJe27NYLtmZBB4VkvI0egJCRKGm3AZDZD"  
-
+ "EAAbf0TX5ZBsoBOZCFTLpU21Is4muXfIjd6TYxDwzzYuWcVwvmFFh95dFZAODHwk2fOZAuXMi8q0OZBOVDBhg6GfstQWV8YDhnAtdFswhHO8DUr0XbHNNaFPV4NvovG4QcE3PKg7LYhGWClopKohMpZBmsayEgzZBXEefcnq3hFJe27NYLtmZBB4VkvI0egJCRKGm3AZDZD"
 
 const FormOnly = () => {
 
@@ -85,37 +84,15 @@ const FormOnly = () => {
         
           try {
             const payload = {
-              "messaging_product": "whatsapp",
-              "recipient_type": "individual",
-              "to": "919182414181",
-              "type": "template",
-              "template": {
-                "name": "appointment_custom_messages",
-                "language": {
-                  "code": "en_GB"
-                },
-                "components": [
-                  {
-                    "type": "body",
-                    "parameters": [
-                      {
-                        "type": "text",
-                        "text":  `${inputdata.name}`
-                      },
-                      {
-                        "type": "text",
-                        "text": `${inputdata.number} + ${inputdata.email} + ${inputdata.location}`
-                      },
-                      {
-                        "type": "text",
-                        "text": `${inputdata.message}`
-                      }
-                    ]
-                  }
-                ]
-              }
-            };
-        
+              
+                "messaging_product": "whatsapp",
+                "recipient_type": "individual",
+                "to": "919182414181",
+                "type": "text",
+                "text": {  
+                  "body":`name : ${inputdata.name} \n number : ${inputdata.number} \n email : ${inputdata.email} \n location : ${inputdata.location} \n message : ${inputdata.message}`
+                } 
+              }        
 
             await axios.post(
               `${apiUrl}/api/lead`,
