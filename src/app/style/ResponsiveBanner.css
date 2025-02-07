@@ -95,17 +95,17 @@ display: flex;
 
 
     .home_banner_bg_one {
-      background-image: url("../../asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png");
+      background-image: url("../../asserts/homeBanners/banner1/home_Banner_Bg_Desktop.webp");
       aspect-ratio: 16/9;
     }
 
     .responsive-container { 
       position: absolute;
-      top: 34.8%;
-      right: 4.1%;
-      width: 13.9%;
+      top: 40.1%;
+      right: -7.8%;
+      width: 38%;
       aspect-ratio: 16/9;
-      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      transform: skewY(1.1deg); /* Skew to give a dynamic shape */
       z-index: -9; /* se lower  z-index to ensure it appears background */
     }
 
@@ -150,17 +150,17 @@ display: flex;
 
     
     .home_banner_bg_one {
-      background-image: url("../../asserts/homeBanners/banner1/home_Banner_mobile_Bg.png");
+      background-image: url("../../asserts/homeBanners/banner1/home_Banner_mobile_Bg.webp");
       aspect-ratio: 1/1;
     }
   
     .responsive-container { 
       position: absolute;
-      top: 35.2%;
-      right: 13.3%;
+      top: 44.6%;
+      right: 6.6%;
       aspect-ratio: 1/1;
-      width: 22%;
-      transform: skewY(1.2deg); /* Skew to give a dynamic shape */
+      width: 35%;
+      transform: skewY(1.1deg); /* Skew to give a dynamic shape */
       z-index: -9; /* se lower  z-index to ensure it appears background */
       
     }

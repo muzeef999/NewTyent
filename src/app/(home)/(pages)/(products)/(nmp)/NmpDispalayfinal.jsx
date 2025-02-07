@@ -96,14 +96,14 @@ const NmpDispalayfinal = () => {
       ref={svgRef}
       width="100%"
       height="auto"
-      viewBox="0 0 3200 420"
+      viewBox="0 0 3200 5000"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g>
         <rect
           width="3200"
-          height="4000"
+          height="5010"
           id="displayColour"
           fill="none"
           rx="20"
