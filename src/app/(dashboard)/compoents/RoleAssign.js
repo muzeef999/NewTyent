@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Spinner, Button, Form, Container, Card, Alert } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 const RoleAssign = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -30,25 +31,31 @@ const RoleAssign = () => {
 
   // Update user role
   const updateRole = async () => {
+    if (!user) {
+      setMessage("Please search for a user first.");
+      return;
+    }
+  
     setMessage("");
     setLoading(true);
     try {
       const response = await fetch(`/api/auth/signup`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phoneNumber, role }),
+        body: JSON.stringify({ phoneNumber: user.phoneNumber, role }),
       });
       const data = await response.json();
       if (response.ok) {
-        setMessage("Role updated successfully.");
+        toast.success("Role updated successfully.")
       } else {
-        setMessage(data.error);
+        toast.error(data.error)
       }
     } catch (error) {
-      setMessage("Error updating role.");
+      toast.error("Error updating role.")
     }
     setLoading(false);
   };
+  
 
   return (
     <Container className="d-flex justify-content-center mt-5">

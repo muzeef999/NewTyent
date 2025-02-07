@@ -98,22 +98,23 @@ export const PUT = async (request) => {
       return new Response(JSON.stringify({ error: "Invalid role." }), { status: 400 });
     }
 
-    const updatedUser = await User.findOneAndUpdate(
-      { phoneNumber },
-      { role },
-      { new: true }
-    );
-
-    if (!updatedUser) {
+    // Check if user exists first
+    const existingUser = await User.findOne({ phoneNumber });
+    if (!existingUser) {
       return new Response(JSON.stringify({ error: "User not found." }), { status: 404 });
     }
 
-    return new Response(JSON.stringify({ message: "Role updated successfully.", user: updatedUser }), { status: 200 });
+    // Now update the role
+    existingUser.role = role;
+    await existingUser.save();
+
+    return new Response(JSON.stringify({ message: "Role updated successfully.", user: existingUser }), { status: 200 });
   } catch (error) {
     console.error("Update Role API Error:", error);
     return new Response(JSON.stringify({ error: "Server error. Try again later." }), { status: 500 });
   }
 };
+
 
 
 export const DELETE = async (request) => {

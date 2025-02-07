@@ -28,7 +28,7 @@ export const { setManagers, setLoadingManagers, setErrorManagers } = managersSli
 export const fetchManagers = () => async (dispatch) => {
   try {
     dispatch(setLoadingManagers(true));
-    const response = await axios.get(`${apiUrl}/api/auth/signup`);
+    const response = await axios.get(`${apiUrl}/api/auth/verifyOtp`);
     const managerList = response.data.users.filter(user => user.role === 'manager');
     dispatch(setManagers(managerList));
   } catch (error) {
