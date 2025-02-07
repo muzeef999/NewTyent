@@ -209,13 +209,13 @@ const icons = [
     id: 7,
     icon: icon,
     name: "Vasupalli Ganesh Kumar",
-    designation: "EX- MLA",
+    designation: "EX - MLA(AP)",
   },
   {
     id: 8,
     icon: icon,
     name: "Robin Uttapa",
-    designation: "Canadian Film Actor",
+    designation: "former indian cricketer",
   },
   {
     id: 9,
@@ -239,7 +239,7 @@ const icons = [
     id: 12,
     icon: icon,
     name: "Addanki Dayakar",
-    designation: "Ex-MLA",
+    designation: "Ex - MLA(TS)",
   },
   {
     id: 13,
