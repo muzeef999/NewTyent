@@ -286,8 +286,8 @@ const icons = [
   {
     id: 20,
     icon: icon,
-    name: "",
-    designation: "",
+    name: "Vamshidhar Reddy",
+    designation: "syntaxarts (CEO)",
   },
   {
     id: 21,
