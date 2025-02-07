@@ -9,6 +9,7 @@ import { FaCheckCircle, FaFacebook, FaLinkedinIn, FaTwitter, FaYoutube } from "r
 import { IoLogoInstagram } from "react-icons/io5";
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
 import { Spinner } from "react-bootstrap";
+import { toast } from "sonner";
  
 
 
@@ -33,7 +34,7 @@ const FormOnly = () => {
         message: ""
       });
     
-      const [loading, setLoading] = useState(false);
+      const [loading, setLoading] = useState(true);
       const [loadingData, setLoadingData] = useState(false);
     
       const inputHandler = (e) => {
@@ -77,10 +78,10 @@ const FormOnly = () => {
       const handleSubmit = async(e) => {
     
         e.preventDefault();
+        setLoadingData(true);
         
         if (validateForm()) {
           setLoading(true);
-        setLoadingData(true);
         
           try {
             const payload = {
@@ -111,7 +112,7 @@ const FormOnly = () => {
             );
 
 
-            const response = await axios.post(
+             const res = await axios.post(
              "https://graph.facebook.com/v22.0/611656022027942/messages",
               payload,
               {
@@ -121,16 +122,17 @@ const FormOnly = () => {
                 },
               }
             );
-        
-             
-      
-    
-            setLoading(true);
+            if(res.status === 200){
+              setLoading(false);
+            }
+            
           } catch (error) {
-            console.error("Error sending message:", error.message); // Log the error
+            toast.error("Error sending message:", error.message);
+          
           }finally {
             setLoading(false);
             setLoadingData(false);
+            
           }
           
         }
@@ -139,7 +141,7 @@ const FormOnly = () => {
   return (
     <div>
         <div  data-aos="fade-left" className="flex-column justify-content-center align-items-center">
-        {!loading ? (<>
+        {loading ? (<>
           <h3 data-aos="fade-up" className={formStyle.heading}>Fill Out the Form – We'll Get in Touch</h3>
           <h5 data-aos="fade-up" >Start Your Journey Today!</h5>
           <br/>
@@ -209,8 +211,8 @@ const FormOnly = () => {
               {error.message && <div style={{ color: "red", fontSize: "0.9em" }}>{error.message}</div>}
             </div>
             <br />
-            <Button type="submit" disabled={loadingData} data-aos="fade-right" 
-             name= {loadingData ? (<> <Spinner  size="sm" />{"A healthier life is just one click away"} </>) : ("A healthier life is just one click away")}/>
+            <Button type="submit"  data-aos="fade-right" 
+             name= {loadingData ? (<> <Spinner  size="sm" />&nbsp;&nbsp;{"A healthier life is just one click away"} </>) : ("A healthier life is just one click away")}/>
  
           </form>
         
