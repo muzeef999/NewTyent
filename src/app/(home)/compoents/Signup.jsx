@@ -190,7 +190,7 @@ const Signup = ({ setShowLoginModal }) => {
             {isOtpSent && (
               
               <div className="form-group">
-                 <p>For your security, we have sent the code to your phone ***_***_**{phoneNumber.slice(-2)}.</p>
+                 <p>For your security, we have sent the code to your phone ***_***_**{form.phoneNumber.slice(-2)}.</p>
          
                 <label>Enter OTP</label>
                 <div className="d-flex justify-content-between">

@@ -9,6 +9,7 @@ import { PiWifiNoneDuotone } from "react-icons/pi";
 import { MdOutlineTouchApp } from "react-icons/md";
 import corevalues from "@/asserts/aboutus/corevalues.png";
 import CoreStrategy from "@/asserts/aboutus/CoreStrategy.png";
+import maraketing from "@/asserts/aboutus/maraketing.png";
 
 export const metadata = {
   title: "Tyent Global Presence - Trusted Worldwide",
@@ -64,7 +65,8 @@ const Page = () => {
       {/* Core Values */}
       <Container>
         <Row>
-          <Col md={8}>
+          <Col md={8} className="d-flex justify-content-center align-items-center">
+          <div>
             <h2 data-aos="fade-right">
               <b>Core Values</b>
             </h2>
@@ -92,9 +94,10 @@ const Page = () => {
               title="Our mission is 'customer satisfaction'"
               description="We create value for customers and conduct customer satisfaction."
             />
+            </div>
           </Col>
           <Col md={4} className="text-center" data-aos="zoom-in">
-            <div style={{ width: "100%", height: "auto" }}>
+            <div style={{ width: "80%", height: "auto" }}>
               <Image
                 src={corevalues}
                 alt="corevalues"
@@ -110,9 +113,7 @@ const Page = () => {
       <div style={{ backgroundColor: "#F8F8F8" }}>
         <Container>
           <div style={{ padding: "50px" }}>
-            <h2 className="text-center mb-6" data-aos="fade-up">
-              <b>Core Strategy</b>
-            </h2>
+          
             <Row>
               <Col
                 md={6}
@@ -129,6 +130,7 @@ const Page = () => {
                 </div>
               </Col>
               <Col md={6}>
+              
                 <h4>
                   <b>Strategy for Growth</b>
                 </h4>
@@ -168,7 +170,7 @@ const Page = () => {
               >
                 <div style={{ width: "60%", height: "auto" }}>
                   <Image
-                    src={CoreStrategy}
+                    src={maraketing}
                     alt="corevalues"
                     layout="responsive"
                     priority
@@ -182,36 +184,36 @@ const Page = () => {
 
       <Container className="py-5">
         <h2 data-aos="fade-up" className="text-center mb-5 fw-bold">Key Facts</h2>
-        <Row className="g-4">
-          <Col xs={12} sm={6} md={4} lg={3}>
+        <Row className="g-4 justify-content-center">
+          <Col xs={12} sm={6} md={4} lg={4}>
             <KeyFactCard
               value="86+"
               title="Global Presence"
               description="Providing innovative water solutions that improve health and well-being across India."
             />
           </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xs={12} sm={6} md={4} lg={4}>
             <KeyFactCard
               value="160+"
               title="Technology Patents"
               description="160+ patents, showcasing groundbreaking advancements in water ionization."
             />
           </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xs={12} sm={6} md={4} lg={4}>
             <KeyFactCard
               value="29+"
               title="Years of R&D"
               description="29 years of cutting-edge research delivering innovative water solutions globally."
             />
           </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xs={12} sm={6} md={4} lg={4}>
             <KeyFactCard
               value="15"
               title="Years Warranty"
               description="Prestigious design awards blending innovation and aesthetics in luxury water ionizers."
             />
           </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <Col xs={12} sm={6} md={4} lg={4}>
             <KeyFactCard
               value="26"
               title="Design Awards"

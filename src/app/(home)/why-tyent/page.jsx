@@ -11,6 +11,7 @@ import International from "@/asserts/whyTent/International.webp";
 import Antioxidant from "@/asserts/whyTent/Antioxidant.webp";
 import Chemical from "@/asserts/whyTent/Chemical.webp";
 import doorstep from "@/asserts/whyTent/doorstep.webp";
+import design  from "@/asserts/whyTent/design.webp";
 import Certified from "@/asserts/whyTent/Certified.webp";
 import display from "@/asserts/whyTent/display.webp";
 import plateSurfaceArea from "@/asserts/whyTent/plateSurfaceArea.webp";
@@ -243,7 +244,7 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
         <p style="font-size: 1.2em; font-weight: bold; color: #0077cc;">Experience the perfect blend of technology, luxury, and innovation with Tyent! 💎💧</p>
   
         </div>`,
-      icon: Certified,
+      icon: design,
     },
     
   ];
