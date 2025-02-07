@@ -33,19 +33,18 @@ const Form = dynamic(() => import("./compoents/Form/Form"), {
 const Home = () => {
   const cardDetails = [
     {
-      icon: alkaline,
-      title: "Alkalinity",
+      icon: Molecular,
+      title: "Anti-oxidant Molecular H2",
       content: `
-        Acidic stress is the root cause of all the major lifestyle diseases 
-        such as Diabetes, Thyroid, Gastric, Constipation, Acidity, Cancer, 
-        Cardiovascular diseases, Chronic respiratory diseases, and Coronary 
-        heart diseases. 
+        Tyent ionized hydrogen-rich alkaline water has a selective antioxidant 
+        called Molecular hydrogen. Molecular hydrogen is rich in electrons or -ORP 
+        which helps in neutralizing free radicals (ROS) and oxidative stress.
 
-        Tyent ionized hydrogen alkaline water is alkaline in nature (with a 
-        pH value of drinking water 7pH - 9.5pH) which helps in neutralizing 
-        disease-causing acidic nature.
+        It also helps in reducing inflammation, protecting against oxidative stress, 
+        enhancing athletic performance, and supporting gut health too.
       `,
     },
+    
     {
       icon: watersoda,
       title: "Micro-clustered water",
@@ -59,17 +58,20 @@ const Home = () => {
       `,
     },
     {
-      icon: Molecular,
-      title: "Anti-oxidant Molecular H2",
+      icon: alkaline,
+      title: "Alkalinity",
       content: `
-        Tyent ionized hydrogen-rich alkaline water has a selective antioxidant 
-        called Molecular hydrogen. Molecular hydrogen is rich in electrons or -ORP 
-        which helps in neutralizing free radicals (ROS) and oxidative stress.
+        Acidic stress is the root cause of all the major lifestyle diseases 
+        such as Diabetes, Thyroid, Gastric, Constipation, Acidity, Cancer, 
+        Cardiovascular diseases, Chronic respiratory diseases, and Coronary 
+        heart diseases. 
 
-        It also helps in reducing inflammation, protecting against oxidative stress, 
-        enhancing athletic performance, and supporting gut health too.
+        Tyent ionized hydrogen alkaline water is alkaline in nature (with a 
+        pH value of drinking water 7pH - 9.5pH) which helps in neutralizing 
+        disease-causing acidic nature.
       `,
     },
+    
     {
       icon: minerals,
       title: "Natural minerals",

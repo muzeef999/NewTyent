@@ -92,7 +92,7 @@ const FormOnly = () => {
               "template": {
                 "name": "appointment_custom_messages",
                 "language": {
-                  "code": "en"
+                  "code": "en_GB"
                 },
                 "components": [
                   {
@@ -116,18 +116,8 @@ const FormOnly = () => {
               }
             };
         
-            const response = await axios.post(
-             "https://graph.facebook.com/v22.0/611656022027942/messages",
-              payload,
-              {
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${ACCESS_TOKEN}`,
-                },
-              }
-            );
-        
-             await axios.post(
+
+            await axios.post(
               `${apiUrl}/api/lead`,
               {
                 name: inputdata.name,
@@ -142,6 +132,20 @@ const FormOnly = () => {
                 },
               }
             );
+
+
+            const response = await axios.post(
+             "https://graph.facebook.com/v22.0/611656022027942/messages",
+              payload,
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${ACCESS_TOKEN}`,
+                },
+              }
+            );
+        
+             
       
     
             setLoading(true);
