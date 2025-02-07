@@ -90,7 +90,7 @@ const FormOnly = () => {
                 "to": "919182414181",
                 "type": "text",
                 "text": {  
-                  "body":`name : ${inputdata.name} \n number : ${inputdata.number} \n email : ${inputdata.email} \n location : ${inputdata.location} \n message : ${inputdata.message}`
+                  "body":`Name : ${inputdata.name} \n Number : ${inputdata.number} \n Email : ${inputdata.email} \n Location : ${inputdata.location} \n Message : ${inputdata.message}`
                 } 
               }        
 

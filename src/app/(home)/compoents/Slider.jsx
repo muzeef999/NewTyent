@@ -42,10 +42,10 @@ const Slider = () => {
             </div>
 
             <div className="home-banner-text">
-              <h1 style={{ fontSize: "clamp(25px, 5vw, 70px)" }} className="home_banner1_text1">
+              <h1 style={{ fontSize: "clamp(25px, 5vw, 60px)" }} className="home_banner1_text1">
                 Drink Life, Not Just Water!
               </h1>
-              <h1 style={{ fontSize: "clamp(20px, 4vw, 50px)" }} className="home_banner2_text1">
+              <h1 style={{ fontSize: "clamp(20px, 4vw, 40px)" }} className="home_banner2_text1">
                 Boost Immunity with <span>Tyent Water</span>
               </h1>
             </div>

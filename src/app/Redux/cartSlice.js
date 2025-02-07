@@ -12,6 +12,10 @@ export const fetchCart = createAsyncThunk(
       const response = await axios.get(`${apiUrl}/api/cart/${userId}`);
       return response.data.cart; // Return the cart object
     } catch (error) {
+      if (error.message === "Network Error") {
+        toast.error("No internet connection. Please check your network.");
+        return thunkAPI.rejectWithValue("No internet connection.");
+      }
       toast.error(error.response?.data || "Error fetching cart");
       return thunkAPI.rejectWithValue(
         error.response?.data || "Error fetching cart"
@@ -19,6 +23,7 @@ export const fetchCart = createAsyncThunk(
     }
   }
 );
+
 
 export const postCart = createAsyncThunk(
   "cart/postCart",

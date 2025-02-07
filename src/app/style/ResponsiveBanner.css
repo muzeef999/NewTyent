@@ -97,13 +97,14 @@ display: flex;
     .home_banner_bg_one {
       background-image: url("../../asserts/homeBanners/banner1/home_Banner_Bg_Desktop.webp");
       aspect-ratio: 16/9;
+      height: 88vh;
     }
 
     .responsive-container { 
       position: absolute;
       top: 40.1%;
-      right: -7.8%;
-      width: 38%;
+      right: -2.3%;
+      width: 34.5%;
       aspect-ratio: 16/9;
       transform: skewY(1.1deg); /* Skew to give a dynamic shape */
       z-index: -9; /* se lower  z-index to ensure it appears background */

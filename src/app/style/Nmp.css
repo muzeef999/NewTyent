@@ -127,7 +127,7 @@
     position: absolute;
     width: 24%;
     height: auto; 
-    top:34.2%; 
+    top:53.3%; 
     right: 1.5%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
@@ -199,7 +199,7 @@
     position: absolute;
     width: 12.4%;
     height: auto;
-    top: 36.6%;
+    top: 57.8%;
     right: 33.6%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
