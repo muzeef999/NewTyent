@@ -3,7 +3,6 @@ import Certifications from "@/app/(home)/compoents/Certifications";
 import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "@/app/style/Uce.css";
-import machine from "@/asserts/uce/uce.webp";
 import Image from "next/image";
 import UceTopMachine from "../UceTopMachine";
 import list01 from "@/asserts/uce/list-01.webp";
