@@ -30,10 +30,10 @@ const Slider = () => {
               <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority />
             </div>
             <div className="home-banner-text">
-              <h1 style={{ fontSize: "clamp(25px, 5vw, 60px)" }} className="home_banner1_text1">
+              <h1 style={{ fontSize: "clamp(25px, 5vw, 50px)" }} className="home_banner1_text1">
                 Drink Life, Not Just Water!
               </h1>
-              <h1 style={{ fontSize: "clamp(20px, 4vw, 40px)" }} className="home_banner2_text1">
+              <h1 style={{ fontSize: "clamp(20px, 4vw, 35px)" }} className="home_banner2_text1">
                 Boost Immunity with <span>Tyent Water</span>
               </h1>
             </div>
@@ -50,7 +50,7 @@ const Slider = () => {
             </div>
             <Leaf />
             <div className="home-banner-text">
-              <h1 style={{ fontSize: "clamp(30px, 5vw, 80px)" }} className="home_banner1_text1">
+              <h1 style={{ fontSize: "clamp(30px, 5vw, 60px)" }} className="home_banner1_text1">
                 Hydration That Heals
               </h1>
               <h1 style={{ fontSize: "clamp(16px, 4vw, 26px)" }} className="home_banner2_text1">
