@@ -3,11 +3,11 @@ import { Col, Row, Container } from "react-bootstrap";
 import { FaDroplet } from "react-icons/fa6";
 import filter from "@/asserts/filter.png";
 import Image from "next/image";
-import certified1 from "@/asserts/filter/certified1.png"
-import certified2 from "@/asserts/filter/certified2.png"
-import ansi from "@/asserts/filter/ansi.png"
-import epa from "@/asserts/filter/epa.png"
-import nsf from "@/asserts/filter/nsf.png"
+import certified1 from "@/asserts/filter/certified1.webp"
+import certified2 from "@/asserts/filter/certified2.webp"
+import ansi from "@/asserts/filter/ansi.webp"
+import epa from "@/asserts/filter/epa.webp"
+import nsf from "@/asserts/filter/nsf.webp"
 
 const Filter = () => {
   return (

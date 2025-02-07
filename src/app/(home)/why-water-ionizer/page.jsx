@@ -468,16 +468,20 @@ const page = () => {
                 position: "absolute",
                 top: "50%",
                 left: "50%",
-                transform: "translate(-50%, -50%)",
+                transform: "translate(-50%, -50%)", // Centers the div
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
                 color: "#ffffff", // Text color
                 textAlign: "center",
-                fontWeight: "700",
                 border: "4px solid #FFF",
                 padding: "30px",
                 borderRadius: "8px",
+                width: "80%", // Adjust width as needed
+                maxWidth: "900px", // Ensures it doesn't get too wide
               }}
             >
-              <p style={{ fontSize: "16px" }}>
+              <p>
                 Tyent water has a magical combination of selective antioxidant
                 molecular hydrogen and alkalinity.The selective antioxidant
                 molecular hydrogen works to counteract free radicals and reduce

@@ -5,50 +5,50 @@ import { Col, Row, Table } from "react-bootstrap";
 import "@/app/style/Benfits.css";
 import benfitsBanner from "@/asserts/benfits.png";
 import { IoWaterOutline } from "react-icons/io5";
-import weight from "@/asserts/health/weight.png";
-import digestive from "@/asserts/health/digestive.png";
-import cardiovascular from "@/asserts/health/cardiovascular.png";
-import immune from "@/asserts/health/immune.png";
-import liver from "@/asserts/health/liver.png";
-import oxygen from "@/asserts/health/oxygen.png";
-import kidneys from "@/asserts/health/kidneys.png";
-import spine from "@/asserts/health/spine.png";
-import blood from "@/asserts/health/blood.png";
-import bloodsugar from "@/asserts/health/bloodsugur.png";
-import breathing from "@/asserts/health/breathing.png";
-import chemistry from "@/asserts/health/chemistry.png";
-import glands from "@/asserts/health/glands.png";
-import eye from "@/asserts/health/eye.png";
-import protection from "@/asserts/health/protection.png";
-import coffe from "@/asserts/health/Coffee.png";
-import milktea from "@/asserts/health/milktea.png";
-import greentea from "@/asserts/health/greentea.png";
-import alcohol from "@/asserts/health/alcohol.png";
-import juices from "@/asserts/health/juices.png";
-import purifiedwater from "@/asserts/health/purified-water.png";
-import tap from "@/asserts/health/tap.png";
-import mineralwater from "@/asserts/health/mineral-water.png";
-import tyentwater from "@/asserts/health/tyentwater.png";
-import fracture from "@/asserts/health/fracture.png";
-import policy from "@/asserts/health/policy.png";
-import bpp from "@/asserts/health/bpp.png";
-import Diabetes from "@/asserts/health/Diabetesp.png";
-import heartp from "@/asserts/health/heartp.png";
-import cannerp from "@/asserts/health/cannerp.png";
-import artharitis from "@/asserts/health/artharitis.png";
-import kidneyp from "@/asserts/health/kidneyp.png";
-import energyp from "@/asserts/health/energyp.png";
-import Obesity from "@/asserts/health/Obesity.png";
-import Respiratory from "@/asserts/health/Respiratory.png";
-import yogo from "@/asserts/health/yogo.png";
-import skin from "@/asserts/health/skin.png";
-import sleep from "@/asserts/health/sleep.png";
-import Osteoporosisp from "@/asserts/health/Osteoporosisp.png";
-import GastricIssuesp from "@/asserts/health/GastricIssuesp.png";
-import BrainStroke from "@/asserts/health/BrainStroke.png";
-import Alzheimer from "@/asserts/health/Alzheimer.png";
-import fattyliver from "@/asserts/health/fattyliver.png";
-import ChronicFatigue from "@/asserts/health/ChronicFatigue.png";
+import weight from "@/asserts/health/weight.webp";
+import digestive from "@/asserts/health/digestive.webp";
+import cardiovascular from "@/asserts/health/cardiovascular.webp";
+import immune from "@/asserts/health/immune.webp";
+import liver from "@/asserts/health/liver.webp";
+import oxygen from "@/asserts/health/oxygen.webp";
+import kidneys from "@/asserts/health/kidneys.webp";
+import spine from "@/asserts/health/spine.webp";
+import blood from "@/asserts/health/blood.webp";
+import bloodsugar from "@/asserts/health/bloodsugur.webp";
+import breathing from "@/asserts/health/breathing.webp";
+import chemistry from "@/asserts/health/chemistry.webp";
+import glands from "@/asserts/health/glands.webp";
+import eye from "@/asserts/health/eye.webp";
+import protection from "@/asserts/health/protection.webp";
+import coffe from "@/asserts/health/Coffee.webp";
+import milktea from "@/asserts/health/milktea.webp";
+import greentea from "@/asserts/health/greentea.webp";
+import alcohol from "@/asserts/health/alcohol.webp";
+import juices from "@/asserts/health/juices.webp";
+import purifiedwater from "@/asserts/health/purified-water.webp";
+import tap from "@/asserts/health/tap.webp";
+import mineralwater from "@/asserts/health/mineral-water.webp";
+import tyentwater from "@/asserts/health/tyentwater.webp";
+import fracture from "@/asserts/health/fracture.webp";
+import policy from "@/asserts/health/policy.webp";
+import bpp from "@/asserts/health/bpp.webp";
+import Diabetes from "@/asserts/health/Diabetesp.webp";
+import heartp from "@/asserts/health/heartp.webp";
+import cannerp from "@/asserts/health/cannerp.webp";
+import artharitis from "@/asserts/health/artharitis.webp";
+import kidneyp from "@/asserts/health/kidneyp.webp";
+import energyp from "@/asserts/health/energyp.webp";
+import Obesity from "@/asserts/health/Obesity.webp";
+import Respiratory from "@/asserts/health/Respiratory.webp";
+import yogo from "@/asserts/health/yogo.webp";
+import skin from "@/asserts/health/skin.webp";
+import sleep from "@/asserts/health/sleep.webp";
+import Osteoporosisp from "@/asserts/health/Osteoporosisp.webp";
+import GastricIssuesp from "@/asserts/health/GastricIssuesp.webp";
+import BrainStroke from "@/asserts/health/BrainStroke.webp";
+import Alzheimer from "@/asserts/health/Alzheimer.webp";
+import fattyliver from "@/asserts/health/fattyliver.webp";
+import ChronicFatigue from "@/asserts/health/ChronicFatigue.webp";
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -716,16 +716,20 @@ const Page = () => {
               position: "absolute",
               top: "50%",
               left: "50%",
-              transform: "translate(-50%, -50%)",
+              transform: "translate(-50%, -50%)", // Centers the div
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               color: "#ffffff", // Text color
               textAlign: "center",
-              fontWeight: "700",
               border: "4px solid #FFF",
               padding: "30px",
               borderRadius: "8px",
+              width: "80%", // Adjust width as needed
+              maxWidth: "900px", // Ensures it doesn't get too wide
             }}
           >
-            <p style={{ fontSize: "16px" }}>
+            <p>
               Tyent water has a magical combination of selective antioxidant
               molecular hydrogen and alkalinity.The selective antioxidant
               molecular hydrogen works to counteract free radicals and reduce

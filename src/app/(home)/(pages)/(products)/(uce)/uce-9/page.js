@@ -5,33 +5,33 @@ import { Col, Container, Row, Table } from "react-bootstrap";
 import "@/app/style/Uce.css";
 import Image from "next/image";
 import UceTopMachine from "../UceTopMachine";
-import d1 from "@/asserts/uce/d1.png";
-import d2 from "@/asserts/uce/d2.png";
-import d3 from "@/asserts/uce/d3.png"; 
-import d4 from "@/asserts/uce/d4.png";
-import d5 from "@/asserts/uce/d5.png";
-import d6 from "@/asserts/uce/d6.png";
-import d7 from "@/asserts/uce/d7.png";
-import d8 from "@/asserts/uce/d8.png";
-import d9 from "@/asserts/uce/d9.png";
-import d10 from "@/asserts/uce/d10.png";
-import d11 from "@/asserts/uce/d11.png";
-import d12 from "@/asserts/uce/d12.png";
-import d13 from "@/asserts/uce/d13.png";
-import d14 from "@/asserts/uce/d14.png";
-import ucecableimage from "@/asserts/uce/ucecableimage.png";
+import d1 from "@/asserts/uce/d1.webp";
+import d2 from "@/asserts/uce/d2.webp";
+import d3 from "@/asserts/uce/d3.webp"; 
+import d4 from "@/asserts/uce/d4.webp";
+import d5 from "@/asserts/uce/d5.webp";
+import d6 from "@/asserts/uce/d6.webp";
+import d7 from "@/asserts/uce/d7.webp";
+import d8 from "@/asserts/uce/d8.webp";
+import d9 from "@/asserts/uce/d9.webp";
+import d10 from "@/asserts/uce/d10.webp";
+import d11 from "@/asserts/uce/d11.webp";
+import d12 from "@/asserts/uce/d12.webp";
+import d13 from "@/asserts/uce/d13.webp";
+import d14 from "@/asserts/uce/d14.webp";
+import ucecableimage from "@/asserts/uce/ucecableimage.webp";
 import OneTouchUceDisplay from "../OneTouchUceDisplay";
 import DisplayAnimation from "../DisplayAnimation";
 import NightModeDispay from "../NightModeDispay";
-import goodDesignaward from "@/asserts/uce/good-design-gold-award.png";
-import goodDesign from "@/asserts/uce/good-desig.png";
+import goodDesignaward from "@/asserts/uce/good-design-gold-award.webp";
+import goodDesign from "@/asserts/uce/good-desig.webp";
 import PRODUCTUCE1 from "@/asserts/uce/PRODUCTUCE-1.webp";
 import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp";
 import PRODUCTUCE3 from "@/asserts/uce/PRODUCTUCE-3.webp";
 import { RxDownload } from "react-icons/rx";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
-import uceBannerBlack from "@/asserts/uce/uceBannerBlack.png";
-import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.png";
+import uceBannerBlack from "@/asserts/uce/uceBannerBlack.webp";
+import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.webp";
 import list01 from "@/asserts/uce/list-01.webp";
 import UceDisplay from "../UceDisplay";
 import smpsplus from "@/asserts/whyTent/smpsplus.webp";
@@ -39,8 +39,8 @@ import plates_uce from "@/asserts/uce/plates_uce.webp"
 import PAST_UCE from "@/asserts/uce/PAST_UCE.webp"
 import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
 import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
-import JOGDail from "@/asserts/uce/JOGDail.png"
-import ucerotate from "@/asserts/uce/ucerotate.png"
+import JOGDail from "@/asserts/uce/JOGDail.webp"
+import ucerotate from "@/asserts/uce/ucerotate.webp"
 
 export const metadata = {
   title: "Tyent UCE Water Ionizer | Advanced Alkaline Water System",
@@ -52,7 +52,7 @@ const data = [
     icon: plates_uce,
     title: "9 Japanese Plates",
     content:
-      "The Tyent NMP-9 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -1050*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
+      "The Tyent UCE-9 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -1050*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
   },
   {
     icon: smpsplus,

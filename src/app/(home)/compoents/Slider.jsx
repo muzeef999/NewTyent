@@ -3,44 +3,32 @@
 import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import "@/app/style/ResponsiveBanner.css";
-import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.png";
+import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.webp";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
 import Display from "../(pages)/(products)/hybrid-h2/Display";
 import Leaf from "@/app/(home)/compoents/(Home)/Leaf";
 
 const Slider = () => {
-  const [bannerClass, setBannerClass] = useState("");
+  const [bannerIndex, setBannerIndex] = useState(0);
 
-  const bannerClasses = useMemo(() => ["home_banner_bg_one", "home_banner_bg_two"], []);
+  const banners = useMemo(() => ["home_banner_bg_one", "home_banner_bg_two"], []);
 
   useEffect(() => {
-    if (bannerClasses.length === 0) return; // Avoid running if array is empty
+    const interval = setInterval(() => {
+      setBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 30000); // Change banner every 1 minute (60,000 ms)
 
-    const storedBannerClass = localStorage.getItem("selectedBanner");
-    if (storedBannerClass) {
-      setBannerClass(storedBannerClass);
-    } else {
-      const randomClass =
-        bannerClasses[Math.floor(Math.random() * bannerClasses.length)];
-      setBannerClass(randomClass);
-      localStorage.setItem("selectedBanner", randomClass);
-    }
-  }, [bannerClasses]); // Now `bannerClasses` is stable due to useMemo
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [banners]);
 
   return (
     <div>
-      <div className={`home_banner_bg ${bannerClass}`}>
-        {bannerClass === "home_banner_bg_one" && (
+      <div className={`home_banner_bg ${banners[bannerIndex]}`}>
+        {banners[bannerIndex] === "home_banner_bg_one" && (
           <div>
             <div className="sky_Movie">
-              <Image
-                src={Banner1_sky}
-                alt="Home_banner"
-                layout="responsive"
-                priority
-              />
+              <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority />
             </div>
-
             <div className="home-banner-text">
               <h1 style={{ fontSize: "clamp(25px, 5vw, 60px)" }} className="home_banner1_text1">
                 Drink Life, Not Just Water!
@@ -49,22 +37,16 @@ const Slider = () => {
                 Boost Immunity with <span>Tyent Water</span>
               </h1>
             </div>
-
             <div className="responsive-container">
               <NmpDispalayfinal />
             </div>
           </div>
         )}
 
-        {bannerClass === "home_banner_bg_two" && (
+        {banners[bannerIndex] === "home_banner_bg_two" && (
           <div>
             <div className="sky_Movie">
-              <Image
-                src={Banner1_sky}
-                alt="Home_banner"
-                layout="responsive"
-                priority
-              />
+              <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority />
             </div>
             <Leaf />
             <div className="home-banner-text">

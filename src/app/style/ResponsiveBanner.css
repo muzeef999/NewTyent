@@ -113,15 +113,16 @@ display: flex;
 
   
     .home_banner_bg_two {
-      background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.png");
+      background-image: url("../../asserts/homeBanners/banner2/desktop_banner_bg.webp");
       aspect-ratio: 16/9;
+      height: 90vh;
     }
 
     .responsive-container-hybrid {
       position: absolute;
       top: 51%;
-      right: 9.1%;
-      width: 5.1%;
+      right: 12.4%;
+      width: 4.7%;
       aspect-ratio: 16/9;      
       z-index: -9; /* se lower  z-index to ensure it appears background */  
     }
@@ -168,7 +169,7 @@ display: flex;
 
 
     .home_banner_bg_two {
-      background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.png");
+      background-image: url("../../asserts/homeBanners/banner2/mobile_banner_bg.webp");
       aspect-ratio: 1/1;
     }
 
@@ -248,7 +249,7 @@ display: flex;
 .home_banner1_text1 {
   font-weight: 900;
   color: rgba(255, 255, 255, 0.1);
-  background-image: url("../../asserts/homeBanners/water.png");
+  background-image: url("../../asserts/homeBanners/water.webp");
   background-repeat: repeat-x;
   text-transform: uppercase;
  background-size: cover;

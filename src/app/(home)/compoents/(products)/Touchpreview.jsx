@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import React, { useEffect } from "react";
-import spec from "@/asserts/nmp/spec.png"
+import spec from "@/asserts/nmp/spec.webp"
 import "@/app/style/Nmp.css"
 import Aos from "aos";
 

@@ -7,9 +7,9 @@ import { PiPlantLight } from "react-icons/pi";
 import { IoHappyOutline } from "react-icons/io5";
 import { PiWifiNoneDuotone } from "react-icons/pi";
 import { MdOutlineTouchApp } from "react-icons/md";
-import corevalues from "@/asserts/aboutus/corevalues.png";
-import CoreStrategy from "@/asserts/aboutus/CoreStrategy.png";
-import maraketing from "@/asserts/aboutus/maraketing.png";
+import corevalues from "@/asserts/aboutus/corevalues.webp";
+import CoreStrategy from "@/asserts/aboutus/CoreStrategy.webp";
+import maraketing from "@/asserts/aboutus/maraketing.webp";
 
 export const metadata = {
   title: "Tyent Global Presence - Trusted Worldwide",

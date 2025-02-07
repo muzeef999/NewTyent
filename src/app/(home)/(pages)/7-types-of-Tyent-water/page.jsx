@@ -3,30 +3,30 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import "@/app/style/TypesofTyentwater.css";
-import oral_care from "@/asserts/7-types-of-water/oral_care.png";
-import Extreme_Skin_Issues from "@/asserts/7-types-of-water/Extreme_Skin_Issues.png";
-import Commercial_Use from "@/asserts/7-types-of-water/Commercial_Use.png";
-import Cleaning_Reducing_Germs from "@/asserts/7-types-of-water/Cleaning_Reducing_Germs.png";
-import Chemical_free_sanitizer from "@/asserts/7-types-of-water/Chemical_free_sanitizer.png";
+import oral_care from "@/asserts/7-types-of-water/oral_care.webp";
+import Extreme_Skin_Issues from "@/asserts/7-types-of-water/Extreme_Skin_Issues.webp";
+import Commercial_Use from "@/asserts/7-types-of-water/Commercial_Use.webp";
+import Cleaning_Reducing_Germs from "@/asserts/7-types-of-water/Cleaning_Reducing_Germs.webp";
+import Chemical_free_sanitizer from "@/asserts/7-types-of-water/Chemical_free_sanitizer.webp";
 
-import FaceWash from "@/asserts/7-types-of-water/FaceWash.png";
-import Haircare from "@/asserts/7-types-of-water/HairCare.png";
-import Polishing from "@/asserts/7-types-of-water/Polishing.png";
-import Cleaning from "@/asserts/7-types-of-water/Cleaning.png";
-import Beauty_water_for_pets from "@/asserts/7-types-of-water/Beauty_water_for_pets.png";
-import frozen_Food from "@/asserts/7-types-of-water/frozenFood.png";
+import FaceWash from "@/asserts/7-types-of-water/FaceWash.webp";
+import Haircare from "@/asserts/7-types-of-water/HairCare.webp";
+import Polishing from "@/asserts/7-types-of-water/Polishing.webp";
+import Cleaning from "@/asserts/7-types-of-water/Cleaning.webp";
+import Beauty_water_for_pets from "@/asserts/7-types-of-water/Beauty_water_for_pets.webp";
+import frozen_Food from "@/asserts/7-types-of-water/frozenFood.webp";
 
-import Drinking_water_during_food from "@/asserts/7-types-of-water/Drinking_water_during_food.png";
-import Baby_Food from "@/asserts/7-types-of-water/Baby_Food.png";
-import Medication from "@/asserts/7-types-of-water/Medication.png";
+import Drinking_water_during_food from "@/asserts/7-types-of-water/Drinking_water_during_food.webp";
+import Baby_Food from "@/asserts/7-types-of-water/Baby_Food.webp";
+import Medication from "@/asserts/7-types-of-water/Medication.webp";
 
-import CoffeeTeaSoups from "@/asserts/7-types-of-water/CoffeeTeaSoups.png";
-import Cooking from "@/asserts/7-types-of-water/Cooking.png";
-import Plants from "@/asserts/7-types-of-water/Plants.png";
+import CoffeeTeaSoups from "@/asserts/7-types-of-water/CoffeeTeaSoups.webp";
+import Cooking from "@/asserts/7-types-of-water/Cooking.webp";
+import Plants from "@/asserts/7-types-of-water/Plants.webp";
 
-import ToxinRemovalfromFruitsandVegetables from "@/asserts/7-types-of-water/ToxinRemovalfromFruitsandVegetables.png";
-import DishCleaning from "@/asserts/7-types-of-water/DishCleaning.png";
-import StainRemoval from "@/asserts/7-types-of-water/StainRemoval.png";
+import ToxinRemovalfromFruitsandVegetables from "@/asserts/7-types-of-water/ToxinRemovalfromFruitsandVegetables.webp";
+import DishCleaning from "@/asserts/7-types-of-water/DishCleaning.webp";
+import StainRemoval from "@/asserts/7-types-of-water/StainRemoval.webp";
 
 import { FaDotCircle } from "react-icons/fa";
 

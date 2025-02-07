@@ -9,10 +9,10 @@ import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
 import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
 import minerals from "@/asserts/why ionizer/minerals.png";
-import puredrink from "@/asserts/health/puredrink.png";
-import Molecular from "@/asserts/health/Molecular.png";
-import alkaline from "@/asserts/health/Natural minerals.png";
-import watersoda from "@/asserts/health/Micro-clustered water.png";
+import puredrink from "@/asserts/health/puredrink.webp";
+import Molecular from "@/asserts/health/Molecular.webp";
+import alkaline from "@/asserts/health/Natural minerals.webp";
+import watersoda from "@/asserts/health/Micro-clustered water.webp";
 import HomeProduct from "./compoents/(Home)/HomeProduct";
 
 const TyentvsKAngan = dynamic(
