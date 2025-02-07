@@ -163,8 +163,8 @@ const videos = [
   },
   {
     id: 9,
-    src: "https://www.youtube.com/@TyentIndia3170",
-    description: "Visit our YouTube channel for more video testimonials",
+    src: "https://www.youtube.com/embed/Kdrdsgzpni8?si=7UR-rQl-DOVRpYZx",
+    description: "𝐋𝐚𝐤𝐬𝐡𝐦𝐚𝐧𝐑𝐚𝐨's remarkable journey in choosing 𝐓𝐲𝐞𝐧𝐭",
   },
 ];
 
@@ -215,7 +215,7 @@ const icons = [
     id: 8,
     icon: icon,
     name: "Robin Uttapa",
-    designation: "former indian cricketer",
+    designation: "Former Indian Cricketer",
   },
   {
     id: 9,
@@ -287,7 +287,7 @@ const icons = [
     id: 20,
     icon: icon,
     name: "Vamshidhar Reddy",
-    designation: "syntaxarts (CEO)",
+    designation: "Syntaxarts (CEO)",
   },
   {
     id: 21,
