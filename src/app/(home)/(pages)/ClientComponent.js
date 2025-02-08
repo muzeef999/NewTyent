@@ -44,7 +44,7 @@ export default function ClientComponent({ children, session }) {
 
   return (
     <SessionProvider session={session}>
-       <Toaster richColors position="top-right" />
+       <Toaster richColors position="top-right"  style={{marginTop:'70px'}}/>
       <Provider store={store}>
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>

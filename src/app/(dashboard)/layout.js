@@ -2,7 +2,8 @@
 import { useState } from "react";
 import DashboardBar from "./compoents/DashboardBar";
 import Sidebar from "./compoents/Sidebar";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { Provider } from "react-redux";

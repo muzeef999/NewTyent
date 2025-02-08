@@ -1,5 +1,6 @@
 import { setUser } from '@/app/Redux/authSlice';
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react'
 import { FaSearch, FaUser } from 'react-icons/fa'
 import { IoBagHandleOutline } from 'react-icons/io5';
@@ -9,11 +10,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const DashboardBar = ({toggleSidebar}) => {
  
+
   const { data: session } = useSession();
   const dispatch = useDispatch();
   
   const userData = useSelector((state) => state.auth.user); 
-
+ const router = useRouter();
 
 
     useEffect(() => {
@@ -59,11 +61,6 @@ const DashboardBar = ({toggleSidebar}) => {
                         Hi, {userData.name || "User"}
                       </button>
                       <ul className="dropdown-menu dropdown-menu-end">
-                        <li>
-                          <button className="dropdown-item">
-                            <IoBagHandleOutline /> Your Orders
-                          </button>
-                        </li>
                         <li>
                           <button
                             className="dropdown-item"
