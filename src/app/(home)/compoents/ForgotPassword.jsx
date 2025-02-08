@@ -15,6 +15,8 @@ const ForgotPassword = ({ setShowLoginModal }) => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
+  
 
   // Handle OTP input change
   const handleOtpChange = (value, index) => {
@@ -162,13 +164,24 @@ const ForgotPassword = ({ setShowLoginModal }) => {
             </div>
           </div>
 
-          <Input
-            type="password"
-            label="New Password"
-            placeholder="Enter new password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
+          <div><label htmlFor="New Password" className="form-label">
+          New Password
+            </label>
+             <InputGroup>
+             
+      <Form.Control
+        type={showPassword ? "text" : "password"}
+        name="password"
+        placeholder="New Password"
+        value={newPassword}
+        onChange={(e) => setNewPassword(e.target.value)}
+      />
+      <InputGroup.Text onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer" }}>
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </InputGroup.Text>
+    </InputGroup>
+    </div>
+
           <Button type="submit" name={loading ? (<><Spinner size="sm" /> &nbsp; {"Reset Password"} </>)  : "Reset Password"} disabled={loading} />
         </form>
       )}

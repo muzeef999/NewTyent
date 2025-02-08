@@ -3,12 +3,14 @@
 import React, { useState } from "react";
 import Input from "./Input/Input";
 import Button from "./Button/Button";
-import { Spinner } from "react-bootstrap";
+import { Form, InputGroup, Spinner } from "react-bootstrap";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import Login from "./Login";
 import { IoMdClose } from "react-icons/io";
 import { toast } from "sonner";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 const Signup = ({ setShowLoginModal }) => {
   const [form, setForm] = useState({
@@ -16,6 +18,7 @@ const Signup = ({ setShowLoginModal }) => {
     phoneNumber: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -212,14 +215,24 @@ const Signup = ({ setShowLoginModal }) => {
               </div>
             )}
 
-            <Input
-              type="password"
-              name="password"
-              label="Password"
-              placeholder="Enter your password"
-              value={form.password}
-              onChange={handleChange}
-            />
+<div><label htmlFor="Password" className="form-label">
+              Password
+            </label>
+             <InputGroup>
+             
+      <Form.Control
+        type={showPassword ? "text" : "password"}
+        name="password"
+        placeholder="Enter your password"
+        value={form.password}
+        onChange={handleChange}
+      />
+      <InputGroup.Text onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer" }}>
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </InputGroup.Text>
+    </InputGroup>
+    </div>
+
 
             <Button
               type="submit"

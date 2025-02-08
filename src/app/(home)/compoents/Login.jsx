@@ -10,8 +10,10 @@ import Button from "./Button/Button";
 import Signup from "./Signup";
 import ForgotPassword from "./ForgotPassword";
 import { IoMdClose } from "react-icons/io";
-import { Spinner } from "react-bootstrap";
+import { Form, InputGroup, Spinner } from "react-bootstrap";
 import { toast } from "sonner";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 const Login = ({ setShowLoginModal }) => {
   const [showSignup, setShowSignup] = useState(false);
@@ -20,6 +22,8 @@ const Login = ({ setShowLoginModal }) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -99,14 +103,21 @@ const Login = ({ setShowLoginModal }) => {
               enableSearch
             />
             <br />
-            <Input
-              type="password"
-              name="password"
-              label="Password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <label htmlFor="Password" className="form-label">
+              Password
+            </label>
+            <InputGroup>
+      <Form.Control
+        type={showPassword ? "text" : "password"}
+        name="password"
+        placeholder="Enter your password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <InputGroup.Text onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer" }}>
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </InputGroup.Text>
+    </InputGroup>
 
             <p
               style={{
