@@ -66,8 +66,8 @@ html {
 
 .counter {
   position: absolute;
-  top: 2px;
-  right: 10px;
+  top: -13px;
+  right: -2px;
  width: 24px;
  height: 24px;
   background: #FFF;
@@ -734,4 +734,11 @@ padding-left: 48px !important;
 /* Hover effect to scale */
 .floating-button:hover {
   transform: scale(1.1);
+}
+
+  /* Desktop View */
+  @media (min-width: 768px) {
+  .sectionSection {
+    margin-top: -110px;
+  }
 }

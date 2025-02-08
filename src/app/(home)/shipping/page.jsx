@@ -14,6 +14,7 @@ import { IoMdAdd } from "react-icons/io";
 import dynamic from "next/dynamic";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
 import OrderComponent from "./OrderComponent";
+import { useRouter } from "next/navigation";
 
 const CartItems = dynamic(() => import("@/app/(home)/compoents/CartItems"), {
   srr: false,
@@ -32,9 +33,13 @@ const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"), {
 
 const Page = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
+
   const { user } = useSelector((state) => state.auth);
   const { products, loading, totalAmount, deliverCharge, totalItems } =
     useSelector((state) => state.cart);
+
+
 
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [activeAccordion, setActiveAccordion] = useState("flush-collapseOne");
@@ -45,6 +50,16 @@ const Page = () => {
   const [totalItemsShows, setTotalItemsShows] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      return; 
+    }
+  
+    if (totalItems === 0 && !loading) {
+      router.push("/"); 
+    }
+  }, [totalItems, products, loading, router]);
 
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -409,7 +424,7 @@ const Page = () => {
                       ))}
                     </>
                   ) : (
-                    <p>No delivery addresses available.</p>
+                    <p className="text-center p-3">No delivery addresses available.</p>
                   )}
                 </div>
               </div>

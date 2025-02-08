@@ -25,7 +25,6 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import { toast } from "sonner";
 import { IoPeopleCircleOutline } from "react-icons/io5";
 
-
 const AppBar = () => {
   const { data: session } = useSession();
   const dispatch = useDispatch();
@@ -124,60 +123,66 @@ const AppBar = () => {
             </div>
           </div>
 
-          <div className="d-flex align-items-center" style={{ cursor: "pointer" }}>
-    {isLoading ? (
-      <p className="mb-0">Loading...</p> // Show loading text before userData is available
-    ) : userData ? (
-      <div className="btn-group">
-        <button
-          style={{ textDecoration: "none" }}
-          type="button"
-          className="btn btn-link text-white dropdown-toggle p-0"
-          data-bs-toggle="dropdown"
-        >
-          Hi, {userData.name || "User"}
-        </button>
-        <ul className="dropdown-menu dropdown-menu-end" style={{ zIndex: "9999" }}>
-          {userData.role === "user" && (
-            <li>
-              <button className="dropdown-item">
-                <IoBagHandleOutline /> Your Orders
-              </button>
-            </li>
-          )}
-          {userData.role === "admin" && (
-            <Link className="dropdown-item" href={"/dashboard"}>
-              <IoGridOutline /> Dashboard
-            </Link>
-          )}
-          {userData.role === "manager" && (
-            <Link className="dropdown-item" href={"/leads"}>
-              <IoPeopleOutline /> Leads
-            </Link>
-          )}
-          {userData.role === "employee" && (
-            <Link className="dropdown-item" href={"/complains"}>
-              <IoPeopleCircleOutline /> Complains
-            </Link>
-          )}
-          <li>
-            <button className="dropdown-item" onClick={handleLogout}>
-              <LuLogOut /> Logout
-            </button>
-          </li>
-        </ul>
-      </div>
-    ) : (
-      <p
-        className="mb-0"
-        style={{ overflow: "hidden", whiteSpace: "nowrap" }}
-        onClick={() => setShowLoginModal(true)}
-      >
-        <FaUser size={15} /> Login
-      </p>
-    )}
-  </div>
-</div>
+          <div
+            className="d-flex align-items-center"
+            style={{ cursor: "pointer" }}
+          >
+            {isLoading ? (
+              <p className="mb-0">Loading...</p> // Show loading text before userData is available
+            ) : userData ? (
+              <div className="btn-group">
+                <button
+                  style={{ textDecoration: "none" }}
+                  type="button"
+                  className="btn btn-link text-white dropdown-toggle p-0"
+                  data-bs-toggle="dropdown"
+                >
+                  Hi, {userData.name || "User"}
+                </button>
+                <ul
+                  className="dropdown-menu dropdown-menu-end"
+                  style={{ zIndex: "9999" }}
+                >
+                  {userData.role === "user" && (
+                    <li>
+                      <button className="dropdown-item">
+                        <IoBagHandleOutline /> Your Orders
+                      </button>
+                    </li>
+                  )}
+                  {userData.role === "admin" && (
+                    <Link className="dropdown-item" href={"/dashboard"}>
+                      <IoGridOutline /> Dashboard
+                    </Link>
+                  )}
+                  {userData.role === "manager" && (
+                    <Link className="dropdown-item" href={"/leads"}>
+                      <IoPeopleOutline /> Leads
+                    </Link>
+                  )}
+                  {userData.role === "employee" && (
+                    <Link className="dropdown-item" href={"/complains"}>
+                      <IoPeopleCircleOutline /> Complains
+                    </Link>
+                  )}
+                  <li>
+                    <button className="dropdown-item" onClick={handleLogout}>
+                      <LuLogOut /> Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <p
+                className="mb-0"
+                style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+                onClick={() => setShowLoginModal(true)}
+              >
+                <FaUser size={15} /> Login
+              </p>
+            )}
+          </div>
+        </div>
         {/* Navbar */}
         <nav
           className={`navbar  navbar-expand-xl  sticky-top navbar-light flex-column custom-navbar  ${
@@ -490,16 +495,16 @@ const AppBar = () => {
             {/* Cart Icon */}
             <div
               className="d-flex align-items-center"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", position:'relative' }}
               onClick={() => setCartShow(true)}
             >
-              <div className="counter m-2">{totalItems || 0}</div>
+              <div className="counter m-2">{Number(totalItems)}</div>
               <PiShoppingCartLight size={40} color="#008AC7" />
             </div>
           </div>
 
           {/* Product Page */}
-          {isProductOpen && (
+          {isProductOpen && ( 
             <div
               className={`responsive-product-container ${
                 isProductOpen ? "expanded" : ""

@@ -92,8 +92,8 @@ const initialState = {
   isFetching: false, // For global cart fetching
   loadingIds: {}, // For item-specific loading (e.g., updating/deleting)
   error: null,
-  totalItems: 0,
   totalAmount: 0,
+  totalItems: 0,
   deliverCharge: 10,
 };
 
@@ -107,6 +107,7 @@ const cartSlice = createSlice({
       state.userId = null;
       state.isFetching = false;
       state.error = null;
+      calculateTotal(state);
     },
     setItemLoading: (state, action) => {
       state.loadingIds[action.payload] = true;
@@ -118,58 +119,65 @@ const cartSlice = createSlice({
     clearItemLoading: (state, action) => {
       delete state.loadingIds[action.payload];
     },
+  addToCart: (state, action) => {
+    const existingProduct = state.products.find(
+      (product) => product.id === action.payload.id
+    );
+
+    if (existingProduct) {
+      existingProduct.quantity += 1; // Increase quantity
+    } else {
+      state.products = [...state.products, { ...action.payload, quantity: 1 }];
+    }
+
+    calculateTotal(state); // Recalculate after adding product
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchCart.pending, (state) => {
-        state.isFetching = true;
-        state.error = null;
-      })
-      .addCase(fetchCart.fulfilled, (state, action) => {
-        state.isFetching = false;
-        if (action.payload && action.payload.products) {
-          state.products = action.payload.products;
-          state.userId = action.payload.userId;
-        } else {
-          state.products = [];
-          state.userId = null;
-        }
-        calculateTotal(state);
-      })
-      .addCase(fetchCart.rejected, (state, action) => {
-        state.isFetching = false;
-        state.error = action.payload;
-      })
-      .addCase(postCart.fulfilled, (state, action) => {
-        state.products.push(action.payload);
-        calculateTotal(state);
-      })
-      .addCase(updateItemQuantity.pending, (state, action) => {
-        state.loadingIds[action.meta.arg.productName] = true; // Specific product loading
-      })
-      .addCase(updateItemQuantity.fulfilled, (state, action) => {
-        state.loadingIds = {};
-        state.products = action.payload.cart.products;
-        calculateTotal(state);
-      })
-      .addCase(updateItemQuantity.rejected, (state, action) => {
-        state.loadingIds = {};
-        state.error = action.payload;
-      })
-      .addCase(deleteProductAction.pending, (state, action) => {
-        state.loadingIds[action.meta.arg.productName] = true;
-      })
-      .addCase(deleteProductAction.fulfilled, (state, action) => {
-        state.loadingIds = {};
-        state.products = action.payload.cart.products;
-        calculateTotal(state);
-      })
-      .addCase(deleteProductAction.rejected, (state, action) => {
-        state.loadingIds = {};
-        state.error = action.payload;
-      });
+  updateQuantity: (state, action) => {
+    const { id, quantity } = action.payload;
+    state.products = state.products.map((product) =>
+      product.id === id ? { ...product, quantity } : product
+    );
+
+    calculateTotal(state); // Recalculate after updating quantity
   },
-});
+  removeFromCart: (state, action) => {
+    state.products = state.products.filter(
+      (product) => product.id !== action.payload
+    );
+
+    calculateTotal(state); // Recalculate after removing product
+  },
+},
+extraReducers: (builder) => {
+  builder
+    .addCase(fetchCart.pending, (state) => {
+      state.isFetching = true;
+      state.error = null;
+    })
+    .addCase(fetchCart.fulfilled, (state, action) => {
+      state.isFetching = false;
+      state.products = action.payload?.products || [];
+      state.userId = action.payload?.userId || null;
+      calculateTotal(state);
+    })
+    .addCase(fetchCart.rejected, (state, action) => {
+      state.isFetching = false;
+      state.error = action.payload;
+    })
+    .addCase(postCart.fulfilled, (state, action) => {
+      state.products.push(action.payload);
+      calculateTotal(state);
+    })
+    .addCase(updateItemQuantity.fulfilled, (state, action) => {
+      state.products = action.payload.cart.products;
+      calculateTotal(state);
+    })
+    .addCase(deleteProductAction.fulfilled, (state, action) => {
+      state.products = action.payload.cart.products;
+      calculateTotal(state);
+    });
+  },
+  },);
 
 // Helper function to calculate totals
 const calculateTotal = (state) => {
@@ -177,11 +185,11 @@ const calculateTotal = (state) => {
   let totalItems = 0;
 
   state.products.forEach((product) => {
-    totalAmount += product.price * product.quantity;
-    totalItems += product.quantity;
+    totalAmount += (product.price ||0)* (product.quantity || 0);
+    totalItems += product.quantity || 0;
   });
 
-  state.totalAmount = totalAmount + state.deliverCharge;
+  state.totalAmount = totalAmount + (state.deliverCharge || 0);
   state.totalItems = totalItems;
 };
 

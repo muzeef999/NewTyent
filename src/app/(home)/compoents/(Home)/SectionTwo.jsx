@@ -9,8 +9,8 @@ import CountUp from "react-countup";
 
 const SectionTwo = () => {
   return (
-    <div className="container d-flex justify-content-center align-items-center" style={{width:'100%',  overflow: "hidden", position: 'relative' }}>
-      <Row className="sectiontwo" style={{ height: "auto" }}>
+    <div className="container d-flex justify-content-center align-items-center" style={{width:'100%',  position: 'relative' }}>
+      <Row className="sectiontwo">
         <Col
           lg={6}
           md={12}
@@ -32,7 +32,7 @@ const SectionTwo = () => {
           <h1
             data-aos="zoom-in"
             className="big-number"
-            style={{ color: "#008AC7", fontSize: "160px", fontWeight: "bold" }}
+            style={{ color: "#008AC7", fontSize: "160px", fontWeight: "bold", transform: "scaleY(1.2)", }}
           >
             <CountUp start={0} end={9} duration={1.5} />
           </h1>

@@ -98,7 +98,7 @@ const Home = () => {
       <Slider />
 
     
-      <div className="section-spacing">
+      <div className="section-spacing sectionSection">
         <SectionTwo />
       </div>
 
