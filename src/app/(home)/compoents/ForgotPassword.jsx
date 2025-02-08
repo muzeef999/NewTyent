@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import Input from "./Input/Input";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
-import { Spinner } from "react-bootstrap";
+import { Form, InputGroup, Spinner } from "react-bootstrap";
 import Button from "./Button/Button";
 import { IoMdClose } from "react-icons/io";
 import { toast } from "sonner";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 const ForgotPassword = ({ setShowLoginModal }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
