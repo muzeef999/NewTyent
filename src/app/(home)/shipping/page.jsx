@@ -50,6 +50,8 @@ const Page = () => {
   const [totalItemsShows, setTotalItemsShows] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [showAll, setShowAll] = useState(false);
+  const [refreshKeyOne, setRefreshKeyOne] = useState(0);
+
 
   useEffect(() => {
     if (products.length > 0) {
@@ -86,6 +88,10 @@ const Page = () => {
     }
   }, [shippingData]);
 
+  const refreshAccordionOne = () => {
+    setRefreshKeyOne((prevKey) => prevKey + 1);
+  };
+  
   // **Handle Address Selection**
   const handleAddressSelect = (id) => {
     const address = shippingData?.shippingAddresses
@@ -187,7 +193,7 @@ const Page = () => {
             id="accordionPanelsStayOpenExample"
           >
             {/* Accordion Item #1 */}
-            <div className="accordion-item">
+            <div className="accordion-item"  key={refreshAccordionOne} >
               <h2 className="accordion-header m-0" id="flush-headingOne">
                 <button
                   className={`accordion-button ${
@@ -464,7 +470,10 @@ const Page = () => {
                 aria-labelledby="flush-headingTwo"
                 data-bs-parent="#accordionPanelsStayOpenExample"
               >
-                <ShippingAddress handleAccordionClick={handleAccordionClick} />
+                <ShippingAddress 
+                key={refreshKeyOne} 
+                refreshAccordionOne={refreshAccordionOne} // Pass refresh function
+                handleAccordionClick={handleAccordionClick} />
               </div>
             </div>
 

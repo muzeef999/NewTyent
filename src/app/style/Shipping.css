@@ -48,31 +48,31 @@
 }
 
 .saveanddelivery{
-  color: #FFF;
-  background-color: #008AC7;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0;
-  width: 30%;
+    color: #fff;
+    background-color: #008ac7;
+    border-radius: 8px;
+    
+    border: none;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex
+;
 }
 
 .saveanddelivery:hover {
-  color: #FFF;
-  background-color: #008AC7;
-  padding: 10px 20px;
+  color: #008ac7;
+  background-color: transparent;
+  border-radius: 8px 16px;
+  
   border: none;
-  border-radius: 0;
-  width: 30%;
+  border: 1px solid #008ac7;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex
 }
 
-.saveanddelivery:active {
-  color: #FFF;
-  background-color: #008AC7;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0;
-  width: 30%;
-}
 
 
 .cancel{
@@ -119,17 +119,18 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
   .customPriceCard{
     position: relative;
     background-color: #FFF;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
     padding: 10px;
     width: 100% !important;
+    top: 10px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1011px) {
   
   .customPriceCard{
     background-color: #FFF;

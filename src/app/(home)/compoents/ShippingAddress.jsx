@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Button, Col, Form, Row, Spinner } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import "@/app/style/Shipping.css";
+import { toast } from 'sonner';
 
-const ShippingAddress = ({ handleAccordionClick }) => {
+const ShippingAddress = ({ handleAccordionClick, refreshAccordionOne  }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     address: "",
@@ -12,6 +13,9 @@ const ShippingAddress = ({ handleAccordionClick }) => {
     country: "",
     postalCode: "",
   });
+
+  const [loading, setLoading] = useState(false); // Spinner state
+
 
   const { user } = useSelector((state) => state.auth);
 
@@ -24,6 +28,7 @@ const ShippingAddress = ({ handleAccordionClick }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Show spinner
     try {
       const response = await axios.post("/api/shipping", {
         _id: user.id, // Replace with actual user ID
@@ -31,13 +36,17 @@ const ShippingAddress = ({ handleAccordionClick }) => {
       });
 
       if (response.status === 200) {
-        alert("Address saved successfully!");
+        toast.success("Address saved successfully!")
+        handleAccordionClick("flush-collapseTwo"); 
+        refreshAccordionOne(); // Refresh Accordion One
       } else {
-        alert(`Error: ${response.data.error}`);
+        toast.error(`Error: ${response.data.error}`)
       }
     } catch (error) {
-      alert("Something went wrong!");
+      toast.error(`Error: ${error.message}`)
       console.error(error);
+    } finally {
+      setLoading(false); // Hide spinner
     }
   };
 
@@ -117,7 +126,20 @@ const ShippingAddress = ({ handleAccordionClick }) => {
         </Row>
         <div className="d-flex">
           <Button className="saveanddelivery" type="submit">
-            SAVE AND DELIVER HERE
+          {loading ? (
+              <>
+                <Spinner
+                  as="span"
+                  animation="border"
+                  size="sm"
+                  role="status"
+                  aria-hidden="true"
+                />{" "}&nbsp;&nbsp;
+                Saving...
+              </>
+            ) : (
+              "Save and Deliver Here"
+            )}
           </Button>
           <button
             onClick={() => handleAccordionClick("flush-collapseTwo")}

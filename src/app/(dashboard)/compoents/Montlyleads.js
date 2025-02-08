@@ -11,7 +11,7 @@ const LeadDashboard = () => {
   const [selectedMonth, setSelectedMonth] = useState(new Date());
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/lead")
+    fetch("/api/lead")
       .then((res) => res.json())
       .then((data) => {
         setLeads(data);
@@ -40,7 +40,7 @@ const LeadDashboard = () => {
       }
 
       stats[assignedTo].assigned += 1;
-      if (status === "Completed") stats[assignedTo].completed += 1;
+      if (status === "Installed") stats[assignedTo].completed += 1;
     });
 
     const sortedStats = Object.entries(stats).map(([manager, data]) => ({
