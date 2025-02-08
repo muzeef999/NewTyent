@@ -1,3 +1,4 @@
+"use cllient"
 import React from 'react'
 
 const page = () => {

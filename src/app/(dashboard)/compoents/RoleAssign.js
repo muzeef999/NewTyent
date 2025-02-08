@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { Spinner, Button, Form, Container, Card, Alert } from "react-bootstrap";
 import { toast } from "react-toastify";

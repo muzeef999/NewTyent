@@ -1,3 +1,4 @@
+"use client"
 import { setUser } from '@/app/Redux/authSlice';
 import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
