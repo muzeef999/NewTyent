@@ -296,7 +296,7 @@ html {
 .nav-link.active::after {
   content: ''; /* Empty content to create the underline */
   position: absolute;
-  bottom: -3px; /* Positions the underline 3px below the text */
+  bottom: -5px; /* Positions the underline 3px below the text */
   left: 50%; /* Starts the underline from the middle */
   transform: translateX(-50%); /* Centers the underline by adjusting from the left */
   width: 75%; /* Width of the underline */
