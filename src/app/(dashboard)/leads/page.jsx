@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import {
   Table,
   Form,
@@ -9,7 +9,6 @@ import {
   InputGroup,
   Button,
   Spinner,
-  Badge,
 } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -23,7 +22,6 @@ import { BsTelephone } from "react-icons/bs";
 import {
   fetchLeads,
   handleDeleteLead,
-  setFilteredLeads,
   setLeads,
   updateLead,
 } from "../../Redux/leadSlice";
@@ -31,7 +29,7 @@ import { fetchManagers } from "../../Redux/managerSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AgCharts } from "ag-charts-react";
 import { useSession } from "next-auth/react";
-import "@/app/style/Dashboard.css"
+import "@/app/style/Dashboard.css";
 
 const statusColors = {
   New: "#d6d6d6",
@@ -46,232 +44,198 @@ const statusColors = {
 const LeadsPage = () => {
   const dispatch = useDispatch();
   const { data: session } = useSession();
-
   const { role: userRole, name: username } = session?.user || {};
 
+  // State for updating leads
   const [updateData, setUpdateData] = useState({
     id: "",
     assignedTo: "",
     status: "",
   });
 
-  const { leads, filteredLeads, loading } = useSelector((state) => state.leads);
+  // Redux state for leads and managers
+  const { leads, loading } = useSelector((state) => state.leads);
   const { managers, loadingManagers } = useSelector((state) => state.managers);
+
+  // Filter states
   const [selectedDate, setSelectedDate] = useState(null);
   const [location, setLocation] = useState("");
   const [filterType, setFilterType] = useState("date"); // "date" or "month"
+  const [statusFilter, setStatusFilter] = useState(""); // e.g., "New", "Contacted & send details", etc.
 
+  // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const leadsPerPage = 15; // Number of leads per page
+  const leadsPerPage = 15;
 
-  // Calculate the total number of pages
-  const totalPages = Math.ceil(leads.length / leadsPerPage);
-
-  // Slice the leads array to show only the required leads per page
-  const paginatedLeads = leads.slice(
-    (currentPage - 1) * leadsPerPage,
-    currentPage * leadsPerPage
-  );
-
-
-
+  // Fetch leads and managers on mount
   useEffect(() => {
     dispatch(fetchLeads(userRole, username));
     dispatch(fetchManagers());
   }, [dispatch, userRole, username]);
 
+  // Reset pagination when any filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedDate, filterType, location, statusFilter]);
 
-  const handleUpdateChange = (e) => {
+  // Compute filtered leads (date/month, location, and status) using useMemo
+  const computedFilteredLeads = useMemo(() => {
+    return leads.filter((lead) => {
+      const leadDate = new Date(lead.createdAt);
+      const dateMatch =
+        filterType === "date"
+          ? !selectedDate || leadDate.toDateString() === selectedDate.toDateString()
+          : !selectedDate ||
+            (leadDate.getMonth() === selectedDate.getMonth() &&
+             leadDate.getFullYear() === selectedDate.getFullYear());
+      const locationMatch =
+        !location ||
+        (lead.location &&
+          lead.location.toLowerCase().includes(location.toLowerCase()));
+      let statusMatch = true;
+      if (statusFilter) {
+        if (statusFilter === "New") {
+          const diffHours = (new Date() - leadDate) / (1000 * 3600);
+          statusMatch = diffHours <= 24;
+        } else {
+          statusMatch = lead.status === statusFilter;
+        }
+      }
+      return dateMatch && locationMatch && statusMatch;
+    });
+  }, [leads, selectedDate, filterType, location, statusFilter]);
+
+  // Sort filtered leads (newest first) using useMemo
+  const sortedLeads = useMemo(() => {
+    return [...computedFilteredLeads].sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
+  }, [computedFilteredLeads]);
+
+  // Compute pagination using useMemo
+  const totalPages = useMemo(() => {
+    return Math.ceil(sortedLeads.length / leadsPerPage);
+  }, [sortedLeads, leadsPerPage]);
+
+  const paginatedLeads = useMemo(() => {
+    const start = (currentPage - 1) * leadsPerPage;
+    return sortedLeads.slice(start, start + leadsPerPage);
+  }, [sortedLeads, currentPage, leadsPerPage]);
+
+  // Handlers with useCallback to avoid unnecessary re-renders
+  const handleUpdateChange = useCallback((e) => {
     setUpdateData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
-  };
+  }, []);
 
-  useEffect(() => {
-    const filtered = leads.filter((lead) => {
-      const leadDate = new Date(lead.createdAt);
-      if (filterType === "date") {
-        return !selectedDate || leadDate.toDateString() === selectedDate.toDateString();
-      } else if (filterType === "month") {
-        return (
-          !selectedDate ||
-          (leadDate.getMonth() === selectedDate.getMonth() &&
-            leadDate.getFullYear() === selectedDate.getFullYear())
-        );
-      }
-      return true;
-    });
-  
-    dispatch(setFilteredLeads(filtered));
-  }, [selectedDate, filterType, leads, dispatch]);
-
-  const handleFilterChange = (date) => {
+  const handleFilterChange = useCallback((date) => {
     setSelectedDate(date);
-  };
+  }, []);
 
-  const handleUpdateLead = async (leadId) => {
-    try {
-      await dispatch(updateLead(updateData));
+  const handleUpdateLead = useCallback(
+    async (leadId) => {
+      try {
+        await dispatch(updateLead(updateData));
+        const refreshedLeads = leads.map((lead) =>
+          lead._id === leadId
+            ? { ...lead, assignedTo: updateData.assignedTo, status: updateData.status }
+            : lead
+        );
+        dispatch(setLeads(refreshedLeads));
+        setUpdateData({ id: "", assignedTo: "", status: "" });
+      } catch (error) {
+        console.error("Error updating lead:", error.message);
+      }
+    },
+    [dispatch, leads, updateData]
+  );
 
-      const refreshedLeads = leads.map((lead) =>
-        lead._id === leadId
-          ? {
-              ...lead,
-              assignedTo: updateData.assignedTo,
-              status: updateData.status,
-            }
-          : lead
-      );
-      dispatch(setLeads(refreshedLeads));
-      dispatch(setFilteredLeads(refreshedLeads));
-      setUpdateData({ id: "", assignedTo: "", status: "" });
-    } catch (error) {
-      console.error("Error updating lead:", error.message);
-    }
-  };
+  const handleFilterByStatus = useCallback((status) => {
+    setStatusFilter((prev) => (prev === status ? "" : status));
+  }, []);
 
-  const handleFilterByStatus = (status) => {
-    const filtered = leads.filter((lead) => lead.status === status);
-    dispatch(setFilteredLeads(filtered));
-  };
-
-  const calculateCounts = (filteredLeads) => {
-    // Count for "Not Assigned"
-    const notAssignedCount = filteredLeads.filter(
-      (lead) => lead.assignedTo === "Not assigned"
-    ).length;
-
-    // Count for "New Leads (Last 24hrs)"
-    const newLeadsCount = filteredLeads.filter((lead) => {
-      const createdAt = new Date(lead.createdAt);
-      const currentTime = new Date();
-      const diffTime = currentTime - createdAt;
-      const diffHours = diffTime / (1000 * 3600); // Difference in hours
-      return diffHours <= 24;
-    }).length;
-
-    // Count for "Contacted & Send Details"
-    const contactedAndSentDetailsCount = filteredLeads.filter(
-      (lead) => lead.status === "Contacted & send details"
-    ).length;
-
-    // Count for "Under Follow for Demo"
-    const underFollowForDemoCount = filteredLeads.filter(
-      (lead) => lead.status === "Under follow for demo"
-    ).length;
-
-    // Count for "Demo Done - Closure Follow-Up"
-    const demoDoneClosureFollowUpCount = filteredLeads.filter(
-      (lead) => lead.status === "Demo done - Closure follow up"
-    ).length;
-
-    // Count for "Required Time"
-    const requiredTimeCount = filteredLeads.filter(
-      (lead) => lead.status === "Required time"
-    ).length;
-
-    // Count for "Not Interested"
-    const notInterestedCount = filteredLeads.filter(
-      (lead) => lead.status === "Not interested"
-    ).length;
-
-    // Count for "Installed"
-    const installedCount = filteredLeads.filter(
-      (lead) => lead.status === "Installed"
-    ).length;
-
-    // Return all the counts
+  // Count calculations using useMemo
+  const counts = useMemo(() => {
     return {
-      notAssignedCount,
-      newLeadsCount,
-      contactedAndSentDetailsCount,
-      underFollowForDemoCount,
-      demoDoneClosureFollowUpCount,
-      requiredTimeCount,
-      notInterestedCount,
-      installedCount,
+      notAssignedCount: computedFilteredLeads.filter(
+        (lead) => lead.assignedTo === "Not assigned"
+      ).length,
+      newLeadsCount: computedFilteredLeads.filter((lead) => {
+        const diffHours = (new Date() - new Date(lead.createdAt)) / (1000 * 3600);
+        return diffHours <= 24;
+      }).length,
+      contactedAndSentDetailsCount: computedFilteredLeads.filter(
+        (lead) => lead.status === "Contacted & send details"
+      ).length,
+      underFollowForDemoCount: computedFilteredLeads.filter(
+        (lead) => lead.status === "Under follow for demo"
+      ).length,
+      demoDoneClosureFollowUpCount: computedFilteredLeads.filter(
+        (lead) => lead.status === "Demo done - Closure follow up"
+      ).length,
+      requiredTimeCount: computedFilteredLeads.filter(
+        (lead) => lead.status === "Required time"
+      ).length,
+      notInterestedCount: computedFilteredLeads.filter(
+        (lead) => lead.status === "Not interested"
+      ).length,
+      installedCount: computedFilteredLeads.filter(
+        (lead) => lead.status === "Installed"
+      ).length,
     };
-  };
+  }, [computedFilteredLeads]);
 
-  // Get counts dynamically based on filtered leads
-  const {
-    notAssignedCount,
-    newLeadsCount,
-    contactedAndSentDetailsCount,
-    underFollowForDemoCount,
-    demoDoneClosureFollowUpCount,
-    requiredTimeCount,
-    notInterestedCount,
-    installedCount,
-  } = calculateCounts(filteredLeads);
+  // Chart data and options using useMemo
+  const followUpChartData = useMemo(() => {
+    return [
+      { category: "Not Assigned", count: counts.notAssignedCount },
+      { category: "New Leads (Last 24hrs)", count: counts.newLeadsCount },
+      { category: "Contacted & Send Details", count: counts.contactedAndSentDetailsCount },
+      { category: "Under Follow for Demo", count: counts.underFollowForDemoCount },
+      { category: "Demo done - Closure follow up", count: counts.demoDoneClosureFollowUpCount },
+      { category: "Required time", count: counts.requiredTimeCount },
+      { category: "Not interested", count: counts.notInterestedCount },
+      { category: "Installed", count: counts.installedCount },
+    ];
+  }, [counts]);
 
-  // Chart data
-  const followUpChartData = [
-    { category: "Not Assigned", count: notAssignedCount },
-    { category: "New Leads (Last 24hrs)", count: newLeadsCount },
-    {
-      category: "Contacted & Send Details",
-      count: contactedAndSentDetailsCount,
-    },
-    { category: "Under Follow for Demo", count: underFollowForDemoCount },
-    {
-      category: "Demo done - Closure follow up",
-      count: demoDoneClosureFollowUpCount,
-    },
-    { category: "Required time", count: requiredTimeCount },
-    { category: "Not interested", count: notInterestedCount },
-    { category: "Installed", count: installedCount },
-  ];
-
-  // Chart options
-  const chartOptions = {
-    data: followUpChartData,
-    series: [
-      {
-        type: "pie",
-        angleKey: "count", // Use the 'count' value for the pie slice size
-        labelKey: "category", // Use the 'category' value as the label
-        fills: [
-          "#FF5733", // Not Assigned
-          "#d6d6d6", // New Leads (Last 24hrs)
-          "#007bff", // Contacted & Send Details
-          "#ffc107", // Under Follow for Demo
-          "#28a745", // Demo Done - Closure Follow-Up
-          "#6f42c1", // Required Time
-          "#dc3545", // Not Interested
-          "#155724", // Installed
-        ],
-        calloutLabelKey: "category", // This should match 'category'
-        sectorLabelKey: "count", // This should match 'count'
-        angleKey: "count", // Angle based on 'count'
-        calloutLabel: {
-          offset: 10,
-        },
-        sectorLabel: {
-          formatter: ({ datum, sectorLabelKey = "count" }) => {
-            return `${numFormatter.format(datum[sectorLabelKey])}`; // Format 'count' with number formatting
+  const chartOptions = useMemo(() => {
+    return {
+      data: followUpChartData,
+      series: [
+        {
+          type: "pie",
+          angleKey: "count",
+          labelKey: "category",
+          fills: [
+            "#FF5733",
+            "#d6d6d6",
+            "#007bff",
+            "#ffc107",
+            "#28a745",
+            "#6f42c1",
+            "#dc3545",
+            "#155724",
+          ],
+          calloutLabelKey: "category",
+          sectorLabelKey: "count",
+          calloutLabel: { offset: 10 },
+          sectorLabel: {
+            formatter: ({ datum, sectorLabelKey = "count" }) => `${datum[sectorLabelKey]}`,
           },
+          tooltip: {
+            renderer: ({ datum, angleKey, calloutLabelKey = "category" }) => ({
+              data: [{ label: `${datum[calloutLabelKey]}`, value: `${datum[angleKey]}` }],
+            }),
+          },
+          title: { text: "Follow-Up Categories" },
         },
-        tooltip: {
-          renderer: ({ datum, angleKey, calloutLabelKey = "category" }) => ({
-            data: [
-              {
-                label: `${datum[calloutLabelKey]}`, // Tooltip showing 'category'
-                value: `${datum[angleKey]}`, // Tooltip showing 'count'
-              },
-            ],
-          }),
-        },
-        title: {
-          text: "Follow-Up Categories", // More meaningful title
-        },
-      },
-    ],
-    legend: {
-      enabled: true, // Enable legend for better understanding of the chart
-    },
-  };
+      ],
+      legend: { enabled: true },
+    };
+  }, [followUpChartData]);
 
   if (loading) return <div>Loading...</div>;
 
@@ -279,58 +243,56 @@ const LeadsPage = () => {
     <Container className="py-4">
       <Row className="mb-4">
         <Col md={6}>
-        <div className="p-3 shadow-sm rounded bg-white">
-      {/* Filter Type Dropdown */}
-      <Form.Group controlId="filterType" className="mb-3">
-        <Form.Label className="fw-bold">Filter Type:</Form.Label>
-        <Form.Control
-          as="select"
-          value={filterType}
-          onChange={(e) => setFilterType(e.target.value)}
-          className="form-select"
-        >
-          <option value="date">Filter by Date</option>
-          <option value="month">Filter by Month</option>
-        </Form.Control>
-      </Form.Group>
+          <div className="p-3 shadow-sm rounded bg-white">
+            {/* Filter Type Dropdown */}
+            <Form.Group controlId="filterType" className="mb-3">
+              <Form.Label className="fw-bold">Filter Type:</Form.Label>
+              <Form.Control
+                as="select"
+                value={filterType}
+                onChange={(e) => setFilterType(e.target.value)}
+                className="form-select"
+              >
+                <option value="date">Filter by Date</option>
+                <option value="month">Filter by Month</option>
+              </Form.Control>
+            </Form.Group>
 
-      {/* Date/Month Picker */}
-      <Form.Group controlId="dateFilter" className="mb-3">
-        <Form.Label className="fw-bold">
-          <FaCalendarAlt className="me-2 text-primary" />
-          Select {filterType === "date" ? "Date" : "Month"}:
-        </Form.Label>
-        <DatePicker
-          selected={selectedDate}
-          onChange={handleFilterChange}
-          placeholderText={`Select ${filterType === "date" ? "Date" : "Month"}`}
-          className="form-control"
-          showMonthYearPicker={filterType === "month"} // Enables month picker
-          dateFormat={filterType === "month" ? "MM/yyyy" : "dd/MM/yyyy"}
-        />
-      </Form.Group>
+            {/* Date/Month Picker */}
+            <Form.Group controlId="dateFilter" className="mb-3">
+              <Form.Label className="fw-bold">
+                <FaCalendarAlt className="me-2 text-primary" />
+                Select {filterType === "date" ? "Date" : "Month"}:
+              </Form.Label>
+              <DatePicker
+                selected={selectedDate}
+                onChange={handleFilterChange}
+                placeholderText={`Select ${filterType === "date" ? "Date" : "Month"}`}
+                className="form-control"
+                showMonthYearPicker={filterType === "month"}
+                dateFormat={filterType === "month" ? "MM/yyyy" : "dd/MM/yyyy"}
+              />
+            </Form.Group>
 
-      {/* Location Search */}
-      <Form.Group controlId="locationFilter">
-        <Form.Label className="fw-bold">
-          <FaSearchLocation className="me-2 text-secondary" />
-          Location:
-        </Form.Label>
-        <InputGroup>
-          <Form.Control
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            placeholder="Enter location"
-            className="form-control"
-          />
-        </InputGroup>
-      </Form.Group>
-    </div>
-
+            {/* Location Search */}
+            <Form.Group controlId="locationFilter">
+              <Form.Label className="fw-bold">
+                <FaSearchLocation className="me-2 text-secondary" />
+                Location:
+              </Form.Label>
+              <InputGroup>
+                <Form.Control
+                  type="text"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  placeholder="Enter location"
+                  className="form-control"
+                />
+              </InputGroup>
+            </Form.Group>
+          </div>
           <br />
-
-          {/* Dynamically render filter buttons */}
+          {/* Status Filter Buttons */}
           {[
             "New",
             "Contacted & send details",
@@ -343,27 +305,26 @@ const LeadsPage = () => {
             <button
               key={status}
               style={{
-                backgroundColor: "#FFF", // White background for buttons
-                color: statusColors[status] || "#dcdcdc", // Use color from statusColors or default to #dcdcdc
-                border: `1px solid ${statusColors[status] || "#dcdcdc"}`, // Optional: Adds a subtle border
-                padding: "7px 15px", // Optional: Adjusts button padding
-                margin: "3px", // Optional: Adds some spacing between buttons
-                cursor: "pointer", // Change cursor to pointer on hover
-                borderRadius: "4px", // Optional: Adds rounded corners to buttons
+                backgroundColor: statusFilter === status ? statusColors[status] : "#FFF",
+                color: statusFilter === status ? "#FFF" : statusColors[status] || "#dcdcdc",
+                border: `1px solid ${statusColors[status] || "#dcdcdc"}`,
+                padding: "7px 15px",
+                margin: "3px",
+                cursor: "pointer",
+                borderRadius: "4px",
               }}
-              onClick={() => handleFilterByStatus(status)} // Call handleFilterByStatus with status
+              onClick={() => handleFilterByStatus(status)}
             >
               {status}
             </button>
           ))}
         </Col>
-
         <Col md={6}>
           <AgCharts options={chartOptions} />
         </Col>
       </Row>
-       <hr/>
-       {loadingManagers ? (
+      <hr />
+      {loadingManagers ? (
         <div className="d-flex justify-content-center my-4">
           <Spinner animation="border" />
           <span className="ml-2">Loading...</span>
@@ -391,15 +352,21 @@ const LeadsPage = () => {
                         {/* Lead Name */}
                         <td>
                           <IoPersonOutline className="me-1" />
-                          <span className="lead-name" title={lead.name}>{lead.name}</span> <br />
+                          <span className="lead-name" title={lead.name}>
+                            {lead.name}
+                          </span>
+                          <br />
                           <SlCalender className="me-1" />
                           {new Date(lead.createdAt).toLocaleDateString("en-IN")}
                         </td>
-
                         {/* Contact */}
                         <td>
                           <IoMailOpenOutline className="me-1" />
-                          <a href={`mailto:${lead.email}`} className="lead-name-email" title={lead.email}>
+                          <a
+                            href={`mailto:${lead.email}`}
+                            className="lead-name-email"
+                            title={lead.email}
+                          >
                             {lead.email}
                           </a>
                           <br />
@@ -408,17 +375,18 @@ const LeadsPage = () => {
                             {lead.number}
                           </a>
                         </td>
-
                         {/* Location */}
                         <td>{lead.location}</td>
-
                         {/* Message */}
                         <td style={{ wordBreak: "break-word" }}>{lead.message}</td>
-
                         {/* Assigned To */}
                         <td>
                           {userRole === "admin" && updateData.id === lead._id ? (
-                            <select name="assignedTo" value={updateData.assignedTo} onChange={handleUpdateChange}>
+                            <select
+                              name="assignedTo"
+                              value={updateData.assignedTo}
+                              onChange={handleUpdateChange}
+                            >
                               <option value="">Select Manager</option>
                               {managers.map(({ _id, name }) => (
                                 <option key={_id} value={name}>
@@ -430,35 +398,66 @@ const LeadsPage = () => {
                             lead.assignedTo || "Not assigned"
                           )}
                         </td>
-
                         {/* Status */}
                         <td>
                           {updateData.id === lead._id ? (
-                            <select name="status" value={updateData.status} onChange={handleUpdateChange}>
-                              <option value="Contacted & send details">Contacted & send details</option>
-                              <option value="Under follow for demo">Under follow for demo</option>
-                              <option value="Demo done - Closure follow up">Demo done - Closure follow up</option>
+                            <select
+                              name="status"
+                              value={updateData.status}
+                              onChange={handleUpdateChange}
+                            >
+                              <option value="Contacted & send details">
+                                Contacted & send details
+                              </option>
+                              <option value="Under follow for demo">
+                                Under follow for demo
+                              </option>
+                              <option value="Demo done - Closure follow up">
+                                Demo done - Closure follow up
+                              </option>
                               <option value="Required time">Required time</option>
                               <option value="Not interested">Not interested</option>
                               <option value="Installed">Installed</option>
                             </select>
                           ) : (
-                            <span className="badge rounded-pill px-3 py-2" style={{ backgroundColor: statusColors[lead.status] || "#dcdcdc" }}>
+                            <span
+                              className="badge rounded-pill px-3 py-2"
+                              style={{
+                                backgroundColor: statusColors[lead.status] || "#dcdcdc",
+                              }}
+                            >
                               {lead.status}
                             </span>
                           )}
                         </td>
-
                         {/* Actions */}
                         <td>
-                          <Button variant="primary" className="me-1" onClick={() => setUpdateData({ id: lead._id, assignedTo: lead.assignedTo, status: lead.status })}>
+                          <Button
+                            variant="primary"
+                            className="me-1"
+                            onClick={() =>
+                              setUpdateData({
+                                id: lead._id,
+                                assignedTo: lead.assignedTo,
+                                status: lead.status,
+                              })
+                            }
+                          >
                             <MdEdit />
                           </Button>
-                          <Button variant="success" className="me-1" onClick={() => handleUpdateLead(lead._id)}>
+                          <Button
+                            variant="success"
+                            className="me-1"
+                            onClick={() => handleUpdateLead(lead._id)}
+                          >
                             <TiTick />
                           </Button>
                           {userRole === "admin" && (
-                            <Button variant="danger" onClick={() => handleDeleteLead(lead._id)}>
+                            <Button
+                              variant="danger"
+                              onClick={() => dispatch(handleDeleteLead(lead._id))}
+
+                          >
                               <FaTrash />
                             </Button>
                           )}
@@ -471,15 +470,22 @@ const LeadsPage = () => {
             ) : (
               <div className="text-center mt-3">No leads found</div>
             )}
-
             {/* Pagination Controls */}
             {totalPages > 1 && (
               <div className="d-flex justify-content-center mt-3">
-                <Button disabled={currentPage === 1} onClick={() => setCurrentPage((prev) => prev - 1)}>
+                <Button
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((prev) => prev - 1)}
+                >
                   Previous
                 </Button>
-                <span className="mx-3">Page {currentPage} of {totalPages}</span>
-                <Button disabled={currentPage === totalPages} onClick={() => setCurrentPage((prev) => prev + 1)}>
+                <span className="mx-3">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <Button
+                  disabled={currentPage === totalPages}
+                  onClick={() => setCurrentPage((prev) => prev + 1)}
+                >
                   Next
                 </Button>
               </div>

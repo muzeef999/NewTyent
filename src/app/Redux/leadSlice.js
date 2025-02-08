@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+import { toast } from 'react-toastify';
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in';
 
-
+// Fetch Leads
 export const fetchLeads = (userRole, username) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
@@ -22,76 +22,91 @@ export const fetchLeads = (userRole, username) => async (dispatch) => {
     ];
 
     const allLeads = response.data;
-    const filteredLeads = allLeads.filter((lead) =>
-      statusCategories.includes(lead.status)
-    );
+    const filteredLeads = allLeads.filter((lead) => statusCategories.includes(lead.status));
 
     let roleBasedLeads = [];
 
     if (userRole === "admin") {
-      roleBasedLeads = response.data; 
+      roleBasedLeads = allLeads;
     } else if (userRole === "manager") {
-      roleBasedLeads = response.data.filter((lead) => lead.assignedTo === username);
+      roleBasedLeads = allLeads.filter((lead) => lead.assignedTo === username);
     }
-    
-
 
     dispatch(setLeads(roleBasedLeads)); 
     dispatch(setFilteredLeads(filteredLeads)); 
   } catch (error) {
-    dispatch(setError(error.message)); 
+    dispatch(setError(error.message));
   } finally {
-    dispatch(setLoading(false)); 
+    dispatch(setLoading(false));
   }
 };
 
-
+// Update Lead with Smooth UI
 export const updateLead = (updateData) => async (dispatch, getState) => {
+  // Optimistic UI update: Update Redux Store before API call
+  const { leads } = getState().leads;
+
+  const updatedLeads = leads.map((lead) =>
+    lead._id === updateData.id
+      ? { ...lead, assignedTo: updateData.assignedTo, status: updateData.status }
+      : lead
+  );
+
+  dispatch(setLeads(updatedLeads)); // Update UI instantly
+  dispatch(setLoading(true));
+
   try {
-    dispatch(setLoading(true));
-    
-    const response = await axios.put(`${apiUrl}/api/lead`, {
-      
-        leadId:updateData.id,
-        assignedTo:updateData.assignedTo,
-        status:updateData.status
-    
+    await axios.put(`${apiUrl}/api/lead`, {
+      leadId: updateData.id,
+      assignedTo: updateData.assignedTo,
+      status: updateData.status,
     });
 
+    // Re-filter leads after update
+    const statusCategories = [
+      "New", "Contacted & Send Details", "Under Follow for Demo",
+      "Demo Done - Closure Follow-Up", "Required Time", "Not Interested", "Installed"
+    ];
 
-    // Get the current leads from the store
-    const { leads } = getState().leads;
-
-    // Update the lead in the local Redux state
-    const updatedLeads = leads.map((lead) =>
-      lead._id === updateData.id
-        ? { ...lead, assignedTo: updateData.assignedTo, status: updateData.status }
-        : lead
-    );
-
-    // Dispatch the action to update leads in the Redux state
-    dispatch(setLeads(updatedLeads));
-    dispatch(setFilteredLeads(updatedLeads));
+    const filteredLeads = updatedLeads.filter((lead) => statusCategories.includes(lead.status));
+    dispatch(setFilteredLeads(filteredLeads));
 
   } catch (error) {
     console.error("Error updating lead:", error.message);
     dispatch(setError(error.message));
+
+    // Rollback on error
+    dispatch(setLeads(leads));
   } finally {
-    dispatch(setLoading(false)); 
+    dispatch(setLoading(false));
   }
 };
 
+// Delete Lead with Smooth UI
+export const handleDeleteLead = (leadId) => async (dispatch, getState) => {
 
-export const handleDeleteLead = (leadId) => async (dispatch) => {
+  // Optimistically remove lead before API call
+  const { leads } = getState().leads;
+  const updatedLeads = leads.filter((lead) => lead._id !== leadId);
+
+  dispatch(setLeads(updatedLeads)); // Update UI instantly
+  dispatch(setLoading(true));
+
   try {
     await axios.delete(`${apiUrl}/api/lead/${leadId}`);
-    dispatch(deleteLead(leadId));  // Remove lead from Redux store
+    toast.success("Deleted Leads")
   } catch (error) {
-    console.error("Error deleting lead:", error.message);
+    toast.error("Error deleting lead:", error.message)
     dispatch(setError("Failed to delete lead"));
+
+    // Rollback on error
+    dispatch(setLeads(leads));
+  } finally {
+    dispatch(setLoading(false));
   }
 };
 
+// Redux Slice
 const leadsSlice = createSlice({
   name: 'leads',
   initialState: {
@@ -114,7 +129,7 @@ const leadsSlice = createSlice({
     setError(state, action) {
       state.error = action.payload;
     },
-    deleteLead: (state, action) => {
+    deleteLead(state, action) {
       const leadId = action.payload;
       state.leads = state.leads.filter(lead => lead._id !== leadId);
       state.filteredLeads = state.filteredLeads.filter(lead => lead._id !== leadId);
@@ -122,6 +137,5 @@ const leadsSlice = createSlice({
   },
 });
 
-export const { setLeads, setFilteredLeads, setLoading, setError, deleteLead  } = leadsSlice.actions;
-
+export const { setLeads, setFilteredLeads, setLoading, setError, deleteLead } = leadsSlice.actions;
 export default leadsSlice.reducer;
