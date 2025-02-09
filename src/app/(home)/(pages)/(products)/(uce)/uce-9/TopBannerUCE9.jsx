@@ -1,19 +1,20 @@
-"use client";
-import React, { useState } from "react";
-import NMP7_BANNER_DESKTOP from "@/asserts/nmp/nmp5&7/NMP7_BANNER_DESKTOP.webp";
-import NMP7_BANNER_MOBILE from "@/asserts/nmp/nmp5&7/NMP7_BANNER_MOBILE.webp";
-import Image from "next/image";
-import Display from "@/app/(home)/compoents/(products)/Display";
+"use client"
+import React, { useState } from 'react'
+import uceBannerBlack from "@/asserts/uce/uceBannerBlack.webp";
+import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.webp";
+import DisplayAnimation from '../DisplayAnimation';
+import Image from 'next/image';
+import "@/app/style/Uce.css";
 
-const TopBannerNmp9 = () => {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
+const TopBannerUCE9 = () => {
+        
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+    
   return (
-    <div style={{ width: "100%", height: "auto", position: "relative" }}>
-      {/* Mobile and Tablet View */}
-      <div className="d-block d-md-none">
+    <div>
+          <div className="d-block d-md-none">
         <Image
-          src={NMP7_BANNER_MOBILE}
+          src={uceBannerBlackMobile}
           alt="nmp-5 banner"
           layout="responsive"
           priority
@@ -24,12 +25,12 @@ const TopBannerNmp9 = () => {
           onLoadingComplete={() => setIsImageLoaded(true)}
         />
 
-        <div className={"nmp-5-desktop-one-touch-main-banner"}>
+        <div className={"nmp-9-desktop-one-touch-main-banner"}>
           {/* Right-Aligned Content */}
-          <div className={"nmp-banner-content"}>
+          <div className={"uc9-banner-content"}>
             {/* Resilience Message */}
-            <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-              Sustainable Hydration, Sustainable Health
+            <h2 data-aos="fade-right" className={"uce9-banner-resilience"}>
+              Elevate your kitchen with Tyent UCE
             </h2>
 
             {/* Tyent Water Title */}
@@ -52,30 +53,29 @@ const TopBannerNmp9 = () => {
                 </svg>
               </div>
               {/* Benefits */}
-              <div className="mt-1">
-                <p className={"nmp-banner-benefits"}>
-                  <span>For a Greener</span>
+              <div className="mt-3">
+                <p className={"uce9-banner-benefits"}>
+                  <span>where luxury meets</span>
                   <br />
-                  and <span>Cleaner Tomorrow</span>
+                  with <span>cutting-edge design</span>
                 </p>
               </div>
             </div>
-            <br />
           </div>
-        </div>
+        </div> 
 
         {/* NmpDispalayfinal for Mobile and Tablet */}
         {isImageLoaded && (
-          <div className="nmp-9-mobile-display">
-            <Display />
-          </div>
+        <div className="uce9Display-mobile">
+          <DisplayAnimation />
+        </div>
         )}
       </div>
 
       {/* Desktop and Larger Devices */}
       <div className="d-none d-md-block">
         <Image
-          src={NMP7_BANNER_DESKTOP}
+          src={uceBannerBlack}
           alt="nmp-5 banner"
           layout="responsive"
           priority
@@ -86,12 +86,12 @@ const TopBannerNmp9 = () => {
           onLoadingComplete={() => setIsImageLoaded(true)}
         />
 
-        <div className={"nmp-5-desktop-one-touch-main-banner"}>
+        <div className={"nmp-9-desktop-one-touch-main-banner"}>
           {/* Right-Aligned Content */}
-          <div className={"nmp-banner-content"}>
+          <div className={"uc9-banner-content"}>
             {/* Resilience Message */}
-            <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-              Sustainable Hydration, Sustainable Health
+            <h2 data-aos="fade-right" className={"uce9-banner-resilience"}>
+              Elevate your kitchen with Tyent UCE
             </h2>
 
             {/* Tyent Water Title */}
@@ -102,7 +102,7 @@ const TopBannerNmp9 = () => {
             >
               {/* Decorative Line */}
               <div className="d-flex justify-content-center align-items-center">
-                <svg width="20" height="70">
+                <svg width="8" height="70">
                   <line
                     x1="0"
                     y1="0"
@@ -115,10 +115,10 @@ const TopBannerNmp9 = () => {
               </div>
               {/* Benefits */}
               <div className="mt-3">
-                <p className={"nmp-banner-benefits"}>
-                  <span>For a Greener</span>
+                <p className={"uce9-banner-benefits"}>
+                  <span>where luxury meets</span>
                   <br />
-                  and <span>Cleaner Tomorrow</span>
+                  with <span>cutting-edge design</span>
                 </p>
               </div>
             </div>
@@ -127,13 +127,13 @@ const TopBannerNmp9 = () => {
 
         {/* NmpDispalayfinal for Desktop */}
         {isImageLoaded && (
-          <div className="nmp9Display">
-            <Display />
-          </div>
+        <div className="uce9Display">
+          <DisplayAnimation />
+        </div>
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TopBannerNmp9;
+export default TopBannerUCE9

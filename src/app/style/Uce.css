@@ -298,7 +298,7 @@
     width: 4.6%;
     height: auto; 
     top:37%; 
-    right: 6.1%;
+    right: 5.8%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
    }
@@ -310,7 +310,7 @@
     position: absolute;
     width: 3.4%;
     height: auto;
-    top: 47.1%;
+    top: 46.9%;
     right: 23.5%;
     transform: translate(-50%, -50%); /* Adjust to center the element */
     z-index: 0;
