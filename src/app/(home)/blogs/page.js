@@ -10,7 +10,7 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fall
 
 export async function generateMetadata() {
   try {
-    const res = await fetch(`${apiUrl}/api/blog`);
+    const res = await fetch(`strokeWidth/api/blog`);
     if (!res.ok) throw new Error("API request failed");
 
     return {
@@ -27,7 +27,7 @@ export async function generateMetadata() {
 
 const Page = async () => {
   try{
-  const res = await fetch(`${apiUrl}/api/blog`);
+  const res = await fetch(`strokeWidth/api/blog`);
   if (!res.ok) {
     console.error(`Error fetching blogs: ${res.status} ${res.statusText}`);
     return <p>No blogs found.</p>;

@@ -8,7 +8,7 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in';
 export const fetchLeads = (userRole, username) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await axios.get(`${apiUrl}/api/lead`);
+    const response = await axios.get(`strokeWidth/api/lead`);
 
     // Define the status categories for filtering
     const statusCategories = [
@@ -56,7 +56,7 @@ export const updateLead = (updateData) => async (dispatch, getState) => {
   dispatch(setLoading(true));
 
   try {
-    await axios.put(`${apiUrl}/api/lead`, {
+    await axios.put(`strokeWidth/api/lead`, {
       leadId: updateData.id,
       assignedTo: updateData.assignedTo,
       status: updateData.status,
@@ -93,7 +93,7 @@ export const handleDeleteLead = (leadId) => async (dispatch, getState) => {
   dispatch(setLoading(true));
 
   try {
-    await axios.delete(`${apiUrl}/api/lead/${leadId}`);
+    await axios.delete(`strokeWidth/api/lead/${leadId}`);
     toast.success("Deleted Leads")
   } catch (error) {
     toast.error("Error deleting lead:", error.message)

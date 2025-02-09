@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
 
   // Use the full URL for the API request
   const res = await fetch(
-    `${apiUrl}/api/blog/${slug}`
+    `strokeWidth/api/blog/${slug}`
   );
   if (!res.ok) {
     // Return a fallback metadata if the post is not found
@@ -53,7 +53,7 @@ export default async function BlogPage({ params }) {
   const { slug } = params;
   // Use the full URL for the API request
   const res = await fetch(
-    `${apiUrl}/api/blog/${slug}`
+    `strokeWidth/api/blog/${slug}`
   );
   if (!res.ok) {
     notFound(); // This will show a 404 page if the blog post is not found

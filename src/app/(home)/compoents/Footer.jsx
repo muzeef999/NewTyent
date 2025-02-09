@@ -6,7 +6,6 @@ import logo from "@/asserts/logo.png";
 import Link from 'next/link';
 import Image from 'next/image';
 import { IoHeart } from "react-icons/io5";
-import { color } from 'framer-motion';
 
 
 const Footer = () => {
@@ -116,28 +115,30 @@ const Footer = () => {
       © Tyent INDIA. All Rights Reserved.
     </p>
   </Col>
-
+ 
   {/* Right Side: Social Media Icons */}
   <Col xs={12} md={6} className="text-center text-md-end">
     <div className="d-flex justify-content-center justify-content-md-end gap-3">
-      <Link href="https://facebook.com" target="_blank" aria-label="Facebook">
+      <Link href={"https://www.facebook.com/TyentIndiaOfficial/"} target="_blank" aria-label="Facebook">
         <FaFacebook size={30} color="#316FF6" />
       </Link>
-      <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+      <Link href={"https://www.linkedin.com/company/tyent-india1/posts/?feedView=all"} target="_blank" aria-label="LinkedIn">
         <FaLinkedin size={30} color="#0077B5" />
       </Link>
-      <Link href="https://twitter.com" target="_blank" aria-label="Twitter">
-        <FaTwitter size={30} color="#1DA1F2" />
-      </Link>
-      <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <Link href={"https://www.instagram.com/tyentindia/"} target="_blank" aria-label="Instagram">
         <FaInstagram size={30} color="#E4405F" />
       </Link>
-      <Link href="https://youtube.com" target="_blank" aria-label="YouTube">
+      <Link href={"https://www.youtube.com/@TyentIndia3170"} target="_blank" aria-label="YouTube">
         <FaYoutube size={30} color="#FF0000" />
       </Link>
     </div>
   </Col>
 </Row>
+
+
+
+
+
 
       </Container>
       </div>
