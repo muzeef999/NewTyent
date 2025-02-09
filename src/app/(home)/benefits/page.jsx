@@ -49,6 +49,7 @@ import BrainStroke from "@/asserts/health/BrainStroke.webp";
 import Alzheimer from "@/asserts/health/Alzheimer.webp";
 import fattyliver from "@/asserts/health/fattyliver.webp";
 import ChronicFatigue from "@/asserts/health/ChronicFatigue.webp";
+import Loading from "./loading";
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -56,6 +57,7 @@ export const metadata = {
   title: "Benefits of Alkaline Water - Why Choose Tyent?",
   description: " Discover the health benefits of alkaline, hydrogen-rich water from Tyent water ionizers. Stay hydrated and energized.",
 };
+
 
 const icons = [
   {

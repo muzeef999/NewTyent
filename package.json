@@ -23,6 +23,7 @@
     "mongoose": "^8.9.1",
     "next": "14.2.15",
     "next-auth": "^4.24.11",
+    "nextjs-progressbar": "^0.0.16",
     "prop-types": "^15.8.1",
     "razorpay": "^2.9.5",
     "react": "^18",

@@ -4,6 +4,7 @@ import "@/app/style/AppBar.css";
 import dynamic from "next/dynamic";
 import { Poppins} from 'next/font/google'
 
+
  
 const poppins = Poppins({
   weight: '400',

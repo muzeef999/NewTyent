@@ -15,6 +15,9 @@ import { Modal, Button } from "react-bootstrap";
 import '@/app/style/Animation.css'; // Import the animation CSS
 import FormOnly from "../compoents/Form/FormOnly";
 import { Toaster } from "sonner";
+import NextNProgress from 'nextjs-progressbar';
+
+
 
 export default function ClientComponent({ children, session }) {
   const pathname = usePathname();
@@ -44,6 +47,8 @@ export default function ClientComponent({ children, session }) {
 
   return (
     <SessionProvider session={session}>
+       <NextNProgress color="#FFF" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+     
        <Toaster richColors position="top-right"  style={{marginTop:'70px'}}/>
       <Provider store={store}>
         {!shouldExcludeLayout && <AppBar />}
