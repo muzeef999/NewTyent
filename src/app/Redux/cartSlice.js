@@ -2,14 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "sonner";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
-
 // Async thunks
 export const fetchCart = createAsyncThunk(
   "cart/fetchCart",
   async (userId, thunkAPI) => {
     try {
-      const response = await axios.get(`${apiUrl}/api/cart/${userId}`);
+      const response = await axios.get(`/api/cart/${userId}`);
       return response.data.cart; // Return the cart object
     } catch (error) {
       toast.error(error.response?.data || "Error fetching cart");
@@ -24,7 +22,7 @@ export const postCart = createAsyncThunk(
   async (cartData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `${apiUrl}/api/cart/${cartData.userId}`,
+        `/api/cart/${cartData.userId}`,
         cartData
       );
       toast.success("Product added to cart!");
@@ -42,7 +40,7 @@ export const updateItemQuantity = createAsyncThunk(
   "cart/updateQuantity",
   async ({ userId, productName, quantity }, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`${apiUrl}/api/cart/${userId}`, {
+      const response = await axios.put(`/api/cart/${userId}`, {
         productName,
         quantity,
       });
@@ -63,7 +61,7 @@ export const deleteProductAction = createAsyncThunk(
   "cart/delCart",
   async ({ userId, productName }, { rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${apiUrl}/api/cart/${userId}`, {
+      const response = await axios.delete(`/api/cart/${userId}`, {
         data: { userId, productName },
       });
       toast.success("Product removed from cart!");
