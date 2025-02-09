@@ -11,6 +11,9 @@ import Leaf from "@/app/(home)/compoents/(Home)/Leaf";
 const Slider = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
 
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  
+
   const banners = useMemo(() => ["home_banner_bg_one", "home_banner_bg_two"], []);
 
   useEffect(() => {
@@ -27,7 +30,8 @@ const Slider = () => {
         {banners[bannerIndex] === "home_banner_bg_one" && (
           <div>
             <div className="sky_Movie">
-              <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority />
+              <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority                 onLoadingComplete={() => setIsImageLoaded(true)}
+ />
             </div>
             <div className="home-banner-text">
               <h1 style={{ fontSize: "clamp(25px, 5vw, 50px)" }} className="home_banner1_text1">
@@ -37,16 +41,19 @@ const Slider = () => {
                 Boost Immunity with <span>Tyent Water</span>
               </h1>
             </div>
+            {isImageLoaded && (
             <div className="responsive-container">
               <NmpDispalayfinal />
             </div>
+            )}
           </div>
         )}
 
-        {banners[bannerIndex] === "home_banner_bg_two" && (
+        {banners[bannerIndex] === "home_banner_bg_two"  && (
           <div>
             <div className="sky_Movie">
-              <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority />
+              <Image src={Banner1_sky} alt="Home_banner" layout="responsive" priority                  onLoadingComplete={() => setIsImageLoaded(true)}
+              />
             </div>
             <Leaf />
             <div className="home-banner-text">
@@ -57,9 +64,11 @@ const Slider = () => {
                 Anti-Inflammatory Benefits <span>Backed by Science powered by Tyent</span>
               </h1>
             </div>
+            {isImageLoaded && (
             <div className="responsive-container-hybrid">
               <Display />
             </div>
+            )}
           </div>
         )}
       </div>

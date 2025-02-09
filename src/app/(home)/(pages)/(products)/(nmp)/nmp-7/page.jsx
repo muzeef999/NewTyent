@@ -28,6 +28,13 @@ import NmpDispalayfinal from "../NmpDispalayfinal";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxDownload } from "react-icons/rx";
+import dynamic from "next/dynamic";
+const Banner = dynamic(
+  () => import("./TopBannersNmp7"),
+  {
+    ssr: false,
+  }
+);
 
 export const metadata = {
   title: "Tyent NMP-7 Water Ionizer - Advanced 7-Plate Technology",
@@ -192,123 +199,8 @@ const TyentNMP5 = () => {
               </a>
             </button>
             
-      <div style={{ width: "100%", height: "auto", position: "relative" }}>
-        {/* Mobile and Tablet View */}
-        <div className="d-block d-md-none">
-          <Image
-            src={NMP5_BANNER_MOBILE}
-            alt="nmp-5 banner"
-            layout="responsive"
-            priority
-            style={{
-              position: "relative",
-              zIndex: 10, // Ensure the image is on top
-            }}
-          />
-
-          <div className={"nmp-5-desktop-one-touch-main-banner"}>
-            {/* Right-Aligned Content */}
-            <div className={"nmp-banner-content"}>
-              {/* Resilience Message */}
-              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-                Your Health is Our Legacy
-              </h2>
-
-              {/* Tyent Water Title */}
-
-              <div
-                data-aos="fade-left"
-                className="d-flex justify-content-start align-items-center"
-              >
-                {/* Decorative Line */}
-                <div className="d-flex justify-content-center align-items-center">
-                  <svg width="8" height="40">
-                    <line
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="40"
-                      stroke="#008ac7"
-                      strokeWidth="4"
-                    />
-                  </svg>
-                </div>
-                {/* Benefits */}
-                <div className="mt-3">
-                  <p className={"nmp-banner-benefits"}>
-                    <span>Innovation in Every Sip of </span>
-                    <br />
-                    <span> 25+ Years of </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* NmpDispalayfinal for Mobile and Tablet */}
-          <div className="nmp5Display">
-            <NmpDispalayfinal />
-          </div>
-        </div>
-
-        {/* Desktop and Larger Devices */}
-        <div className="d-none d-md-block">
-          <Image
-            src={NMP5_BANNER_DESKTOP}
-            alt="nmp-5 banner"
-            layout="responsive"
-            priority
-            style={{
-              position: "relative",
-              zIndex: 10, // Ensure the image is on top
-            }}
-          />
-
-          <div className={"nmp-5-desktop-one-touch-main-banner"}>
-            {/* Right-Aligned Content */}
-            <div className={"nmp-banner-content"}>
-              {/* Resilience Message */}
-              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-                Your Health is Our Legacy
-              </h2>
-
-              {/* Tyent Water Title */}
-
-              <div
-                data-aos="fade-left"
-                className="d-flex justify-content-start align-items-center"
-              >
-                {/* Decorative Line */}
-                <div className="d-flex justify-content-center align-items-center">
-                  <svg width="20" height="70">
-                    <line
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="70"
-                      stroke="#008ac7"
-                      strokeWidth="4"
-                    />
-                  </svg>
-                </div>
-                {/* Benefits */}
-                <div className="mt-3">
-                  <p className={"nmp-banner-benefits"}>
-                    <span>Innovation in Every Sip of </span>
-                    <br />
-                    <span> 25+ Years of </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* NmpDispalayfinal for Desktop */}
-          <div className="nmp5Display">
-            <NmpDispalayfinal />
-          </div>
-        </div>
-      </div>
+            <Banner/>
+     
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />

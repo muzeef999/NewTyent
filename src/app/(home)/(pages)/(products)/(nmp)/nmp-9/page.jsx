@@ -30,6 +30,13 @@ import Display from "@/app/(home)/compoents/(products)/Display";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxDownload } from "react-icons/rx";
+import dynamic from "next/dynamic";
+const Banner = dynamic(
+  () => import("./TopBannerNmp9"),
+  {
+    ssr: false,
+  }
+);
 
 export const metadata = {
   title: "Tyent NMP-9 Water Ionizer - Advanced 9-Plate Technology",
@@ -200,6 +207,7 @@ const TyentNMP5 = () => {
                 <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
               </a>
             </button>
+            <Banner/>
             
       <div style={{ width: "100%", height: "auto", position: "relative" }}>
         {/* Mobile and Tablet View */}

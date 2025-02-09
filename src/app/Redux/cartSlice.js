@@ -13,9 +13,7 @@ export const fetchCart = createAsyncThunk(
       return response.data.cart; // Return the cart object
     } catch (error) {
       toast.error(error.response?.data || "Error fetching cart");
-      return thunkAPI.rejectWithValue(
-        error.response?.data || "Error fetching cart"
-      );
+      
     }
   }
 );

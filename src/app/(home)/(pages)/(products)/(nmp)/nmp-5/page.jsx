@@ -29,7 +29,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { RxDownload } from "react-icons/rx";
-import Humanbody1 from "@/asserts/Humanbody1.png";
+import dynamic from "next/dynamic";
+
+const TopBannersNMP = dynamic(
+  () => import("./TopBannersNMP"),
+  {
+    ssr: false,
+  }
+);
 
 export const metadata = {
   title: "Tyent NMP-5 Water Ionizer - Advanced 5-Plate Technology",
@@ -184,6 +191,8 @@ const TyentNMP5 = () => {
     link: "/7-types-of-Tyent-water",
   };
 
+
+
   return (
     <div style={{ width: "100% !important", overflow: "hidden !important" }}>
       <button className={`fixed-vertical-button`}>
@@ -197,123 +206,7 @@ const TyentNMP5 = () => {
           <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
         </a>
       </button>
-      <div style={{ width: "100%", height: "auto", position: "relative", overflow:'hidden' }}>
-        {/* Mobile and Tablet View */}
-        <div className="d-block d-md-none">
-          <Image
-            src={NMP5_BANNER_MOBILE}
-            alt="nmp-5 banner"
-            layout="responsive"
-            priority
-            style={{
-              position: "relative",
-              zIndex: 10, // Ensure the image is on top
-            }}
-          />
-
-          <div className={"nmp-5-desktop-one-touch-main-banner"}>
-            {/* Right-Aligned Content */}
-            <div className={"nmp-banner-content"}>
-              {/* Resilience Message */}
-              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-                Build Resilience with <span>Every Drop</span>
-              </h2>
-
-              {/* Tyent Water Title */}
-
-              <div
-                data-aos="fade-left"
-                className="d-flex justify-content-start align-items-center"
-              >
-                {/* Decorative Line */}
-                <div className="d-flex justify-content-center align-items-center">
-                  <svg width="8" height="40">
-                    <line
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="40"
-                      stroke="#008ac7"
-                      strokeWidth="4"
-                    />
-                  </svg>
-                </div>
-                {/* Benefits */}
-                <div className="mt-3">
-                  <p className={"nmp-banner-benefits"}>
-                    <span>For Stronger Immunity</span>
-                    <br />
-                    and <span>Natural Protection</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* NmpDispalayfinal for Mobile and Tablet */}
-          <div className="nmp5Display">
-            <NmpDispalayfinal />
-          </div>
-        </div>
-
-        {/* Desktop and Larger Devices */}
-        <div className="d-none d-md-block">
-          <Image
-            src={NMP5_BANNER_DESKTOP}
-            alt="nmp-5 banner"
-            layout="responsive"
-            priority
-            style={{
-              position: "relative",
-              zIndex: 10, // Ensure the image is on top
-            }}
-          />
-
-          <div className={"nmp-5-desktop-one-touch-main-banner"}>
-            {/* Right-Aligned Content */}
-            <div className={"nmp-banner-content"}>
-              {/* Resilience Message */}
-              <h2 data-aos="fade-right" className={"nmp-banner-resilience"}>
-                Build Resilience with <span>Every Drop</span>
-              </h2>
-
-              {/* Tyent Water Title */}
-
-              <div
-                data-aos="fade-left"
-                className="d-flex justify-content-start align-items-center"
-              >
-                {/* Decorative Line */}
-                <div className="d-flex justify-content-center align-items-center">
-                  <svg width="8" height="70">
-                    <line
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="70"
-                      stroke="#008ac7"
-                      strokeWidth="4"
-                    />
-                  </svg>
-                </div>
-                {/* Benefits */}
-                <div className="mt-3">
-                  <p className={"nmp-banner-benefits"}>
-                    <span>For Stronger Immunity</span>
-                    <br />
-                    and <span>Natural Protection</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* NmpDispalayfinal for Desktop */}
-          <div className="nmp5Display">
-            <NmpDispalayfinal />
-          </div>
-        </div>
-      </div>
+      <TopBannersNMP />
 
       <div className="section-spacing">
         <ProductSection products={products} specifications={specifications} />
