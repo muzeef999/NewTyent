@@ -131,7 +131,7 @@ const ProductSection = ({ products, specifications }) => {
                       alt={`Thumbnail ${index + 1}`}
                       key={index}
                       onClick={() => handleTab(index)}
-                      
+                      style={{ userSelect:'all', pointerEvents:'auto'}}
                     />
                   ))}
                 </div>
@@ -185,8 +185,6 @@ const ProductSection = ({ products, specifications }) => {
             chemicals, artificial enhancers, or salts.
           </h6>
           <hr />
-          
-          
         </Col>
         
       </Row>
