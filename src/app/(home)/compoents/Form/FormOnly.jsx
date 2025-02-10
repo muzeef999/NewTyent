@@ -14,8 +14,8 @@ import { toast } from "sonner";
 
 
 const ACCESS_TOKEN =
- "EAAbf0TX5ZBsoBO4YkBWSCZAI0MSGXVFKN2CbZAwHHJ40nZBC8bvKY6NldelrFZAEXXrPfg0IadaHst8RpcJEOgPDFT0zqrZBX2Ogj3ql36Gd2ZA3sJ46RfON1ynBC1diChgip5EUdMVlCs03GBPiZCOziP161dkqXXwWu02WbJx9PFERPvPs5GTUcZAIA4ez67D3ZCfgZDZD"
-
+    "EAAU9dqi5jOQBOzzAoR5bx2HCz3lDO12uH3aoys4sIlEZA20HmKBXhUZB5mwoLZBb4RruHZB7q2D756XnjG8kRB3IjBXp0cf6IjPd9sNuefAZBAp5Fkf3BwOwHEUUlKklWsxN0YXB5fAV6J7qvhFfO0FNNuCzQbjSZAYnbJVwr3FGbtK37VZC4WweBzpe7ZCrlW04"
+  
 const FormOnly = () => {
 
     const [inputdata, setInput] = useState({
@@ -85,15 +85,37 @@ const FormOnly = () => {
         
           try {
             const payload = {
-              
                 "messaging_product": "whatsapp",
                 "recipient_type": "individual",
                 "to": "919182414181",
-                "type": "text",
-                "text": {  
-                  "body":`Name : ${inputdata.name} \n Number : ${inputdata.number} \n Email : ${inputdata.email} \n Location : ${inputdata.location} \n Message : ${inputdata.message}`
-                } 
-              }        
+                "type": "template",
+                "template": {
+                  "name": "appointment_custom_messages",
+                  "language": {
+                    "code": "en"
+                  },
+                  "components": [
+                    {
+                      "type": "body",
+                      "parameters": [
+                        {
+                          "type": "text",
+                          "text": `${inputdata.name}`
+                        },
+                        {
+                          "type": "text",
+                          "text": `${"Email : " + inputdata.email + "Number : "  + inputdata.number}`
+                        },
+                        {
+                          "type": "text",
+                          "text": `${"Location" + inputdata.location + "Message" + inputdata.message}`
+                        }
+                      ]
+                    }
+                  ]
+                }              
+             
+            };       
 
             await axios.post(
               `/api/lead`,
@@ -113,7 +135,7 @@ const FormOnly = () => {
 
 
              const res = await axios.post(
-             "https://graph.facebook.com/v22.0/611656022027942/messages",
+              "https://graph.facebook.com/v19.0/209988965541805/messages",
               payload,
               {
                 headers: {
