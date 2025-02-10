@@ -57,7 +57,7 @@ const WhyTyent = () => {
                 "At Tyent we follow a traditional marketing approach, ensuring direct delivery through our authorized distributors without involving MLM or commission agents.",
             },
             {
-              title: "Advanced Technology",
+              title: "Japanese Technology",
               description:
                 "Every Tyent water ionizer features advanced Japanese technology plates from Permelac, Japan, and a patented SMPS PLUS power supply, delivering pure, healthy water without the use of chemicals, enhancers, or salts.",
             },
