@@ -69,7 +69,7 @@ const Footer = () => {
           
           <div>
             <Row>
-              <Col md={3}>
+              <Col md={3} style={{ userSelect:'all', pointerEvents:'auto'}}>
           <Link href="/" className="navbar-brand">
           <div className="d-none d-lg-block" style={{ width: '100%' }}>
   <Image src={logo} alt="logo" />
@@ -117,7 +117,7 @@ const Footer = () => {
   </Col>
  
   {/* Right Side: Social Media Icons */}
-  <Col xs={12} md={6} className="text-center text-md-end">
+  <Col xs={12} md={6} className="text-center text-md-end" style={{ userSelect:'all', pointerEvents:'auto'}}>
     <div className="d-flex justify-content-center justify-content-md-end gap-3">
       <Link href={"https://www.facebook.com/TyentIndiaOfficial/"} target="_blank" aria-label="Facebook">
         <FaFacebook size={30} color="#316FF6" />

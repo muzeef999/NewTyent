@@ -4,7 +4,7 @@ import { getToken } from 'next-auth/jwt';
 // Role-specific accessible paths
 const rolePaths = {
   admin: ['/dashboard', '/adminOrder', '/leads', '/service', '/complains', '/adminBlog'],
-  manager: ['/leads', '/adminBlog'],
+  manager: ['/leads'],
   employee: ['/complains', '/service'],
 };
 
