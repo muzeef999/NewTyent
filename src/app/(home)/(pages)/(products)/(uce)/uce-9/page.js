@@ -109,7 +109,6 @@ const WaterFilterCards = ({ icon, title, content }) => {
         style={{
           textAlign:'start',
           fontWeight: 400,
-          fontSize: "16px",
           overflow: "hidden",
           textOverflow: "ellipsis",
           lineHeight: "1.5",
@@ -379,7 +378,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="section-spacing">
+      <div className="section-spacing"  style={{ userSelect:'all', pointerEvents:'auto'}} >
         <div className="backgrounduce">
           <div className="card-scroll-container" style={{ paddingLeft: "30%" }}>
             {data.map((iconItem, index) => (
