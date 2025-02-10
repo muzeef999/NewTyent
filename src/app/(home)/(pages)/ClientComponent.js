@@ -61,10 +61,9 @@ export default function ClientComponent({ children, session }) {
         {/* Floating Buttons */}
         <center>
           <div
-            className="floating d-flex justify-content-between align-items-center"
-            style={{ width: "100%", paddingLeft: "2rem", paddingRight: "2rem" }}
+            className="floating"
           >
-            <button
+            <button  style={{position:'absolute', bottom:'1rem', left:'2rem'}}
               className="floating-button"
               title="Click to message"
               onClick={(e) => handleShowModal("This is a messaging modal.", e)}
@@ -73,7 +72,7 @@ export default function ClientComponent({ children, session }) {
               <MdOutlineMessage size={30} />
             </button>
 
-            <button
+            <button style={{position:'absolute', bottom:'1rem', right:'2rem'}}
               className="floating-button"
               title="Click to call"
               onClick={handleCallClick}

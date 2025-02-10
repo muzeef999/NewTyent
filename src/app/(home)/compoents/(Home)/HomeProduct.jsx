@@ -132,23 +132,24 @@ const HomeProduct = ({ isProductOpen }) => {
         <div>
           <br />
           {/* Filter Tabs */}
+          
           <Nav
-  ref={thumbRef}
-  className="d-flex justify-content-center align-items-center nav-container-home ms-0 ms-md-5 ms-xl-0"
-  style={{
-    display: "flex",
-    flexWrap: "nowrap",
-    overflowX: "auto",
-    whiteSpace: "nowrap",
-    padding: "10px 0",
-    gap: "15px",
-    scrollbarWidth: "none", // For Firefox
-    msOverflowStyle: "none", // For Internet Explorer and Edge
+ref={thumbRef}
+className="d-flex justify-content-start justify-content-md-center align-items-center nav-container-home  ps-md-0"
 
+style={{
+  flexWrap: "nowrap",
+  overflowX: "auto",
+  whiteSpace: "nowrap",
+  padding: "10px 0",
+  gap: "15px",
+  scrollbarWidth: "none", // For Firefox
+  msOverflowStyle: "none", // For Internet Explorer and Edge
   }}
 >
   {ProductData.map((section, idx) => (
-    <Nav.Item
+    
+    <Nav.Item 
       key={section.category || `section-${idx}`}
       style={{ padding: "10px", flex: "0 0 auto" }}
     >
@@ -166,6 +167,7 @@ const HomeProduct = ({ isProductOpen }) => {
         {section.category}
       </h5>
     </Nav.Item>
+  
   ))}
 </Nav>
 

@@ -95,29 +95,34 @@ const Page = () => {
           </p>
           <br />
           <Row className="g-4">
+          
             {items.map((item, index) => (
-              <Col
+              <Col  
                 key={index}
                 md={3}
                 sm={6}
                 xs={6}
                 className="text-center"
                 data-aos="zoom-in"
-              >
+                
+              > 
                 <div>
+                <a href="#top-section" style={{textDecoration:'none'}}>
                   <Image
                     src={item.src}
                     alt={item.alt}
                     layout="responsive"
                     priority
-                    style={{ borderRadius: "20px" }}
+                    style={{ borderRadius: "20px",userSelect:'all', pointerEvents:'auto' }}
                   />
                   <h5 className="mt-3">
-                    <b>{item.title}</b>
+                    <b style={{color:'#008AC7'}}>{item.title}</b>
                   </h5>
+                  </a>
                 </div>
               </Col>
             ))}
+            
           </Row>
         </div>
 
@@ -181,6 +186,7 @@ Malad west Mumbai - 400064."
           </Row>
         </div>
       </Container>
+      <div id="top-section"></div>
     </div>
   );
 };

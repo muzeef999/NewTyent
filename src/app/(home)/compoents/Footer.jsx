@@ -20,8 +20,8 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 style={{ color: "#000", fontWeight:'600' }}>Products</h5>
             <ul className="list-unstyled">
-            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/nmp-5"}>Counter-Top Water Ionizers</Link></li>
-            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/uce-9"}>Under-Counter Water Ionizers</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"#"}>Counter-Top Water Ionizers</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"#"}>Under-Counter Water Ionizers</Link></li>
             <li><Link style={{textDecoration:'none', color:'#000'}} href={"/hybrid-h2"}>H2-Hybrid series</Link></li>
             <li><Link style={{textDecoration:'none', color:'#000'}} href={"/0.1-micron-filters"}>Replacement Filters</Link></li>
             <li><Link style={{textDecoration:'none', color:'#000'}} href={"/soap"}>Tyent TMX Beauty Soap</Link></li>
@@ -93,11 +93,13 @@ const Footer = () => {
           </div>
           </Col>
           <Col sm={6} xs={6} md={3}  className='d-flex justify-content-center align-items-center'>
+          <Link href={"/"}>
            <Button style={{backgroundColor: "#F8FBFE", border:"none", color:'#000'}}>
            
            I &nbsp; <IoHeart style={{color:'#FF0000'}} size={30}/> Tyent
 
-           </Button>
+           </Button> 
+           </Link>
       
           </Col>
 
@@ -117,22 +119,42 @@ const Footer = () => {
   </Col>
  
   {/* Right Side: Social Media Icons */}
-  <Col xs={12} md={6} className="text-center text-md-end" >
-      <div className="d-flex justify-content-center justify-content-md-end gap-3">
-        <a href="https://www.facebook.com/TyentIndiaOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ userSelect: "all", pointerEvents: "auto",  }}>
-          <FaFacebook size={30} color="#316FF6" />
-        </a>
-        <a href="https://www.linkedin.com/company/tyent-india1/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style={{ userSelect: "all", pointerEvents: "auto",  }} aria-label="LinkedIn">
-          <FaLinkedin size={30} color="#0077B5" />
-        </a>
-        <a href="https://www.instagram.com/tyentindia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ userSelect: "all", pointerEvents: "auto",  }}>
-          <FaInstagram size={30} color="#E4405F" />
-        </a>
-        <a href="https://www.youtube.com/@TyentIndia3170" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={{ userSelect: "all", pointerEvents: "auto",  }}>
-          <FaYoutube size={30} color="#FF0000" />
-        </a>
-      </div>
-    </Col>
+  <Col xs={12} md={6} className="text-center text-md-end">
+  <div className="d-flex justify-content-center justify-content-md-end gap-3">
+    <a style={{cursor:'pointer'}} 
+      href="https://www.facebook.com/TyentIndiaOfficial/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Facebook"
+    >
+      <FaFacebook size={30} color="#316FF6" />
+    </a>
+    <a 
+      href="https://www.linkedin.com/company/tyent-india1/posts/?feedView=all" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="LinkedIn"
+    >
+      <FaLinkedin size={30} color="#0077B5" />
+    </a>
+    <a 
+      href="https://www.instagram.com/tyentindia/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Instagram"
+    >
+      <FaInstagram size={30} color="#E4405F" />
+    </a>
+    <a 
+      href="https://www.youtube.com/@TyentIndia3170" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="YouTube"
+    >
+      <FaYoutube size={30} color="#FF0000" />
+    </a>
+  </div>
+</Col>
 </Row>
 
 
