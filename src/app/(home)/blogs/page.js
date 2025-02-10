@@ -15,7 +15,7 @@ export async function generateMetadata() {
 
     return {
       title: "Tyent Blog - Latest News & Health Tips",
-      description: " Explore our blog for expert insights on alkaline water, health benefits, and water ionization technology.",
+      description: "Explore our blog for expert insights on alkaline water, health benefits, and water ionization technology.",
     };
   } catch (error) {
     return {
@@ -55,7 +55,7 @@ const Page = async () => {
       />
   
 
-    <div className="container">
+    <div className="container" style={{overflow:'hidden'}}>
 
       
     <div className="section-spacing">
