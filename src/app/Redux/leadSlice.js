@@ -2,13 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in';
 
 // Fetch Leads
 export const fetchLeads = (userRole, username) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await axios.get(`strokeWidth/api/lead`);
+    const response = await axios.get(`/api/lead`);
 
     // Define the status categories for filtering
     const statusCategories = [
@@ -56,7 +55,7 @@ export const updateLead = (updateData) => async (dispatch, getState) => {
   dispatch(setLoading(true));
 
   try {
-    await axios.put(`strokeWidth/api/lead`, {
+    await axios.put(`/api/lead`, {
       leadId: updateData.id,
       assignedTo: updateData.assignedTo,
       status: updateData.status,
@@ -93,7 +92,7 @@ export const handleDeleteLead = (leadId) => async (dispatch, getState) => {
   dispatch(setLoading(true));
 
   try {
-    await axios.delete(`strokeWidth/api/lead/${leadId}`);
+    await axios.delete(`/api/lead/${leadId}`);
     toast.success("Deleted Leads")
   } catch (error) {
     toast.error("Error deleting lead:", error.message)

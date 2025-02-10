@@ -96,7 +96,7 @@ const FormOnly = () => {
               }        
 
             await axios.post(
-              `strokeWidth/api/lead`,
+              `/api/lead`,
               {
                 name: inputdata.name,
                 email: inputdata.email,
