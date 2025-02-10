@@ -20,12 +20,12 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 style={{ color: "#000", fontWeight:'600' }}>Products</h5>
             <ul className="list-unstyled">
-              <li>Counter-Top Water Ionizers</li>
-              <li>Under-Counter Water Ionizers</li>
-              <li>H2-Hybrid series</li>
-              <li>Replacement Filters</li>
-              <li>Tyent TMX Beauty Soap</li>
-              <li>Stainless Steel Water Bottles</li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/nmp-5"}>Counter-Top Water Ionizers</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/uce-9"}>Under-Counter Water Ionizers</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/hybrid-h2"}>H2-Hybrid series</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/0.1-micron-filters"}>Replacement Filters</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/soap"}>Tyent TMX Beauty Soap</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/Sterilizing-water-generator"}>Stainless Steel Water Bottles</Link></li>
             </ul>
           </Col>
 
@@ -33,11 +33,11 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 style={{ color: "#000", fontWeight:'600' }}>Customers</h5>
             <ul className="list-unstyled">
-              <li>Dealer Opportunity</li>
-              <li>Usage Instructions</li>
-              <li>Health Benefits</li>
-              <li>Testimonies</li>
-              <li>Why Tyent</li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"#"}>Dealer Opportunity</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/7-types-of-Tyent-water"}>Usage Instructions</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/benefits"}>Health Benefits</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/testimonials"}>Testimonies</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/why-tyent"}>Why Tyent</Link></li>
             </ul>
           </Col>
 
@@ -117,18 +117,18 @@ const Footer = () => {
   </Col>
  
   {/* Right Side: Social Media Icons */}
-  <Col xs={12} md={6} className="text-center text-md-end" style={{ userSelect: "all", pointerEvents: "auto" }}>
+  <Col xs={12} md={6} className="text-center text-md-end" >
       <div className="d-flex justify-content-center justify-content-md-end gap-3">
-        <a href="https://www.facebook.com/TyentIndiaOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a href="https://www.facebook.com/TyentIndiaOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ userSelect: "all", pointerEvents: "auto",  }}>
           <FaFacebook size={30} color="#316FF6" />
         </a>
-        <a href="https://www.linkedin.com/company/tyent-india1/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/tyent-india1/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style={{ userSelect: "all", pointerEvents: "auto",  }} aria-label="LinkedIn">
           <FaLinkedin size={30} color="#0077B5" />
         </a>
-        <a href="https://www.instagram.com/tyentindia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/tyentindia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ userSelect: "all", pointerEvents: "auto",  }}>
           <FaInstagram size={30} color="#E4405F" />
         </a>
-        <a href="https://www.youtube.com/@TyentIndia3170" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <a href="https://www.youtube.com/@TyentIndia3170" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={{ userSelect: "all", pointerEvents: "auto",  }}>
           <FaYoutube size={30} color="#FF0000" />
         </a>
       </div>
