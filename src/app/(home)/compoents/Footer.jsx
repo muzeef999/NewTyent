@@ -117,22 +117,22 @@ const Footer = () => {
   </Col>
  
   {/* Right Side: Social Media Icons */}
-  <Col xs={12} md={6} className="text-center text-md-end" style={{ userSelect:'all', pointerEvents:'auto'}}>
-    <div className="d-flex justify-content-center justify-content-md-end gap-3">
-      <Link href={"https://www.facebook.com/TyentIndiaOfficial/"} target="_blank" aria-label="Facebook">
-        <FaFacebook size={30} color="#316FF6" />
-      </Link>
-      <Link href={"https://www.linkedin.com/company/tyent-india1/posts/?feedView=all"} target="_blank" aria-label="LinkedIn">
-        <FaLinkedin size={30} color="#0077B5" />
-      </Link>
-      <Link href={"https://www.instagram.com/tyentindia/"} target="_blank" aria-label="Instagram">
-        <FaInstagram size={30} color="#E4405F" />
-      </Link>
-      <Link href={"https://www.youtube.com/@TyentIndia3170"} target="_blank" aria-label="YouTube">
-        <FaYoutube size={30} color="#FF0000" />
-      </Link>
-    </div>
-  </Col>
+  <Col xs={12} md={6} className="text-center text-md-end" style={{ userSelect: "all", pointerEvents: "auto" }}>
+      <div className="d-flex justify-content-center justify-content-md-end gap-3">
+        <a href="https://www.facebook.com/TyentIndiaOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <FaFacebook size={30} color="#316FF6" />
+        </a>
+        <a href="https://www.linkedin.com/company/tyent-india1/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <FaLinkedin size={30} color="#0077B5" />
+        </a>
+        <a href="https://www.instagram.com/tyentindia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <FaInstagram size={30} color="#E4405F" />
+        </a>
+        <a href="https://www.youtube.com/@TyentIndia3170" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <FaYoutube size={30} color="#FF0000" />
+        </a>
+      </div>
+    </Col>
 </Row>
 
 

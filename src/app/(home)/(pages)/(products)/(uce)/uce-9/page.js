@@ -112,6 +112,7 @@ const WaterFilterCards = ({ icon, title, content }) => {
           overflow: "hidden",
           textOverflow: "ellipsis",
           lineHeight: "1.5",
+          fontSize:'14px',
           display: "-webkit-box",
           WebkitBoxOrient: "vertical",
           WebkitLineClamp: 7,
