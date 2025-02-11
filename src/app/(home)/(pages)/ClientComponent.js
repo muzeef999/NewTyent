@@ -35,9 +35,11 @@ export default function ClientComponent({ children, session }) {
 
   useEffect(() => {
     Aos.init({
-      easing: "ease-out-cubic",
-      offset: 150,
-      duration: 1000,
+      duration: 1200, // Smooth & premium feel (1.2s)
+      easing: "ease-in-out", // More natural motion
+      offset: 100, // Not too early, not too late
+      delay: 100, // Adds a slight delay for elegance
+      once: true, // Animations play only once for a polished experience
     });
   }, []);
 
