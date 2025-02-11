@@ -15,13 +15,13 @@ import { Modal, Button } from "react-bootstrap";
 import '@/app/style/Animation.css'; // Import the animation CSS
 import FormOnly from "../compoents/Form/FormOnly";
 import { Toaster } from "sonner";
-import NextNProgress from 'nextjs-progressbar';
+import NextNProgress from 'nextjs-progressbar'; 
 
 
 
 export default function ClientComponent({ children, session }) {
   const pathname = usePathname();
-  const noLayoutPages = ["/shipping"];
+  const noLayoutPages = ["/shipping", "/blog/*"];
   const shouldExcludeLayout = noLayoutPages.includes(pathname);
   
   const [showModal, setShowModal] = useState(false);
