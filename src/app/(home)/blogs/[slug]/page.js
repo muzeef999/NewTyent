@@ -105,7 +105,7 @@ export default async function BlogPage({ params }) {
               </div>
             </div>
           ))}
-          <FormOnly />
+          
         </Col>
       </Row>
     </div>
