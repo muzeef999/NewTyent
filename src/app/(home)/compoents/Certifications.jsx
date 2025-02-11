@@ -37,15 +37,15 @@ const Certifications = () => {
                  data-aos="zoom-in"
                 className="mb-3 d-flex justify-content-center"
               >
-                 <Image
+                 <Image 
                   src={icon}
                   alt={`Certification ${index + 1}`}
                   layout='responsive'
                   priority
-                  style={{ objectFit: 'contain' }}
+                  style={{ objectFit: 'contain', userSelect:'all', pointerEvents:'auto' }}
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 100px" // Use responsive sizes based on screen width
                 />
-              </Col>
+              </Col> 
             ))}
           </Row>
         </center>
