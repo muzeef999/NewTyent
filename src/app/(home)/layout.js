@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import "@/app/style/AppBar.css"; 
 import dynamic from "next/dynamic";
 import { Poppins} from 'next/font/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
  
@@ -28,6 +29,7 @@ export default function RootLayout({ children, session }) {
     <html lang="en">
      
       <body  className={poppins.className}>
+        <SpeedInsights/>
         <ClientComponent session={session}>
           {children}
         </ClientComponent>
