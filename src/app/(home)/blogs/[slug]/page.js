@@ -25,7 +25,6 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const formattedTime = formatDistanceToNow(new Date(post.publishedAt + "T00:00:00Z"), { addSuffix: true });
 
   const post = await res.json();
 
@@ -77,7 +76,9 @@ export default async function BlogPage({ params }) {
               <strong>By:</strong> {post.username}
             </p>
             <p className="mb-0">
-              {formattedTime}
+              {formatDistanceToNow(new Date(post.publishedAt), {
+                addSuffix: true,
+              })}
             </p>
           </div>
           <Share data={post} />
