@@ -4,9 +4,6 @@ import { notFound } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
 import default_image from "@/asserts/default_image.webp";
 
-const FormOnly = dynamic(() => import("@/app/(home)/compoents/Form/FormOnly"), {
-  ssr: false,
-});
 
 const Share = dynamic(() => import("@/app/(home)/compoents/Share"), {
   ssr: false,
