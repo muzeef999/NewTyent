@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { Col, Row, Card } from "react-bootstrap";
 import default_image from "@/asserts/default_image.webp"
-import Form from "../../compoents/Form/Form";
+import FormOnly from "../../compoents/Form/FormOnly";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
 const Share = dynamic(() => import("@/app/(home)/compoents/Share"), { ssr: false });
@@ -42,8 +42,8 @@ export default async function BlogPage({ params }) {
   const { slug } = params;
 
   const [postRes, recentRes] = await Promise.all([
-    fetch(`${apiUrl}/api/blog/${slug}`),
-    fetch(`${apiUrl}/api/blogs?limit=5`),
+    fetch(`${apiUrl}/api/blog`),
+    fetch(`${apiUrl}/api/blog?limit=5`),
   ]);
 
   if (!postRes.ok) {
@@ -54,7 +54,7 @@ export default async function BlogPage({ params }) {
   const recentBlogs = recentRes.ok ? await recentRes.json() : [];
 
   return (
-    <div className="container py-4">
+    <div className="container py-4" style={{overflowX:'hidden'}}>
       <Row>
         <Col md={8} className="mb-4">
           <img
@@ -76,7 +76,7 @@ export default async function BlogPage({ params }) {
         </Col>
 
         <Col md={4}>
-        <Form />
+          <FormOnly />
           <h3 className="fw-bold mb-3">Recent Blogs</h3>
           {recentBlogs.map((blog) => (
             <Card key={blog.id} className="mb-3 shadow-sm border-0 rounded-3">
