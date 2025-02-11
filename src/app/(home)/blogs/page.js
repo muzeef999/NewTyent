@@ -38,7 +38,7 @@ const Page = async () => {
   const headerData = { 
     basic: "Discover the Real Science Behind",
     preheading:'Tyent Water Ionizers',
-    afterheading: "Stay informed & healthy!",
+    afterheading: "Stay informed & healthy!", 
     img: blog, // Add image URL if needed
     animatedText: "Pure Innovation,  Ultimate Hydration!" // Pass the animated text here
   }
