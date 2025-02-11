@@ -47,7 +47,7 @@ export default async function BlogPage({ params }) {
   const { slug } = params;
 
   const [postRes, recentRes] = await Promise.all([
-    fetch(`${apiUrl}/api/blogs`),
+    fetch(`${apiUrl}/api/blog/${slug}`),
     fetch(`${apiUrl}/api/blog?limit=5`),
   ]);
 
@@ -83,7 +83,7 @@ export default async function BlogPage({ params }) {
         <Col md={4}>
           <FormOnly />
           <h3 className="fw-bold mb-3">Recent Blogs</h3>
-          {/* {recentBlogs.map((blog) => (
+          {recentBlogs.map((blog) => (
             <Card key={blog.id} className="mb-3 shadow-sm border-0 rounded-3">
               <Card.Body>
                 <Card.Title className="fs-5">{blog.title}</Card.Title>
@@ -93,7 +93,7 @@ export default async function BlogPage({ params }) {
                 <a href={`/blog/${blog.slug}`} className="stretched-link"></a>
               </Card.Body>
             </Card>
-          ))} */}
+          ))}
         </Col>
       </Row>
     </div>
