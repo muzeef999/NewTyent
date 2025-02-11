@@ -3,7 +3,10 @@ import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { Col, Row, Card } from "react-bootstrap";
 import default_image from "@/asserts/default_image.webp"
-import FormOnly from "../../compoents/Form/FormOnly";
+
+
+const FormOnly = dynamic(() => import("@/app/(home)/compoents/Form/Form"),{ssr:false})
+
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
 const Share = dynamic(() => import("@/app/(home)/compoents/Share"), { ssr: false });
@@ -56,7 +59,7 @@ export default async function BlogPage({ params }) {
   return (
     <div className="container py-4" style={{overflowX:'hidden'}}>
       <Row>
-        <Col md={8} className="mb-4">
+        <Col md={8} className="mb-4" style={{overflowX:'hidden'}}>
           <img
             src={post.img}
             alt={post.title}
