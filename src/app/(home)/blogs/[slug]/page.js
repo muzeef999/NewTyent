@@ -25,6 +25,7 @@ export async function generateMetadata({ params }) {
   }
 
   const post = await res.json();
+
   return {
     title: post.title,
     description: post.description || "Read this blog to learn more.",
@@ -84,15 +85,15 @@ export default async function BlogPage({ params }) {
           <FormOnly />
           <h3 className="fw-bold mb-3">Recent Blogs</h3>
           {recentBlogs.map((blog) => (
-            <Card key={blog.id} className="mb-3 shadow-sm border-0 rounded-3">
-              <Card.Body>
-                <Card.Title className="fs-5">{blog.title}</Card.Title>
-                <Card.Text className="text-muted small">
+            <div key={blog.id} className="mb-3 shadow-sm border-0 rounded-3">
+              <div>
+                <h2 className="fs-5">{blog.title}</h2>
+                <p className="text-muted small">
                   {formatDistanceToNow(new Date(blog.publishedAt), { addSuffix: true })}
-                </Card.Text>
+                </p>
                 <a href={`/blog/${blog.slug}`} className="stretched-link"></a>
-              </Card.Body>
-            </Card>
+              </div>
+            </div>
           ))}
         </Col>
       </Row>
