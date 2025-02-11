@@ -124,10 +124,11 @@ const CertificationsPage = () => {
               >
                 <div>
                   <div className="certificate-container">
-                    <div className="certificate-content">
+                    <div className="certificate-content" style={{ userSelect:'all', pointerEvents:'auto'}}>
                       <Image
+                      style={{ userSelect:'all', pointerEvents:'auto', cursor: "pointer" }}
                         onClick={() => imagesrcsend(image)}
-                        style={{ cursor: "pointer" }}
+                      
                         src={image.src}
                         alt={image.alt}
                         width={300}
