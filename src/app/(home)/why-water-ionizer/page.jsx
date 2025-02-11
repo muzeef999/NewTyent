@@ -421,7 +421,7 @@ const page = () => {
             >
               <div>
                 <h3>
-                  IInized Alkaline water - <br />
+                  Ionized Alkaline water - <br />
                   <span
                     style={{
                       color: "#008AC7",
