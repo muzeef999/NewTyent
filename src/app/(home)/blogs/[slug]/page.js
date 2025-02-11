@@ -2,16 +2,17 @@ import { formatDistanceToNow } from "date-fns";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
-import default_image from "@/asserts/default_image.webp"
+import default_image from "@/asserts/default_image.webp";
 
+const FormOnly = dynamic(() => import("@/app/(home)/compoents/Form/FormOnly"), {
+  ssr: false,
+});
 
-const FormOnly = dynamic(() => import("@/app/(home)/compoents/Form/FormOnly"),{ssr:false})
-
-
-const Share = dynamic(() => import("@/app/(home)/compoents/Share"), { ssr: false });
+const Share = dynamic(() => import("@/app/(home)/compoents/Share"), {
+  ssr: false,
+});
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
-
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -23,6 +24,8 @@ export async function generateMetadata({ params }) {
       description: "The requested blog does not exist.",
     };
   }
+
+  const formattedTime = formatDistanceToNow(new Date(post.publishedAt + "T00:00:00Z"), { addSuffix: true });
 
   const post = await res.json();
 
@@ -60,9 +63,9 @@ export default async function BlogPage({ params }) {
   const recentBlogs = recentRes.ok ? await recentRes.json() : [];
 
   return (
-    <div className="container py-4" style={{overflowX:'hidden'}}>
+    <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
-        <Col md={8} className="mb-4" style={{overflowX:'hidden'}}>
+        <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
           <img
             src={post.img}
             alt={post.title}
@@ -74,27 +77,37 @@ export default async function BlogPage({ params }) {
               <strong>By:</strong> {post.username}
             </p>
             <p className="mb-0">
-              {formatDistanceToNow(new Date(post.publishedAt), { addSuffix: true })}
+              {formattedTime}
             </p>
           </div>
           <Share data={post} />
-          <div className="mt-4" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+          <div
+            className="mt-4"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          ></div>
         </Col>
 
         <Col md={4}>
-          <FormOnly />
           <h3 className="fw-bold mb-3">Recent Blogs</h3>
           {recentBlogs.map((blog) => (
             <div key={blog.id} className="mb-3 shadow-sm border-0 rounded-3">
               <div>
+                <img
+                  src={post.img}
+                  alt={post.title}
+                  className="w-100 rounded-3 mb-3"
+                />
                 <h2 className="fs-5">{blog.title}</h2>
                 <p className="text-muted small">
-                  {formatDistanceToNow(new Date(blog.publishedAt), { addSuffix: true })}
+                  {formatDistanceToNow(new Date(blog.publishedAt), {
+                    addSuffix: true,
+                  })}
                 </p>
                 <a href={`/blog/${blog.slug}`} className="stretched-link"></a>
               </div>
             </div>
           ))}
+          <FormOnly />
         </Col>
       </Row>
     </div>
