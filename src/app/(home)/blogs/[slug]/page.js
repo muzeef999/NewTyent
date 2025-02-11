@@ -1,7 +1,7 @@
 import { formatDistanceToNow } from "date-fns";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import { Col, Row, Card } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import default_image from "@/asserts/default_image.webp"
 
 
