@@ -48,7 +48,7 @@ export default async function BlogPage({ params }) {
 
   const [postRes, recentRes] = await Promise.all([
     fetch(`${apiUrl}/api/blog/${slug}`),
-    fetch(`${apiUrl}/api/blogs?limit=5`),
+    fetch(`${apiUrl}/api/blog?limit=5`),
   ]);
 
   if (!postRes.ok) {
