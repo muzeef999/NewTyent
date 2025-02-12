@@ -3,32 +3,49 @@ import Shipping from "@/models/shipping";
 import { NextResponse } from "next/server";
 
 // GET Request to retrieve shipping addresses for a user
-export async function GET(request, { params }) {
-  const { userId } = params;
-  await connect();
+export const GET = async(request, { params }) => {
+  const userId = params?.id; 
+
+  console.log("Extracted userId:", userId); // Debugging lo
+
+  if (!userId) {
+    return NextResponse.json(
+      { message: "User ID is required", success: false },
+      { status: 400 }
+    );
+  }
 
   try {
-    const shippingAddresses = await Shipping.find({ userId });
+    await connect();
+    const shippingAddresses = await Shipping.findOne({ userId });
+   
 
-    // Check if shipping addresses are found
-    if (!shippingAddresses || shippingAddresses.length === 0) {
-      return NextResponse.json({
-        message: "No shipping addresses found for this user",
-        success: false, 
-      });
+    if (!shippingAddresses) { // `findOne` returns `null` if not found
+      return NextResponse.json(
+        { message: "No shipping address found for this user", success: false },
+        { status: 404 }
+      );
     }
 
-    return NextResponse.json({
-      message: "Shipping addresses retrieved successfully",
-      success: true,
-      shippingAddresses,
-    });
+    return NextResponse.json(
+      {
+        message: "Shipping address retrieved successfully",
+        success: true,
+        shippingAddresses, // Correct response
+      },
+      { status: 200 }
+    );
+
+
   } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json(
+      { message: "Server error", error: error.message, success: false },
+      { status: 500 }
+    );
   }
 }
 
-// PUT Request to update shipping address for a user
+
 export async function PUT(request, { params }) {
   const { userId } = params;
   await connect();

@@ -119,26 +119,3 @@
 
 
 
-@media (max-width: 1010px) {
-  .customPriceCard{
-    position: relative;
-    background-color: #FFF;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-    padding: 10px;
-    width: 100% !important;
-    top: 10px;
-  }
-}
-
-@media (min-width: 1011px) {
-  
-  .customPriceCard{
-    background-color: #FFF;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-    padding: 10px;
-    width: 25%;
-    position: fixed;
-    top: 100px; /* Adjust as needed */
-    overflow-y: auto; /* Add scrollbar if needed */
-  } 
-}
