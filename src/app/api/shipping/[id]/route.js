@@ -1,5 +1,6 @@
 import connect from "@/app/lib/mongoDB";
 import Shipping from "@/models/shipping";
+import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 // GET Request to retrieve shipping addresses for a user
@@ -17,10 +18,13 @@ export const GET = async(request, { params }) => {
 
   try {
     await connect();
-    const shippingAddresses = await Shipping.findOne({ userId });
+
+
+    const shippingDetails = await Shipping.findOne({ _id: new mongoose.Types.ObjectId(userId) });
+
    
 
-    if (!shippingAddresses) { // `findOne` returns `null` if not found
+    if (!shippingDetails) { // `findOne` returns `null` if not found
       return NextResponse.json(
         { message: "No shipping address found for this user", success: false },
         { status: 404 }
@@ -31,7 +35,7 @@ export const GET = async(request, { params }) => {
       {
         message: "Shipping address retrieved successfully",
         success: true,
-        shippingAddresses, // Correct response
+        shippingDetails, // Correct response
       },
       { status: 200 }
     );
