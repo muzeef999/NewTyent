@@ -58,6 +58,10 @@ export default async function BlogPage({ params }) {
   const post = await postRes.json();
   const recentBlogs = recentRes.ok ? await recentRes.json() : [];
 
+  const formattedTime = formatDistanceToNow(new Date(post.createdAt), {
+    addSuffix: true,
+  });
+
   return (
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
@@ -73,9 +77,7 @@ export default async function BlogPage({ params }) {
               <strong>By:</strong> {post.username}
             </p>
             <p className="mb-0">
-              {formatDistanceToNow(new Date(post.publishedAt), {
-                addSuffix: true,
-              })}
+              {formattedTime}
             </p>
           </div>
           <Share data={post} />

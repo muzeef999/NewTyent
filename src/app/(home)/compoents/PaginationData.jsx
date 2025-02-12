@@ -68,7 +68,7 @@ const PaginationData = ({ data, itemsPerPage }) => {
                         <strong>By:</strong> {blog.username}
                       </p>
                       <p>
-                        {formatDistanceToNow(new Date(blog.publishedAt), {
+                        {formatDistanceToNow(new Date(blog.createdAt), {
                           addSuffix: true,
                         })}
                       </p>
