@@ -24,6 +24,7 @@ import "@/app/style/AppBar.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { toast } from "sonner";
 import { IoPeopleCircleOutline } from "react-icons/io5";
+import Logo from "./Logo";
 
 const AppBar = () => {
   const { data: session } = useSession();
@@ -189,7 +190,7 @@ const AppBar = () => {
             isFixed ? "fixed" : ""
           }`}
         >
-          <div className="container-fluid d-flex justify-content-between align-items-center mt-2 border-bottom">
+          <div className=" container-fluid d-flex justify-content-between align-items-center mt-2 border-bottom">
             {/* Toggle Button */}
             <button
               className="navbar-toggler"
@@ -201,9 +202,10 @@ const AppBar = () => {
             </button>
 
             {/* Logo */}
-            <Link href="/" className="navbar-brand">
-              <Image src={logo} width={100} alt="Logo" />
-            </Link>
+            <Link href="/" className="navbar-brand" style={{ display: "flex", alignItems: "center"}}>
+  <Logo />
+</Link>
+
 
             {/* Offcanvas Menu */}
             <div

@@ -274,6 +274,8 @@ img {
              
 }
 
+
+
 /* Fixed Navbar */
 .fixed {
   position: fixed;
@@ -448,6 +450,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }
 
 @media (max-width: 768px) {
+
   .table-borderless p {
     font-size: 14px; /* Smaller size for smaller screens */
   }
@@ -745,6 +748,15 @@ padding-left: 48px !important;
   .sectionSection {
     margin-top: -110px;
   }
+  .navbar-brand {
+   width: 6%; 
+  }
+}
+
+@media(max-width:786px) {
+  .navbar-brand {
+    width: 26%; 
+   }
 }
 
 .loading-container {

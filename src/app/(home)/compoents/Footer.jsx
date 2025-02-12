@@ -2,10 +2,10 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import logo from "@/asserts/logo.png";
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { IoHeart } from "react-icons/io5";
+import Logo from './Logo';
 
 
 const Footer = () => {
@@ -71,8 +71,8 @@ const Footer = () => {
             <Row>
               <Col md={3} style={{ userSelect:'all', pointerEvents:'auto'}}>
           <Link href="/" className="navbar-brand">
-          <div className="d-none d-lg-block" style={{ width: '100%' }}>
-  <Image src={logo} alt="logo" />
+          <div className="d-none d-lg-block p-2" style={{ width: '100%' }}>
+             <Logo/>
 </div>
 
 
