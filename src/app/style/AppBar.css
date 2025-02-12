@@ -274,7 +274,17 @@ img {
              
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #008AC7 !important;
+}
 
+.nav-link.active {
+  color: #008AC7 !important;
+}
+
+.nav-item .dropdown{
+color: #000 !important;
+} 
 
 /* Fixed Navbar */
 .fixed {
@@ -308,6 +318,7 @@ img {
   width: 75%; /* Width of the underline */
   height: 2px; /* Thickness of the underline */
   background-color: #008AC7; /* Color of the underline */
+  z-index: 99;
  
 }
 

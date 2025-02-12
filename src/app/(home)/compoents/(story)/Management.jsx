@@ -14,7 +14,10 @@ const managementData = [
 const Management = () => {
   return (
     <div className="container-fluid">
-      <h2 className="text-center title">Our Management</h2>
+      <center>
+      <h2 className='text-center' style={{ color: '#008AC7', fontWeight: '600'}}>Our Management</h2>
+      </center>
+      <br/>
       <div className="container">
         <Row className="g-3">
           {managementData.map((person, index) => (
