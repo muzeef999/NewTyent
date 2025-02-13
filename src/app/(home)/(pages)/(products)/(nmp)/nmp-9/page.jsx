@@ -283,7 +283,7 @@ const TyentNMP5 = () => {
           </div>
 
           {/* Desktop and Larger Devices */}
-          <div className="d-none d-lg-block">
+          <div className="d-none d-md-block">
             <Image
               src={NMP7_BANNER_DESKTOP}
               alt="nmp-5 banner"
@@ -341,12 +341,10 @@ const TyentNMP5 = () => {
               </Link>
             </div>
           </div>
-          <br />
-          <br />
+          
 
             {/* NmpDispalayfinal for Desktop */}
             <div className="nmp9Display" 
-           
             >
               <Display />
             </div>
@@ -377,7 +375,7 @@ const TyentNMP5 = () => {
               fontSize: "2rem", // Default for large screens
             }}
           >
-            Tyent NMP-7 Specification's
+            Tyent NMP-9 Specification's
           </h2>
 
           <Table className="custom-table" hover responsive>

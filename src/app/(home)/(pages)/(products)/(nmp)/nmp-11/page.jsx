@@ -338,8 +338,6 @@ const TyentNMP5 = () => {
                 </Link>
               </div>
             </div>
-            <br />
-            <br />
 
             {/* NmpDispalayfinal for Desktop */}
             <div
