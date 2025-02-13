@@ -51,16 +51,14 @@ const Page = () => {
   const [totalItemsShows, setTotalItemsShows] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [showAll, setShowAll] = useState(false);
-  const [refreshKeyOne, setRefreshKeyOne] = useState(0); 
-
-
+  const [refreshKeyOne, setRefreshKeyOne] = useState(0);
 
   const { shippingAddress, pending, error } = useSelector(
-    (state) => state.shippingAddress || {} 
+    (state) => state.shippingAddress || {}
   );
 
+  console.log("Shipping Address Data:", shippingAddress?.addresses || []);
 
-  // **Fetch User Address and Cart Data on User Change**
   useEffect(() => {
     if (session?.user) {
       dispatch(getUserAddress(session.user.id));
@@ -68,11 +66,6 @@ const Page = () => {
     }
   }, [session, dispatch]);
 
-
-  console.log("Shipping Address Data:", shippingAddress?.addresses || []); // ✅ Debugging log
-
-
-  // **Ensure Default Address Selection**
   useEffect(() => {
     if (shippingAddress?.addresses?.length > 0) {
       const firstAddress = shippingAddress.addresses[0];
@@ -82,7 +75,7 @@ const Page = () => {
         console.log("Default address selected:", firstAddress);
       }
     }
-  }, [shippingAddress]); 
+  }, [shippingAddress]);
 
   const refreshAccordionOne = () => {
     setRefreshKeyOne((prevKey) => prevKey + 1);
@@ -242,9 +235,9 @@ const Page = () => {
                 <div className="accordion-body m-0 p-0">
                   {pending ? (
                     <p>Loading...</p>
-                  ) : shippingAddress?.length > 0 ? ( // ✅ Fixed incorrect state reference
+                  ) : shippingAddress?.addresses?.length > 0 ? ( // ✅ Fixed the condition
                     <>
-                      {shippingAddress.slice(0, 3).map((address) => (
+                      {shippingAddress.addresses.slice(0, 3).map((address) => (
                         <div key={address._id} className="m-0">
                           <div
                             className={`address-card align-items-start ${
@@ -324,90 +317,86 @@ const Page = () => {
                       ))}
 
                       {showAll &&
-                        shippingAddress.slice(3).map(
-                          (
-                            address // ✅ Fixed incorrect state reference
-                          ) => (
-                            <div
-                              key={address._id}
-                              className={`address-card align-items-start ${
-                                selectedAddressId === address._id
-                                  ? "selected"
-                                  : ""
-                              }`}
-                            >
-                              {editingAddressId === address._id ? (
-                                <EditShippingAddress
-                                  editAddress={address}
-                                  handleEditAccordionClose={() =>
-                                    setEditingAddressId(null)
-                                  }
-                                />
-                              ) : (
-                                <div className="d-flex align-items-center">
-                                  <div className="flex-grow-1 d-flex align-items-start m-3">
-                                    <div className="form-check">
-                                      <input
-                                        className="form-check-input"
-                                        type="radio"
-                                        name="addressRadio"
-                                        id={address._id}
-                                        onChange={() =>
-                                          handleAddressSelect(address._id)
-                                        }
-                                        checked={
-                                          selectedAddressId === address._id
-                                        }
-                                      />
-                                    </div>
-                                    <div className="w-100 pl-3">
-                                      <p className="font-weight-bold">
-                                        {address.fullName} &nbsp;{" "}
-                                        {address.mobileNumber ||
-                                          "No mobile number"}
-                                      </p>
-                                      <p>
-                                        Address: {address.address},{" "}
-                                        {address.city}, {address.postalCode}
-                                      </p>
-                                      <p className="m-0">
-                                        State: {address.state}
-                                      </p>
-                                      <button
-                                        className="saveanddelivery m-3"
-                                        type="button"
-                                        onClick={() =>
-                                          handleDeliverHereClick(address)
-                                        }
-                                      >
-                                        DELIVER HERE
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div className="w-10 float-end">
-                                    <p
-                                      className="text-end m-4"
-                                      onClick={() =>
-                                        setEditingAddressId(address._id)
+                        shippingAddress.addresses.slice(3).map((address) => (
+                          <div
+                            key={address._id}
+                            className={`address-card align-items-start ${
+                              selectedAddressId === address._id
+                                ? "selected"
+                                : ""
+                            }`}
+                          >
+                            {editingAddressId === address._id ? (
+                              <EditShippingAddress
+                                editAddress={address}
+                                handleEditAccordionClose={() =>
+                                  setEditingAddressId(null)
+                                }
+                              />
+                            ) : (
+                              <div className="d-flex align-items-center">
+                                <div className="flex-grow-1 d-flex align-items-start m-3">
+                                  <div className="form-check">
+                                    <input
+                                      className="form-check-input"
+                                      type="radio"
+                                      name="addressRadio"
+                                      id={address._id}
+                                      onChange={() =>
+                                        handleAddressSelect(address._id)
                                       }
-                                      style={{
-                                        color: "#008AC7",
-                                        cursor: "pointer",
-                                        fontSize: "18px",
-                                      }}
-                                    >
-                                      Edit
+                                      checked={
+                                        selectedAddressId === address._id
+                                      }
+                                    />
+                                  </div>
+                                  <div className="w-100 pl-3">
+                                    <p className="font-weight-bold">
+                                      {address.fullName} &nbsp;{" "}
+                                      {address.deliveryNumber ||
+                                        "No mobile number"}
                                     </p>
+                                    <p>
+                                      Address: {address.address}, {address.city}
+                                      , {address.postalCode}
+                                    </p>
+                                    <p className="m-0">
+                                      State: {address.state}
+                                    </p>
+                                    <button
+                                      className="saveanddelivery m-3"
+                                      type="button"
+                                      onClick={() =>
+                                        handleDeliverHereClick(address)
+                                      }
+                                    >
+                                      DELIVER HERE
+                                    </button>
                                   </div>
                                 </div>
-                              )}
-                              <hr className="m-0" />
-                            </div>
-                          )
-                        )}
+                                <div className="w-10 float-end">
+                                  <p
+                                    className="text-end m-4"
+                                    onClick={() =>
+                                      setEditingAddressId(address._id)
+                                    }
+                                    style={{
+                                      color: "#008AC7",
+                                      cursor: "pointer",
+                                      fontSize: "18px",
+                                    }}
+                                  >
+                                    Edit
+                                  </p>
+                                </div>
+                              </div>
+                            )}
+                            <hr className="m-0" />
+                          </div>
+                        ))}
 
                       {/* Show More / Show Less Button */}
-                      {shippingAddress.length > 3 && (
+                      {shippingAddress.addresses.length > 3 && (
                         <button
                           className="btn btn-link"
                           onClick={() => setShowAll(!showAll)}
@@ -420,7 +409,7 @@ const Page = () => {
                         >
                           {showAll
                             ? "Show fewer addresses"
-                            : `View all ${shippingAddress.length} addresses`}
+                            : `View all ${shippingAddress.addresses.length} addresses`}
                         </button>
                       )}
                     </>

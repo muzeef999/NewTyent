@@ -448,14 +448,14 @@ const VideoCard = ({ src, description }) => {
   return (
     <div
       className="custom-card text-center"
-      style={{ padding: "10px" }}
+      style={{ padding: "15px" }}
       data-aos="fade-up"
     >
       <div className="embed-responsive embed-responsive-16by9 mb-3">
         <iframe
           className="embed-responsive-item"
           src={src}
-          style={{ borderRadius: "8px", width: "100%", height: "210px" }}
+          style={{ borderRadius: "15px", width: "100%", height: "210px" }}
           allowFullScreen
           title="Video"
         />
@@ -567,6 +567,7 @@ const Page = () => {
           ))}
         </Row>
         <br />
+        <br/>
         <h2 className="text-center">
           "
           <span style={{ fontWeight: 600, color: "#008AC7" }}>
