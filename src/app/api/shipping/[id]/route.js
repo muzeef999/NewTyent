@@ -7,8 +7,6 @@ import { NextResponse } from "next/server";
 export const GET = async(request, { params }) => {
   const userId = params?.id; 
 
-  console.log("Extracted userId:", userId); // Debugging lo
-
   if (!userId) {
     return NextResponse.json(
       { message: "User ID is required", success: false },

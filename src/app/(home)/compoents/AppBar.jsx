@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +15,6 @@ import {
 import { PiShoppingCartLight } from "react-icons/pi";
 import { setUser } from "@/app/Redux/authSlice";
 import { fetchCart } from "@/app/Redux/cartSlice";
-import logo from "@/asserts/logo.png";
 import Login from "./Login";
 import ResponsiveProductPage from "./ResponsiveProductPage";
 import Cartpage from "./Cart";

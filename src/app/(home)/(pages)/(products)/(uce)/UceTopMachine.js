@@ -17,9 +17,9 @@ const UceTopMachine = () => {
                 zIndex:'0'}}>
 <svg width="100%" height="auto" viewBox="0 0 296 405" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_ii_4826_3862)">
-<g clip-path="url(#clip0_4826_3862)">
+<g clipPath="url(#clip0_4826_3862)">
 <rect x="2.64453" y="2" width="291.252" height="401.027" rx="15.2289" fill="#0E0E0E"/>
-<g clip-path="url(#clip1_4826_3862)">
+<g clipPath="url(#clip1_4826_3862)">
 <rect x="33.1016" y="67.9922" width="230.971" height="302.039" rx="7.61443" fill="url(#paint0_linear_4826_3862)"/>
     <g>
     <rect width="67.2608" height="67.2608" transform="translate(45.1602 113.672)" fill="#00D2FF"/>
@@ -101,7 +101,7 @@ const UceTopMachine = () => {
     </g>
     
 
-<g clip-path="url(#clip10_4826_3862)">
+<g clipPath="url(#clip10_4826_3862)">
 <mask id="path-24-inside-1_4826_3862" fill="white">
 <path d="M38.1797 329.414H258.998V366.217H38.1797V329.414Z"/>
 </mask>

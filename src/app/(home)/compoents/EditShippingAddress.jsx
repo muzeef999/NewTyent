@@ -12,8 +12,10 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
     fullName: "",
     address: "",
     city: "",
+    state: "",
     country: "",
     postalCode: "",
+    deliveryNumber: "",
   });
 
   // Populate form fields with editAddress when the component is rendered or updated
@@ -23,8 +25,10 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
         fullName: editAddress.fullName || "",
         address: editAddress.address || "",
         city: editAddress.city || "",
+        state: editAddress.state || "",
         country: editAddress.country || "",
         postalCode: editAddress.postalCode || "",
+        deliveryNumber: editAddress.deliveryNumber || "",
       });
     }
   }, [editAddress]);
@@ -63,7 +67,7 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
         },
         body: JSON.stringify({
           addressId: editAddress._id, // Ensure address ID is sent
-          updatedAddress: formData,  // Ensure updated address details are sent
+          updatedAddress: formData, // Ensure updated address details are sent
         }),
       });
 
@@ -97,7 +101,7 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
                 placeholder="Enter full name"
                 required
               />
-            </Form.Group> 
+            </Form.Group>
           </Col>
           <Col>
             <Form.Group controlId="formAddress" className="mb-3">
@@ -129,11 +133,11 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
           </Col>
           <Col>
             <Form.Group controlId="formCountry" className="mb-3">
-              <Form.Label>Country</Form.Label>
+              <Form.Label>State</Form.Label>
               <Form.Control
                 type="text"
                 name="country"
-                value={formData.country}
+                value={formData.state}
                 onChange={handleChange}
                 placeholder="Enter country"
                 required
@@ -149,6 +153,19 @@ const EditShippingAddress = ({ editAddress, handleEditAccordionClose }) => {
                 type="text"
                 name="postalCode"
                 value={formData.postalCode}
+                onChange={handleChange}
+                placeholder="Enter postal code"
+                required
+              />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="formPostalCode" className="mb-3">
+              <Form.Label>Deivery Phone Number</Form.Label>
+              <Form.Control
+                type="text"
+                name="deliveryNumber"
+                value={formData.deliveryNumber}
                 onChange={handleChange}
                 placeholder="Enter postal code"
                 required

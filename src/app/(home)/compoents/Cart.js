@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Loading from "./Loading";
 import { useRouter } from "next/navigation";
-import Login from "./Login";
 import CartItems from "./CartItems";
 
 

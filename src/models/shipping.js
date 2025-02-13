@@ -16,13 +16,17 @@ const addressSchema = new Schema({
     required: true,
   },
   postalCode: {
+    type: String, 
+    required: true,
+  },
+  state: {
     type: String,
     required: true,
   },
-  country: {
+  deliveryNumber : {
     type: String,
     required: true,
-  },
+  }
 });
 
 const shippingSchema = new Schema(

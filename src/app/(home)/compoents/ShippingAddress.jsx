@@ -10,8 +10,9 @@ const ShippingAddress = ({ handleAccordionClick, refreshAccordionOne  }) => {
     fullName: "",
     address: "",
     city: "",
-    country: "",
+    state: "",
     postalCode: "",
+    deliveryNumber:"",
   });
 
   const [loading, setLoading] = useState(false); // Spinner state
@@ -30,7 +31,7 @@ const ShippingAddress = ({ handleAccordionClick, refreshAccordionOne  }) => {
     e.preventDefault();
     setLoading(true); // Show spinner
     try {
-      const response = await axios.post("/api/shipping", {
+      const response = await axios.post("http://localhost:3000/api/shipping", {
         _id: user.id, // Replace with actual user ID
         addresses: [formData],
       });
@@ -97,11 +98,11 @@ const ShippingAddress = ({ handleAccordionClick, refreshAccordionOne  }) => {
           </Col>
           <Col>
             <Form.Group controlId="formCountry" className="mb-3">
-              <Form.Label>Country</Form.Label>
+              <Form.Label>State</Form.Label>
               <Form.Control
                 type="text"
-                name="country"
-                value={formData.country}
+                name="state"
+                value={formData.state}
                 onChange={handleChange}
                 placeholder="Enter country"
                 required
@@ -117,6 +118,19 @@ const ShippingAddress = ({ handleAccordionClick, refreshAccordionOne  }) => {
                 type="text"
                 name="postalCode"
                 value={formData.postalCode}
+                onChange={handleChange}
+                placeholder="Enter postal code"
+                required
+              />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="formPostalCode" className="mb-3">
+              <Form.Label>Deivery Phone Number</Form.Label>
+              <Form.Control
+                type="text"
+                name="deliveryNumber"
+                value={formData.deliveryNumber}
                 onChange={handleChange}
                 placeholder="Enter postal code"
                 required

@@ -25,7 +25,7 @@ const ShippingAddresBar = () => {
       dispatch(
         setUser({
           id: session.user.id,
-          name: session.user.name,
+          name: session.user.name, 
           email: session.user.email,
         }));
     }

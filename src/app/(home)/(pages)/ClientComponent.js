@@ -51,7 +51,7 @@ export default function ClientComponent({ children, session }) {
     <SessionProvider session={session}>
        <NextNProgress color="#FFF" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
      
-       <Toaster richColors position="top-right"  style={{marginTop:'70px'}}/>
+       <Toaster richColors position="top-center"  style={{marginTop:'70px'}}/>
       <Provider store={store}>
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>

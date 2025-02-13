@@ -89,7 +89,7 @@ const HybridTouchPreview = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <g filter="url(#filter0_ii_4990_2295)">
-              <g clip-path="url(#clip0_4990_2295)">
+              <g clipPath="url(#clip0_4990_2295)">
                 <rect
                   x="1"
                   y="1"
@@ -98,7 +98,7 @@ const HybridTouchPreview = () => {
                   rx="14.5385"
                   fill="#000"
                 />
-                <g clip-path="url(#clip1_4990_2295)">
+                <g clipPath="url(#clip1_4990_2295)">
                   <rect
                     x="17.6172"
                     y="17.2617"

@@ -58,7 +58,7 @@ const DisplayAnimation = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <g filter="url(#filter0_ii_4826_3862)">
-                <g clip-path="url(#clip0_4826_3862)">
+                <g clipPath="url(#clip0_4826_3862)">
                   <rect
                     x="2.64453"
                     y="2"
@@ -67,7 +67,7 @@ const DisplayAnimation = () => {
                     rx="15.2289"
                     fill="#0E0E0E"
                   />
-                  <g clip-path="url(#clip1_4826_3862)">
+                  <g clipPath="url(#clip1_4826_3862)">
                     <rect
                       x="33.1016"
                       y="67.9922"
