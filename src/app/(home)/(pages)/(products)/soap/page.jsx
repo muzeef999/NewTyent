@@ -1,7 +1,7 @@
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import React from "react";
 import soap from "@/asserts/soap/soap.png"
-import { Container } from "react-bootstrap";
+
 import "@/app/style/SoapButton.css"
 import InDetail from "./InDetail";
 

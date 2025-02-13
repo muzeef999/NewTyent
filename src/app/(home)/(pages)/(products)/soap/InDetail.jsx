@@ -4,6 +4,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import Pomegranate from "@/asserts/soap/Pomegranate.png";
 import soapeffect from "@/asserts/soap/soapeffect.jpg"
 import Image from "next/image";
+import herbal from "@/asserts/soap/herbal.webp"
+import honey from "@/asserts/soap/honey.webp"
+import Hyaluronic from "@/asserts/soap/Hyaluronic.webp"
+import olive from "@/asserts/soap/olive.webp"
+import pinus from "@/asserts/soap/pinus.webp"
 
 const InDetail = () => {
   const cleaningItems = [
@@ -42,7 +47,7 @@ const InDetail = () => {
       ],
     },
     {
-      img: Pomegranate,
+      img: honey,
       alt: "Honey",
       title: "Honey",
       features: [
@@ -53,7 +58,7 @@ const InDetail = () => {
       ],
     },
     {
-      img: Pomegranate,
+      img: pinus,
       alt: "Pinus Sylvestris Bud Extract",
       title: "Pinus Sylvestris Bud Extract",
       features: [
@@ -63,7 +68,7 @@ const InDetail = () => {
       ],
     },
     {
-      img: Pomegranate,
+      img: olive,
       alt: "Olive Oil",
       title: "Olive Oil",
       features: [
@@ -74,13 +79,13 @@ const InDetail = () => {
       ],
     },
     {
-      img: Pomegranate,
+      img: Hyaluronic,
       alt: "Hyaluronic Acid",
       title: "Hyaluronic Acid",
       features: ["Moisturizing Factor", "Enhancing Skin Elastisity"],
     },
     {
-      img: Pomegranate,
+      img: herbal,
       alt: "TM Fermented Herbal Enzyme ",
       title: "TM Fermented Herbal Enzyme ",
       features: [
