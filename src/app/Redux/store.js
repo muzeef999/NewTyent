@@ -3,7 +3,7 @@ import authReducer from "./authSlice"; // Import your auth slice
 import cartReducer from "./cartSlice"; // Import your cart slice
 import leadsReducer from "./leadSlice"
 import managersReducer from "./managerSlice"
-import  ShippingReducer  from "./shippingAddressSclice";
+import  ShippingReducer  from "./shippingSlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +11,6 @@ export const store = configureStore({
     cart: cartReducer, // Add your cart reducer here
     leads: leadsReducer,
     managers: managersReducer,
-    shipping: ShippingReducer,
+    shippingAddress: ShippingReducer,
   },
 });

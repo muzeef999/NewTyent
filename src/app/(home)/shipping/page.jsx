@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import useSWR from "swr";
 import {
   deleteProductAction,
   fetchCart,
@@ -14,7 +15,7 @@ import dynamic from "next/dynamic";
 import OrderComponent from "./OrderComponent";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { getUserAddress } from "@/app/Redux/shippingAddressSclice";
+import { getUserAddress } from "@/app/Redux/shippingSlice";
 
 const CartItems = dynamic(() => import("@/app/(home)/compoents/CartItems"), {
   srr: false,
@@ -50,15 +51,13 @@ const Page = () => {
   const [totalItemsShows, setTotalItemsShows] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [showAll, setShowAll] = useState(false);
-  const [refreshKeyOne, setRefreshKeyOne] = useState(0);
+  const [refreshKeyOne, setRefreshKeyOne] = useState(0); 
+
 
 
   const { shippingAddress, pending, error } = useSelector(
-    (state) => state.shippingAddress || { shippingAddress: {} }
+    (state) => state.shippingAddress || {} 
   );
-  console.log("Shipping Address:", shippingAddress);
-  
-
 
 
   // **Fetch User Address and Cart Data on User Change**
@@ -68,6 +67,9 @@ const Page = () => {
       dispatch(fetchCart(session.user.id));
     }
   }, [session, dispatch]);
+
+
+  console.log("Shipping Address Data:", shippingAddress?.addresses || []); // ✅ Debugging log
 
 
   // **Ensure Default Address Selection**
@@ -173,8 +175,9 @@ const Page = () => {
     setShowAll((prev) => !prev);
   };
 
-  // **Show Loading if User or Total Amount is Missing**
-  if (!user || !totalAmount) return <Loading />;
+  if (pending) return <Loading />;
+  if (error) return <p style={{ color: "red" }}>{error}</p>;
+  if (!shippingAddress) return <p>No Address Found</p>;
 
   return (
     <div className="container">

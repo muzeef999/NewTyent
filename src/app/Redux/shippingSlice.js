@@ -7,40 +7,41 @@ export const getUserAddress = createAsyncThunk(
   "Shipping/fetchShipping",
   async (userId, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/api/shipping/${userId}`);
-      return data; // ✅ Ensure default value
+      const response = await axios.get(`/api/shipping/${userId}`);
+      return response.data.shippingDetails; 
     } catch (error) {
-      const errorMessage = error.response?.data?.message || "Error fetching shipping";
-      console.error("API Fetch Error:", errorMessage); // ✅ Log error message
+      const errorMessage = error.response?.data?.message || "Error fetching shipping details";
       toast.error(errorMessage);
-      return rejectWithValue(errorMessage);
+      return rejectWithValue(errorMessage); 
     }
   }
 );
 
+// ✅ Initial State
+const initialState = {
+  shippingAddress: null, 
+  pending: false,
+  error: null,
+};
+
+// ✅ Redux Slice
 const shippingSlice = createSlice({
   name: "shippingAddress",
-  initialState: {
-    shippingAddress: null, // ✅ Start with `null`
-    pending: false,
-    error: null,
-  },
+  initialState,
+  reducers: {}, // ✅ No direct reducers needed
   extraReducers: (builder) => {
     builder
       .addCase(getUserAddress.pending, (state) => {
         state.pending = true;
         state.error = null;
-        
       })
       .addCase(getUserAddress.fulfilled, (state, action) => {
         state.pending = false;
-        state.shippingAddress = action.payload || {}; // ✅ Ensure default object
-        
+        state.shippingAddress = action.payload || {}; 
       })
       .addCase(getUserAddress.rejected, (state, action) => {
         state.pending = false;
         state.error = action.payload;
-        
       });
   },
 });
