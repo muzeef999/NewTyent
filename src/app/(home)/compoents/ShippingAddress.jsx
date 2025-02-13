@@ -31,7 +31,7 @@ const ShippingAddress = ({ handleAccordionClick, refreshAccordionOne  }) => {
     e.preventDefault();
     setLoading(true); // Show spinner
     try {
-      const response = await axios.post("http://localhost:3000/api/shipping", {
+      const response = await axios.post("/api/shipping", {
         _id: user.id, // Replace with actual user ID
         addresses: [formData],
       });

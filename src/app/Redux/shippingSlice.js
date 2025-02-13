@@ -8,18 +8,41 @@ export const getUserAddress = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       const response = await axios.get(`/api/shipping/${userId}`);
-      return response.data.shippingDetails; 
+      return response.data.shippingDetails;
     } catch (error) {
       const errorMessage = error.response?.data?.message || "Error fetching shipping details";
       toast.error(errorMessage);
-      return rejectWithValue(errorMessage); 
+      return rejectWithValue(errorMessage);
+    }
+  }
+);
+
+// ✅ Save User Address
+export const saveUserAddress = createAsyncThunk(
+  "Shipping/saveShipping",
+  async ({ userId, formData }, { rejectWithValue }) => {
+    try {
+      const response = await axios.post("/api/shipping", {
+        _id: userId,
+        addresses: [formData],
+      });
+
+      if (response.status === 200) {
+        toast.success("Address saved successfully!");
+        return formData;
+      } else {
+        return rejectWithValue("Error saving shipping address");
+      }
+    } catch (error) {
+      toast.error(`Error: ${error.message}`);
+      return rejectWithValue(error.message);
     }
   }
 );
 
 // ✅ Initial State
 const initialState = {
-  shippingAddress: null, 
+  shippingAddress: null,
   pending: false,
   error: null,
 };
@@ -28,7 +51,7 @@ const initialState = {
 const shippingSlice = createSlice({
   name: "shippingAddress",
   initialState,
-  reducers: {}, // ✅ No direct reducers needed
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getUserAddress.pending, (state) => {
@@ -37,9 +60,20 @@ const shippingSlice = createSlice({
       })
       .addCase(getUserAddress.fulfilled, (state, action) => {
         state.pending = false;
-        state.shippingAddress = action.payload || {}; 
+        state.shippingAddress = action.payload || {};
       })
       .addCase(getUserAddress.rejected, (state, action) => {
+        state.pending = false;
+        state.error = action.payload;
+      })
+      .addCase(saveUserAddress.pending, (state) => {
+        state.pending = true;
+      })
+      .addCase(saveUserAddress.fulfilled, (state, action) => {
+        state.pending = false;
+        state.shippingAddress = action.payload;
+      })
+      .addCase(saveUserAddress.rejected, (state, action) => {
         state.pending = false;
         state.error = action.payload;
       });
