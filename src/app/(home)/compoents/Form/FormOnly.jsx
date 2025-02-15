@@ -104,11 +104,11 @@ const FormOnly = () => {
                       },
                       {
                         type: "text",
-                        text: `${inputdata.number}\nEmail: ${inputdata.email}`
+                        text: `${inputdata.number},Email: ${inputdata.email}`
                       },
                       {
                         type: "text",
-                        text: `${inputdata.message}\nLocation: ${inputdata.location}`
+                        text: `${inputdata.message},Location: ${inputdata.location}`
                       }
                     ]
                   }
