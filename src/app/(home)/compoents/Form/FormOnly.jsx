@@ -85,37 +85,36 @@ const FormOnly = () => {
         
           try {
             const payload = {
-                "messaging_product": "whatsapp",
-                "recipient_type": "individual",
-                "to": "919182414181",
-                "type": "template",
-                "template": {
-                  "name": "appointment_custom_messages",
-                  "language": {
-                    "code": "en"
-                  },
-                  "components": [
-                    {
-                      "type": "body",
-                      "parameters": [
-                        {
-                          "type": "text",
-                          "text": `${inputdata.name}`
-                        },
-                        {
-                          "type": "text",
-                          "text": `${inputdata.number + "\n" + "Email : " + inputdata.email }`
-                        },
-                        {
-                          "type": "text",
-                          "text": `${inputdata.message + "\n" + "Location : "+inputdata.location}`
-                        }
-                      ]
-                    }
-                  ]
-                }              
-             
-            };       
+              messaging_product: "whatsapp",
+              recipient_type: "individual",
+              to: "919182414181", // Ensure the number is in the correct format and opted in.
+              type: "template",
+              template: {
+                name: "appointment_custom_messages", // Confirm this matches the approved template name.
+                language: {
+                  code: "en" // Verify that the language code matches your template configuration (e.g., "en" vs. "en_US").
+                },
+                components: [
+                  {
+                    type: "body",
+                    parameters: [
+                      {
+                        type: "text",
+                        text: inputdata.name
+                      },
+                      {
+                        type: "text",
+                        text: `${inputdata.number}\nEmail: ${inputdata.email}`
+                      },
+                      {
+                        type: "text",
+                        text: `${inputdata.message}\nLocation: ${inputdata.location}`
+                      }
+                    ]
+                  }
+                ]
+              }
+            }; 
 
             await axios.post(
               `/api/lead`,
