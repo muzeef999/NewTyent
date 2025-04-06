@@ -7,16 +7,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { postCart } from "@/app/Redux/cartSlice";
 import Image from "next/image";
 import "@/app/style/AppBar.css"
+import { Modal } from "react-bootstrap";
+import Login from "../Login";
+
 
 const ProductSection = ({ products, specifications }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [urlFound, setUrlFound] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+
 
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
-
   const userData = useSelector((state) => state.auth.user); // Access user data from Redux
-
   const thumbRef = useRef(null);
 
 
@@ -69,7 +73,9 @@ const ProductSection = ({ products, specifications }) => {
       };
       dispatch(postCart(cartItemData));
     } else {
-      router.push("/Signin");
+      
+      setShowLoginModal(true)
+
     }
   };
 
@@ -95,6 +101,7 @@ const ProductSection = ({ products, specifications }) => {
 
  
   return (
+    <>
     <div style={{width:'100%', overflow:"hidden"}}>
       {/* Header Section */}
       <Container style={{overflowX:'hidden'}}>
@@ -191,6 +198,14 @@ const ProductSection = ({ products, specifications }) => {
       </Container>
       
     </div>
+     {/* Login Modal */}
+
+     <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
+          <Modal.Body>
+            <Login setShowLoginModal={setShowLoginModal} />
+          </Modal.Body>
+        </Modal>
+    </>
   );
 };
 

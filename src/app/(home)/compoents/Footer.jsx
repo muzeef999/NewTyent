@@ -88,8 +88,16 @@ const Footer = () => {
           </Col>
           <Col sm={6} xs={6} md={3} className='d-flex justify-content-center align-items-center'>
           <div>
-            <p><span style={{fontWeight:'600'}}>Contact Us : </span><br/>
-            9182-41-41-81</p>
+
+
+          <p><span style={{fontWeight:'600'}}>CONSUMER POLICY
+          </span><br/>
+          <Link style={{textDecoration:'none'}} href={"/Cancellation_Returns"}>Cancellation & Returns  </Link><br/>
+          <Link style={{textDecoration:'none'}} href={"/Terms_of_Use"}>Terms of Use</Link><br/>
+          <Link style={{textDecoration:'none'}} href={"/Security"}>Security</Link><br/>
+          <Link style={{textDecoration:'none'}} href={"/Privacy"}>Privacy</Link><br/>
+          </p>
+          
           </div>
           </Col>
           <Col sm={6} xs={6} md={3}  className='d-flex justify-content-center align-items-center'>
