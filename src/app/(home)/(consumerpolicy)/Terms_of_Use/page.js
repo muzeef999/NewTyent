@@ -26,7 +26,7 @@ const page = () => {
             borderBottom: "2px solid #ccc",
             paddingBottom: "12px",
             marginBottom: "35px",
-            color: "#007b83",
+            color: "#008ac7",
           }}
         >
           Terms of Use

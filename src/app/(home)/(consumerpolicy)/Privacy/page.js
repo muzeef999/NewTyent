@@ -11,7 +11,6 @@ const page = () => {
     <div>
        <main
         style={{
-          backgroundColor:'#FFF',
           maxWidth: "850px",
           margin: "0 auto",
           padding: "40px 20px",
@@ -19,7 +18,18 @@ const page = () => {
           color: "#333",
         }}
       >
-        
+        <h1
+          style={{
+            fontSize: "34px",
+            fontWeight: "bold",
+            borderBottom: "2px solid #ccc",
+            paddingBottom: "12px",
+            marginBottom: "35px",
+            color: "#008ac7",
+          }}
+        >
+          Privacy Policy
+        </h1>
 
         {/* Intro */}
         <section style={{ marginBottom: "30px" }}>

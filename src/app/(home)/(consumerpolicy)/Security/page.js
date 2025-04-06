@@ -17,7 +17,7 @@ const page = () => {
           margin: "0 auto",
           padding: "40px 20px",
           fontFamily: "'Segoe UI', sans-serif",
-          color: "#333",
+          color: "#008ac7",
         }}
       >
         <h1
