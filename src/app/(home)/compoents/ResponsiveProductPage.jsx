@@ -89,10 +89,10 @@ const ProductData = [
     ],
   },
   {
-    category: "Tyent H2",
+    category: "Tyent H2-Hybrid",
     products: [
       {
-        title: "Tyent H2",
+        title: "Tyent H2-Hybrid",
         image: hybrid,
         link: "/hybrid-h2",
       },
@@ -100,7 +100,7 @@ const ProductData = [
   },
 
   {
-    category: "Soap",
+    category: "TM-X Beauty Soap",
     products: [
       {
         title: "TM-X Beauty Soap",
