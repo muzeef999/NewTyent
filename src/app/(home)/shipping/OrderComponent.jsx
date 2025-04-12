@@ -16,8 +16,14 @@ const OrderComponent = ({ selectedAddress }) => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
       script.src = "https://checkout.razorpay.com/v1/checkout.js";
-      script.onload = () => resolve(true);
-      script.onerror = () => resolve(false);
+      script.onload = () => {
+        console.log("Razorpay SDK loaded");
+        resolve(true);
+      };
+      script.onerror = () => {
+        console.error("Failed to load Razorpay SDK");
+        resolve(false);
+      };
       document.body.appendChild(script);
     });
   };
@@ -37,8 +43,10 @@ const OrderComponent = ({ selectedAddress }) => {
         address: selectedAddress,
       });
 
+      console.log("Order API response:", data);
+
       const res = await loadRazorpayScript();
-      if (!res) {
+      if (!res || !window.Razorpay) {
         alert("Failed to load Razorpay SDK.");
         setIsPlacingOrder(false);
         return;
@@ -52,17 +60,22 @@ const OrderComponent = ({ selectedAddress }) => {
         description: "Order Payment",
         order_id: data.orderId,
         handler: async function (response) {
-          const verifyRes = await axios.post("/api/verify-payment", {
-            orderId: data.orderId,
-            paymentId: response.razorpay_payment_id,
-            signature: response.razorpay_signature,
-          });
+          try {
+            const verifyRes = await axios.post("/api/verify-payment", {
+              orderId: data.orderId,
+              paymentId: response.razorpay_payment_id,
+              signature: response.razorpay_signature,
+            });
 
-          if (verifyRes.data.success) {
-            alert("Payment successful!");
-            dispatch(clearCart());
-            setOrderResponse(verifyRes.data);
-          } else {
+            if (verifyRes.data.success) {
+              alert("Payment successful!");
+              dispatch(clearCart());
+              setOrderResponse(verifyRes.data);
+            } else {
+              alert("Payment verification failed.");
+            }
+          } catch (err) {
+            console.error("Error verifying payment:", err);
             alert("Payment verification failed.");
           }
         },
@@ -78,6 +91,7 @@ const OrderComponent = ({ selectedAddress }) => {
       rzp.open();
     } catch (error) {
       console.error("Order placement failed:", error);
+      alert("Something went wrong during order placement.");
     } finally {
       setIsPlacingOrder(false);
     }
@@ -86,9 +100,9 @@ const OrderComponent = ({ selectedAddress }) => {
   return (
     <div className="order-section">
       <button
-      style={{backgroundColor:'#008ac7', color:'#FFF'}} 
-        className="btn" 
-        onClick={placeOrder} 
+        style={{ backgroundColor: "#008ac7", color: "#FFF" }}
+        className="btn"
+        onClick={placeOrder}
         disabled={isPlacingOrder}
       >
         {isPlacingOrder ? "Processing..." : "Pay with Razorpay"}
