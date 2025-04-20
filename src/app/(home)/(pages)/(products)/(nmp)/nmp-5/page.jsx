@@ -197,7 +197,7 @@ const TyentNMP5 = () => {
     <div style={{ width: "100% !important", overflow: "hidden !important" }}>
       <button className={`fixed-vertical-button`}>
         <a
-          href={"/assets/Tyent_New_catalog.pdf"}
+          href={'https://tyent.co.in/pdf/Tyent_New_catalog.pdf'}
           style={{ textDecoration: "none", color: "#FFF" }}
           download
           className="download-link"
