@@ -21,6 +21,7 @@ const ClientComponent = dynamic(() => import("./(pages)/ClientComponent"),{ssr:f
 export const metadata = {
   title: "Tyent Water Ionizers - Advanced Alkaline Water Filtration",
   description: "Discover Tyent's cutting-edge water ionizers that provide ultra-pure, hydrogen-rich alkaline water. Experience superior hydration with our award-winning technology.",
+  Keywords:""
 };
 
 export default function RootLayout({ children, session }) {

@@ -14,8 +14,9 @@ import hydrogenicon from "@/asserts/why ionizer/hydrogenicon.png";
 import "@/app/style/WhyDrinkTyentWater.css";
 
 export const metadata = {
-  title: "Why Do You Need a Water Ionizer?",
-  description: "Learn how a water ionizer transforms ordinary tap water into a health-boosting, alkaline powerhouse.",
+  title: "Hydrogen-Rich Alkaline Water: Invest in Health with Tyent Ionizers | Beat Acidic Stress Naturally",
+  description: "Over 60% of your body is water - make every drop count. Tyent’s hydrogen-rich, mineralpacked alkaline water supports detox, immunity, and pH balance. Say no to borewell, municipal, and RO water. Choose ionized water with molecular hydrogen to fight acidity, reduce oxidative stress, and prevent lifestyle diseases like diabetes and heart issues.",
+  Keywords: "alkaline water benefits, hydrogen-rich water, water ionizer India, Tyent water ionizer,antioxidant water, acidic stress health risks, bore water dangers, RO water disadvantages, molecular hydrogen, lifestyle disease prevention, healthy hydration, water pH balance, best alkaline water, ionized water health benefits"
 };
 
 const page = () => {
