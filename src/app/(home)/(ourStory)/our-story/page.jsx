@@ -9,8 +9,9 @@ import Vision from '../../compoents/(story)/Vision';
 import Management from '../../compoents/(story)/Management';
 
 export const metadata = {
-  title: "About Tyent - Pioneering Water Ionization Technology",
-  description: "Learn about Tyent’s journey in revolutionizing water purification with advanced ionization and filtration technology.",
+  title: "Tyent Water Ionizers: Advanced Technology, Pure Water, & Global Certifications for Health & Wellness",
+  description: "Discover Tyent Water Ionizers with cutting-edge Solid Hybrid Mesh Plate technology and patented SMPS PLUS power. Offering the largest plate surface area, extreme filtration, and medical-grade quality, Tyent provides the healthiest, most efficient water ionization. With global certifications like FDA, ISO, NSF, and more, Tyent ensures the purest water for improved health and wellness. Available in 86+ countries, Tyent guarantees long-lasting performance and customer satisfaction. Try Tyent today for superior hydration and a healthier lifestyle!",
+  keywords:"Tyent Water Ionizers, Solid Hybrid Mesh Plate Technology, Hydrogen-Rich Water, pH Alkaline Water, Patented SMPS PLUS, Water Filtration, Tyent vs Kangen, Water Ionizer Certifications, Best Water Ionizers, Tyent India, Tyent USA, Micro-Clustered Water, Tyent Water Benefits, Tyent Warranty, Tyent Clean Water, Premium Water Ionizers, Medical Grade Water Ionizers, Tyent Customer Service, Alkaline Hydrogen Water, Tyent Display Technology"
 };
 
 
