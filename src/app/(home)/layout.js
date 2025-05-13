@@ -28,6 +28,12 @@ export default function RootLayout({ children, session }) {
 
   return (
     <html lang="en">
+          <head>
+        <meta
+          name="google-site-verification"
+          content="NAk7_Pm_PN0E76lPTu6J1Wo-H9UK8phofxdKyZ26sUg"
+        />
+      </head>
      
       <body  className={poppins.className}>
         <SpeedInsights/>
