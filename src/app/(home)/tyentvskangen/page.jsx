@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-import smps from "@/asserts/smps.png";
+
 import { Col, Row, Table } from "react-bootstrap";
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 import tyentPlates from "@/asserts/tyentvskangen/tyentPlates.png";
@@ -15,6 +15,13 @@ import Image from "next/image";
 import PriceComp from "../compoents/(Home)/PriceComp";
 import vs from "@/asserts/tyentvskangen/vs.png";
 import phscale from "@/asserts/tyentvskangen/phscale.png";
+
+
+export const metadata = {
+  title: "Tyent Water Ionizers vs Enagic Kangen | Advanced Alkaline Water Filtration",
+  description: "Explore the differences between Tyent water ionizers and Enagic Kangen systems. Discover the superior hydration, energy, and wellness benefits of hydrogen-rich, ionized water with Tyent’s advanced technology.",
+  keywords: "tyent water ionizer vs Enagic Kangen, tyent water vs Enagic Kangen, tyent vs Enagic Kangen",
+};
 
 const tableData = [
   {
