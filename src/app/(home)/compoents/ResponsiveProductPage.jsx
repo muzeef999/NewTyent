@@ -44,7 +44,7 @@ const ProductData = [
     ],
   },
   {
-    category: "NMP Series",
+    category: "Counter Top Water Ionizers",
     products: [
       {
         title: "NMP-5",
@@ -69,7 +69,7 @@ const ProductData = [
     ],
   },
   {
-    category: "UCE Series",
+    category: "Under Counter-water Ionizers",
     products: [
       {
         title: "Tyent UCE-9 Plus",
