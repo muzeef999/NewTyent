@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>Counter Top Water Ionizers </div>
   )
 }
 
