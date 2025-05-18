@@ -62,6 +62,7 @@ const ProductSection = ({ products, specifications }) => {
 
   const model = specifications.find((item) => item.label === "Model")?.name;
   const price = specifications.find((item) => item.label === "Price")?.name;
+  const  desc = specifications.find((item) => item.label === "sub-head")?.name;
 
   const addToCart = () => {
     if (userData) {
@@ -137,7 +138,7 @@ const ProductSection = ({ products, specifications }) => {
                       src={img}
                       alt={`Thumbnail ${index + 1}`}
                       key={index}
-                      onClick={() => handleTab(index)}
+                      onClick={() => handleTab(index)} 
                       style={{ userSelect:'all', pointerEvents:'auto'}}
                     />
                   ))}
@@ -146,9 +147,10 @@ const ProductSection = ({ products, specifications }) => {
             ))}
           </div>
 
-        </Col>
+        </Col>    
         <Col sm={12} md={12} lg={6} xl={6}>
           <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
+          <h1 style={{color:'#000',fontSize:'20px'}}>{desc}</h1>
           <hr />
           <h4 className="m-2">
             M.R.P: <span style={{ fontWeight: 500 }}>₹ {new Intl.NumberFormat("en-IN").format(price)}/-</span>

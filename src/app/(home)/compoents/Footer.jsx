@@ -20,8 +20,8 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 style={{ color: "#000", fontWeight:'600' }}>Products</h5>
             <ul className="list-unstyled">
-            <li><Link style={{textDecoration:'none', color:'#000'}} href={"#"}>Counter-Top Water Ionizers</Link></li>
-            <li><Link style={{textDecoration:'none', color:'#000'}} href={"#"}>Under-Counter Water Ionizers</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/counter-top-water-ionizers"}>Counter-Top Water Ionizers</Link></li>
+            <li><Link style={{textDecoration:'none', color:'#000'}} href={"/under-counter-water-ionizers"}>Under-Counter Water Ionizers</Link></li>
             <li><Link style={{textDecoration:'none', color:'#000'}} href={"/hybrid-h2"}>H2-Hybrid series</Link></li>
             <li><Link style={{textDecoration:'none', color:'#000'}} href={"/0.1-micron-filters"}>Replacement Filters</Link></li>
             <li><Link style={{textDecoration:'none', color:'#000'}} href={"/soap"}>Tyent TMX Beauty Soap</Link></li>

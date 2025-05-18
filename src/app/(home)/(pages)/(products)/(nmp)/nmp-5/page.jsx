@@ -65,6 +65,7 @@ const TyentNMP5 = () => {
 
   const specifications = [
     { label: "Model", name: "Tyent NMP-5" },
+    { label: "sub-head", name: "Counter Top Hydrogen Rich Alkaline water Ionizer" },
     { label: "Price", name: "168000" },
     { label: "Electrode/Plates", name: "5" },
     { label: "pH Range", name: "2.5 - 11.5*" },
