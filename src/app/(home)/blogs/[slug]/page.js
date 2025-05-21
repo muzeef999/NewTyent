@@ -22,17 +22,19 @@ export async function generateMetadata({ params }) {
 
   return {
     title: post.title,
-    description: post.description || "Read this blog to learn more.",
+    description: post.metaDescription,
+    keywords: post.metaKeywords,
     openGraph: {
       title: post.title,
-      description: post.description,
+      description: post.metaDescription,
       url: `${apiUrl}/blog/${slug}`,
       images: post.image || default_image,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.description,
+      description: post.metaDescription,
+
       images: post.image || default_image,
     },
   };
