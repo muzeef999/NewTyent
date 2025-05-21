@@ -26,108 +26,79 @@ const PaginationData = ({ data, itemsPerPage }) => {
   };
 
   return (
-    <div>
-      {/* Display current paginated items */}
-      <div className="item-list" >
-        <Row>
-          {currentItems?.length > 0 ? (
-            currentItems.map((blog, index) => (
-              <Col key={blog.slug} md={4} className="mb-4" data-aos={
+    <div className="container">
+      <Row className="gy-4">
+        {currentItems?.length > 0 ? (
+          currentItems.map((blog, index) => (
+            <Col
+              key={blog.slug}
+              md={4}
+              data-aos={
                 index % 3 === 0
                   ? "fade-right"
                   : index % 3 === 1
                   ? "fade-up"
                   : "fade-left"
-              }>
+              }
+            >
+              <Link
+                href={`/blogs/${blog.slug}`}
+                className="text-decoration-none"
+              >
+                <div className="shadow-sm  rounded-4 h-100 d-flex flex-column justify-content-between">
+                  <img
+                    src={blog.img}
+                    alt={blog.title || "Blog Image"}
+                    className="w-100 rounded-top mb-3 object-fit-cover"
+                    style={{ height: "230px" }}
+                  />
 
-                <Link
-                  href={`/blogs/${blog.slug}`}
-                  style={{ textDecoration: "none" }}
-                >
-                  <div
-                    className="custom-card"
-                    style={{ height: "480px", overflow: "hidden" }}
-                  >
-                    <div>
-                      <img
-                        style={{
-                          width: "100%",
-                          objectFit: "cover",
-                          height: "250px",
-                          borderRadius: "20px",
-                        }}
-                        src={blog.img || placeholderImg}
-                        alt={blog.title || "Default Blog Image"}
-                      />
-                    </div>
-                    <div
-                      style={{ color: "#008ac7", marginTop: "20px" }}
-                      className="d-flex justify-content-between align-items-center"
-                    >
-                      <p>
-                        <strong>By:</strong> {blog.username}
-                      </p>
-                      <p>
-                        {formatDistanceToNow(new Date(blog.createdAt), {
-                          addSuffix: true,
-                        })}
-                      </p>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <h5
-                        className="mt-2"
-                        style={{
-                          color: "#000",
-                          display: "-webkit-box",
-                          WebkitLineClamp: 1,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                        }}
-                      >
-                        {blog.title}
-                      </h5>
-                      <FiArrowUpRight size={30} />
-                    </div>
-                    <div
-                      style={{
-                        color: "#667085",
-                        display: "-webkit-box",
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                      }}
-                      dangerouslySetInnerHTML={{ __html: blog.content }}
-                    ></div>
+                  <div className="d-flex p-3 justify-content-between text-secondary small mb-2">
+                    <span>
+                      <strong>By:</strong> {blog.username}
+                    </span>
+                    <span>
+                      {formatDistanceToNow(new Date(blog.createdAt), {
+                        addSuffix: true,
+                      })}
+                    </span>
                   </div>
-                </Link>
-              </Col>
-            ))
-          ) : (
-            <p>No blogs found.</p>
-          )}
-        </Row>
-      </div>
 
-      {/* Pagination Controls */}
-      <div className="pagination-controls d-flex justify-content-between mt-4">
+                  <div className="d-flex p-3 justify-content-between align-items-center mb-2">
+                    <h2 className="fs-5 text-black fw-semibold mb-1">{blog.title}</h2>
+
+                    <FiArrowUpRight size={24} color="#008ac7" />
+                  </div>
+
+                </div>
+              </Link>
+            </Col>
+          ))
+        ) : (
+          <p className="text-center text-muted">No blogs found.</p>
+        )}
+      </Row>
+
+      {/* Pagination */}
+      <div className="d-flex justify-content-between align-items-center mt-5">
         <button
-          className="btn btn-primary"
+          className="btn btn-outline-primary"
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
         >
-          Previous
+          ← Previous
         </button>
-        <p>
+
+        <span className="text-muted">
           Page {currentPage} of {Math.ceil(data?.length / itemsPerPage)}
-        </p>
+        </span>
+
         <button
-          className="btn btn-primary"
+          className="btn btn-outline-primary"
           onClick={handleNextPage}
           disabled={currentPage === Math.ceil(data?.length / itemsPerPage)}
         >
-          Next
+          Next →
         </button>
       </div>
     </div>

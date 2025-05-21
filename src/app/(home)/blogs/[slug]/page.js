@@ -3,11 +3,7 @@ import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
 import default_image from "@/asserts/default_image.webp";
-
-
-const Share = dynamic(() => import("@/app/(home)/compoents/Share"), {
-  ssr: false,
-});
+import Link from "next/link";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
 
@@ -21,7 +17,6 @@ export async function generateMetadata({ params }) {
       description: "The requested blog does not exist.",
     };
   }
-
 
   const post = await res.json();
 
@@ -71,16 +66,14 @@ export default async function BlogPage({ params }) {
             alt={post.title}
             className="w-100 rounded-3 mb-3"
           />
-          <h1 className="fw-bold mb-3">{post.title}</h1>
+
           <div className="text-muted d-flex justify-content-between align-items-center mb-3">
             <p className="mb-0">
               <strong>By:</strong> {post.username}
             </p>
-            <p className="mb-0">
-              {formattedTime}
-            </p>
+            <p className="mb-0">{formattedTime}</p>
           </div>
-          <Share data={post} />
+
           <div
             className="mt-4"
             dangerouslySetInnerHTML={{ __html: post.content }}
@@ -88,26 +81,43 @@ export default async function BlogPage({ params }) {
         </Col>
 
         <Col md={4}>
-          <h3 className="fw-bold mb-3">Recent Blogs</h3>
+          <h3 className="fw-bold">Recent Blogs</h3>
           {recentBlogs.map((blog) => (
-            <div key={blog.id} className="mb-3 shadow-sm border-0 rounded-3">
-              <div>
+            <div
+              key={blog.id}
+              className="mb-4 shadow-sm border rounded-4 overflow-hidden"
+            >
+              
+              <Link
+                href={`/blog/${blog.slug}`}
+                className="text-decoration-none">
+              <div className="p-3">
                 <img
-                  src={post.img}
-                  alt={post.title}
-                  className="w-100 rounded-3 mb-3"
+                  src={blog.img}
+                  alt={blog.title}
+                  className="w-100 rounded-3 mb-3 object-fit-cover"
+                  style={{ height: "200px" }}
                 />
-                <h2 className="fs-5">{blog.title}</h2>
-                <p className="text-muted small">
-                  {formatDistanceToNow(new Date(blog.publishedAt), {
-                    addSuffix: true,
-                  })}
-                </p>
-                <a href={`/blog/${blog.slug}`} className="stretched-link"></a>
+                <div className="d-flex flex-column gap-2">
+                  <h2 className="fs-5 text-black fw-semibold mb-1">{blog.title}</h2>
+                  <p className="text-muted small mb-2">
+                    <span>{blog.publishedAt}</span>
+                    {formatDistanceToNow(new Date(blog.createdAt), {
+                      addSuffix: true,
+                    })}
+                  </p>
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="text-decoration-none"
+                    aria-label={`Read more about ${blog.title}`}
+                  ></Link>
+                  
+                </div>
+                
               </div>
+              </Link>
             </div>
           ))}
-          
         </Col>
       </Row>
     </div>
