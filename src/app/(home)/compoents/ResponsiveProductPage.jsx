@@ -69,7 +69,7 @@ const ProductData = [
     ],
   },
   {
-    category: "Under Counter-water Ionizers",
+    category: "Under Counter water Ionizers",
     products: [
       {
         title: "Tyent UCE-9 Plus",
