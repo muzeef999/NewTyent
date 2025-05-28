@@ -1,7 +1,7 @@
 import connect from "@/app/lib/mongoDB";
 import { verifyOtp } from "@/app/lib/otpService";
 import User from "@/models/User";
-import bcrypt from "bcrypt"; // You'll need this to hash the password before saving
+import bcrypt from "bcryptjs";
 
 
 export async function PUT(request) {
