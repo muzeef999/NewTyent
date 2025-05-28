@@ -2,6 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify:true,
+    compress: true,
+  images: {
+    domains: ['tyent.co.in','res.cloudinary.com'],
+  },
+  experimental: {
+    optimizeCss: true,
+  },
+
   async headers() {
     return [
       {
