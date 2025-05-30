@@ -12,8 +12,6 @@ const AdminPaginationData = dynamic(() => import("../compoents/AdminPaginationDa
   loading: () => <p>Loading pagination...</p>,
 });
 
-// Ensure the API URL is available
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in"; // Fallback URL
 
 const Page = () => {
   const [show, setShow] = useState(false);
@@ -23,7 +21,7 @@ const Page = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await fetch(`/api/blog`);
+      const res = await fetch(`https://www.tyent.co.in/api/blog`);
       if (!res.ok) {
         console.error(`Error fetching blogs: ${res.status} ${res.statusText}`);
         return [];

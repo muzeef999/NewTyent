@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /private
+
+# Host
+Host: https://www.tyent.co.in
+
+# Sitemaps
+Sitemap: https://www.tyent.co.in/sitemap.xml

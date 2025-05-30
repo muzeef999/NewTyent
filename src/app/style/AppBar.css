@@ -46,7 +46,9 @@ img {
 
 .marquee-content {
   display: flex;
+  font-display: swap;
   animation: marqueeEffect 10s linear infinite;
+  animation-delay: 1s;
 }
 
 @keyframes marqueeEffect {

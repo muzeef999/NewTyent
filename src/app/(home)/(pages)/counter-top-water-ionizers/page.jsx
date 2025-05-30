@@ -119,7 +119,7 @@ export default function CounterTopIonizers() {
           </p>
 
           <p className="mt-4">
-            <Link href="/under-counter-ionizers" className="btn" style={{ backgroundColor: "#008AC7", color: "#fff" }}>
+            <Link href="/under-counter-water-ionizers" className="btn" style={{ backgroundColor: "#008AC7", color: "#fff" }}>
               Explore Under Counter Models →
             </Link>
           </p>

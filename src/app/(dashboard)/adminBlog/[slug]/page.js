@@ -9,7 +9,6 @@ import BlogPostModal from "../../compoents/BlogPost";
 
 
 // Ensure the API URL is available
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
 
 
 export default function Page({params}) {
@@ -30,7 +29,7 @@ export default function Page({params}) {
 
     const fetchPost = async () => {
       try {
-        const res = await fetch(`/api/blog/${slug}`);
+        const res = await fetch(`https://www.tyent.co.in/api/blog/${slug}`);
         if (!res.ok) {
           setError(true);
           return;
