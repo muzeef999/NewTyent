@@ -39,8 +39,9 @@ const Banner = dynamic(
 );
 
 export const metadata = {
-  title: "Tyent NMP-11 Water Ionizer - Advanced 11-Plate Technology",
-  description: " Experience powerful hydration with the Tyent NMP9 water ionizer, featuring advanced filtration and cutting-edge ionization technology.",
+  title: "Tyent NMP-11 Ionizer | 11 Plates, 7 Waters, 1800 PPB H₂",
+  description: "Tyent NMP-11 with 11 solid mesh titanium plates delivers 7 water types, up to -1150 ORP & 1800 PPB H₂. Safe, pure ionized water without chemicals or salts.",
+  keywords: "Tyent NMP-11, alkaline water ionizer, hydrogen water, 11 plate ionizer, ORP water machine, Kangen alternative, water ionizer India, 11.5 pH water, SMPS PLUS, Japanese water ionizer"
 }; 
 
 const TyentNMP5 = () => {

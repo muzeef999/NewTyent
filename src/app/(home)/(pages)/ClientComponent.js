@@ -55,9 +55,9 @@ export default function ClientComponent({ children, session }) {
       <Provider store={store}>
         {!shouldExcludeLayout && <AppBar />}
         <main>{children}</main>
-        <div className="section-spacing">
+        
           {!shouldExcludeLayout && <Form />}
-        </div>
+         <br/>
         <Footer />
 
         {/* Floating Buttons */}

@@ -32,8 +32,6 @@ import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp";
 import { RxDownload } from "react-icons/rx";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import ucerotate from "@/asserts/uce/ucerotate.webp";
-import uceBannerBlack from "@/asserts/uce/uceBannerBlack.webp";
-import uceBannerBlackMobile from "@/asserts/uce/uceBannerBlackMobile.webp";
 import plates_uce from "@/asserts/uce/plates_uce.webp"
 import PAST_UCE from "@/asserts/uce/PAST_UCE.webp"
 import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
@@ -51,9 +49,10 @@ const Banner = dynamic(
 
 
 export const metadata = {
-  title: "Tyent UCE Water Ionizer | Advanced Alkaline Water System",
+  title: "Tyent UCE-11 Plus | Premium 11 Plate Under-Sink Ionizer",
   description:
-    "Discover the Tyent UCE Water Ionizer – a state-of-the-art under-counter system that delivers antioxidant-rich, alkaline water for a healthier lifestyle. Experience superior hydration today!",
+    "Tyent UCE-11 Plus delivers 7 water levels, 1800 PPB hydrogen, -1050 ORP & 11.5 pH. A high-performance luxury ionizer designed for modern kitchens & wellness",
+    keywords:"Tyent UCE-11 Plus, 11 plate ionizer, hydrogen water ionizer, alkaline ionizer, luxury kitchen water filter, under counter ionizer, Kangen water machine, 11.5 pH ionizer, SMPS PLUS, Japanese ionizer"
 };
 
 const data = [

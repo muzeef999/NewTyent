@@ -49,10 +49,11 @@ const Banner = dynamic(
 );
 
 export const metadata = {
-  title: "Tyent UCE Water Ionizer | Advanced Alkaline Water System",
+  title: "Tyent UCE-13 Plus | 13-Plate Premium Under-Sink Ionizer",
   description:
-    "Discover the Tyent UCE Water Ionizer – a state-of-the-art under-counter system that delivers antioxidant-rich, alkaline water for a healthier lifestyle. Experience superior hydration today!",
-};
+    "Tyent UCE-13 Plus delivers 7 water levels, 1800 PPB H₂, -1250 ORP, and 11.5 pH. Designed for elite kitchens seeking top-tier ionization and water purity",
+keywords:"Tyent UCE-13 Plus, 13 plate ionizer, hydrogen water ionizer, luxury water ionizer, alkaline ionizer, under sink ionizer, SMPS Plus, Kangen water alternative, 11.5 pH machine,Japanese ionizer"
+  };
 
 const data = [
   {
