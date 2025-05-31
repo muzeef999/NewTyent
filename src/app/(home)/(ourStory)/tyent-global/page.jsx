@@ -12,8 +12,9 @@ import CoreStrategy from "@/asserts/aboutus/CoreStrategy.webp";
 import maraketing from "@/asserts/aboutus/maraketing.webp";
 
 export const metadata = {
-  title: "Tyent Global Presence - Trusted Worldwide",
-  description: "Tyent is a globally recognized brand, delivering premium water ionizers to homes and businesses across the world.",
+  title: "Tyent India: Innovation, Core Values & Global Water Strategy",
+  description: "Explore Tyent India's mission of innovation, trust, and sustainability. With 29+ years of R&D and 160+ patents, Tyent leads the global water ionizer industry",
+ keywords:"Tyent India, water ionizer innovation, core values, sustainable hydration, patented ionizers,R&D water tech, global water brand, customer satisfaction, eco hydration, Medilight Tyent"
 };
 
 

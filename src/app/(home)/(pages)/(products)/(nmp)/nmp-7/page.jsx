@@ -37,8 +37,9 @@ const Banner = dynamic(
 );
 
 export const metadata = {
-  title: "Tyent NMP-7 Water Ionizer - Advanced 7-Plate Technology",
-  description: " Experience powerful hydration with the Tyent NMP9 water ionizer, featuring advanced filtration and cutting-edge ionization technology.",
+  title: "Tyent NMP-7 Water Ionizer | Pure Alkaline Water, 7 Levels",
+  description: "Tyent NMP-7 delivers 7 water types with -950 ORP & 1550 PPB H₂. No chemicals. Boost immunity with hydrogen-rich, alkaline water backed by 25+ years of R&D",
+  keywords:"Tyent NMP-7, water ionizer India, hydrogen water, alkaline ionizer, ORP water, 11.5 pH water, Japanese water plates, Tyent vs Kangen, eco hydration, antioxidant water"
 }; 
 
 const TyentNMP5 = () => {
