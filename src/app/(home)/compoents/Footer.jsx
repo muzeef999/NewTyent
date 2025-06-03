@@ -119,11 +119,20 @@ const Footer = () => {
 
         {/* Footer Bottom */}
       <Row className="d-flex align-items-center justify-content-between">
-  {/* Left Side: Copyright Text */}
-  <Col xs={12} md={6} className="text-center text-md-start mb-3 mb-md-0">
-    <p style={{ fontSize: "14px", fontWeight: "400", opacity: 0.7, margin: 0 }}>
-      © Tyent INDIA. All Rights Reserved.
+  <Col xs={12} md={4}>
+   <div className="flex P-0 justify-between items-center">
+    <p className="text-sm P-0">
+      © {new Date().getFullYear()} All rights reserved.
     </p>
+    <Link
+      href="https://www.syntaxarts.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-blue-400 hover:text-white transition duration-300 ease-in-out font-semibold tracking-wide"
+    >
+      Designed & Developed by <span className="text-black font-bold">Syntaxarts</span>
+    </Link>
+  </div>
   </Col>
  
   {/* Right Side: Social Media Icons */}
