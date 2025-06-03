@@ -24,7 +24,7 @@ import { MdWaterDrop } from "react-icons/md";
 
   const specifications = [
     { label: "Model", name: "Tyent Filter" },
-    { label: "Price", name: "700" },
+    { label: "Price", name: "Filters prices on request ani petali" },
     { label: "Electrode/Plates", name: "5" },
     { label: "pH Range", name: "2.5 - 11.5*" },
     { label: "ORP Range", name: "Up to -850*" },

@@ -131,7 +131,7 @@ const page = () => {
 
   const specifications = [
     { label: "Model", name: "Tyent UCE-11 Plus" },
-    { label: "Price", name: "346000" },
+    { label: "Price", name: 346000 },
     { label: "Electrode/Plates", name: "11" },
     { label: "pH Range", name: "2.5 - 11.5*" },
     { label: "ORP Range", name: "Up to -1150*" },

@@ -35,7 +35,7 @@ const Page = () => {
 
   const specifications = [
     { label: "Model", name: "TIE - N15WR" },
-    { label: "Price", name: "649000" },
+    { label: "Price", name: 649000 },
     { label: "Product", name: "Electrolyzed Sterilizing water generator" },
     { label: "Size(mm)", name: "545(W) X 225(D) X 470(H)" },
     { label: "Purpose of use", name: "Disinfection and sterilization of food, utensils, and other apparatus" },

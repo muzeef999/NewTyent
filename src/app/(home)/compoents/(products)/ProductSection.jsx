@@ -153,8 +153,14 @@ const ProductSection = ({ products, specifications }) => {
           <h1 style={{color:'#000',fontSize:'20px'}}>{desc}</h1>
           <hr />
           <h4 className="m-2">
-            M.R.P: <span style={{ fontWeight: 500 }}>₹ {new Intl.NumberFormat("en-IN").format(price)}/-</span>
-          </h4>
+  M.R.P: <span style={{ fontWeight: 500 }}>
+    ₹ {
+      !isNaN(price) && price !== null && price !== ""
+        ? new Intl.NumberFormat("en-IN").format(Number(price)) + "/-"
+        : String(price)
+    }
+  </span>
+</h4>
           <hr />
           <h4 className="m-2" style={{ fontWeight: 500 }}>Specifications</h4>
           <hr />

@@ -62,7 +62,7 @@ const TyentNMP5 = () => {
 
   const specifications = [
     { label: "Model", name: "Tyent NMP-7" },
-    { label: "Price", name: "205000" },
+    { label: "Price", name: 205000 },
     { label: "Electrode/Plates", name: "7" },
     { label: "pH Range", name: "2.5 - 11.5*" },
     { label: "ORP Range", name: "Up to -950*" },

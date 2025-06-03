@@ -14,7 +14,7 @@ const page = () => {
 
   const specifications = [
     { label: "Model", name: "TM-X Beauty Soap" },
-    { label: "Price", name: "999" },
+    { label: "Price", name: 999 },
     { label: "Weight", name: "80g" },
     { label: "Instructions", name: ": TM-X soap contains high grade oil and natural glycerin, lease keep it dry because it is easily decomposed into moisture" },
     {
