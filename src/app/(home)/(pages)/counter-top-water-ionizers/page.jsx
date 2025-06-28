@@ -75,83 +75,100 @@ export default function CounterTopIonizers() {
           Explore Our Premium Models
         </h4>
 
+        <div className="container my-5">
+          {ProductData.map((section, idx) => {
+            const firstRow = section.products.slice(0, 3);
+            const secondRow = section.products.slice(3, 5);
 
-<div className="container my-5">
-  {ProductData.map((section, idx) => {
-    const firstRow = section.products.slice(0, 3);
-    const secondRow = section.products.slice(3, 5);
-
-    return (
-      <div key={idx}>
-        {/* First Row – 3 items */}
-        <div className="row justify-content-center g-4 mb-4">
-          {firstRow.map((product, index) => (
-            <div key={index} className="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-              <Link href={product.link || "#"} passHref legacyBehavior>
-                <a className="text-decoration-none w-100">
-                  <div >
-                    {/* Image */}
+            return (
+              <div key={idx} className="mb-5">
+                {/* First Row – 3 Cards */}
+                <div className="row justify-content-center g-4 mb-4">
+                  {firstRow.map((product, index) => (
                     <div
-                      className="d-flex align-items-center justify-content-center bg-light"
-                      style={{ height: "260px", overflow: "hidden", borderRadius:'40px' }}
+                      key={index}
+                      className="col-12 col-sm-6 col-md-4 d-flex"
                     >
-                      <Image
-                        src={product.image}
-                        alt={product.title}
-                        className="img-fluid"
-                        style={{ maxHeight: "100%", objectFit: "contain", borderRadius:'40px' }}
-                      />
+                      <Link href={product.link || "#"} passHref legacyBehavior>
+                        <a className="text-decoration-none w-100 h-100">
+                          <div className="card h-100 shadow-sm border-0 rounded-4 transition-all hover-shadow">
+                            {/* Image */}
+                            <div
+                              className="bg-light d-flex align-items-center justify-content-center"
+                              style={{
+                                borderTopLeftRadius: "1rem",
+                                borderTopRightRadius: "1rem",
+                              }}
+                            >
+                              <Image
+                                src={product.image}
+                                alt={product.title}
+                                className="img-fluid "
+                                style={{
+                                  borderTopLeftRadius: "1rem",
+                                  borderTopRightRadius: "1rem",
+                                  maxHeight: "100%",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                            {/* Title */}
+                            <div className="card-body text-center">
+                              <h6 className="fw-semibold text-dark mb-0">
+                                {product.title}
+                              </h6>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
                     </div>
-                    {/* Title */}
-                    <div className="card-body text-center">
-                      <h6 className="card-title mt-2 text-dark fw-semibold mb-0">
-                        {product.title}
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-            </div>
-          ))}
-        </div>
+                  ))}
+                </div>
 
-        {/* Second Row – 2 items centered */}
-        <div className="row justify-content-center g-4">
-          {secondRow.map((product, index) => (
-            <div key={index} className="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-              <Link href={product.link || "#"} passHref legacyBehavior>
-                <a className="text-decoration-none w-100">
-                  <div>
-                    {/* Image */}
+                {/* Second Row – 2 Centered Cards */}
+                <div className="row justify-content-center g-4">
+                  {secondRow.map((product, index) => (
                     <div
-                      className="d-flex align-items-center justify-content-center bg-light"
-                      style={{ height: "260px", overflow: "hidden" }}
+                      key={index}
+                      className="col-12 col-sm-6 col-md-4 d-flex"
                     >
-                      <Image
-                        src={product.image}
-                        alt={product.title}
-                        className="img-fluid"
-                        style={{ maxHeight: "100%", objectFit: "contain" }}
-                      />
+                      <Link href={product.link || "#"} passHref legacyBehavior>
+                        <a className="text-decoration-none w-100 h-100">
+                          <div className="card h-100 shadow-sm border-0 rounded-4 transition-all hover-shadow">
+                            <div
+                              className="bg-light d-flex align-items-center justify-content-center"
+                              style={{
+                                borderTopLeftRadius: "1rem",
+                                borderTopRightRadius: "1rem",
+                              }}
+                            >
+                              <Image
+                                src={product.image}
+                                alt={product.title}
+                                className="img-fluid "
+                                style={{
+                                  borderTopLeftRadius: "1rem",
+                                  borderTopRightRadius: "1rem",
+                                  maxHeight: "100%",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                            <div className="card-body text-center">
+                              <h6 className="fw-semibold text-dark mb-0">
+                                {product.title}
+                              </h6>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
                     </div>
-                    {/* Title */}
-                    <div className="card-body text-center">
-                      <h6 className="card-title text-dark mt-2 fw-semibold mb-0">
-                        {product.title}
-                      </h6>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-            </div>
-          ))}
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    );
-  })}
-</div>
-
-
 
         <ul className="list-disc pl-6 text-gray-700 text-[16px] leading-relaxed space-y-2">
           <li className="mb-2">Quick & Hassle-Free Installation.</li>

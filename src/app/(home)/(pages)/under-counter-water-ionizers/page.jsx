@@ -6,7 +6,6 @@ import Image from "next/image";
 import uce from "@/asserts/Uce.webp";
 import { Col, Row, Container } from "react-bootstrap";
 
-
 export const metadata = {
   title: "Under Counter Water Ionizers | Tyent India",
   description:
@@ -52,7 +51,13 @@ export default function UnderCounterIonizers() {
         </h1>
 
         <p className="text-muted text-center mb-5 fs-5">
-          Tyent’s Under-the-Counter Water Ionizers deliver unmatched convenience, advanced Japanese technology, and USFDA-certified quality - all tucked neatly beneath your counter. Experience the same powerful hydrogen-rich alkaline water in a space-saving, clutter-free design. Perfect for high end premium modern kitchens, this system ensures complete wellness for your entire family without compromising on style or space.
+          Tyent’s Under-the-Counter Water Ionizers deliver unmatched
+          convenience, advanced Japanese technology, and USFDA-certified quality
+          - all tucked neatly beneath your counter. Experience the same powerful
+          hydrogen-rich alkaline water in a space-saving, clutter-free design.
+          Perfect for high end premium modern kitchens, this system ensures
+          complete wellness for your entire family without compromising on style
+          or space.
         </p>
 
         <h4 className="mb-4" style={{ color: "#008AC7" }}>
@@ -66,14 +71,33 @@ export default function UnderCounterIonizers() {
                 <Col key={index} xs={12} sm={6} md={4}>
                   <Link href={product.link} passHref legacyBehavior>
                     <a className="text-decoration-none">
-                      <div className="border p-3 rounded shadow-sm h-100">
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          className="img-fluid mb-3 rounded"
-                          style={{ height: "200px", objectFit: "cover" }}
-                        />
-                        <h6 className="text-dark text-center">{product.title}</h6>
+                      <div className="card h-100 shadow-sm border-0 rounded-4 transition-all hover-shadow">
+                        {/* Image */}
+                        <div
+                          className="bg-light d-flex align-items-center justify-content-center"
+                          style={{
+                            borderTopLeftRadius: "1rem",
+                            borderTopRightRadius: "1rem",
+                          }}
+                        >
+                          <Image
+                            src={product.image}
+                            alt={product.title}
+                            className="img-fluid "
+                            style={{
+                              borderTopLeftRadius: "1rem",
+                              borderTopRightRadius: "1rem",
+                              maxHeight: "100%",
+                              objectFit: "contain",
+                            }}
+                          />
+                        </div>
+                        {/* Title */}
+                        <div className="card-body text-center">
+                          <h6 className="fw-semibold text-dark mb-0">
+                            {product.title}
+                          </h6>
+                        </div>
                       </div>
                     </a>
                   </Link>
@@ -83,15 +107,14 @@ export default function UnderCounterIonizers() {
           </div>
         ))}
 
-        
-          <ul className="list-disc pl-6 text-gray-700 text-[16px] leading-relaxed space-y-2">
-            <li>Space-Saving Under-the-Counter Design</li>
-            <li>Seamless & Hassle-Free Installation</li>
-            <li>Premium Touch Display Faucet for Easy Operation</li>
-            <li>Advanced Dual Filtration System</li>
-            <li>Jogdail for easy operation</li>
-            <li>Best design award 2023,24 winner</li>
-          </ul>
+        <ul className="list-disc pl-6 text-gray-700 text-[16px] leading-relaxed space-y-2">
+          <li>Space-Saving Under-the-Counter Design</li>
+          <li>Seamless & Hassle-Free Installation</li>
+          <li>Premium Touch Display Faucet for Easy Operation</li>
+          <li>Advanced Dual Filtration System</li>
+          <li>Jogdail for easy operation</li>
+          <li>Best design award 2023,24 winner</li>
+        </ul>
 
         <div className="mt-5">
           <h2 className="mb-3" style={{ color: "#008AC7" }}>
@@ -107,12 +130,10 @@ export default function UnderCounterIonizers() {
               hydrogen production.
             </li>
             <li className="mb-2">
-              ✅ <strong>Tyent UCE-13 Plus:</strong> Flagship model with superior
-              power, design, and touchscreen features.
+              ✅ <strong>Tyent UCE-13 Plus:</strong> Flagship model with
+              superior power, design, and touchscreen features.
             </li>
           </ul>
-
-
 
           <p className="text-muted mt-3 fs-5">
             Perfect for modern homes, health-focused families, and those who
@@ -120,7 +141,11 @@ export default function UnderCounterIonizers() {
           </p>
 
           <p className="mt-4">
-            <Link href="/counter-top-water-ionizers" className="btn" style={{ backgroundColor: "#008AC7", color: "#fff" }}>
+            <Link
+              href="/counter-top-water-ionizers"
+              className="btn"
+              style={{ backgroundColor: "#008AC7", color: "#fff" }}
+            >
               View Counter Top Ionizers →
             </Link>
           </p>

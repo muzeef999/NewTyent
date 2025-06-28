@@ -30,9 +30,10 @@ const headerData = {
 
 const InfoCard = ({ icon: Icon, title, text, slug }) => (
   <Col xs={12} md={4} style={{ padding: "20px" }}>
+    <div className="custom-card">
     <Link
       href={`/contact/${slug}`}
-      className="custom-card text-decoration-none cursor-pointer"
+      className="text-decoration-none  cursor-pointer"
     >
       <p
         className="m-0"
@@ -62,6 +63,7 @@ const InfoCard = ({ icon: Icon, title, text, slug }) => (
         </div>
       </div>
     </Link>
+    </div>
   </Col>
 );
 
