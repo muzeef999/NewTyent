@@ -48,13 +48,11 @@ export default function UnderCounterIonizers() {
       </Head>
       <Container className="py-5">
         <h1 className="mb-4 text-center" style={{ color: "#008AC7" }}>
-          Under Counter Water Ionizers
+          Under the Counter Water Ionizer’s
         </h1>
 
         <p className="text-muted text-center mb-5 fs-5">
-          Explore Tyent India's latest under counter water ionizers — a perfect
-          blend of performance and elegance. Stay hydrated with hydrogen-rich
-          alkaline water, all from a compact unit hidden beneath your kitchen counter.
+          Tyent’s Under-the-Counter Water Ionizers deliver unmatched convenience, advanced Japanese technology, and USFDA-certified quality - all tucked neatly beneath your counter. Experience the same powerful hydrogen-rich alkaline water in a space-saving, clutter-free design. Perfect for high end premium modern kitchens, this system ensures complete wellness for your entire family without compromising on style or space.
         </p>
 
         <h4 className="mb-4" style={{ color: "#008AC7" }}>
@@ -85,6 +83,16 @@ export default function UnderCounterIonizers() {
           </div>
         ))}
 
+        
+          <ul className="list-disc pl-6 text-gray-700 text-[16px] leading-relaxed space-y-2">
+            <li>Space-Saving Under-the-Counter Design</li>
+            <li>Seamless & Hassle-Free Installation</li>
+            <li>Premium Touch Display Faucet for Easy Operation</li>
+            <li>Advanced Dual Filtration System</li>
+            <li>Jogdail for easy operation</li>
+            <li>Best design award 2023,24 winner</li>
+          </ul>
+
         <div className="mt-5">
           <h2 className="mb-3" style={{ color: "#008AC7" }}>
             Why Choose Tyent Under Counter Ionizers?
@@ -104,16 +112,7 @@ export default function UnderCounterIonizers() {
             </li>
           </ul>
 
-          <h3 className="mt-4" style={{ color: "#008AC7" }}>
-            Benefits at a Glance
-          </h3>
-          <ul className="list-unstyled ps-3">
-            <li>✔ Save counter space with sleek under sink design</li>
-            <li>✔ Touchscreen faucet for intuitive control</li>
-            <li>✔ Filters 99.9% of contaminants</li>
-            <li>✔ High antioxidant and hydrogen-rich water</li>
-            <li>✔ Boosts energy, metabolism, and detoxification</li>
-          </ul>
+
 
           <p className="text-muted mt-3 fs-5">
             Perfect for modern homes, health-focused families, and those who

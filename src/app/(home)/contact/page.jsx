@@ -8,6 +8,8 @@ import productDemo from "@/asserts/contact/productDemo.webp";
 import ServiceRequest from "@/asserts/contact/ServiceRequest.webp";
 import Image from "next/image";
 import contactUsBanner from "@/asserts/contactUsBanner.png";
+import Link from "next/link";
+import { locationsData } from "@/app/(home)/contact/locationData.js";
 
 const Header = dynamic(() => import("../compoents/Header"), {
   ssr: false,
@@ -26,9 +28,12 @@ const headerData = {
   animatedText: "Have Questions ?, Need Assistance ? ",
 };
 
-const InfoCard = ({ icon: Icon, title, text }) => (
+const InfoCard = ({ icon: Icon, title, text, slug }) => (
   <Col xs={12} md={4} style={{ padding: "20px" }}>
-    <div className="custom-card">
+    <Link
+      href={`/contact/${slug}`}
+      className="custom-card text-decoration-none cursor-pointer"
+    >
       <p
         className="m-0"
         style={{ fontSize: "20px", fontWeight: 600, padding: "10px" }}
@@ -56,7 +61,7 @@ const InfoCard = ({ icon: Icon, title, text }) => (
           />
         </div>
       </div>
-    </div>
+    </Link>
   </Col>
 );
 
@@ -127,157 +132,18 @@ const Page = () => {
         <div className="section-spacing" data-aos="fade-up">
           {/* First Row */}
           <Row>
-            {" "}
-            {/* Added grid gap and bottom margin for row */}
-            <InfoCard
-              icon={CiLocationOn}
-              title="Corporate Head office:"
-              text="8-277/45, UBI Colony,
-           Banjara Hills Rd Number 3, Hyderabad, Telangana - 500034.
-           Landmark:  Near TV9 news office"
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent Delhi"
-              text="INTERIOR IMPEX,
-SHOP NO. 08, 1/8, WHS,
-KIRTI NAGAR, NEW DELHI, 
-Central Delhi, Delhi-110015."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent Mumbai"
-              text={`Mahadev Enterprises, 
-Room no 2 , Merry building, 
-Liberty garden no 3, 
-Near moreshwar dham Building,
-Malad west Mumbai - 400064.`}
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent Ahmadabad"
-              text="Akshar Commercants Private Limited,
-F 504, Sahajanand Homes,
-Chenpur Road, Nr IOC Patrol Pump, 
-New Ranip, Ahmedabad- 382470."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent Sikhar RJ"
-              text={`Kanha enterprises
-Near Surajmal gate,
-Piprali chowk, 
-Jhunjhunu bypass,
-Sikar, Rajasthan -332001.`}
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent ALLAHABAD - UP"
-              text="A. R. Sales,
-248/64, M. G. MARG,
-NEAR K. P. COLLEGE,
-OPP. VIDHYA VAHINI SCHOOL,
-PRAYAGRAJ - 211001."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent Pune"
-              text="AAROHI ENTERPRISES,
-FLAT NO-8,
-B WING,87/120-B, 
-LEGEND CLASSIC APPARTMENT,
-KOTHRUD, PUNE - 411058."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Varanasi"
-              text="ANAYA RETREAT,
-B-38/1-D-1  GROUND  FLOOR ,
-BIRDOPUR, MAHMOORGANJ, 
-KAMACHHA SUB POST OFFICE,
-JAHUMANDI, VARANASI-221010."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Kolkata"
-              text="AP ENTERPRISES, 
-69/1 A, Deshbandhu Road,
-(east),Baranagar, P.O -Alambazr,
-Dist.- North 24, parganas,
-West Bengal, Kolkata -700 035."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Zirakpur"
-              text="VISHAL TRADERS ,
-shop no - 52 ground floor, Palam enclave, 
-Ranjan plaza Zirakpur, Landmark - near jp hospital, 
-zirakpur chd highway, Mohali,        
-ZIRAKPUR, PUNJAB - 140 603."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Surat"
-              text="U.S. AQUA INTERNATIONAL,
-C 302, kpm apartment ,
-opp Chandan park City lights, 
-Surat, Gujarat - 395007."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Sri Ganganagar, RJ"
-              text="TAK TRADERS,
-C/O Sahi Ram Tak,
-H. No. 7-8, Tak Colony, 
-Gali No. 6, 5e (RURAL), 
-Ganganagar, Rajasthan - 335001."
-            />
-
-<InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Ahmadabad"
-              text="SCARLET APPARATUS,
-SHOP NO.10, VRAJ VIHAR-3,
-OPP. ASHOKNAGAR, 
-NR. PRERANA TIRTH DERASAR,
-SATELLITE, AHMEDABAD-380015."
-            />
-
-<InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Karnal, Haryana"
-              text="RUHANI ENTERPRISES,
-KHEWAT NO 375, 
-AGGARSAIN COLONY,
-NEAR BIJLI BOARD, Gharaunda, 
-Karnal,Haryana - 132114."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - UTTARAKHAND"
-              text="PREM MOTORS,
-1, HARIDWAR ROAD,
-PRINCE CHOWK, 
-DHERADUN ,UTTARAKHAND -248001."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent - Kanpur, UP"
-              text="M/S IDEAL SUPPLIER & SERVICES,
-C/O SIRAJ ALAM,
-AARZI NO 891, BUDHPUR,
-Machhariya Road, Kanpur, 
-KanpurA, Nagar-Uttar Pradesh - 208021."
-            />
-            <InfoCard
-              icon={CiLocationOn}
-              title="Tyent Belgaum, KA"
-              text="FIRST MARK HYDROGEN SOLUTIONS, 
-SHOP NO, 1, 1761/1A, 
-WESTERN TOWER, KIRLOSKAR ROAD , 
-BELGAUM, BELAGAVI,
-BELGAUM, KARNATAKA -590001."
-            />
+            {Object.values(locationsData).map((location, index) => (
+              <InfoCard
+                key={index}
+                slug={location.slug}
+                icon={location.icon}
+                title={location.title}
+                text={location.address}
+                metaTitle={location.metaTitle}
+                metaDescription={location.metaDescription}
+                metaKeywords={location.metaKeywords}
+              />
+            ))}
           </Row>
         </div>
       </Container>
