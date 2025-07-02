@@ -4,6 +4,7 @@ import "@/app/style/AppBar.css";
 import dynamic from "next/dynamic";
 import { Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Head from "next/head";
 
 const poppins = Poppins({
   weight: "400",
@@ -27,12 +28,26 @@ export const metadata = {
 export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta
           name="google-site-verification"
           content="NAk7_Pm_PN0E76lPTu6J1Wo-H9UK8phofxdKyZ26sUg"
         />
-      </head>
+
+         {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-54CPNQGB');
+            `,
+          }}
+        />
+      
+      </Head>
 
       <body className={poppins.className}>
         <noscript>
