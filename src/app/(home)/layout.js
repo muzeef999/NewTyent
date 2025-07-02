@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
+import Script from "next/script"; // ✅ correct import
 
 const poppins = Poppins({
   weight: "400",
@@ -15,7 +16,7 @@ const ClientComponent = dynamic(() => import("./(pages)/ClientComponent"), {
   ssr: false,
 });
 
-// Define metadata for the layout
+// Metadata is still used in app directory routing, not here directly in layout.js
 export const metadata = {
   title:
     "Tyent Water Ionizers India | Best Kangen Water Machines & Alkaline Ionizers",
@@ -33,29 +34,31 @@ export default function RootLayout({ children, session }) {
           name="google-site-verification"
           content="NAk7_Pm_PN0E76lPTu6J1Wo-H9UK8phofxdKyZ26sUg"
         />
-
-         {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-54CPNQGB');
-            `,
-          }}
-        />
-      
       </Head>
 
+      {/* ✅ GTM Script moved OUTSIDE <Head> */}
+      <Script
+        id="gtm-inline-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-54CPNQGB');
+          `,
+        }}
+      />
+
       <body className={poppins.className}>
+        {/* ✅ GTM fallback for no-JS */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-54CPNQGB"
             height="0"
             width="0"
-            style="display:none;visibility:hidden"
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
 
