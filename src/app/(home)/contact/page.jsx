@@ -18,7 +18,7 @@ const Header = dynamic(() => import("../compoents/Header"), {
 export const metadata = {
   title: "Contact Tyent - Get in Touch with Us",
   description:
-    " Have questions? Contact Tyent for inquiries about our water ionizers, services, and support.",
+    "Have questions? Contact Tyent for inquiries about our water ionizers, services, and support.",
 };
 
 const headerData = {

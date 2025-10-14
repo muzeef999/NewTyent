@@ -10,9 +10,9 @@ KIRTI NAGAR, NEW DELHI,
 Central Delhi, Delhi-110015`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 11 4567 8910",
-      email: "delhi@tyentindia.com",
-      whatsapp: "+91 98765 43210",
+       phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Rahul Verma"
     },
     hours: {
@@ -90,9 +90,9 @@ MADHAPUR, HYDERABAD,
 Telangana-500081`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 40 6789 1234",
-      email: "hyderabad@tyentindia.com",
-      whatsapp: "+91 98765 43211",
+      phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Arjun Reddy"
     },
     hours: {
@@ -163,9 +163,9 @@ BENZ CIRCLE, VIJAYAWADA,
 Andhra Pradesh-520010`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 866 245 6789",
-      email: "vijayawada@tyentindia.com",
-      whatsapp: "+91 98765 43212",
+       phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Suresh Naidu"
     },
     hours: {
@@ -236,9 +236,9 @@ NEAR RTC COMPLEX, VISAKHAPATNAM,
 Andhra Pradesh-530002`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 891 256 7890",
-      email: "vizag@tyentindia.com",
-      whatsapp: "+91 98765 43213",
+       phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Rajesh Babu"
     },
     hours: {
@@ -309,9 +309,9 @@ LBS ROAD, KURLA WEST,
 Mumbai, Maharashtra-400070`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 22 6789 4567",
-      email: "mumbai@tyentindia.com",
-      whatsapp: "+91 98765 43214",
+      phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Nikhil Mehta"
     },
     hours: {
@@ -382,9 +382,9 @@ HADAPSAR, PUNE,
 Maharashtra-411028`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 20 6789 5678",
-      email: "pune@tyentindia.com",
-      whatsapp: "+91 98765 43215",
+        phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Rohan Deshpande"
     },
     hours: {
@@ -455,9 +455,9 @@ VASTRAPUR, AHMEDABAD,
 Gujarat-380015`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 79 6789 2345",
-      email: "ahmedabad@tyentindia.com",
-      whatsapp: "+91 98765 43216",
+       phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Vikas Patel"
     },
     hours: {
@@ -528,9 +528,9 @@ DUMAS ROAD, SURAT,
 Gujarat-395007`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 261 278 4567",
-      email: "surat@tyentindia.com",
-      whatsapp: "+91 98765 43217",
+      phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Jayesh Mehta"
     },
     hours: {
@@ -674,9 +674,9 @@ VIJAY NAGAR, INDORE,
 Madhya Pradesh-452010`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 731 456 7890",
-      email: "indore@tyentindia.com",
-      whatsapp: "+91 98765 43219",
+       phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Anil Joshi"
     },
     hours: {
@@ -747,9 +747,9 @@ GOMTI NAGAR, LUCKNOW,
 Uttar Pradesh-226010`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 522 456 7890",
-      email: "lucknow@tyentindia.com",
-      whatsapp: "+91 98765 43220",
+        phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Rakesh Verma"
     },
     hours: {
@@ -820,9 +820,9 @@ SECTOR 18, NOIDA,
 Uttar Pradesh-201301`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 120 456 7890",
-      email: "ncr@tyentindia.com",
-      whatsapp: "+91 98765 43221",
+        phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Vivek Khanna"
     },
     hours: {
@@ -893,9 +893,9 @@ DLF PHASE 3, GURUGRAM,
 Haryana-122002`,
     icon: CiLocationOn,
     contact: {
-      phone: "+91 124 456 7890",
-      email: "gurugram@tyentindia.com",
-      whatsapp: "+91 98765 43222",
+      phone: "+91 9182414181",
+      email: "contact@medilightIndia.com", 
+      whatsapp: "+91 9182414181",
       manager: "Rajat Malhotra"
     },
     hours: {
