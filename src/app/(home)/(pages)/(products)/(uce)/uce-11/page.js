@@ -145,7 +145,7 @@ const page = () => {
       label: "pH Levels",
       name: "3 alkaline, 2 acidic, 1 neutral, & 1 Turbo (Strong alkaline 11.5 pH)",
     },
-    { label: "Plate Surface Area", name: "52.9 * 5 = 264.5 sq inches" },
+    { label: "Plate Surface Area", name: "52.9 * 11 = 581.9 sq inches" },
     { label: "Water Generating Capacity", name: "1.5 - 3.0 L/min" },
     {
       label: "Filters Structure",
