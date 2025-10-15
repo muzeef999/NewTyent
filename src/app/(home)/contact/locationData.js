@@ -2,7 +2,7 @@ import { CiLocationOn } from "react-icons/ci";
 
 export const locationsData = {
   "tyent-delhi": {
-    slug: "tyent-delhi",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_Delhi",
     title: "Tyent Delhi",
     address: `INTERIOR IMPEX,
 SHOP NO. 08, 1/8, WHS,
@@ -82,7 +82,7 @@ Central Delhi, Delhi-110015`,
     ]
   },
   "tyent-hyderabad": {
-    slug: "tyent-hyderabad",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_hyderabad",
     title: "Tyent Hyderabad",
     address: `TYENT EXPERIENCE CENTER,
 PLOT NO. 34, HITECH CITY ROAD,
@@ -155,7 +155,7 @@ Telangana-500081`,
     ]
   },
   "tyent-vijayawada": {
-    slug: "tyent-vijayawada",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_vijayawada",
     title: "Tyent Vijayawada",
     address: `TYENT FLAGSHIP STORE,
 SHOP NO. 12, MG ROAD,
@@ -228,7 +228,7 @@ Andhra Pradesh-520010`,
     ]
   },
   "tyent-vizag": {
-    slug: "tyent-vizag",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_vizag",
     title: "Tyent Visakhapatnam",
     address: `TYENT WATER SOLUTIONS,
 DOOR NO. 45-6-12, WALTAIR MAIN ROAD,
@@ -301,7 +301,7 @@ Andhra Pradesh-530002`,
     ]
   },
   "tyent-mumbai": {
-    slug: "tyent-mumbai",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_mumbai",
     title: "Tyent Mumbai",
     address: `TYENT LUXURY SHOWROOM,
 SHOP NO. 5, PHOENIX MARKETCITY,
@@ -374,7 +374,7 @@ Mumbai, Maharashtra-400070`,
     ]
   },
   "tyent-pune": {
-    slug: "tyent-pune",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_pune",
     title: "Tyent Pune",
     address: `TYENT EXPERIENCE CENTER,
 SHOP NO. 23, AMANORA TOWN CENTRE,
@@ -447,7 +447,7 @@ Maharashtra-411028`,
     ]
   },
   "tyent-ahmedabad": {
-    slug: "tyent-ahmedabad",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_ahmedabad",
     title: "Tyent Ahmedabad",
     address: `TYENT GUJARAT FLAGSHIP,
 UNIT NO. 12, ALPHA ONE MALL,
@@ -520,7 +520,7 @@ Gujarat-380015`,
     ]
   },
   "tyent-surat": {
-    slug: "tyent-surat",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_surat",
     title: "Tyent Surat",
     address: `TYENT DIAMOND SHOWROOM,
 SHOP NO. 8, VR SURAT MALL,
@@ -593,7 +593,7 @@ Gujarat-395007`,
     ]
   },
   "tyent-vadodara": {
-    slug: "tyent-vadodara",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_vadodara",
     title: "Tyent Vadodara",
     address: `TYENT BARODA SHOWROOM,
 SHOP NO. 15, INORBIT MALL,
@@ -666,7 +666,7 @@ Gujarat-390020`,
     ]
   },
   "tyent-indore": {
-    slug: "tyent-indore",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_indore",
     title: "Tyent Indore",
     address: `TYENT HEARTLAND CENTER,
 SHOP NO. 7, TREASURE ISLAND MALL,
@@ -739,7 +739,7 @@ Madhya Pradesh-452010`,
     ]
   },
   "tyent-lucknow": {
-    slug: "tyent-lucknow",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_lucknow",
     title: "Tyent Lucknow",
     address: `TYENT AWADH SHOWROOM,
 SHOP NO. 12, PHOENIX UNITED MALL,
@@ -812,7 +812,7 @@ Uttar Pradesh-226010`,
     ]
   },
   "tyent-delhi-ncr": {
-    slug: "tyent-delhi-ncr",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_delhi_ncr",
     title: "Tyent Delhi NCR",
     address: `TYENT NCR EXPERIENCE CENTER,
 UNIT NO. 23, DLF MALL OF INDIA,
@@ -885,7 +885,7 @@ Uttar Pradesh-201301`,
     ]
   },
   "tyent-gurugram": {
-    slug: "tyent-gurugram",
+    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_Jaipur",
     title: "Tyent Gurugram",
     address: `TYENT MILLENNIUM SHOWROOM,
 SHOP NO. 45, AMBIENCE MALL,

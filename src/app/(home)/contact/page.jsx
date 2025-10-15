@@ -41,7 +41,7 @@ const InfoCard = ({ icon: Icon, title, text, slug }) => (
       >
         {title}
       </p>
-      <div className="d-flex align-items-top">
+      {/* <div className="d-flex align-items-top">
         <div className="contennticon p-1">
           <Icon
             size={20}
@@ -61,7 +61,7 @@ const InfoCard = ({ icon: Icon, title, text, slug }) => (
             dangerouslySetInnerHTML={{ __html: text }}
           />
         </div>
-      </div>
+      </div> */}
     </Link>
     </div>
   </Col>
