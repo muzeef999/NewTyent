@@ -2,31 +2,51 @@
 import React, { useEffect, useState } from "react";
 import { Card, Spinner, Table, Badge } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import Image from "next/image";
+
+// ✅ Import all product images
+import nmp5 from "@/asserts/NMP5.webp";
+import nmp7 from "@/asserts/NMP5.webp";
+import nmp9 from "@/asserts/NMP9.webp";
+import nmp11 from "@/asserts/NMP9.webp";
+import uce9 from "@/asserts/Uce.webp";
+import uce11 from "@/asserts/Uce.webp";
+import uce13 from "@/asserts/Uce.webp";
+import hybrid from "@/asserts/Hybrid.webp";
+import hRich from "@/asserts/NMP5.webp";
+
+// ✅ Map product name → image
+const productImageMap = {
+  "NMP-5": nmp5,
+  "NMP-7": nmp7,
+  "NMP-9": nmp9,
+  "NMP-11": nmp11,
+  "UCE-9": uce9,
+  "UCE-11": uce11,
+  "UCE-13": uce13,
+  "Hybrid-H2": hybrid,
+  "H-Rich": hRich,
+};
 
 const Order = () => {
   const userData = useSelector((state) => state.auth.user);
   const [customer, setCustomer] = useState(null);
   const [loading, setLoading] = useState(false);
 
-
-  // Fetch customer by phone
+  // ✅ Fetch customer by phone
   useEffect(() => {
     const fetchCustomer = async () => {
       if (!userData?.phoneNumber) return;
       try {
         setLoading(true);
-        let phone = userData?.phoneNumber || "";
+        let phone = userData.phoneNumber;
 
-        // Remove "+" if it exists
         if (phone.startsWith("+")) {
-          // Remove '+' and first two digits (country code)
-          phone = phone.slice(3); // '+91' → remove '+91'
+          phone = phone.slice(3);
         } else if (phone.startsWith("91")) {
-          // In case number doesn’t have '+'
           phone = phone.slice(2);
         }
 
-        console.log("Fetching customer with phone:", phone);
         const res = await fetch(
           `https://tyent-crm.vercel.app/api/customers?q=${phone}`
         );
@@ -35,6 +55,8 @@ const Order = () => {
         if (data?.data?.length > 0) {
           const id = data.data[0]._id;
           fetchCustomerDetails(id);
+        } else {
+          setLoading(false);
         }
       } catch (error) {
         console.error("Error fetching customer:", error);
@@ -57,7 +79,7 @@ const Order = () => {
     };
 
     fetchCustomer();
-  }, [userData?.phone]);
+  }, [userData?.phoneNumber]);
 
   if (loading) {
     return (
@@ -72,67 +94,74 @@ const Order = () => {
   }
 
   const {
-    name,
-    contactNumber,
-    address,
     serialNumber,
+    price,
+    address,
     installedBy,
     marketingManager,
-    serviceHistory,
     upcomingServices,
-    price,
-    remarks,
+    serviceHistory,
   } = customer;
+
+  // ✅ Get image based on product name
+  const productImage = serialNumber?.name
+    ? productImageMap[serialNumber.name]
+    : null;
 
   return (
     <div className="container py-4">
-      <h3 className="mb-4 text-center fw-bold text-primary">
-        Customer Order Summary
-      </h3>
-
-      {/* Customer Info */}
-      <Card className="shadow-sm mb-4 p-3">
-        <h5 className="text-secondary mb-3">Customer Information</h5>
-        <p>
-          <b>Name:</b> {name}
-        </p>
-        <p>
-          <b>Contact:</b> {contactNumber}
-        </p>
-        <p>
-          <b>Address:</b> {address}
-        </p>
-        <p>
-          <b>Price:</b> ₹{price?.toLocaleString()}
-        </p>
-        <p>
-          <b>Remarks:</b> {remarks}
-        </p>
-      </Card>
-
-      {/* Product Info */}
-      <Card className="shadow-sm mb-4 p-3">
-        <h5 className="text-secondary mb-3">Product Details</h5>
-        <p>
-          <b>Serial Number:</b> {serialNumber?._id}
-        </p>
-        <p>
-          <b>Product Name:</b> {serialNumber?.name}
-        </p>
-        <p>
-          <b>Installed By:</b> {installedBy?.name}
-        </p>
-        <p>
-          <b>Marketing Manager:</b> {marketingManager?.name}
-        </p>
+      {/* Product Details */}
+      <Card className="shadow-lg mb-4 p-4 border-0">
+        <div className="d-flex flex-column align-items-center text-left">
+          {productImage ? (
+            <Image
+              src={product.image}
+              alt={product.title}
+              className="img-fluid product-card"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            />
+          ) : (
+            <div
+              style={{
+                width: "400px",
+                height: "250px",
+                background: "#f5f5f5",
+                borderRadius: "12px",
+              }}
+              className="d-flex align-items-center justify-content-center text-muted"
+            >
+              No Image Available
+            </div>
+          )}
+          <h4 className="fw-bold mt-2">{serialNumber?.name}</h4>
+          <p className="text-muted mb-1">
+            <b>Serial No:</b> {serialNumber?._id}
+          </p>
+          <p className="text-muted mb-1">
+            <b>Price:</b> ₹{price?.toLocaleString()}
+          </p>
+          <p className="text-muted mb-1">
+            <b>Address:</b> {address || "N/A"}
+          </p>
+          <p className="text-muted mb-1">
+            <b>Installed By:</b> {installedBy?.name || "N/A"}
+          </p>
+          <p className="text-muted">
+            <b>Marketing Manager:</b> {marketingManager?.name || "N/A"}
+          </p>
+        </div>
       </Card>
 
       {/* Upcoming Services */}
       <Card className="shadow-sm mb-4 p-3">
-        <h5 className="text-secondary mb-3">Upcoming Services</h5>
-        <Table bordered hover responsive>
-          <thead>
-            <tr className="table-primary">
+        <h5 className="text-primary mb-3 fw-semibold">Upcoming Services</h5>
+        <Table bordered hover responsive className="align-middle">
+          <thead className="table-primary text-center">
+            <tr>
               <th>Visit No</th>
               <th>Date</th>
               <th>Status</th>
@@ -146,14 +175,16 @@ const Order = () => {
                   <td>{service.visitNo}</td>
                   <td>{new Date(service.serviceDate).toLocaleDateString()}</td>
                   <td>
-                    <Badge bg="warning">{service.status}</Badge>
+                    <Badge bg="warning" text="dark">
+                      {service.status}
+                    </Badge>
                   </td>
                   <td>{service.serviceType.join(", ")}</td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="text-center">
+                <td colSpan="4" className="text-center text-muted">
                   No upcoming services
                 </td>
               </tr>
@@ -164,10 +195,10 @@ const Order = () => {
 
       {/* Service History */}
       <Card className="shadow-sm mb-4 p-3">
-        <h5 className="text-secondary mb-3">Service History</h5>
-        <Table bordered hover responsive>
-          <thead>
-            <tr className="table-success">
+        <h5 className="text-success mb-3 fw-semibold">Service History</h5>
+        <Table bordered hover responsive className="align-middle">
+          <thead className="table-success text-center">
+            <tr>
               <th>Visit No</th>
               <th>Date</th>
               <th>Status</th>
@@ -202,7 +233,7 @@ const Order = () => {
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="text-center">
+                <td colSpan="4" className="text-center text-muted">
                   No service history available
                 </td>
               </tr>

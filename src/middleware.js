@@ -1,87 +1,94 @@
 import { NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
 
-// Role-specific accessible paths
+const allowedOrigins = [
+  'https://tyent.co.in',
+  'http://localhost:3000',
+];
+
+const corsOptions = {
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Allow-Credentials': 'true',
+};
+
+// ✅ Role-based paths
 const rolePaths = {
   admin: ['/dashboard', '/adminOrder', '/leads', '/service', '/complains', '/adminBlog'],
   manager: ['/leads'],
   employee: ['/complains', '/service'],
 };
 
-// Default redirect paths for each role
+// ✅ Default redirect for roles
 const roleRedirects = {
   admin: '/dashboard',
   manager: '/leads',
   employee: '/complains',
 };
 
-
-const allowedOrigins = ['*']
-
-
-const corsOptions = {
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-}
-
-
 export async function middleware(request) {
-  const url = request.nextUrl.clone();
+  const url = new URL(request.url);
+  const origin = request.headers.get('origin') ?? '';
+  const isAllowedOrigin = allowedOrigins.includes(origin);
 
-
-     const origin = req.headers.get('origin') ?? ''
-  const isAllowedOrigin = allowedOrigins.includes(origin)
-
-    // Handle preflighted requests
-  const isPreflight = req.method === 'OPTIONS'
- 
-  if (isPreflight) {
-    const preflightHeaders = {
-      ...(isAllowedOrigin && { 'Access-Control-Allow-Origin': origin }),
-      ...corsOptions,
+  // ✅ Handle preflight OPTIONS request
+  if (request.method === 'OPTIONS') {
+    const preflightHeaders = { ...corsOptions };
+    if (isAllowedOrigin) {
+      preflightHeaders['Access-Control-Allow-Origin'] = origin;
     }
-    return NextResponse.json({}, { headers: preflightHeaders })
+    return new NextResponse(null, { status: 204, headers: preflightHeaders });
   }
 
-   if (isAllowedOrigin) {
-    response.headers.set('Access-Control-Allow-Origin', origin)
+  // ✅ Add CORS headers to every response
+  const response = NextResponse.next();
+  if (isAllowedOrigin) {
+    response.headers.set('Access-Control-Allow-Origin', origin);
   }
- 
   Object.entries(corsOptions).forEach(([key, value]) => {
-    response.headers.set(key, value)
-  })
+    response.headers.set(key, value);
+  });
 
-
-  // Authentication and role-based access control
-  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
-  if (!token) {
-    // Redirect unauthenticated users to home
-    url.pathname = '/';
-    return NextResponse.redirect(url);
-  }
-
-  const { role } = token;
-  const allowedPaths = rolePaths[role] || [];
-  const defaultRedirect = roleRedirects[role] || '/';
-
-  // Check if the path is allowed for the role
-  if (allowedPaths.some(path => url.pathname.startsWith(path))) {
-    const response = NextResponse.next();
-    // Add CORS headers to the response
-    Object.entries(corsHeaders).forEach(([key, value]) => {
-      response.headers.set(key, value);
-    });
+  // 🚫 Skip auth for API routes — do not redirect API calls
+  if (url.pathname.startsWith('/api/')) {
     return response;
   }
 
-  // Redirect to the default page for the role if path is not allowed
+  // 🛡️ Auth & Role checks for page routes
+  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
+
+  if (!token) {
+    // No token — redirect to home page (or login)
+    url.pathname = '/';
+    const redirectRes = NextResponse.redirect(url);
+    if (isAllowedOrigin) {
+      redirectRes.headers.set('Access-Control-Allow-Origin', origin);
+    }
+    Object.entries(corsOptions).forEach(([key, value]) => {
+      redirectRes.headers.set(key, value);
+    });
+    return redirectRes;
+  }
+
+  const role = token.role;
+  const allowedPaths = rolePaths[role] || [];
+  const defaultRedirect = roleRedirects[role] || '/';
+
+  // ✅ If role has access, continue
+  if (allowedPaths.some(path => url.pathname.startsWith(path))) {
+    return response;
+  }
+
+  // 🚀 Otherwise redirect to default route for their role
   url.pathname = defaultRedirect;
-  const response = NextResponse.redirect(url);
-  // Add CORS headers to the response
-  Object.entries(corsHeaders).forEach(([key, value]) => {
-    response.headers.set(key, value);
+  const roleRedirectRes = NextResponse.redirect(url);
+  if (isAllowedOrigin) {
+    roleRedirectRes.headers.set('Access-Control-Allow-Origin', origin);
+  }
+  Object.entries(corsOptions).forEach(([key, value]) => {
+    roleRedirectRes.headers.set(key, value);
   });
-  return response;
+  return roleRedirectRes;
 }
 
 export const config = {
@@ -92,5 +99,6 @@ export const config = {
     '/leads',
     '/complains',
     '/service',
+    '/api/:path*', // 👈 ensures CORS is applied to API calls too
   ],
 };

@@ -13,6 +13,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn.tyent-crm.vercel.app',
       },
+       {
+        protocol: 'https',
+        hostname: 'tyent-crm.vercel.app',
+      },
       
     ]
   }
