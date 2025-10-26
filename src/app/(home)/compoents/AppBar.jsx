@@ -23,12 +23,17 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import { toast } from "sonner";
 import { IoPeopleCircleOutline } from "react-icons/io5";
 import Logo from "./Logo";
+import ServiceHistory from "./(Home)/ServiceHistory";
+import Order from "./(Home)/Order";
 
 const AppBar = () => {
   const { data: session } = useSession();
   const dispatch = useDispatch();
   const router = useRouter();
   const pathname = usePathname();
+
+  const [showOrders, setShowOrders] = useState(false);
+  const [showServiceHistory, setShowServiceHistory] = useState(false);
 
   const userData = useSelector((state) => state.auth.user);
   const isLoading = useSelector((state) => state.auth.loading);
@@ -67,6 +72,7 @@ const AppBar = () => {
           name: session.user.name,
           email: session.user.email,
           role: session.user.role,
+          phoneNumber: session.user.phoneNumber,
         })
       );
       dispatch(fetchCart(session.user.id));
@@ -143,11 +149,24 @@ const AppBar = () => {
                   style={{ zIndex: "9999" }}
                 >
                   {userData.role === "user" && (
-                    <li>
-                      <button className="dropdown-item">
-                        <IoBagHandleOutline /> Your Orders
-                      </button>
-                    </li>
+                    <>
+                      <li>
+                        <button
+                          className="dropdown-item"
+                          onClick={() => setShowOrders(true)}
+                        >
+                          <IoBagHandleOutline /> Your Orders
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className="dropdown-item"
+                          onClick={() =>setShowServiceHistory(true)}
+                        >
+                          <IoBagHandleOutline /> Service History
+                        </button>
+                      </li>
+                    </>
                   )}
                   {userData.role === "admin" && (
                     <Link className="dropdown-item" href={"/dashboard"}>
@@ -200,10 +219,13 @@ const AppBar = () => {
             </button>
 
             {/* Logo */}
-            <Link href="/" className="navbar-brand" style={{ display: "flex", alignItems: "center"}}>
-  <Logo />
-</Link>
-
+            <Link
+              href="/"
+              className="navbar-brand"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <Logo />
+            </Link>
 
             {/* Offcanvas Menu */}
             <div
@@ -495,7 +517,7 @@ const AppBar = () => {
             {/* Cart Icon */}
             <div
               className="d-flex align-items-center"
-              style={{ cursor: "pointer", position:'relative' }}
+              style={{ cursor: "pointer", position: "relative" }}
               onClick={() => setCartShow(true)}
             >
               <div className="counter m-2">{Number(totalItems)}</div>
@@ -504,7 +526,7 @@ const AppBar = () => {
           </div>
 
           {/* Product Page */}
-          {isProductOpen && ( 
+          {isProductOpen && (
             <div
               className={`responsive-product-container ${
                 isProductOpen ? "expanded" : ""
@@ -528,6 +550,34 @@ const AppBar = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Cartpage />
+          </Offcanvas.Body>
+        </Offcanvas>
+
+        {/* Orders Offcanvas */}
+        <Offcanvas
+          show={showOrders}
+          onHide={() => setShowOrders(false)}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Your Orders</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Order />
+          </Offcanvas.Body>
+        </Offcanvas>
+
+        {/* Service History Offcanvas */}
+        <Offcanvas
+          show={showServiceHistory}
+          onHide={() => setShowServiceHistory(false)}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Service History</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <ServiceHistory />
           </Offcanvas.Body>
         </Offcanvas>
 

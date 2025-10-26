@@ -2,7 +2,7 @@ import { CiLocationOn } from "react-icons/ci";
 
 export const locationsData = {
   "tyent-delhi": {
-    slug: "Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_Delhi",
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-delhi",
     title: "Tyent Delhi",
     address: `INTERIOR IMPEX,
 SHOP NO. 08, 1/8, WHS,

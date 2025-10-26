@@ -2,8 +2,16 @@ import { notFound } from "next/navigation";
 import { locationsData } from "@/app/(home)/contact/locationData";
 import Image from "next/image";
 
+// --------------------
+// 🧠 Generate Metadata
+// --------------------
 export function generateMetadata({ params }) {
-  const location = locationsData[params.slug];
+  const slug = params.slug.toLowerCase().replace(/_/g, "-");
+  const locationKey = Object.keys(locationsData).find(
+    (key) => key.toLowerCase().replace(/_/g, "-") === slug
+  );
+  const location = locationsData[locationKey];
+
   if (!location) return {};
 
   return {
@@ -13,8 +21,16 @@ export function generateMetadata({ params }) {
   };
 }
 
+// --------------------
+// 📍 Main Location Page
+// --------------------
 export default function LocationPage({ params }) {
-  const location = locationsData[params.slug];
+  const slug = params.slug.toLowerCase().replace(/_/g, "-");
+  const locationKey = Object.keys(locationsData).find(
+    (key) => key.toLowerCase().replace(/_/g, "-") === slug
+  );
+  const location = locationsData[locationKey];
+
   if (!location) return notFound();
 
   return (
@@ -22,7 +38,8 @@ export default function LocationPage({ params }) {
       {/* Header */}
       <div className="mb-5 border-bottom pb-4">
         <nav className="text-muted mb-2">
-          Home / Contact / <span className="text-primary fw-semibold">{location.title}</span>
+          Home / Contact /{" "}
+          <span className="text-primary fw-semibold">{location.title}</span>
         </nav>
         <h1 className="display-5 fw-bold text-primary">{location.title}</h1>
         <p className="lead text-secondary">{location.address}</p>
@@ -33,17 +50,28 @@ export default function LocationPage({ params }) {
         <div className="col-md-6">
           <h2 className="h4 fw-semibold text-dark">Contact Information</h2>
           <ul className="list-unstyled mt-3">
-            <li><strong>Manager:</strong> {location.contact.manager}</li>
-            <li><strong>Phone:</strong> {location.contact.phone}</li>
-            <li><strong>Email:</strong> {location.contact.email}</li>
-            <li><strong>WhatsApp:</strong> {location.contact.whatsapp}</li>
+            <li>
+              <strong>Manager:</strong> {location.contact.manager}
+            </li>
+            <li>
+              <strong>Phone:</strong> {location.contact.phone}
+            </li>
+            <li>
+              <strong>Email:</strong> {location.contact.email}
+            </li>
+            <li>
+              <strong>WhatsApp:</strong> {location.contact.whatsapp}
+            </li>
           </ul>
         </div>
+
         <div className="col-md-6">
           <h2 className="h4 fw-semibold text-dark">Working Hours</h2>
           <ul className="list-unstyled mt-3">
             {Object.entries(location.hours).map(([day, time]) => (
-              <li key={day}><strong className="text-capitalize">{day}</strong>: {time}</li>
+              <li key={day}>
+                <strong className="text-capitalize">{day}</strong>: {time}
+              </li>
             ))}
           </ul>
         </div>
@@ -115,7 +143,9 @@ export default function LocationPage({ params }) {
         <h2 className="h4 fw-semibold text-success mb-3">Exclusive Offers</h2>
         <ul className="list-unstyled">
           {location.offers.map((offer, i) => (
-            <li key={i} className="mb-2">• {offer}</li>
+            <li key={i} className="mb-2">
+              • {offer}
+            </li>
           ))}
         </ul>
       </div>
@@ -129,8 +159,12 @@ export default function LocationPage({ params }) {
               <div key={i} className="col-sm-6">
                 <div className="p-4 border border-primary rounded bg-light shadow-sm">
                   <p className="fst-italic">"{review.comment}"</p>
-                  <div className="mt-2 small fw-semibold text-dark">– {review.name}</div>
-                  <div className="text-warning small">{"⭐".repeat(review.rating)}</div>
+                  <div className="mt-2 small fw-semibold text-dark">
+                    – {review.name}
+                  </div>
+                  <div className="text-warning small">
+                    {"⭐".repeat(review.rating)}
+                  </div>
                 </div>
               </div>
             ))}

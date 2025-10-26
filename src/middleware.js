@@ -15,24 +15,42 @@ const roleRedirects = {
   employee: '/complains',
 };
 
-// CORS Headers
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*', // Allow requests from all origins
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // Allowed methods
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Allowed headers
-};
+
+const allowedOrigins = ['*']
+
+
+const corsOptions = {
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+}
+
 
 export async function middleware(request) {
   const url = request.nextUrl.clone();
 
-  // Handle CORS preflight requests
-  if (request.method === 'OPTIONS') {
-    const response = NextResponse.next();
-    Object.entries(corsHeaders).forEach(([key, value]) => {
-      response.headers.set(key, value);
-    });
-    return response;
+
+     const origin = req.headers.get('origin') ?? ''
+  const isAllowedOrigin = allowedOrigins.includes(origin)
+
+    // Handle preflighted requests
+  const isPreflight = req.method === 'OPTIONS'
+ 
+  if (isPreflight) {
+    const preflightHeaders = {
+      ...(isAllowedOrigin && { 'Access-Control-Allow-Origin': origin }),
+      ...corsOptions,
+    }
+    return NextResponse.json({}, { headers: preflightHeaders })
   }
+
+   if (isAllowedOrigin) {
+    response.headers.set('Access-Control-Allow-Origin', origin)
+  }
+ 
+  Object.entries(corsOptions).forEach(([key, value]) => {
+    response.headers.set(key, value)
+  })
+
 
   // Authentication and role-based access control
   const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
