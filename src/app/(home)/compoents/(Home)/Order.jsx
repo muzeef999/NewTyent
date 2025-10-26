@@ -1,10 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Card, Spinner, Table, Badge } from "react-bootstrap";
+
+import React, { useEffect, useMemo, useState } from "react";
+import { Card, Spinner, Table, Badge, Alert } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 
-// ✅ Import all product images
+/** --------- Images: using your asserts folder ---------- */
 import nmp5 from "@/asserts/NMP5.webp";
 import nmp7 from "@/asserts/NMP5.webp";
 import nmp9 from "@/asserts/NMP9.webp";
@@ -15,7 +16,7 @@ import uce13 from "@/asserts/Uce.webp";
 import hybrid from "@/asserts/Hybrid.webp";
 import hRich from "@/asserts/NMP5.webp";
 
-// ✅ Map product name → image
+/** --------- Map product name → image ---------- */
 const productImageMap = {
   "NMP-5": nmp5,
   "NMP-7": nmp7,
@@ -28,71 +29,130 @@ const productImageMap = {
   "H-Rich": hRich,
 };
 
+const API_BASE = "https://tyent-crm.vercel.app/api";
+
+const normalizePhone = (raw) => {
+  if (!raw) return "";
+  let phone = String(raw)
+    .trim()
+    .replace(/[\s()-]/g, "");
+  if (phone.startsWith("+91")) return phone.slice(3);
+  if (phone.startsWith("91")) return phone.slice(2);
+  return phone;
+};
+
 const Order = () => {
-  const userData = useSelector((state) => state.auth.user);
+  const userData = useSelector((state) => state?.auth?.user);
   const [customer, setCustomer] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState(null);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
-  // ✅ Fetch customer by phone
+  const phone = useMemo(
+    () => normalizePhone(userData?.phoneNumber),
+    [userData?.phoneNumber]
+  );
+
   useEffect(() => {
+    if (!phone) {
+      setCustomer(null);
+      return;
+    }
+
+    const controller = new AbortController();
+    const { signal } = controller;
+
     const fetchCustomer = async () => {
-      if (!userData?.phoneNumber) return;
       try {
         setLoading(true);
-        let phone = userData.phoneNumber;
+        setErr(null);
 
-        if (phone.startsWith("+")) {
-          phone = phone.slice(3);
-        } else if (phone.startsWith("91")) {
-          phone = phone.slice(2);
-        }
-
-        const res = await fetch(
-          `https://tyent-crm.vercel.app/api/customers?q=${phone}`
-        );
+        // 1) Find customer by phone
+        const res = await fetch(`${API_BASE}/customers?q=${phone}`, {
+          cache: "no-store",
+          signal,
+        });
+        if (!res.ok) throw new Error(`Lookup failed (${res.status})`);
         const data = await res.json();
+        const id = data?.data?.[0]?._id;
 
-        if (data?.data?.length > 0) {
-          const id = data.data[0]._id;
-          fetchCustomerDetails(id);
-        } else {
-          setLoading(false);
+        if (!id) {
+          setCustomer(null);
+          return;
         }
-      } catch (error) {
-        console.error("Error fetching customer:", error);
-        setLoading(false);
-      }
-    };
 
-    const fetchCustomerDetails = async (id) => {
-      try {
-        const res = await fetch(
-          `https://tyent-crm.vercel.app/api/customers/${id}`
-        );
-        const details = await res.json();
-        setCustomer(details.message);
-      } catch (error) {
-        console.error("Error fetching customer details:", error);
+        // 2) Fetch customer details
+        const detailsRes = await fetch(`${API_BASE}/customers/${id}`, {
+          cache: "no-store",
+          signal,
+        });
+        if (!detailsRes.ok)
+          throw new Error(`Details failed (${detailsRes.status})`);
+        const details = await detailsRes.json();
+        const c = details?.message ?? null;
+
+        // Sort service lists
+        const asc = (a, b) =>
+          new Date(a?.serviceDate || 0) - new Date(b?.serviceDate || 0);
+        const desc = (a, b) =>
+          new Date(b?.serviceDate || 0) - new Date(a?.serviceDate || 0);
+
+        c.upcomingServices = (c?.upcomingServices || []).slice().sort(asc);
+        c.serviceHistory = (c?.serviceHistory || []).slice().sort(desc);
+
+        setCustomer(c);
+        setImgLoaded(false);
+      } catch (e) {
+        if (e?.name !== "AbortError") {
+          console.error(e);
+          setErr(e?.message || "Something went wrong fetching data.");
+          setCustomer(null);
+        }
       } finally {
         setLoading(false);
       }
     };
 
     fetchCustomer();
-  }, [userData?.phoneNumber]);
+    return () => controller.abort();
+  }, [phone]);
 
-  if (loading) {
+  // 🌀 Spinner while loading initially (no customer data yet)
+  if (loading && !customer) {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100">
-        <Spinner animation="border" variant="primary" />
+        <Spinner animation="border" variant="primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
       </div>
     );
   }
 
-  if (!customer) {
-    return <p className="text-center mt-5">No customer data found.</p>;
+  // ⚠️ Error message (if something goes wrong)
+  if (err) {
+    return (
+      <div className="container py-4">
+        <Alert variant="danger" className="mb-4">
+          {err}
+        </Alert>
+      </div>
+    );
   }
 
+  // 📨 No customer found (only after loading is finished)
+  if (!loading && !customer) {
+    return (
+      <div className="container py-5">
+        <div className="d-flex justify-content-center align-items-center vh-100">
+          <Spinner animation="border" variant="primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        </div>
+      </div>
+    );
+  }
+
+  // ✅ Render customer data
   const {
     serialNumber,
     price,
@@ -101,145 +161,48 @@ const Order = () => {
     marketingManager,
     upcomingServices,
     serviceHistory,
-  } = customer;
+  } = customer || {};
 
-  // ✅ Get image based on product name
-  const productImage = serialNumber?.name
-    ? productImageMap[serialNumber.name]
-    : null;
+  const productName = serialNumber?.name || "Product";
+  const productImage = productImageMap[productName];
 
   return (
     <div className="container py-4">
       {/* Product Details */}
       <Card className="shadow-lg mb-4 p-4 border-0">
-        <div className="d-flex flex-column align-items-center text-left">
-          {productImage ? (
-            <Image
-              src={product.image}
-              alt={product.title}
+        <div className="d-flex flex-column align-items-left text-left">
+           <Image
+              src={productImage}
+              alt={productName}
               className="img-fluid product-card"
               style={{
                 maxWidth: "100%",
                 height: "auto",
                 borderRadius: "10px",
               }}
+              onLoadingComplete={() => setImgLoaded(true)}
             />
-          ) : (
-            <div
-              style={{
-                width: "400px",
-                height: "250px",
-                background: "#f5f5f5",
-                borderRadius: "12px",
-              }}
-              className="d-flex align-items-center justify-content-center text-muted"
-            >
-              No Image Available
-            </div>
-          )}
-          <h4 className="fw-bold mt-2">{serialNumber?.name}</h4>
+          
+          <h4 className="fw-bold mt-3 mb-1">{productName}</h4>
+
           <p className="text-muted mb-1">
-            <b>Serial No:</b> {serialNumber?._id}
+            <b>Serial No:</b> {serialNumber?._id || "N/A"}
           </p>
           <p className="text-muted mb-1">
-            <b>Price:</b> ₹{price?.toLocaleString()}
+            <b>Price:</b>{" "}
+            {typeof price === "number" ? `₹${price.toLocaleString()}` : "N/A"}
+          </p>
+          
+          <p className="text-muted mb-1">
+            <b>Installed By:</b> {installedBy?.name || "N/A"}
+          </p>
+          <p className="text-muted mb-0">
+            <b>Marketing Manager:</b> {marketingManager?.name || "N/A"}
           </p>
           <p className="text-muted mb-1">
             <b>Address:</b> {address || "N/A"}
           </p>
-          <p className="text-muted mb-1">
-            <b>Installed By:</b> {installedBy?.name || "N/A"}
-          </p>
-          <p className="text-muted">
-            <b>Marketing Manager:</b> {marketingManager?.name || "N/A"}
-          </p>
         </div>
-      </Card>
-
-      {/* Upcoming Services */}
-      <Card className="shadow-sm mb-4 p-3">
-        <h5 className="text-primary mb-3 fw-semibold">Upcoming Services</h5>
-        <Table bordered hover responsive className="align-middle">
-          <thead className="table-primary text-center">
-            <tr>
-              <th>Visit No</th>
-              <th>Date</th>
-              <th>Status</th>
-              <th>Service Type</th>
-            </tr>
-          </thead>
-          <tbody>
-            {upcomingServices?.length > 0 ? (
-              upcomingServices.map((service) => (
-                <tr key={service._id}>
-                  <td>{service.visitNo}</td>
-                  <td>{new Date(service.serviceDate).toLocaleDateString()}</td>
-                  <td>
-                    <Badge bg="warning" text="dark">
-                      {service.status}
-                    </Badge>
-                  </td>
-                  <td>{service.serviceType.join(", ")}</td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="4" className="text-center text-muted">
-                  No upcoming services
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </Table>
-      </Card>
-
-      {/* Service History */}
-      <Card className="shadow-sm mb-4 p-3">
-        <h5 className="text-success mb-3 fw-semibold">Service History</h5>
-        <Table bordered hover responsive className="align-middle">
-          <thead className="table-success text-center">
-            <tr>
-              <th>Visit No</th>
-              <th>Date</th>
-              <th>Status</th>
-              <th>Service Type</th>
-            </tr>
-          </thead>
-          <tbody>
-            {serviceHistory?.length > 0 ? (
-              serviceHistory.map((service) => (
-                <tr key={service._id}>
-                  <td>{service.visitNo || "-"}</td>
-                  <td>{new Date(service.serviceDate).toLocaleDateString()}</td>
-                  <td>
-                    <Badge
-                      bg={
-                        service.status === "CLOSED"
-                          ? "secondary"
-                          : service.status === "COMPLETED"
-                          ? "success"
-                          : "info"
-                      }
-                    >
-                      {service.status}
-                    </Badge>
-                  </td>
-                  <td>
-                    {service.serviceType.length
-                      ? service.serviceType.join(", ")
-                      : "N/A"}
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="4" className="text-center text-muted">
-                  No service history available
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </Table>
       </Card>
     </div>
   );

@@ -12,6 +12,8 @@ import {
   IoGridOutline,
   IoPeopleOutline,
 } from "react-icons/io5";
+import { MdMiscellaneousServices } from "react-icons/md";
+
 import { PiShoppingCartLight } from "react-icons/pi";
 import { setUser } from "@/app/Redux/authSlice";
 import { fetchCart } from "@/app/Redux/cartSlice";
@@ -163,7 +165,7 @@ const AppBar = () => {
                           className="dropdown-item"
                           onClick={() =>setShowServiceHistory(true)}
                         >
-                          <IoBagHandleOutline /> Service History
+                          <MdMiscellaneousServices /> Service History
                         </button>
                       </li>
                     </>
