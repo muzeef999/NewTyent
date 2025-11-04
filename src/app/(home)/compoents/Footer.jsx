@@ -57,7 +57,7 @@ const Footer = () => {
           <Col xs={12} md={3} className="mb-4">
             <h5 style={{ color: "#000", fontWeight:'600' }}>Product Sales & Service</h5>
             <ul className="list-unstyled">
-              <li>Product Demo: 9182-41-41-81</li>
+              <li>Product Demo: +91 9966 558 556</li>
               <li>Product Support: <a href="mailto:Sravan@medilightindia.com">Sravan@medilightindia.com</a></li>
               <li>Complaints: 912-12-12-555</li>
               <li>Technical Support: <a href="mailto:Technical@MedilightIndia.com">Technical@MedilightIndia.com</a></li>
