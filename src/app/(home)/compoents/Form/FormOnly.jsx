@@ -102,22 +102,21 @@ const FormOnly = () => {
             );
 
 
-             const res = await axios.post(
-              "https://graph.facebook.com/v19.0/209988965541805/messages",
-              payload,
-              {
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${ACCESS_TOKEN}`,
-                },
-              }
-            );
+            //  const res = await axios.post(
+            //   "https://graph.facebook.com/v19.0/209988965541805/messages",
+            //   payload,
+            //   {
+            //     headers: {
+            //       "Content-Type": "application/json",
+            //       Authorization: `Bearer ${ACCESS_TOKEN}`,
+            //     },
+            //   }
+            // );
             if(res.status === 200){
               setLoading(false);
             }
             
           } catch (error) {
-            toast.error("Error sending message:", error.message);
           
           }finally {
             setLoading(false);
