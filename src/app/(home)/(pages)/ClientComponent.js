@@ -44,7 +44,7 @@ export default function ClientComponent({ children, session }) {
   }, []);
 
   const handleCallClick = () => {
-    window.location.href = "tel:+919182414181";
+    window.location.href = "tel:+919966558556";
   };
 
   return (
