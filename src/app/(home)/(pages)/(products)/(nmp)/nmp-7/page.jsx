@@ -37,8 +37,8 @@ const Banner = dynamic(
 );
 
 export const metadata = {
-  title: "Tyent NMP-7 Water Ionizer | Pure Alkaline Water, 7 Levels",
-  description: "Tyent NMP-7 delivers 7 water types with -950 ORP & 1550 PPB H₂. No chemicals. Boost immunity with hydrogen-rich, alkaline water backed by 25+ years of R&D",
+  title: "Tyent NMP Series: Entry-Level Water Ionizer",
+  description: "Looking for an affordable best water ionizer in India? The NMP-5 and NMP-7 models offer great value, superior quality, and hydrogen-rich water.",
   keywords:"Tyent NMP-7, water ionizer India, hydrogen water, alkaline ionizer, ORP water, 11.5 pH water, Japanese water plates, Tyent vs Kangen, eco hydration, antioxidant water"
 }; 
 

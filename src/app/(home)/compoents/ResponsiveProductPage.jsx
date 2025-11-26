@@ -34,7 +34,7 @@ const ProductData = [
       {
         title: "UCE-9",
         image: uce,
-        link: "/uce-9",
+        link: "/uce-9-plus",
       },
       {
         title: "HYBRID H2",
@@ -74,17 +74,17 @@ const ProductData = [
       {
         title: "Tyent UCE-9 Plus",
         image: uce,
-        link: "/uce-9",
+        link: "/uce-9-plus",
       },
       {
         title: "Tyent UCE-11 Plus",
         image: uce,
-        link: "/uce-11",
+        link: "/uce-11-plus",
       },
       {
         title: "Tyent UCE-13 Plus",
         image: uce,
-        link: "/uce-13",
+        link: "/uce-13-plus",
       },
     ],
   },

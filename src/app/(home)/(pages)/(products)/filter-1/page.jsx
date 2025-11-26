@@ -13,6 +13,16 @@ import Image from "next/image";
 import { MdWaterDrop } from "react-icons/md";
 
 
+export const metadata = {
+  title: "Tyent Filters: The Best Water Ionizer Filtration",
+  description:
+    "Tyent uses .01 micron filtration, ensuring it is the best alkaline water purifier in India. Learn about our certified dual filters.",
+  keywords:
+    "Counter Top Water Ionizers, Tyent NMP-5, NMP-7, NMP-9, NMP-11, Alkaline Water, Hydrogen Water, Water Purifier India, Healthy Lifestyle, Ionized Water, Antioxidant Water",
+};
+
+
+
 
 
 

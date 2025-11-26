@@ -9,8 +9,8 @@ import Vision from '../../compoents/(story)/Vision';
 import Management from '../../compoents/(story)/Management';
 
 export const metadata = {
-  title: "About Tyent India | Alkaline Water Ionizers & Purifiers",
-  description: "Tyent India offers advanced Japanese alkaline water ionizers and purifiers for healthy, sustainable hydration. Trusted nationwide for premium service and innovation.",
+  title: "Tyent India: Global Leader in Water Ionizers",
+  description: "Since 2016, Tyent India has offered the best water ionizer in India, committed to health and wellness with advanced Japanese technology.",
   keywords:"Alkaline water ionizer, hydrogen water India, Japanese water tech, Tyent partner, TAEYOUNG E&T"
 };
 

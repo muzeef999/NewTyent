@@ -32,8 +32,8 @@ const Form = dynamic(() => import("./compoents/Form/Form"), {
 
 
 export const metadata = {
-  title: "Tyent Water Ionizers India | Best Kangen Water Machines & Alkaline Ionizers",
-  description: "Explore Tyent Water Ionizers India for the best Kangen water machines and alkaline ionizers. Enjoy ultra-pure, hydrogen-rich water with our advanced technology for superior hydration and health benefits.",
+  title: "Tyent: Best Alkaline Water Ionizer in India",
+  description: "Discover Tyent, the best alkaline water machine in India. Get the best water ionizer in India with advanced Japanese technology for superior hydrogen-rich water.",
   keywords: "best kangen water machine, best kangen water machine in india, kangen water machine online india, buy kangen water machine, alkaline water machine, water ionizer machine, alkaline water system, best water ionizer, ionizer machine, best alkaline water machine, ph water machine, alkaline water ionizer, alkaline water filter system, k8 water machine, Kangen SD501 water ionizer, water ionizer for home, home alkaline water system, best alkaline water machine for home, alkaline water system for house, whole house alkaline water system, best water ionizer machine, ionised water machine, alkaline water ionizer machine, whole house water ionizer, living water alkaline machine, best water ionizer for home, japanese water ionizer, commercial alkaline water machine, countertop water ionizer, hydrogen alkaline water machine, hydrogen water generator, buy alkaline water machine, best water alkalizer, commercial alkaline water machine for sale, top alkaline water machine, tyent usa water ionizer, best alkaline water ionizer machine, tyent water ionizer, tyent usa water ionizer, water ionizer and alkaline water machine, Enagic kangen SD501, kangen water machine, Under counter water ionizer, Enagic kangen Jr, Enagic kangen super SD501, Tyent NMP water ionizer, Tyent UCE PLUS water ionizer, Antioxidant water, Ionized alkaline water benefits",
 };
 

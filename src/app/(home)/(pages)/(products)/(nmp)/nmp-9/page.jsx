@@ -39,8 +39,8 @@ const Banner = dynamic(
 );
 
 export const metadata = {
-  title: "Tyent NMP-9 Ionizer | 9 Plates, 7 Waters, 1800 PPB H₂",
-  description: "Tyent NMP-9 with 9 titanium plates delivers 7 water levels, up to -1050 ORP & 1800 PPB H₂. Pure, chemical-free ionized water for drinking, cleaning & beauty.",
+  title: "Flagship Tyent: Best Alkaline Water Machine",
+  description: "Experience unmatched performance with the NMP-11 or NMP-9. This is truly the best alkaline water machine in India for power and purity.",
  keywords:"Tyent NMP-9, alkaline water ionizer, hydrogen water, 9 plate ionizer, ORP water machine, Kangen alternative, ionized water purifier, 11.5 pH water, SMPS PLUS, Japanese water tech"
 }; 
 

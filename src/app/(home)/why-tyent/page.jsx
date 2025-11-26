@@ -23,8 +23,8 @@ const FeatureCard = dynamic(() => import("../compoents/FeatureCard"), {
 });
 
 export const metadata = {
-  title: "Why Choose Tyent Water Ionizers?",
-  description: " Tyent stands out with industry-leading technology, premium filtration, and superior customer support.",
+  title: "Why Choose Tyent? Best Alkaline Water Ionizer",
+  description: "Learn about Tyent's patented SMPS Plus and Hybrid Mesh Plates. We are recognized as a best alkaline water purifier in India for quality and innovation.",
 };
 
 async function fetchData() {

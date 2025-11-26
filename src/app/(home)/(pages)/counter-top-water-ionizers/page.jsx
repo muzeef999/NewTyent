@@ -10,9 +10,9 @@ import nmp9 from "@/asserts/NMP9.webp";
 import hybrid from "@/asserts/Hybrid.webp";
 
 export const metadata = {
-  title: "Counter Top Water Ionizers | Tyent India",
+  title: "Tyent Countertop: Best Water Ionizer in India",
   description:
-    "Explore Tyent India's premium range of counter top water ionizers including NMP-5, NMP-7, NMP-9, and NMP-11. Improve your lifestyle with antioxidant-rich alkaline water.",
+    "See why Tyent is listed among the top 10 alkaline water purifier in India. Our countertop models deliver powerful, chemical-free alkaline water.",
   keywords:
     "Counter Top Water Ionizers, Tyent NMP-5, NMP-7, NMP-9, NMP-11, Alkaline Water, Hydrogen Water, Water Purifier India, Healthy Lifestyle, Ionized Water, Antioxidant Water",
 };

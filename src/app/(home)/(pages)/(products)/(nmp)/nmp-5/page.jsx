@@ -39,8 +39,8 @@ const TopBannersNMP = dynamic(
 );
 
 export const metadata = {
-  title: "Tyent NMP-5 Water Ionizer: 5-Plate Power & Pure Hydration",
-  description: "Tyent NMP-5 offers 7 water types, 5 Japanese plates, & up to -850 ORP. No chemicals.Boost immunity & detox naturally with hydrogen-rich alkaline water.",
+  title: "Tyent NMP Series: Entry-Level Water Ionizer",
+  description: "Looking for an affordable best water ionizer in India? The NMP-5 and NMP-7 models offer great value, superior quality, and hydrogen-rich water.",
   keywords: "Tyent NMP-5, water ionizer India, hydrogen water, alkaline ionizer, antioxidant water, 11.5 pH water, ORP water benefits, Japanese plates, RO alternative, Kangen competitor."
 }; 
 

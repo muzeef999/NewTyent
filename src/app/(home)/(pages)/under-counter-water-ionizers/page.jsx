@@ -7,9 +7,9 @@ import uce from "@/asserts/Uce.webp";
 import { Col, Row, Container } from "react-bootstrap";
 
 export const metadata = {
-  title: "Under Counter Water Ionizers | Tyent India",
+  title: "Tyent Under Counter Water Ionizers in India",
   description:
-    "Discover Tyent India's premium range of under counter water ionizers like UCE-9 Plus, UCE-11 Plus, and UCE-13 Plus. Advanced technology meets space-saving design for a healthier lifestyle.",
+    "Explore the best alkaline water purifier in India (UCE Series). Tyent's discreet under-counter alkaline water ionizer offers style and advanced filtration.",
   keywords:
     "Under Counter Water Ionizers, Tyent UCE-9 Plus, Tyent UCE-11 Plus, Tyent UCE-13 Plus, Alkaline Water, Hydrogen Water, Ionized Water India, Healthy Drinking Water, Kitchen Water Filter",
 };
@@ -22,17 +22,17 @@ export default function UnderCounterIonizers() {
         {
           title: "Tyent UCE-9 Plus",
           image: uce,
-          link: "/uce-9",
+          link: "/uce-9-plus",
         },
         {
           title: "Tyent UCE-11 Plus",
           image: uce,
-          link: "/uce-11",
+          link: "/uce-11-plus",
         },
         {
           title: "Tyent UCE-13 Plus",
           image: uce,
-          link: "/uce-13",
+          link: "/uce-13-plus",
         },
       ],
     },

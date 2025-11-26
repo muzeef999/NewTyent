@@ -49,8 +49,8 @@ const Banner = dynamic(
 
 
 export const metadata = {
-  title: "Tyent UCE-9 Plus | 9 Plate Luxury Under-Counter Ionizer",
-  description: "Tyent UCE-9 Plus offers 7 water types, 1800 PPB H₂, -1050 ORP, & 11.5 pH. A sleek, powerful under-sink ionizer built for luxury kitchens & advanced health",
+  title: "TTyent UCE-9 Plus: Premium Under-Counter",
+  description: "The UCE-9 Plus is Tyent's flagship. This premium best alkaline water ionizer in India offers up to 13 plates and a sleek under-counter design.",
   keywords: "Tyent UCE-9 Plus, under counter ionizer, alkaline water machine, hydrogen water ionizer, 9 plate ionizer, Kangen alternative, 11.5 pH water, luxury kitchen ionizer, SMPS Plus, Japanese water ionizer"
 };
 
