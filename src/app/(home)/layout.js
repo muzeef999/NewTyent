@@ -46,7 +46,7 @@ export default function RootLayout({ children, session }) {
             gtag('config', 'AW-802308772');
           `}
         </Script>
-
+{/* empty check */}
         <Script id="conversion-report" strategy="afterInteractive">
           {`
             function gtag_report_conversion(url) {
