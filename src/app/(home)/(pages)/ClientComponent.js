@@ -44,6 +44,10 @@ export default function ClientComponent({ children, session }) {
   }, []);
 
   const handleCallClick = () => {
+
+     if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
+    window.gtag_report_conversion("tel:+919966558556");
+  }
     window.location.href = "tel:+919966558556";
   };
 
@@ -68,6 +72,7 @@ export default function ClientComponent({ children, session }) {
             <button  style={{position:'absolute', bottom:'1rem', left:'2rem'}}
               className="floating-button"
               title="Click to message"
+              
               onClick={(e) => handleShowModal("This is a messaging modal.", e)}
               ref={setButtonRef} // Attach button ref for modal placement
             >

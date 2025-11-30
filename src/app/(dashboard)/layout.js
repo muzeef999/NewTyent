@@ -13,6 +13,8 @@ import { SessionProvider } from "next-auth/react";
 export default function RootLayout({ children, session }) {
   const [showSidebar, setShowSidebar] = useState(true);
 
+  
+
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
