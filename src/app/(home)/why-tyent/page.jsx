@@ -15,6 +15,8 @@ import design  from "@/asserts/whyTent/design.webp";
 import Certified from "@/asserts/whyTent/Certified.webp";
 import display from "@/asserts/whyTent/display.webp";
 import plateSurfaceArea from "@/asserts/whyTent/plateSurfaceArea.webp";
+import Head from "next/head";
+
 
 import why from "@/asserts/whyTyeny.png";
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
@@ -267,6 +269,45 @@ const Page = async () => {
 
   return (
     <>
+
+    <>
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
+    
+    
       <Header
         basic={headerData.basic}
         preheading={headerData.preheading}
@@ -276,6 +317,7 @@ const Page = async () => {
         animatedText={headerData.animatedText}
       />
       <FeatureCard data={data} />
+      </>
     </>
   );
 };

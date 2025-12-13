@@ -34,6 +34,24 @@ export default function ClientComponent({ children, session }) {
   };
 
   useEffect(() => {
+  const timer = setTimeout(() => {
+    setModalContent("Auto open after 1 minute");
+    setShowModal(true);
+  }, 30000); // 1 minute = 60,000 ms
+
+  return () => clearTimeout(timer); // cleanup
+}, []);
+
+const handleDownloadConversion = () => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-802308772/gmjyCLODuIMYEKSFyf4C",
+    });
+  }
+};
+
+
+  useEffect(() => {
     Aos.init({
       duration: 1200, // Smooth & premium feel (1.2s)
       easing: "ease-in-out", // More natural motion
@@ -82,7 +100,8 @@ export default function ClientComponent({ children, session }) {
             <button style={{position:'absolute', bottom:'1rem', right:'2rem'}}
               className="floating-button"
               title="Click to call"
-              onClick={handleCallClick}
+              onClick={() => {handleCallClick,  handleDownloadConversion();
+       }}
             >
               <IoIosCall size={30} />
             </button>

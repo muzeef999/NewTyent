@@ -40,6 +40,9 @@ import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
 import JOGDail from "@/asserts/uce/JOGDail.webp"
 import ucerotate from "@/asserts/uce/ucerotate.webp"
 import dynamic from "next/dynamic";
+import Head from "next/head";
+
+
 const Banner = dynamic(
   () => import("./TopBannerUCE9"),
   {
@@ -205,6 +208,46 @@ const page = () => {
   ];
 
   return (
+
+    <>
+
+    
+     {/* AMP Analytics Script */}
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
     <div>
      
      <Banner/>
@@ -1048,6 +1091,8 @@ const page = () => {
         </div>
       </Container>
     </div>
+
+    </>
   );
 };
 

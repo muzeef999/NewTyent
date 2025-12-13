@@ -7,6 +7,9 @@ const Mission = dynamic(() => import('@/app/(home)/compoents/(story)/Mission'), 
 import whoweare from "@/asserts/about.jpg"
 import Vision from '../../compoents/(story)/Vision';
 import Management from '../../compoents/(story)/Management';
+import Head from 'next/head';
+
+
 
 export const metadata = {
   title: "Tyent India: Global Leader in Water Ionizers",
@@ -17,6 +20,44 @@ export const metadata = {
 
 const page = () => {
   return (
+    <>
+    
+       {/* AMP Analytics Script */}
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
+    
     <div style={{marginTop:'120px'}}>
       <div className='container'>
       <div className="section-spacing">  
@@ -75,6 +116,7 @@ const page = () => {
       <Management/>
       </div>
     </div>
+    </>
   )
 }
 

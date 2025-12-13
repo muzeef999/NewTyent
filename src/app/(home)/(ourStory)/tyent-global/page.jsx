@@ -10,6 +10,7 @@ import { MdOutlineTouchApp } from "react-icons/md";
 import corevalues from "@/asserts/aboutus/corevalues.webp";
 import CoreStrategy from "@/asserts/aboutus/CoreStrategy.webp";
 import maraketing from "@/asserts/aboutus/maraketing.webp";
+import Head from "next/head";
 
 export const metadata = {
   title: "Tyent India: A Global Water Ionizer Leader",
@@ -50,6 +51,44 @@ const CoreValueCard = ({ icon: Icon, title, description }) => {
 
 const Page = () => {
   return (
+
+    <>
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
+    
     <div>
       {/* Who We Are Section */}
       <Container>
@@ -224,6 +263,8 @@ const Page = () => {
         </Row>
       </Container>
     </div>
+    
+    </>
   );
 };
 
