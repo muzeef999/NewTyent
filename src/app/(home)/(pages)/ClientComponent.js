@@ -35,12 +35,23 @@ export default function ClientComponent({ children, session }) {
 
   useEffect(() => {
   const timer = setTimeout(() => {
-    setModalContent("Auto open after 1 minute");
     setShowModal(true);
   }, 30000); // 1 minute = 60,000 ms
 
   return () => clearTimeout(timer); // cleanup
 }, []);
+
+
+
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowModal(true);
+  }, 60000); // 1 minute = 60,000 ms
+
+  return () => clearTimeout(timer); // cleanup
+}, []);
+
 
 const handleDownloadConversion = () => {
   if (typeof window !== "undefined" && window.gtag) {
