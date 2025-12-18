@@ -111,7 +111,7 @@ const handleDownloadConversion = () => {
             <button style={{position:'absolute', bottom:'1rem', right:'2rem'}}
               className="floating-button"
               title="Click to call"
-              onClick={() => {handleCallClick,  handleDownloadConversion();
+              onClick={() => {handleCallClick(),  handleDownloadConversion();
        }}
             >
               <IoIosCall size={30} />
