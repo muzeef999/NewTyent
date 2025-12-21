@@ -49,6 +49,7 @@ import BrainStroke from "@/asserts/health/BrainStroke.webp";
 import Alzheimer from "@/asserts/health/Alzheimer.webp";
 import fattyliver from "@/asserts/health/fattyliver.webp";
 import ChronicFatigue from "@/asserts/health/ChronicFatigue.webp";
+import Head from "next/head";
 
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 
@@ -402,6 +403,47 @@ const Page = () => {
   };
 
   return (
+
+    <>
+    
+    
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
+    
+    
     <div>
       <Header
         basic={headerData.basic}
@@ -745,6 +787,7 @@ const Page = () => {
         </div>
       </Row>
     </div>
+    </>
   );
 };
 

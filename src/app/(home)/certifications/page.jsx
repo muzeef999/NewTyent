@@ -36,6 +36,8 @@ import C_92 from "@/asserts/certifications/92.webp"
 import C_93 from "@/asserts/certifications/93.webp"
 import C_94 from "@/asserts/certifications/94.webp"
 import C_95 from "@/asserts/certifications/94.webp"
+import Head from "next/head";
+
 
 // Dynamic import for Header to avoid SSR issues
 const Header = dynamic(() => import("../compoents/Header"), {
@@ -98,7 +100,48 @@ const CertificationsPage = () => {
   };
 
   return (
-    <div>
+
+    <>
+    
+    
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
+    
+    
+        <div>
       <Header
         basic={headerData.basic}
         preheading={headerData.preheading}
@@ -184,6 +227,7 @@ const CertificationsPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -18,6 +18,16 @@ const ACCESS_TOKEN =
   
 const FormOnly = () => {
 
+
+  const handleDownloadConversion = () => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-802308772/gmjyCLODuIMYEKSFyf4C",
+    });
+  }
+};
+
+
     const [inputdata, setInput] = useState({
         name: "",
         email: "",
@@ -101,7 +111,8 @@ const FormOnly = () => {
               }
             );
 
-
+ handleDownloadConversion();
+       
             //  const res = await axios.post(
             //   "https://graph.facebook.com/v19.0/209988965541805/messages",
             //   payload,

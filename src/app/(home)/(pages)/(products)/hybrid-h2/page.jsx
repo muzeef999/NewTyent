@@ -19,6 +19,7 @@ import waterflow from "@/asserts/hybrid/pro_04.png";
 import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import HybridTouchPreview from "./HybridTouchPreview";
 import Halfhybrid from "@/asserts/hybrid/Halfhybrid.webp"
+import Head from "next/head";
 
 import dynamic from "next/dynamic";
 const Banner = dynamic(
@@ -110,6 +111,42 @@ const page = () => {
   ];
 
   return (
+    <>
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
     <div className="hybridbackground">
       
  <Banner />
@@ -936,6 +973,7 @@ const page = () => {
         </div>
       </Container>
     </div>
+    </>
   );
 };
 
