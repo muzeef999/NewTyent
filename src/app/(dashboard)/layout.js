@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import DashboardBar from "./compoents/DashboardBar";
 import Sidebar from "./compoents/Sidebar";
@@ -12,8 +11,6 @@ import { SessionProvider } from "next-auth/react";
 
 export default function RootLayout({ children, session }) {
   const [showSidebar, setShowSidebar] = useState(true);
-
-  
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);

@@ -65,7 +65,7 @@ export default function RootLayout({ children, session }) {
             }
           `}
         </Script>
-
+                 <meta name="google-site-verification" content="z3xwnn_cAm4U6rIJG9TRTjD6sb2InabidPN8wDJfDHI" />
         {/* No-JS fallback */}
         <noscript>
           <iframe
