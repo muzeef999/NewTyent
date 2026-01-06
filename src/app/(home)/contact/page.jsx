@@ -30,44 +30,29 @@ const headerData = {
   animatedText: "Have Questions ?, Need Assistance ? ",
 };
 
-const InfoCard = ({ icon: Icon, title, text, slug }) => (
-  <Col xs={12} md={4} style={{ padding: "20px" }}>
-    <div className="custom-card">
+const InfoCard = ({ title, slug, image }) => (
+  <Col xs={12} sm={6} md={3} className="p-2">
     <Link
       href={`/contact/${slug}`}
-      className="text-decoration-none  cursor-pointer"
+      className="text-decoration-none"
     >
-      <p
-        className="m-0"
-        style={{ fontSize: "20px", fontWeight: 600, padding: "10px" }}
-      >
-        {title}
-      </p>
-      {/* <div className="d-flex align-items-top">
-        <div className="contennticon p-1">
-          <Icon
-            size={20}
-            style={{
-              backgroundColor: "#008ac7",
-              color: "#FFF",
-              width: "50px",
-              height: "50px",
-              borderRadius: "50%",
-              padding: "10px",
-            }}
-          />
+      <div className="location-card">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          className="location-image"
+        />
+
+        <div className="location-overlay">
+          <h5 className="location-title">{title}</h5>
         </div>
-        <div className="content align-items-top">
-          <div
-            className="text p-1"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        </div>
-      </div> */}
+      </div>
     </Link>
-    </div>
   </Col>
 );
+
 
 const Page = () => {
   const items = [
@@ -177,6 +162,7 @@ const Page = () => {
                 key={index}
                 slug={location.slug}
                 icon={location.icon}
+                image={location.image}
                 title={location.title}
                 text={location.address}
                 metaTitle={location.metaTitle}

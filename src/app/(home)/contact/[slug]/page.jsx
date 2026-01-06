@@ -1,176 +1,147 @@
-import { notFound } from "next/navigation";
-import { locationsData } from "@/app/(home)/contact/locationData";
 import Image from "next/image";
 
-// --------------------
-// 🧠 Generate Metadata
-// --------------------
-export function generateMetadata({ params }) {
-  const slug = params.slug.toLowerCase().replace(/_/g, "-");
-  const locationKey = Object.keys(locationsData).find(
-    (key) => key.toLowerCase().replace(/_/g, "-") === slug
-  );
-  const location = locationsData[locationKey];
-
-  if (!location) return {};
-
-  return {
-    title: location.metaTitle,
-    description: location.metaDescription,
-    keywords: location.metaKeywords?.join(", "),
-  };
-}
-
-// --------------------
-// 📍 Main Location Page
-// --------------------
 export default function LocationPage({ params }) {
-  const slug = params.slug.toLowerCase().replace(/_/g, "-");
-  const locationKey = Object.keys(locationsData).find(
-    (key) => key.toLowerCase().replace(/_/g, "-") === slug
-  );
-  const location = locationsData[locationKey];
-
-  if (!location) return notFound();
+  // Convert slug to readable location name
+  const locationName = params.slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 
   return (
-    <div className="container py-5">
-      {/* Header */}
-      <div className="mb-5 border-bottom pb-4">
-        <nav className="text-muted mb-2">
-          Home / Contact /{" "}
-          <span className="text-primary fw-semibold">{location.title}</span>
-        </nav>
-        <h1 className="display-5 fw-bold text-primary">{location.title}</h1>
-        <p className="lead text-secondary">{location.address}</p>
-      </div>
-
-      {/* Contact & Hours */}
-      <div className="row g-4 mb-5">
-        <div className="col-md-6">
-          <h2 className="h4 fw-semibold text-dark">Contact Information</h2>
-          <ul className="list-unstyled mt-3">
-            <li>
-              <strong>Manager:</strong> {location.contact.manager}
-            </li>
-            <li>
-              <strong>Phone:</strong> {location.contact.phone}
-            </li>
-            <li>
-              <strong>Email:</strong> {location.contact.email}
-            </li>
-            <li>
-              <strong>WhatsApp:</strong> {location.contact.whatsapp}
-            </li>
-          </ul>
-        </div>
-
-        <div className="col-md-6">
-          <h2 className="h4 fw-semibold text-dark">Working Hours</h2>
-          <ul className="list-unstyled mt-3">
-            {Object.entries(location.hours).map(([day, time]) => (
-              <li key={day}>
-                <strong className="text-capitalize">{day}</strong>: {time}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Features */}
-      <div className="mb-5">
-        <h2 className="h4 fw-semibold text-dark mb-3">Why Visit Us?</h2>
-        <ul className="row list-unstyled">
-          {location.features.map((item, i) => (
-            <li key={i} className="col-md-4 mb-2 position-relative ps-3">
-              <span className="position-absolute start-0 top-0 text-success">•</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Gallery */}
-      <div className="mb-5">
-        <h2 className="h4 fw-semibold text-dark mb-3">Showroom Gallery</h2>
-        <div className="row g-3">
-          {location.gallery.map((src, i) => (
-            <div key={i} className="col-sm-6 col-lg-4">
-              <Image
-                src={src}
-                width={400}
-                height={250}
-                alt={`Gallery image ${i + 1}`}
-                className="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover"
-              />
+    <div>
+      {/* ================= HERO SECTION ================= */}
+      <section
+        className="text-white py-5"
+        style={{ backgroundColor: "#008ac7" }}
+      >
+        <div className="container">
+          <div className="row align-items-center gy-4">
+            <div className="col-lg-7">
+              <h1 className="fw-bold fs-3 mb-3">
+                Best Premium Alkaline Water Ionizer & Hydrogen Water Generator in{" "}
+                {locationName}
+              </h1>
+              <p className="mb-0">
+                For free demo contact: <strong>9966 558 556</strong>
+              </p>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Map */}
-      <div className="mb-5">
-        <h2 className="h4 fw-semibold text-dark mb-3">Find Us Here</h2>
-        <div className="ratio ratio-16x9 rounded shadow">
-          <iframe
-            src={location.mapEmbedUrl}
-            allowFullScreen
-            loading="lazy"
-            className="rounded"
-          ></iframe>
-        </div>
-      </div>
-
-      {/* Staff */}
-      <div className="mb-5">
-        <h2 className="h4 fw-semibold text-dark mb-3">Meet Our Team</h2>
-        <div className="row g-4">
-          {location.staff.map((member, i) => (
-            <div key={i} className="col-sm-6 col-md-4">
-              <div className="bg-white p-4 border rounded shadow-sm h-100">
-                <h3 className="h6 fw-bold text-dark mb-1">{member.name}</h3>
-                <p className="text-muted mb-1">{member.position}</p>
-                <p className="fst-italic small text-secondary mb-1">{member.bio}</p>
-                <p className="text-primary small">{member.certification}</p>
+            <div className="col-lg-5 text-lg-end">
+              <div className="rounded overflow-hidden shadow d-inline-block">
+                <iframe
+                  width="360"
+                  height="200"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Tyent India"
+                  allowFullScreen
+                  style={{ border: "none" }}
+                />
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Offers */}
-      <div className="bg-light border-start border-success border-4 p-4 rounded mb-5">
-        <h2 className="h4 fw-semibold text-success mb-3">Exclusive Offers</h2>
-        <ul className="list-unstyled">
-          {location.offers.map((offer, i) => (
-            <li key={i} className="mb-2">
-              • {offer}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Testimonials */}
-      {location.testimonials?.length > 0 && (
-        <div className="mb-5">
-          <h2 className="h4 fw-semibold text-dark mb-3">Customer Testimonials</h2>
-          <div className="row g-4">
-            {location.testimonials.map((review, i) => (
-              <div key={i} className="col-sm-6">
-                <div className="p-4 border border-primary rounded bg-light shadow-sm">
-                  <p className="fst-italic">"{review.comment}"</p>
-                  <div className="mt-2 small fw-semibold text-dark">
-                    – {review.name}
-                  </div>
-                  <div className="text-warning small">
-                    {"⭐".repeat(review.rating)}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
-      )}
+      </section>
+
+      {/* ================= TECHNOLOGY SECTION ================= */}
+      <section className="container py-5 text-center">
+        <h2 className="fw-bold display-6 text-primary mb-2">
+          Tyent’s Japanese Technology
+        </h2>
+
+        <div
+          className="mx-auto my-3"
+          style={{
+            maxWidth: "120px",
+            height: "3px",
+            backgroundColor: "#0d6efd",
+          }}
+        />
+
+        <h6 className="fw-semibold">
+          Advanced Health Protection with Doorstep Installation & Service
+        </h6>
+
+        <p
+          className="text-muted mt-4 mx-auto"
+          style={{ maxWidth: "900px" }}
+        >
+          Looking for the best water ionizer in {locationName}? Welcome to Tyent
+          India — delivering premium hydrogen-rich alkaline water ionizers with
+          expert installation and after-sales support.
+        </p>
+      </section>
+
+      {/* ================= IMAGE + CONTENT ================= */}
+      <section className="container py-5">
+        <div className="row align-items-center g-5">
+          <div className="col-md-6">
+            <Image
+              src="/images/woman-drinking-water.jpg"
+              alt="Healthy Water"
+              width={600}
+              height={400}
+              className="img-fluid rounded shadow"
+            />
+          </div>
+
+          <div className="col-md-6">
+            <h3 className="fw-bold text-primary mb-3">
+              Upgrade Your Water.
+              <br />
+              Upgrade Your Health.
+            </h3>
+
+            <p className="text-muted">
+              Stop settling for ordinary RO water that strips essential
+              minerals. Choose Tyent for hydrogen-rich alkaline water designed
+              for hydration, wellness, and long-term health.
+            </p>
+
+            <button className="btn btn-primary px-4 py-2 rounded-pill mt-3">
+              Book Your Free Demo Today
+            </button>
+
+            <p className="text-muted small mt-2">
+              Doorstep Service Available Across {locationName}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WHY CHOOSE ================= */}
+      <section className="container py-5">
+        <div className="row g-4 align-items-center">
+          <div className="col-md-6">
+            <div className="border rounded p-4 shadow-sm h-100">
+              <h4 className="fw-bold text-primary mb-3">
+                Why Choose Tyent Water Ionizer in {locationName}?
+              </h4>
+
+              <p className="text-muted">
+                Tyent is trusted across 85+ countries and recommended by
+                doctors, athletes, and wellness experts worldwide.
+              </p>
+
+              <ul className="text-muted ps-3 mb-0">
+                <li>Better digestion & metabolism</li>
+                <li>Supports detoxification</li>
+                <li>Improves energy & immunity</li>
+                <li>Reduces oxidative stress</li>
+                <li>Balances body pH levels</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <Image
+              src="/images/woman-glass-water.jpg"
+              alt="Healthy Lifestyle"
+              width={600}
+              height={400}
+              className="img-fluid rounded shadow"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
