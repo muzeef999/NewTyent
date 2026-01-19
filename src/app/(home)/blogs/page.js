@@ -7,7 +7,7 @@ import blog from "@/asserts/blog.png"
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
 
 
-
+ 
 export async function generateMetadata() {
   try {
     const res = await fetch(`${apiUrl}/api/blog`);

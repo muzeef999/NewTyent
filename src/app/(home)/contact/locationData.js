@@ -79,17 +79,47 @@ export const locationsData = {
     title: "Surat",
     image: "/contact/surat.png",
   },
-  "tyent-chennai": {
-    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-chennai",
-    title: "Chennai",
-    image: "/contact/chennai.png",
+  "tyent-faridabad": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-faridabad",
+    title: "Faridabad",
+    image: "/contact/faridabad.png",
   },
   "tyent-jaipur": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-jaipur",
     title: "Jaipur",
     image: "/contact/jaipur.png",
   },
-  "tyent-nagpur": {
+  "tyent-chandigarh": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-chandigarh",
+    title: "Chandigarh",
+    image: "/contact/chandigarh.png",
+  },
+  "tyent-chennai": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-chennai",
+    title: "Chennai",
+    image: "/contact/chennai.png",
+  },
+  "tyent-coimbatore": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-coimbatore",
+    title: "Coimbatore",
+    image: "/contact/coimbatore.png",
+  },
+  "tyent-west-bengal": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-west-bengal",
+    title: "West Bengal",
+    image: "/contact/westbengal.png",
+  },
+  "tyent-ludhiana": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-ludhiana",
+    title: "Ludhiana",
+    image: "/contact/ludhiana.png",
+  },
+  "tyent-mysore": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-mysore",
+    title: "Mysore",
+    image: "/contact/mysore.png",
+  },
+  "tyent-Nagpur": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-nagpur",
     title: "Nagpur",
     image: "/contact/nagpur.png",
@@ -104,19 +134,114 @@ export const locationsData = {
     title: "Patna",
     image: "/contact/patna.png",
   },
+  "tyent-rajahmundry": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-rajahmundry",
+    title: "Rajahmundry",
+    image: "/contact/rajahmundry.png",
+  },
+  "tyent-rajkot": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-rajkot",
+    title: "Rajkot",
+    image: "/contact/rajkot.png",
+  },
   "tyent-tirupati": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-tirupati",
     title: "Tirupati",
     image: "/contact/tirupati.png",
+  },
+  "tyent-trichy": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-trichy",
+    title: "Trichy",
+    image: "/contact/trichy.png",
+  },
+  "tyent-udaipur": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-udaipur",
+    title: "Udaipur",
+    image: "/contact/udaipur.png",
   },
   "tyent-varanasi": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-varanasi",
     title: "Varanasi",
     image: "/contact/varanasi.png",
   },
+  "tyent-chattisgarh": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-chattisgarh",
+    title: "Chattisgarh",
+    image: "/contact/chattisgarh.png",
+  },
+  "tyent-haryana": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-haryana",
+    title: "Haryana",
+    image: "/contact/haryana.png",
+  },
+  "tyent-jharkhand": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-jharkhand",
+    title: "Jharkhand",
+    image: "/contact/jharkhand.png",
+  },
+  "tyent-warangal": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-warangal",
+    title: "Warangal",
+    image: "/contact/warangal.png",
+  },
+  "tyent-karimnagar": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-karimnagar",
+    title: "Karimnagar",
+    image: "/contact/karimnagar.png",
+  },
+  "tyent-Agra": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-agra",
+    title: "Agra",
+    image: "/contact/agra.png",
+  },
+  "tyent-Nellore": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-nellore",
+    title: "Nellore",
+    image: "/contact/nellore.png",
+  },
+  "tyent-Kakinada": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-kakinada",
+    title: "Kakinada",
+    image: "/contact/kakinada.png",
+  },
+  "tyent-Orrissa": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-orrissa",
+    title: "Orrissa",
+    image: "/contact/orrissa.png",
+  },
+  "tyent-Rajamundry": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-rajamundry",
+    title: "Rajamundry",
+    image: "/contact/rajamundry.png",
+  },
+  "tyent-Hubballi-Dharwad": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-hubballi-dharwad",
+    title: "Hubballi-Dharwad",
+    image: "/contact/hubballidharwad.png",
+  },
   "tyent-thiruvananthapuram": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-thiruvananthapuram",
     title: "Thiruvananthapuram",
     image: "/contact/thiruvananthapuram.png",
+  },
+  "tyent-goa": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-goa",
+    title: "Goa",
+    image: "/contact/goa.png",
+  },
+  "tyent-karimnagar": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-karimnagar",
+    title: "Karimnagar",
+    image: "/contact/karimnagar.png",
+  },
+  "tyent-karimnagar": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-karimnagar",
+    title: "Karimnagar",
+    image: "/contact/karimnagar.png",
+  },
+  "tyent-bilaspur": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-bilaspur",
+    title: "Bilaspur",
+    image: "/contact/bilaspur.png",
   },
 };

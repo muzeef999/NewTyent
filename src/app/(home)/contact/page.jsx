@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { CiLocationOn } from "react-icons/ci";
 import dynamic from "next/dynamic";
 import AskyourQuery from "@/asserts/contact/AskyourQuery.webp";
 import DealerEnquiry from "@/asserts/contact/DealerEnquiry.webp";
@@ -154,24 +153,57 @@ const Page = () => {
           </Row>
         </div>
 
-        <div className="section-spacing" data-aos="fade-up">
-          {/* First Row */}
-          <Row>
-            {Object.values(locationsData).map((location, index) => (
-              <InfoCard
-                key={index}
-                slug={location.slug}
-                icon={location.icon}
-                image={location.image}
-                title={location.title}
-                text={location.address}
-                metaTitle={location.metaTitle}
-                metaDescription={location.metaDescription}
-                metaKeywords={location.metaKeywords}
-              />
-            ))}
-          </Row>
-        </div>
+<div className="section-spacing" data-aos="fade-up">
+  {(() => {
+    const allLocations = Object.values(locationsData);
+
+    const topCities = allLocations.slice(0, 12); // till Guntur
+    const remainingCities = allLocations.slice(12); // after Guntur
+
+    return (
+      <>
+       <h4
+          className="mt-5 mb-3"
+          style={{ fontWeight: "600" }}
+        >
+          Top 12 Cities 
+        </h4>
+        {/* Top Cities */}
+        <Row>
+          {topCities.map((location, index) => (
+            <InfoCard
+              key={index}
+              slug={location.slug}
+              image={location.image}
+              title={location.title}
+            />
+          ))}
+        </Row>
+
+        {/* All Cities Heading */}
+        <h4
+          className="mt-5 mb-3"
+          style={{ fontWeight: "600" }}
+        >
+          All Cities
+        </h4>
+
+        {/* Remaining Cities */}
+        <Row>
+          {remainingCities.map((location, index) => (
+            <InfoCard
+              key={index}
+              slug={location.slug}
+              image={location.image}
+              title={location.title}
+            />
+          ))}
+        </Row>
+      </>
+    );
+  })()}
+</div>
+
       </Container>
       <div id="top-section"></div>
     </div>
