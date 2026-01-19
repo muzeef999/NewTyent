@@ -10,6 +10,8 @@ const PaginationData = dynamic(() => import("../../compoents/PaginationData"), {
   loading: () => <Loading />,
 });
 import blog from "@/asserts/blog.png";
+import Certifications from "../../compoents/Certifications";
+import SlickSlider from "../../compoents/SlickSlider";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in"; // Fallback URL
 
@@ -82,9 +84,13 @@ export default async function LocationPage({ params }) {
 
       {/* ================= TECHNOLOGY SECTION ================= */}
       <section className="container py-5 text-center">
-        <h2 className="bg-heading-text ">Tyent’s Japanese Technology</h2>
-
-        <h3>Advanced Health Protection with Doorstep Installation & Service</h3>
+        <h2 className="bg-heading-text">Tyent’s Japanese Technology</h2>
+        <p
+          style={{ fontSize: "20px", marginTop: "-20px" }}
+          className="fw-semibold"
+        >
+          Advanced Health Protection with Doorstep Installation & Service
+        </p>
 
         <p>
           Looking for the best water ionizer in {locationName} that delivers
@@ -114,7 +120,7 @@ export default async function LocationPage({ params }) {
               alt="Healthy Water"
               width={600}
               height={400}
-              className="img-fluid rounded shadow"
+              className="img-fluid rounded"
             />
           </div>
 
@@ -145,9 +151,9 @@ export default async function LocationPage({ params }) {
 
       {/* ================= WHY CHOOSE ================= */}
       <section className="container py-5">
-        <div className="row g-4 align-items-center">
-          <div className="col-md-6">
-            <div className="border rounded p-4 shadow-sm h-100">
+        <div className="row g-4 align-items-center border rounded  shadow-sm">
+          <div className="col-md-6  m-0">
+            <div className="p-2">
               <h4 className="fw-bold text-primary mb-3">
                 Why Choose Tyent Water Ionizer in {locationName}?
               </h4>
@@ -175,22 +181,28 @@ export default async function LocationPage({ params }) {
             </div>
           </div>
 
-          <div className="col-md-6">
+          <div
+            className="col-md-6 p-0 m-0 position-relative"
+            style={{ minHeight: "300px" }}
+          >
             <Image
               src={contactimg}
               alt="Healthy Lifestyle"
-              width={600}
-              height={400}
-              className="img-fluid rounded shadow"
+              className="img-fluid object-fit-cover"
             />
           </div>
         </div>
-
-        <div className="container" style={{ overflow: "hidden" }}>
-            <h2 className="bg-heading-text ">What Makes Tyent</h2>
-
-        <h3>#1 Alkaline Water Ionizer in {locationName} ?</h3>
-
+        <br />
+        <div className="container section-spacing" style={{ overflow: "hidden" }}>
+          <center>
+            <h2 className="bg-heading-text">What Makes Tyent</h2>
+            <p
+              style={{ fontSize: "13px", marginTop: "-20px" }}
+              className="fw-semibold"
+            >
+              #1 Alkaline Water Ionizer in {locationName} ?
+            </p>
+          </center>
           <div className="section-spacing">
             {blogs.length > 0 ? (
               <PaginationData data={blogs} itemsPerPage={blogsPerPage} />
@@ -198,6 +210,51 @@ export default async function LocationPage({ params }) {
               <p>No blogs available at the moment. Please check back later.</p>
             )}
           </div>
+        </div>
+        <Certifications />
+        <div className="section-spacing">
+          <h2
+            style={{ color: "#008AC7", fontWeight: "600", textAlign: "center" }}
+          >
+            Tyent India - Hydration Redefined.
+          </h2>
+
+          <p style={{ textAlign: "justify" }}>
+            best water ionizer in India, water ionizer for home, hydrogen rich
+            water ionizer, alkaline water ionizer, premium water ionizer, tyent
+            water ionizer, japanese water ionizer, medical grade water ionizer,
+            advanced water ionizer system, hydrogen water generator, alkaline
+            water benefits, hydrogen water benefits, reduces oxidative stress,
+            anti-oxidant water, improves hydration, immune boosting water,
+            preventive wellness water, cellular hydration water, detox water
+            system, lifestyle disease prevention water, best water ionizer in
+            Delhi, alkaline water ionizer Delhi NCR, hydrogen water generator
+            India, premium water ionizer Delhi, water ionizer near me, water
+            ionizer supplier Delhi, Tyent dealer in Delhi, hydrogen rich water
+            machine Delhi, buy water ionizer online, best alkaline water machine
+            price, water ionizer with warranty, certified water ionizer, RO
+            alternative water system, premium hydration system, home water
+            ionizer installation, doorstep water ionizer service, which is the
+            best water ionizer, difference between RO and water ionizer, is
+            alkaline water safe, hydrogen water for health, top water ionizer
+            brand in India, long term health water solution
+          </p>
+        </div>
+
+        <div className="section-spacing">
+          <h1
+            className="text-center"
+            style={{
+              fontSize: "clamp(24px, 5vw, 3rem)",
+              fontWeight: "bold",
+              color: "#333",
+            }}
+          >
+            {" "}
+            Our Valued Clients
+          </h1>
+          <br />
+          <SlickSlider />
         </div>
       </section>
     </div>

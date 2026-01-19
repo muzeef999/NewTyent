@@ -829,12 +829,10 @@ padding-left: 48px !important;
 
 .bg-heading-text
  {
-  margin-bottom: -30px;
    font-size: 80px;
    font-weight: 800;
-     /* TOP → BOTTOM gradient */
-  background: linear-gradient(180deg, #010b1c 10%, #9ec5fe 90%);
-
+  background: linear-gradient(180deg, #0757e2 10%, #9ec5fe 90%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.2;
