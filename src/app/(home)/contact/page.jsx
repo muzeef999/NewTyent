@@ -10,6 +10,9 @@ import contactUsBanner from "@/asserts/contactUsBanner.png";
 import Link from "next/link";
 import { locationsData } from "@/app/(home)/contact/locationData.js";
 import Head from 'next/head';
+import mobileBannerWeb  from "@/asserts/mobilecontactbanner.jpg";
+import webBannerWeb from "@/asserts/webcontactbanner.jpg"
+import "./contact.css"
 
 
 const Header = dynamic(() => import("../compoents/Header"), {
@@ -99,14 +102,58 @@ const Page = () => {
           </amp-analytics>
        
     <div>
-      <Header
+      {/* <Header
         basic={headerData.basic}
         preheading={headerData.preheading}
         afterheading={headerData.afterheading}
         content={headerData.content}
         img={headerData.img}
         animatedText={headerData.animatedText} // Passing dynamic animated text
-      />
+      /> */}
+      <div className="position-relative w-100  hero-wrapper">
+
+  {/* Desktop Background */}
+  <div className="d-none d-md-block">
+    <Image
+      src={webBannerWeb}
+      alt="Contact Background"
+      fill
+      className="hero-img"
+      priority
+    />
+  </div>
+
+  {/* Mobile Background */}
+  <div className="d-block d-md-none">
+    <Image
+      src={mobileBannerWeb}
+      alt="Mobile Contact Background"
+      fill
+      className="hero-img"
+      priority
+    />
+  </div>
+
+  {/* Overlay */}
+  <div className="hero-overlay"></div>
+
+  {/* TEXT CONTENT */}
+  <div className="hero-content container">
+    <h2 className="fw-bold mb-2">
+      Trust, Care & Commitment
+    </h2>
+
+    <h4 className="fw-semibold mb-2">
+      Need to Enquire anything?
+    </h4>
+
+    <p className="mb-0">
+      We're happy to help!
+    </p>
+  </div>
+
+</div>
+
       <Container>
         <div className="section-spacing">
           <h3

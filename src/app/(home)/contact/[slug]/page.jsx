@@ -2,18 +2,16 @@ import Image from "next/image";
 import contactimage from "@/asserts/contactimage1.png";
 import contactimg from "@/asserts/contactimg.png";
 import dynamic from "next/dynamic";
+
 const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"), {
   srr: false,
 });
-const PaginationData = dynamic(() => import("../../compoents/PaginationData"), {
-  ssr: false,
-  loading: () => <Loading />,
-});
-import blog from "@/asserts/blog.png";
+
 import Certifications from "../../compoents/Certifications";
 import SlickSlider from "../../compoents/SlickSlider";
-
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in"; // Fallback URL
+import FeaturesCardContactUS from "../[slug]/FeaturesCardContactUS"
+import Video from "../../compoents/Video";
+import "../contact.css";
 
 export async function generateMetadata() {
   try {
@@ -34,13 +32,7 @@ export async function generateMetadata() {
 }
 
 export default async function LocationPage({ params }) {
-  const res = await fetch(`${apiUrl}/api/blog`);
-  if (!res.ok) {
-    console.error(`Error fetching blogs: ${res.status} ${res.statusText}`);
-    return <p>No blogs found.</p>;
-  }
-  const blogs = await res.json(); // Fetch blogs from API
-  const blogsPerPage = 6;
+  
 
   // Convert slug to readable location name
   const locationName = params.slug
@@ -203,14 +195,23 @@ export default async function LocationPage({ params }) {
               #1 Alkaline Water Ionizer in {locationName} ?
             </p>
           </center>
-          <div className="section-spacing">
-            {blogs.length > 0 ? (
-              <PaginationData data={blogs} itemsPerPage={blogsPerPage} />
-            ) : (
-              <p>No blogs available at the moment. Please check back later.</p>
-            )}
-          </div>
+          <FeaturesCardContactUS />
         </div>
+
+        
+              <div className="section-spacing">
+                <h1
+                  className="text-center"
+                  style={{
+                    fontSize: "clamp(24px, 5vw, 3rem)",
+                    fontWeight: "bold",
+                    color: "#333",
+                  }}
+                >
+                  Technical excellence with global availability
+                </h1>
+                <Video />
+              </div>
         <Certifications />
         <div className="section-spacing">
           <h2

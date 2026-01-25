@@ -184,6 +184,11 @@ export const locationsData = {
     title: "Warangal",
     image: "/contact/warangal.png",
   },
+  "tyent-nirmal": {
+    slug: "best-hydrogen-rich-alkaline-water-ionizer-in-nirmal",
+    title: "Nirmal",
+    image: "/contact/nirmal.png",
+  },
   "tyent-karimnagar": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-karimnagar",
     title: "Karimnagar",
