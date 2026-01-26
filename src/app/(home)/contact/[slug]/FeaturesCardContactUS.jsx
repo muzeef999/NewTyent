@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const features = [
   {
+    link:"/solid-hybrid-mesh-plates",
     title: "Solid Hybrid Mesh Plate Technology",
     img: "/contactIndetail/solidHybridMesh.png",
     desc:"Tyent uses industry-leading Solid Hybrid Mesh Plates made from 99.9% platinum-coated  titanium. This advanced design offers This unique fusion of solid plate with mesh plate design ensures superior hydration  performance unmatched by ordinary ionizers.",
@@ -14,6 +16,7 @@ const features = [
     ],
   },
   {
+    link:"/patented-SMPS-plus",
     title: "Patented SMPS Plus Power Supply",
     img: "/contactIndetail/patentedSMPS.png",
     desc:"Tyent’s exclusive SMPS PLUS technology guarantees voltage stability and precise control,  delivering: Unlike conventional transformers, this system ensures stable output even in fluctuating Delhi  power conditions.",
@@ -25,6 +28,7 @@ const features = [
     ],
   },
   {
+    link:"/0.1-micron-filters",
     title: "Advanced Dual 0.01 Micron Filtration",
     img: "/contactIndetail/AdvancedDual.jpg",
     desc:"Specially engineered for Delhi water, Tyent’s dual ultra-filtration removes over 200+  contaminants, including Result: Safe, mineral-rich, great-tasting hydrogen richalkaline water - delivered to your  home.",
@@ -35,7 +39,9 @@ const features = [
       "Nano plastics & viruses",
     ],
   },
+  
   {
+    link:"/tyentvskangen",
     title: "Advanced E-Cleaning Technology",
     img: "/contactIndetail/AdvancedE-cleaning.png",
     desc:"Tyent’s PAST (Polarity Alternating Self-Cleaning Technology) prevents scale buildup and  mineral blockage, ensuring",
@@ -47,7 +53,8 @@ const features = [
     ],
   },
   {
-    title: "Doorstep Service across Delhi NCR",
+    link:"/tyentvskangen",
+    title: "Doorstep Service Across India",
     img: "/contactIndetail/Doorstep.jpg",
     desc:"We provide services delivered exclusively by a fully trained, highly professional in-house team.",
     points: [
@@ -58,14 +65,15 @@ const features = [
     ],
   },
   {
+    link:"/tyentvskangen",
     title: "Premium Ionizers at Affordable Prices",
     img: "/contactIndetail/Affordable.png",
-    desc:"Experience world-class hydrogen-rich water technology with Tyent’s competitive, customer-friendly pricing-making premium health water accessible to every Indian home.",
+    desc:"Experience world-class chemical free japaness technology technology with Tyent’s competitive, customer-friendly pricing-making premium health water accessible to every Indian home.",
     points: [
       "No hidden commissions",
       "No middlemen",
       "Transparent pricing",
-      "Direct sales network",
+      "Direct sales  & Service network",
     ],
   },
 ];
@@ -77,7 +85,8 @@ export default function FeaturesSection() {
         <div className="row g-4">
           {features.map((item, index) => (
             <div key={index} className="col-lg-4 col-md-6">
-              <div className="feature-card h-100">
+              <Link href={item.link}   target="_blank"
+ className="feature-card h-100" style={{cursor:'pointer', textDecoration:'none', color:'#000'}}>
                 <div className="feature-img">
                   <Image
   src={item.img}
@@ -100,7 +109,7 @@ export default function FeaturesSection() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

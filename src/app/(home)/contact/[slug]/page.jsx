@@ -2,6 +2,7 @@ import Image from "next/image";
 import contactimage from "@/asserts/contactimage1.png";
 import contactimg from "@/asserts/contactimg.png";
 import dynamic from "next/dynamic";
+import { locationsData } from "../locationData";
 
 const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"), {
   srr: false,
@@ -12,57 +13,94 @@ import SlickSlider from "../../compoents/SlickSlider";
 import FeaturesCardContactUS from "../[slug]/FeaturesCardContactUS"
 import Video from "../../compoents/Video";
 import "../contact.css";
+import TyentFaqSection from "./TyentFaqSection";
 
-export async function generateMetadata() {
-  try {
-    const res = await fetch(`${apiUrl}/api/blog`);
-    if (!res.ok) throw new Error("API request failed");
+export async function generateMetadata({ params }) {
+  // Find the location using slug
+  const location = Object.values(locationsData).find(
+    (loc) => loc.slug === params.slug
+  );
 
+  if (!location) {
     return {
-      title: "Tyent Blog - Latest News & Health Tips",
-      description:
-        "Explore our blog for expert insights on alkaline water, health benefits, and water ionization technology.",
-    };
-  } catch (error) {
-    return {
-      title: "Blogs Not Found",
-      description: "No blogs are available.",
+      title: "Location Not Found | Tyent Water",
+      description: "This location page does not exist.",
     };
   }
+
+  return {
+    title: location.metaTitle,       // dynamic title
+    description: location.metaDescription, // dynamic description
+  };
 }
+
 
 export default async function LocationPage({ params }) {
   
 
+    const location = Object.values(locationsData).find(
+    (loc) => loc.slug === params.slug
+  );
+
+  // IF LOCATION NOT FOUND
+  if (!location) {
+    return (
+      <div className="text-center mt-5">
+        <h2>Location Not Found</h2>
+        <p>We currently do not have a page for this location.</p>
+      </div>
+    );
+  }
+
+  const { title: locationName, heroImage, metaTitle, metaDescription } = location;
   // Convert slug to readable location name
-  const locationName = params.slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+  // const locationName = params.slug
+  // .split("-")
+  // .pop()
+  // .replace(/\b\w/g, (c) => c.toUpperCase());
+
 
   return (
     <div>
+
       {/* ================= HERO SECTION ================= */}
       <section
-        className="text-white py-5"
+        className="text-white py-8"
         style={{ backgroundColor: "#008ac7" }}
       >
+        
         <div className="container">
           <div className="row align-items-center gy-4">
             <div className="col-lg-7">
-              <h1 className="fw-bold fs-3 mb-3">
-                Best Premium Alkaline Water Ionizer & Hydrogen Water Generator
-                in {locationName}
-              </h1>
+             <h1 className="fw-bold fs-3 mb-3">
+  Best Hydrogen Rich Alkaline Water Ionizer & Hydrogen Water Generator in{" "}
+  {locationName === "Kochi" ? (
+    <>
+      Kochi <br /> Kerala
+    </>
+  ) : (
+    locationName
+  )}
+</h1>
+
+{(locationName === "Kochi" || locationName === "Kerala") && (
+  <p className="fw-medium">
+    <b>Authorised master distributor :</b> Crystal H2O and Hydromax Water Services
+  </p>
+)}
+ 
+ <br/>
               <p className="mb-0">
-                For free demo contact: <strong>9966 558 556</strong>
+                For free demo contact: <b>9966 558 556</b>
               </p>
             </div>
 
             <div className="col-lg-5 text-lg-end">
               <div className="rounded overflow-hidden shadow d-inline-block">
+                <br/>
                 <iframe
-                  width="360"
-                  height="200"
+                  width="460"
+                  height="270"
                   src="https://www.youtube.com/embed/sktKcmT2DGw"
                   title="Tyent India"
                   allowFullScreen
@@ -129,10 +167,12 @@ export default async function LocationPage({ params }) {
               ionizer’s & Hydrogen water generator’s for luxury hydration,
               advanced wellness, and long-term family protection.
             </p>
+<a href="#book-demo" style={{ textDecoration: "none" }}>
+  <button className="btn btn-primary px-4 py-2 rounded-pill mt-3">
+    Book Your Free Demo Today
+  </button>
+</a>
 
-            <button className="btn btn-primary px-4 py-2 rounded-pill mt-3">
-              Book Your Free Demo Today
-            </button>
 
             <p className="text-muted small mt-2">
               Doorstep Service Available Across {locationName}
@@ -212,35 +252,10 @@ export default async function LocationPage({ params }) {
                 </h1>
                 <Video />
               </div>
-        <Certifications />
-        <div className="section-spacing">
-          <h2
-            style={{ color: "#008AC7", fontWeight: "600", textAlign: "center" }}
-          >
-            Tyent India - Hydration Redefined.
-          </h2>
 
-          <p style={{ textAlign: "justify" }}>
-            best water ionizer in India, water ionizer for home, hydrogen rich
-            water ionizer, alkaline water ionizer, premium water ionizer, tyent
-            water ionizer, japanese water ionizer, medical grade water ionizer,
-            advanced water ionizer system, hydrogen water generator, alkaline
-            water benefits, hydrogen water benefits, reduces oxidative stress,
-            anti-oxidant water, improves hydration, immune boosting water,
-            preventive wellness water, cellular hydration water, detox water
-            system, lifestyle disease prevention water, best water ionizer in
-            Delhi, alkaline water ionizer Delhi NCR, hydrogen water generator
-            India, premium water ionizer Delhi, water ionizer near me, water
-            ionizer supplier Delhi, Tyent dealer in Delhi, hydrogen rich water
-            machine Delhi, buy water ionizer online, best alkaline water machine
-            price, water ionizer with warranty, certified water ionizer, RO
-            alternative water system, premium hydration system, home water
-            ionizer installation, doorstep water ionizer service, which is the
-            best water ionizer, difference between RO and water ionizer, is
-            alkaline water safe, hydrogen water for health, top water ionizer
-            brand in India, long term health water solution
-          </p>
-        </div>
+
+
+        <Certifications />
 
         <div className="section-spacing">
           <h1
@@ -257,7 +272,11 @@ export default async function LocationPage({ params }) {
           <br />
           <SlickSlider />
         </div>
+        <TyentFaqSection />
+        <div id="book-demo"></div>
       </section>
+
+      
     </div>
   );
 }
