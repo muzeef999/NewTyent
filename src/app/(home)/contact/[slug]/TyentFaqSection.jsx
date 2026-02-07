@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { Container, Row, Col, Accordion, Button } from "react-bootstrap";
 import Logo from "../../compoents/Logo";
@@ -9,27 +9,20 @@ const TyentFaqSection = () => {
     <section className="py-5">
       <Container>
         <center>
-          <h2 className="fw-bold mb-4">
-              Frequently Asked Questions
-            </h2>
-            </center>
+          <h2 className="fw-bold mb-4">Frequently Asked Questions</h2>
+        </center>
         <Row className="align-items-start">
-          
           {/* LEFT SECTION – BOOK FREE DEMO */}
-          <Col md={5} className="">
+          <Col md={5} >
             <div className="p-4 border rounded-4 shadow-sm">
-
-                 <Link className="p-4" style={{width:"80%"}}
-              href="/"            >
-              <Logo />
-            </Link>
-              <h2 className="fw-bold mb-3">
-                Book a Free Demo
-              </h2>
+              <Link className="p-4" style={{ width: "80%" }} href="/">
+                <Logo />
+              </Link>
+              <h2 className="fw-bold mb-3">Book a Free Demo</h2>
 
               <p className="text-muted mb-4">
-                Experience the power of hydrogen-rich alkaline water with a
-                live product demonstration at your doorstep.
+                Experience the power of hydrogen-rich alkaline water with a live
+                product demonstration at your doorstep.
               </p>
 
               <Button
@@ -38,15 +31,12 @@ const TyentFaqSection = () => {
               >
                 Book Your Free Demo Today
               </Button>
-
             </div>
           </Col>
 
           {/* RIGHT SECTION – FAQ ACCORDION */}
           <Col md={7}>
-    
             <Accordion defaultActiveKey="0" flush>
-              
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
                   What is the Tyent Water Ionizer and how does it work?
@@ -107,9 +97,9 @@ const TyentFaqSection = () => {
                 <Accordion.Body>
                   Tyent features patented Japanese Solid Hybrid Mesh Plate
                   Technology, patented SMPS PLUS power supply, and medical-grade
-                  components. It delivers higher molecular hydrogen,
-                  stable pH levels, superior durability, and consistent
-                  performance without chemicals.
+                  components. It delivers higher molecular hydrogen, stable pH
+                  levels, superior durability, and consistent performance
+                  without chemicals.
                 </Accordion.Body>
               </Accordion.Item>
 
@@ -119,8 +109,8 @@ const TyentFaqSection = () => {
                 </Accordion.Header>
                 <Accordion.Body>
                   Tyent Water Ionizers deliver 7 types of hydrogen-rich alkaline
-                  water from pH 2.5 to 11.5. The Tyent H2-Hybrid combines a water
-                  ionizer and hydrogen generator with a dedicated hydrogen
+                  water from pH 2.5 to 11.5. The Tyent H2-Hybrid combines a
+                  water ionizer and hydrogen generator with a dedicated hydrogen
                   button for high-concentration molecular hydrogen therapy at
                   neutral pH.
                 </Accordion.Body>
@@ -150,10 +140,8 @@ const TyentFaqSection = () => {
                   and nano-plastics. Certified by NSF, EPA & ANSI.
                 </Accordion.Body>
               </Accordion.Item>
-
             </Accordion>
           </Col>
-
         </Row>
       </Container>
     </section>

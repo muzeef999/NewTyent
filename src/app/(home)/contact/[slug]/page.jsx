@@ -10,7 +10,7 @@ const Loading = dynamic(() => import("@/app/(home)/compoents/Loading"), {
 
 import Certifications from "../../compoents/Certifications";
 import SlickSlider from "../../compoents/SlickSlider";
-import FeaturesCardContactUS from "../[slug]/FeaturesCardContactUS"
+import FeaturesCardContactUS from "../[slug]/FeaturesCardContactUS";
 import Video from "../../compoents/Video";
 import "../contact.css";
 import TyentFaqSection from "./TyentFaqSection";
@@ -18,7 +18,7 @@ import TyentFaqSection from "./TyentFaqSection";
 export async function generateMetadata({ params }) {
   // Find the location using slug
   const location = Object.values(locationsData).find(
-    (loc) => loc.slug === params.slug
+    (loc) => loc.slug === params.slug,
   );
 
   if (!location) {
@@ -29,17 +29,14 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: location.metaTitle,       // dynamic title
+    title: location.metaTitle, // dynamic title
     description: location.metaDescription, // dynamic description
   };
 }
 
-
 export default async function LocationPage({ params }) {
-  
-
-    const location = Object.values(locationsData).find(
-    (loc) => loc.slug === params.slug
+  const location = Object.values(locationsData).find(
+    (loc) => loc.slug === params.slug,
   );
 
   // IF LOCATION NOT FOUND
@@ -52,44 +49,48 @@ export default async function LocationPage({ params }) {
     );
   }
 
-  const { title: locationName, heroImage, metaTitle, metaDescription } = location;
+  const {
+    title: locationName,
+    heroImage,
+    metaTitle,
+    metaDescription,
+  } = location;
   // Convert slug to readable location name
   // const locationName = params.slug
   // .split("-")
   // .pop()
   // .replace(/\b\w/g, (c) => c.toUpperCase());
 
-
   return (
     <div>
-
       {/* ================= HERO SECTION ================= */}
       <section
         className="text-white py-8"
         style={{ backgroundColor: "#008ac7" }}
       >
-        
         <div className="container">
           <div className="row align-items-center gy-4">
             <div className="col-lg-7">
-             <h1 className="fw-bold fs-3 mb-3">
-  Best Hydrogen Rich Alkaline Water Ionizer & Hydrogen Water Generator in{" "}
-  {locationName === "Kochi" ? (
-    <>
-      Kochi <br /> Kerala
-    </>
-  ) : (
-    locationName
-  )}
-</h1>
+              <h1 className="fw-bold fs-3 mb-3">
+                Best Hydrogen Rich Alkaline Water Ionizer & Hydrogen Water
+                Generator in{" "}
+                {locationName === "Kochi" ? (
+                  <>
+                    Kochi <br /> Kerala
+                  </>
+                ) : (
+                  locationName
+                )}
+              </h1>
 
-{(locationName === "Kochi" || locationName === "Kerala") && (
-  <p className="fw-medium">
-    <b>Authorised master distributor :</b> Crystal H2O and Hydromax Water Services
-  </p>
-)}
- 
- <br/>
+              {(locationName === "Kochi" || locationName === "Kerala") && (
+                <p className="fw-medium">
+                  <b>Authorised master distributor :</b> Crystal H2O and
+                  Hydromax Water Services
+                </p>
+              )}
+
+              <br />
               <p className="mb-0">
                 For free demo contact: <b>9966 558 556</b>
               </p>
@@ -97,7 +98,7 @@ export default async function LocationPage({ params }) {
 
             <div className="col-lg-5 text-lg-end">
               <div className="rounded overflow-hidden shadow d-inline-block">
-                <br/>
+                <br />
                 <iframe
                   width="460"
                   height="270"
@@ -167,12 +168,11 @@ export default async function LocationPage({ params }) {
               ionizer’s & Hydrogen water generator’s for luxury hydration,
               advanced wellness, and long-term family protection.
             </p>
-<a href="#book-demo" style={{ textDecoration: "none" }}>
-  <button className="btn btn-primary px-4 py-2 rounded-pill mt-3">
-    Book Your Free Demo Today
-  </button>
-</a>
-
+            <a href="#book-demo" style={{ textDecoration: "none" }}>
+              <button className="btn btn-primary px-4 py-2 rounded-pill mt-3">
+                Book Your Free Demo Today
+              </button>
+            </a>
 
             <p className="text-muted small mt-2">
               Doorstep Service Available Across {locationName}
@@ -225,7 +225,10 @@ export default async function LocationPage({ params }) {
           </div>
         </div>
         <br />
-        <div className="container section-spacing" style={{ overflow: "hidden" }}>
+        <div
+          className="container section-spacing"
+          style={{ overflow: "hidden" }}
+        >
           <center>
             <h2 className="bg-heading-text">What Makes Tyent</h2>
             <p
@@ -238,22 +241,19 @@ export default async function LocationPage({ params }) {
           <FeaturesCardContactUS />
         </div>
 
-        
-              <div className="section-spacing">
-                <h1
-                  className="text-center"
-                  style={{
-                    fontSize: "clamp(24px, 5vw, 3rem)",
-                    fontWeight: "bold",
-                    color: "#333",
-                  }}
-                >
-                  Technical excellence with global availability
-                </h1>
-                <Video />
-              </div>
-
-
+        <div className="section-spacing">
+          <h1
+            className="text-center"
+            style={{
+              fontSize: "clamp(24px, 5vw, 3rem)",
+              fontWeight: "bold",
+              color: "#333",
+            }}
+          >
+            Technical excellence with global availability
+          </h1>
+          <Video />
+        </div>
 
         <Certifications />
 
@@ -275,8 +275,6 @@ export default async function LocationPage({ params }) {
         <TyentFaqSection />
         <div id="book-demo"></div>
       </section>
-
-      
     </div>
   );
 }
