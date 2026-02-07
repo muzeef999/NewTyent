@@ -142,7 +142,7 @@ const FormOnly = () => {
     <div>
         <div  data-aos="fade-left" className="flex-column justify-content-center align-items-center">
         {loading ? (<>
-          <h3 data-aos="fade-up" className={formStyle.heading}>Fill Out the Form – We'll Get in Touch</h3>
+          <h4 data-aos="fade-up" className={formStyle.heading}>Fill Out the Form - We'll Get in Touch</h4>
           <h5 data-aos="fade-up" >Start Your Journey Today!</h5>
           <br/>
           <form onSubmit={handleSubmit}>

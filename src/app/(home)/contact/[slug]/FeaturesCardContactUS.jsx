@@ -41,7 +41,7 @@ const features = [
   },
   
   {
-    link:"/tyentvskangen",
+    link:"/why-tyent",
     title: "Advanced E-Cleaning Technology",
     img: "/contactIndetail/AdvancedE-cleaning.png",
     desc:"Tyent’s PAST (Polarity Alternating Self-Cleaning Technology) prevents scale buildup and  mineral blockage, ensuring",
@@ -53,7 +53,7 @@ const features = [
     ],
   },
   {
-    link:"/tyentvskangen",
+    link:"/why-tyent",
     title: "Doorstep Service Across India",
     img: "/contactIndetail/Doorstep.jpg",
     desc:"We provide services delivered exclusively by a fully trained, highly professional in-house team.",
@@ -65,7 +65,7 @@ const features = [
     ],
   },
   {
-    link:"/tyentvskangen",
+    link:"/why-tyent",
     title: "Premium Ionizers at Affordable Prices",
     img: "/contactIndetail/Affordable.png",
     desc:"Experience world-class chemical free japaness technology technology with Tyent’s competitive, customer-friendly pricing-making premium health water accessible to every Indian home.",

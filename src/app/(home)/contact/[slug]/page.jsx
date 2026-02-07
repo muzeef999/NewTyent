@@ -69,6 +69,7 @@ export default async function LocationPage({ params }) {
         style={{ backgroundColor: "#008ac7" }}
       >
         <div className="container">
+          <br/>
           <div className="row align-items-center gy-4">
             <div className="col-lg-7">
               <h1 className="fw-bold fs-3 mb-3">
@@ -78,15 +79,27 @@ export default async function LocationPage({ params }) {
                   <>
                     Kochi <br /> Kerala
                   </>
+                ) : locationName === "Surat" ? (
+                  <>
+                    Surat <br />
+                  </>
                 ) : (
                   locationName
                 )}
               </h1>
 
+              {/* Distributor Info Below Heading */}
               {(locationName === "Kochi" || locationName === "Kerala") && (
                 <p className="fw-medium">
                   <b>Authorised master distributor :</b> Crystal H2O and
                   Hydromax Water Services
+                </p>
+              )}
+
+              {locationName === "Surat" && (
+                <p className="fw-medium">
+                  <b>Authorized distributor :</b> Casa Kitchens, J.B, Maharana
+                  Pratap Rd, Surat
                 </p>
               )}
 
@@ -110,6 +123,7 @@ export default async function LocationPage({ params }) {
               </div>
             </div>
           </div>
+          <br/>
         </div>
       </section>
 

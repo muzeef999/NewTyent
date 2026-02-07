@@ -1,0 +1,23 @@
+.footer-link {
+  color: #fff;
+  text-decoration: none;          /* no line by default */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px; /* space between text & underline */
+
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;                      /* controls underline position */
+  width: 0;
+  height: 1px;                    /* underline thickness */
+  background-color: #ffffff;
+  transition: width 0.25s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;                    /* animate underline */
+}
