@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./tyentvskangan.css";
+import DetailComparison from "./DetailComparison";
 
 const Item = ({ title, text }) => (
   <div className="cmp-item">
@@ -112,6 +113,10 @@ const Comparsion = () => {
 
           </Row>
         )}
+
+        {tab === "detail" && (
+        <DetailComparison />
+)}
       </Container>
     </section>
   );

@@ -1,13 +1,16 @@
-.bg-heading-text {
-  font-size: 80px;
-  font-weight: 800;
+.bg-one-cc 
+{
+   font-size: 80px;
+   font-weight: 800;
   background: linear-gradient(
-    180deg,
-    #0757e2 0%,
-    #9ec5fe 60%,
-    #ffffff 100%
-  );
+  180deg,
+  #0757e2 0%,
+  #9ec5fe 60%,
+  #ffffff 100%
+);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0.2;
   white-space: nowrap;
-}
+ }

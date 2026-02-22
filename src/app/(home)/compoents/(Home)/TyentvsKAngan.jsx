@@ -9,7 +9,7 @@ const CompareSection = () => {
   return (
     <Container className="py-5">
       <div className="text-center mb-5">
-        <h1 className="bg-heading-text">Tyent vs Kangen</h1>
+        <h1 className="bg-heading-text-two">Tyent vs Kangen</h1>
         <h3 className="fw-bold">Think Once before buying.</h3>
         <p>
           We believe in absolute transparency. No hidden charges, No hidden

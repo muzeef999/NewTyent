@@ -45,10 +45,10 @@ const features = [
 
 export default function Smarter_Upgrade() {
   return (
-    <section className="py-5 bg-light">
+
       <div className="container">
         <div className="text-center mb-5">
-          <h1 className="bg-heading-text">Smarter Upgrade</h1>
+          <h1 className="bg-one-cc">Smarter Upgrade</h1>
           <h3 className="fw-bold">Your Wellness Starts with Tyent</h3>
           <p>Thinking of a water ionizer? Choose Tyent - the world’s most advanced, upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim next-gen designs, and updated Japanese technology, Tyent is preferred in 86+ countries for its unmatched innovation and customer satisfaction.</p>
         </div>
@@ -68,6 +68,7 @@ export default function Smarter_Upgrade() {
                 <div style={{ width: "100%" }}>
                   <Image
                     src={item.img}
+                    layout="responsive"
                     alt="product"
                     width={450}
                     height={250}
@@ -90,6 +91,6 @@ export default function Smarter_Upgrade() {
           ))}
         </div>
       </div>
-    </section>
+  
   );
 }
