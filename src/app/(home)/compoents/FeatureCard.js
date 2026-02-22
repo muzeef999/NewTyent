@@ -225,7 +225,7 @@ const FeatureCard = ({ data }) => {
                   ? "#2ebb46"
                   : item.id == 9
                   ? "#FFF"
-                  : "#008AC7",
+                  : "#291495",
             }}
           >
             <div className="container" style={{ padding: "50px" }}>

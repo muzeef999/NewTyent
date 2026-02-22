@@ -1,0 +1,13 @@
+.bg-heading-text {
+  font-size: 80px;
+  font-weight: 800;
+  background: linear-gradient(
+    180deg,
+    #0757e2 0%,
+    #9ec5fe 60%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}

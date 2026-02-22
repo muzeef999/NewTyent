@@ -1,0 +1,86 @@
+"use client";
+import React from "react";
+import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./whatsInside.css";
+
+const leftData = [
+  {
+    title: "Anti-oxidant Molecular H2",
+    text: "Tyent ionized hydrogen-rich alkaline water has a selective antioxidant called Molecular hydrogen. Molecular hydrogen is rich in electrons or -ORP which helps in neutralizing free radicals (ROS) and oxidative stress.",
+  },
+  {
+    title: "Micro-clustered water",
+    text: "Tyent ionized hydrogen-rich alkaline water is Micro-clustered water. Due to its micro-clustered property, it penetrates faster to all cells and major organs in the human body than regular tap or RO water.",
+  },
+  {
+    title: "Alkalinity",
+    text: "Acidic stress is the root cause of all the major lifestyle diseases such as Diabetes, Thyroid, Gastric, Constipation etc. Alkalinity in Tyent water neutralizes balances excess acidic stress in your body.",
+  },
+];
+
+const rightData = [
+  {
+    title: "Natural minerals",
+    text: "Tyent ionized hydrogen-rich alkaline water is rich in alkaline minerals such as calcium, magnesium, potassium, and sodium.",
+  },
+  {
+    title: "Pure Healthy water",
+    text: "The Tyent water ionizer delivers the purest and safest healthy water, free from bacteria, nano-plastics, contaminants and chlorine.",
+  },
+  {
+    title: "Japanese Technology",
+    text: "Every Tyent water ionizer features advanced Japanese technology plates, delivering pure healthy water without chemicals.",
+  },
+];
+
+const WhatsInside = () => {
+  return (
+    <section className="inside-section py-5"> 
+      <div className="container">
+        {/* Heading */}
+        <div className="text-center mb-5">
+          <h1 className="bg-heading-text">Whats Inside</h1>
+          <h3 className="fw-bold">Amazing Properties of Tyent water.</h3>
+        </div>
+
+        <div className="row align-items-center">
+          {/* LEFT FEATURES */}
+          <div className="col-lg-4 order-2 order-lg-1">
+            {leftData.map((item, i) => (
+              <div key={i} className="feature-box text-lg-end text-center">
+                <h5 className="feature-title">{item.title}</h5>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CENTER IMAGE */}
+          <div className="col-lg-4 text-center order-1 order-lg-2 my-4 my-lg-0">
+            <div className="circle-image-wrapper">
+              <Image
+                src="/explore/round-glass.png"
+                alt="water"
+                width={420}
+                height={420}
+                className="circle-image"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT FEATURES */}
+          <div className="col-lg-4 order-3">
+            {rightData.map((item, i) => (
+              <div key={i} className="feature-box text-lg-start text-center">
+                <h5 className="feature-title">{item.title}</h5>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhatsInside;

@@ -111,7 +111,7 @@ import smpsplus from "@/asserts/smps.png"
           <div className='d-flex'>
           <BiSolidJoystickButton style={{width:'40px', height:'40px', backgroundColor:'#565959', color:'#FFF', borderRadius:'50%', padding:'10px'}}/>
           <div>
-          <h3 className="m-0 text-start" style={{ color: "#008AC7" }}><b>&nbsp;{title}</b>
+          <h3 className="m-0 text-start" style={{ color: "#291495" }}><b>&nbsp;{title}</b>
           </h3>
           <br/>
           <div className="hover-line"></div>
@@ -133,8 +133,8 @@ const Controls = ({ title, content }) => {
         className="d-flex justify-content-center align-items-center"
       >
         <div className="ml-4 align-items-center">
-          <h3 className="m-4 text-start" style={{ color: "#008AC7" }}>
-           <SlEnergy style={{width:'40px', height:'40px', backgroundColor:'#008AC7', color:'#FFF', borderRadius:'50%', padding:'10px'}} /> <b>{title}</b>
+          <h3 className="m-4 text-start" style={{ color: "#291495" }}>
+           <SlEnergy style={{width:'40px', height:'40px', backgroundColor:'#291495', color:'#FFF', borderRadius:'50%', padding:'10px'}} /> <b>{title}</b>
           </h3>
           <p className="text-start m-4" style={{ color: "#565959" }}>
             {content}
@@ -161,7 +161,7 @@ const page = () => {
     <Header {...headerData} />
 
     <div className='container'  data-aos="fade-down">
-        <h2 className='text-center'>Why Say <b style={{color:'#008AC7'}}>YES to Tyent's</b> SMPS <br/> PLUS Power Supply</h2>
+        <h2 className='text-center'>Why Say <b style={{color:'#291495'}}>YES to Tyent's</b> SMPS <br/> PLUS Power Supply</h2>
         <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality water ionization. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
     </div>
  

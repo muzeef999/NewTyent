@@ -262,7 +262,7 @@ const TyentNMP5 = () => {
             <Col>
               <p
                 className="text-start"
-                style={{ color: "#008AC7", fontWeight: 400, fontSize: "18px" }}
+                style={{ color: "#291495", fontWeight: 400, fontSize: "18px" }}
               >
                 The Tyent NMP-9 is engineered with cutting-edge technology,
                 modern design, and a user-friendly interface, making it the
@@ -285,7 +285,7 @@ const TyentNMP5 = () => {
         <div className="section-spacing">
           <h2 style={{ color: "#5ac4f2" }}>
             <b>
-              <span style={{ color: "#008AC7" }}>Loud and clear.</span> Tyent’s
+              <span style={{ color: "#291495" }}>Loud and clear.</span> Tyent’s
               unparalleled specifications - no other ionizer comes close!
             </b>
           </h2>
@@ -361,7 +361,7 @@ const TyentNMP5 = () => {
                       y1="0"
                       x2="0"
                       y2="80"
-                      stroke="#008ac7"
+                      stroke="#291495"
                       strokeWidth="4"
                     />
                   </svg>
@@ -414,7 +414,7 @@ const TyentNMP5 = () => {
           <h2
             className="text-center mb-4"
             style={{
-              color: "#008AC7",
+              color: "#291495",
               fontWeight: "600",
               fontSize: "2rem", // Default for large screens
             }}
@@ -430,7 +430,7 @@ const TyentNMP5 = () => {
                     style={{
                       fontWeight: "bold",
                       fontSize: "16px",
-                      color: "#008AC7",
+                      color: "#291495",
                       textAlign: "left",
                       padding: "10px",
                     }}

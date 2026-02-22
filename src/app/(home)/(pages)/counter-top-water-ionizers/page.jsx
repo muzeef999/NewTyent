@@ -59,7 +59,7 @@ export default function CounterTopIonizers() {
         <meta name="keywords" content={metadata.keywords} />
       </Head>
       <Container className="py-5">
-        <h1 className="mb-4 text-center" style={{ color: "#008AC7" }}>
+        <h1 className="mb-4 text-center" style={{ color: "#291495" }}>
           Counter Top Water Ionizer's
         </h1>
 
@@ -71,7 +71,7 @@ export default function CounterTopIonizers() {
           a complete health and wellness shield for your entire family.
         </p>
 
-        <h4 className="mb-4" style={{ color: "#008AC7" }}>
+        <h4 className="mb-4" style={{ color: "#291495" }}>
           Explore Our Premium Models
         </h4>
 
@@ -180,7 +180,7 @@ export default function CounterTopIonizers() {
         </ul>
 
         <div className="mt-5">
-          <h2 className="mb-3" style={{ color: "#008AC7" }}>
+          <h2 className="mb-3" style={{ color: "#291495" }}>
             Why Choose Tyent Counter Top Ionizers?
           </h2>
           <p className="fs-5">
@@ -216,7 +216,7 @@ export default function CounterTopIonizers() {
             <Link
               href="/under-counter-water-ionizers"
               className="btn"
-              style={{ backgroundColor: "#008AC7", color: "#fff" }}
+              style={{ backgroundColor: "#291495", color: "#fff" }}
             >
               Explore Under Counter Models →
             </Link>

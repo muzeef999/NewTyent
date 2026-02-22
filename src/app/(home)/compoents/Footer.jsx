@@ -20,7 +20,7 @@ import "../../style/footer.css";
 
 const Footer = () => {
   return (
-    <footer style={{ color: "#FFF", backgroundColor: "#008AC7" }}>
+    <footer style={{ color: "#FFF", backgroundColor: "#291495" }}>
       <div className="py-5">
         <div className="p-5">
           <br />
@@ -31,74 +31,109 @@ const Footer = () => {
                   <h5 style={{ fontWeight: "600" }}>Our Branches</h5>
                   <ul className="footer-list list-unstyled pb-4">
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-hyderabad" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-hyderabad"
+                        className="footer-link"
+                      >
                         Best Water Ionizer in Hyderabad
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-bengaluru" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-bengaluru"
+                        className="footer-link"
+                      >
                         Hydrogen Water Machine in Bangalore
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi"
+                        className="footer-link"
+                      >
                         Alkaline Water Ionizer in Delhi NCR
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-mumbai" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-mumbai"
+                        className="footer-link"
+                      >
                         Best Water Ionizer in Mumbai
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-ahmedabad" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-ahmedabad"
+                        className="footer-link"
+                      >
                         Hydrogen Water Machine in Ahmedabad
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-pune" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-pune"
+                        className="footer-link"
+                      >
                         Alkaline Water Ionizer in Pune
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-lucknow" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-lucknow"
+                        className="footer-link"
+                      >
                         Best Water Ionizer in Lucknow
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-Jaipur" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-jaipur"
+                        className="footer-link"
+                      >
                         Hydrogen Water Machine in Jaipur
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-chandigarh" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-chandigarh"
+                        className="footer-link"
+                      >
                         Alkaline Water Ionizer in Chandigarh
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-vijayawada" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-vijayawada"
+                        className="footer-link"
+                      >
                         Best Water Ionizer in Vijayawada
                       </Link>
                     </li>
 
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-visakhapatnam" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-visakhapatnam"
+                        className="footer-link"
+                      >
                         Hydrogen Water Machine in Visakhapatnam
                       </Link>
                     </li>
 
-
                     <li>
-                      <Link href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-surat" className="footer-link">
+                      <Link
+                        href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-surat"
+                        className="footer-link"
+                      >
                         Alkaline Water Ionizer in Surat
                       </Link>
                     </li>

@@ -113,16 +113,17 @@ const AppBar = () => {
     <div>
       {/* Top Bar */}
       <div className="sticky-top" style={{ position: "fixed", width: "100%" }}>
+        <div style={{ backgroundColor: "#291495", color: "#FFF" }}>
         <div
-          className="d-flex justify-content-between align-items-center p-1"
-          style={{ backgroundColor: "#008AC7", color: "#FFF" }}
+          className="d-flex container justify-content-between align-items-center  p-2"
+          
         >
           <div
-            className="d-flex align-items-center marquee"
+            className="d-flex  align-items-center marquee"
             style={{ overflow: "hidden", whiteSpace: "nowrap" }}
           >
             <div className="marquee-content">
-              <p className="mb-0">86+ Countries</p>
+              <p className="mb-0">123+ Countries</p>
               <span className="mx-2">|</span>
               <span className="mb-0">
                 3 years warranty on ionizer & 15 years warranty on plates.
@@ -203,13 +204,16 @@ const AppBar = () => {
             )}
           </div>
         </div>
+        </div>
         {/* Navbar */}
+
+        
         <nav
           className={`navbar  navbar-expand-xl  sticky-top navbar-light flex-column custom-navbar  ${
             isFixed ? "fixed" : ""
           }`}
         >
-          <div className=" container-fluid d-flex justify-content-between align-items-center mt-2 border-bottom">
+          <div className="container d-flex justify-content-between align-items-center mt-2 border-bottom">
             {/* Toggle Button */}
             <button
               className="navbar-toggler"
@@ -487,12 +491,10 @@ const AppBar = () => {
                   </li>
 
                   {[
-                    { path: "/benefits", label: "Benefits" },
                     { path: "/why-tyent", label: "Why Tyent" },
                     { path: "/why-water-ionizer", label: "Why Water Ionizer" },
                     { path: "/certifications", label: "Certifications" },
                     { path: "/blogs", label: "Blogs" },
-                    { path: "/testimonials", label: "Testimonials" },
                     { path: "/contact", label: "Contact Us" },
                   ].map((item) => (
                     <li
@@ -523,7 +525,7 @@ const AppBar = () => {
               onClick={() => setCartShow(true)}
             >
               <div className="counter m-2">{Number(totalItems)}</div>
-              <PiShoppingCartLight size={40} color="#008AC7" />
+              <PiShoppingCartLight size={40} color="#291495" />
             </div>
           </div>
 

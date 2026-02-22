@@ -1,0 +1,62 @@
+.inside-section {
+  background: #f5f7fb;
+  position: relative;
+}
+
+/* Big background heading */
+.bg-heading-text {
+  font-size: 110px;
+  font-weight: 800;
+  color: #c9d5f2;
+  opacity: 0.35;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+  z-index: 0;
+}
+
+.inside-section h3 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Feature text */
+.feature-box {
+  margin-bottom: 40px;
+}
+
+.feature-title {
+  color: #1f5edb;
+  font-weight: 700;
+}
+
+/* Circle Image */
+.circle-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .bg-heading-text {
+    font-size: 70px;
+    top: -20px;
+  }
+
+  .feature-box {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-heading-text {
+    font-size: 50px;
+  }
+}

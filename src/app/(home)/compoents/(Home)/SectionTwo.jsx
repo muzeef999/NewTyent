@@ -24,15 +24,15 @@ const SectionTwo = () => {
             data-aos="fade-up"
             style={{ fontWeight: "600", lineHeight: "1.3" }}
           >
-            Improving <span style={{ color: "#008AC7" }}>Health</span> and{" "}
+            Improving <span style={{ color: "#291495" }}>Health</span> and{" "}
             <br />
-            preserving <span style={{ color: "#008AC7" }}>Nature</span>
+            preserving <span style={{ color: "#291495" }}>Nature</span>
           </h2>
 
           <h1
             data-aos="zoom-in"
             className="big-number"
-            style={{ color: "#008AC7", fontSize: "160px", fontWeight: "bold", transform: "scaleY(1.2)", }}
+            style={{ color: "#291495", fontSize: "160px", fontWeight: "bold", transform: "scaleY(1.2)", }}
           >
             <CountUp start={0} end={9} duration={1.5} />
           </h1>
@@ -47,7 +47,7 @@ const SectionTwo = () => {
 
           <h3
             data-aos="fade-in"
-            style={{ color: "#008AC7", fontSize: "22px", fontWeight: "bold" }}
+            style={{ color: "#291495", fontSize: "22px", fontWeight: "bold" }}
           >
             1,000,000+ Users
           </h3>
@@ -66,7 +66,7 @@ const SectionTwo = () => {
             className="text-white py-4"
             style={{
               background:
-                "linear-gradient(to left, #008AC7 50%, transparent 50%)",
+                "linear-gradient(to left, #291495 50%, transparent 50%)",
               borderRadius: "32px",
               height: "auto",
             }}
@@ -86,7 +86,7 @@ const SectionTwo = () => {
                   <p className="card-text">
                     Tyent Global, a leader in water ionization since 1995,
                     delivers premium hydrogen-rich alkaline water solutions to
-                    86+ countries. Powered by advanced Japanese technology,
+                    123+ countries. Powered by advanced Japanese technology,
                     Tyent provides healthier, cleaner water to millions
                     globally.
                   </p>

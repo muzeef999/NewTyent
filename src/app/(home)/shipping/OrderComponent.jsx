@@ -84,7 +84,7 @@ const OrderComponent = ({ selectedAddress }) => {
           email: user.email,
           contact: user.phoneNumber,
         },
-        theme: { color: "#008ac7" },
+        theme: { color: "#291495" },
       };
 
       const rzp = new window.Razorpay(options);
@@ -100,7 +100,7 @@ const OrderComponent = ({ selectedAddress }) => {
   return (
     <div className="order-section">
       <button
-        style={{ backgroundColor: "#008ac7", color: "#FFF" }}
+        style={{ backgroundColor: "#291495", color: "#FFF" }}
         className="btn"
         onClick={placeOrder}
         disabled={isPlacingOrder}

@@ -253,7 +253,7 @@ const Signup = ({ setShowLoginModal }) => {
 
           <div className="text-center" style={{ marginTop: "20px" }}>
             <p
-              style={{ cursor: "pointer", color: "#008AC7" }}
+              style={{ cursor: "pointer", color: "#291495" }}
               onClick={() => {
                 setShowRequestComponent(true);
               }}

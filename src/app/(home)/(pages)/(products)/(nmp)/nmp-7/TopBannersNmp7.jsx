@@ -47,7 +47,7 @@ const [isImageLoaded, setIsImageLoaded] = useState(false);
                   y1="0"
                   x2="0"
                   y2="40"
-                  stroke="#008ac7"
+                  stroke="#291495"
                   strokeWidth="4"
                 />
               </svg>
@@ -108,7 +108,7 @@ const [isImageLoaded, setIsImageLoaded] = useState(false);
                   y1="0"
                   x2="0"
                   y2="70"
-                  stroke="#008ac7"
+                  stroke="#291495"
                   strokeWidth="4"
                 />
               </svg>

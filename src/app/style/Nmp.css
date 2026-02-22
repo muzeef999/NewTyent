@@ -1,7 +1,7 @@
 .filterbutton {
   border: 1px solid #ddd;
   border-radius: 30px;
-  color: #008AC7;
+  color: #291495;
   padding: 8px 12px;
   background-color: #FFF;
   cursor: pointer; /* Ensures the button appears clickable */
@@ -30,17 +30,17 @@
 
 /* Active button styling */
 .activebutton {
-  border: 1px solid #008AC7;
+  border: 1px solid #291495;
   border-radius: 30px;
   color: #FFF;
-  background-color: #008AC7; /* Change background color for active state */
+  background-color: #291495; /* Change background color for active state */
   font-weight: bold; /* Optional: make the text bold */
 }
 
 /* Optional: Hover effect for better UI feedback */
 .filterbutton:hover {
   background-color: #e6f7ff;
-  color: #008AC7;
+  color: #291495;
 }
 
 
@@ -99,7 +99,7 @@
 
 
 .nmpboostbackground{
-  background: linear-gradient(325deg, #008AC7 1%, #80d9ff 99%);
+  background: linear-gradient(325deg, #291495 1%, #80d9ff 99%);
   border-radius: 24px;
   cursor: pointer;
   box-shadow: 0 0 32px 0 rgba(35, 0, 76, 0.12);
@@ -167,7 +167,7 @@
   font-size: clamp(24px, 3.12vw, 40px);
   font-weight: 900;
   margin: 0px;
-  color: #008ac7;
+  color: #291495;
   text-shadow: -2px 4px 8px #9e9e9e;
 }
 

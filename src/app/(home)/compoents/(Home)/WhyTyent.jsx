@@ -13,7 +13,7 @@ const WhyTyent = () => {
           <h2 className="m-0" style={{ fontSize: "40px", fontWeight: "500"}}>
             Why
             <span
-              style={{ color: "#008AC7", fontWeight: "600", fontSize: "70px" }}
+              style={{ color: "#291495", fontWeight: "600", fontSize: "70px" }}
             >
               Tyent ?
             </span>
@@ -23,7 +23,7 @@ const WhyTyent = () => {
             With over three decades of expertise, Tyent delivers the most
             advanced, slim, and sleek water ionizers with updated Japanese
             technology, available in{" "}
-            <span className="highlight">86+ countries</span> and renowned for
+            <span className="highlight">123+ countries</span> and renowned for
             exceptional customer satisfaction worldwide.
           </p>
           <div className="video-wrapper mt-4" style={{ borderRadius: "20px", overflow: "hidden" }}>
@@ -70,14 +70,14 @@ const WhyTyent = () => {
             <div key={index} data-aos="zoom-in" className="d-flex align-items-start gap-3">
               
                 <div className="whytentfont">
-                  <SiTicktick size={20} color="#008AC7" />
+                  <SiTicktick size={20} color="#291495" />
                 </div>
               
 
               <div>
                 <h3
                   className="m-0"
-                  style={{ fontWeight: "700", color: "#008AC7" }}
+                  style={{ fontWeight: "700", color: "#291495" }}
                 >
                   {item.title}
                 </h3>

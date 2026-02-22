@@ -224,7 +224,7 @@ const FormOnly = () => {
                 <center>
                   <FaCheckCircle
                     style={{
-                      color: "#008AC7",
+                      color: "#291495",
                       justifyContent: "center",
                       display: "flex",
                       alignItems: "center",

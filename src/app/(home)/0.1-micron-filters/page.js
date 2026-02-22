@@ -78,7 +78,7 @@ const WaterFilterCards = ({ title, content }) => {
       className="d-flex justify-content-center align-items-center custom-card"
     >
       <div className="ml-4 align-items-center">
-        <h3 className="m-4 text-start" style={{ color: "#008AC7" }}>
+        <h3 className="m-4 text-start" style={{ color: "#291495" }}>
           <b>{title}</b>
         </h3>
         <p className="text-start m-4" style={{ color: "#565959" }}>
@@ -175,9 +175,9 @@ const Page = () => {
           <Image src={filter} alt={"Tyent's .01 Micron Filtration"} layout="responsive"  />
           </div>
           </Col>
-          <p><MdWaterDrop color="#008AC7"/>&nbsp;ANSI, EPA & ANSI certified.</p>
-          <p><MdWaterDrop color="#008AC7"/>&nbsp;Longest filters in the Industry ensuring best filtration for safest and purest water.</p>
-          <p><MdWaterDrop color="#008AC7"/>&nbsp;NO Microplastics, NO Pharmaceuticals, NO Herbicides, NO Pesticides, NO Chlorine, NO heavy metals, NO Non-Metallic Contaminants, NO Biological impurities, NO Arsenic, NO Lead, NO Nitrate and other harmful pollutants, ensuring every sip is pure and clean.</p>
+          <p><MdWaterDrop color="#291495"/>&nbsp;ANSI, EPA & ANSI certified.</p>
+          <p><MdWaterDrop color="#291495"/>&nbsp;Longest filters in the Industry ensuring best filtration for safest and purest water.</p>
+          <p><MdWaterDrop color="#291495"/>&nbsp;NO Microplastics, NO Pharmaceuticals, NO Herbicides, NO Pesticides, NO Chlorine, NO heavy metals, NO Non-Metallic Contaminants, NO Biological impurities, NO Arsenic, NO Lead, NO Nitrate and other harmful pollutants, ensuring every sip is pure and clean.</p>
         </Row>
 
        <br/>
@@ -241,7 +241,7 @@ const Page = () => {
           <Col md={8} className="d-flex align-items-center justify-content-center">
 
           <div>
-            <h3 style={{color:'#008AC7'}}><b>How Often Should Filters Be Replaced ?</b></h3>
+            <h3 style={{color:'#291495'}}><b>How Often Should Filters Be Replaced ?</b></h3>
             <p>
             Filter replacement frequency depends on water quality, usage, and the ionizer's filtration capacity. Regular filter changes are essential to maintain optimal performance, ensuring stable pH and -ORP levels, cleaner water, consistent health benefits, and an extended lifespan for your water ionizer.
             </p>
@@ -258,7 +258,7 @@ const Page = () => {
           <Col md={6} className="d-flex align-items-center justify-content-center">
 
           <div>
-            <h3>Molecular Hydrogen - <b style={{color:'#008AC7', fontSize:'40px'}}>An emerging medical as</b></h3>
+            <h3>Molecular Hydrogen - <b style={{color:'#291495', fontSize:'40px'}}>An emerging medical as</b></h3>
             <p>
             Filters are just like kidneys of a water ionizer, ensuring pure, safe, and high-quality alkaline water. Regular replacement is crucial to maintain purity, protect your health, and sustain optimal ionizer performance. For best results, follow the manufacturer’s filter replacement schedule and invest in high-quality filters for your water ionizer.
             </p>

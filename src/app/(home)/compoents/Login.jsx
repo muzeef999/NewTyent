@@ -123,7 +123,7 @@ const Login = ({ setShowLoginModal }) => {
               style={{
                 textAlign: "right",
                 margin: "10px 0",
-                color: "#008AC7",
+                color: "#291495",
                 cursor: "pointer",
               }}
               onClick={() => setShowForgotPassword(true)}
@@ -149,7 +149,7 @@ const Login = ({ setShowLoginModal }) => {
           <p
             style={{
               cursor: "pointer",
-              color: "#008AC7",
+              color: "#291495",
               textAlign: "center",
               marginTop: "20px",
             }}

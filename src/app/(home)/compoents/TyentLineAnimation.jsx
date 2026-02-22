@@ -23,7 +23,7 @@ const TyentLineAnimation = () => {
     position: "absolute",
     height: "3px",
     width: "100%",
-    backgroundColor: "#008ac7",
+    backgroundColor: "#291495",
     transform: "translateX(-100%)",
     animation: "drawLine 2s linear forwards",
   };
@@ -32,7 +32,7 @@ const TyentLineAnimation = () => {
     marginTop:'-10px',
     width: "22px",
     height: "22px",
-    backgroundColor: "#008ac7",
+    backgroundColor: "#291495",
     opacity: 0,
     borderRadius: "30px",
     transform: "scale(0)",

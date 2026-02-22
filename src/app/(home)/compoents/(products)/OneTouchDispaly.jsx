@@ -22,7 +22,7 @@ const OneTouchDispaly = () => {
           {/* Section Header */}
           <h2
             className="text-center"
-            style={{ color: "#008AC7", fontWeight: "600" }}
+            style={{ color: "#291495", fontWeight: "600" }}
           >
             Discover Tyent’s 7 Water Types
           </h2>

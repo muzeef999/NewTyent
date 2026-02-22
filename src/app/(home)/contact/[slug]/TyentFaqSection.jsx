@@ -86,7 +86,7 @@ const TyentFaqSection = () => {
                   Absolutely. Tyent water ionizer systems are certified by USDA,
                   KFDA, NSF, CE, ISO, EPA, ANSI and GMP standards, ensuring
                   medical-grade safety, superior quality, and long-term
-                  reliability. Trusted in 86+ countries with a 40+ year legacy.
+                  reliability. Trusted in 123+ countries with a 40+ year legacy.
                 </Accordion.Body>
               </Accordion.Item>
 

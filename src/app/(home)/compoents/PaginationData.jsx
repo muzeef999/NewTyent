@@ -67,7 +67,7 @@ const PaginationData = ({ data, itemsPerPage }) => {
                   <div className="d-flex p-3 justify-content-between align-items-center mb-2">
                     <h2 className="fs-5 text-black fw-semibold mb-1">{blog.title}</h2>
 
-                    <FiArrowUpRight size={24} color="#008ac7" />
+                    <FiArrowUpRight size={24} color="#291495" />
                   </div>
 
                 </div>

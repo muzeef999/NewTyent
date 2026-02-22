@@ -291,7 +291,7 @@ const IconTest = ({ Heading, id, icon, Descrpition }) => {
       <div className="d-flex flex-column justify-content-center align-items-start flex-grow-1 p-3">
         <h3
           className="text-start m-0"
-          style={{ color: "#008AC7", fontSize: "clamp(22px, 4vw, 28px)" }}
+          style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 28px)" }}
         >
           <b>
             {id}. {Heading}
@@ -467,13 +467,13 @@ const Page = () => {
               }}
             >
               {" "}
-              <span style={{ color: "#008AC7" }}>
+              <span style={{ color: "#291495" }}>
                 <IoWaterOutline />
                 &nbsp;Water
               </span>
               <br />
               The Essence of Life, Perfected by{" "}
-              <span style={{ color: "#008AC7" }}>
+              <span style={{ color: "#291495" }}>
                 {" "}
                 Tyent Ionized Alkaline Water{" "}
               </span>
@@ -515,36 +515,36 @@ const Page = () => {
             Unlike regular water, Tyent's ionized alkaline water modulates
             signal transduction, protein phosphorylation, and gene expression,
             delivering powerful health benefits. It provides{" "}
-            <span style={{ color: "#008AC7" }}>
+            <span style={{ color: "#291495" }}>
               anti-inflammatory, anti-allergy,
             </span>{" "}
             and{" "}
-            <span style={{ color: "#008AC7" }}>
+            <span style={{ color: "#291495" }}>
               {" "}
               anti-apoptotic protective effects,
             </span>{" "}
-            supporting <span style={{ color: "#008AC7" }}> optimal organ </span>
+            supporting <span style={{ color: "#291495" }}> optimal organ </span>
             functionality. This water plays a key role in Building{" "}
-            <span style={{ color: "#008AC7" }}>strong immunity </span> &
+            <span style={{ color: "#291495" }}>strong immunity </span> &
             metabolism, Enhancing{" "}
-            <span style={{ color: "#008AC7" }}> anti-aging </span> and{" "}
-            <span style={{ color: "#008AC7" }}> skin health,</span>{" "}
+            <span style={{ color: "#291495" }}> anti-aging </span> and{" "}
+            <span style={{ color: "#291495" }}> skin health,</span>{" "}
             Detoxification by eliminating{" "}
-            <span style={{ color: "#008AC7" }}> toxins </span> and{" "}
-            <span style={{ color: "#008AC7" }}>
+            <span style={{ color: "#291495" }}> toxins </span> and{" "}
+            <span style={{ color: "#291495" }}>
               {" "}
               free radicals, Improving gastrointestinal health, reducing
               acidity,
             </span>{" "}
             and promoting better{" "}
-            <span style={{ color: "#008AC7" }}> digestion,</span> Decreasing the
+            <span style={{ color: "#291495" }}> digestion,</span> Decreasing the
             risk of chronic diseases like
-            <span style={{ color: "#008AC7" }}>
+            <span style={{ color: "#291495" }}>
               {" "}
               cancer, heart disease,
             </span>{" "}
             and
-            <span style={{ color: "#008AC7" }}> diabetes.</span>
+            <span style={{ color: "#291495" }}> diabetes.</span>
           </p>
 
           <div className="container">
@@ -582,7 +582,7 @@ const Page = () => {
             }}
           >
             The Benefits of{" "}
-            <span style={{ color: "#008AC7" }}>onised alkaline water </span> for
+            <span style={{ color: "#291495" }}>onised alkaline water </span> for
             your health
           </h2>
         </center>
@@ -633,7 +633,7 @@ const Page = () => {
               fontSize: "2rem", // Default for large screens
             }}
           >
-            What is <span style={{ color: "#008AC7" }}> ORP? </span>
+            What is <span style={{ color: "#291495" }}> ORP? </span>
           </h2>
         </center>
         <p style={{ color: "#405261", textAlign: "center" }}>

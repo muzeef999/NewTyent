@@ -1,0 +1,60 @@
+.human-section {
+  background: #f7f9fc;
+  position: relative;
+}
+
+/* Big faded heading */
+.bg-human-heading {
+  font-size: 120px;
+  font-weight: 800;
+  color: #c9d5f2;
+  opacity: 0.35;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  z-index: 0;
+}
+
+.subtitle {
+  max-width: 800px;
+  color: #555;
+}
+
+/* World map */
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.map-img {
+  opacity: 0.35;
+  object-fit: contain;
+}
+
+/* Stats */
+.stat-number {
+  color: #1f5edb;
+  font-weight: 800;
+  font-size: 42px;
+}
+
+.stat-text {
+  font-size: 14px;
+  color: #555;
+  max-width: 260px;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .bg-human-heading {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-human-heading {
+    font-size: 50px;
+  }
+}

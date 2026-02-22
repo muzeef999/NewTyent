@@ -149,7 +149,7 @@ const ProductSection = ({ products, specifications }) => {
 
         </Col>    
         <Col sm={12} md={12} lg={6} xl={6}>
-          <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#008AC7"}}>{model}</h1>
+          <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#291495"}}>{model}</h1>
           <h1 style={{color:'#000',fontSize:'20px'}}>{desc}</h1>
           <hr />
           <h4 className="m-2">

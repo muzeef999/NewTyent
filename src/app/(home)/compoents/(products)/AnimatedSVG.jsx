@@ -12,7 +12,7 @@ const AnimatedSVG = () => {
   return (
 
     <div>
-<div style={{backgroundColor:'#008ac7'}}>
+<div style={{backgroundColor:'#291495'}}>
         <Row>
             <Col md={6}  className='d-flex justify-content-center align-items-center'>
             <div style={{padding:'50px'}}>
@@ -34,7 +34,7 @@ const AnimatedSVG = () => {
 <rect width="1919" height="292" fill="#D9D9D9"/>
 </mask>
 <g mask="url(#mask0_230_20)">
-<path d="M972 -738C345.5 -775.5 129.5 -721.105 0 -588.381V252.5C152.333 150.237 405.5 22 972 67.5C1424.07 103.809 1804.33 157.049 1921 92.5V-789C1769 -669 1365 -714.476 972 -738Z" fill="#008ac7"/>
+<path d="M972 -738C345.5 -775.5 129.5 -721.105 0 -588.381V252.5C152.333 150.237 405.5 22 972 67.5C1424.07 103.809 1804.33 157.049 1921 92.5V-789C1769 -669 1365 -714.476 972 -738Z" fill="#291495"/>
 </g>
 </svg>
 

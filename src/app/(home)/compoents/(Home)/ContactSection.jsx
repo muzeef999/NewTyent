@@ -18,7 +18,7 @@ const ContactSection = () => {
           <Col md={4} className="mb-3">
             <div className="custom-card shadow border-0 d-flex flex-column align-items-center">
               <div className="icon-circle">
-                <IoSettingsOutline size={40} color="#008AC7" />
+                <IoSettingsOutline size={40} color="#291495" />
               </div>
               <b className="card-title">Repair Service</b>
               <p className="card-text">Need to repair your TYENT device? Please visit our contact section.</p>
@@ -29,7 +29,7 @@ const ContactSection = () => {
           <Col md={4} className="mb-3">
             <div className="custom-card shadow border-0 d-flex flex-column align-items-center">
               <div className="icon-circle">
-                <BsBox2 size={30} color="#008AC7" />
+                <BsBox2 size={30} color="#291495" />
               </div>
               <b className="card-title">Product Inquiries</b>
               <p className="card-text">Contact us for all your product questions or concerns.</p>
@@ -40,7 +40,7 @@ const ContactSection = () => {
           <Col md={4} className="mb-3">
             <div className="custom-card shadow border-0 d-flex flex-column align-items-center">
               <div className="icon-circle">
-                <MdOutlineSupportAgent size={40} color="#008AC7" />
+                <MdOutlineSupportAgent size={40} color="#291495" />
               </div>
               <b className="card-title">Business Inquiries</b>
               <p className="card-text">TYENT Global Support is ready and waiting to talk to you about your TYENT.</p>

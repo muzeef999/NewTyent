@@ -67,7 +67,7 @@ img {
 }
 
 .navbar-toggler {
-  color: #008AC7;
+  color: #291495;
 }
 
 .counter {
@@ -77,7 +77,7 @@ img {
  width: 24px;
  height: 24px;
   background: #FFF;
-  color: #008AC7;
+  color: #291495;
   font-weight: 600;
   font-size: 18px;
   display: flex;
@@ -89,8 +89,8 @@ img {
 
 
 .appbardemo {
-  color: #008AC7;
-  border: 1px solid #008AC7;
+  color: #291495;
+  border: 1px solid #291495;
   padding: 10px 14px;
   border-radius: 30px;
   font-weight: 500;
@@ -100,7 +100,7 @@ img {
 }
 
 .appbardemo:hover {
-    background-color: #008AC7;
+    background-color: #291495;
     color: #FFF;
     border: none;
     padding: 10px 14px;
@@ -187,7 +187,7 @@ img {
 }
 
 .thumbnail[data-active="true"] {
-  border: 2px solid #008AC7; /* Active state border */
+  border: 2px solid #291495; /* Active state border */
   border-radius: 12px;
 }
 
@@ -247,7 +247,7 @@ img {
 .appbgbutton {
     border: 1px solid #FFF;
     border-radius: 30px;
-    background-color: #008AC7;
+    background-color: #291495;
     color: #FFF;
     padding: 3px 18px;
 }
@@ -277,11 +277,11 @@ img {
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  background-color: #008AC7 !important;
+  background-color: #291495 !important;
 }
 
 .nav-link.active {
-  color: #008AC7 !important;
+  color: #291495 !important;
 }
 
 .nav-item .dropdown{
@@ -319,7 +319,7 @@ color: #000 !important;
   transform: translateX(-50%); /* Centers the underline by adjusting from the left */
   width: 75%; /* Width of the underline */
   height: 2px; /* Thickness of the underline */
-  background-color: #008AC7; /* Color of the underline */
+  background-color: #291495; /* Color of the underline */
   z-index: 99;
  
 }
@@ -329,7 +329,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 };
 
 .navbar-toggler {
-  border: 1px solid #008AC7 !important;
+  border: 1px solid #291495 !important;
 }
 
 
@@ -418,17 +418,17 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   }
 
   .nav-tabs .nav-link {
-    color: #008AC7; /* Change this to the desired color for inactive tab links */
+    color: #291495; /* Change this to the desired color for inactive tab links */
     font: 500 !important;
     border-bottom: none; /* Remove the bottom border */
-    border: 1px solid  #008AC7 !important;
+    border: 1px solid  #291495 !important;
   }
   
   
   .nav-tabs .nav-link.active {
-    background-color: #008AC7 !important;  
+    background-color: #291495 !important;  
    color: #FFF !important;
-   border: 1px solid  #008AC7 !important;
+   border: 1px solid  #291495 !important;
   }
  
   #uncontrolled-tab-example{
@@ -518,7 +518,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 /* Product Section and Heading */
 .product-section {
   color: #000;
-  background-color: #008ac7;
+  background-color: #291495;
   box-shadow: 0px 5px 15px rgba(0, 138, 199, 0.5); /* Adjusted box-shadow */
   overflow: hidden;
  border: 1px solid #FFF;
@@ -544,7 +544,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 
 
 .certificate-container {
-  border:  1px solid #008AC7;
+  border:  1px solid #291495;
   border-radius: 20px; 
   height: auto;
 }
@@ -571,7 +571,7 @@ background-color: transparent;
 
 
 .makeStyles-copyUrl-6 {
-  color: #008AC7 !important; /* !important ensures it overrides the library styles */
+  color: #291495 !important; /* !important ensures it overrides the library styles */
 }
 
 
@@ -646,7 +646,7 @@ background-color: transparent;
 }
 
 .explore-link:hover {
-  background-color: #008ac7;
+  background-color: #291495;
   color: #fff;
 }
 
@@ -679,7 +679,7 @@ background-color: transparent;
   top: 50%;
   right: 0;          /* Position it vertically centered */
   padding: 10px;  /* Add padding to the button */
-  background-color: #008ac7;  /* Background color */
+  background-color: #291495;  /* Background color */
   color: white;      /* Button text color */
   border: none;      /* Remove border */
   border-top-right-radius: 6px;
@@ -693,14 +693,14 @@ background-color: transparent;
 
 .fixed-vertical-button:hover {
  color: #FFF;
- background-color: #008ac7;
+ background-color: #291495;
 
 
 }
 
 .custom-phone-input{
   
-    caret-color: #008ac7 !important; /* Ensure cursor color is applied */
+    caret-color: #291495 !important; /* Ensure cursor color is applied */
 }
 .react-tel-input .flag-dropdown {
     border-radius: 8px 0px 0px 8px !important;
@@ -736,7 +736,7 @@ padding-left: 48px !important;
 /* Styles for the button */
 .floating-button {
   padding: 10px;
-  background-color: #008ac7; /* Primary button color */
+  background-color: #291495; /* Primary button color */
   color: #fff;
   width: 60px;
   height: 60px;
@@ -777,7 +777,7 @@ padding-left: 48px !important;
   top:0;
   left:0;
   background-color: #f8fbfe;
-  color: #008AC7;
+  color: #291495;
   z-index: 9999;
   width: 100%;
   height: 100vh;
@@ -831,9 +831,15 @@ padding-left: 48px !important;
  {
    font-size: 80px;
    font-weight: 800;
-  background: linear-gradient(180deg, #0757e2 10%, #9ec5fe 90%);
+  background: linear-gradient(
+  180deg,
+  #0757e2 0%,
+  #9ec5fe 60%,
+  #ffffff 100%
+);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.2;
+  white-space: nowrap;
  }

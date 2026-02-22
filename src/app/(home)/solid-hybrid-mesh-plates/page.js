@@ -45,7 +45,7 @@ const WaterFilterCards = ({ title, content }) => {
       className="d-flex justify-content-center align-items-center custom-card"
     >
       <div className="ml-4 align-items-center">
-        <h3 className="m-4 text-start" style={{ color: "#008AC7" }}>
+        <h3 className="m-4 text-start" style={{ color: "#291495" }}>
           <b>{title}</b>
         </h3>
         <p className="text-start m-4" style={{ color: "#565959" }}>
@@ -92,7 +92,7 @@ const page = () => {
             <Row>
             <Col md={6} className='d-flex jjustify-content-center align-items-center'>
             <div className='m-4'>
-              <h1 data-aos="fade-up" style={{color:'#008AC7'}}><b>Types of Electrodes/Plates:</b></h1>
+              <h1 data-aos="fade-up" style={{color:'#291495'}}><b>Types of Electrodes/Plates:</b></h1>
               <h5>Solid Hybrid mesh plate, Mesh plate & Solid plate</h5>
               </div>
             </Col>
@@ -107,7 +107,7 @@ const page = () => {
             </div>
             <div className="section-spacing">
 
-            <h2 className='text-center'>The<b style={{color:'#008AC7'}}> Advantage</b> of Tyent’s Solid <br/> Hybrid Mesh Plates</h2>
+            <h2 className='text-center'>The<b style={{color:'#291495'}}> Advantage</b> of Tyent’s Solid <br/> Hybrid Mesh Plates</h2>
         <p className='text-center'>Tyent’s use of advanced Japanese technology ensures that its plates are some of the most effective in the industry. Sourced from <br/> Permelec, a prestigious Japanese company (Since 1969) specializing in high-quality electrodes, Tyent's plates benefit from <br/> superior manufacturing processes that make them durable, efficient, and reliable for long-term use.</p>
          <br/>
          <Row className="d-flex flex-wrap g-3">
@@ -142,7 +142,7 @@ const page = () => {
             md={6}
             data-aos="fade-left"
             className="d-flex justify-content-center alin-items-center"
-            style={{ backgroundColor: "#008AC7", color: "#FFF", }}
+            style={{ backgroundColor: "#291495", color: "#FFF", }}
           >
             <div style={{ padding: "60px" }}>
               <h2 style={{ fontWeight: 600 }}>Mesh Plates</h2>
@@ -168,7 +168,7 @@ const page = () => {
                         Molecular Hydrogen -{" "}
                         <span
                           style={{
-                            color: "#008AC7",
+                            color: "#291495",
                             fontSize: "40px",
                             fontWeight: "600",
                           }}

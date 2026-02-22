@@ -46,7 +46,7 @@ export default function UnderCounterIonizers() {
         <meta name="keywords" content={metadata.keywords} />
       </Head>
       <Container className="py-5">
-        <h1 className="mb-4 text-center" style={{ color: "#008AC7" }}>
+        <h1 className="mb-4 text-center" style={{ color: "#291495" }}>
           Under the Counter Water Ionizer’s
         </h1>
 
@@ -60,7 +60,7 @@ export default function UnderCounterIonizers() {
           or space.
         </p>
 
-        <h4 className="mb-4" style={{ color: "#008AC7" }}>
+        <h4 className="mb-4" style={{ color: "#291495" }}>
           Our Premium Under Counter Ionizers
         </h4>
 
@@ -117,7 +117,7 @@ export default function UnderCounterIonizers() {
         </ul>
 
         <div className="mt-5">
-          <h2 className="mb-3" style={{ color: "#008AC7" }}>
+          <h2 className="mb-3" style={{ color: "#291495" }}>
             Why Choose Tyent Under Counter Ionizers?
           </h2>
           <ul className="list-unstyled ps-3">
@@ -144,7 +144,7 @@ export default function UnderCounterIonizers() {
             <Link
               href="/counter-top-water-ionizers"
               className="btn"
-              style={{ backgroundColor: "#008AC7", color: "#fff" }}
+              style={{ backgroundColor: "#291495", color: "#fff" }}
             >
               View Counter Top Ionizers →
             </Link>

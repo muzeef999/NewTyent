@@ -1,5 +1,5 @@
 .nmp-11-desktop-banner h2{
-  color: #008AC7;
+  color: #291495;
   font-weight: 700;
   font-size: 45px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
@@ -51,7 +51,7 @@ display: flex;
   .product-selection-filter-Home.active-Home {
     font-weight: bold;
     font-size: 20px;
-    color: #008AC7; /* Active color */
+    color: #291495; /* Active color */
     text-decoration: underline; /* Add underline */
     text-decoration-thickness: 2px; /* Thickness of the underline */
     text-underline-offset: 6px; /* Adjust spacing between text and underline */
@@ -116,10 +116,10 @@ display: flex;
       position: absolute;
       top: 40.1%;
       right: 5.1%;
-      width: 29%;
+      width: 129%;
       aspect-ratio: 16/9;
-      transform: skewY(1.1deg); /* Skew to give a dynamic shape */
-      z-index: -9; /* se lower  z-index to ensure it appears background */
+      z-index: -99; /* se lower  z-index to ensure it appears background */
+      pointer-events:  none;
     }
 
 
@@ -274,7 +274,7 @@ display: flex;
 
 .home_banner2_text1 {
   font-weight: 800;
-  color: #008AC7;
+  color: #291495;
   text-transform: uppercase; 
 }
 

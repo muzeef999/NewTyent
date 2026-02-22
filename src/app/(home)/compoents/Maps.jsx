@@ -26,8 +26,8 @@ const Maps = () => {
             <h1 className="text-center" data-aos="fade-up">
               <b>
                 "Tyent: Trusted{" "}
-                <span style={{ color: "#008AC7" }}>Worldwide</span>, Available{" "}
-                <span style={{ color: "#008AC7" }}>Everywhere!</span>"
+                <span style={{ color: "#291495" }}>Worldwide</span>, Available{" "}
+                <span style={{ color: "#291495" }}>Everywhere!</span>"
               </b>
             </h1>
             <p className="text-center" data-aos="fade-up">
@@ -42,12 +42,12 @@ const Maps = () => {
               <p className="text-center" style={{ margin: "0 10px" }}>
                 <span
                   style={{
-                    color: "#008AC7",
+                    color: "#291495",
                     fontSize: "40px",
                     fontWeight: "bold",
                   }}
                 >
-                  86+
+                  123+
                 </span>
                 <br />
                 <span>Countries</span>
@@ -55,7 +55,7 @@ const Maps = () => {
               <p className="text-center" style={{ margin: "0 10px" }}>
                 <span
                   style={{
-                    color: "#008AC7",
+                    color: "#291495",
                     fontSize: "40px",
                     fontWeight: "bold",
                   }}

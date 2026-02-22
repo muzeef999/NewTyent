@@ -20,9 +20,9 @@ const Header = dynamic(() => import("../compoents/Header"), {
 });
 
 export const metadata = {
-  title: "Contact Tyent - Get in Touch with Us",
+  title: "Contact Tyent India | Premium & Best Water Ionizers Support",
   description:
-    "Have questions? Contact Tyent for inquiries about our water ionizers, services, and support.",
+    "Contact Tyent India for support, inquiries, or business opportunities. Discover certified Ionized alkaline water & hydrogen water ionizers designed for quality and safety.",
 };
 
 const headerData = {
@@ -158,7 +158,7 @@ const Page = () => {
         <div className="section-spacing">
           <h3
             className="m-0 text-center"
-            style={{ color: "#008AC7", fontWeight: "600" }}
+            style={{ color: "#291495", fontWeight: "600" }}
             data-aos="fade-down"
           >
             You can find us here!{" "}
@@ -191,7 +191,7 @@ const Page = () => {
                       }}
                     />
                     <h5 className="mt-3">
-                      <b style={{ color: "#008AC7" }}>{item.title}</b>
+                      <b style={{ color: "#291495" }}>{item.title}</b>
                     </h5>
                   </a>
                 </div>

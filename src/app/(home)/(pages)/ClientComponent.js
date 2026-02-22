@@ -1,8 +1,7 @@
 "use client";
-
 import { Provider } from "react-redux";
 import { SessionProvider } from "next-auth/react";
-import { store } from "@/app/Redux/store";
+import { store } from "../../Redux/store";
 import Aos from "aos";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";

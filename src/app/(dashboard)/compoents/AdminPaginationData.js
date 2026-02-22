@@ -61,7 +61,7 @@ const AdminPaginationData = ({ data, itemsPerPage }) => {
                       />
                     </div>
                     <div
-                      style={{ color: "#008ac7", marginTop: "20px" }}
+                      style={{ color: "#291495", marginTop: "20px" }}
                       className="d-flex justify-content-between align-items-center"
                     >
                       <p>

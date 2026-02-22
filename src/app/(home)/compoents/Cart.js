@@ -147,7 +147,7 @@ const CartPage = () => {
             <div style={{marginTop:'40%'}}>
               <h2
                 className="text-center m-0"
-                style={{ color: "#008AC7" }}
+                style={{ color: "#291495" }}
               >
                 Please login to see your cart items.
               </h2>

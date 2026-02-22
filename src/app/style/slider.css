@@ -1,0 +1,145 @@
+/* wrapper */
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-desktop { display: block; position: relative; }
+.banner-mobile { display: none; position: relative; }
+
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Content position */
+.banner-content {
+  position: absolute;
+  top: 18%;
+  left: 6%;
+  max-width: 520px;
+}
+
+.banner-content.mobile {
+  top: 12%;
+  left: 5%;
+  max-width: 90%;
+}
+
+/* Offer badge */
+.offer-badge {
+  background: #2f2fa2;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Heading */
+.main-heading {
+  margin-top: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* FIXED PART */
+.fixed-text {
+  display: block;
+  font-size: clamp(40px, 6vw, 80px);
+  padding: 6px 12px;
+  width: fit-content;
+}
+
+/* ANIMATED WORD */
+.animated-word {
+  display: block;
+  font-size: clamp(50px, 7vw, 90px);
+  color: #1a4ed8;
+  animation: slideFade 0.6s ease;
+}
+
+/* animation */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sub-text {
+  margin-top: 18px;
+  font-size: clamp(16px, 2vw, 22px);
+  color: #333;
+}
+
+.shop-btn {
+  margin-top: 24px;
+  background: #1a4ed8;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .banner-desktop { display: none; }
+  .banner-mobile { display: block; }
+
+  .animated-word {
+    font-size: 44px;
+  }
+
+  .fixed-text {
+    font-size: 34px;
+  }
+
+  .shop-btn {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+}
+
+
+.banner-desktop {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;   /* 👈 bottom layer */
+}
+
+.banner-content {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  z-index: 3;   /* 👈 top layer */
+  max-width: 520px;
+}
+
+
+.responsive-container { 
+      position: absolute;
+      top: 39%;
+      right: 17.1%;
+      width: 37%;
+      z-index: -2; /* se lower  z-index to ensure it appears background */
+      pointer-events:  none;
+    }
+
+

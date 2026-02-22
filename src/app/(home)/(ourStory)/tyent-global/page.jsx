@@ -39,7 +39,7 @@ const CoreValueCard = ({ icon: Icon, title, description }) => {
       </div>
       <div className="m-2 d-flex justify-content-center align-items-center">
         <div>
-          <h5 className="mt-3" style={{ color: "#008AC7" }}>
+          <h5 className="mt-3" style={{ color: "#291495" }}>
             <b>{title}</b>
           </h5>
           <p>{description}</p>
@@ -227,7 +227,7 @@ const Page = () => {
         <Row className="g-4 justify-content-center">
           <Col xs={12} sm={6} md={4} lg={4}>
             <KeyFactCard
-              value="86+"
+              value="123+"
               title="Global Presence"
               description="Providing innovative water solutions that improve health and well-being across India."
             />

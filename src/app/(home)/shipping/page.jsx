@@ -215,7 +215,7 @@ const Page = () => {
                       style={{
                         backgroundColor: "#FFF",
                         border: "1px solid #e0e0e0",
-                        color: "#008AC7",
+                        color: "#291495",
                         padding: "8px 18px",
                       }}
                     >
@@ -301,7 +301,7 @@ const Page = () => {
                                       setEditingAddressId(address._id)
                                     }
                                     style={{
-                                      color: "#008AC7",
+                                      color: "#291495",
                                       cursor: "pointer",
                                       fontSize: "18px",
                                     }}
@@ -381,7 +381,7 @@ const Page = () => {
                                       setEditingAddressId(address._id)
                                     }
                                     style={{
-                                      color: "#008AC7",
+                                      color: "#291495",
                                       cursor: "pointer",
                                       fontSize: "18px",
                                     }}
@@ -404,7 +404,7 @@ const Page = () => {
                             width: "100%",
                             textAlign: "left",
                             textDecoration: "none",
-                            color: "#008AC7",
+                            color: "#291495",
                           }}
                         >
                           {showAll
@@ -434,7 +434,7 @@ const Page = () => {
                   aria-controls="flush-collapseTwo"
                   onClick={() => handleAccordionClick("flush-collapseTwo")}
                 >
-                  <span style={{ color: "#008AC7" }}>
+                  <span style={{ color: "#291495" }}>
                     {" "}
                     {isSecondAccordionActive ? (
                       <>
@@ -502,7 +502,7 @@ const Page = () => {
                         style={{
                           backgroundColor: "#FFF",
                           border: "1px solid #e0e0e0",
-                          color: "#008AC7",
+                          color: "#291495",
                           padding: "8px 18px",
                         }}
                       >

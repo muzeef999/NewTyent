@@ -15,8 +15,8 @@
   }
 
   .formInput:focus {
-    border-color: #008AC7; /* Green border on focus */
-    box-shadow: 0 0 5px #008AC7; /* Green glow */
+    border-color: #291495; /* Green border on focus */
+    box-shadow: 0 0 5px #291495; /* Green glow */
     outline: none;
   }
 
@@ -27,12 +27,12 @@
 }
 
 .heading {
-    color:#008AC7;
+    color:#291495;
 }
 
 .button {
     color:  #FFF;
-    background-color: #008AC7;
+    background-color: #291495;
     border-radius: 8px;
     width: 100%;
     border: none;
@@ -46,7 +46,7 @@
 .card {
     width: 300px;
     height: auto;
-    background-color: #008AC7;
+    background-color: #291495;
     border-radius: 10px;
    
 }

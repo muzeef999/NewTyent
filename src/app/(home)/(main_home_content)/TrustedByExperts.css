@@ -1,0 +1,92 @@
+.experts-wrapper {
+  background: #f6f6f6;
+  padding: 80px 20px;
+}
+
+.experts-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.experts-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.experts-subtitle {
+  color: #666;
+  margin: 10px 0 40px;
+}
+
+/* Big rounded container */
+.experts-box {
+  border: 1px solid #dcdcdc;
+  border-radius: 16px;
+  padding: 35px;
+  background: #fff;
+}
+
+/* Grid of testimonials */
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.expert-name {
+  color: #1a73e8;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.expert-role {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.expert-company {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.expert-text {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Bottom rating */
+.experts-rating {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .experts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .experts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experts-box {
+    padding: 25px;
+  }
+
+  .experts-title {
+    font-size: 26px;
+  }
+}

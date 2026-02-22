@@ -15,7 +15,7 @@ const Management = () => {
   return (
     <div className="container-fluid">
       <center>
-      <h2 className='text-center' style={{ color: '#008AC7', fontWeight: '600'}}>Our Management</h2>
+      <h2 className='text-center' style={{ color: '#291495', fontWeight: '600'}}>Our Management</h2>
       </center>
       <br/>
       <div className="container">

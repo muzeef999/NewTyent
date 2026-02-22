@@ -66,7 +66,7 @@ const MyComponent = () => {
       </div>
 
       <div className="caption-box">
-        <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#008AC7" }}>
+        <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "#291495" }}>
           {caption}
         </h2>
       </div>

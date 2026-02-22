@@ -102,7 +102,7 @@ const page = () => {
         >
           <h2 className="text-center" style={{ fontWeight: "600" }}>
             Your Health Is An Investment Not An{" "}
-            <span style={{ color: "#008AC7" }}>Expense</span>
+            <span style={{ color: "#291495" }}>Expense</span>
           </h2>
           <Row className="d-flex justify-content-center">
             <div style={{ width: "80%", height: "auto" }}>
@@ -125,7 +125,7 @@ const page = () => {
                 </p>
                 <h2
                   className="text-center m-0"
-                  style={{ color: "#008AC7", fontWeight: 600 }}
+                  style={{ color: "#291495", fontWeight: 600 }}
                 >
                   {" "}
                   The Human Body Is WATER ?
@@ -162,7 +162,7 @@ const page = () => {
               <Col xs={12} md={6} className="text-start">
                 <h2 style={{ fontWeight: 700 }} className="d-inline-block">
                   Specific Criteria for{" "}
-                  <span style={{ color: "#008AC7" }}>Drinking Water</span>
+                  <span style={{ color: "#291495" }}>Drinking Water</span>
                 </h2>
               </Col>
               <Col xs={12} md={6} className="text-end">
@@ -204,7 +204,7 @@ const page = () => {
                 <path
                   id="waterdrop"
                   d="M1107.88 874.383C1107.88 1052.73 954.368 1197.31 765 1197.31C575.632 1197.31 422.123 1052.73 422.123 874.383C422.123 643.41 670.235 517.731 758.764 220.253C760.532 214.312 769.467 214.312 771.235 220.253C859.765 517.731 1107.88 643.41 1107.88 874.383Z"
-                  fill="#008AC7"
+                  fill="#291495"
                   className="animate-waterdrop"
                 />
                 <path
@@ -231,7 +231,7 @@ const page = () => {
                     <h3>
                       <span
                         style={{
-                          color: "#008AC7",
+                          color: "#291495",
                           fontSize: "50px",
                           fontWeight: 600,
                         }}
@@ -265,7 +265,7 @@ const page = () => {
                     <h3>
                       <span
                         style={{
-                          color: "#008AC7",
+                          color: "#291495",
                           fontSize: "50px",
                           fontWeight: 600,
                         }}
@@ -300,7 +300,7 @@ const page = () => {
                     <h3>
                       <span
                         style={{
-                          color: "#008AC7",
+                          color: "#291495",
                           fontSize: "50px",
                           fontWeight: 600,
                         }}
@@ -354,7 +354,7 @@ const page = () => {
                   <h3
                     className="m-0"
                     style={{
-                      color: "#008AC7",
+                      color: "#291495",
                       fontWeight: "700",
                       fontSize: "50px",
                     }}
@@ -362,7 +362,7 @@ const page = () => {
                     Water <br /> ionizer
                   </h3>
                   <span>
-                    <FaQuestion size={80} color="#008AC7" />
+                    <FaQuestion size={80} color="#291495" />
                   </span>
                 </div>
                 <p>
@@ -399,7 +399,7 @@ const page = () => {
                   Molecular Hydrogen -{" "}
                   <span
                     style={{
-                      color: "#008AC7",
+                      color: "#291495",
                       fontSize: "40px",
                       fontWeight: "600",
                     }}
@@ -466,7 +466,7 @@ const page = () => {
                   Ionized Alkaline water - <br />
                   <span
                     style={{
-                      color: "#008AC7",
+                      color: "#291495",
                       fontSize: "40px",
                       fontWeight: "600",
                     }}

@@ -27,7 +27,7 @@ const tableData = [
   {
     title: "Tyent NMP Series",
     bgColor: "#c3e6fa",
-    color: "#008ac7",
+    color: "#291495",
     details: [
       { label: "Tyent NMP-5", value: "52.9*5 = 264.5 sq inches" },
       { label: "Tyent NMP-7", value: "52.9*7 = 370.3 sq inches" },
@@ -74,7 +74,7 @@ const page = () => {
         <br />
         <div className="custom-card"  data-aos="fade-up">
           <p className="p-2">
-            <b style={{ color: "#008AC7" }}>Tyent</b> and <b>Enagic Kangen</b>{" "}
+            <b style={{ color: "#291495" }}>Tyent</b> and <b>Enagic Kangen</b>{" "}
             are leading companies in the medical-grade water ionizer industry,
             offering hydrogen-rich alkaline water with various health benefits.
             Tyent stands out for its advanced technology, producing superior
@@ -104,7 +104,7 @@ const page = () => {
             fontWeight: 600,
             fontSize: "70px",
             lineHeight: "-20px",
-            color: "#008AC7",
+            color: "#291495",
           }}
         >
           Tyent
@@ -119,7 +119,7 @@ const page = () => {
         <br />
         <br />
 
-        <h2 style={{ color: "#008AC7" }}  data-aos="fade-right">
+        <h2 style={{ color: "#291495" }}  data-aos="fade-right">
           <b>1. Electrodes/Plates</b>
         </h2>
         <p  data-aos="fade-up">
@@ -137,7 +137,7 @@ const page = () => {
           <Col
             md={6} data-aos="flip-left"
             style={{
-              backgroundColor: "#008AC7",
+              backgroundColor: "#291495",
               color: "#FFF",
               padding: "30px",
             }}
@@ -235,7 +235,7 @@ const page = () => {
         </div>
 
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
+        <h2 style={{ color: "#291495" }} data-aos="fade-right">
           <b>2. Power supply</b>
         </h2>
         <p data-aos="fade-up">
@@ -248,7 +248,7 @@ const page = () => {
           <Col
             md={6} data-aos="flip-left"
             style={{
-              backgroundColor: "#008AC7",
+              backgroundColor: "#291495",
               color: "#FFF",
               padding: "30px",
             }}
@@ -334,7 +334,7 @@ const page = () => {
 
         
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
+        <h2 style={{ color: "#291495" }} data-aos="fade-right">
           <b>3. Replacement Filters</b>
         </h2>
         <p data-aos="fade-up" style={{ fontSize: "14px", }}>
@@ -350,7 +350,7 @@ const page = () => {
           <Col
             md={6} data-aos="flip-left"
             style={{
-              backgroundColor: "#008AC7",
+              backgroundColor: "#291495",
               color: "#FFF",
               padding: "30px",
             }}
@@ -455,7 +455,7 @@ const page = () => {
         
 
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
+        <h2 style={{ color: "#291495" }} data-aos="fade-right">
           <b>4. Production of Strong Alkaline water & Strong Acidic water</b>
         </h2>
 
@@ -480,7 +480,7 @@ const page = () => {
           <Col
             md={6} data-aos="flip-left"
             style={{
-              backgroundColor: "#008AC7",
+              backgroundColor: "#291495",
               color: "#FFF",
               padding: "30px",
             }}
@@ -526,7 +526,7 @@ const page = () => {
 
         
         <div className="section-spacing"> 
-        <h2 style={{ color: "#008AC7" }} data-aos="fade-right">
+        <h2 style={{ color: "#291495" }} data-aos="fade-right">
           <b>5. Reasonable cost & Doorstep service:</b>
         </h2>
 
@@ -546,7 +546,7 @@ const page = () => {
           <Col
             md={6} data-aos="flip-left"
             style={{
-              backgroundColor: "#008AC7",
+              backgroundColor: "#291495",
               color: "#FFF",
               padding: "30px",
             }}

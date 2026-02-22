@@ -5,21 +5,26 @@ import Certifications from "./compoents/Certifications";
 import Slider from "./compoents/Slider";
 import Video from "./compoents/Video";
 import Maps from "./compoents/Maps";
-import TyentLineAnimation from "./compoents/TyentLineAnimation";
 import dynamic from "next/dynamic";
-import WhyDrinkTyentWater from "./compoents/(Home)/WhyDrinkTyentWater";
 import minerals from "@/asserts/why ionizer/minerals.png";
 import puredrink from "@/asserts/health/puredrink.webp";
 import Molecular from "@/asserts/health/Molecular.webp";
 import alkaline from "@/asserts/health/Natural minerals.webp";
 import watersoda from "@/asserts/health/Micro-clustered water.webp";
-import HomeProduct from "./compoents/(Home)/HomeProduct";
+import Shop_by_category from "./(main_home_content)/Shop_by_category";
+import WhatsInside from "./(main_home_content)/WhatsInside";
+import Explore from "./(main_home_content)/Explore";
+import HumanRight from "./(main_home_content)/HumanRight";
+import RealScience from "./(main_home_content)/RealScience";
+import Needhelp from "./(main_home_content)/Needhelp";
+import Smarter_Upgrade from "./(main_home_content)/Smarter_Upgrade";
+import Why_People_choose_Tyent_Water from "./(main_home_content)/Why_People_choose_Tyent_Water"
 
 const TyentvsKAngan = dynamic(
   () => import("./compoents/(Home)/TyentvsKAngan"),
   {
     ssr: false,
-  }
+  },
 );
 
 const SlickSlider = dynamic(() => import("./compoents/SlickSlider"), {
@@ -30,13 +35,13 @@ const Form = dynamic(() => import("./compoents/Form/Form"), {
   ssr: false,
 });
 
-
 export const metadata = {
   title: "Tyent: Best Alkaline Water Ionizer in India",
-  description: "Discover Tyent, the best alkaline water machine in India. Get the best water ionizer in India with advanced Japanese technology for superior hydrogen-rich water.",
-  keywords: "best kangen water machine, best kangen water machine in india, kangen water machine online india, buy kangen water machine, alkaline water machine, water ionizer machine, alkaline water system, best water ionizer, ionizer machine, best alkaline water machine, ph water machine, alkaline water ionizer, alkaline water filter system, k8 water machine, Kangen SD501 water ionizer, water ionizer for home, home alkaline water system, best alkaline water machine for home, alkaline water system for house, whole house alkaline water system, best water ionizer machine, ionised water machine, alkaline water ionizer machine, whole house water ionizer, living water alkaline machine, best water ionizer for home, japanese water ionizer, commercial alkaline water machine, countertop water ionizer, hydrogen alkaline water machine, hydrogen water generator, buy alkaline water machine, best water alkalizer, commercial alkaline water machine for sale, top alkaline water machine, tyent usa water ionizer, best alkaline water ionizer machine, tyent water ionizer, tyent usa water ionizer, water ionizer and alkaline water machine, Enagic kangen SD501, kangen water machine, Under counter water ionizer, Enagic kangen Jr, Enagic kangen super SD501, Tyent NMP water ionizer, Tyent UCE PLUS water ionizer, Antioxidant water, Ionized alkaline water benefits",
+  description:
+    "Discover Tyent, the best alkaline water machine in India. Get the best water ionizer in India with advanced Japanese technology for superior hydrogen-rich water.",
+  keywords:
+    "best kangen water machine, best kangen water machine in india, kangen water machine online india, buy kangen water machine, alkaline water machine, water ionizer machine, alkaline water system, best water ionizer, ionizer machine, best alkaline water machine, ph water machine, alkaline water ionizer, alkaline water filter system, k8 water machine, Kangen SD501 water ionizer, water ionizer for home, home alkaline water system, best alkaline water machine for home, alkaline water system for house, whole house alkaline water system, best water ionizer machine, ionised water machine, alkaline water ionizer machine, whole house water ionizer, living water alkaline machine, best water ionizer for home, japanese water ionizer, commercial alkaline water machine, countertop water ionizer, hydrogen alkaline water machine, hydrogen water generator, buy alkaline water machine, best water alkalizer, commercial alkaline water machine for sale, top alkaline water machine, tyent usa water ionizer, best alkaline water ionizer machine, tyent water ionizer, tyent usa water ionizer, water ionizer and alkaline water machine, Enagic kangen SD501, kangen water machine, Under counter water ionizer, Enagic kangen Jr, Enagic kangen super SD501, Tyent NMP water ionizer, Tyent UCE PLUS water ionizer, Antioxidant water, Ionized alkaline water benefits",
 };
-
 
 const Home = () => {
   const cardDetails = [
@@ -52,7 +57,7 @@ const Home = () => {
         enhancing athletic performance, and supporting gut health too.
       `,
     },
-    
+
     {
       icon: watersoda,
       title: "Micro-clustered water",
@@ -79,7 +84,7 @@ const Home = () => {
         disease-causing acidic nature.
       `,
     },
-    
+
     {
       icon: minerals,
       title: "Natural minerals",
@@ -102,148 +107,23 @@ const Home = () => {
   ];
 
   return (
-    <div style={{width:'100%',  overflow: "hidden", position: 'relative' }}>
+    <div style={{ width: "100%", overflow: "hidden", position: "relative" }}>
       <Slider />
 
-    
-      <div className="section-spacing sectionSection">
-        <SectionTwo />
+      <div className="section-spacing">
+        <Shop_by_category />
       </div>
 
       <div className="section-spacing">
-        <Container>
-          <Row className="align-items-center">
-            <Col xs={12} md={3} className="text-start mb-3 mb-md-0">
-              <h2 style={{ fontWeight: 700 }} className="d-inline-block">
-                Why To Drink <span style={{ color: "#008AC7" }}>Tyent</span>{" "}
-                Water ?
-              </h2>
-            </Col>
-            <Col xs={12} md={9} className="text-end">
-              <TyentLineAnimation />
-            </Col>
-          </Row>
-          <Row className="g-4">
-            {cardDetails.map((card, index) => (
-              <Col
-                key={index}
-                data-aos={
-                  index === 0
-                    ? "fade-up"
-                    : index === 1
-                    ? "fade-right"
-                    : index === 2
-                    ? "fade-left"
-                    : "zoom-in"
-                }
-                xs={12}
-                sm={6}
-                md={index < 3 ? 4 : index === 3 ? 7 : 5}
-              >
-                <WhyDrinkTyentWater
-                  icon={card.icon}
-                  title={card.title}
-                  m
-                  content={card.content}
-                />{" "}
-                {/* Individual card */}
-              </Col>
-            ))}
-          </Row>
-        </Container>
+        <Explore />
       </div>
 
       <div className="section-spacing">
-        <WhyTyent />
+        <WhatsInside />
       </div>
 
       <div className="section-spacing">
-        <Container>
-          <Row>
-            <Col
-              md={6}
-              data-aos="fade-right" // Fade right animation for the left column
-              className="d-flex justify-content-center align-items-center"
-              style={{
-                backgroundColor: "#008AC7",
-                color: "#FFF",
-                aspectRatio: "1/1",
-              }}
-            >
-              <div style={{ padding: "60px" }}>
-                <h2 style={{ fontWeight: 600 }}>Why Tyent ?</h2>
-                <p>
-                  Tyent, a medical-grade water ionizer manufactured by TAEYOUNG
-                  E&T, is available in 86+ countries. Since more than 3 decades
-                  Tyent is known for its advanced Japanese technology, Tyent
-                  follows traditional marketing and offers end-to-end service
-                  with an in-house team handling demos, installations, and
-                  after-sales support, focusing customer satisfaction and brand
-                  trust.
-                </p>
-              </div>
-            </Col>
-            <Col
-              md={6}
-              data-aos="fade-left" // Fade left animation for the right column
-              className="d-flex justify-content-center align-items-center"
-              style={{
-                backgroundColor: "#f2f2f2",
-                color: "#000",
-                aspectRatio: "1/1",
-              }}
-            >
-              <div style={{ padding: "60px" }}>
-                <h2 style={{ fontWeight: 600 }}>What is Kangen ?</h2>
-                <p>
-                  Kangen, a medical-grade water ionizer manufactured by Enagic &
-                  Co, is available in 26+ countries., relies on an MLM business
-                  model, doubling prices as 49% of costs go to commissions for
-                  30 middlemen. Unlike other ionizers, Kangen lacks manpower for
-                  demo, installation and after-sales doorstep service globally,
-                  Focusing revenue generation over end customer satisfaction.
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-
-      <div className="section-spacing">
-        <p
-          className="text-center"
-          style={{
-            marginTop: "-20px",
-            fontWeight: 600,
-            fontSize: "clamp(24px, 5vw, 70px)", // 24px is the min, 5vw is preferred, 70px is the max
-            color: "#008AC7",
-          }}
-        >
-          Tyent
-          <span
-            style={{ color: "#7B7B7B", fontSize: "44px", fontWeight: "normal" }}
-          >
-            {" "}
-            VS{" "}
-          </span>{" "}
-          <span style={{ color: "#7B7B7B" }}>Kangen</span>
-        </p>
-        <TyentvsKAngan />
-      </div>
-
-      <div className="section-spacing">
-        <h2
-          style={{ color: "#008AC7", fontWeight: "600", textAlign: "center" }}
-        >
-          This Week’s Highlights
-        </h2>
-        <Container>
-          <HomeProduct />
-        </Container>
-      </div>
-
-      <div className="section-spacing">
-        <Certifications />
+        <Smarter_Upgrade />
       </div>
 
       <div className="section-spacing">
@@ -261,24 +141,30 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-        <h1
-          className="text-center"
-          style={{
-            fontSize: "clamp(24px, 5vw, 3rem)",
-            fontWeight: "bold",
-            color: "#333",
-          }}
-        >
-          {" "}
-          Our Valued Clients
-        </h1>
-        <br />
-
-        <SlickSlider />
+        <TyentvsKAngan />
       </div>
 
       <div className="section-spacing">
-        <Maps />
+        <HumanRight />
+      </div>
+
+      <div className="section-spacing">
+        <RealScience />
+      </div>
+
+
+      <div className="section-spacing">
+        <Why_People_choose_Tyent_Water />
+      </div>
+
+      
+
+      <div className="section-spacing">
+        <Certifications />
+      </div>
+
+      <div className="section-spacing">
+        <Needhelp />
       </div>
     </div>
   );

@@ -66,7 +66,7 @@ export default async function LocationPage({ params }) {
       {/* ================= HERO SECTION ================= */}
       <section
         className="text-white py-8"
-        style={{ backgroundColor: "#008ac7" }}
+        style={{ backgroundColor: "#291495" }}
       >
         <div className="container">
           <br/>
@@ -206,7 +206,7 @@ export default async function LocationPage({ params }) {
 
               <p className="text-muted">
                 Tyent is a globally recognized pioneer in hydrogen-rich alkaline
-                water ionizers, trusted across 86+ countries and recommended by
+                water ionizers, trusted across 123+ countries and recommended by
                 doctors, fitness experts, and wellness professionals worldwide.
                 Headquartered in South Korea and powered by advanced Japanese
                 engineering, Tyent is designed for Indian water conditions and

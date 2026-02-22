@@ -7,7 +7,7 @@ const PriceComp = () => {
     {
       title: "TYENT NMP-5",
       bgColor: "#c3e6fa",
-      color: "#008ac7",
+      color: "#291495",
       details: [
         { label: "Price:", value: "168,000/-" },
         { label: "Generates:", value: "7 Water types" },
@@ -31,7 +31,7 @@ const PriceComp = () => {
     {
       title: "TYENT NMP-7",
       bgColor: "#c3e6fa",
-      color: "#008ac7",
+      color: "#291495",
       details: [
         { label: "Price:", value: "205,000/-" },
         { label: "Generates:", value: "7 Water types" },
@@ -55,7 +55,7 @@ const PriceComp = () => {
     {
       title: "TYENT NMP-9",
       bgColor: "#c3e6fa",
-      color: "#008ac7",
+      color: "#291495",
       details: [
         { label: "Price:", value: "238,000/-" },
         { label: "Generates:", value: "7 Water types" },
@@ -79,7 +79,7 @@ const PriceComp = () => {
     {
       title: "TYENT NMP-11",
       bgColor: "#c3e6fa",
-      color: "#008ac7",
+      color: "#291495",
       details: [
         { label: "Price:", value: "272,000/-" },
         { label: "Generates:", value: "7 Water types" },

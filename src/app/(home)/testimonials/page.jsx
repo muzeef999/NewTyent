@@ -506,7 +506,7 @@ const IconTest = ({ name, icon, designation }) => {
       <h5 className="text-center mt-2" style={{ flexGrow: 1 }}>
         {name}
       </h5>
-      <p className="text-center mt-2" style={{ flexGrow: 1, color: "#008AC7" }}>
+      <p className="text-center mt-2" style={{ flexGrow: 1, color: "#291495" }}>
         {designation}
       </p>
     </div>
@@ -530,7 +530,7 @@ const Scientifically = ({ name, icon, designation }) => {
       <h5 className="text-center mt-2" style={{ flexGrow: 1 }}>
         {name}
       </h5>
-      <p className="text-center mt-2" style={{ flexGrow: 1, color: "#008AC7" }}>
+      <p className="text-center mt-2" style={{ flexGrow: 1, color: "#291495" }}>
         {designation}
       </p>
     </div>
@@ -570,7 +570,7 @@ const Page = () => {
         <br/>
         <h2 className="text-center">
           "
-          <span style={{ fontWeight: 600, color: "#008AC7" }}>
+          <span style={{ fontWeight: 600, color: "#291495" }}>
             Trusted by Icons:
           </span>{" "}
           Influential Voices on Tyent Water"
@@ -590,7 +590,7 @@ const Page = () => {
         <br />
         <h2 className="text-center">
           "
-          <span style={{ fontWeight: 600, color: "#008AC7" }}>
+          <span style={{ fontWeight: 600, color: "#291495" }}>
             Scientifically Proven:
           </span>{" "}
           Trusted by Leading Medical Professionals"

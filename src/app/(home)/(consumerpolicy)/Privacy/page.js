@@ -25,7 +25,7 @@ const page = () => {
             borderBottom: "2px solid #ccc",
             paddingBottom: "12px",
             marginBottom: "35px",
-            color: "#008ac7",
+            color: "#291495",
           }}
         >
           Privacy Policy

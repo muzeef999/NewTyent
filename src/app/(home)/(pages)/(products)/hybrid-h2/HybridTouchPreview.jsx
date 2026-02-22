@@ -76,7 +76,7 @@ const HybridTouchPreview = () => {
   return (
     <div>
       <center>
-        <h2 style={{ color: "#008AC7", fontWeight: "600" }}>
+        <h2 style={{ color: "#291495", fontWeight: "600" }}>
           LCD Display and Touch Pad Overview
         </h2>
 

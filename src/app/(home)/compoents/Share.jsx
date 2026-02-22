@@ -8,12 +8,12 @@ const Share = ({data}) => {
             border: 0,
             margin:0,
             padding:0,
-            color:'#008AC7 !important',
+            color:'#291495 !important',
             width:'100%',
           },
   
   copyContainer: {
-    color:'#008AC7 !important',
+    color:'#291495 !important',
     background: '#eef7fc',
     border:'none'
   },
@@ -22,7 +22,7 @@ const Share = ({data}) => {
     fontWeight: 'bold', // Make the URL bold for better visibility
   },
   title: {
-    color: '#008AC7',
+    color: '#291495',
     fontStyle: 'italic'
   }
 };

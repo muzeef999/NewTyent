@@ -10,7 +10,7 @@
 
 
 .accordion-button.active-header {
-  background-color: #008ac7; 
+  background-color: #291495; 
   color: #fff; 
   border-color: #007bb5; 
 }
@@ -42,13 +42,13 @@
   align-items: center;
   display: flex; 
   background-color:#f8fbfe;
-  color:#008AC7;
-  border: 1px solid #008AC7;
+  color:#291495;
+  border: 1px solid #291495;
 }
 
 .saveanddelivery{
     color: #fff;
-    background-color: #008ac7;
+    background-color: #291495;
     border-radius: 8px;
     
     border: none;
@@ -60,12 +60,12 @@
 }
 
 .saveanddelivery:hover {
-  color: #008ac7;
+  color: #291495;
   background-color: transparent;
   border-radius: 8px 16px;
   
   border: none;
-  border: 1px solid #008ac7;
+  border: 1px solid #291495;
   padding: 8px;
   justify-content: center;
   align-items: center;
@@ -79,7 +79,7 @@
   background-color: #FFF;
   border: 0;
   padding: 10px 20px;
-  color: #008AC7;
+  color: #291495;
 }
 
 .cancel:hover{
@@ -87,7 +87,7 @@
   background-color: #FFF;
   border: 0;
   padding: 10px 20px;
-  color: #008AC7;
+  color: #291495;
 }
 
 .cancel:active{
@@ -95,7 +95,7 @@
   background-color: #FFF;
   border: 0;
   padding: 10px 20px;
-  color: #008AC7;
+  color: #291495;
 }
 
 

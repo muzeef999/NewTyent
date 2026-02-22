@@ -183,7 +183,7 @@ const CertificationsPage = () => {
                   </div>
                   
                 </div>
-                <p className="text-center  mt-2" style={{ color: "#008AC7", width:"90%" }}>
+                <p className="text-center  mt-2" style={{ color: "#291495", width:"90%" }}>
                     <b>{image.alt}</b>
                   </p>
               </Col>

@@ -8,7 +8,7 @@
     margin-bottom: 10px;
     background-color: #e9f4fb;
     border-radius: 50%;
-    border: 1px solid #008AC7;
+    border: 1px solid #291495;
   }
   
   
@@ -57,7 +57,7 @@
   .text-benfits-overlay{
     position: absolute;
     right: 0%;
-    background-color: #008AC7;
+    background-color: #291495;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     color: #FFF;
@@ -128,7 +128,7 @@
   left: 0;
   width: 0;
   height: 4px;
-  background-color: #008ac7; /* Line color */
+  background-color: #291495; /* Line color */
   transition: width 0.3s ease; /* Smooth animation */
 }
 

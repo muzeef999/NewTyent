@@ -261,7 +261,7 @@ const page = () => {
         <div className="section-spacing">
           <div>
             <h2 data-aos="fade-up" className="text-center m-3">
-              <b style={{ color: "#008AC7" }}>Daily Drinking Alkaline water</b>
+              <b style={{ color: "#291495" }}>Daily Drinking Alkaline water</b>
             </h2>
             <h4 className="text-center m-0" data-aos="fade-up">
               Do not drink during food and medicine

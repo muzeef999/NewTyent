@@ -77,7 +77,7 @@ const Mission = () => {
 <div className='container'>
 <center>
   <div>
-  <h1 className='text-center' style={{ color: '#008AC7', fontWeight: '600',margin:'0', display: 'inline-block', verticalAlign:'middle',}}>
+  <h1 className='text-center' style={{ color: '#291495', fontWeight: '600',margin:'0', display: 'inline-block', verticalAlign:'middle',}}>
       Mission
   </h1>  
 </div>
@@ -145,7 +145,7 @@ const Mission = () => {
           <path
             id="path"
             d="M5 529.156C44.5069 466.414 212.492 199.232 303 210.336C447.905 228.114 444.885 337.718 471.829 405.73C494.615 452.472 526.151 554.729 603.086 589.814C680.02 624.899 787.5 483.336 804.779 401.024C823.059 341.733 875.5 212.655 962.546 216.94C1049.59 221.225 1111.22 337.592 1134.09 401.024C1150.38 451.155 1202 584.155 1282.76 589.814C1368.1 595.793 1438.19 476.753 1466 401.024C1489.65 343.114 1545.98 238.437 1620 230.155C1679.46 223.503 1745.77 297.985 1784.25 361.955C1801.07 389.912 1814.4 420.73 1828.48 450.157C1856.08 507.805 1901.21 600.772 1908 598.156"
-            stroke="#008AC7"
+            stroke="#291495"
             strokeWidth="4"
             fill="none"
             strokeDasharray="9,9"
@@ -153,7 +153,7 @@ const Mission = () => {
 
           {/* Circle group with text inside it */}
           <g className="circle-group">
-            <circle cx="1650" cy="250" r="100" fill="#008AC7" />
+            <circle cx="1650" cy="250" r="100" fill="#291495" />
             <text
                   className="circle-text-1"
                   x="1650"
@@ -171,7 +171,7 @@ const Mission = () => {
           </g>
 
           <g className="circle-group">
-            <circle cx="1295" cy="550" r="100" fill="#008AC7" />
+            <circle cx="1295" cy="550" r="100" fill="#291495" />
             <text
                   className="circle-text-1"
                   x="1295"
@@ -189,7 +189,7 @@ const Mission = () => {
           </g>
 
           <g className="circle-group">
-            <circle cx="989" cy="210" r="100" fill="#008AC7" />
+            <circle cx="989" cy="210" r="100" fill="#291495" />
             <text
                   className="circle-text-1"
                   x="989"
@@ -206,7 +206,7 @@ const Mission = () => {
           </g>
 
           <g className="circle-group">
-            <circle cx="600" cy="550" r="100" fill="#008AC7" />
+            <circle cx="600" cy="550" r="100" fill="#291495" />
             <text
                   className="circle-text-1"
                   x="600"
@@ -223,7 +223,7 @@ const Mission = () => {
           </g>
 
           <g className="circle-group">
-            <circle cx="280" cy="210" r="100" fill="#008AC7" />
+            <circle cx="280" cy="210" r="100" fill="#291495" />
             <text
                   className="circle-text-1"
                   x="280"

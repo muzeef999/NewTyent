@@ -167,7 +167,7 @@ function CustomizedTables() {
               textAlign: "center",
               fontWeight: "bold",
               lineHeight: "1.2",
-              color: "#008AC7",
+              color: "#291495",
             }}
           >
             <span
@@ -197,7 +197,7 @@ function CustomizedTables() {
     </tr>
     {rows.map((row, index) => (
       <tr key={index}>
-        <td data-aos="flip-left" style={{ width: "26%", color: "#008AC7" }}>
+        <td data-aos="flip-left" style={{ width: "26%", color: "#291495" }}>
           <strong>{row.description}</strong>
         </td>
 

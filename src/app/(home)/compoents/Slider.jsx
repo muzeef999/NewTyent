@@ -2,109 +2,74 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import BannerOneDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop.webp";
+import BannerOneDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png";
 import BannrrOneMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg.webp";
-import BannerTwoDesktop from "@/asserts/homeBanners/banner2/desktop_banner_bg.webp";
-import BannerTwoMobile from "@/asserts/homeBanners/banner2/mobile_banner_bg.webp";
 import "@/app/style/ResponsiveBanner.css";
-import Banner1_sky from "@/asserts/homeBanners/home_Banner1_Sky.webp";
-
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
-import Display from "../(pages)/(products)/hybrid-h2/Display";
+import "../../style/slider.css"
+
+const words = ["filtered", "purified", "hydration", "alkaline", "healthy"];
 
 const Slider = () => {
-  const [isMorning, setIsMorning] = useState(true);
+  const [index, setIndex] = useState(0);
 
+  // word change every 2 seconds
   useEffect(() => {
-    const hour = 10;
-    setIsMorning(hour >= 6 && hour < 18); // 6AM - 6PM = Morning
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2000);
+    return () => clearInterval(interval);
   }, []);
 
-  const selectedDesktopBanner = isMorning ? BannerOneDesktop : BannerTwoDesktop;
-  const selectedMobileBanner = isMorning ? BannrrOneMobile : BannerTwoMobile;
-  const altText = isMorning ? "Morning Banner" : "Evening Banner";
-
   return (
-    <div className="container-fluid p-0">
-      {/* Desktop Banner */}
-      <div className="d-none d-md-block position-relative">
-        {/* Background image */}
-        <Image
-          src={selectedDesktopBanner}
-          alt={altText}
-          layout="responsive"
-          priority
-          placeholder="blur"
-          className="w-100 h-auto"
-        />
+    <div className="banner-wrapper">
 
-        {/* Component on top of image */}
-        <div>
-          {isMorning ? (
-            <div className="responsive-container">
-              <NmpDispalayfinal />
-            </div>
-          ) : (
-            <div className="responsive-container-hybrid">
-              <Display />
-            </div>
-          )}
+      {/* Desktop */}
+      <div className="banner-desktop">
+        <Image src={BannerOneDesktop} alt="banner" priority className="banner-img"/>
+
+        <div className="banner-content">
+      <span className="offer-badge">No.1 Hydrogen Brand</span>
+
+          {/* 🔥 Animated Heading */}
+          <h1 className="main-heading">
+            <span className="fixed-text">Not just</span>
+            <span key={index} className="animated-word">{words[index]}</span>
+          </h1>
+
+          <p className="sub-text">
+            Experience the healthiest hydrogen water on earth
+          </p>
+
+          <button className="shop-btn">Shop the collection</button>
         </div>
 
-
-        <div className="home-banner-text">
-          <h1
-            style={{ fontSize: "clamp(30px, 5vw, 60px)" }}
-            className="home_banner1_text1"
-          >
-            Hydration That Heals
-          </h1>
-          <h1
-            style={{ fontSize: "clamp(16px, 4vw, 26px)" }}
-            className="home_banner2_text1"
-          >
-            Anti-Inflammatory Benefits{" "}
-            <span>Backed by Science powered by Tyent</span>
-          </h1>
+        <div className="responsive-container">
+          <NmpDispalayfinal />
         </div>
       </div>
 
-      {/* Mobile Banner */}
-      <div className="d-block d-md-none position-relative">
-        <Image
-          src={selectedMobileBanner}
-          alt={altText}
-          layout="responsive"
-          priority
-          placeholder="blur"
-          className="w-100 h-auto"
-        />
+      {/* Mobile */}
+      <div className="banner-mobile">
+        <Image src={BannrrOneMobile} alt="banner" priority className="banner-img"/>
 
-        <div>
-          {isMorning ? (
-            <div className="responsive-container">
-              <NmpDispalayfinal />
-            </div>
-          ) : (
-            <div className="responsive-container-hybrid">
-              <Display />
-            </div>
-          )}
+        <div className="banner-content mobile">
+          <span className="offer-badge">Save up to 33% today</span>
+
+          <h1 className="main-heading">
+            <span className="fixed-text">Not just</span>
+            <span key={index} className="animated-word">{words[index]}</span>
+          </h1>
+
+          <p className="sub-text">
+            Experience the healthiest hydrogen water on earth
+          </p>
+
+          <button className="shop-btn">Shop the collection</button>
         </div>
 
-        <div className="home-banner-text">
-          <h1
-            style={{ fontSize: "clamp(25px, 5vw, 50px)" }}
-            className="home_banner1_text1"
-          >
-            Drink Life, Not Just Water!
-          </h1>
-          <h1
-            style={{ fontSize: "clamp(20px, 4vw, 35px)" }}
-            className="home_banner2_text1"
-          >
-            Boost Immunity with <span>Tyent Water</span>
-          </h1>
+        <div className="responsive-container">
+          <NmpDispalayfinal />
         </div>
       </div>
     </div>

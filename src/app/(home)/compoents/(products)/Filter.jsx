@@ -16,7 +16,7 @@ const Filter = () => {
       <h2
         className="text-center mb-4"
         style={{
-          color: "#008AC7",
+          color: "#291495",
           fontWeight: "600",
           fontSize: "2rem", // Default for large screens
         }}
@@ -44,7 +44,7 @@ const Filter = () => {
               <div>
               <FaDroplet
                   size={20} // This is the preferred way to set the size
-                  color="#008AC7"
+                  color="#291495"
                   style={{
                     margin: "5px 10px 0 0",
                   }}                

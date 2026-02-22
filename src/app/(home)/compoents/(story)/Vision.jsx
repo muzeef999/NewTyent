@@ -8,7 +8,7 @@ const Vision = () => {
           <h1
             className="text-center"
             style={{
-              color: "#008AC7",
+              color: "#291495",
               fontWeight: "600",
               margin: "0",
               display: "inline-block",

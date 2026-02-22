@@ -74,7 +74,7 @@ const ShippingAddresBar = () => {
             padding: "10px 20px",
             width: "100%",
             height:'40px',
-            backgroundColor: "#008AC7",
+            backgroundColor: "#291495",
             zIndex:'999'
           }}
         >

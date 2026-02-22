@@ -78,7 +78,7 @@ const page = () => {
         <Col md={6}  data-aos="fade-left" className='d-flex justify-content-center align-items-center'>
           <div>
             <h5 className='m-0'>Who We Are?</h5>
-            <h3 style={{fontWeight:'600', fontSize:'40px', color:'#008ac7'}} className='m-0'>About Us</h3>
+            <h3 style={{fontWeight:'600', fontSize:'40px', color:'#291495'}} className='m-0'>About Us</h3>
             <br/>
             <p>
               Tyent India is a leading provider of premium water ionizers, hydrogen
