@@ -22,15 +22,15 @@ const leftData = [
 const rightData = [
   {
     title: "Natural minerals",
-    text: "Tyent ionized hydrogen-rich alkaline water is rich in alkaline minerals such as calcium, magnesium, potassium, and sodium.",
+    text: "Tyent ionized hydrogen-rich alkaline water is rich in alkaline minerals such as calcium, magnesium, potassium, and sodium. Alkaline minerals help in promoting bone health, aiding muscle function, supporting cardiovascular health, boosting immune function, and enhancing metabolism.",
   },
   {
     title: "Pure Healthy water",
-    text: "The Tyent water ionizer delivers the purest and safest healthy water, free from bacteria, nano-plastics, contaminants and chlorine.",
+    text: "The Tyent water ionizer, equipped with .01-micron filtration, delivers the purest and safest healthy water, free from bacteria, nano-viruses, nano-plastics, contaminants, chlorine, and more.",
   },
   {
     title: "Japanese Technology",
-    text: "Every Tyent water ionizer features advanced Japanese technology plates, delivering pure healthy water without chemicals.",
+    text: "Every Tyent water ionizer features advanced Japanese technology plates from Permelac, Japan, and a patented SMPS PLUS power supply, delivering pure, healthy water without the use of chemicals, enhancers, or salts.",
   },
 ];
 

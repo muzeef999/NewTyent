@@ -14,3 +14,16 @@
   opacity: 0.2;
   white-space: nowrap;
  }
+
+
+ .image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.compare-img {
+  object-fit: cover;   /* makes it look premium */
+}

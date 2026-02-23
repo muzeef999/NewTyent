@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./explore.css";
+import Link from "next/link";
 
 const products = [
   {
@@ -12,6 +13,7 @@ const products = [
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -950*",
     hydrogen: "Hydrogen range: upto -1600 PPB*",
+    link: "/nmp-7",
   },
   {
     name: "Tyent NMP-11",
@@ -20,6 +22,7 @@ const products = [
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1150*",
     hydrogen: "Hydrogen range: upto -1800 PPB*",
+    link: "/nmp-11",
   },
   {
     name: "Tyent UCE-13 PLUS",
@@ -28,26 +31,23 @@ const products = [
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1250*",
     hydrogen: "Hydrogen range: upto -1800 PPB*",
+    link: "/uce-13-plus",
   },
 ];
 
 const Explore = () => {
   return (
     <div className="container">
-      <center>
-        <h2 className="bg-heading-text">Explore</h2>
-        <p
-          style={{ fontSize: "20px", marginTop: "-20px" }}
-          className="fw-semibold"
-        >
-          Advanced Health Protection with Doorstep Installation & Service
-        </p>
-      </center>
+      <div className="text-center mb-5">
+        <h1 className="bg-one-cc-1">Explore</h1>
+        <h3 className="fw-bold">our fastest selling products</h3>
+      </div>
       <div className="row g-5">
         {products.map((item, index) => (
           <div key={index} className="col-12 col-md-6 col-lg-4">
-            <div className="product-card">
+            <div className="product-card" href={item.link}>
               {/* Product Image */}
+              <Link href={item.link} style={{cursor:'pointer', textDecoration:'none', color:'#000'}}>
               <div className="product-img-wrapper">
                 <Image
                   src={item.img}
@@ -73,6 +73,7 @@ const Explore = () => {
                 <p>{item.orp}</p>
                 <p>{item.hydrogen}</p>
               </div>
+              </Link>
             </div>
           </div>
         ))}

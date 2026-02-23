@@ -4,24 +4,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./shopCategory.css";
 import Image from "next/image";
 
+
+
+
 const categories = [
   {
     title: "Above-counter Ionizers",
     desc: "Sleek & modern design, easy-to-install",
     img: "/home/nmp-9.png",
-    link: "/category/above-counter",
+    link: "/counter-top-water-ionizers",
   },
   {
     title: "Under the counter ionizers",
     desc: "Ultra premium and aesthetically designed",
     img: "/home/uce.png",
-    link: "/category/under-counter",
+    link: "/under-counter-water-ionizers",
   },
   {
     title: "Filters",
     desc: "High-quality replacement filters",
     img: "/home/filter.png",
-    link: "/category/filters",
+    link: "/0.1-micron-filters",
   },
 ];
 
@@ -39,7 +42,7 @@ const Shop_by_category = () => {
             <div key={index} className="col-12 col-md-6 col-lg-4">
               <a href={item.link} className="text-decoration-none">
                 <div className="category-card text-center p-4">
-                  <div  style={{width:'70%'}}>
+                  <div  style={{width:'70%'}} className="mx-auto">
                     <Image
                       src={item.img}
                       alt={item.title}

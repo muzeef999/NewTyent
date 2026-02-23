@@ -45,52 +45,55 @@ const features = [
 
 export default function Smarter_Upgrade() {
   return (
-
-      <div className="container">
-        <div className="text-center mb-5">
-          <h1 className="bg-one-cc">Smarter Upgrade</h1>
-          <h3 className="fw-bold">Your Wellness Starts with Tyent</h3>
-          <p>Thinking of a water ionizer? Choose Tyent - the world’s most advanced, upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim next-gen designs, and updated Japanese technology, Tyent is preferred in 86+ countries for its unmatched innovation and customer satisfaction.</p>
-        </div>
-        <div className="row g-4">
-          {features.map((item, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
-              <Link
-                href={item.link}
-                target="_blank"
-                className="feature-card h-100"
-                style={{
-                  cursor: "pointer",
-                  textDecoration: "none",
-                  color: "#000",
-                }}
-              >
-                <div style={{ width: "100%" }}>
-                  <Image
-                    src={item.img}
-                    layout="responsive"
-                    alt="product"
-                    width={450}
-                    height={250}
-                    className="compare-img"
-                  />
-                </div>
-
-                <div className="p-3">
-                  <h6 className="fw-bold text-primary mb-2">{item.title}</h6>
-                  <p>{item.desc}</p>
-
-                  <ul className="ps-3 mb-0">
-                    {item.points.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+    <div className="container">
+      <div className="text-center mb-5">
+        <h1 className="bg-one-cc">Smarter Upgrade</h1>
+        <h3 className="fw-bold">Your Wellness Starts with Tyent</h3>
+        <p>
+          Thinking of a water ionizer? Choose Tyent - the world’s most advanced,
+          upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim
+          next-gen designs, and updated Japanese technology, Tyent is preferred
+          in 86+ countries for its unmatched innovation and customer
+          satisfaction.
+        </p>
       </div>
-  
+      <div className="row g-4">
+        {features.map((item, index) => (
+          <div key={index} className="col-lg-4 col-md-6">
+            <Link
+              href={item.link}
+              target="_blank"
+              className="feature-card h-100"
+              style={{
+                cursor: "pointer",
+                textDecoration: "none",
+                color: "#000",
+              }}
+            >
+              <div className="image-wrapper">
+                <Image
+                  src={item.img}
+                  alt="product"
+                  fill
+                  className="compare-img"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+
+              <div className="p-3">
+                <h6 className="fw-bold text-primary mb-2">{item.title}</h6>
+                <p>{item.desc}</p>
+
+                <ul className="ps-3 mb-0">
+                  {item.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
