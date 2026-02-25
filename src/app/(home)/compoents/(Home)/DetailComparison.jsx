@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
+import "./detailComparison_one.css";
 
 const DetailComparison = () => {
   const products = [
@@ -40,7 +42,7 @@ const DetailComparison = () => {
     {
       id: 4,
       name: "KANGEN SD501DX",
-      price: 310000,
+      price: 278000,
       generates: "5 Water types",
       plates: 7,
       orp: -631,
@@ -97,74 +99,121 @@ const DetailComparison = () => {
   const formatPrice = (price) =>
     new Intl.NumberFormat("en-IN").format(price);
 
+  // 🔥 STEP 1: Group into PAIRS (2 products each)
+  const productPairs = [];
+  for (let i = 0; i < products.length; i += 2) {
+    productPairs.push(products.slice(i, i + 2));
+  }
+
+  // 🔥 STEP 2: Group pairs into ROWS (2 pairs per row)
+  const rows = [];
+  for (let i = 0; i < productPairs.length; i += 2) {
+    rows.push(productPairs.slice(i, i + 2));
+  }
+
   return (
-    <div className="container py-5">
-      <h2 className="text-center mb-5 fw-bold">
+    <section className="comparison-section-one">
+      <h2 className="comparison-title-one">
         Detailed Product Comparison
       </h2>
 
-      <div className="row">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="col-md-6 col-lg-3 mb-4"
-          >
-            <div
-              className={`card h-100 shadow-sm ${
-                product.highlight ? "border-success" : ""
-              }`}
-            >
-              <div className="text-center p-3">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={220}
-                  height={220}
-                  className="img-fluid"
-                />
-              </div>
+      {rows.map((row, rowIndex) => (
+        <div key={rowIndex} className="comparison-row-one">
+          {row.map((pair, pairIndex) => (
+            <div key={pairIndex} className="pair-block-one">
+              {pair.map((product) => (
+                <div key={product.id} className="compare-card-one">
+                  <div className="image-wrapper">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="compare-img"
+                    />
+                  </div>
 
-              <div className="card-body">
-                <h6 className="fw-bold text-center">
-                  {product.name}
-                </h6>
+                  <h6 className="product-name-one">
+                    {product.name}
+                  </h6>
 
-                <ul className="list-group list-group-flush mt-3">
-                  <li className="list-group-item d-flex justify-content-between">
-                    <span>Price</span>
-                    <span className="fw-bold">
-                      ₹{formatPrice(product.price)}/-
-                    </span>
-                  </li>
+                  <ul className="feature-list-one">
+                    <li>
+                      <span className="left-one">
+                        {product.highlight ? (
+                          <FaThumbsUp className="icon good-icon" />
+                        ) : (
+                          <FaThumbsDown className="icon bad-icon" />
+                        )}
+                        Price
+                      </span>
+                      <span className="right-one">
+                        ₹{formatPrice(product.price)}/-
+                      </span>
+                    </li>
 
-                  <li className="list-group-item d-flex justify-content-between">
-                    <span>Generates</span>
-                    <span>{product.generates}</span>
-                  </li>
+                    <li>
+                      <span className="left-one">
+                        {product.highlight ? (
+                          <FaThumbsUp className="icon good-icon" />
+                        ) : (
+                          <FaThumbsDown className="icon bad-icon" />
+                        )}
+                        Generates
+                      </span>
+                      <span className="right-one">
+                        {product.generates}
+                      </span>
+                    </li>
 
-                  <li className="list-group-item d-flex justify-content-between">
-                    <span>Plates</span>
-                    <span>{product.plates}</span>
-                  </li>
+                    <li>
+                      <span className="left-one">
+                        {product.highlight ? (
+                          <FaThumbsUp className="icon good-icon" />
+                        ) : (
+                          <FaThumbsDown className="icon bad-icon" />
+                        )}
+                        Plates
+                      </span>
+                      <span className="right-one">
+                        {product.plates}
+                      </span>
+                    </li>
 
-                  <li className="list-group-item d-flex justify-content-between">
-                    <span>ORP</span>
-                    <span>{product.orp}</span>
-                  </li>
+                    <li>
+                      <span className="left-one">
+                        {product.highlight ? (
+                          <FaThumbsUp className="icon good-icon" />
+                        ) : (
+                          <FaThumbsDown className="icon bad-icon" />
+                        )}
+                        ORP
+                      </span>
+                      <span className="right-one">
+                        {product.orp}
+                      </span>
+                    </li>
 
-                  <li className="list-group-item">
-                    <strong>Warranty:</strong>
-                    <div className="small text-muted mt-1">
-                      {product.warranty}
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                    <li>
+                      <span className="left-one">
+                        {product.highlight ? (
+                          <FaThumbsUp className="icon good-icon" />
+                        ) : (
+                          <FaThumbsDown className="icon bad-icon" />
+                        )}
+                        Warranty
+                      </span>
+                      <span className="right-one small-text">
+                        {product.warranty}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+          ))}
+        </div>
+      ))}
+    </section>
   );
 };
 

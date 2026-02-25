@@ -19,11 +19,15 @@
  .image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 220px; 
   border-radius: 20px;
   overflow: hidden;
 }
 
 .compare-img {
-  object-fit: cover;   /* makes it look premium */
+  object-fit: cover;  
+  object-position: center;
 }
+
+
+

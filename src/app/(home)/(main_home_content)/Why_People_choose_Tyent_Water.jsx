@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 import "./whyTyent.css";
+import Link from "next/link";
 
 const Card = ({ img, title, desc }) => (
   <div className="why-card text-center">
@@ -11,7 +12,7 @@ const Card = ({ img, title, desc }) => (
 
     <h4 className="why-title">{title}</h4>
     <p className="why-desc">{desc}</p>
-    <a href="#" className="why-link">Click here</a>
+    <Link href="/benefits" className="why-link">Click here</Link>
   </div>
 );
 
@@ -34,7 +35,7 @@ const Why_People_choose_Tyent_Water = () => {
 
           <Col md={4}>
             <Card
-              img="/whyTent/Increase_energy.jpg"
+              img="/whyTent/Promotes_Weight_loss.jpg"
               title="Promotes Weight loss"
               desc="Many of our customers report increased weight loss."
             />

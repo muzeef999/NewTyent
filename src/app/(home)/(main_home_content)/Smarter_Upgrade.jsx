@@ -75,8 +75,8 @@ export default function Smarter_Upgrade() {
                   src={item.img}
                   alt="product"
                   fill
+                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="compare-img"
-                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
 

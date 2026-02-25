@@ -38,7 +38,7 @@ const products = [
 const Explore = () => {
   return (
     <div className="container">
-      <div className="text-center mb-5">
+      <div className="text-center">
         <h1 className="bg-one-cc-1">Explore</h1>
         <h3 className="fw-bold">our fastest selling products</h3>
       </div>
