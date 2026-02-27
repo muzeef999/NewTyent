@@ -20,14 +20,14 @@ const Comparsion = () => {
 
         {/* ===== TABS ===== */}
         <div className="cmp-tabs">
-          <span
+          <span  style={{fontSize:'25px'}}
             className={`cmp-tab ${tab === "overview" ? "active" : ""}`}
             onClick={() => setTab("overview")}
           >
             Technical Overview
           </span>
 
-          <span
+          <span style={{fontSize:'25px'}}
             className={`cmp-tab ${tab === "detail" ? "active" : ""}`}
             onClick={() => setTab("detail")}
           >

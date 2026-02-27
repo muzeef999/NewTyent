@@ -6,7 +6,7 @@ import BannerOneDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Deskt
 import BannrrOneMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg.webp";
 import "@/app/style/ResponsiveBanner.css";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
-import "../../style/slider.css"
+import "../../style/slider.css";
 
 const words = ["filtered", "purified", "hydration", "alkaline", "healthy"];
 
@@ -23,18 +23,24 @@ const Slider = () => {
 
   return (
     <div className="banner-wrapper">
-
       {/* Desktop */}
       <div className="banner-desktop">
-        <Image src={BannerOneDesktop} alt="banner" priority className="banner-img"/>
+        <Image
+          src={BannerOneDesktop}
+          alt="banner"
+          priority
+          className="banner-img"
+        />
 
         <div className="banner-content">
-      <span className="offer-badge">No.1 Hydrogen Brand</span>
+          <span className="offer-badge">World's No.1 Brand</span>
 
           {/* 🔥 Animated Heading */}
           <h1 className="main-heading">
             <span className="fixed-text">Not just</span>
-            <span key={index} className="animated-word">{words[index]}</span>
+            <span key={index} className="animated-word">
+              {words[index]}
+            </span>
           </h1>
 
           <p className="sub-text">
@@ -51,14 +57,21 @@ const Slider = () => {
 
       {/* Mobile */}
       <div className="banner-mobile">
-        <Image src={BannrrOneMobile} alt="banner" priority className="banner-img"/>
+        <Image
+          src={BannrrOneMobile}
+          alt="banner"
+          priority
+          className="banner-img"
+        />
 
         <div className="banner-content mobile">
           <span className="offer-badge">Save up to 33% today</span>
 
           <h1 className="main-heading">
             <span className="fixed-text">Not just</span>
-            <span key={index} className="animated-word">{words[index]}</span>
+            <span key={index} className="animated-word">
+              {words[index]}
+            </span>
           </h1>
 
           <p className="sub-text">

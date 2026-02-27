@@ -91,8 +91,7 @@ export default async function LocationPage({ params }) {
               {/* Distributor Info Below Heading */}
               {(locationName === "Kochi" || locationName === "Kerala") && (
                 <p className="fw-medium">
-                  <b>Authorised master distributor :</b> Crystal H2O and
-                  Hydromax Water Services
+                  <b>Authorised master distributor :</b> HYDROMAX WATER SYSTEMS & CRYSTAL H2O
                 </p>
               )}
 

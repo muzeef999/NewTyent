@@ -2,16 +2,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./realScience.css";
+import "@/app/style/AppBar.css"
 
 const RealScience = () => {
   return (
-    <section className="science-section py-5">
       <div className="container">
         {/* Heading */}
-        <div className="text-center mb-5">
-          <h1 className="bg-heading-text">The Real Science</h1>
-          <h3 className="fw-bold">Behind Our Products</h3>
-          <p className="subtitle">
+        <div className="text-center">
+          <h1 className="bg-heading-text-two-main">The Real Science</h1>
+          <h3 className="fw-bold subtitle-tight">Behind Our Products</h3>
+          <p className="sub-title-below">
             Confused between Water Ionizer and Hydrogen generator? <br/>
             Learn the facts, understand the difference, and choose with clarity.
           </p>
@@ -24,10 +24,7 @@ const RealScience = () => {
             <div className="science-card light-card h-100">
               <h4 className="fw-bold mb-3">What is a Water Ionizer?</h4>
               <p>
-                A water ionizer is a smart device that converts regular water
-                into antioxidant-rich, alkaline, hydrogen-infused water through
-                advanced electrolysis. It balances pH, supports cellular health,
-                reduces oxidative stress and supports overall wellness.
+               A water ionizer is a smart device that converts regular water into antioxidant-rich, alkaline, hydrogen-infused water through advanced electrolysis. It has magical combination of both alkalinity & selective anti-oxidant molecular hydrogen. Due to its magical combination it enhances hydration, boosts pH, supports cellular health, reduces oxidative stress, and supports overall energy. It’s the smartest upgrade for your drinking water - pure, energized, and optimized for modern wellness for every day use.
               </p>
             </div>
           </div>
@@ -39,17 +36,13 @@ const RealScience = () => {
                 What is a Hydrogen Generator?
               </h4>
               <p className="text-white">
-                A hydrogen generator uses advanced PEM technology to infuse pure
-                molecular hydrogen (H₂) into water without changing its pH.
-                Ideal for individuals on kidney dialysis or high creatinine.
-                Delivers clean hydrogen in every sip without alkalinity.
+              A hydrogen generator uses advanced PEM (Proton Exchange Membrane) technology to infuse pure molecular hydrogen (H₂) into water without changing its pH. This hydrogen-rich water supports cellular health, reduces oxidative stress, and boosts daily energy. Unlike ionizers, it does not neutralize acidity. It’s a compact wellness device - ideal for individuals on kidney dialysis or with high creatinine - delivering clean, potent hydrogen in every sip, without alkalinity.
               </p>
             </div>
           </div>
 
         </div>
       </div>
-    </section>
   );
 };
 

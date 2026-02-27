@@ -1,8 +1,4 @@
-/* ===== SECTION ===== */
-.cmp-section {
-  background: #f6f7f9;
-  padding: 70px 0;
-}
+
 
 /* ===== TABS ===== */
 .cmp-tabs {
@@ -79,22 +75,4 @@
   .cmp-card {
     padding: 30px 22px;
   }
-}
-
-
-.bg-heading-text-two
- {
-   font-size: 80px;
-   font-weight: 800;
-  background: linear-gradient(
-  180deg,
-  #0757e2 0%,
-  #9ec5fe 60%,
-  #ffffff 100%
-);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.2;
-  white-space: nowrap;
- }
+} 

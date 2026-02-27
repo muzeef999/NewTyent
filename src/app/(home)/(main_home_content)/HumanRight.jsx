@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./humanRight.css";
+import "@/app/style/AppBar.css" 
 
 const stats = [
   {
@@ -25,14 +26,13 @@ const stats = [
 
 const HumanRight = () => {
   return (
-    <section className="human-section py-5">
-      <div className="container text-center">
-        <div className="text-center mb-5">
-          <h1 className="bg-heading-text">Human Right</h1>
-          <h3 className="fw-bold">
+      <div className="container">
+        <div className="text-center">
+          <h1 className="bg-heading-text-two-main">Human Right</h1>
+          <h3 className="fw-bold subtitle-tight">
             Clean & healthy water shouldn't be a luxury.
           </h3>
-          <p>
+          <p className="sub-title-below">
             With rising contamination, microplastics, and declining water
             quality, every family deserves safe, mineral-rich, healthy water.
             Choosing the right technology isn’t a luxury - it’s your right to
@@ -60,7 +60,6 @@ const HumanRight = () => {
           </div>
         </div>
       </div>
-    </section>
   );
 };
 

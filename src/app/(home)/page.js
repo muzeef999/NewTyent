@@ -130,7 +130,7 @@ const Home = () => {
         <h1
           className="text-center"
           style={{
-            fontSize: "clamp(24px, 5vw, 3rem)",
+            fontSize: "32px",
             fontWeight: "bold",
             color: "#333",
           }}

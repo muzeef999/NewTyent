@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./whatsInside.css";
+import "@/app/style/AppBar.css"
 
 const leftData = [
   {
@@ -36,12 +37,11 @@ const rightData = [
 
 const WhatsInside = () => {
   return (
-    <section className="inside-section py-5"> 
-      <div className="container">
+     <div className="container">
         {/* Heading */}
         <div className="text-center mb-5">
-          <h1 className="bg-heading-text">Whats Inside</h1>
-          <h3 className="fw-bold">Amazing Properties of Tyent water.</h3>
+          <h1 className="bg-heading-text-two-main">Whats Inside</h1>
+          <h3 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h3>
         </div>
 
         <div className="row align-items-center">
@@ -79,7 +79,6 @@ const WhatsInside = () => {
           </div>
         </div>
       </div>
-    </section>
   );
 };
 

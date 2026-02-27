@@ -113,9 +113,7 @@ const DetailComparison = () => {
 
   return (
     <section className="comparison-section-one">
-      <h2 className="comparison-title-one">
-        Detailed Product Comparison
-      </h2>
+    
 
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="comparison-row-one">

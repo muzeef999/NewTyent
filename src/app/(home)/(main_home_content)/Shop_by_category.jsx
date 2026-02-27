@@ -3,7 +3,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./shopCategory.css";
 import Image from "next/image";
-
+import "@/app/style/AppBar.css"
 
 
 
@@ -17,7 +17,7 @@ const categories = [
   {
     title: "Under the counter ionizers",
     desc: "Ultra premium and aesthetically designed",
-    img: "/home/uce.png",
+    img: "/explore/uceColor.jpeg",
     link: "/under-counter-water-ionizers",
   },
   {
@@ -30,11 +30,10 @@ const categories = [
 
 const Shop_by_category = () => {
   return (
-    <section className="shop-category-section py-5">
       <div className="container">
         {/* Heading */}
         <div className="text-center mb-5">
-          <h2 className="fw-bold section-title">Shop by category</h2>
+          <h2 className="fw-bold subtitle-tight">Shop by category</h2>
         </div>
 
         <div className="row g-4 justify-content-center">
@@ -53,7 +52,7 @@ const Shop_by_category = () => {
                     />
                   </div>
 
-                  <h5 className="fw-semibold mt-3">{item.title}</h5>
+                  <h5 style={{color:'#000', fontWeight:600}}>{item.title}</h5>
                   <p className="text-muted small">{item.desc}</p>
                 </div>
               </a>
@@ -61,7 +60,7 @@ const Shop_by_category = () => {
           ))}
         </div>
       </div>
-    </section>
+   
   );
 };
 

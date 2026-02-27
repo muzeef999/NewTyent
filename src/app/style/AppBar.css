@@ -827,19 +827,31 @@ padding-left: 48px !important;
   margin: 0;
 }
 
-.bg-heading-text
- {
-   font-size: 80px;
-   font-weight: 800;
+
+.bg-heading-text-two-main {
+  font-size: clamp(48px, 10vw, 140px);
+  font-weight: 800;
+
   background: linear-gradient(
-  180deg,
-  #0757e2 0%,
-  #9ec5fe 60%,
-  #ffffff 100%
-);
+    180deg,
+    #0757e2 0%,
+    #9ec5fe 60%,
+    #ffffff 100%
+  );
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   opacity: 0.2;
   white-space: nowrap;
- }
+}
+
+.subtitle-tight {
+  font-size: clamp(18px, 3vw, 30px);
+  font-weight: 700;
+}
+
+.sub-title-below {
+  font-size: clamp(14px, 2vw, 20px);
+}
