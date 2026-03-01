@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./whatsInside.css";
-import "@/app/style/AppBar.css"
 
 const leftData = [
   {
@@ -16,7 +15,7 @@ const leftData = [
   },
   {
     title: "Alkalinity",
-    text: "Acidic stress is the root cause of all the major lifestyle diseases such as Diabetes, Thyroid, Gastric, Constipation etc. Alkalinity in Tyent water neutralizes balances excess acidic stress in your body.",
+    text: "Acidic stress is the root cause of all the major lifestyle diseases such as Diabetes, Thyroid, Gastric, Constipation etc, Alkalinity in Tyent water neutralizes balances excess acidic stress in your body.",
   },
 ];
 
@@ -36,49 +35,84 @@ const rightData = [
 ];
 
 const WhatsInside = () => {
+
+  const mobileFlow = [
+    ...leftData,
+    "GLASS",
+    ...rightData
+  ];
+
   return (
-     <div className="container">
-        {/* Heading */}
-        <div className="text-center mb-5">
-          <h1 className="bg-heading-text-two-main">Whats Inside</h1>
-          <h3 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h3>
-        </div>
+    <div className="container inside-section">
 
-        <div className="row align-items-center">
-          {/* LEFT FEATURES */}
-          <div className="col-lg-4 order-2 order-lg-1">
-            {leftData.map((item, i) => (
-              <div key={i} className="feature-box text-lg-end text-center">
-                <h5 className="feature-title">{item.title}</h5>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* CENTER IMAGE */}
-          <div className="col-lg-4 text-center order-1 order-lg-2 my-4 my-lg-0">
-            <div className="circle-image-wrapper">
-              <Image
-                src="/explore/round-glass.png"
-                alt="water"
-                width={420}
-                height={420}
-                className="circle-image"
-              />
-            </div>
-          </div>
-
-          {/* RIGHT FEATURES */}
-          <div className="col-lg-4 order-3">
-            {rightData.map((item, i) => (
-              <div key={i} className="feature-box text-lg-start text-center">
-                <h5 className="feature-title">{item.title}</h5>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="text-center mb-5">
+        <h1 className="bg-heading-text-two-main">Whats Inside</h1>
+        <h3 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h3>
       </div>
+
+      {/* Desktop Layout */}
+      <div className="row align-items-center desktop-layout">
+
+        <div className="col-lg-4">
+          {leftData.map((item, i) => (
+            <div key={i} className="feature-box text-lg-end text-center">
+              <h5 className="feature-title">{item.title}</h5>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="col-lg-4 text-center my-4 my-lg-0">
+          <div className="circle-image-wrapper">
+            <Image
+              src="/explore/round-glass.png"
+              alt="water"
+              width={420}
+              height={420}
+              className="circle-image"
+            />
+          </div>
+        </div>
+
+        <div className="col-lg-4">
+          {rightData.map((item, i) => (
+            <div key={i} className="feature-box text-lg-start text-center">
+              <h5 className="feature-title">{item.title}</h5>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="mobile-layout">
+        {mobileFlow.map((item, i) => {
+
+          if (item === "GLASS") {
+            return (
+              <div key={i} className="center-glass-mobile">
+                <Image
+                  src="/explore/round-glass.png"
+                  alt="water"
+                  width={260}
+                  height={260}
+                  className="circle-image"
+                />
+              </div>
+            );
+          }
+
+          return (
+            <div key={i} className="feature-box text-center">
+              <h5 className="feature-title">{item.title}</h5>
+              <p>{item.text}</p>
+            </div>
+          );
+        })}
+      </div>
+
+    </div>
   );
 };
 

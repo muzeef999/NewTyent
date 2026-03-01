@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./smarterUpgrade.css";
-import "@/app/style/AppBar.css";
+
 
 const features = [
   {
@@ -21,27 +21,25 @@ const features = [
     link: "/0.1-micron-filters",
     title: "Turbo Mode",
     img: "/contactIndetail/Affordable.png",
-    desc: "Tyent water ionizers feature Japanese Solid Hybrid Mesh Plates from Permelac (est. 1967), providing greater surface area, durability, higher - ORP, and more molecular hydrogen. Built to last over 45 years and backed by a 15-year warranty.",
+    desc: "Turbo Mode (11.5 pH) delivers high-performance water ideal for cleaning fruits and vegetables by effectively removing pesticides, insecticides, wax, and color coatings. Tyent produces this naturally - without chemicals, salts, or enhancers.",
   },
 ];
 
 export default function Smarter_Upgrade() {
   return (
     <div className="container">
-      {/* Heading */}
+
       <div className="text-center mb-5">
         <h1 className="bg-heading-text-two-main">Smarter Upgrade</h1>
         <h3 className="fw-bold subtitle-tight">
           Your Wellness Starts with Tyent
         </h3>
         <p>
-          Thinking of a water ionizer? Choose Tyent - the world’s most advanced,
-          upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim
-          next-gen designs, and updated Japanese technology, Tyent is preferred
-          in 86+ countries for its unmatched innovation and customer
-          satisfaction.
+          Thinking of a water ionizer? Choose Tyent — the world’s most advanced,
+          upgraded, and trusted ionizer.
         </p>
       </div>
+
       <div className="row g-4">
         {features.map((item, index) => (
           <div key={index} className="col-lg-4 col-md-6">
@@ -59,8 +57,7 @@ export default function Smarter_Upgrade() {
                 <Image
                   src={item.img}
                   alt="product"
-                  width={600}
-                  height={300}
+                  fill
                   className="compare-img"
                 />
               </div>
@@ -73,6 +70,7 @@ export default function Smarter_Upgrade() {
           </div>
         ))}
       </div>
+
     </div>
   );
 }
