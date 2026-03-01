@@ -20,7 +20,7 @@ import "../../style/footer.css";
 
 const Footer = () => {
   return (
-    <footer style={{ color: "#FFF", backgroundColor: "#291495" }}>
+    <footer style={{ color: "#FFF", backgroundColor: "#0b0b38" }}>
       <div className="py-5">
         <div className="p-5">
           <br />
