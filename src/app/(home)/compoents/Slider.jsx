@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import BannerOneDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png";
-import BannrrOneMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg.webp";
+import BannrrOneMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg.png";
 import "@/app/style/ResponsiveBanner.css";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
 import "../../style/slider.css";
@@ -64,8 +64,8 @@ const Slider = () => {
           className="banner-img"
         />
 
-        <div className="banner-content mobile">
-          <span className="offer-badge">Save up to 33% today</span>
+        <div className="banner-content mobile ">
+          <span className="offer-badge">World's No.1 Brand</span>
 
           <h1 className="main-heading">
             <span className="fixed-text">Not just</span>
