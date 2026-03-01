@@ -1,53 +1,110 @@
-.shop-category-section {
-  background: #f7f8fa;
+/* Desktop visible */
+.desktop-view {
+  display: flex;
 }
 
-/* Section Title */
-.section-title {
-  font-size: 32px;
+/* Mobile hidden */
+.mobile-view {
+  display: none;
 }
 
-/* Card */
+
 .category-card {
-  background: #fff;
+  background: #FFFF;
   border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
   transition: all 0.35s ease;
   height: 100%;
-  cursor: pointer;
 }
 
-/* Hover Effect */
 .category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* Image wrapper */
-.image-wrapper {
-  height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-wrapper img {
-  max-height: 170px;
-  object-fit: contain;
+.category-img {
   transition: transform 0.4s ease;
 }
 
-.category-card:hover img {
-  transform: scale(1.06);
+.category-card:hover .category-img {
+  transform: scale(1.05);
 }
 
-/* Mobile spacing fix */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 26px;
+.category-card h5 {
+  font-size: 18px;
+  margin-top: 14px;
+}
+
+.category-card p {
+  font-size: 14px;
+}
+
+/* Desktop layout fix */
+@media (min-width: 768px) {
+
+  .desktop-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .image-wrapper {
-    height: 160px;
+  .desktop-view .col-md-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
   }
+
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .category-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0 16px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .category-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-slide {
+    min-width: 85%;
+    scroll-snap-align: center;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .dot.active {
+    width: 14px;
+    height: 6px;
+    background: #3c2df1;
+    border-radius: 4px;
+  }
+
 }
