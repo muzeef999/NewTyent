@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./humanRight.css";
-import "@/app/style/AppBar.css" 
 
 const stats = [
   {
@@ -12,54 +10,50 @@ const stats = [
   },
   {
     number: "70%",
-    text: "India’s water is contaminated  with chemicals, heavy metals, pesticides, and industrial discharge. (Source: NITI Aayog Report on Water Quality Crisis)",
+    text: "India’s water is contaminated with chemicals, heavy metals, pesticides, and industrial discharge. (Source: NITI Aayog Report on Water Quality Crisis)",
   },
   {
     number: "76%",
-    text: "India’sTap  water is contains harmful microplastics, meaning even water from trusted municipal sources is polluted. (Source: Microplastic Contamination Study, IIT Bombay & National Institute of Ocean Technology)",
+    text: "India’s tap water contains harmful microplastics, meaning even municipal sources are polluted. (Source: IIT Bombay Study)",
   },
   {
     number: "93%",
-    text: "bottled water samples tested in India contained microplastics and bacteria, including premium brands.(Source: CPCB & BIS Market Surveillance Study)",
+    text: "Bottled water samples tested in India contained microplastics and bacteria, including premium brands. (Source: CPCB Study)",
   },
 ];
 
 const HumanRight = () => {
   return (
-      <div className="container">
-        <div className="text-center">
-          <h1 className="bg-heading-text-two-main">Human Right</h1>
-          <h3 className="fw-bold subtitle-tight">
-            Clean & healthy water shouldn't be a luxury.
-          </h3>
-          <p className="sub-title-below">
-            With rising contamination, microplastics, and declining water
-            quality, every family deserves safe, mineral-rich, healthy water.
-            Choosing the right technology isn’t a luxury - it’s your right to
-            protect your health, boost wellness, and ensure truly clean water.
-          </p>
-        </div>
+    <section className="human-section">
+      <div className="container text-center">
+        <h1 className="bg-heading-text-two-main">Human Right</h1>
+        <h3 className="fw-bold subtitle-tight">
+          Clean & healthy water shouldn't be a luxury.
+        </h3>
 
-        {/* World Map */}
-        <div className="map-wrapper my-5 position-relative">
-          <Image
-            src="/home/world-map.png"
-            alt="world map"
-            width={900}
-            height={350}
-            className="map-img w-100"
-          />
+        <p className="sub-title-below">
+          With rising contamination and declining water quality, every family
+          deserves safe, mineral-rich, healthy water. Choosing the right
+          technology isn’t a luxury — it’s your right.
+        </p>
+      </div>
 
-          <div className="row text-center position-absolute top-50 start-50 translate-middle w-100">
+      {/* Stats Section */}
+      <div className="stats-section">
+        <div className="container">
+          <div className="row text-center">
             {stats.map((item, i) => (
-              <div key={i} className="col-12 col-md-6 col-lg-3 mb-4">
-                <h2 className="stat-number">{item.number}</h2>
-                <p className="stat-text">{item.text}</p>
+              <div key={i} className="col-12 col-sm-6 col-lg-3 mb-4">
+                <div className="stat-card">
+                  <h2 className="stat-number">{item.number}</h2>
+                  <p className="stat-text">{item.text}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+    </section>
   );
 };
 

@@ -1,44 +1,80 @@
+/* ===== SECTION BACKGROUND ===== */
+
+.human-section {
+  padding: 60px 0 30px;
+}
 
 
-.subtitle {
+
+.subtitle-tight {
+  margin-top: 10px;
+}
+
+.sub-title-below {
   max-width: 800px;
+  margin: 20px auto 0;
   color: #555;
 }
 
-/* World map */
-.map-wrapper {
-  display: flex;
-  justify-content: center;
+/* ===== STATS SECTION WITH MAP BACKGROUND ===== */
+
+.stats-section {
+  background-image: url("/home/world-map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
 }
 
-.map-img {
-  opacity: 0.35;
-  object-fit: contain;
+/* Optional soft overlay */
+.stats-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
 }
 
-/* Stats */
+.stats-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== STAT CARD ===== */
+
+.stat-card {
+  padding: 20px;
+}
+
 .stat-number {
   color: #1f5edb;
   font-weight: 800;
-  font-size: 42px;
+  font-size: clamp(24px, 4vw, 42px);
 }
 
 .stat-text {
   font-size: 14px;
   color: #555;
   max-width: 260px;
-  margin: auto;
+  margin: 10px auto 0;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE FIXES ===== */
+
 @media (max-width: 992px) {
-  .bg-human-heading {
-    font-size: 70px;
+  .stats-section {
+    padding: 80px 0;
+    background-size: cover;
   }
 }
 
-@media (max-width: 576px) {
-  .bg-human-heading {
-    font-size: 50px;
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 60px 0;
+    background-size: cover;
+  }
+
+  .stat-text {
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
