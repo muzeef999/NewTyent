@@ -33,6 +33,11 @@ const Page = async () => {
     return <p>No blogs found.</p>;
   }
   const blogs = await res.json(); // Fetch blogs from API
+
+  const sortedBlogs = blogs.sort(
+  (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+);
+
   const blogsPerPage = 6;
 
   const headerData = { 
@@ -59,8 +64,8 @@ const Page = async () => {
 
       
     <div className="section-spacing">
-      {blogs.length > 0 ? (
-          <PaginationData data={blogs} itemsPerPage={blogsPerPage} />
+      {sortedBlogs.length > 0 ? (
+          <PaginationData data={sortedBlogs} itemsPerPage={blogsPerPage} />
       )
           : (
           <p>No blogs available at the moment. Please check back later.</p>

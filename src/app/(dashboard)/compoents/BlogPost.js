@@ -55,44 +55,49 @@ const BlogPostModal = ({ fetchBlogs, post }) => {
     setFormData((prevData) => ({ ...prevData, content }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const dataToPost = {
-      ...formData,
-      metaKeywords: formData.metaKeywords
-        .split(",")
-        .map((keyword) => keyword.trim()),
-      tags: formData.tags.split(",").map((tag) => tag.trim()),
-    };
+  const dataToPost = {
+    ...formData,
+    metaKeywords: formData.metaKeywords
+      .split(",")
+      .map((keyword) => keyword.trim()),
+    tags: formData.tags.split(",").map((tag) => tag.trim()),
+  };
 
-    try {
-      if (post) {
-        // Update existing post
-        await axios.patch(`/api/blog/${post.slug}`, dataToPost);
-        alert("Blog updated successfully!");
-      } else {
-        // Create new post
-        const response = await fetch("/api/blog", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(dataToPost),
-        });
+  try {
+    if (post) {
+      await axios.patch(`/api/blog/${post.slug}`, dataToPost);
+      alert("Blog updated successfully!");
+    } else {
+      const response = await fetch("/api/blog", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToPost),
+      });
 
-        if (response.ok) {
-          alert("Blog posted successfully!");
-        } else {
-          throw new Error("Failed to post blog");
-        }
+      if (!response.ok) {
+        throw new Error("Failed to post blog");
       }
 
-      setFormData(initialFormState);
-      fetchBlogs(); // Refresh blog list
-    } catch (error) {
-      console.error("Error saving blog:", error);
-      alert("An error occurred. Please try again.");
+      alert("Blog posted successfully!");
     }
-  };
+
+    setFormData(initialFormState);
+
+    // Refresh blog list safely
+    if (fetchBlogs) {
+      fetchBlogs();
+    }
+
+  } catch (error) {
+    console.error("Error saving blog:", error);
+    alert("An error occurred. Please try again.");
+  }
+};
 
   return (
     <Form onSubmit={handleSubmit}>
