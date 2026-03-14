@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const TyentFaqSection = () => {
   return (
-    <section className="py-5">
+    <section>
       <Container>
         <center>
-          <h2 className="fw-bold mb-4">Frequently Asked Questions</h2>
+          <h3 className="fw-bold mb-4">Frequently Asked Questions</h3>
         </center>
         <Row className="align-items-start">
           {/* LEFT SECTION – BOOK FREE DEMO */}

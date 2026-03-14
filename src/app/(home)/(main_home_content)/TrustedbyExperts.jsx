@@ -30,9 +30,8 @@ const TrustedbyExperts = () => {
   ];
 
   return (
-    <section className="experts-wrapper">
+    <section className="container">
       <div className="experts-container">
-
         <h2 className="experts-title">Trusted by Experts</h2>
         <p className="experts-subtitle">
           Join thousands who have transformed their health with Tyent
@@ -45,15 +44,18 @@ const TrustedbyExperts = () => {
                 <div className="stars">★★★★★</div>
                 <h4 className="expert-name">{item.name}</h4>
                 <p className="expert-role">{item.role}</p>
-                <p className="expert-company">{item.company}</p>
+                {item.company ? (
+                  <p className="expert-company">{item.company}</p>
+                ) : (
+                  <p className="expert-company expert-company-empty">&nbsp;</p>
+                )}
                 <p className="expert-text">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <p className="experts-rating">⭐ 4.9/5 from 8,200+ verified reviews</p>
-
+        <p className="experts-rating">★ 4.9/5 from 8,200+ verified reviews</p>
       </div>
     </section>
   );

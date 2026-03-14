@@ -39,7 +39,9 @@ const HumanRight = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="stats-section">
+      <div
+        className="stats-section"
+      >
         <div className="container">
           <div className="row text-center">
             {stats.map((item, i) => (

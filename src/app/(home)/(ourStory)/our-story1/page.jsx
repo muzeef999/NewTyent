@@ -1,0 +1,123 @@
+
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import React from 'react'
+import { Col, Row } from 'react-bootstrap';
+const Mission = dynamic(() => import('@/app/(home)/compoents/(story)/Mission'), { ssr: false });
+import whoweare from "@/asserts/about.jpg"
+import Vision from '../../compoents/(story)/Vision';
+import Management from '../../compoents/(story)/Management';
+import Head from 'next/head';
+
+
+
+export const metadata = {
+  title: "Tyent India: Global Leader in Water Ionizers",
+  description: "Since 2016, Tyent India has offered the best water ionizer in India, committed to health and wellness with advanced Japanese technology.",
+  keywords:"Alkaline water ionizer, hydrogen water India, Japanese water tech, Tyent partner, TAEYOUNG E&T"
+};
+
+
+const page = () => {
+  return (
+    <>
+    
+       {/* AMP Analytics Script */}
+      <Head>
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
+          {
+            "vars": {
+              "gtag_id": "G-T94BNYD8RB",
+              "config": {
+                "G-T94BNYD8RB": { "groups": "default" },
+                "AW-802308772": { "groups": "default" }
+              }
+            },
+            "triggers": {
+              "downloadConversion": {
+                "on": "click",
+                "selector": "#downloadBtn",
+                "vars": {
+                  "event_name": "conversion",
+                  "send_to": ["AW-802308772/gmjyCLODuIMYEKSFyf4C"]
+                }
+              }
+            }
+          }
+          `}
+        </script>
+      </amp-analytics>
+    
+    <div style={{marginTop:'120px'}}>
+      <div className='container'>
+      <div className="section-spacing">  
+      <Row>
+        {/* Left Column: Image */}
+        <Col md={6} className='d-flex justify-content-center align-items-center' data-aos="fade-right">
+          <div style={{width:'90%'}}>
+            <Image style={{borderTopLeftRadius:'50%', borderBottomLeftRadius:'50%', borderBottomRightRadius:'50%'}}
+              src={whoweare}
+              alt="Who We Are"
+              layout="responsive"
+              priority
+            />
+          </div>
+        </Col>
+
+        {/* Right Column: Text */}
+        <Col md={6}  data-aos="fade-left" className='d-flex justify-content-center align-items-center'>
+          <div>
+            <h5 className='m-0'>Who We Are?</h5>
+            <h3 style={{fontWeight:'600', fontSize:'40px', color:'#291495'}} className='m-0'>About Us</h3>
+            <br/>
+            <p>
+              Tyent India is a leading provider of premium water ionizers, hydrogen
+              generators, and advanced water purification systems. As the exclusive
+              partner of TAE YOUNG E&T CO., LTD., a global leader in innovative water
+              solutions, we bring cutting-edge Japanese technology and eco-friendly
+              products to the Indian market. With a commitment to health, wellness, and
+              sustainability, we aim to empower individuals and businesses with superior
+              water quality that enhances lives.
+              <br />
+              <br />
+              Our journey in India is driven by a passion for creating healthier
+              communities, reducing environmental impact, and setting new benchmarks in
+              water technology. From individual homes to large-scale businesses, we
+              offer solutions tailored to meet the unique needs of every customer while
+              ensuring unparalleled service and satisfaction.
+            </p>
+            <br/>
+           
+          </div>
+        </Col>
+      </Row>
+
+      </div>
+      </div>
+
+      <div className="section-spacing" data-aos="fade-up">
+      <Vision />
+      </div>
+    
+      <div className="section-spacing" data-aos="fade-up">
+      <Mission />
+      </div>
+      <div className="section-spacing">
+      <Management/>
+      </div>
+    </div>
+    </>
+  )
+}
+
+export default page

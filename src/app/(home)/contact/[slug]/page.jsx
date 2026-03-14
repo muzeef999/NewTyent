@@ -127,7 +127,7 @@ export default async function LocationPage({ params }) {
       </section>
 
       {/* ================= TECHNOLOGY SECTION ================= */}
-      <section className="container py-5 text-center">
+      <section className="container py-5  text-center">
         <h2 className="bg-heading-text">Tyent’s Japanese Technology</h2>
         <p
           style={{ fontSize: "20px", marginTop: "-20px" }}

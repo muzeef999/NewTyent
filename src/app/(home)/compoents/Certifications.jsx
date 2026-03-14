@@ -15,7 +15,7 @@ const Certifications = () => {
   return (
     <>
       <div className="container text-center">
-        <h2  style={{ color: '#291495', fontWeight: '600' }}>Certifications</h2>
+        <h3 className="fw-bold subtitle-tight">International Certifications & Global Trust</h3>
         <center>
           <p
            data-aos="fade-in"
@@ -26,7 +26,7 @@ const Certifications = () => {
               maxWidth: '70%',
             }}
           >
-            Tyent water ionizer has more than 160+ International patents and certified by all International quality certification authorities.
+            Tyent components and systems meet the highest international quality standards, including
           </p>
         </center>
         <center>

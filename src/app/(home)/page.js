@@ -19,6 +19,9 @@ import RealScience from "./(main_home_content)/RealScience";
 import Needhelp from "./(main_home_content)/Needhelp";
 import Smarter_Upgrade from "./(main_home_content)/Smarter_Upgrade";
 import Why_People_choose_Tyent_Water from "./(main_home_content)/Why_People_choose_Tyent_Water"
+import ProductCarousel from "./(main_home_content)/ProductCarousel";
+import TrustedbyExperts from "./(main_home_content)/TrustedbyExperts";
+import TyentFaqSection from "./contact/[slug]/TyentFaqSection";
 
 const TyentvsKAngan = dynamic(
   () => import("./compoents/(Home)/TyentvsKAngan"),
@@ -123,6 +126,10 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
+        <ProductCarousel />
+      </div>
+
+      <div className="section-spacing">
         <Smarter_Upgrade />
       </div>
 
@@ -157,7 +164,11 @@ const Home = () => {
         <Why_People_choose_Tyent_Water />
       </div>
 
-      
+      <div className="">
+        <TrustedbyExperts />
+      </div>
+
+
 
       <div className="section-spacing">
         <Certifications />
@@ -165,6 +176,15 @@ const Home = () => {
 
       <div className="section-spacing">
         <Needhelp />
+      </div>
+
+      <div className="section-spacing">
+        <h3 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>Our Valued Clients</h3>
+        <br />
+        <SlickSlider />
+      </div>
+      <div className="section-spacing">
+        <TyentFaqSection />
       </div>
     </div>
   );

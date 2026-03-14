@@ -4,7 +4,8 @@ import "./NeedHelp.css";
 
 const Needhelp = () => {
   return (
-    <section className="needhelp-wrapper">
+    <div style={{backgroundColor: "#fff"}}> 
+    <section className="container" style={{padding: "20px 20px"}}>
       <div className="needhelp-container">
 
         {/* Heading */}
@@ -49,6 +50,7 @@ const Needhelp = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

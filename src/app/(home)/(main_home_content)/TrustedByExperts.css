@@ -1,92 +1,115 @@
-.experts-wrapper {
-  background: #f6f6f6;
-  padding: 80px 20px;
-}
 
 .experts-container {
-  max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
 }
 
 .experts-title {
-  font-size: 32px;
+  margin: 0;
+  color: #111;
+  font-size: clamp(30px, 3vw, 38px);
   font-weight: 700;
 }
 
 .experts-subtitle {
-  color: #666;
-  margin: 10px 0 40px;
+  margin: 10px 0 22px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* Big rounded container */
 .experts-box {
-  border: 1px solid #dcdcdc;
-  border-radius: 16px;
-  padding: 35px;
-  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #f8f8f8;
 }
 
-/* Grid of testimonials */
 .experts-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
   text-align: left;
 }
 
+.expert-card {
+  padding: 6px 4px;
+}
+
 .stars {
-  color: #ffb400;
-  font-size: 18px;
-  margin-bottom: 10px;
+  color: #f0b323;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 .expert-name {
-  color: #1a73e8;
-  font-size: 15px;
-  margin-bottom: 3px;
+  margin: 0 0 4px;
+  color: #1b56d6;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 600;
 }
 
 .expert-role {
+  margin: 0;
+  color: #111;
+  font-size: 13px;
+  line-height: 1.35;
   font-weight: 600;
-  font-size: 14px;
 }
 
 .expert-company {
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.expert-text {
-  color: #555;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-/* Bottom rating */
-.experts-rating {
-  margin-top: 20px;
+  margin: 2px 0 10px;
+  color: #111;
+  font-size: 12px;
+  line-height: 1.35;
   font-weight: 600;
 }
 
-/* Tablet */
-@media (max-width: 1000px) {
-  .experts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.expert-company-empty {
+  visibility: hidden;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+.expert-text {
+  margin: 0;
+  color: #444;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.experts-rating {
+  margin: 8px 0 0;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
   .experts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .experts-box {
-    padding: 25px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experts-wrapper {
+    padding: 56px 12px;
+  }
+
+  .experts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .experts-title {
-    font-size: 26px;
+    font-size: 28px;
+  }
+
+  .experts-subtitle {
+    margin-bottom: 18px;
   }
 }

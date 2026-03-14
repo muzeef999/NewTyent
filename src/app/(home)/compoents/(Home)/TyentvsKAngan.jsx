@@ -9,7 +9,7 @@ import "@/app/style/AppBar.css"
 
 const CompareSection = () => {
   return (
-    <Container className="py-5">
+    <Container className="">
       <div className="text-center mb-5">
         <h1 className="bg-heading-text-two-main">Tyent vs Kangen</h1>
         <h3 className="fw-bold subtitle-tight">Think Once before buying.</h3>
