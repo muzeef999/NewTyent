@@ -33,8 +33,16 @@ const VideoCard = ({ src, description, animation }) => {
   const iframeRef = useRef(null);
 
   return (
-    <div data-aos={animation} data-aos-duration="1000">
-      <div className="custom-card text-center" style={{ padding: "10px" }}>
+    <div data-aos={animation} data-aos-duration="1000" className="h-100">
+      <div 
+        className="custom-card text-center d-flex flex-column h-100" 
+        style={{ 
+          padding: "10px",
+          border: "1px solid #ebebeb",
+          borderRadius: "20px",
+          backgroundColor: "#fff"
+        }}
+      >
         <div
           className="embed-responsive embed-responsive-16by9 mb-3"
           data-aos="zoom-in"
@@ -43,19 +51,37 @@ const VideoCard = ({ src, description, animation }) => {
             ref={iframeRef}
             className="embed-responsive-item"
             src={src}
-            style={{ borderRadius: "18px", width: "100%", height: "220px" }}
+            style={{ borderRadius: "18px", width: "100%", height: "210px", border: "none" }}
             allowFullScreen
             title="Video"
           />
         </div>
         <div
-          style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
+          style={{ 
+            display: "flex", 
+            alignItems: "center", 
+            justifyContent: "space-between",
+            padding: "0 8px 8px 8px",
+            flexGrow: 1
+          }}
           data-aos="slide-up"
         >
-          <h6 className="text-start" style={{ flexGrow: 1 }}>
+          <p 
+            className="text-start mb-0" 
+            style={{ 
+              flexGrow: 1, 
+              fontSize: "14.5px", 
+              fontWeight: "500",
+              color: "#4a4a4a",
+              lineHeight: "1.4",
+              paddingRight: "15px"
+            }}
+          >
             {description}
-          </h6>
-          <RWebShareComp text={description} link={src} />
+          </p>
+          <div style={{ flexShrink: 0, color: "#00aef0" }}>
+            <RWebShareComp text={description} link={src} />
+          </div>
         </div>
       </div>
     </div>
@@ -66,7 +92,7 @@ const Video = () => {
 
   return (
     <div className="container">
-      <Row className="g-4">
+      <Row className="g-5">
         {videos.map((video, index) => (
           <Col md={4} key={video.id}>
             <VideoCard src={video.src} description={video.description} animation={video.animation} />

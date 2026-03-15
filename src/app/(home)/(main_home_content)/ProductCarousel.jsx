@@ -2,6 +2,7 @@
 import React from 'react';
 import Slider from "react-slick";
 import Image from "next/image";
+import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -36,9 +37,24 @@ const modelListStyle = {
     display: "flex",
     flexWrap: "wrap",
     rowGap: "8px",
+};
+
+const modelLinkStyle = {
     color: "#0066cc",
     fontWeight: "600",
     fontSize: "0.95rem",
+    textDecoration: "none",
+};
+
+const modelRoutes = {
+    "Tyent NMP-5": "/nmp-5",
+    "Tyent NMP-7": "/nmp-7",
+    "Tyent NMP-9": "/nmp-9",
+    "Tyent NMP-11": "/nmp-11",
+    "Tyent UCE-9 Plus": "/uce-9-plus",
+    "Tyent UCE-11 Plus": "/uce-11-plus",
+    "Tyent UCE-13 Plus": "/uce-13-plus",
+    "Tyent H2 Hybrid": "/hybrid-h2",
 };
 
 const statsGridStyle = {
@@ -155,7 +171,9 @@ const ProductCarousel = () => {
                                             <div style={modelListStyle}>
                                                 {product.models.map((model, idx) => (
                                                     <span key={idx}>
-                                                        {model}
+                                                        <Link href={modelRoutes[model] || "#"} style={modelLinkStyle}>
+                                                            {model}
+                                                        </Link>
                                                         {idx < product.models.length - 1 && <span style={{ color: "#999", margin: "0 8px" }}>|</span>}
                                                     </span>
                                                 ))}

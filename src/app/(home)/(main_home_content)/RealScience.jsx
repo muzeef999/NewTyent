@@ -11,9 +11,8 @@ const RealScience = () => {
         <div className="text-center">
           <h1 className="bg-heading-text-two-main">The Real Science</h1>
           <h3 className="fw-bold subtitle-tight">Behind Our Products</h3>
-          <p className="sub-title-below">
-            Confused between Water Ionizer and Hydrogen generator? <br/>
-            Learn the facts, understand the difference, and choose with clarity.
+          <p style={{maxWidth:'900px', margin:'0 auto 30px'}}>
+            Confused between Water Ionizer and Hydrogen generator? Learn the facts, understand the difference, and choose with clarity.
           </p>
         </div>
 

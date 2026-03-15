@@ -20,9 +20,9 @@ const Why_People_choose_Tyent_Water = () => {
   return (
     <section className="why-section">
       <Container>
-          <h3 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>Why People choose Tyent Water</h3>
+        <h3 className="fw-bold subtitle-tight" style={{ textAlign: "center" }}>Why People choose Tyent Water</h3>
 
-        <Row className="g-4 mt-4">
+        <Row className="g-3 mt-3">
           <Col md={4}>
             <Card
               img="/whyTent/Increase_energy.jpg"
@@ -35,7 +35,7 @@ const Why_People_choose_Tyent_Water = () => {
             <Card
               img="/whyTent/Promotes_Weight_loss.jpg"
               title="Promotes Weight loss"
-              desc="Many of our customers report increased weight loss."
+              desc={<>Many of our customers report<br />increased weight loss.</>}
             />
           </Col>
 
@@ -57,20 +57,18 @@ const Why_People_choose_Tyent_Water = () => {
             fill
             className="why-feature-image"
           />
-          <div className="why-feature-overlay" />
+
           <div className="why-feature-content">
             <h3 className="why-feature-title">
               Over 3,000+ scientific studies on over 170+ health conditions
             </h3>
+
             <p className="why-feature-text">
               Backed by 3000+ scientific studies worldwide, hydrogen-rich water
-              has shown benefits across 170+ health conditions, including
-              metabolism, inflammation, oxidative stress, gut health, skin,
-              diabetes, and cardiovascular wellness.
+              has shown benefits across 170+ health conditions including metabolism,
+              inflammation, oxidative stress, gut health, skin, diabetes and
+              cardiovascular wellness.
             </p>
-            <Link href="/benefits" className="why-feature-link">
-              Explore the benefits
-            </Link>
           </div>
         </div>
       </Container>

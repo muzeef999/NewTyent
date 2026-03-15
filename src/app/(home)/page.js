@@ -134,16 +134,9 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-        <h1
-          className="text-center"
-          style={{
-            fontSize: "32px",
-            fontWeight: "bold",
-            color: "#333",
-          }}
-        >
-          Technical excellence with global availability
-        </h1>
+        <h3 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>
+            Technical excellence with global availability
+          </h3>
         <Video />
       </div>
 

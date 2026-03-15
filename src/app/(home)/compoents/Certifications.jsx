@@ -30,21 +30,22 @@ const Certifications = () => {
           </p>
         </center>
         <center>
-          <Row className="row justify-content-center">
-            {[icon1, icon2, icon3,waterQuality, icon4, icon5].map((icon, index) => (
+          <Row className="justify-content-center align-items-center mt-3 mb-2 px-md-5">
+            {[icon1, icon2, icon3, waterQuality, icon4, icon5].map((icon, index) => (
               <Col xs={4} sm={4} md={2}
                 key={index} 
                  data-aos="zoom-in"
-                className="mb-3 d-flex justify-content-center"
+                className="mb-4 d-flex justify-content-center"
               >
-                 <Image 
-                  src={icon}
-                  alt={`Certification ${index + 1}`}
-                  layout='responsive'
-                  priority
-                  style={{ objectFit: 'contain', userSelect:'all', pointerEvents:'auto' }}
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 100px" // Use responsive sizes based on screen width
-                />
+                 <div style={{ width: '100%', maxWidth: '145px' }}>
+                   <Image 
+                    src={icon}
+                    alt={`Certification ${index + 1}`}
+                    layout='responsive'
+                    priority
+                    style={{ objectFit: 'contain', userSelect:'none', pointerEvents:'none' }}
+                  />
+                 </div>
               </Col> 
             ))}
           </Row>

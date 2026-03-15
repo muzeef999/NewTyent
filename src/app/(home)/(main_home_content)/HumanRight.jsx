@@ -31,7 +31,7 @@ const HumanRight = () => {
           Clean & healthy water shouldn't be a luxury.
         </h3>
 
-        <p className="sub-title-below">
+        <p style={{maxWidth:'900px', margin:'0 auto'}}>
           With rising contamination and declining water quality, every family
           deserves safe, mineral-rich, healthy water. Choosing the right
           technology isn’t a luxury — it’s your right.
