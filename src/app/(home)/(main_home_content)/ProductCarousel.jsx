@@ -168,7 +168,7 @@ const ProductCarousel = () => {
 
                                         <div style={{ marginBottom: "25px" }}>
                                             <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available models</h6>
-                                            <div style={modelListStyle}>
+                                            <div className="model-list" style={modelListStyle}>
                                                 {product.models.map((model, idx) => (
                                                     <span key={idx}>
                                                         <Link href={modelRoutes[model] || "#"} style={modelLinkStyle}>
@@ -243,45 +243,90 @@ const ProductCarousel = () => {
         .slick-dots li.slick-active button:before {
           color: #0d6efd;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+          .product-carousel-content h2 {
+            font-size: 2.4rem !important;
+          }
+        }
+
         @media (max-width: 991px) {
           .product-carousel-row {
             min-height: auto !important;
           }
           .product-carousel-content {
             padding-right: 0 !important;
+            text-align: center;
+            align-items: center;
+            padding-bottom: 20px;
+          }
+          .product-carousel-content h2 {
+            font-size: 2.2rem !important;
           }
           .product-carousel-image {
-            min-height: auto !important;
-            padding: 8px 24px 0 !important;
+            min-height: 400px !important;
+            padding: 24px !important;
+          }
+          .product-carousel-stats {
+            justify-content: center;
+            width: 100%;
+          }
+           .product-carousel-content .model-list {
+            justify-content: center;
           }
         }
+
         @media (max-width: 767px) {
+          .product-carousel-content h2 {
+            font-size: 1.8rem !important;
+            margin-bottom: 15px !important;
+          }
+          .product-carousel-content p {
+            font-size: 0.95rem !important;
+            margin-bottom: 20px !important;
+          }
           .product-carousel-stats {
             grid-template-columns: 1fr !important;
-            gap: 12px !important;
+            gap: 10px !important;
+            margin-bottom: 10px !important;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
           }
           .product-carousel-stat {
             border-right: none !important;
             border-bottom: 1px solid #d7dce5;
             min-height: auto !important;
-            padding-bottom: 12px !important;
+            padding: 10px 0 !important;
+          }
+          .product-carousel-stat h3 {
+            font-size: 1.5rem !important;
           }
           .product-carousel-stat-last {
             border-bottom: none !important;
             padding-bottom: 0 !important;
           }
-          .product-carousel-content h2 {
-            font-size: 2.1rem !important;
-          }
           .product-carousel-image {
+            min-height: 300px !important;
             padding: 0 !important;
           }
           .product-carousel-content .btn {
             width: 100%;
             justify-content: center;
+            max-width: 280px;
           }
           .slick-dots {
-            bottom: -28px;
+            bottom: -30px;
+          }
+        }
+
+        @media (max-width: 480px) {
+           .product-carousel-content h2 {
+            font-size: 1.6rem !important;
+          }
+           .product-carousel-image {
+            min-height: 250px !important;
           }
         }
       `}</style>
