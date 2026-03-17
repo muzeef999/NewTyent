@@ -14,7 +14,7 @@ const CompareSection = () => {
       <div className="text-center mb-5">
         <h1 className="bg-heading-text-two-main">Tyent vs Kangen</h1>
         <h3 className="fw-bold subtitle-tight">Think Once before buying.</h3>
-        <p style={{maxWidth:'900px', margin:'0 auto'}}>
+        <p style={{ maxWidth: '900px', margin: '0 auto' }}>
           We believe in absolute transparency. No hidden charges, No hidden
           commision's, no surprises - Just clear, honest pricing backed by
           uncompromised quality.
@@ -25,17 +25,18 @@ const CompareSection = () => {
         {/* LEFT CARD */}
         <Col md={6}>
           <div className="compare-card">
-            <Image
-              style={{borderRadius:"16px"}}
-              src="/tyentvsengic/tyent01.jpeg"
-              alt="product"
-              width={600}
-              height={300}
-              className="compare-img"
-            />
+            <div className="compare-card-image-wrap">
+              <Image
+                src="/tyentvsengic/tyent01.jpeg"
+                alt="product"
+                width={600}
+                height={300}
+                className="compare-card-img"
+              />
+            </div>
 
-            <h4 className="mt-3" style={{fontSize:'25px', fontWeight:600}}>Why Tyent ?</h4>
-            <p className="small text-muted" style={{fontSize:'16px'}}>
+            <h4 className="mt-3 compare-heading">Why Tyent ?</h4>
+            <p className="small text-muted compare-desc">
               Tyent, a medical-grade water ionizer manufactured by TAEYOUNG E&T, is available in 123+ countries. Since more than 3 decades Tyent is known for its advanced Japanese technology, Tyent follows traditional marketing and offers end-to-end service with an in-house team handling demos, installations, and after-sales support, focusing customer satisfaction and brand trust.
             </p>
 
@@ -50,18 +51,19 @@ const CompareSection = () => {
         {/* RIGHT CARD */}
         <Col md={6}>
           <div className="compare-card">
-            <Image
-            style={{borderRadius:"16px"}}
-              src="/tyentvsengic/enagic.jpeg"
-              alt="product"
-              width={600}
-              height={300}
-              className="compare-img"
-            />
+            <div className="compare-card-image-wrap">
+              <Image
+                src="/tyentvsengic/enagic.jpeg"
+                alt="product"
+                width={600}
+                height={300}
+                className="compare-card-img"
+              />
+            </div>
 
-            <h4 className="mt-3" style={{fontSize:'25px', fontWeight:600}}>What is Kangen ?</h4>
-            <p className="small text-muted"  style={{fontSize:'16px'}}>
-             Kangen, a medical-grade water ionizer manufactured by Enagic & Co, is available in 26+ countries., relies on an MLM business model, doubling prices as 49% of costs go to commissions for 30 middlemen. Unlike other ionizers, Kangen lacks manpower for demo, installation and after-sales doorstep service globally, Focusing revenue generation over end customer satisfaction.
+            <h4 className="mt-3 compare-heading">What is Kangen ?</h4>
+            <p className="small text-muted compare-desc">
+              Kangen, a medical-grade water ionizer manufactured by Enagic & Co, is available in 26+ countries., relies on an MLM business model, doubling prices as 49% of costs go to commissions for 30 middlemen. Unlike other ionizers, Kangen lacks manpower for demo, installation and after-sales doorstep service globally, Focusing revenue generation over end customer satisfaction.
             </p>
 
             <Link href="/tyentvskangen" passHref>

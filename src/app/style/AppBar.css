@@ -829,7 +829,8 @@ padding-left: 48px !important;
 
 
 .bg-heading-text-two-main {
-  font-size: clamp(48px, 10vw, 140px);
+  font-size: clamp(38px, 10vw, 140px);
+  /* font-size: clamp(32px, 6vw, 96px); */
   font-weight: 800;
 
   background: linear-gradient(

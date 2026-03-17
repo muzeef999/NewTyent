@@ -1,4 +1,34 @@
 
+.compare-card {
+  height: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.compare-card-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.compare-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.compare-heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.compare-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 
 /* ===== TABS ===== */
 .cmp-tabs {
@@ -7,7 +37,7 @@
 }
 
 .cmp-tab {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   margin: 0 35px;
   cursor: pointer;
@@ -67,12 +97,45 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .cmp-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .cmp-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
   .cmp-tab {
-    display: block;
-    margin: 12px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 14px 12px;
+    font-size: 15px;
+    flex: 0 0 auto;
   }
 
   .cmp-card {
-    padding: 30px 22px;
+    padding: 22px 16px;
+    border-radius: 18px;
   }
-} 
+
+  .cmp-item {
+    margin-bottom: 16px;
+  }
+
+  .cmp-item h5 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .cmp-item p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import "./detailComparison_one.css";
 
 const DetailComparison = () => {
@@ -138,9 +138,9 @@ const DetailComparison = () => {
                     <li>
                       <span className="left-one">
                         {product.highlight ? (
-                          <FaThumbsUp className="icon good-icon" />
+                          <FaCheckCircle className="icon good-icon" />
                         ) : (
-                          <FaThumbsDown className="icon bad-icon" />
+                          <FaTimesCircle className="icon bad-icon" />
                         )}
                         Price
                       </span>
@@ -152,9 +152,9 @@ const DetailComparison = () => {
                     <li>
                       <span className="left-one">
                         {product.highlight ? (
-                          <FaThumbsUp className="icon good-icon" />
+                          <FaCheckCircle className="icon good-icon" />
                         ) : (
-                          <FaThumbsDown className="icon bad-icon" />
+                          <FaTimesCircle className="icon bad-icon" />
                         )}
                         Generates
                       </span>
@@ -166,9 +166,9 @@ const DetailComparison = () => {
                     <li>
                       <span className="left-one">
                         {product.highlight ? (
-                          <FaThumbsUp className="icon good-icon" />
+                          <FaCheckCircle className="icon good-icon" />
                         ) : (
-                          <FaThumbsDown className="icon bad-icon" />
+                          <FaTimesCircle className="icon bad-icon" />
                         )}
                         Plates
                       </span>
@@ -180,9 +180,9 @@ const DetailComparison = () => {
                     <li>
                       <span className="left-one">
                         {product.highlight ? (
-                          <FaThumbsUp className="icon good-icon" />
+                          <FaCheckCircle className="icon good-icon" />
                         ) : (
-                          <FaThumbsDown className="icon bad-icon" />
+                          <FaTimesCircle className="icon bad-icon" />
                         )}
                         ORP
                       </span>
@@ -194,9 +194,9 @@ const DetailComparison = () => {
                     <li>
                       <span className="left-one">
                         {product.highlight ? (
-                          <FaThumbsUp className="icon good-icon" />
+                          <FaCheckCircle className="icon good-icon" />
                         ) : (
-                          <FaThumbsDown className="icon bad-icon" />
+                          <FaTimesCircle className="icon bad-icon" />
                         )}
                         Warranty
                       </span>

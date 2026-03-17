@@ -1,5 +1,8 @@
 .comparison-section-one {
-width: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 15px;
 }
 
 .comparison-title-one {
@@ -12,22 +15,30 @@ width: 100%;
 /* 🔥 Each ROW (contains 2 pairs) */
 .comparison-row-one {
   display: flex;
+  flex-direction: column;
   gap: 20px;   /* GAP between pair blocks */
-  margin-bottom: 60px; /* GAP between rows */
+  margin-bottom: 20px; /* GAP between rows */
+}
+
+@media (min-width: 992px) {
+  .comparison-row-one {
+    flex-direction: row;
+  }
 }
 
 /* 🔥 Each PAIR (2 cards side by side) */
 .pair-block-one {
   display: flex;
+  flex: 1;
   border: 1px solid #e5e5e5;
   background: #fff;
 }
 
 /* Card */
 .compare-card-one {
-  padding: 40px 25px;
+  flex: 1;
+  padding: 30px 25px;
   border-right: 1px solid #e5e5e5;
-  width: 320px;
   display: flex;
   flex-direction: column;
 }
@@ -41,8 +52,8 @@ width: 100%;
 .image-wrapper {
   position: relative;
   width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
+  height: 220px;
+  margin-bottom: 25px;
 }
 
 .compare-img {
@@ -52,8 +63,12 @@ width: 100%;
 /* Title */
 .product-name-one {
   text-align: center;
-  font-weight: 600;
-  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* List */
@@ -65,34 +80,130 @@ width: 100%;
 
 .feature-list-one li {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 14px;
-  font-size: 14px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 13.5px;
+  min-height: 24px;
 }
 
 .left-one {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
-  font-weight: 500;
+  font-weight: 700;
+  color: #111;
+  width: 115px; /* Fixed width to align the right column perfectly */
+  flex-shrink: 0;
+}
+
+.left-one .icon {
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .right-one {
-  text-align: right;
-}
-
-.small-text {
-  max-width: 140px;
+  flex: 1;
+  text-align: left;
+  color: #444;
+  line-height: 1.4;
 }
 
 .icon {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .good-icon {
-  color: #23c552;
+  color: #0fb89e; /* Teal check */
 }
 
 .bad-icon {
-  color: #f84f31;
+  color: #f72c5b; /* Red cross */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comparison-section-one {
+    display: flex;
+    gap: 12px;
+    padding: 16px 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .comparison-section-one::-webkit-scrollbar {
+    display: none;
+  }
+
+  .comparison-row-one {
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  .pair-block-one {
+    flex: 0 0 92vw;
+    gap: 0;
+    border: 1px solid #dedede;
+    border-radius: 0;
+    background: #fff;
+    scroll-snap-align: start;
+  }
+
+  .compare-card-one {
+    width: 50%;
+    padding: 14px 10px;
+    border: none !important;
+    border-right: 1px solid #e5e5e5 !important;
+    border-radius: 0;
+    background: #fff;
+  }
+
+  .compare-card-one:last-child {
+    border-right: none !important;
+  }
+
+  .image-wrapper {
+    height: 180px;
+    margin-bottom: 10px;
+  }
+
+  .compare-img {
+    object-fit: contain;
+    transform: none;
+  }
+
+  .product-name-one {
+    font-size: 11px;
+    margin-bottom: 12px;
+    letter-spacing: 0;
+  }
+
+  .feature-list-one li {
+    font-size: 10px;
+    margin-bottom: 7px;
+    min-height: 0;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .left-one {
+    width: 52%;
+    font-size: 10px;
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  .right-one {
+    width: 48%;
+    margin-left: 0;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .icon {
+    font-size: 11px;
+    margin-top: 2px;
+  }
 }

@@ -154,7 +154,7 @@ const ProductCarousel = () => {
                     {products.map((product) => (
                         <div key={product.id} style={slideStyle}>
                             <div className="row align-items-center gy-4 product-carousel-row" style={rowStyle}>
-                                <div className="col-lg-6 mb-4 mb-lg-0">
+                                <div className="col-lg-6 mb-4 mb-lg-0 order-2 order-lg-1">
                                     <div className="product-carousel-content" style={contentStyle}>
                                         <h6 style={{ fontWeight: "700", marginBottom: "15px", color: "#333", fontSize: "1.1rem" }}>
                                             {product.series}
@@ -211,7 +211,7 @@ const ProductCarousel = () => {
                                     </div>
                                 </div>
 
-                                <div className="col-lg-6 text-center">
+                                <div className="col-lg-6 text-center order-1 order-lg-2">
                                     <div className="product-carousel-image" style={imageWrapStyle}>
                                         <Image
                                             src={product.image}
@@ -254,19 +254,25 @@ const ProductCarousel = () => {
         @media (max-width: 991px) {
           .product-carousel-row {
             min-height: auto !important;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px 16px !important;
+            margin: 0 10px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.03);
           }
           .product-carousel-content {
             padding-right: 0 !important;
             text-align: center;
             align-items: center;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
           }
           .product-carousel-content h2 {
             font-size: 2.2rem !important;
           }
           .product-carousel-image {
-            min-height: 400px !important;
-            padding: 24px !important;
+            min-height: 350px !important;
+            padding: 10px !important;
           }
           .product-carousel-stats {
             justify-content: center;
@@ -278,8 +284,12 @@ const ProductCarousel = () => {
         }
 
         @media (max-width: 767px) {
+          .product-carousel-row {
+            padding: 20px 12px !important;
+            margin: 0 5px !important;
+          }
           .product-carousel-content h2 {
-            font-size: 1.8rem !important;
+            font-size: 24px !important;
             margin-bottom: 15px !important;
           }
           .product-carousel-content p {
@@ -299,6 +309,7 @@ const ProductCarousel = () => {
             border-bottom: 1px solid #d7dce5;
             min-height: auto !important;
             padding: 10px 0 !important;
+            text-align: center;
           }
           .product-carousel-stat h3 {
             font-size: 1.5rem !important;
@@ -308,7 +319,7 @@ const ProductCarousel = () => {
             padding-bottom: 0 !important;
           }
           .product-carousel-image {
-            min-height: 300px !important;
+            min-height: 280px !important;
             padding: 0 !important;
           }
           .product-carousel-content .btn {
@@ -319,14 +330,23 @@ const ProductCarousel = () => {
           .slick-dots {
             bottom: -30px;
           }
+          .slick-dots li {
+            margin: 0 2px;
+          }
+          .slick-dots li button:before {
+            font-size: 10px;
+          }
         }
 
         @media (max-width: 480px) {
            .product-carousel-content h2 {
-            font-size: 1.6rem !important;
+            font-size: 24px !important;
           }
            .product-carousel-image {
             min-height: 250px !important;
+          }
+          .slick-dots li button:before {
+            font-size: 8px;
           }
         }
       `}</style>
