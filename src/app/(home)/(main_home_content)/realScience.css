@@ -30,6 +30,15 @@
   transition: 0.3s ease;
 }
 
+.science-card h4 {
+  line-height: 1.25;
+}
+
+.science-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
 .science-card:hover {
   transform: translateY(-5px);
 }
@@ -54,5 +63,20 @@
 @media (max-width: 576px) {
   .bg-science-heading {
     font-size: 50px;
+  }
+
+  .science-card {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .science-card h4 {
+    font-size: 20px;
+    margin-bottom: 12px !important;
+  }
+
+  .science-card p {
+    font-size: 14px;
+    line-height: 1.6;
   }
 }

@@ -1,9 +1,9 @@
 
 .compare-card {
   height: 100%;
-  padding: 16px;
+  /* padding: 8px; */
   border-radius: 20px;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .compare-card-image-wrap {
@@ -97,6 +97,11 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .compare-desc {
+    font-size: 0.92rem;
+    /* line-height: 1.5; */
+  }
+
   .cmp-tabs {
     display: flex;
     gap: 10px;
