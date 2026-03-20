@@ -286,7 +286,7 @@ const ProductCarousel = () => {
             border-radius: 20px;
             padding: 24px 16px !important;
             margin: 0 10px !important;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            // box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid rgba(0,0,0,0.03);
           }
           .product-carousel-content {
@@ -349,19 +349,21 @@ const ProductCarousel = () => {
           }
           .product-carousel-stat h3 {
             font-size: 1.1rem !important;
-            line-height: 1 !important;
+            line-height: 1.2 !important;
             margin-bottom: 4px !important;
             display: flex !important;
-            align-items: baseline !important;
+            flex-direction: column !important;
+            align-items: center !important;
             justify-content: center !important;
-            flex-wrap: wrap !important;
           }
           .product-carousel-stat h3 span {
             font-size: 0.75rem !important;
+            margin-right: 0 !important;
+            line-height: 1 !important;
           }
           .product-carousel-stat p {
-            font-size: 0.7rem !important;
-            line-height: 0.5 !important;
+            font-size: 0.75rem !important;
+            line-height: 1.3 !important;
             margin-top: 0 !important;
           }
           .product-carousel-stat-last {

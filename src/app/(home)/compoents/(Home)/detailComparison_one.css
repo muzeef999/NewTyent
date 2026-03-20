@@ -120,35 +120,40 @@
   color: #f72c5b; /* Red cross */
 }
 
+.mobile-comparison {
+  display: none;
+}
+.desktop-comparison {
+  display: block;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .comparison-section-one {
-    display: flex;
-    gap: 12px;
-    padding: 16px 8px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+  .mobile-comparison {
+    display: block;
   }
-
-  .comparison-section-one::-webkit-scrollbar {
+  .desktop-comparison {
     display: none;
   }
 
-  .comparison-row-one {
-    flex-direction: row;
-    gap: 12px;
-    margin-bottom: 0;
+  .comparison-section-one {
+    padding: 16px 8px 40px;
   }
 
   .pair-block-one {
-    flex: 0 0 92vw;
-    gap: 0;
+    display: flex;
+    background: #fff;
     border: 1px solid #dedede;
     border-radius: 0;
-    background: #fff;
-    scroll-snap-align: start;
+    margin-bottom: 20px;
+  }
+
+  .mobile-comparison .slick-dots {
+    bottom: -20px;
+  }
+
+  .mobile-comparison .slick-dots li button:before {
+    font-size: 10px;
   }
 
   .compare-card-one {
@@ -207,3 +212,4 @@
     margin-top: 2px;
   }
 }
+

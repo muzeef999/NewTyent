@@ -113,7 +113,7 @@ const DetailComparison = () => {
 
   return (
     <section className="comparison-section-one">
-    
+
 
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="comparison-row-one">
