@@ -61,18 +61,17 @@ const statsGridStyle = {
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     gap: "18px",
-    marginBottom: "15px",
+    marginBottom: "8px",
 };
 
 const statCardStyle = {
     minHeight: "92px",
     padding: "6px 0",
-    borderRight: "1px solid #d7dce5",
+    position: "relative",
 };
 
 const statCardLastStyle = {
     ...statCardStyle,
-    borderRight: "none",
 };
 
 const imageWrapStyle = {
@@ -159,7 +158,7 @@ const ProductCarousel = () => {
                                         <h6 style={{ fontWeight: "700", marginBottom: "15px", color: "#333", fontSize: "1.1rem" }}>
                                             {product.series}
                                         </h6>
-                                        <h2 style={{ fontSize: "2.8rem", fontWeight: "400", marginBottom: "20px", color: "#111", lineHeight: "1.2" }}>
+                                        <h2 className="desktop-title" style={{ fontSize: "2.8rem", fontWeight: "400", marginBottom: "20px", color: "#111", lineHeight: "1.2" }}>
                                             {product.title}
                                         </h2>
                                         <p style={{ color: "#555", marginBottom: "30px", fontSize: "1rem", lineHeight: "1.6" }}>
@@ -212,6 +211,9 @@ const ProductCarousel = () => {
                                 </div>
 
                                 <div className="col-lg-6 text-center order-1 order-lg-2">
+                                    <h2 className="mobile-title">
+                                        {product.title}
+                                    </h2>
                                     <div className="product-carousel-image" style={imageWrapStyle}>
                                         <Image
                                             src={product.image}
@@ -244,6 +246,20 @@ const ProductCarousel = () => {
           color: #0d6efd;
         }
 
+        .mobile-title {
+          display: none;
+        }
+
+        .product-carousel-stat:not(.product-carousel-stat-last)::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 20%;
+          height: 60%;
+          width: 1px;
+          background-color: #d7dce5;
+        }
+
         /* Responsive Styles */
         @media (max-width: 1200px) {
           .product-carousel-content h2 {
@@ -252,6 +268,18 @@ const ProductCarousel = () => {
         }
 
         @media (max-width: 991px) {
+          .mobile-title {
+            display: block;
+            font-size: 2.2rem !important;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #111;
+            line-height: 1.2;
+            text-align: center;
+          }
+          .desktop-title {
+            display: none !important;
+          }
           .product-carousel-row {
             min-height: auto !important;
             background: #ffffff;
@@ -284,6 +312,10 @@ const ProductCarousel = () => {
         }
 
         @media (max-width: 767px) {
+          .mobile-title {
+            font-size: 24px !important;
+            margin-bottom: 15px !important;
+          }
           .product-carousel-row {
             padding: 20px 12px !important;
             margin: 0 5px !important;
@@ -293,30 +325,47 @@ const ProductCarousel = () => {
             margin-bottom: 15px !important;
           }
           .product-carousel-content p {
-            font-size: 0.95rem !important;
-            margin-bottom: 20px !important;
+            font-size: 0.85rem !important;
+            margin-bottom: 15px !important;
+            line-height: 1.4 !important;
           }
           .product-carousel-stats {
-            grid-template-columns: 1fr !important;
-            gap: 10px !important;
-            margin-bottom: 10px !important;
-            max-width: 320px;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 5px !important;
+            margin-bottom: 15px !important;
+            max-width: 100%;
             margin-left: auto;
             margin-right: auto;
           }
           .product-carousel-stat {
-            border-right: none !important;
-            border-bottom: 1px solid #d7dce5;
+            border-bottom: none !important;
             min-height: auto !important;
-            padding: 10px 0 !important;
+            padding: 5px 0 !important;
             text-align: center;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
           }
           .product-carousel-stat h3 {
-            font-size: 1.5rem !important;
+            font-size: 1.1rem !important;
+            line-height: 1 !important;
+            margin-bottom: 4px !important;
+            display: flex !important;
+            align-items: baseline !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+          }
+          .product-carousel-stat h3 span {
+            font-size: 0.75rem !important;
+          }
+          .product-carousel-stat p {
+            font-size: 0.7rem !important;
+            line-height: 0.5 !important;
+            margin-top: 0 !important;
           }
           .product-carousel-stat-last {
-            border-bottom: none !important;
-            padding-bottom: 0 !important;
+            border-right: none !important;
           }
           .product-carousel-image {
             min-height: 280px !important;
@@ -339,6 +388,9 @@ const ProductCarousel = () => {
         }
 
         @media (max-width: 480px) {
+           .mobile-title {
+            font-size: 24px !important;
+          }
            .product-carousel-content h2 {
             font-size: 24px !important;
           }
