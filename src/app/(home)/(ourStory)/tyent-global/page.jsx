@@ -62,7 +62,7 @@ const TyentGlobal = () => {
       <div className="text-center">
         <h1 className="bg-heading-text-two-main">Tyent Global</h1>
 
-        <h1 className="fw-bold subtitle-tight">
+        <h1 className="fw-bold subtitle-tight tyent-global-subtitle">
           World Leaders in Hydrogen-Rich Alkaline Water Ionizer Technology
         </h1>
 
@@ -401,6 +401,9 @@ const TyentGlobal = () => {
       </div>
 
       <style>{`
+        .tyent-global-subtitle {
+          margin-top: 0 !important;
+        }
         .quality-masonry {
           column-count: 1;
           column-gap: 1.5rem;
@@ -429,6 +432,5 @@ const TyentGlobal = () => {
 };
 
 export default TyentGlobal;
-
 
 

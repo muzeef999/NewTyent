@@ -40,6 +40,7 @@
 /* Heading */
 .main-heading {
   margin-top: 20px;
+  margin-bottom: 0;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -95,17 +96,38 @@
   .banner-desktop { display: none; }
   .banner-mobile { display: block; }
 
+  .banner-content.mobile {
+    top: 10%;
+    left: 5%;
+    max-width: 86%;
+  }
+
+  .main-heading {
+    margin-top: 12px;
+    line-height: 1;
+  }
+
   .animated-word {
-    font-size: 44px;
+    margin-top: 2px;
+    font-size: 40px;
+    line-height: 0.95;
   }
 
   .fixed-text {
-    font-size: 34px;
+    font-size: 30px;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .sub-text {
+    margin-top: 12px;
+    font-size: 14px;
   }
 
   .shop-btn {
-    padding: 12px 22px;
-    font-size: 16px;
+    margin-top: 16px;
+    padding: 10px 18px;
+    font-size: 14px;
   }
 }
 
@@ -141,5 +163,3 @@
       z-index: -2; /* se lower  z-index to ensure it appears background */
       pointer-events:  none;
     }
-
-

@@ -64,7 +64,7 @@ const Slider = () => {
           className="banner-img"
         />
 
-        <div className="banner-content mobile ">
+        <div className="banner-content mobile">
           <span className="offer-badge">World's No.1 Brand</span>
 
           <h1 className="main-heading">

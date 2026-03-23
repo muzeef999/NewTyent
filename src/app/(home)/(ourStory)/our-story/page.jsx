@@ -10,7 +10,7 @@ const OurStory = () => {
   const management = [
     { name: 'Dr. Srinivas Yadav Kandula', role: 'Managing Director', image: '/management/Manager.png' },
     { name: 'Dr. Sree Suma Goriparthy', role: 'Chairman', image: '/management/Manager.png' },
-    { name: 'A. Santosh Kumar', role: 'Operations Director', image: '/management/Manager.png' },
+    { name: 'A. Santosh Kumar', role: 'Finance Director', image: '/management/Manager.png' },
     { name: 'G. Sindhumala,', role: 'CFO', image: '/management/Manager.png' },
     { name: 'E. Sravan chowdary', role: 'Director of sales and marketing', image: '/management/Manager.png' },
     { name: 'MD. Kurdhus', role: 'Advicer', image: '/management/Manager.png' },
@@ -31,7 +31,7 @@ const OurStory = () => {
     <div className="container">
       <div className="text-center">
         <h1 className="bg-heading-text-two-main">Tyent & Medilight</h1>
-        <h3 className="fw-bold subtitle-tight">Advancing Preventive Health Through Water</h3>
+        <h3 className="fw-bold subtitle-tight our-story-subtitle">Advancing Preventive Health Through Water</h3>
         <p className="mt-4">
           Founded in 2016 by a team of experienced doctor’s and visionary entrepreneurs, Tyent  was established with a clear mission: to deliver world-class preventive healthcare through  water. By combining medical insight with advanced engineering, Tyent pioneered  hydrogen-rich alkaline water ionizers and hydrogen water generators designed to  support long-term wellness, cellular hydration, and antioxidant protection.  Tyent’s technology focuses on producing high-pH, hydrogen-rich water with negative  ORP, helping individuals adopt a proactive approach toward health through daily hydration.  Today, Tyent is globally recognized for its medical-grade water ionizers, innovation, and  uncompromising quality standards.
         </p>
@@ -397,6 +397,9 @@ const OurStory = () => {
           .world-map-bg {
             background-size: contain;
           }
+        }
+        .our-story-subtitle {
+          margin-top: 0 !important;
         }
       `}</style>
     </div>

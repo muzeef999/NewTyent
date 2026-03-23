@@ -10,7 +10,7 @@ import contactUsBanner from "@/asserts/contactUsBanner.png";
 import Link from "next/link";
 import { locationsData } from "@/app/(home)/contact/locationData.js";
 import Head from 'next/head';
-import mobileBannerWeb  from "@/asserts/mobilecontactbanner.jpg";
+import mobileBannerWeb from "@/asserts/mobilecontactbanner.jpg";
 import webBannerWeb from "@/asserts/webcontactbanner.jpg"
 import "./contact.css"
 
@@ -33,7 +33,7 @@ const headerData = {
 };
 
 const InfoCard = ({ title, slug, image }) => (
-  <Col xs={12} sm={6} md={3} className="p-2">
+  <Col xs={6} sm={6} md={3} className="p-2">
     <Link
       href={`/contact/${slug}`}
       className="text-decoration-none"
@@ -67,17 +67,17 @@ const Page = () => {
   return (
     <>
       <Head>
-            <script
-              async
-              custom-element="amp-analytics"
-              src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-            />
-          </Head>
-    
-          {/* AMP Google Ads + GA + Conversion */}
-          <amp-analytics type="gtag" data-credentials="include">
-            <script type="application/json">
-              {`
+        <script
+          async
+          custom-element="amp-analytics"
+          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        />
+      </Head>
+
+      {/* AMP Google Ads + GA + Conversion */}
+      <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+          {`
               {
                 "vars": {
                   "gtag_id": "G-T94BNYD8RB",
@@ -98,11 +98,11 @@ const Page = () => {
                 }
               }
               `}
-            </script>
-          </amp-analytics>
-       
-    <div>
-      {/* <Header
+        </script>
+      </amp-analytics>
+
+      <div>
+        {/* <Header
         basic={headerData.basic}
         preheading={headerData.preheading}
         afterheading={headerData.afterheading}
@@ -110,150 +110,195 @@ const Page = () => {
         img={headerData.img}
         animatedText={headerData.animatedText} // Passing dynamic animated text
       /> */}
-      <div className="position-relative w-100  hero-wrapper">
+        <div className="position-relative w-100  hero-wrapper">
 
-  {/* Desktop Background */}
-  <div className="d-none d-md-block">
-    <Image
-      src={webBannerWeb}
-      alt="Contact Background"
-      fill
-      className="hero-img"
-      priority
-    />
-  </div>
+          {/* Desktop Background */}
+          <div className="d-none d-md-block">
+            <Image
+              src={webBannerWeb}
+              alt="Contact Background"
+              fill
+              className="hero-img"
+              priority
+            />
+          </div>
 
-  {/* Mobile Background */}
-  <div className="d-block d-md-none">
-    <Image
-      src={mobileBannerWeb}
-      alt="Mobile Contact Background"
-      fill
-      className="hero-img"
-      priority
-    />
-  </div>
+          {/* Mobile Background */}
+          <div className="d-block d-md-none">
+            <Image
+              src={mobileBannerWeb}
+              alt="Mobile Contact Background"
+              fill
+              className="hero-img"
+              priority
+            />
+          </div>
 
-  {/* Overlay */}
-  <div className="hero-overlay"></div>
+          {/* Overlay */}
+          <div className="hero-overlay"></div>
 
-  {/* TEXT CONTENT */}
-  <div className="hero-content container">
-    <h2 className="fw-bold mb-2">
-      Trust, Care & Commitment
-    </h2>
+          {/* TEXT CONTENT */}
+          <div className="hero-content container">
+            <div className="row">
+              <div className="col-md-8 col-lg-6">
+                <p className="fw-bold text-white fs-3 mb-1">
+                  Trust, Care & Commitment
+                </p>
 
-    <h4 className="fw-semibold mb-2">
-      Need to Enquire anything?
-    </h4>
+                <p className="fw-bold text-white fs-3 mb-1">
+                  Need to Enquire anything ?
+                </p>
 
-    <p className="mb-0">
-      We're happy to help!
-    </p>
-  </div>
+                <p className="fw-semibold text-white fs-3 mb-0">
+                  We're happy to help!
+                </p>
+              </div>
+            </div>
+          </div>
 
-</div>
-
-      <Container>
-        <div className="section-spacing">
-          <h3
-            className="m-0 text-center"
-            style={{ color: "#291495", fontWeight: "600" }}
-            data-aos="fade-down"
-          >
-            You can find us here!{" "}
-          </h3>
-          <p className="text-center" style={{ fontSize: "20px" }}>
-            We would love to connect with you
-          </p>
-          <br />
-          <Row className="g-4">
-            {items.map((item, index) => (
-              <Col
-                key={index}
-                md={3}
-                sm={6}
-                xs={6}
-                className="text-center"
-                data-aos="zoom-in"
-              >
-                <div>
-                  <a href="#top-section" style={{ textDecoration: "none" }}>
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      layout="responsive"
-                      priority
-                      style={{
-                        borderRadius: "20px",
-                        userSelect: "all",
-                        pointerEvents: "auto",
-                      }}
-                    />
-                    <h5 className="mt-3">
-                      <b style={{ color: "#291495" }}>{item.title}</b>
-                    </h5>
-                  </a>
-                </div>
-              </Col>
-            ))}
-          </Row>
         </div>
 
-<div className="section-spacing" data-aos="fade-up">
-  {(() => {
-    const allLocations = Object.values(locationsData);
+        <Container>
+          <div
+            className="contact-toolbar d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4"
+            data-aos="fade-down"
+          >
+            <div className="contact-toolbar-copy mb-3 mb-md-0 text-start">
+              <h3 className="contact-toolbar-title m-0 fw-bold">
+                You can find us here!
+              </h3>
+              <p className="contact-toolbar-text m-0 mt-1">
+                We would love to connect with you
+              </p>
+            </div>
 
-    const topCities = allLocations.slice(0, 12); // till Guntur
-    const remainingCities = allLocations.slice(12); // after Guntur
+            <div className="contact-toolbar-actions d-flex align-items-center gap-2">
+              <div className="contact-search">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#aaa"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search Location"
+                  className="contact-search-input border-0 bg-transparent ms-2 w-100"
+                />
+              </div>
 
-    return (
-      <>
-       <h4
-          className="mt-5 mb-3"
-          style={{ fontWeight: "600" }}
-        >
-          Top 12 Cities 
-        </h4>
-        {/* Top Cities */}
-        <Row>
-          {topCities.map((location, index) => (
-            <InfoCard
-              key={index}
-              slug={location.slug}
-              image={location.image}
-              title={location.title}
-            />
-          ))}
-        </Row>
+              <button
+                type="button"
+                className="contact-filter-button d-flex align-items-center justify-content-center bg-white"
+                aria-label="Filter locations"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#666"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="4" y1="6" x2="20" y2="6"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                  <line x1="11" y1="18" x2="13" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          {/* <Row className="g-4">
+              {items.map((item, index) => (
+                <Col
+                  key={index}
+                  md={3}
+                  sm={6}
+                  xs={6}
+                  className="text-center"
+                  data-aos="zoom-in"
+                >
+                  <div>
+                    <a href="#top-section" style={{ textDecoration: "none" }}>
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        layout="responsive"
+                        priority
+                        style={{
+                          borderRadius: "20px",
+                          userSelect: "all",
+                          pointerEvents: "auto",
+                        }}
+                      />
+                      <h5 className="mt-3">
+                        <b style={{ color: "#291495" }}>{item.title}</b>
+                      </h5>
+                    </a>
+                  </div>
+                </Col>
+              ))}
+            </Row> */}
 
-        {/* All Cities Heading */}
-        <h4
-          className="mt-5 mb-3"
-          style={{ fontWeight: "600" }}
-        >
-          All Cities
-        </h4>
+          <div data-aos="fade-up">
+            {(() => {
+              const allLocations = Object.values(locationsData);
 
-        {/* Remaining Cities */}
-        <Row>
-          {remainingCities.map((location, index) => (
-            <InfoCard
-              key={index}
-              slug={location.slug}
-              image={location.image}
-              title={location.title}
-            />
-          ))}
-        </Row>
-      </>
-    );
-  })()}
-</div>
+              const topCities = allLocations.slice(0, 12); // till Guntur
+              const remainingCities = allLocations.slice(12); // after Guntur
 
-      </Container>
-      <div id="top-section"></div>
-    </div>
+              return (
+                <>
+                  <h4
+                    className="mb-3"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Top 12 Cities
+                  </h4>
+                  {/* Top Cities */}
+                  <Row>
+                    {topCities.map((location, index) => (
+                      <InfoCard
+                        key={index}
+                        slug={location.slug}
+                        image={location.image}
+                        title={location.title}
+                      />
+                    ))}
+                  </Row>
+
+                  {/* All Cities Heading */}
+                  <h4
+                    className="mt-5 mb-3"
+                    style={{ fontWeight: "600" }}
+                  >
+                    All Cities
+                  </h4>
+
+                  {/* Remaining Cities */}
+                  <Row>
+                    {remainingCities.map((location, index) => (
+                      <InfoCard
+                        key={index}
+                        slug={location.slug}
+                        image={location.image}
+                        title={location.title}
+                      />
+                    ))}
+                  </Row>
+                </>
+              );
+            })()}
+          </div>
+
+        </Container>
+        <div id="top-section"></div>
+      </div>
     </>
   );
 };
