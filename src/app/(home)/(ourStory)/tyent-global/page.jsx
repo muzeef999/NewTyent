@@ -59,20 +59,20 @@ const qualityCertifications = [
 const TyentGlobal = () => {
   return (
     <div className="container">
-      <div className="text-center">
-        <h1 className="bg-heading-text-two-main">Tyent Global</h1>
-
-        <h1 className="fw-bold subtitle-tight tyent-global-subtitle">
-          World Leaders in Hydrogen-Rich Alkaline Water Ionizer Technology
-        </h1>
-
-        <p className="mx-auto" style={{ maxWidth: "800px" }}>
-          Tyent is a globally trusted premium water ionizer brand, powered by decades of innovation,
-          advanced R&D, and uncompromising quality standards. Manufactured by TAE YOUNG
-          E&T CO., LTD, South Korea, Tyent is present in 86+ countries, setting the global
-          benchmark for hydrogen-rich alkaline water technology that supports preventive health,
-          wellness, and superior water quality.
-        </p>
+      <div className="text-center position-relative pb-2">
+        <h1 className="bg-heading-text-two-main mt-4 mb-0 p-0">Tyent Global</h1>
+        <div className="overlap-heading">
+          <h1 className="fw-bold subtitle-tight text-dark mb-3 mt-0">
+            World Leaders in Hydrogen-Rich Alkaline Water Ionizer Technology
+          </h1>
+          <p className="mt-3 mt-md-4 mx-auto" style={{ maxWidth: "800px" }}>
+            Tyent is a globally trusted premium water ionizer brand, powered by decades of innovation,
+            advanced R&D, and uncompromising quality standards. Manufactured by TAE YOUNG
+            E&T CO., LTD, South Korea, Tyent is present in 86+ countries, setting the global
+            benchmark for hydrogen-rich alkaline water technology that supports preventive health,
+            wellness, and superior water quality.
+          </p>
+        </div>
       </div>
 
       <div className="text-center mt-5">
@@ -163,12 +163,10 @@ const TyentGlobal = () => {
           <img
             src="/home/globalTyent.png"
             alt="Tyent Water Ionizer Machines"
-            className="img-fluid"
+            className="img-fluid tyent-global-img"
             style={{
               maxHeight: '1000px',
-              objectFit: 'contain',
-              transform: 'scale(1.2)',
-              transformOrigin: 'center left'
+              objectFit: 'contain'
             }}
           />
         </div>
@@ -344,39 +342,27 @@ const TyentGlobal = () => {
         </p>
       </div>
 
-      <div className="my-5 py-5 position-relative promise-section overflow-hidden">
+      <div className="my-4 my-md-5 py-4 py-md-5 position-relative promise-section overflow-hidden">
         {/* Optional background element that supports map mapping */}
-        <div
-          className="promise-bg"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: 'url(/home/world-map.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            zIndex: 0,
-            pointerEvents: 'none'
-          }}
-        />
+        <div className="promise-bg" />
 
         <div className="row justify-content-center text-center g-4 mt-4 position-relative px-3" style={{ zIndex: 1 }}>
           <div className="col-12 col-sm-6 col-md-4">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: '3.5rem', letterSpacing: '-1px' }}>123+</h1>
+            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>123+</h1>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Global Presence</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               Providing innovative water solutions that improve health and well-being across India.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-4">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: '3.5rem', letterSpacing: '-1px' }}>160+</h1>
+            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>160+</h1>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Technology Patents</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               160+ patents, showcasing groundbreaking advancements in water ionization.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-4">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: '3.5rem', letterSpacing: '-1px' }}>30+</h1>
+            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>30+</h1>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Years of R&D</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               29 years of cutting-edge research delivering innovative water solutions globally.
@@ -384,14 +370,14 @@ const TyentGlobal = () => {
           </div>
 
           <div className="col-12 col-sm-6 col-md-4 mt-md-5">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: '3.5rem', letterSpacing: '-1px' }}>15</h1>
+            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>15</h1>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Years Warranty</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               Prestigious design awards blending innovation and aesthetics in luxury water ionizers.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-4 mt-md-5">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: '3.5rem', letterSpacing: '-1px' }}>26</h1>
+            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>26</h1>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Design Awards</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               Recognized for design excellence in advanced, luxury water ionizers worldwide.
@@ -401,8 +387,15 @@ const TyentGlobal = () => {
       </div>
 
       <style>{`
-        .tyent-global-subtitle {
-          margin-top: 0 !important;
+        .promise-bg {
+          position: absolute;
+          inset: 0;
+          background-image: url('/home/world-map.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          z-index: 0;
+          pointer-events: none;
         }
         .quality-masonry {
           column-count: 1;
@@ -422,8 +415,15 @@ const TyentGlobal = () => {
           }
         }
         @media (min-width: 992px) {
+          .promise-bg {
+            background-size: contain;
+          }
           .quality-masonry {
             column-count: 3;
+          }
+          .tyent-global-img {
+            transform: scale(1.2);
+            transform-origin: center left;
           }
         }
       `}</style>

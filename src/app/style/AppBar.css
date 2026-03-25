@@ -856,3 +856,15 @@ padding-left: 48px !important;
 .sub-title-below {
   font-size: clamp(14px, 2vw, 20px);
 }
+
+.overlap-heading {
+  margin-top: -12px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .overlap-heading {
+    margin-top: -32px;
+  }
+}

@@ -34,7 +34,7 @@ const SlickSlider = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    arrows: true,
+    arrows: false,
     slidesToShow: 8,
     slidesToScroll: 1,
     autoplay: true,

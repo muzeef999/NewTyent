@@ -14,6 +14,9 @@ import FeaturesCardContactUS from "../[slug]/FeaturesCardContactUS";
 import Video from "../../compoents/Video";
 import "../contact.css";
 import TyentFaqSection from "./TyentFaqSection";
+import Why_People_choose_Tyent_Water from "../../(main_home_content)/Why_People_choose_Tyent_Water";
+import TrustedbyExperts from "../../(main_home_content)/TrustedbyExperts";
+import Needhelp from "../../(main_home_content)/Needhelp";
 
 export async function generateMetadata({ params }) {
   // Find the location using slug
@@ -283,14 +286,78 @@ export default async function LocationPage({ params }) {
               setting new global benchmarks for alkaline water solutions.
             </p>
           </div>
+          <br />
 
         <Certifications />
+
+        <div
+          className="mx-auto text-center"
+          style={{
+            maxWidth: "100%",
+            // backgroundColor: "#ffffff",
+            padding: "28px 20px 24px",
+            // borderTop: "1px solid #f1f1f1",
+            // borderBottom: "1px solid #f1f1f1",
+          }}
+        >
+          <h2
+            className="fw-bold mb-3"
+            style={{
+              color: "#1155e0",
+              fontSize: "clamp(24px, 2vw, 38px)",
+              lineHeight: "1.2",
+            }}
+          >
+            Tyent India - Hydration Redefined.
+          </h2>
+
+          <p
+            className="mx-auto mb-0"
+            style={{
+              maxWidth: "1180px",
+              color: "#333333",
+              fontSize: "15px",
+              lineHeight: "1.95",
+            }}
+          >
+            best water ionizer in India, water ionizer for home, hydrogen rich
+            water ionizer, alkaline water ionizer, premium water ionizer, tyent
+            water ionizer, japanese water ionizer, medical grade water ionizer,
+            advanced water ionizer system, hydrogen water generator, alkaline
+            water benefits, hydrogen water benefits, reduces oxidative stress,
+            anti-oxidant water, improves hydration, immune boosting water,
+            preventive wellness water, cellular hydration water, detox water
+            system, lifestyle disease prevention water, best water ionizer in
+            Delhi, alkaline water ionizer Delhi NCR, hydrogen water generator
+            India, premium water ionizer Delhi, water ionizer near me, water
+            ionizer supplier Delhi, Tyent dealer in Delhi, hydrogen rich water
+            machine Delhi, buy water ionizer online, best alkaline water
+            machine price, water ionizer with warranty, certified water
+            ionizer, RO alternative water system, premium hydration system,
+            home water ionizer installation, doorstep water ionizer service,
+            which is the best water ionizer, difference between RO and water
+            ionizer, is alkaline water safe, hydrogen water for health, top
+            water ionizer brand in India, long term health water solution
+          </p>
+        </div>
+
+        <div>
+          <Why_People_choose_Tyent_Water />
+        </div>
+
+      <div className="section-spacing">
+        <TrustedbyExperts />
+      </div>
+
+      <div className="section-spacing">
+        <Needhelp />
+      </div>
 
         <div className="section-spacing">
           <h1
             className="text-center"
             style={{
-              fontSize: "clamp(24px, 5vw, 3rem)",
+              fontSize: "clamp(24px, 3vw, 3rem)",
               fontWeight: "bold",
               color: "#333",
             }}

@@ -29,12 +29,16 @@ const OurStory = () => {
 
   return (
     <div className="container">
-      <div className="text-center">
-        <h1 className="bg-heading-text-two-main">Tyent & Medilight</h1>
-        <h3 className="fw-bold subtitle-tight our-story-subtitle">Advancing Preventive Health Through Water</h3>
-        <p className="mt-4">
-          Founded in 2016 by a team of experienced doctor’s and visionary entrepreneurs, Tyent  was established with a clear mission: to deliver world-class preventive healthcare through  water. By combining medical insight with advanced engineering, Tyent pioneered  hydrogen-rich alkaline water ionizers and hydrogen water generators designed to  support long-term wellness, cellular hydration, and antioxidant protection.  Tyent’s technology focuses on producing high-pH, hydrogen-rich water with negative  ORP, helping individuals adopt a proactive approach toward health through daily hydration.  Today, Tyent is globally recognized for its medical-grade water ionizers, innovation, and  uncompromising quality standards.
-        </p>
+      <div className="text-center position-relative pb-2">
+        <h1 className="bg-heading-text-two-main m-0 p-0">Tyent & Medilight</h1>
+        <div className="overlap-heading">
+          <h3 className="fw-bold subtitle-tight text-dark mb-3 mt-0">
+            Advancing Preventive Health Through Water
+          </h3>
+          <p className="mt-4">
+            Founded in 2016 by a team of experienced doctor’s and visionary entrepreneurs, Tyent  was established with a clear mission: to deliver world-class preventive healthcare through  water. By combining medical insight with advanced engineering, Tyent pioneered  hydrogen-rich alkaline water ionizers and hydrogen water generators designed to  support long-term wellness, cellular hydration, and antioxidant protection.  Tyent’s technology focuses on producing high-pH, hydrogen-rich water with negative  ORP, helping individuals adopt a proactive approach toward health through daily hydration.  Today, Tyent is globally recognized for its medical-grade water ionizers, innovation, and  uncompromising quality standards.
+          </p>
+        </div>
       </div>
 
       <div className="row align-items-center mb-5 pb-4">
@@ -146,7 +150,7 @@ const OurStory = () => {
         </div>
       </div>
 
-      <div className="mb-5 pb-5">
+      <div className="">
         <div className="text-center mb-5 pb-4">
           <h3 className="fw-bold mb-4" style={{ color: '#273fdb', fontSize: '24px' }}>
             Strengthening Tyent's Global Presence
@@ -156,17 +160,17 @@ const OurStory = () => {
           </p>
         </div>
 
-        <div className="row justify-content-center text-center mt-5 pt-4">
+        <div className="row justify-content-center text-center mt-4 mt-md-5 pt-2 pt-md-4">
 
           {/* Vision */}
-          <div className="col-12 mb-5 pb-3">
+          <div className="col-12 mb-4 pb-md-3">
             <div className="mb-3">
               <span className="d-inline-flex align-items-center justify-content-center">
                 <PiLightbulb size={40} />
               </span>
             </div>
             <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Vision</h5>
-            <p className="  mx-auto" style={{ fontSize: '15px', maxWidth: '550px' }}>
+            <p className="  mx-auto px-3 px-md-0" style={{ fontSize: '15px', maxWidth: '550px' }}>
               To revolutionize hydration in India by becoming the most trusted name in
               advanced water ionization and purification solutions, contributing to a
               healthier, more sustainable future for generations to come.
@@ -174,14 +178,14 @@ const OurStory = () => {
           </div>
 
           {/* Mission */}
-          <div className="col-12 mb-5 pb-3">
+          <div className="col-12 mb-4 pb-md-3">
             <div className="mb-3">
               <span className="d-inline-flex align-items-center justify-content-center">
                 <GoGoal size={40} />
               </span>
             </div>
             <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Mission</h5>
-            <p className="  mx-auto" style={{ fontSize: '15px', maxWidth: '550px' }}>
+            <p className="  mx-auto px-3 px-md-0" style={{ fontSize: '15px', maxWidth: '550px' }}>
               Together, we aim to make every drop of water count towards a better,
               healthier future for India.
             </p>
@@ -189,24 +193,24 @@ const OurStory = () => {
 
         </div>
 
-        <div className="row justify-content-center text-center mt-4">
-          <div className="col-md-4 mb-2">
+        <div className="row justify-content-center text-center mt-3 mt-md-4">
+          <div className="col-md-4 mb-4 mb-md-2">
             <div className="mb-3">
               <BsShieldPlus size={40} />
             </div>
             <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Health & Wellness</h5>
-            <p className=" " style={{ fontSize: '15px' }}>
+            <p className=" px-3 px-md-0" style={{ fontSize: '15px' }}>
               To provide innovative water solutions that improve the health and well-being of
               individuals and families across India.
             </p>
           </div>
 
-          <div className="col-md-4 mb-2">
+          <div className="col-md-4 mb-4 mb-md-2">
             <div className="mb-3">
               <FaRecycle size={40} />
             </div>
             <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Sustainability</h5>
-            <p className=" " style={{ fontSize: '15px' }}>
+            <p className=" px-3 px-md-0" style={{ fontSize: '15px' }}>
               To promote eco-friendly practices by reducing the dependency on single-use
               plastics and encouraging sustainable hydration.
             </p>
@@ -217,7 +221,7 @@ const OurStory = () => {
               <SlEnergy size={40} />
             </div>
             <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Technology Leadership</h5>
-            <p className=" " style={{ fontSize: '15px' }}>
+            <p className=" px-3 px-md-0" style={{ fontSize: '15px' }}>
               To continuously innovate and deliver cutting-edge water ionization and
               purification systems.
             </p>
