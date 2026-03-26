@@ -115,8 +115,7 @@ const AppBar = () => {
       <div className="sticky-top" style={{ position: "fixed", width: "100%" }}>
         <div style={{ backgroundColor: "#291495", color: "#FFF" }}>
         <div
-          className="d-flex container justify-content-between align-items-center  p-2"
-          
+          className="d-flex container justify-content-between align-items-center  p-2"        
         >
           <div
             className="d-flex  align-items-center marquee"
