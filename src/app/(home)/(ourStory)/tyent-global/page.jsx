@@ -60,12 +60,12 @@ const TyentGlobal = () => {
   return (
     <div className="container">
       <div className="text-center position-relative pb-2">
-        <h1 className="bg-heading-text-two-main mt-4 mb-0 p-0">Tyent Global</h1>
-        <div className="overlap-heading">
-          <h1 className="fw-bold subtitle-tight text-dark mb-3 mt-0">
+        <h1 className="bg-heading-text-two-main">Tyent Global</h1>
+          <h3 className="fw-bold subtitle-tight mb-5" style={{ marginTop: '-25px' }}>
             World Leaders in Hydrogen-Rich Alkaline Water Ionizer Technology
-          </h1>
-          <p className="mt-3 mt-md-4 mx-auto" style={{ maxWidth: "800px" }}>
+          </h3>
+        <div className="overlap-heading">
+          <p className="mt-3 mt-md-4 mx-auto" style={{ maxWidth: "800px", fontSize: '15px' }}>
             Tyent is a globally trusted premium water ionizer brand, powered by decades of innovation,
             advanced R&D, and uncompromising quality standards. Manufactured by TAE YOUNG
             E&T CO., LTD, South Korea, Tyent is present in 86+ countries, setting the global

@@ -11,7 +11,7 @@ import International from "@/asserts/whyTent/International.webp";
 import Antioxidant from "@/asserts/whyTent/Antioxidant.webp";
 import Chemical from "@/asserts/whyTent/Chemical.webp";
 import doorstep from "@/asserts/whyTent/doorstep.webp";
-import design  from "@/asserts/whyTent/design.webp";
+import design from "@/asserts/whyTent/design.webp";
 import Certified from "@/asserts/whyTent/Certified.webp";
 import display from "@/asserts/whyTent/display.webp";
 import plateSurfaceArea from "@/asserts/whyTent/plateSurfaceArea.webp";
@@ -32,35 +32,20 @@ export const metadata = {
 async function fetchData() {
   const data = [
     {
-      id: "1",
-      color1: "#f8fbfe",
-      heading: "Solid Hybrid Mesh Plate Technology",
-      description: `
-        <div style="line-height: 1.6;">
-         <p>
-    When it comes to water ionization, one of the most crucial components is the plate design. The effectiveness of a water ionizer is largely determined by the quality, surface area, and strength of its plates. All Tyent Water Ionizers feature medical-grade Solid Hybrid Mesh Plate technology, offering the strength of solid plates and the extensive surface area of mesh designs. Our engineers designed Tyent plates to be the thickest, longest, and with more surface area in the industry, incorporating advanced electrolysis distribution for superior conductivity.
-  </p>
-
-  <p>
-    While most ionizers use either solid or mesh plates, Tyent’s engineers found both designs lacking. Solid plates are strong but have poor electrical distribution, as electricity tends to flow around the outer edge like a lightning rod. Mesh plates provide more edges for better electrical distribution but are not durable enough to last.
-  </p>
-
-  <p>
-    To overcome these limitations, Tyent developed the Solid Hybrid Mesh Plate, designed according to Faraday’s electrolysis principles. This unique plate combines the strength of solid plates with the superior conductivity of mesh design. Small holes are drilled into the solid plate to increase surface area for electrolysis, then the plate is dipped multiple times in platinum and baked for enhanced performance.
-  </p>
-
-  <p>
-    Tyent’s Solid Hybrid Mesh Plates offer the best of both worlds: unmatched strength and exceptional electrolysis power. These plates will never break, crumble, or leach and are exclusive to Tyent water ionizers.
-  </p>
-
-  <p>
-    The plates are sourced from Permelac, a renowned Japanese company founded in 1969 and known for producing the industry's strongest plates. Tyent backs these plates with a 15-year warranty in India and a lifetime warranty in the USA. Made from titanium and coated with platinum, these plates undergo multiple dipping and baking processes for unmatched durability. Tyent is also the only ionizer brand that proudly discloses its plate manufacturer.
-  </p>
-
-  <h3>Strength + Durability + More Surface Area + More Antioxidants = Solid Hybrid Mesh Plates</h3>
-        </div>`,
-      icon: platess,
-    },
+  id: "1",
+  color1: "#f8fbfe",
+  heading: "Solid Hybrid Mesh Plate Technology",
+  description: `
+    <div style="line-height: 1.6;">
+      <p>
+        When it comes to water ionizers, electrode/plate technology plays a vital role in performance, durability, and ionization efficiency. Most water ionizers use either solid or mesh electrodes, but both designs have limitations-solid plates lack efficient electrical distribution, while mesh plates compromise on strength and longevity. Seeking the perfect balance of strength, surface area, and durability, Tyent engineers redesigned plate technology from the ground up to create the industry-exclusive Tyent's Solid Hybrid Mesh Electrodes.
+      </p>
+      <p>
+        Tyent Water Ionizers feature Japanese medical-grade Solid Hybrid Mesh Plates, engineered using Faraday’s electrolysis principles for superior conductivity and powerful electrolysis. Crafted from medical-grade titanium and enhanced with multiple platinum dipping and baking processes, these plates deliver unmatched safety, performance, and durability. Sourced from Permelac Japan (est. 1969), they never leach, break, or crumble and are backed by a 15-year warranty in India, positioning Tyent as a leader in advanced water ionization technology
+      </p>
+    </div>`,
+  icon: platess,
+},
     {
       id: "2",
       color1: "#f8fbfe",
@@ -68,7 +53,7 @@ async function fetchData() {
       description: `
         <div style="line-height: 1.6;">
           <p>
-          Plates are the core of a water ionizer, and the key factor is their surface area, not their height, width, or diameter. For instance, the size of a plate doesn’t directly impact the production of antioxidants. Some brands claim to have the largest plates, yet produce lesser antioxidants (-ORP). Tyent water ionizers utilize Solid Hybrid Mesh Plate technology, offering superior strength, durability and largest surface area in the industry, enabling higher antioxidant production and more accurate pH levels, delivering better overall performance. 
+          Plates are the core of a water ionizer, and surface area, not height, width, or diameter, determines true performance. Large or more numerous plates don’t always produce higher antioxidants or better -ORP levels, which is why many ionizers in the market fail to deliver optimum molecular hydrogen or selective antioxidant benefits. Tyent Water Ionizers feature exclusive Japanese Solid Hybrid Mesh Plate technology, engineered using Faraday’s electrolysis principles for maximum surface area, superior strength, and long-lasting durability. This advanced design ensures improved electrical conductivity with more surface area resulting in higher antioxidant production, , accurate pH balance, and consistently superior water ionization, delivering healthier, better-tasting water. 
           </p>
         </div>`,
       icon: plateSurfaceArea,
@@ -79,24 +64,12 @@ async function fetchData() {
       heading: "Patented SMPS PLUS® Power",
       description: `
         <div style="line-height: 1.6; color: #2ebb46 !important">
-           <h5>Three Types of Power Supplies Used in Water Ionizers</h5>
 
-  <p>The following are the three types of power supplies used in water ionizers:</p>
+  <p>Older linear power supply units (PSUs) with heavy transformers are bulky, prone to overheating, and inefficient. Developed in the early 1900s, these PSUs lack voltage adjustability, yet some water ionizer brands still use them because they are cheaper.  Some other water Ionizers use SMPS (Switch Mode Power Supply) technology, the same efficient, lightweight technology found in flat-screen TVs, laptops, and modern electronics. </p>
 
-  <ol>
-    <li>The older technology - Power Supply Unit's (PSU's) Transformer</li>
-    <li>The power technology - Switch Mode Power Supply (SMPS)</li>
-    <li>The Patented technology - Patented SMPS PLUS Power supply</li>
-  </ol>
+ 
 
-  <h2>Transformers</h2>
-  <p>The older linear power supply units - known as PSUs with heavy transformers - are hefty and prone to overheating. Due to their simplicity, linear PSU’s do not allow for voltage adjustability. The technology behind linear PSU’s was developed in the early 1900’s. This ancient circuit design is less efficient than newer technology. However, some ionizer companies still use PSU’s simply because they are less expensive.</p>
-
-  <h2>SMPS</h2>
-  <p>SMPS's are an updated version of transformers. SMPS is the same technology used in flat-panel televisions, audio systems, laptops, computers, and other modern electronic devices. Compared to linear PSUs, SMPS units are lighter, smaller, and more efficient overall. SMPS also has a limitation to voltage adjustability.</p>
-
-  <h2>SMPS PLUS</h2>
-  <p>Tyent engineers wanted a better solution for our customers. They pooled their extensive knowledge and expertise and enhanced a traditional SMPS to work specifically in a water ionizer. The unit they created was named SMPS Plus. Tyent’s SMPS Plus gives you 55 adjustable power settings so you can create the perfect glass of alkaline water. The power and efficiency of SMPS Plus enables Tyent ionizer to create strong alkaline and acidic water without using chemicals from 11.5 pH to 2.5 pH.</p>
+  <p>Compared to linear PSUs, SMPS units are lighter, smaller and more efficient overall.  Tyent engineers enhanced traditional SMPS specifically for water ionizers, creating the Patented SMPS PLUS. With 55 adjustable power settings, SMPS PLUS delivers precise energy for producing all pH levels including strong alkaline and acidic water naturally, without chemicals, providing superior performance, efficiency, and durability in every glass of water.</p>
 
         </div>`,
       icon: smpsplus,
@@ -107,14 +80,12 @@ async function fetchData() {
       heading: "Extreme filtration capability",
       description: `
         <div style="line-height: 1.6;">
-         <p>Ionized, hydrogen-rich alkaline water is highly beneficial, but its effectiveness depends on the purity of your drinking water. Tyent Water Ionizers feature two .01 micron filters, creating a multi-stage, customized system designed to remove impurities, bacteria, viruses, contaminants, and heavy metals from your tap water.
+         <p>Hydrogen-rich alkaline water offers numerous health benefits, but its effectiveness depends on the purity of your drinking water. Tyent Water Ionizers use a multi-stage filtration system with dual 0.01-micron filters, designed to remove impurities, bacteria, viruses, heavy metals, nano-plastics, nano-viruses, and pharmaceutical residues, ensuring your water is not just healthy but truly pure.
 </p>
 <p>
-Our Tyent-filters use .01 micron filter media, similar to those used in kidney dialysis machines, and are the largest in the industry. The increased size of our filters ensures even greater water purity. Tyent water ionizers effectively eliminate contaminants, viruses, bacteria, and microorganisms.
+Tyent filters use 0.01-micron filter media, similar to those in kidney dialysis machines, and are the largest in the industry, providing superior filtration. Water flows lengthwise through the extended filter media, maximizing contaminant removal for cleaner, safer, and better-tasting water. With this advanced technology, Tyent leads the industry in water filtration and purification. Tyent filters are NSF, EPA & ANSI Certified.
 </p>
-<p>
-As water passes lengthwise through the filters, the extended length provides more filtration media for the water to pass through, resulting in even purer water. Tyent stands as the industry leader in water filtration technology.
-</p>
+
         
         </div>`,
       icon: tyentFilters,
@@ -126,7 +97,7 @@ As water passes lengthwise through the filters, the extended length provides mor
       description: `
         <div style="line-height: 1.6;">
              <p>
-            Tyent Water Ionizers use an automated Polarity Anti Scale Technology (PAST)- one of the most advanced cleaning systems in the industry. This automated cleaning cycle is triggered by both a timer and an internal sensor to ensure minimal mineral scale buildup on the electrodes for long-term performance. Better cleaning means longer-lasting components and healthier water. 
+            Tyent Water Ionizers use an automated Polarity Anti Scale Technology (PAST)- one of the most advanced cleaning systems in the industry. This automated cleaning cycle is triggered by both a timer and an internal sensor to ensure minimal mineral scale buildup on the electrodes for long-term performance. Better cleaning means longer-lasting components and healthier water.
              </p>
         </div>`,
       icon: RTR,
@@ -139,13 +110,7 @@ As water passes lengthwise through the filters, the extended length provides mor
         <div style="line-height: 1.6;">
          <p>Tyent water ionizers stand out as the only ionizers in the industry featuring true one-touch longest display technology. Designed with modern customer needs in mind, Tyent’s advanced one-touch display ensures a simplified and user-friendly experience. With a single touch on the intuitive touch control panel, users can easily select their desired pH level and enjoy clean, healthy water whenever they want.
 </p>
-<p>
 
-Tyent water ionizers are so simple to use that they’re perfect for children, seniors, and everyone in between. The one-touch display also allows users to auto-clean, select the required water quantity, and access many other convenient features. 
-</p>
-<p>
-For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-touch longest display is unmatched in both functionality and convenience.
-</p>
         </div>`,
       icon: display,
     },
@@ -157,6 +122,7 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
         <div>
         <p><strong>Tyent Water Ionizers</strong> are built with <em>cutting-edge technology, superior craftsmanship,</em> and the highest safety standards. Our products undergo rigorous testing and are certified by internationally recognized organizations, ensuring <strong>purity, safety, and performance</strong>.</p>
         
+        <!--
         <h3 style="color: #0077cc;">Globally Recognized Certifications</h3>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">ISO 9001 & ISO 14001 Certified</strong> - Ensuring <em>premium quality control</em> and <em>eco-friendly manufacturing practices</em>.</li>
@@ -177,6 +143,7 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
         </ul>
         
         <p><strong>Tyent – Setting the Global Standard for Water Ionization! 💧🌎</strong></p>
+        -->
         </div>`,
       icon: International,
     },
@@ -186,8 +153,7 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
       heading: "Certified Medical Device",
       description: `
         <div style="line-height: 1.6;">
-          <p><strong>Tyent Water Ionizers</strong> are <em>certified medical devices</em> by the <strong>American Ministry of Food and Drug Safety (USFDA)</strong> and the <strong>South Korean Ministry of Food and Drug Safety (MFDS)</strong>. Trusted by thousands of doctors worldwide, they play a crucial role in <em>preventing and managing various health conditions</em>.</p>
-        
+          <p><strong>Tyent Water Ionizers</strong> are <em>certified medical devices</em> by the <strong>American Ministry of Food and Drug Safety (USFDA)</strong> and the <strong>South Korean Ministry of Food and Drug Safety (MFDS)</strong>. Trusted by thousands of doctors worldwide, they play a crucial role in <em>preventing and managing various he        <!--
         <h3 style="color: #0077cc;">Unmatched Quality & Safety Certifications</h3>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">USFDA Certified Medical Device</strong> – Recognized for its health benefits and medical-grade quality.</li>
@@ -201,9 +167,12 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
             <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">ANSI & IEC Compliance</strong> – Adhering to global safety and performance regulations.</li>
         </ul>
         
-        <p><strong>Tyent’s certifications ensure <em>superior water quality, medical-grade safety, and cutting-edge technology</em>, making our ionizers the <em>most trusted choice for safe, healthy, and effective alkaline water</em>.</strong></p>
+        <p><strong>Tyent's certifications ensure <em>superior water quality, medical-grade safety, and cutting-edge technology</em>, making our ionizers the <em>most trusted choice for safe, healthy, and effective alkaline water</em>.</strong></p>
         
         <p style="font-size: 1.2em; font-weight: bold; color: #0077cc;">Tyent – The Gold Standard in Water Ionization! 💧</p>
+        -->
+   ld; color: #0077cc;">Tyent – The Gold Standard in Water Ionization! 💧</p>
+        -->
    
         </div>`,
       icon: Certified,
@@ -214,9 +183,9 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
       heading: "Better Business Bureau A+ Rating",
       description: `
         <div style="line-height: 1.6, color:#FFF">
-         <h5>A+ Rating from the Better Business Bureau (BBB)</h5>
+         <p>A+ Rating from the Better Business Bureau (BBB)</p>
 
-  <p>An A+ rating from the Better Business Bureau (BBB) is a coveted achievement for companies, symbolizing a commitment to excellence. The BBB’s mission is to foster an ethical marketplace where buyers and sellers can trust one another. As a highly respected organization, the BBB evaluates businesses based on its rigorous Standards of Trust.</p>
+  <p>An A+ rating from the Better Business Bureau (BBB) is a coveted achievement for companies, symbolizing a commitment to excellence. The BBB's mission is to foster an ethical marketplace where buyers and sellers can trust one another. As a highly respected organization, the BBB evaluates businesses based on its rigorous Standards of Trust.</p>
 
   <p>Tyent is proud to hold an A+ rating from the BBB, reflecting our dedication to integrity, customer service, and quality.</p>
 
@@ -230,7 +199,7 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
       description: `
         <div style="line-height: 1.6;">
           <p><strong>Tyent Water Ionizers</strong> are not just high-performance medical devices—they are designed to complement modern lifestyles with their sleek, sophisticated, and futuristic aesthetics. Engineered to blend seamlessly into any kitchen or commercial space, Tyent ionizers combine cutting-edge technology with premium design elements for an unmatched user experience.</p>
-        
+        <!--
         <h3 style="color: #0077cc;">Premium Design Features</h3>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">Sleek & Modern Look</strong> – Crafted with high-quality stainless steel and polished finishes to enhance your kitchen’s elegance.</li>
@@ -244,11 +213,11 @@ For anyone looking for a cutting-edge, easy-to-use water ionizer, Tyent’s one-
         <p><strong>Tyent doesn’t just revolutionize hydration—it elevates your space with style and sophistication.</strong></p>
         
         <p style="font-size: 1.2em; font-weight: bold; color: #0077cc;">Experience the perfect blend of technology, luxury, and innovation with Tyent! 💎💧</p>
-  
+      -->
         </div>`,
       icon: design,
     },
-    
+
   ];
 
   return data;
@@ -270,20 +239,20 @@ const Page = async () => {
   return (
     <>
 
-    <>
-      <Head>
-        <script
-          async
-          custom-element="amp-analytics"
-          src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-        />
-      </Head>
+      <>
+        <Head>
+          <script
+            async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+          />
+        </Head>
 
-      
-      {/* AMP Google Ads + GA + Conversion */}
-      <amp-analytics type="gtag" data-credentials="include">
-        <script type="application/json">
-          {`
+
+        {/* AMP Google Ads + GA + Conversion */}
+        <amp-analytics type="gtag" data-credentials="include">
+          <script type="application/json">
+            {`
           {
             "vars": {
               "gtag_id": "G-T94BNYD8RB",
@@ -304,19 +273,54 @@ const Page = async () => {
             }
           }
           `}
-        </script>
-      </amp-analytics>
-    
-    
-      <Header
+          </script>
+        </amp-analytics>
+
+
+        {/* <Header
         basic={headerData.basic}
         preheading={headerData.preheading}
         afterheading={headerData.afterheading}
         content={headerData.content}
         img={why}
         animatedText={headerData.animatedText}
-      />
-      <FeatureCard data={data} />
+      /> */}
+
+        <div className="container text-center position-relative pb-2 why-tyent-hero">
+          <h1 className="bg-heading-text-two-main m-0 p-0 why-tyent-hero-title">
+            Trusted Worldwide
+          </h1>
+          <div className="overlap-heading why-tyent-hero-copy">
+            <h3 className="fw-bold subtitle-tight text-dark mb-3 mt-0 why-tyent-hero-subtitle">
+              Why Choose Tyent
+            </h3>
+          </div>
+        </div>
+
+
+        <FeatureCard data={data} />
+        <style>{`
+        @media (max-width: 767.98px) {
+          .why-tyent-hero-title {
+            font-size: clamp(32px, 10vw, 44px);
+            line-height: 0.92;
+            white-space: nowrap;
+          }
+
+          .why-tyent-hero-copy {
+            margin-top: -6px;
+          }
+
+          .why-tyent-hero-subtitle {
+            font-size: clamp(18px, 6vw, 28px);
+            line-height: 1.15;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 10px;
+          }
+        }
+      `}</style>
       </>
     </>
   );
