@@ -22,7 +22,7 @@
 }
 
 .banner-content.mobile {
-  top: 12%;
+  top: 25%;
   left: 5%;
   max-width: 90%;
 }
@@ -39,7 +39,7 @@
 
 /* Heading */
 .main-heading {
-  margin-top: 20px;
+  margin-top: 60px;
   margin-bottom: 0;
   font-weight: 700;
   line-height: 1.1;
@@ -97,13 +97,13 @@
   .banner-mobile { display: block; }
 
   .banner-content.mobile {
-    top: 10%;
+    /* top: 22%; */
     left: 5%;
     max-width: 86%;
   }
 
   .main-heading {
-    margin-top: 12px;
+    margin-top: 40px;
     line-height: 1;
   }
 

@@ -21,6 +21,7 @@ import warranty2 from "@/asserts/tyentvskangen/warranty2.png";
 import warranty from "@/asserts/tyentvskangen/warranty.png";
 import delivery from "@/asserts/tyentvskangen/delivery.png";
 import noDoorstep from "@/asserts/tyentvskangen/noDoorstep.png";
+import tyentKangenHero from "@/asserts/tyentkengan.webp";
 
 
 export const metadata = {
@@ -73,8 +74,27 @@ const page = () => {
   };
 
   return (
-    <div>
-      <Header {...headerData} />
+    <div style={{ overflowX: "hidden" }}>
+      {/* <Header {...headerData} /> */}
+
+      {/* <div
+        style={{
+          position: "relative",
+          width: "100%",
+          minHeight: "220px",
+          height: "clamp(220px, 32vw, 420px)",
+          overflow: "hidden",
+        }}
+      >
+        <Image
+          src={tyentKangenHero}
+          alt="Tyent vs Kangen comparison banner"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+      </div> */}
 
       <div className="container">
         <br />
@@ -708,7 +728,7 @@ const page = () => {
                     src={delivery}
                     alt="Doorstep Delivery"
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", borderRadius: "16px" }}
                     priority
                   />
                 </div>
@@ -776,7 +796,7 @@ const page = () => {
         </div>
 
 
-        <p style={{ fontSize: "50px", fontWeight: "500", textAlign: "center" }}>
+        <p style={{ fontSize: "clamp(24px, 6vw, 50px)", fontWeight: "500", textAlign: "center", wordBreak: "break-word" }}>
           Plates/Electrodes Surface area
         </p>
 
@@ -790,40 +810,44 @@ const page = () => {
               key={index}
               className="d-flex align-items-center justify-content-center text-center"
             >
-              <Table
-                bordered
-                hover
-                className="custom-table"
-                style={{
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                  backgroundColor: "#FFF",
-                }}
-              >
-                <thead>
-                  <tr>
-                    <th
-                      style={{
-                        color: data.color,
-                      }}
-                      colSpan="2"
-                    >
-                      <b>{data.title}</b>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.details.map((detail, idx) => (
-                    <tr key={idx}>
-                      <td style={{ color: data.color, textAlign: "start" }}>
-                        {detail.label}
-                      </td>{" "}
-                      {/* Blue heading color */}
-                      <td style={{ textAlign: "start" }}>{detail.value}</td>
+              <div style={{ overflowX: "auto", width: "100%" }}>
+                <Table
+                  bordered
+                  hover
+                  className="custom-table"
+                  style={{
+                    borderRadius: "4px",
+                    overflow: "hidden",
+                    backgroundColor: "#FFF",
+                    fontSize: "clamp(12px, 2.5vw, 16px)",
+                    wordBreak: "break-word",
+                  }}
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        style={{
+                          color: data.color,
+                        }}
+                        colSpan="2"
+                      >
+                        <b>{data.title}</b>
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </Table>
+                  </thead>
+                  <tbody>
+                    {data.details.map((detail, idx) => (
+                      <tr key={idx}>
+                        <td style={{ color: data.color, textAlign: "start" }}>
+                          {detail.label}
+                        </td>{" "}
+                        {/* Blue heading color */}
+                        <td style={{ textAlign: "start" }}>{detail.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
             </Col>
           ))}
         </Row>

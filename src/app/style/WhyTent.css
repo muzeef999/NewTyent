@@ -40,6 +40,7 @@
 
 .why-tyent-item.is-left .why-tyent-copy {
   grid-column: 1;
+  grid-row: 1;
   justify-self: end;
   width: min(100%, 520px);
   text-align: left;
@@ -47,12 +48,14 @@
 
 .why-tyent-item.is-left .why-tyent-media {
   grid-column: 3;
+  grid-row: 1;
   justify-self: start;
-  width: min(100%, 340px);
+  width: min(100%, 520px);
 }
 
 .why-tyent-item.is-right .why-tyent-copy {
   grid-column: 3;
+  grid-row: 1;
   justify-self: start;
   width: min(100%, 520px);
   text-align: left;
@@ -60,12 +63,14 @@
 
 .why-tyent-item.is-right .why-tyent-media {
   grid-column: 1;
+  grid-row: 1;
   justify-self: end;
-  width: min(100%, 340px);
+  width: min(100%, 520px);
 }
 
 .why-tyent-number {
   grid-column: 2;
+  grid-row: 1;
   justify-self: center;
   align-self: start;
   width: 72px;
@@ -98,6 +103,7 @@
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
+  line-clamp: 8;
   color: #33415f;
   font-size: 0.96rem;
   line-height: 1.72;
@@ -134,6 +140,8 @@
   color: #0b56ff;
   font-size: 0.95rem;
   font-weight: 700;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .why-tyent-media {
@@ -168,99 +176,103 @@
   background: linear-gradient(180deg, #0f1422 0%, #1b2438 100%);
 }
 
+/* ── Tablet (≤991px) ── */
 @media (max-width: 991.98px) {
-  .why-tyent-timeline::before {
-    left: 28px;
-    transform: none;
-  }
-
-  .why-tyent-item {
-    grid-template-columns: 56px minmax(0, 1fr);
-    column-gap: 14px;
-    row-gap: 12px;
-    align-items: start;
-  }
-
-  .why-tyent-number {
-    width: 56px;
-    grid-column: 1;
-    justify-self: start;
-    align-self: start;
-    text-align: left;
-    font-size: 1.65rem;
-  }
-
-  .why-tyent-copy,
-  .why-tyent-item.is-right .why-tyent-copy {
-    grid-column: 2;
-    padding: 0;
-    width: 100%;
-    justify-self: stretch;
-  }
-
-  .why-tyent-media,
-  .why-tyent-item.is-right .why-tyent-media,
-  .why-tyent-item.is-left .why-tyent-media {
-    grid-column: 2;
-    justify-self: stretch;
-    width: min(100%, 340px);
-  }
-}
-
-@media (max-width: 767.98px) {
-  .why-tyent-timeline-section {
-    padding: 16px 0 52px;
-  }
-
   .why-tyent-timeline {
-    gap: 34px;
+    gap: 22px;
   }
 
   .why-tyent-item {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .why-tyent-timeline::before {
-    display: none;
+    grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
+    column-gap: 14px;
+    row-gap: 10px;
   }
 
   .why-tyent-number {
-    width: auto;
-    grid-column: 1;
-    font-size: 1.45rem;
-    text-align: left;
+    font-size: 1.55rem;
+    width: 56px;
   }
 
-  .why-tyent-copy,
-  .why-tyent-media,
-  .why-tyent-item.is-right .why-tyent-copy,
-  .why-tyent-item.is-right .why-tyent-media,
   .why-tyent-item.is-left .why-tyent-copy,
-  .why-tyent-item.is-left .why-tyent-media {
-    grid-column: 1;
+  .why-tyent-item.is-right .why-tyent-copy {
     width: 100%;
-    justify-self: stretch;
+  }
+
+  .why-tyent-item.is-left .why-tyent-media,
+  .why-tyent-item.is-right .why-tyent-media {
+    width: 100%;
   }
 
   .why-tyent-heading {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .why-tyent-description {
-    font-size: 0.92rem;
-    line-height: 1.65;
+    font-size: 0.9rem;
     -webkit-line-clamp: 6;
+    line-clamp: 6;
   }
 
   .why-tyent-image-shell {
-    border-radius: 16px;
+    border-radius: 14px;
   }
 
-  .why-tyent-media,
+  .why-tyent-toggle {
+    display: inline-block;
+    font-size: 0.82rem;
+  }
+}
+
+/* ── Mobile (≤767px) ── */
+@media (max-width: 767.98px) {
+  .why-tyent-timeline-section {
+    padding: 16px 0 48px;
+  }
+
+  .why-tyent-timeline {
+    gap: 18px;
+  }
+
+  .why-tyent-item {
+    grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+    column-gap: 8px;
+    row-gap: 6px;
+  }
+
+  .why-tyent-number {
+    font-size: 1.2rem;
+    width: 40px;
+  }
+
+  .why-tyent-item.is-left .why-tyent-copy,
+  .why-tyent-item.is-right .why-tyent-copy {
+    width: 100%;
+  }
+
   .why-tyent-item.is-left .why-tyent-media,
   .why-tyent-item.is-right .why-tyent-media {
-    width: min(100%, 320px);
-    justify-self: start;
+    width: 100%;
+  }
+
+  .why-tyent-heading {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .why-tyent-description {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+  }
+
+  .why-tyent-image-shell {
+    border-radius: 12px;
+  }
+
+  .why-tyent-toggle {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-top: 8px;
   }
 }

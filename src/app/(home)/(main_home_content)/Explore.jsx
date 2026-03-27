@@ -20,7 +20,7 @@ const products = [
   {
     name: "Tyent NMP-11",
     img: "/home/nmp-9.png",
-    desc: "Unlock precision hydration with advanced Hybrid Water Cell Technology",
+    desc: "Advanced top end water ionizer",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1150*",
     hydrogen: "Hydrogen range: upto -1800 PPB*",

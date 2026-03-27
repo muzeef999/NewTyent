@@ -5,8 +5,6 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 import "@/app/style/WhyTent.css";
 
-const darkItemIds = new Set(["3", "9", "12"]);
-
 const FeatureCard = ({ data }) => {
   const [expandedItems, setExpandedItems] = useState({});
 
@@ -23,12 +21,11 @@ const FeatureCard = ({ data }) => {
         <div className="why-tyent-timeline">
           {data.map((item, index) => {
             const isLeft = index % 2 === 0;
-            const isDark = darkItemIds.has(item.id);
 
             return (
               <article
                 key={item.id}
-                className={`why-tyent-item ${isLeft ? "is-left" : "is-right"} ${isDark ? "is-dark" : ""}`}
+                className={`why-tyent-item ${isLeft ? "is-left" : "is-right"}`}
               >
                 <span className="why-tyent-number">
                   {String(index + 1).padStart(2, "0")}
@@ -42,13 +39,13 @@ const FeatureCard = ({ data }) => {
                     }`}
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />
-                  {/* <button
+                  <button
                     type="button"
                     className="why-tyent-toggle"
                     onClick={() => toggleExpand(item.id)}
                   >
                     {expandedItems[item.id] ? "Read Less" : "Read More"}
-                  </button> */}
+                  </button>
                 </div>
 
                 <div className="why-tyent-media">

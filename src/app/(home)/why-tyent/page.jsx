@@ -32,10 +32,10 @@ export const metadata = {
 async function fetchData() {
   const data = [
     {
-  id: "1",
-  color1: "#f8fbfe",
-  heading: "Solid Hybrid Mesh Plate Technology",
-  description: `
+      id: "1",
+      color1: "#f8fbfe",
+      heading: "Solid Hybrid Mesh Plate Technology",
+      description: `
     <div style="line-height: 1.6;">
       <p>
         When it comes to water ionizers, electrode/plate technology plays a vital role in performance, durability, and ionization efficiency. Most water ionizers use either solid or mesh electrodes, but both designs have limitations-solid plates lack efficient electrical distribution, while mesh plates compromise on strength and longevity. Seeking the perfect balance of strength, surface area, and durability, Tyent engineers redesigned plate technology from the ground up to create the industry-exclusive Tyent's Solid Hybrid Mesh Electrodes.
@@ -44,8 +44,8 @@ async function fetchData() {
         Tyent Water Ionizers feature Japanese medical-grade Solid Hybrid Mesh Plates, engineered using Faraday’s electrolysis principles for superior conductivity and powerful electrolysis. Crafted from medical-grade titanium and enhanced with multiple platinum dipping and baking processes, these plates deliver unmatched safety, performance, and durability. Sourced from Permelac Japan (est. 1969), they never leach, break, or crumble and are backed by a 15-year warranty in India, positioning Tyent as a leader in advanced water ionization technology
       </p>
     </div>`,
-  icon: platess,
-},
+      icon: platess,
+    },
     {
       id: "2",
       color1: "#f8fbfe",
@@ -63,7 +63,7 @@ async function fetchData() {
       color1: "#f8fbfe",
       heading: "Patented SMPS PLUS® Power",
       description: `
-        <div style="line-height: 1.6; color: #2ebb46 !important">
+        <div style="line-height: 1.6;">
 
   <p>Older linear power supply units (PSUs) with heavy transformers are bulky, prone to overheating, and inefficient. Developed in the early 1900s, these PSUs lack voltage adjustability, yet some water ionizer brands still use them because they are cheaper.  Some other water Ionizers use SMPS (Switch Mode Power Supply) technology, the same efficient, lightweight technology found in flat-screen TVs, laptops, and modern electronics. </p>
 
@@ -153,7 +153,8 @@ Tyent filters use 0.01-micron filter media, similar to those in kidney dialysis 
       heading: "Certified Medical Device",
       description: `
         <div style="line-height: 1.6;">
-          <p><strong>Tyent Water Ionizers</strong> are <em>certified medical devices</em> by the <strong>American Ministry of Food and Drug Safety (USFDA)</strong> and the <strong>South Korean Ministry of Food and Drug Safety (MFDS)</strong>. Trusted by thousands of doctors worldwide, they play a crucial role in <em>preventing and managing various he        <!--
+          <p><strong>Tyent Water Ionizers</strong> are <em>certified medical devices</em> by the <strong>American Ministry of Food and Drug Safety (USFDA)</strong> and the <strong>South Korean Ministry of Food and Drug Safety (MFDS)</strong>. Trusted by thousands of doctors worldwide, they play a crucial role in <em>preventing and managing various he condition
+            <!--
         <h3 style="color: #0077cc;">Unmatched Quality & Safety Certifications</h3>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 10px 0; font-size: 1.1em;">✅ <strong style="color: #0077cc;">USFDA Certified Medical Device</strong> – Recognized for its health benefits and medical-grade quality.</li>
@@ -170,7 +171,6 @@ Tyent filters use 0.01-micron filter media, similar to those in kidney dialysis 
         <p><strong>Tyent's certifications ensure <em>superior water quality, medical-grade safety, and cutting-edge technology</em>, making our ionizers the <em>most trusted choice for safe, healthy, and effective alkaline water</em>.</strong></p>
         
         <p style="font-size: 1.2em; font-weight: bold; color: #0077cc;">Tyent – The Gold Standard in Water Ionization! 💧</p>
-        -->
    ld; color: #0077cc;">Tyent – The Gold Standard in Water Ionization! 💧</p>
         -->
    
@@ -286,12 +286,10 @@ const Page = async () => {
         animatedText={headerData.animatedText}
       /> */}
 
-        <div className="container text-center position-relative pb-2 why-tyent-hero">
-          <h1 className="bg-heading-text-two-main m-0 p-0 why-tyent-hero-title">
-            Trusted Worldwide
-          </h1>
-          <div className="overlap-heading why-tyent-hero-copy">
-            <h3 className="fw-bold subtitle-tight text-dark mb-3 mt-0 why-tyent-hero-subtitle">
+        <div className="text-center position-relative">
+          <h1 className="bg-heading-text-two-main m-0 p-0">Trusted Worldwide</h1>
+          <div className="overlap-heading">
+            <h3 className="fw-bold subtitle-tight text-dark mb-3 mt-0">
               Why Choose Tyent
             </h3>
           </div>
@@ -299,28 +297,6 @@ const Page = async () => {
 
 
         <FeatureCard data={data} />
-        <style>{`
-        @media (max-width: 767.98px) {
-          .why-tyent-hero-title {
-            font-size: clamp(32px, 10vw, 44px);
-            line-height: 0.92;
-            white-space: nowrap;
-          }
-
-          .why-tyent-hero-copy {
-            margin-top: -6px;
-          }
-
-          .why-tyent-hero-subtitle {
-            font-size: clamp(18px, 6vw, 28px);
-            line-height: 1.15;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 10px;
-          }
-        }
-      `}</style>
       </>
     </>
   );

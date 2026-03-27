@@ -211,9 +211,9 @@ const ProductCarousel = () => {
                                 </div>
 
                                 <div className="col-lg-6 text-center order-1 order-lg-2">
-                                    <h2 className="mobile-title">
-                                        {product.title}
-                                    </h2>
+                                    <h6 className="mobile-series">
+                                        {product.series}
+                                    </h6>
                                     <div className="product-carousel-image" style={imageWrapStyle}>
                                         <Image
                                             src={product.image}
@@ -223,6 +223,9 @@ const ProductCarousel = () => {
                                             style={{ width: "100%", maxWidth: "620px", height: "auto", objectFit: "contain" }}
                                         />
                                     </div>
+                                    <h2 className="mobile-title">
+                                        {product.title}
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -250,6 +253,10 @@ const ProductCarousel = () => {
           display: none;
         }
 
+        .mobile-series {
+          display: none;
+        }
+
         .product-carousel-stat:not(.product-carousel-stat-last)::after {
           content: "";
           position: absolute;
@@ -270,12 +277,23 @@ const ProductCarousel = () => {
         @media (max-width: 991px) {
           .mobile-title {
             display: block;
-            font-size: 2.2rem !important;
+            font-size: 1.1rem !important;
             font-weight: 400;
             margin-bottom: 20px;
             color: #111;
             line-height: 1.2;
             text-align: center;
+          }
+          .mobile-series {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 1.5rem;
+            text-align: center;
+          }
+          .product-carousel-content > h6:first-child {
+            display: none !important;
           }
           .desktop-title {
             display: none !important;
@@ -286,7 +304,6 @@ const ProductCarousel = () => {
             border-radius: 20px;
             padding: 24px 16px !important;
             margin: 0 10px !important;
-            // box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid rgba(0,0,0,0.03);
           }
           .product-carousel-content {

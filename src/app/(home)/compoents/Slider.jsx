@@ -75,7 +75,7 @@ const Slider = () => {
           </h1>
 
           <p className="sub-text">
-            Experience the healthiest hydrogen water on earth
+            Experience the healthiest <br />hydrogen water on earth
           </p>
 
           <button className="shop-btn">Shop the collection</button>
