@@ -832,6 +832,7 @@ padding-left: 48px !important;
   font-size: clamp(38px, 10vw, 140px);
   /* font-size: clamp(32px, 6vw, 96px); */
   font-weight: 800;
+  line-height: 1;
 
   background: linear-gradient(
     180deg,
@@ -863,8 +864,18 @@ padding-left: 48px !important;
   z-index: 1;
 }
 
+/* Standardized sibling overlap logic regardless of wrapper */
+.bg-heading-text-two-main + .subtitle-tight,
+.bg-heading-text-two-main + * > .subtitle-tight {
+  margin-top: -12px;
+  position: relative;
+  z-index: 1;
+}
+
 @media (min-width: 768px) {
-  .overlap-heading {
-    margin-top: -32px;
+  .overlap-heading,
+  .bg-heading-text-two-main + .subtitle-tight,
+  .bg-heading-text-two-main + * > .subtitle-tight {
+    margin-top: -25px;
   }
 }

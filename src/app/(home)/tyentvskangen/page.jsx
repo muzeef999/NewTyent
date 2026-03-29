@@ -99,11 +99,9 @@ const page = () => {
       <div className="container">
         <br />
         <div className="text-center position-relative">
-          <h1 className="bg-heading-text-two-main m-0 p-0">Tyent vs Kangen</h1>
-          <div className="overlap-heading">
-            <h3 className="fw-bold subtitle-tight text-dark mb-3 mt-1">
-              Think Once before buying
-            </h3>
+          <div className="text-center mb-5">
+          <h1 className="bg-heading-text-two-main">Tyent vs Kangen</h1>
+        <h3 className="fw-bold subtitle-tight">Think Once before buying.</h3>
             <p
               className="mx-auto"
               style={{
