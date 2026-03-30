@@ -259,50 +259,52 @@ const BenfitsOnisedAlkaline = [
   // Add more features as needed
 ];
 
-const IconTest = ({ Heading, id, icon, Descrpition }) => {
+const IconTest = ({ Heading, icon }) => {
   return (
     <div
-      style={{ backgroundColor: "#FFF" }}
-      className="d-flex custom-card-benfts"
+      style={{
+        position: "relative",
+        width: "100%",
+        aspectRatio: "1/1",
+        borderRadius: "12px",
+        overflow: "hidden",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+      }}
+      className="disease-card"
     >
-      {/* Image Container */}
+      <Image
+        src={icon}
+        alt={Heading}
+        layout="fill"
+        style={{
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
       <div
         style={{
-          overflow: "hidden", // Keeps image within bounds
-          position:'relative',
-          width:'100%',
-          alignItems: "stretch", // Stretches image to fill container
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "50%",
+          background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)",
+          display: "flex",
+          alignItems: "flex-end",
+          padding: "20px 15px",
         }}
       >
-        <Image
-          src={icon}
-          alt="tyent"
-          layout="fill"
-          priority
+        <h4
           style={{
-            borderTopLeftRadius: "20px",
-            borderBottomLeftRadius: "20px",
-            display: "block",
+            color: "#FFFFFF",
+            margin: 0,
+            fontSize: "18px",
+            fontWeight: "600",
+            textAlign: "left",
           }}
-        />
-      </div>
-
-      {/* Text Content */}
-      <div className="d-flex flex-column justify-content-center align-items-start flex-grow-1 p-3">
-        <h3
-          className="text-start m-0"
-          style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 28px)" }}
         >
-          <b>
-            {id}. {Heading}
-          </b>
-        </h3>
-        <p
-          className="text-start m-1"
-          style={{ color: "#565959", fontSize: "clamp(14px, 2vw, 16px)" }}
-        >
-          {Descrpition}
-        </p>
+          {Heading}
+        </h4>
       </div>
     </div>
   );
@@ -405,8 +407,8 @@ const Page = () => {
   return (
 
     <>
-    
-    
+
+
       <Head>
         <script
           async
@@ -415,7 +417,7 @@ const Page = () => {
         />
       </Head>
 
-      
+
       {/* AMP Google Ads + GA + Conversion */}
       <amp-analytics type="gtag" data-credentials="include">
         <script type="application/json">
@@ -442,21 +444,99 @@ const Page = () => {
           `}
         </script>
       </amp-analytics>
-    
-    
-    <div>
-      <Header
+
+
+      <div>
+        {/* <Header
         basic={headerData.basic}
         preheading={headerData.preheading}
         afterheading={headerData.afterheading}
         content={headerData.content}
         img={headerData.img}
         animatedText={headerData.animatedText}
-      />
+      /> */}
 
-      <div className="container">
-        <br />
-        <center>
+        <div className="container">
+          <br />
+          <center>
+            <div className="text-center position-relative">
+              <div className="text-center">
+                <h1
+                  className="bg-heading-text-two-main"
+                  style={{ fontSize: "clamp(28px, 8vw, 200px)" }}
+                >
+                  Trust & Satisfaction
+                </h1>                <h3 className="fw-bold subtitle-tight">Looking For Stronger Immunity Tyent Water Does It All!</h3>
+              </div>
+              <h4 style={{ color: "#291495", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: "600"}}>The Essence of Life, Perfected by Tyent Ionized Alkaline Water</h4>
+            </div>
+
+            <p>
+              Ionized hydrogen-rich alkaline water has been trusted across
+              Western, European, and Asian countries as a symbol of health,
+              wellness, and vitality. Backed by extensive research, clinical
+              trials, and medical endorsements, Tyent water ionizers offer far
+              more than hydration.{" "}
+            </p>
+
+            {/* <Row className="align-items-center">
+              <div className="background-benfits-container">
+                <div className="background-benfits-overlay"></div>
+                <div className="text-benfits-overlay">
+                  <div className="d-flex">
+                    <div>
+                      <Image src={policy} alt="policy" width={60} height={60} />
+                    </div>
+                    <div>
+                      <p className="p-0 m-0">Trusted over</p>
+                      <p
+                        className="p-0 m-0"
+                        style={{ fontWeight: "600", fontSize: "20px" }}
+                      >
+                        50+ years
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Row> */}
+            <p>
+              Unlike regular water, Tyent's ionized alkaline water modulates
+              signal transduction, protein phosphorylation, and gene expression,
+              delivering powerful health benefits. It provides anti-inflammatory,
+              anti-allergy, and anti-apoptotic protective effects, supporting
+              optimal organ functionality. This water plays a key role in Building
+              strong immunity & metabolism, Enhancing anti-aging and skin health,
+              Detoxification by eliminating toxins and free radicals, Improving
+              gastrointestinal health, reducing acidity, and promoting better
+              digestion, Decreasing the risk of chronic diseases like cancer,
+              heart disease, and diabetes.
+            </p>
+
+            <div className="container mt-4">
+              <Row className="d-flex flex-wrap g-4">
+                {icons.map((iconItem) => (
+                  <Col
+                    key={iconItem.id}
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    lg={4}
+                    data-aos="zoom-in"
+                    className="mb-4"
+                  >
+                    {/* Apply AOS here */}
+                    <IconTest
+                      Heading={iconItem.Heading}
+                      icon={iconItem.icon}
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </div>
+          </center>
+
+          <br />
           <center>
             <h2
               className="text-center mb-4"
@@ -466,327 +546,212 @@ const Page = () => {
                 fontSize: "2rem", // Default for large screens
               }}
             >
-              {" "}
-              <span style={{ color: "#291495" }}>
-                <IoWaterOutline />
-                &nbsp;Water
-              </span>
-              <br />
-              The Essence of Life, Perfected by{" "}
-              <span style={{ color: "#291495" }}>
-                {" "}
-                Tyent Ionized Alkaline Water{" "}
-              </span>
+              The Benefits of{" "}
+              <span style={{ color: "#291495" }}>onised alkaline water </span> for
+              your health
             </h2>
           </center>
-
-          <p>
-            Ionized hydrogen-rich alkaline water has been trusted across
-            Western, European, and Asian countries as a symbol of health,
-            wellness, and vitality. Backed by extensive research, clinical
-            trials, and medical endorsements, Tyent water ionizers offer far
-            more than hydration.{" "}
-          </p>
-
-          <Row className="align-items-center">
-            <div className="background-benfits-container">
-              <div className="background-benfits-overlay"></div>
-              <div className="text-benfits-overlay">
-                <div className="d-flex">
-                  <div>
-                    <Image src={policy} alt="policy" width={60} height={60} />
-                  </div>
-                  <div>
-                    <p className="p-0 m-0">Trusted over</p>
-                    <p
-                      className="p-0 m-0"
-                      style={{ fontWeight: "600", fontSize: "20px" }}
-                    >
-                      50+ years
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Row>
-
           <br />
-          <p>
-            Unlike regular water, Tyent's ionized alkaline water modulates
-            signal transduction, protein phosphorylation, and gene expression,
-            delivering powerful health benefits. It provides{" "}
-            <span style={{ color: "#291495" }}>
-              anti-inflammatory, anti-allergy,
-            </span>{" "}
-            and{" "}
-            <span style={{ color: "#291495" }}>
-              {" "}
-              anti-apoptotic protective effects,
-            </span>{" "}
-            supporting <span style={{ color: "#291495" }}> optimal organ </span>
-            functionality. This water plays a key role in Building{" "}
-            <span style={{ color: "#291495" }}>strong immunity </span> &
-            metabolism, Enhancing{" "}
-            <span style={{ color: "#291495" }}> anti-aging </span> and{" "}
-            <span style={{ color: "#291495" }}> skin health,</span>{" "}
-            Detoxification by eliminating{" "}
-            <span style={{ color: "#291495" }}> toxins </span> and{" "}
-            <span style={{ color: "#291495" }}>
-              {" "}
-              free radicals, Improving gastrointestinal health, reducing
-              acidity,
-            </span>{" "}
-            and promoting better{" "}
-            <span style={{ color: "#291495" }}> digestion,</span> Decreasing the
-            risk of chronic diseases like
-            <span style={{ color: "#291495" }}>
-              {" "}
-              cancer, heart disease,
-            </span>{" "}
-            and
-            <span style={{ color: "#291495" }}> diabetes.</span>
-          </p>
+        </div>
 
-          <div className="container">
-            <Row className="d-flex flex-wrap g-4">
-              {icons.map((iconItem) => (
+        <div className="benefitsbackground">
+          <center>
+            <Row className="container">
+              {BenfitsOnisedAlkaline.map((feature, index) => (
                 <Col
-                  key={iconItem.id}
-                  xs={12}
-                  sm={12}
-                  md={6}
-                  lg={6}
-                  data-aos="zoom-in"
+                  key={index}
+                  md={6} // Fixed column width
+                  xs={6} // Full-width on smaller devices
+                  className={`d-flex align-items-center ${getJustifyClass(
+                    index
+                  )}`}
                 >
-                  {/* Apply AOS here */}
-                  <IconTest
-                    id={iconItem.id}
-                    icon={iconItem.icon}
-                    Heading={iconItem.Heading}
-                    Descrpition={iconItem.Descrpition}
-                  />
+                  <div>
+                    <center>
+                      <Image
+                        src={feature.icon}
+                        alt={feature.title}
+                        width={60}
+                        height={60}
+                        className="feature-icon mb-3"
+                      />
+                      <p className="feature-description text-center custom-title">
+                        {feature.title}
+                      </p>
+                    </center>
+                  </div>
                 </Col>
               ))}
             </Row>
-          </div>
-        </center>
-
-        <br />
-        <center>
-          <h2
-            className="text-center mb-4"
-            style={{
-              color: "#000",
-              fontWeight: "600",
-              fontSize: "2rem", // Default for large screens
-            }}
-          >
-            The Benefits of{" "}
-            <span style={{ color: "#291495" }}>onised alkaline water </span> for
-            your health
-          </h2>
-        </center>
-        <br />
-      </div>
-
-      <div className="benefitsbackground">
-        <center>
-          <Row className="container">
-            {BenfitsOnisedAlkaline.map((feature, index) => (
-              <Col
-                key={index}
-                md={6} // Fixed column width
-                xs={6} // Full-width on smaller devices
-                className={`d-flex align-items-center ${getJustifyClass(
-                  index
-                )}`}
-              >
-                <div>
-                  <center>
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={60}
-                      height={60}
-                      className="feature-icon mb-3"
-                    />
-                    <p className="feature-description text-center custom-title">
-                      {feature.title}
-                    </p>
-                  </center>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </center>
-      </div>
-
-      <br />
-
-      <div className="container">
-        <center>
-          <h2
-            className="text-center mb-4"
-            style={{
-              color: "#000",
-              fontWeight: "600",
-              fontSize: "2rem", // Default for large screens
-            }}
-          >
-            What is <span style={{ color: "#291495" }}> ORP? </span>
-          </h2>
-        </center>
-        <p style={{ color: "#405261", textAlign: "center" }}>
-          ORP (Oxidation-Reduction Potential) measures a substance's ability to
-          either oxidize (lose electrons) or reduce (gain electrons) in
-          millivolts (mV). Higher positive ORP indicates oxidative stress, which
-          promotes aging and disease. Oxidation increases ORP, while
-          antioxidants lower ORP by neutralizing free radicals. Tyent’s
-          hydrogen-rich alkaline water has a negative ORP (-850 to -1250 mV),
-          offering powerful antioxidant protection that combats oxidative
-          damage, boosts immunity, and promotes better health.{" "}
-        </p>
-        <br />
-
-        <Table
-          className="custom-table table-sm"
-          hover
-          responsive
-          style={{ fontSize: "14px", width: "100%" }}
-        >
-          <tbody>
-            <tr>
-              <th
-                style={{
-                  textAlign: "start",
-                  whiteSpace: "nowrap",
-                  padding: "8px",
-                }}
-              >
-                Beverage
-              </th>
-              <th
-                style={{
-                  textAlign: "center",
-                  whiteSpace: "nowrap",
-                  padding: "8px",
-                }}
-              >
-                Ph Range
-              </th>
-              <th
-                style={{
-                  textAlign: "center",
-                  whiteSpace: "nowrap",
-                  padding: "8px",
-                }}
-              >
-                ORP Level (Approx)
-              </th>
-              <th
-                style={{
-                  textAlign: "center",
-                  whiteSpace: "nowrap",
-                  padding: "8px",
-                }}
-              >
-                Remarks
-              </th>
-            </tr>
-            {tableData.map((row, index) => (
-              <tr key={index}>
-                <td
-                  style={{
-                    textAlign: "start",
-                    display: "flex",
-                    alignItems: "center",
-                    padding: "8px",
-                    whiteSpace: "normal",
-                  }}
-                >
-                  <Image
-                    style={{
-                      objectFit: "cover",
-                      width: "40px",
-                      height: "40px",
-                      marginRight: "10px",
-                    }}
-                    src={row.icon}
-                    alt={row.title}
-                  />
-                  {row.beverage}
-                </td>
-                <td
-                  style={{
-                    textAlign: "center",
-                    padding: "8px",
-                    verticalAlign: "middle",
-                  }}
-                >
-                  {row.phRange}
-                </td>
-                <td
-                  style={{
-                    textAlign: "center",
-                    padding: "8px",
-                    verticalAlign: "middle",
-                  }}
-                >
-                  {row.orpLevel}
-                </td>
-                <td
-                  style={{
-                    textAlign: "start",
-                    padding: "8px",
-                    verticalAlign: "middle",
-                    whiteSpace: "normal",
-                    wordBreak: "break-word",
-                    maxWidth: "150px",
-                  }}
-                >
-                  {row.remarks}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-      </div>
-
-      <Row className="align-items-center">
-        <div className="background-container">
-          <div className="background-overlay"></div>
-          <div
-            className="text-overlay"
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)", // Centers the div
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "#ffffff", // Text color
-              textAlign: "center",
-              border: "4px solid #FFF",
-              padding: "30px",
-              borderRadius: "8px",
-              width: "80%", // Adjust width as needed
-              maxWidth: "900px", // Ensures it doesn't get too wide
-            }}
-          >
-            <p>
-              Tyent water has a magical combination of selective antioxidant
-              molecular hydrogen and alkalinity.The selective antioxidant
-              molecular hydrogen works to counteract free radicals and reduce
-              oxidative stress. Meanwhile, the alkalinity in the water helps
-              neutralize acidic stress. This combination contributes to a more
-              balanced and beneficial hydration experience. Stay ahead in your
-              wellness journey with every sip of Tyent ionized alkaline water.
-            </p>
-          </div>
+          </center>
         </div>
-      </Row>
-    </div>
+
+        <br />
+
+        <div className="container">
+          <center>
+            <h2
+              className="text-center mb-4"
+              style={{
+                color: "#000",
+                fontWeight: "600",
+                fontSize: "2rem", // Default for large screens
+              }}
+            >
+              What is <span style={{ color: "#291495" }}> ORP? </span>
+            </h2>
+          </center>
+          <p style={{ color: "#405261", textAlign: "center" }}>
+            ORP (Oxidation-Reduction Potential) measures a substance's ability to
+            either oxidize (lose electrons) or reduce (gain electrons) in
+            millivolts (mV). Higher positive ORP indicates oxidative stress, which
+            promotes aging and disease. Oxidation increases ORP, while
+            antioxidants lower ORP by neutralizing free radicals. Tyent’s
+            hydrogen-rich alkaline water has a negative ORP (-850 to -1250 mV),
+            offering powerful antioxidant protection that combats oxidative
+            damage, boosts immunity, and promotes better health.{" "}
+          </p>
+          <br />
+
+          <Table
+            className="custom-table table-sm"
+            hover
+            responsive
+            style={{ fontSize: "14px", width: "100%" }}
+          >
+            <tbody>
+              <tr>
+                <th
+                  style={{
+                    textAlign: "start",
+                    whiteSpace: "nowrap",
+                    padding: "8px",
+                  }}
+                >
+                  Beverage
+                </th>
+                <th
+                  style={{
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                    padding: "8px",
+                  }}
+                >
+                  Ph Range
+                </th>
+                <th
+                  style={{
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                    padding: "8px",
+                  }}
+                >
+                  ORP Level (Approx)
+                </th>
+                <th
+                  style={{
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                    padding: "8px",
+                  }}
+                >
+                  Remarks
+                </th>
+              </tr>
+              {tableData.map((row, index) => (
+                <tr key={index}>
+                  <td
+                    style={{
+                      textAlign: "start",
+                      display: "flex",
+                      alignItems: "center",
+                      padding: "8px",
+                      whiteSpace: "normal",
+                    }}
+                  >
+                    <Image
+                      style={{
+                        objectFit: "cover",
+                        width: "40px",
+                        height: "40px",
+                        marginRight: "10px",
+                      }}
+                      src={row.icon}
+                      alt={row.title}
+                    />
+                    {row.beverage}
+                  </td>
+                  <td
+                    style={{
+                      textAlign: "center",
+                      padding: "8px",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    {row.phRange}
+                  </td>
+                  <td
+                    style={{
+                      textAlign: "center",
+                      padding: "8px",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    {row.orpLevel}
+                  </td>
+                  <td
+                    style={{
+                      textAlign: "start",
+                      padding: "8px",
+                      verticalAlign: "middle",
+                      whiteSpace: "normal",
+                      wordBreak: "break-word",
+                      maxWidth: "150px",
+                    }}
+                  >
+                    {row.remarks}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+
+        <Row className="align-items-center">
+          <div className="background-container">
+            <div className="background-overlay"></div>
+            <div
+              className="text-overlay"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)", // Centers the div
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#ffffff", // Text color
+                textAlign: "center",
+                border: "4px solid #FFF",
+                padding: "30px",
+                borderRadius: "8px",
+                width: "80%", // Adjust width as needed
+                maxWidth: "900px", // Ensures it doesn't get too wide
+              }}
+            >
+              <p>
+                Tyent water has a magical combination of selective antioxidant
+                molecular hydrogen and alkalinity.The selective antioxidant
+                molecular hydrogen works to counteract free radicals and reduce
+                oxidative stress. Meanwhile, the alkalinity in the water helps
+                neutralize acidic stress. This combination contributes to a more
+                balanced and beneficial hydration experience. Stay ahead in your
+                wellness journey with every sip of Tyent ionized alkaline water.
+              </p>
+            </div>
+          </div>
+        </Row>
+      </div>
     </>
   );
 };
