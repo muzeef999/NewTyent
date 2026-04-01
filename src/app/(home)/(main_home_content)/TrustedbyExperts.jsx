@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TrustedByExperts.css";
 
 const TrustedbyExperts = () => {
@@ -33,13 +33,65 @@ const TrustedbyExperts = () => {
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const getMobileCardWidth = () => {
+    const el = scrollRef.current;
+    if (!el) return 0;
+
+    const card = el.firstElementChild;
+    if (!card) return 0;
+
+    const gap = parseFloat(window.getComputedStyle(el).columnGap || window.getComputedStyle(el).gap || "0");
+    return card.getBoundingClientRect().width + gap;
+  };
+
   const handleScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
-    const cardWidth = el.offsetWidth * 0.82 + 14; // 82vw + 14px gap
+    const cardWidth = getMobileCardWidth();
+    if (!cardWidth) return;
     const index = Math.round(el.scrollLeft / cardWidth);
     setActiveIndex(index);
   };
+
+  const scrollToCard = (index, shouldUpdateState = true) => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const cardWidth = getMobileCardWidth();
+    if (!cardWidth) return;
+
+    el.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    if (shouldUpdateState) {
+      setActiveIndex(index);
+    }
+  };
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 600px)");
+    let intervalId;
+
+    const startAutoSlide = () => {
+      window.clearInterval(intervalId);
+
+      if (!mobileQuery.matches || reviews.length <= 1) return;
+
+      intervalId = window.setInterval(() => {
+        setActiveIndex((currentIndex) => {
+          const nextIndex = (currentIndex + 1) % reviews.length;
+          scrollToCard(nextIndex, false);
+          return nextIndex;
+        });
+      }, 3500);
+    };
+
+    startAutoSlide();
+    mobileQuery.addEventListener("change", startAutoSlide);
+
+    return () => {
+      window.clearInterval(intervalId);
+      mobileQuery.removeEventListener("change", startAutoSlide);
+    };
+  }, [reviews.length]);
 
   return (
     <section className="container">
@@ -95,13 +147,7 @@ const TrustedbyExperts = () => {
             <button
               key={i}
               className={`dot ${activeIndex === i ? "active" : ""}`}
-              onClick={() => {
-                const el = scrollRef.current;
-                if (!el) return;
-                const cardWidth = el.offsetWidth * 0.82 + 14;
-                el.scrollTo({ left: cardWidth * i, behavior: "smooth" });
-                setActiveIndex(i);
-              }}
+              onClick={() => scrollToCard(i)}
             />
           ))}
         </div>
