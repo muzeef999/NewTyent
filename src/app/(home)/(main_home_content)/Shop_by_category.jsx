@@ -14,7 +14,7 @@ const categories = [
   {
     title: "Under the counter ionizers",
     desc: "Ultra premium and aesthetically designed",
-    img: "/explore/uceColor.jpeg",
+    img: "/explore/uceColor1.png",
     link: "/under-counter-water-ionizers",
   },
   {
@@ -50,22 +50,27 @@ const Shop_by_category = () => {
       {/* Desktop View */}
       <div className="row g-4 justify-content-center desktop-view">
         {categories.map((item, index) => (
-          <div key={index} className="col-md-4">
-            <a href={item.link} className="text-decoration-none category-card">
-              <div className="category-card text-center p-4">
-                <div style={{ width: "70%" }} className="mx-auto">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    width={320}
-                    height={140}
-                    className="img-fluid category-img"
-                  />
+          <div key={index} className="col-md-4 d-flex">
+            <a href={item.link} className="text-decoration-none w-100">
+              <div className="category-card text-center p-4 d-flex flex-column h-100">
+                <div style={{ height: "220px" }} className="d-flex align-items-center justify-content-center mb-3">
+                  <div style={{ width: "85%" }} className="mx-auto">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      width={320}
+                      height={240}
+                      className="img-fluid category-img"
+                      style={{ maxHeight: "260px", width: "auto", objectFit: "contain" }}
+                    />
+                  </div>
                 </div>
-                <h5 style={{ color: "#000", fontWeight: 600 }}>
-                  {item.title}
-                </h5>
-                <p className="text-muted small">{item.desc}</p>
+                <div className="mt-auto">
+                  <h5 style={{ color: "#000", fontWeight: 600 }}>
+                    {item.title}
+                  </h5>
+                  <p className="text-muted small mb-0">{item.desc}</p>
+                </div>
               </div>
             </a>
           </div>
@@ -79,22 +84,27 @@ const Shop_by_category = () => {
         onScroll={handleScroll}
       >
         {categories.map((item, index) => (
-          <div key={index} className="category-slide">
-            <a href={item.link} className="text-decoration-none">
-              <div className="category-card text-center p-4">
-                <div style={{ width: "70%" }} className="mx-auto">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    width={320}
-                    height={140}
-                    className="img-fluid category-img"
-                  />
+          <div key={index} className="category-slide d-flex">
+            <a href={item.link} className="text-decoration-none w-100">
+              <div className="category-card text-center p-3 d-flex flex-column h-100">
+                <div style={{ height: "220px" }} className="d-flex align-items-center justify-content-center mb-3">
+                  <div style={{ width: "100%" }} className="mx-auto">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      width={320}
+                      height={140}
+                      className="img-fluid category-img"
+                      style={{ maxHeight: "200px", width: "auto", objectFit: "contain" }}
+                    />
+                  </div>
                 </div>
-                <h5 style={{ color: "#000", fontWeight: 600 }}>
-                  {item.title}
-                </h5>
-                <p className="text-muted small">{item.desc}</p>
+                <div className="mt-auto">
+                  <h5 style={{ color: "#000", fontWeight: 600 }}>
+                    {item.title}
+                  </h5>
+                  <p className="text-muted small mb-0">{item.desc}</p>
+                </div>
               </div>
             </a>
           </div>

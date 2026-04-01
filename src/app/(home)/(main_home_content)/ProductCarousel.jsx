@@ -104,7 +104,7 @@ const ProductCarousel = () => {
             description: "The Tyent NMP Series seamlessly blends cutting-edge design with advanced performance, making it the perfect premium upgrade for modern kitchens.",
             models: ["Tyent NMP-5", "Tyent NMP-7", "Tyent NMP-9", "Tyent NMP-11"],
             ph: "11.5 - 2.5*",
-            orp: "1250*",
+            orp: "-1250*",
             hydrogen: "upto 1800ppb*",
             image: "/home/nmp-9.png",
             buttonText: "Shop Now"
@@ -115,8 +115,9 @@ const ProductCarousel = () => {
             title: "Under-Counter Elegance and Power",
             description: "The Tyent UCE Series delivers unparalleled performance hidden beneath your counter, saving space while providing the purest alkaline water.",
             models: ["Tyent UCE-9 Plus","Tyent UCE-11 Plus", "Tyent UCE-13 Plus"],
+            colors: ["Satin silver", "Antique", "Gold", "Matte Black"],
             ph: "11.5 - 2.0*",
-            orp: "1250*",
+            orp: "-1250*",
             hydrogen: "upto 1800ppb*",
             image: "/home/ucebg.png",
             buttonText: "Shop Now"
@@ -128,7 +129,7 @@ const ProductCarousel = () => {
             description: "Tyent's H2-Hybrid has Japanese patented Twin Cell Technology delivers advanced water ionization, producing high levels of molecular hydrogen and antioxidants, enhancing hydration with optimal purity and health benefits, Molecular hydrogen upto 1850 PPB,-ORP up to-1250*, and superior micro clustering. Includes 15-year warranty, 45+ years lifespan",
             models: ["Tyent H2 Hybrid"],
             ph: "10.5 - 3.5*",
-            orp: "1150*",
+            orp: "-1150*",
             hydrogen: "upto 1600ppb*",
             image: "/home/our-story.png",
             buttonText: "Shop Now"
@@ -165,7 +166,7 @@ const ProductCarousel = () => {
                                             {product.description}
                                         </p>
 
-                                        <div style={{ marginBottom: "25px" }}>
+                                        <div style={{ marginBottom: product.colors ? "15px" : "25px" }}>
                                             <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available models</h6>
                                             <div className="model-list" style={modelListStyle}>
                                                 {product.models.map((model, idx) => (
@@ -178,6 +179,22 @@ const ProductCarousel = () => {
                                                 ))}
                                             </div>
                                         </div>
+
+                                        {product.colors && (
+                                            <div style={{ marginBottom: "25px" }}>
+                                                <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available colors</h6>
+                                                <div className="model-list" style={modelListStyle}>
+                                                    {product.colors.map((color, idx) => (
+                                                        <span key={idx}>
+                                                            <span style={modelLinkStyle}>
+                                                                {color}
+                                                            </span>
+                                                            {idx < product.colors.length - 1 && <span style={{ color: "#999", margin: "0 8px" }}>|</span>}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
 
                                         <div className="product-carousel-stats" style={statsGridStyle}>
                                             <div className="product-carousel-stat" style={statCardStyle}>

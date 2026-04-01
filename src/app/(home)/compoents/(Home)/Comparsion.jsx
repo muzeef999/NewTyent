@@ -66,7 +66,7 @@ const Comparsion = () => {
                 text="Negative ORP Range up to -1250* (Anti-oxidants/Molecular hydrogen)."
               />
               <Item
-                title="Scale Mode"
+                title="Sales Type"
                 text="Sales through traditional marketing. (No MLM & no commission involved)"
               />
               <Item title="Warranty" text="3 years warranty on ionizer & 15 years warranty on plates." />
@@ -102,7 +102,7 @@ const Comparsion = () => {
                 text="Negative ORP Range up to -850* (Anti-oxidants/Molecular hydrogen).* only."
               />
               <Item
-                title="Scale Mode"
+                title="Sales Type"
                 text="Sales through MLM or network marketing, where 49% of the machine price is distributed as commission."
               />
               <Item title="Warranty" text="5 years limited warranty on ionizer & plates." />

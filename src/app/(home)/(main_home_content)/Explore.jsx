@@ -28,7 +28,7 @@ const products = [
   },
   {
     name: "Tyent UCE-13 PLUS",
-    img: "/explore/uceColor.jpeg",
+    img: "/explore/uceColor1.png",
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1250*",
@@ -49,32 +49,32 @@ const Explore = () => {
           <div key={index} className="col-12 col-md-6 col-lg-4">
             <div className="product-card" href={item.link}>
               {/* Product Image */}
-              <Link href={item.link} style={{cursor:'pointer', textDecoration:'none', color:'#000'}}>
-              <div className="product-img-wrapper">
-                <Image
-                  src={item.img}
-                  alt={item.name}
-                  width={350}
-                  height={300}
-                  className="product-img"
-                />
-              </div>
+              <Link href={item.link} style={{ cursor: 'pointer', textDecoration: 'none', color: '#000' }}>
+                <div className="product-img-wrapper">
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    width={350}
+                    height={300}
+                    className="product-img"
+                  />
+                </div>
 
-              {/* Product Info */}
-              <h5 className="fw-bold mt-3">{item.name}</h5>
+                {/* Product Info */}
+                <h5 className="fw-bold mt-3">{item.name}</h5>
 
-              {/* Stars */}
-              <div className="rating mb-2">
-                ⭐⭐⭐⭐⭐ <span className="text-muted">19 reviews</span>
-              </div>
+                {/* Stars */}
+                <div className="rating mb-2">
+                  ⭐⭐⭐⭐⭐ <span className="text-muted">19 reviews</span>
+                </div>
 
-              <p className="text-muted">{item.desc}</p>
+                <p className="text-muted">{item.desc}</p>
 
-              <div className="specs">
-                <p>{item.ph}</p>
-                <p>{item.orp}</p>
-                <p>{item.hydrogen}</p>
-              </div>
+                <div className="specs">
+                  <p>{item.ph}</p>
+                  <p>{item.orp}</p>
+                  <p>{item.hydrogen}</p>
+                </div>
               </Link>
             </div>
           </div>

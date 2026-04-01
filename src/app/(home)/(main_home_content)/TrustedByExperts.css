@@ -1,4 +1,3 @@
-
 .experts-container {
   margin: 0 auto;
   text-align: center;
@@ -85,6 +84,15 @@
   font-weight: 700;
 }
 
+/* Mobile carousel elements - hidden on desktop */
+.experts-mobile-scroll {
+  display: none;
+}
+
+.experts-mobile-dots {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .experts-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -96,20 +104,115 @@
 }
 
 @media (max-width: 600px) {
-  .experts-wrapper {
-    padding: 56px 12px;
-  }
 
-  .experts-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  /* Hide desktop grid on mobile */
+  .experts-box {
+    display: none;
   }
 
   .experts-title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .experts-subtitle {
-    margin-bottom: 18px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  /* Mobile horizontal scroll carousel */
+  .experts-mobile-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 0 8px 12px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .experts-mobile-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .expert-mobile-card {
+    width: calc(100vw - 24px);
+    /* full width minus padding + gap */
+    min-width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    scroll-snap-align: start;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 18px 16px;
+    text-align: left;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+
+  .expert-mobile-card .stars {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .expert-mobile-card .expert-name {
+    font-size: 15px;
+    margin-bottom: 3px;
+    word-break: break-word;
+  }
+
+  .expert-mobile-card .expert-role {
+    font-size: 13px;
+    color: #555;
+    font-weight: 500;
+    word-break: break-word;
+  }
+
+  .expert-mobile-card .expert-company {
+    font-size: 12px;
+    color: #777;
+    font-weight: 500;
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+
+  .expert-mobile-card .expert-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444;
+    word-break: break-word;
+  }
+
+  /* Dot indicators */
+  .experts-mobile-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .experts-mobile-dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .experts-mobile-dots .dot.active {
+    width: 20px;
+    border-radius: 4px;
+    background: #1b56d6;
+  }
+
+  .experts-rating {
+    margin-top: 14px;
+    font-size: 12px;
   }
 }
