@@ -286,10 +286,13 @@ const Page = async () => {
         animatedText={headerData.animatedText}
       /> */}
 
-        <div className="text-center position-relative">
-          <div className="text-center">
-          <h1 className="bg-heading-text-two-main">Trusted Worldwide</h1>
-        <h3 className="fw-bold subtitle-tight">Why Choose Tyent</h3>
+        <div className="container">
+          <br />
+          <div className="text-center position-relative">
+            <div className="text-center mb-2">
+              <h1 className="bg-heading-text-two-main">Trusted Worldwide</h1>
+              <h3 className="fw-bold subtitle-tight">Why Choose Tyent</h3>
+            </div>
           </div>
         </div>
 
