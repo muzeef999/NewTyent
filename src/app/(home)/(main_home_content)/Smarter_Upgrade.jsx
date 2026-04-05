@@ -35,7 +35,7 @@ export default function Smarter_Upgrade() {
           Your Wellness Starts with Tyent
         </h3>
         <p style={{ maxWidth: "1100px", margin: "0 auto 30px" }}>
-          Thinking of a water ionizer? Choose Tyent - the world’s most advanced, upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim next-gen designs, and updated Japanese technology, Tyent is preferred in 86+ countries for its unmatched innovation and customer satisfaction..
+          Thinking of a water ionizer? Choose Tyent - the world’s most advanced, upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim next-gen designs, and updated Japanese technology, Tyent is preferred in 123+ countries for its unmatched innovation and customer satisfaction..
         </p>
       </div>
 

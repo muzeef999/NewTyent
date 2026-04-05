@@ -14,7 +14,7 @@ const products = [
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -950*",
-    hydrogen: "Hydrogen range: upto -1600 PPB*",
+    // hydrogen: "Hydrogen range: upto -1600 PPB*",
     link: "/nmp-7",
   },
   {
@@ -23,7 +23,7 @@ const products = [
     desc: "Advanced top end water ionizer",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1150*",
-    hydrogen: "Hydrogen range: upto -1800 PPB*",
+    // hydrogen: "Hydrogen range: upto -1800 PPB*",
     link: "/nmp-11",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1250*",
-    hydrogen: "Hydrogen range: upto -1800 PPB*",
+    // hydrogen: "Hydrogen range: upto -1800 PPB*",
     link: "/uce-13-plus",
   },
 ];

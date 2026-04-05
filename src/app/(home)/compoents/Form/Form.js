@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import contact from "@/asserts/contactlady.png";
+import contact from "@/asserts/contactwomen.jpg";
 import Image from "next/image";
 import style from "../../compoents/Form/Form.module.css";
 import FormOnly from "./FormOnly";
@@ -39,7 +39,7 @@ const ContactSection = () => {
                   className={style.conimg}
                   src={contact}
                   alt="Contact"
-                  style={{ width: "100%", height: "auto", borderRadius: "10px" }}
+                  style={{ width: "78%", height: "auto", objectFit: "cover" }}
                   priority
                 />
               </div>

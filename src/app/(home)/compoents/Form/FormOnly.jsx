@@ -142,78 +142,74 @@ const FormOnly = () => {
     <div>
         <div  data-aos="fade-left" className="flex-column justify-content-center align-items-center">
         {loading ? (<>
-          <h4 data-aos="fade-up" className={formStyle.heading}>Fill Out the Form - We'll Get in Touch</h4>
-          <h5 data-aos="fade-up" >Start Your Journey Today!</h5>
-          <br/>
-          <form onSubmit={handleSubmit}>
-            <div className="d-flex justify-content-between">
-              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
-                <Input
-                  type="text"
-                  name="name"
-                  label="Name"
-                  value={inputdata.name}
-                  placeholder="Full Name"
-                  onChange={inputHandler}
-                />
-                {error.name && <div style={{ color: "red", fontSize: "0.9em" }}>{error.name}</div>}
-              </div>
-              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
-                <Input
-                  type="email"
-                  name="email"
-                  label="Email"
-                  value={inputdata.email}
-                  placeholder="Email"
-                  onChange={inputHandler}
-                />
-                {error.email && <div style={{ color: "red", fontSize: "0.9em" }}>{error.email}</div>}
-              </div>
+          <h3 data-aos="fade-up" className={`fw-bold ${formStyle.heading}`}>Fill Out the Form - We'll Get in Touch</h3>
+          <p data-aos="fade-up" className="fw-bold mb-4" style={{ fontSize: "14px" }}>Start Your Journey Today!</p>
+          <form onSubmit={handleSubmit} className="w-100">
+            <div data-aos="fade-right" className="mb-3">
+              <Input
+                type="text"
+                name="name"
+                label="Name"
+                value={inputdata.name}
+                // placeholder="Full Name"
+                onChange={inputHandler}
+              />
+              {error.name && <div style={{ color: "red", fontSize: "0.9em" }}>{error.name}</div>}
             </div>
-            <br />
-            <div className="d-flex justify-content-between">
-              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
-                <Input
-                  type="text"
-                  name="number"
-                  label="Number"
-                  value={inputdata.number}
-                  placeholder="Number"
-                  onChange={inputHandler}
-                />
-                {error.number && <div style={{ color: "red", fontSize: "0.9em" }}>{error.number}</div>}
-              </div>
-              <div data-aos="fade-right" style={{ flex: "0 0 48%" }}>
-                <Input
-                  type="text"
-                  name="location"
-                  label="Location"
-                  value={inputdata.location}
-                  placeholder="Location"
-                  onChange={inputHandler}
-                />
-                {error.location && <div style={{ color: "red", fontSize: "0.9em" }}>{error.location}</div>}
-              </div>
+            
+            <div data-aos="fade-right" className="mb-3">
+              <Input
+                type="email"
+                name="email"
+                label="Email"
+                value={inputdata.email}
+                // placeholder="Email"
+                onChange={inputHandler}
+              />
+              {error.email && <div style={{ color: "red", fontSize: "0.9em" }}>{error.email}</div>}
             </div>
-            <br />
-            <div>
-              <label htmlFor="message" className="form-label">
+
+            <div data-aos="fade-right" className="mb-3">
+              <Input
+                type="text"
+                name="number"
+                label="Number"
+                value={inputdata.number}
+                // placeholder="Number"
+                onChange={inputHandler}
+              />
+              {error.number && <div style={{ color: "red", fontSize: "0.9em" }}>{error.number}</div>}
+            </div>
+
+            <div data-aos="fade-right" className="mb-3">
+              <Input
+                type="text"
+                name="location"
+                label="Location"
+                value={inputdata.location}
+                // placeholder="Location"
+                onChange={inputHandler}
+              />
+              {error.location && <div style={{ color: "red", fontSize: "0.9em" }}>{error.location}</div>}
+            </div>
+
+            <div data-aos="fade-right" className="mb-4">
+              <label htmlFor="message" className={`${formStyle.formLabel} fw-normal`}>
                 Message
               </label>
-              <textarea data-aos="fade-right"
+              <textarea
                 id="message"
                 name="message"
-                className={`${formStyle.textarea} form-control`}
+                className={`${formStyle.textarea}`}
                 value={inputdata.message}
                 onChange={inputHandler}
-                placeholder="Include a message..."
+                // placeholder="Include a message..."
               />
               {error.message && <div style={{ color: "red", fontSize: "0.9em" }}>{error.message}</div>}
             </div>
-            <br />
-            <Button type="submit"  data-aos="fade-right" 
-             name= {loadingData ? (<> <Spinner  size="sm" />&nbsp;&nbsp;{"A healthier life is just one click away"} </>) : ("A healthier life is just one click away")}/>
- 
+
+            <Button type="submit" data-aos="fade-right" 
+             name={loadingData ? (<> <Spinner size="sm" />&nbsp;&nbsp;{"Send"} </>) : ("Send")}/>
           </form>
         
         </>) :(<>

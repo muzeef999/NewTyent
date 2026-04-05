@@ -53,7 +53,7 @@ const Shop_by_category = () => {
           <div key={index} className="col-md-4 d-flex">
             <a href={item.link} className="text-decoration-none w-100">
               <div className="category-card text-center p-4 d-flex flex-column h-100">
-                <div style={{ height: "220px" }} className="d-flex align-items-center justify-content-center mb-3">
+                <div style={{ height: "200px" }} className="d-flex align-items-center justify-content-center mb-3">
                   <div style={{ width: "85%" }} className="mx-auto">
                     <Image
                       src={item.img}
@@ -61,7 +61,7 @@ const Shop_by_category = () => {
                       width={320}
                       height={240}
                       className="img-fluid category-img"
-                      style={{ maxHeight: "260px", width: "auto", objectFit: "contain" }}
+                      style={{ maxHeight: "200px", width: "auto", objectFit: "contain" }}
                     />
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const Shop_by_category = () => {
           <div key={index} className="category-slide d-flex">
             <a href={item.link} className="text-decoration-none w-100">
               <div className="category-card text-center p-3 d-flex flex-column h-100">
-                <div style={{ height: "220px" }} className="d-flex align-items-center justify-content-center mb-3">
+                <div style={{ height: "250px" }} className="d-flex align-items-center justify-content-center mb-3">
                   <div style={{ width: "100%" }} className="mx-auto">
                     <Image
                       src={item.img}
@@ -95,7 +95,7 @@ const Shop_by_category = () => {
                       width={320}
                       height={140}
                       className="img-fluid category-img"
-                      style={{ maxHeight: "200px", width: "auto", objectFit: "contain" }}
+                      style={{ maxHeight: "250px", width: "auto", objectFit: "contain" }}
                     />
                   </div>
                 </div>
