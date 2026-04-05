@@ -85,3 +85,15 @@
 .textarea {
   height: 100px;
 }
+
+.contactImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .contactImage {
+    width: 78%;
+  }
+}

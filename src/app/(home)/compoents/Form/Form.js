@@ -31,15 +31,14 @@ const ContactSection = () => {
           <Col
             md={6}
             data-aos="fade-right"
-            className="d-flex justify-content-center align-items-center"
+            className="d-flex justify-content-center align-items-center mb-4 mb-md-0"
           >
             {isLoaded ? (
               <div className={style.card}>
                 <Image
-                  className={style.conimg}
+                  className={`${style.conimg} ${style.contactImage}`}
                   src={contact}
                   alt="Contact"
-                  style={{ width: "78%", height: "auto", objectFit: "cover" }}
                   priority
                 />
               </div>
@@ -47,7 +46,7 @@ const ContactSection = () => {
               <div
                 style={{
                   width: "100%",
-                  height: "300px",
+                  height: "400px",
                   backgroundColor: "#e0e0e0",
                   borderRadius: "10px",
                   animation: "pulse 1.5s infinite",

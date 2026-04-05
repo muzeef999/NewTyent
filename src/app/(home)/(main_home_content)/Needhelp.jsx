@@ -10,23 +10,37 @@ const Needhelp = () => {
 
   const handleScroll = () => {
     if (scrollRef.current) {
-      const scrollLeft = scrollRef.current.scrollLeft;
-      const width = scrollRef.current.offsetWidth;
-      const index = Math.round(scrollLeft / width);
-      setActiveIndex(index);
+      const container = scrollRef.current;
+      const center = container.scrollLeft + container.offsetWidth / 2;
+      const children = Array.from(container.children);
+      let closestIndex = 0;
+      let minDistance = Infinity;
+      children.forEach((child, index) => {
+        if (child instanceof HTMLElement) {
+          const childCenter = child.offsetLeft + child.offsetWidth / 2;
+          const distance = Math.abs(center - childCenter);
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestIndex = index;
+          }
+        }
+      });
+      setActiveIndex(closestIndex);
     }
   };
 
+
   const scrollToCard = (index) => {
-    if (scrollRef.current) {
-      const width = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollTo({
-        left: index * width,
+    if (scrollRef.current && scrollRef.current.children[index]) {
+      scrollRef.current.children[index].scrollIntoView({
         behavior: "smooth",
+        block: "nearest",
+        inline: "center",
       });
       setActiveIndex(index);
     }
   };
+
 
   return (
     <div style={{ backgroundColor: "#fff" }}>
