@@ -14,7 +14,8 @@ const products = [
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -950*",
-    // hydrogen: "Hydrogen range: upto -1600 PPB*",
+    hydrogen: "Hydrogen range: Up to 1550 PPB*",
+    warrenty: "Warranty: 3 years on machine & 15 years on plates/electrodes",
     link: "/nmp-7",
   },
   {
@@ -23,7 +24,8 @@ const products = [
     desc: "Advanced top end water ionizer",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1150*",
-    // hydrogen: "Hydrogen range: upto -1800 PPB*",
+    hydrogen: "Hydrogen range:  Up to 1800 PPB*",
+    warrenty: "Warranty: 3 years on machine & 15 years on plates/electrodes",
     link: "/nmp-11",
   },
   {
@@ -32,7 +34,8 @@ const products = [
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1250*",
-    // hydrogen: "Hydrogen range: upto -1800 PPB*",
+    hydrogen: "Hydrogen range: Up to 1800 PPB*",
+    warrenty: "Warranty: 3 years on machine & 15 years on plates/electrodes",
     link: "/uce-13-plus",
   },
 ];
@@ -74,6 +77,7 @@ const Explore = () => {
                   <p>{item.ph}</p>
                   <p>{item.orp}</p>
                   <p>{item.hydrogen}</p>
+                  <p>{item.warrenty}</p>
                 </div>
               </Link>
             </div>

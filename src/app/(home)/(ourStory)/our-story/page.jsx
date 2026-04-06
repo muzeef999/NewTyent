@@ -29,9 +29,10 @@ const OurStory = () => {
 
   return (
     <div className="container">
+      <br />
       <div className="text-center position-relative pb-2">
         <h1 className="bg-heading-text-two-main">Tyent & Medilight</h1>
-        <h3 className="fw-bold subtitle-tight mb-5" style={{ marginTop: '-25px' }}>Advancing Preventive Health Through Water</h3>
+        <h3 className="fw-bold subtitle-tight mb-5">Advancing Preventive Health Through Water</h3>
         <div className="overlap-heading">
           <p className="mt-4" style={{ fontSize: '15px' }}>
             Founded in 2016 by a team of experienced doctor’s and visionary entrepreneurs, Tyent  was established with a clear mission: to deliver world-class preventive healthcare through  water. By combining medical insight with advanced engineering, Tyent pioneered  hydrogen-rich alkaline water ionizers and hydrogen water generators designed to  support long-term wellness, cellular hydration, and antioxidant protection.  Tyent’s technology focuses on producing high-pH, hydrogen-rich water with negative  ORP, helping individuals adopt a proactive approach toward health through daily hydration.  Today, Tyent is globally recognized for its medical-grade water ionizers, innovation, and  uncompromising quality standards.

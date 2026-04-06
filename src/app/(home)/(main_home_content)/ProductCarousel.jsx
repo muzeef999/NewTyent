@@ -7,263 +7,279 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const sectionStyle = {
-    backgroundColor: "#f4f7fc",
-    padding: "56px 0 72px",
+  backgroundColor: "#f4f7fc",
+  padding: "56px 0 72px",
 };
 
 const contentWrapStyle = {
-    maxWidth: "1240px",
-    margin: "0 auto",
-    padding: "0 16px",
+  maxWidth: "1240px",
+  margin: "0 auto",
+  padding: "0 16px",
 };
 
 const slideStyle = {
-    padding: "8px 0",
+  padding: "8px 0",
 };
 
 const rowStyle = {
-    minHeight: "560px",
+  minHeight: "560px",
 };
 
 const contentStyle = {
-    paddingRight: "40px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    height: "100%",
+  paddingRight: "40px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  height: "100%",
 };
 
 const modelListStyle = {
-    display: "flex",
-    flexWrap: "wrap",
-    rowGap: "8px",
+  display: "flex",
+  flexWrap: "wrap",
+  rowGap: "8px",
 };
 
 const modelLinkStyle = {
-    color: "#0066cc",
-    fontWeight: "600",
-    fontSize: "0.95rem",
-    textDecoration: "none",
+  color: "#0066cc",
+  fontWeight: "600",
+  fontSize: "0.95rem",
+  textDecoration: "none",
 };
 
 const modelRoutes = {
-    "Tyent NMP-5": "/nmp-5",
-    "Tyent NMP-7": "/nmp-7",
-    "Tyent NMP-9": "/nmp-9",
-    "Tyent NMP-11": "/nmp-11",
-    "Tyent UCE-9 Plus": "/uce-9-plus",
-    "Tyent UCE-11 Plus": "/uce-11-plus",
-    "Tyent UCE-13 Plus": "/uce-13-plus",
-    "Tyent H2 Hybrid": "/hybrid-h2",
+  "Tyent NMP-5": "/nmp-5",
+  "Tyent NMP-7": "/nmp-7",
+  "Tyent NMP-9": "/nmp-9",
+  "Tyent NMP-11": "/nmp-11",
+  "Tyent UCE-9 Plus": "/uce-9-plus",
+  "Tyent UCE-11 Plus": "/uce-11-plus",
+  "Tyent UCE-13 Plus": "/uce-13-plus",
+  "Tyent H2 Hybrid": "/hybrid-h2",
 };
 
 const statsGridStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-    gap: "18px",
-    marginBottom: "8px",
+  display: "grid",
+  gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+  gap: "18px",
+  marginBottom: "8px",
 };
 
 const statCardStyle = {
-    minHeight: "92px",
-    padding: "6px 0",
-    position: "relative",
+  minHeight: "92px",
+  padding: "6px 0",
+  position: "relative",
 };
 
 const statCardLastStyle = {
-    ...statCardStyle,
+  ...statCardStyle,
 };
 
 const imageWrapStyle = {
-    minHeight: "560px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "12px",
+  minHeight: "560px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "12px",
 };
 
 const buttonStyle = {
-    borderRadius: "30px",
-    padding: "10px 30px",
-    fontWeight: "600",
-    backgroundColor: "#0d6efd",
-    border: "none",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "8px",
-    fontSize: "1rem",
-    width: "fit-content",
+  borderRadius: "30px",
+  padding: "10px 30px",
+  fontWeight: "600",
+  backgroundColor: "#0d6efd",
+  border: "none",
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "8px",
+  fontSize: "1rem",
+  width: "fit-content",
 };
 
 const ProductCarousel = () => {
-    const products = [
-        {
-            id: 1,
-            series: "Tyent NMP Series",
-            title: "Sleek design meets powerful water performance",
-            description: "The Tyent NMP Series seamlessly blends cutting-edge design with advanced performance, making it the perfect premium upgrade for modern kitchens.",
-            models: ["Tyent NMP-5", "Tyent NMP-7", "Tyent NMP-9", "Tyent NMP-11"],
-            ph: "11.5 - 2.5*",
-            orp: "-1250*",
-            hydrogen: "upto 1800ppb*",
-            image: "/home/nmp-9.png",
-            buttonText: "Shop Now"
-        },
-        {
-            id: 2,
-            series: "Tyent UCE",
-            title: "Under-Counter Elegance and Power",
-            description: "The Tyent UCE Series delivers unparalleled performance hidden beneath your counter, saving space while providing the purest alkaline water.",
-            models: ["Tyent UCE-9 Plus","Tyent UCE-11 Plus", "Tyent UCE-13 Plus"],
-            colors: ["Satin silver", "Antique", "Gold", "Matte Black"],
-            ph: "11.5 - 2.0*",
-            orp: "-1250*",
-            hydrogen: "upto 1800ppb*",
-            image: "/home/ucebg.png",
-            buttonText: "Shop Now"
-        },
-        {
-            id: 3,
-            series: "Tyent H2 Hybrid",
-            title: "The Future of Hydrogen Water",
-            description: "Tyent's H2-Hybrid has Japanese patented Twin Cell Technology delivers advanced water ionization, producing high levels of molecular hydrogen and antioxidants, enhancing hydration with optimal purity and health benefits, Molecular hydrogen upto 1850 PPB,-ORP up to-1250*, and superior micro clustering. Includes 15-year warranty, 45+ years lifespan",
-            models: ["Tyent H2 Hybrid"],
-            ph: "10.5 - 3.5*",
-            orp: "-1150*",
-            hydrogen: "upto 1600ppb*",
-            image: "/home/our-story.png",
-            buttonText: "Shop Now"
-        }
-    ];
+  const products = [
+    {
+      id: 1,
+      series: "Tyent NMP Series",
+      title: "Sleek design meets powerful water performance",
+      description: "The Tyent NMP Series seamlessly blends cutting-edge design with advanced performance, making it the perfect premium upgrade for modern kitchens.",
+      models: ["Tyent NMP-5", "Tyent NMP-7", "Tyent NMP-9", "Tyent NMP-11"],
+      ph: "2.5 - 11.5*",
+      orp: "-1250*",
+      hydrogen: "upto 1800ppb*",
+      image: "/home/nmp-9.png",
+      buttonText: "Shop Now"
+    },
+    {
+      id: 2,
+      series: "Tyent UCE Plus Series",
+      title: "Under-Counter Elegance and Power",
+      description: "The Tyent UCE Series delivers unparalleled performance hidden beneath your counter, saving space while providing the purest alkaline water.",
+      models: ["Tyent UCE-9 Plus", "Tyent UCE-11 Plus", "Tyent UCE-13 Plus"],
+      colors: ["Satin silver", "Antique", "Gold", "Matte Black"],
+      ph: "2.5 - 11.5*",
+      orp: "-1250*",
+      hydrogen: "upto 1800ppb*",
+      image: "/home/ucebg1.png",
+      buttonText: "Shop Now"
+    },
+    {
+      id: 3,
+      series: "Tyent H2 Hybrid",
+      title: "The Future of Hydrogen Water",
+      description: "Tyent's H2-Hybrid has Japanese patented Twin Cell Technology delivers advanced water ionization, producing high levels of molecular hydrogen and antioxidants, enhancing hydration with optimal purity and health benefits, Molecular hydrogen upto 1850 PPB,-ORP up to-1250*, and superior micro clustering. Includes 15-year warranty, 45+ years lifespan",
+      models: ["Tyent H2 Hybrid"],
+      ph: "2.5 - 11.5*",
+      orp: "-1150*",
+      hydrogen: "upto 1600ppb*",
+      image: "/home/our-story1.png",
+      buttonText: "Shop Now"
+    }
+  ];
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
-    return (
-        <div style={sectionStyle}>
-            <div className="container" style={contentWrapStyle}>
-                <Slider {...settings}>
-                    {products.map((product) => (
-                        <div key={product.id} style={slideStyle}>
-                            <div className="row align-items-center gy-4 product-carousel-row" style={rowStyle}>
-                                <div className="col-lg-6 mb-4 mb-lg-0 order-2 order-lg-1">
-                                    <div className="product-carousel-content" style={contentStyle}>
-                                        <h6 style={{ fontWeight: "700", marginBottom: "15px", color: "#333", fontSize: "1.1rem" }}>
-                                            {product.series}
-                                        </h6>
-                                        <h2 className="desktop-title" style={{ fontSize: "2.8rem", fontWeight: "400", marginBottom: "20px", color: "#111", lineHeight: "1.2" }}>
-                                            {product.title}
-                                        </h2>
-                                        <p style={{ color: "#555", marginBottom: "30px", fontSize: "1rem", lineHeight: "1.6" }}>
-                                            {product.description}
-                                        </p>
+  return (
+    <div style={sectionStyle}>
+      <div className="container" style={contentWrapStyle}>
+        <Slider {...settings}>
+          {products.map((product) => (
+            <div key={product.id} style={slideStyle}>
+              <div className="row align-items-center gy-4 product-carousel-row" style={rowStyle}>
+                <div className="col-lg-6 mb-4 mb-lg-0 order-2 order-lg-1">
+                  <div className="product-carousel-content" style={contentStyle}>
+                    <h6 style={{ fontWeight: "700", marginBottom: "15px", color: "#333", fontSize: "1.1rem" }}>
+                      {product.series}
+                    </h6>
+                    <h2 className="desktop-title" style={{ fontSize: "2.8rem", fontWeight: "400", marginBottom: "20px", color: "#111", lineHeight: "1.2" }}>
+                      {product.title}
+                    </h2>
+                    <p style={{ color: "#555", marginBottom: "30px", fontSize: "1rem", lineHeight: "1.6" }}>
+                      {product.description}
+                    </p>
 
-                                        <div style={{ marginBottom: product.colors ? "15px" : "25px" }}>
-                                            <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available models</h6>
-                                            <div className="model-list" style={modelListStyle}>
-                                                {product.models.map((model, idx) => (
-                                                    <span key={idx}>
-                                                        <Link href={modelRoutes[model] || "#"} style={modelLinkStyle}>
-                                                            {model}
-                                                        </Link>
-                                                        {idx < product.models.length - 1 && <span style={{ color: "#999", margin: "0 8px" }}>|</span>}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
+                    <div style={{ marginBottom: product.colors ? "15px" : "25px" }}>
+                      <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available models</h6>
+                      <div className="model-list" style={modelListStyle}>
+                        {product.models.map((model, idx) => (
+                          <span key={idx}>
+                            <Link href={modelRoutes[model] || "#"} style={modelLinkStyle}>
+                              {model}
+                            </Link>
+                            {idx < product.models.length - 1 && <span style={{ color: "#999", margin: "0 8px" }}>|</span>}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
 
-                                        {product.colors && (
-                                            <div style={{ marginBottom: "25px" }}>
-                                                <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available colors</h6>
-                                                <div className="model-list" style={modelListStyle}>
-                                                    {product.colors.map((color, idx) => (
-                                                        <span key={idx}>
-                                                            <span style={modelLinkStyle}>
-                                                                {color}
-                                                            </span>
-                                                            {idx < product.colors.length - 1 && <span style={{ color: "#999", margin: "0 8px" }}>|</span>}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        <div className="product-carousel-stats" style={statsGridStyle}>
-                                            <div className="product-carousel-stat" style={statCardStyle}>
-                                                <h3 style={{ fontWeight: "700", marginBottom: "0", color: "#111", fontSize: "1.8rem" }}>{product.ph}</h3>
-                                                <p style={{ color: "#555", fontSize: "0.9rem", margin: "0" }}>pH range</p>
-                                            </div>
-                                            <div className="product-carousel-stat" style={statCardStyle}>
-                                                <h3 style={{ fontWeight: "700", marginBottom: "0", color: "#111", fontSize: "1.8rem" }}>{product.orp}</h3>
-                                                <p style={{ color: "#555", fontSize: "0.9rem", margin: "0" }}>ORP range</p>
-                                            </div>
-                                            <div className="product-carousel-stat product-carousel-stat-last" style={statCardLastStyle}>
-                                                <h3 style={{ fontWeight: "700", marginBottom: "0", color: "#111", fontSize: "1.8rem" }}>
-                                                    <span style={{ fontSize: "1rem", fontWeight: "500", marginRight: "3px" }}>upto</span>
-                                                    {product.hydrogen.replace('upto ', '')}
-                                                </h3>
-                                                <p style={{ color: "#555", fontSize: "0.9rem", margin: "0" }}>Molecular hydrogen</p>
-                                            </div>
-                                        </div>
-
-                                        <p style={{ fontSize: "0.65rem", color: "#777", marginBottom: "30px", marginTop: "10px" }}>
-                                            *Depends on input water quality and flow rate.
-                                        </p>
-
-                                        <button
-                                            className="btn btn-primary"
-                                            style={buttonStyle}
-                                        >
-                                            {product.buttonText} <span>{">"}</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-6 text-center order-1 order-lg-2">
-                                    <h6 className="mobile-series">
-                                        {product.series}
-                                    </h6>
-                                    <div className="product-carousel-image" style={imageWrapStyle}>
-                                        <Image
-                                            src={product.image}
-                                            alt={product.series}
-                                            width={620}
-                                            height={620}
-                                            style={{ width: "100%", maxWidth: "620px", height: "auto", objectFit: "contain" }}
-                                        />
-                                    </div>
-                                    <h2 className="mobile-title">
-                                        {product.title}
-                                    </h2>
-                                </div>
-                            </div>
+                    {product.colors && (
+                      <div style={{ marginBottom: "25px" }}>
+                        <h6 style={{ fontWeight: "bold", marginBottom: "10px", color: "#222" }}>Available colors</h6>
+                        <div className="model-list" style={modelListStyle}>
+                          {product.colors.map((color, idx) => (
+                            <span key={idx}>
+                              <span style={modelLinkStyle}>
+                                {color}
+                              </span>
+                              {idx < product.colors.length - 1 && <span style={{ color: "#999", margin: "0 8px" }}>|</span>}
+                            </span>
+                          ))}
                         </div>
-                    ))}
-                </Slider>
-            </div>
+                      </div>
+                    )}
 
-            <style jsx global>{`
+                    <div className="product-carousel-stats" style={statsGridStyle}>
+                      <div className="product-carousel-stat" style={statCardStyle}>
+                        <h3 style={{ fontWeight: "700", marginBottom: "0", color: "#111", fontSize: "1.8rem" }}>{product.ph}</h3>
+                        <p style={{ color: "#555", fontSize: "0.9rem", margin: "0" }}>pH range</p>
+                      </div>
+                      <div className="product-carousel-stat" style={statCardStyle}>
+                        <h3 style={{ fontWeight: "700", marginBottom: "0", color: "#111", fontSize: "1.8rem" }}>{product.orp}</h3>
+                        <p style={{ color: "#555", fontSize: "0.9rem", margin: "0" }}>ORP range</p>
+                      </div>
+                      <div className="product-carousel-stat product-carousel-stat-last" style={statCardLastStyle}>
+                        <h3 style={{ fontWeight: "700", marginBottom: "0", color: "#111", fontSize: "1.8rem" }}>
+                          <span style={{ fontSize: "1rem", fontWeight: "500", marginRight: "3px" }}>upto</span>
+                          {product.hydrogen.replace('upto ', '')}
+                        </h3>
+                        <p style={{ color: "#555", fontSize: "0.9rem", margin: "0" }}>Molecular hydrogen</p>
+                      </div>
+                    </div>
+
+                    <p style={{ fontSize: "0.65rem", color: "#777", marginBottom: "30px", marginTop: "10px" }}>
+                      *Depends on input water quality and flow rate.
+                    </p>
+
+                    <button
+                      className="btn btn-primary"
+                      style={buttonStyle}
+                    >
+                      {product.buttonText} <span>{">"}</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 text-center order-1 order-lg-2">
+                  <h6 className="mobile-series">
+                    {product.series}
+                  </h6>
+                  <div className="product-carousel-image" style={imageWrapStyle}>
+                    <Image
+                      src={product.image}
+                      alt={product.series}
+                      width={620}
+                      height={620}
+                      style={{ width: "100%", maxWidth: "620px", height: "auto", objectFit: "contain" }}
+                    />
+                  </div>
+                  <h2 className="mobile-title">
+                    {product.title}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <style jsx global>{`
         .slick-dots {
           bottom: -40px;
         }
         .slick-dots li {
-          margin: 0 4px;
+          margin: 0 3px;
+          width: auto;
+          height: auto;
+          transition: all 0.3s ease;
+        }
+        .slick-dots li button {
+           padding: 0;
+           width: auto;
+           height: auto;
         }
         .slick-dots li button:before {
-          font-size: 14px;
-          color: #ccc;
+          content: "";
+          position: static;
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          background-color: #d6d6d6;
+          border-radius: 50%;
           opacity: 1;
+          transition: all 0.3s ease;
         }
         .slick-dots li.slick-active button:before {
-          color: #0d6efd;
+          background-color: #443df6;
+          width: 16px;
+          border-radius: 3px;
         }
 
         .mobile-title {
@@ -415,12 +431,6 @@ const ProductCarousel = () => {
           .slick-dots {
             bottom: -30px;
           }
-          .slick-dots li {
-            margin: 0 2px;
-          }
-          .slick-dots li button:before {
-            font-size: 10px;
-          }
         }
 
         @media (max-width: 480px) {
@@ -433,13 +443,10 @@ const ProductCarousel = () => {
            .product-carousel-image {
             min-height: 250px !important;
           }
-          .slick-dots li button:before {
-            font-size: 8px;
-          }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ProductCarousel;

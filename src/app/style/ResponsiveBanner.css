@@ -173,9 +173,9 @@
     .responsive-container { 
       position: absolute ;
       top: 62% !important;
-      right: 4% !important;
+      right: 6% !important;
       aspect-ratio: 1/1;
-      width: 35% !important;
+      width: 33% !important;
       z-index: -9 !important; 
       
     }

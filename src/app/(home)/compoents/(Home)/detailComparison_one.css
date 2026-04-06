@@ -57,7 +57,10 @@
 }
 
 .compare-img {
-  object-fit: contain;
+  object-fit: contain !important;
+  width: 90% !important;
+  height: 90% !important;
+  margin: auto !important;
 }
 
 /* Title */
@@ -165,13 +168,8 @@
   }
 
   .image-wrapper {
-    height: 230px;
+    height: 140px;
     margin-bottom: 10px;
-  }
-
-  .compare-img {
-    object-fit: contain;
-    transform: none;
   }
 
   .product-name-one {

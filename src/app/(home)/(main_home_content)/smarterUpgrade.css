@@ -1,37 +1,30 @@
 /* Image Wrapper */
-.image-wrapper {
+.smarter-img-wrap {
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 250px;
   overflow: hidden;
   border-radius: 12px;
   background: #f5f7fb;
 }
 
 /* Image Fill */
-.compare-img {
+.smarter-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-/* Normalize visual size */
-.image-wrapper img {
-  object-fit: cover;
-  object-position: center;
-  transform: scale(1.12);
   transition: transform 0.3s ease;
 }
 
 /* Hover effect */
-.feature-card:hover .image-wrapper img {
-  transform: scale(1.18);
+.feature-card:hover .smarter-img {
+  transform: scale(1.05);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .image-wrapper {
-    height: 340px;
+  .smarter-img-wrap {
+    height: 240px;
   }
 }

@@ -59,9 +59,10 @@ const qualityCertifications = [
 const TyentGlobal = () => {
   return (
     <div className="container">
+      <br />
       <div className="text-center position-relative pb-2">
         <h1 className="bg-heading-text-two-main">Tyent Global</h1>
-          <h3 className="fw-bold subtitle-tight mb-5" style={{ marginTop: '-25px' }}>
+          <h3 className="fw-bold subtitle-tight mb-5">
             World Leaders in Hydrogen-Rich Alkaline Water Ionizer Technology
           </h3>
         <div className="overlap-heading">

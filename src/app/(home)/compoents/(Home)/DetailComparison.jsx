@@ -1,10 +1,28 @@
 "use client";
 
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import "./detailComparison_one.css";
 
 const DetailComparison = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const scrollRef = useRef(null);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      // Calculate the approximate index based on scroll position
+      // Mobile pairs are 92vw wide, container width is typically 100vw.
+      // Each scroll interval roughly matches clientWidth.
+      const slideWidth = container.clientWidth * 0.92;
+      const index = Math.round(container.scrollLeft / slideWidth);
+      if (index !== activeSlide) {
+        setActiveSlide(index);
+      }
+    }
+  };
+
   const products = [
     {
       id: 1,
@@ -112,106 +130,143 @@ const DetailComparison = () => {
   }
 
   return (
-    <section className="comparison-section-one">
+    <>
+      <section 
+        className="comparison-section-one"
+        ref={scrollRef}
+        onScroll={handleScroll}
+      >
+        {rows.map((row, rowIndex) => (
+          <div key={rowIndex} className="comparison-row-one">
+            {row.map((pair, pairIndex) => (
+              <div key={pairIndex} className="pair-block-one">
+                {pair.map((product) => (
+                  <div key={product.id} className="compare-card-one">
+                    <div className="image-wrapper">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="compare-img"
+                      />
+                    </div>
 
+                    <h6 className="product-name-one">
+                      {product.name}
+                    </h6>
 
-      {rows.map((row, rowIndex) => (
-        <div key={rowIndex} className="comparison-row-one">
-          {row.map((pair, pairIndex) => (
-            <div key={pairIndex} className="pair-block-one">
-              {pair.map((product) => (
-                <div key={product.id} className="compare-card-one">
-                  <div className="image-wrapper">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="compare-img"
-                    />
+                    <ul className="feature-list-one">
+                      <li>
+                        <span className="left-one">
+                          {product.highlight ? (
+                            <FaCheckCircle className="icon good-icon" />
+                          ) : (
+                            <FaTimesCircle className="icon bad-icon" />
+                          )}
+                          Price
+                        </span>
+                        <span className="right-one">
+                          ₹{formatPrice(product.price)}/-
+                        </span>
+                      </li>
+
+                      <li>
+                        <span className="left-one">
+                          {product.highlight ? (
+                            <FaCheckCircle className="icon good-icon" />
+                          ) : (
+                            <FaTimesCircle className="icon bad-icon" />
+                          )}
+                          Generates
+                        </span>
+                        <span className="right-one">
+                          {product.generates}
+                        </span>
+                      </li>
+
+                      <li>
+                        <span className="left-one">
+                          {product.highlight ? (
+                            <FaCheckCircle className="icon good-icon" />
+                          ) : (
+                            <FaTimesCircle className="icon bad-icon" />
+                          )}
+                          Plates
+                        </span>
+                        <span className="right-one">
+                          {product.plates}
+                        </span>
+                      </li>
+
+                      <li>
+                        <span className="left-one">
+                          {product.highlight ? (
+                            <FaCheckCircle className="icon good-icon" />
+                          ) : (
+                            <FaTimesCircle className="icon bad-icon" />
+                          )}
+                          ORP
+                        </span>
+                        <span className="right-one">
+                          {product.orp}
+                        </span>
+                      </li>
+
+                      <li>
+                        <span className="left-one">
+                          {product.highlight ? (
+                            <FaCheckCircle className="icon good-icon" />
+                          ) : (
+                            <FaTimesCircle className="icon bad-icon" />
+                          )}
+                          Warranty
+                        </span>
+                        <span className="right-one small-text">
+                          {product.warranty}
+                        </span>
+                      </li>
+                    </ul>
                   </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
+      </section>
 
-                  <h6 className="product-name-one">
-                    {product.name}
-                  </h6>
-
-                  <ul className="feature-list-one">
-                    <li>
-                      <span className="left-one">
-                        {product.highlight ? (
-                          <FaCheckCircle className="icon good-icon" />
-                        ) : (
-                          <FaTimesCircle className="icon bad-icon" />
-                        )}
-                        Price
-                      </span>
-                      <span className="right-one">
-                        ₹{formatPrice(product.price)}/-
-                      </span>
-                    </li>
-
-                    <li>
-                      <span className="left-one">
-                        {product.highlight ? (
-                          <FaCheckCircle className="icon good-icon" />
-                        ) : (
-                          <FaTimesCircle className="icon bad-icon" />
-                        )}
-                        Generates
-                      </span>
-                      <span className="right-one">
-                        {product.generates}
-                      </span>
-                    </li>
-
-                    <li>
-                      <span className="left-one">
-                        {product.highlight ? (
-                          <FaCheckCircle className="icon good-icon" />
-                        ) : (
-                          <FaTimesCircle className="icon bad-icon" />
-                        )}
-                        Plates
-                      </span>
-                      <span className="right-one">
-                        {product.plates}
-                      </span>
-                    </li>
-
-                    <li>
-                      <span className="left-one">
-                        {product.highlight ? (
-                          <FaCheckCircle className="icon good-icon" />
-                        ) : (
-                          <FaTimesCircle className="icon bad-icon" />
-                        )}
-                        ORP
-                      </span>
-                      <span className="right-one">
-                        {product.orp}
-                      </span>
-                    </li>
-
-                    <li>
-                      <span className="left-one">
-                        {product.highlight ? (
-                          <FaCheckCircle className="icon good-icon" />
-                        ) : (
-                          <FaTimesCircle className="icon bad-icon" />
-                        )}
-                        Warranty
-                      </span>
-                      <span className="right-one small-text">
-                        {product.warranty}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      ))}
-    </section>
+      {/* Carousel Dots for Mobile */}
+      <div 
+        className="d-flex justify-content-center d-md-none"
+        style={{ marginTop: '15px', marginBottom: '15px' }}
+      >
+        {productPairs.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => {
+               if (scrollRef.current) {
+                 const slideWidth = scrollRef.current.clientWidth * 0.92 + 12;
+                 scrollRef.current.scrollTo({
+                   left: slideWidth * idx,
+                   behavior: 'smooth'
+                 });
+                 setActiveSlide(idx);
+               }
+            }}
+            style={{
+              width: activeSlide === idx ? '16px' : '6px',
+              height: '6px',
+              padding: 0,
+              border: 'none',
+              backgroundColor: activeSlide === idx ? '#443df6' : '#d6d6d6',
+              borderRadius: activeSlide === idx ? '3px' : '50%',
+              margin: '0 3px',
+              transition: 'all 0.3s ease'
+            }}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

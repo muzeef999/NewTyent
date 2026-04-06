@@ -52,12 +52,12 @@ export default function Smarter_Upgrade() {
                 color: "#000",
               }}
             >
-              <div className="image-wrapper">
+              <div className="smarter-img-wrap mb-4">
                 <Image
                   src={item.img}
-                  alt="product"
+                  alt={item.title}
                   fill
-                  className="compare-img"
+                  className="smarter-img"
                 />
               </div>
 
