@@ -26,26 +26,71 @@ export default function CounterTopIonizers() {
           title: "NMP-5",
           image: nmp5,
           link: "/nmp-5",
+          details: [
+            { label: "Price", value: "₹ 1,68,000/-" },
+            { label: "Electrode/Plates", value: "5" },
+            { label: "pH Range", value: "2.5 - 11.5*" },
+            { label: "ORP Range", value: "Up to -850*" },
+            { label: "Hydrogen Range", value: "Up to 1550 PPB*" },
+            { label: "Generates", value: "7 types of water levels" },
+            { label: "Warranty", value: "-" },
+          ]
         },
         {
           title: "NMP-7",
           image: nmp5,
           link: "/nmp-7",
+          details: [
+            { label: "Price", value: "₹ 2,05,000/-" },
+            { label: "Electrode/Plates", value: "7" },
+            { label: "pH Range", value: "2.5 - 11.5*" },
+            { label: "ORP Range", value: "Up to -950*" },
+            { label: "Hydrogen Range", value: "Up to 1550 PPB*" },
+            { label: "Generates", value: "7 types of water levels" },
+            { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates" }
+          ]
         },
         {
           title: "NMP-9",
           image: nmp9,
           link: "/nmp-9",
+          details: [
+            { label: "Price", value: "₹ 2,38,000/-" },
+            { label: "Electrode/Plates", value: "9" },
+            { label: "pH Range", value: "2.5 - 11.5*" },
+            { label: "ORP Range", value: "Up to -1050*" },
+            { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+            { label: "Generates", value: "7 types of water levels" },
+            { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates" }
+          ]
         },
         {
           title: "NMP-11",
           image: nmp9,
           link: "/nmp-11",
+          details: [
+            { label: "Price", value: "₹ 2,72,000/-" },
+            { label: "Electrode/Plates", value: "11" },
+            { label: "pH Range", value: "2.5 - 11.5*" },
+            { label: "ORP Range", value: "Up to -1150*" },
+            { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+            { label: "Generates", value: "7 types of water levels" },
+            { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates" }
+          ]
         },
         {
           title: "HYBRID-H2",
           image: hybrid,
           link: "/hybrid-h2",
+          details: [
+            { label: "Price", value: "₹ 3,67,000/-" },
+            { label: "Electrode Type", value: "Twin cell Technology" },
+            { label: "pH Range", value: "2.5 - 11.5*" },
+            { label: "ORP Range", value: "Up to -1250*" },
+            { label: "Hydrogen Range", value: "Up to 1850* PPB" },
+            { label: "Generates", value: "7 types of water levels" },
+            { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates" }
+          ]
         },
       ],
     },
@@ -59,17 +104,25 @@ export default function CounterTopIonizers() {
         <meta name="keywords" content={metadata.keywords} />
       </Head>
       <Container className="py-5">
-        <h1 className="mb-4 text-center" style={{ color: "#291495" }}>
-          Counter Top Water Ionizer's
-        </h1>
+        <div className="text-center">
+          <h1 className="bg-heading-text-two-main" style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)" }}>
+            Tyent Countertop <br className="d-md-none" /> Purifiers
+          </h1>
+          <h3 className="fw-bold subtitle-tight mb-4">
+            Discover the Power of Hydrogen-Rich Alkaline Water at Home
+          </h3>
 
-        <p className="text-muted text-center mb-5 fs-5">
-          Tyent’s Countertop Water Ionizers combine premium USFDA-certified
-          materials, cutting-edge Japanese technology, and a sleek, modern
-          design. Enjoy superior health benefits with every sip of hydrogen-rich
-          alkaline water - while adding an elegant aesthetic to your kitchen and
-          a complete health and wellness shield for your entire family.
-        </p>
+        </div>
+
+        <div className="overlap-heading mt-4">
+          <p className="mt-4" style={{ fontSize: '15px' }}>
+            Tyent’s Countertop Water Ionizers combine premium USFDA-certified
+            materials, cutting-edge Japanese technology, and a sleek, modern
+            design. Enjoy superior health benefits with every sip of hydrogen-rich
+            alkaline water - while adding an elegant aesthetic to your kitchen and
+            a complete health and wellness shield for your entire family.
+          </p>
+        </div>
 
         <h4 className="mb-4" style={{ color: "#291495" }}>
           Explore Our Premium Models
@@ -113,10 +166,20 @@ export default function CounterTopIonizers() {
                               />
                             </div>
                             {/* Title */}
-                            <div className="card-body text-center">
-                              <h6 className="fw-semibold text-dark mb-0">
+                            <div className="card-body text-center d-flex flex-column">
+                              <h6 className="fw-semibold text-dark mb-3">
                                 {product.title}
                               </h6>
+                              {product.details && (
+                                <div className="text-start w-100 mt-auto" style={{ fontSize: "14px", color: "#555" }}>
+                                  {product.details.map((detail, dIdx) => (
+                                    <div key={dIdx} className="d-flex justify-content-between align-items-end mb-1" style={{ borderBottom: "1px dashed #eee", paddingBottom: "2px" }}>
+                                      <span className="fw-semibold me-2">{detail.label}</span>
+                                      <span className="text-end">{detail.value}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           </div>
                         </a>
@@ -154,10 +217,20 @@ export default function CounterTopIonizers() {
                                 }}
                               />
                             </div>
-                            <div className="card-body text-center">
-                              <h6 className="fw-semibold text-dark mb-0">
+                            <div className="card-body text-center d-flex flex-column">
+                              <h6 className="fw-semibold text-dark mb-3">
                                 {product.title}
                               </h6>
+                              {product.details && (
+                                <div className="text-start w-100 mt-auto" style={{ fontSize: "14px", color: "#555" }}>
+                                  {product.details.map((detail, dIdx) => (
+                                    <div key={dIdx} className="d-flex justify-content-between align-items-end mb-1" style={{ borderBottom: "1px dashed #eee", paddingBottom: "2px" }}>
+                                      <span className="fw-semibold me-2">{detail.label}</span>
+                                      <span className="text-end">{detail.value}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           </div>
                         </a>
@@ -170,57 +243,108 @@ export default function CounterTopIonizers() {
           })}
         </div>
 
-        <ul className="list-disc pl-6 text-gray-700 text-[16px] leading-relaxed space-y-2">
-          <li className="mb-2">Quick & Hassle-Free Installation.</li>
-          <li className="mb-2">User-Friendly Operation</li>
-          <li className="mb-2">Wall-Mountable Design</li>
-          <li className="mb-2">Sleek & Stylish Aesthetic</li>
-          <li className="mb-2">Longest One Touch Display</li>
-          <li className="mb-2">Easy to replace filter's </li>
-        </ul>
-
-        <div className="mt-5">
-          <h2 className="mb-3" style={{ color: "#291495" }}>
-            Why Choose Tyent Counter Top Ionizers?
-          </h2>
-          <p className="fs-5">
-            Our ionizers are more than just appliances—they are an investment in
-            a healthier, more vibrant lifestyle. Here's why Tyent stands out:
-          </p>
-          <ul className="list-unstyled ps-3">
-            <li className="mb-3">
-              <strong>NMP-5</strong>: Ultra-compact and economical with 5
-              platinum-coated titanium plates. Ideal for beginners.
-            </li>
-            <li className="mb-3">
-              <strong>NMP-7</strong>: Advanced balance of performance and cost.
-              Delivers a wide pH range and enhanced antioxidant levels.
-            </li>
-            <li className="mb-3">
-              <strong>NMP-9</strong>: Performance powerhouse offering
-              hydrogen-rich water and powerful detox support.
-            </li>
-            <li className="mb-3">
-              <strong>NMP-11</strong>: Flagship model with 11 plates,
-              touchscreen display, and unmatched water output.
-            </li>
-          </ul>
-
-          <p className="text-muted mt-3 fs-5">
-            Designed for modern living, Tyent Counter Top Ionizers fuse sleek
-            aesthetics with medical-grade performance. Elevate your hydration
-            game with the best in the industry.
-          </p>
-
-          <p className="mt-4">
-            <Link
-              href="/under-counter-water-ionizers"
-              className="btn"
-              style={{ backgroundColor: "#291495", color: "#fff" }}
+        {/* Features List Redesign */}
+        <div className="d-flex flex-wrap justify-content-center gap-3 my-5">
+          {[
+            "Quick & Hassle-Free Installation",
+            "User-Friendly Operation",
+            "Wall-Mountable Design",
+            "Sleek & Stylish Aesthetic",
+            "Longest One Touch Display",
+            "Easy to replace filter's",
+          ].map((feature, idx) => (
+            <div
+              key={idx}
+              className="d-flex align-items-center bg-white border shadow-sm rounded-pill px-4 py-2 transition-all hover-shadow"
+              style={{ fontSize: "15px", fontWeight: "500", color: "#444", borderColor: "#f0f0f0" }}
             >
-              Explore Under Counter Models →
-            </Link>
-          </p>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#291495" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="me-2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              {feature}
+            </div>
+          ))}
+        </div>
+
+        {/* Why Choose Section Redesign */}
+        <div className="mt-5 p-4 p-md-5 rounded-4 shadow-sm position-relative overflow-hidden" style={{ background: "linear-gradient(145deg, #f8faff 0%, #ffffff 100%)", border: "1px solid #e2e8f0" }}>
+          
+          
+          <div className="position-relative" style={{ zIndex: 1 }}>
+            <div className="text-center mb-5">
+              <h2 className="fw-bold mb-3 position-relative d-inline-block" style={{ color: "#291495" }}>
+                Why Choose Tyent Counter Top Ionizers?
+                <div style={{ position: 'absolute', bottom: '-8px', left: '50%', transform: 'translateX(-50%)', width: '60px', height: '4px', backgroundColor: '#291495', borderRadius: '2px' }}></div>
+              </h2>
+              <p className="fs-6 mt-4 text-muted mx-auto" style={{ maxWidth: "750px", lineHeight: "1.7" }}>
+                Our ionizers are more than just appliances—they are an investment in
+                a healthier, more vibrant lifestyle. Here's why Tyent stands out:
+              </p>
+            </div>
+
+            <div className="row g-4 justify-content-center mb-5">
+              {[
+                { 
+                  id: "NMP-5", 
+                  title: "Ultra-Compact",
+                  desc: "Economical with 5 platinum-coated titanium plates. Ideal for beginners.",
+                  icon: "5"
+                },
+                { 
+                  id: "NMP-7", 
+                  title: "Advanced Balance",
+                  desc: "Performance & cost balance. Delivers wide pH range & enhanced antioxidants.",
+                  icon: "7"
+                },
+                { 
+                  id: "NMP-9", 
+                  title: "Powerhouse",
+                  desc: "Performance powerhouse offering hydrogen-rich water & powerful detox support.",
+                  icon: "9"
+                },
+                { 
+                  id: "NMP-11", 
+                  title: "Flagship Model",
+                  desc: "11 plates, touchscreen display, and unmatched water output capability.",
+                  icon: "11"
+                },
+              ].map((model, idx) => (
+                <div key={idx} className="col-md-6 col-lg-3">
+                  <div className="card h-100 border-0 shadow-sm rounded-4 p-4 transition-all hover-shadow bg-white d-flex flex-column align-items-center text-center model-card" style={{ borderTop: "4px solid transparent" }}>
+                    <div className="d-flex align-items-center justify-content-center rounded-circle mb-3 shadow-sm" style={{ width: "50px", height: "50px", backgroundColor: "#fff", border: `2px solid #291495`, color: "#291495", fontSize: "20px", fontWeight: "bold" }}>
+                      {model.icon}
+                    </div>
+                    <h5 className="fw-bold mb-1" style={{ color: "#291495" }}>{model.id}</h5>
+                    <span className="badge rounded-pill mb-3" style={{ backgroundColor: "rgba(41, 20, 149, 0.08)", color: "#291495", fontSize: "12px", fontWeight: "600", padding: "6px 12px" }}>
+                      {model.title}
+                    </span>
+                    <p className="text-muted mb-0" style={{ fontSize: "14px", lineHeight: "1.6" }}>{model.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center bg-white p-4 p-md-5 rounded-4 shadow-sm mx-auto" style={{ maxWidth: "850px", border: "1px solid #f0f0f0" }}>
+              <p className="text-muted fs-6 mb-4" style={{ lineHeight: "1.7" }}>
+                Designed for modern living, Tyent Counter Top Ionizers fuse sleek
+                aesthetics with medical-grade performance. Elevate your hydration
+                game with the best in the industry.
+              </p>
+              <Link
+                href="/under-counter-water-ionizers"
+                className="btn text-white fw-bold px-3 px-md-5 py-3 rounded-pill transition-all mt-2 d-inline-flex justify-content-center align-items-center"
+                style={{ 
+                  background: "linear-gradient(90deg, #291495 0%, #4b2ac4 100%)", 
+                  boxShadow: "0 4px 15px rgba(41, 20, 149, 0.25)",
+                  fontSize: "clamp(0.85rem, 3.5vw, 1rem)",
+                  whiteSpace: "nowrap"
+                }}
+              >
+                Explore Under Counter Models <span className="ms-1">→</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </Container>
     </>
