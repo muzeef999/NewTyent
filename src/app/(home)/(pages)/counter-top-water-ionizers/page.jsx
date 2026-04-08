@@ -33,7 +33,7 @@ export default function CounterTopIonizers() {
             { label: "ORP Range", value: "Up to -850*" },
             { label: "Hydrogen Range", value: "Up to 1550 PPB*" },
             { label: "Generates", value: "7 types of water levels" },
-            { label: "Warranty", value: "-" },
+            { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates" }
           ]
         },
         {
@@ -105,24 +105,20 @@ export default function CounterTopIonizers() {
       </Head>
       <Container className="py-5">
         <div className="text-center">
-          <h1 className="bg-heading-text-two-main" style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)" }}>
-            Tyent Countertop <br className="d-md-none" /> Purifiers
+          <h1 className="bg-heading-text-two-main" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
+            Tyent Countertop <br className="d-md-none" /> Water Ionizers
           </h1>
           <h3 className="fw-bold subtitle-tight mb-4">
             Discover the Power of Hydrogen-Rich Alkaline Water at Home
           </h3>
 
+          <div className="overlap-heading mt-4">
+            <p className="mt-4" style={{ fontSize: '15px' }}>
+              Upgrade your kitchen and your health with Tyent Countertop Water Ionizers, engineered using premium USFDA-certified materials and powered by advanced Japanese technology. Designed for modern homes, these ionizers deliver hydrogen-rich alkaline water that supports better hydration, everyday wellness, and a healthier lifestyle.
+            </p>
+          </div>
         </div>
 
-        <div className="overlap-heading mt-4">
-          <p className="mt-4" style={{ fontSize: '15px' }}>
-            Tyent’s Countertop Water Ionizers combine premium USFDA-certified
-            materials, cutting-edge Japanese technology, and a sleek, modern
-            design. Enjoy superior health benefits with every sip of hydrogen-rich
-            alkaline water - while adding an elegant aesthetic to your kitchen and
-            a complete health and wellness shield for your entire family.
-          </p>
-        </div>
 
         <h4 className="mb-4" style={{ color: "#291495" }}>
           Explore Our Premium Models
@@ -269,8 +265,8 @@ export default function CounterTopIonizers() {
 
         {/* Why Choose Section Redesign */}
         <div className="mt-5 p-4 p-md-5 rounded-4 shadow-sm position-relative overflow-hidden" style={{ background: "linear-gradient(145deg, #f8faff 0%, #ffffff 100%)", border: "1px solid #e2e8f0" }}>
-          
-          
+
+
           <div className="position-relative" style={{ zIndex: 1 }}>
             <div className="text-center mb-5">
               <h2 className="fw-bold mb-3 position-relative d-inline-block" style={{ color: "#291495" }}>
@@ -285,26 +281,26 @@ export default function CounterTopIonizers() {
 
             <div className="row g-4 justify-content-center mb-5">
               {[
-                { 
-                  id: "NMP-5", 
+                {
+                  id: "NMP-5",
                   title: "Ultra-Compact",
                   desc: "Economical with 5 platinum-coated titanium plates. Ideal for beginners.",
                   icon: "5"
                 },
-                { 
-                  id: "NMP-7", 
+                {
+                  id: "NMP-7",
                   title: "Advanced Balance",
                   desc: "Performance & cost balance. Delivers wide pH range & enhanced antioxidants.",
                   icon: "7"
                 },
-                { 
-                  id: "NMP-9", 
+                {
+                  id: "NMP-9",
                   title: "Powerhouse",
                   desc: "Performance powerhouse offering hydrogen-rich water & powerful detox support.",
                   icon: "9"
                 },
-                { 
-                  id: "NMP-11", 
+                {
+                  id: "NMP-11",
                   title: "Flagship Model",
                   desc: "11 plates, touchscreen display, and unmatched water output capability.",
                   icon: "11"
@@ -334,8 +330,8 @@ export default function CounterTopIonizers() {
               <Link
                 href="/under-counter-water-ionizers"
                 className="btn text-white fw-bold px-3 px-md-5 py-3 rounded-pill transition-all mt-2 d-inline-flex justify-content-center align-items-center"
-                style={{ 
-                  background: "linear-gradient(90deg, #291495 0%, #4b2ac4 100%)", 
+                style={{
+                  background: "linear-gradient(90deg, #291495 0%, #4b2ac4 100%)",
                   boxShadow: "0 4px 15px rgba(41, 20, 149, 0.25)",
                   fontSize: "clamp(0.85rem, 3.5vw, 1rem)",
                   whiteSpace: "nowrap"

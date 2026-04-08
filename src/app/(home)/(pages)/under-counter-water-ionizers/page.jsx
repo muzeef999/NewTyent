@@ -74,21 +74,15 @@ export default function UnderCounterIonizers() {
       </Head>
       <Container className="py-5">
         <div className="text-center">
-          <h1 className="bg-heading-text-two-main" style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}>
-            Tyent Under-Counter <br className="d-md-none" /> Purifiers
+          <h1 className="bg-heading-text-two-main" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
+            Tyent Under-<br className="d-md-none" />Counter <br className="d-md-none" /> Water Ionizers
           </h1>
           <h3 className="fw-bold subtitle-tight mb-4">
             Maximize Kitchen Space with Elegant, Medical-Grade Hydration
           </h3>
         <div className="overlap-heading mt-4">
           <p className="mt-4" style={{ fontSize: '15px' }}>
-            Tyent’s Under-the-Counter Water Ionizers deliver unmatched
-            convenience, advanced Japanese technology, and USFDA-certified quality
-            - all tucked neatly beneath your counter. Experience the same powerful
-            hydrogen-rich alkaline water in a space-saving, clutter-free design.
-            Perfect for high end premium modern kitchens, this system ensures
-            complete wellness for your entire family without compromising on style
-            or space.
+            Transform your kitchen into a premium wellness space with Tyent Under-Counter Water Ionizers - a perfect blend of advanced Japanese technology, USFDA/KFDA - certified materials, and modern space saving design innovation. Built for today’s high-end luxary and elite homes, these systems deliver powerful hydrogen-rich alkaline water while staying completely hidden beneath your countertop for a clean, clutter-free look.
           </p>
         </div>
         </div>
