@@ -96,7 +96,7 @@
 
   /* Hide heading on mobile */
   .heading {
-    display: none;
+    font-size: 14px;
   }
 
   /* Label */

@@ -136,13 +136,14 @@ const FormOnly = () => {
           
         }
       };
-    
+
+
   return (
     <div>
         <div  data-aos="fade-left" className="flex-column justify-content-center align-items-center">
         {loading ? (<>
-          <h3 data-aos="fade-up" className={`fw-bold ${formStyle.heading}`}>Fill Out the Form - We'll Get in Touch</h3>
-          <p data-aos="fade-up" className="fw-bold mb-4" style={{ fontSize: "14px" }}>Start Your Journey Today!</p>
+          <h3 data-aos="fade-up" className={`fw-bold ${formStyle.heading}`}>Fill out the form - Free demo</h3>
+          <p data-aos="fade-up" className="fw-bold mb-4" style={{ fontSize: "14px" }}>We respect your privacy</p>
           <form onSubmit={handleSubmit} className="w-100">
             <div data-aos="fade-right" className="mb-3">
               <Input
@@ -199,6 +200,7 @@ const FormOnly = () => {
               <textarea
                 id="message"
                 name="message"
+                rows={2}
                 className={`${formStyle.textarea}`}
                 value={inputdata.message}
                 onChange={inputHandler}
