@@ -136,7 +136,7 @@ const handleDownloadConversion = () => {
               show={showModal}
               onHide={() => setShowModal(false)}
               centered
-              className="animate-modal"
+                className="animate-modal customModal"
             >
               <Modal.Header closeButton>
                 <Modal.Title>Form</Modal.Title>

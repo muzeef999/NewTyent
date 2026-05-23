@@ -92,8 +92,47 @@
   object-fit: cover;
 }
 
-@media (min-width: 768px) {
-  .contactImage {
-    width: 78%;
+@media (max-width: 768px) {
+
+  /* Hide heading on mobile */
+  .heading {
+    display: none;
   }
+
+  /* Label */
+  .formLabel {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  /* Input fields */
+  .formInput {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Rounded input */
+  .inputbox {
+    border-radius: 14px !important;
+  }
+
+  /* Button */
+  .button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  /* Textarea */
+  .textarea {
+    height: 70px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  /* Contact image */
+  .contactImage {
+    width: 100%;
+  }
+
 }

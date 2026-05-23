@@ -9,8 +9,7 @@ import { FaCheckCircle, FaFacebook, FaLinkedinIn, FaTwitter, FaYoutube } from "r
 import { IoLogoInstagram } from "react-icons/io5";
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
 import { Spinner } from "react-bootstrap";
-import { toast } from "sonner";
- 
+
 
 
 const ACCESS_TOKEN =

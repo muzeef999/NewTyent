@@ -20,3 +20,34 @@
     z-index: 9999;
   }
   
+
+@media (max-width: 768px) {
+
+  .customModal .modal-dialog {
+    width: calc(100% - 40px) !important;
+    max-width: 80% !important;
+
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .customModal .modal-content {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .customModal .modal-header {
+    padding: 10px 15px;
+  }
+
+  .customModal .modal-body {
+    padding: 10px;
+  }
+
+  .customModal .modal-title {
+    font-size: 18px;
+  }
+
+}
