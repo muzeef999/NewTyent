@@ -30,7 +30,7 @@ export default function Smarter_Upgrade() {
     <div className="container">
 
       <div className="text-center mb-5">
-        <h1 className="bg-heading-text-two-main">Smarter Upgrade</h1>
+        <h2 className="bg-heading-text-two-main">Smarter Upgrade</h2>
         <h3 className="fw-bold subtitle-tight">
           Your Wellness Starts with Tyent
         </h3>

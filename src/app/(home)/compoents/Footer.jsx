@@ -155,7 +155,7 @@ const Footer = () => {
       <span className="text-dark fw-bold">Syntaxarts</span>
     </Link>
   </div>
-</Col> */}
+</Col>  */}
                 </div>
               </Col>
               <Col xs={12} md={9}>
@@ -484,6 +484,13 @@ const Footer = () => {
             </Row>
           </div>
         </div>
+      </div>
+
+      {/* Copyright Line */}
+      <div style={{ backgroundColor: "#070724", borderTop: "1px solid rgba(255,255,255,0.1)", textAlign: "center", padding: "15px 0" }}>
+        <p style={{ margin: 0, fontSize: "14px", color: "#ccc" }}>
+          &copy; {new Date().getFullYear()} Tyent India. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

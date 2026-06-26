@@ -36,12 +36,12 @@ const Slider = () => {
           <span className="offer-badge">World's No.1 Brand</span>
 
           {/* 🔥 Animated Heading */}
-          <h1 className="main-heading">
+          <h2 className="main-heading">
             <span className="fixed-text">Not just</span>
             <span key={index} className="animated-word">
               {words[index]}
             </span>
-          </h1>
+          </h2>
 
           <p className="sub-text">
             Experience the healthiest hydrogen water on earth
@@ -67,12 +67,12 @@ const Slider = () => {
         <div className="banner-content mobile">
           <span className="offer-badge">World's No.1 Brand</span>
 
-          <h1 className="main-heading">
+          <h2 className="main-heading">
             <span className="fixed-text">Not just</span>
             <span key={index} className="animated-word">
               {words[index]}
             </span>
-          </h1>
+          </h2>
 
           <p className="sub-text">
             Experience the healthiest <br />hydrogen water on earth

@@ -26,7 +26,7 @@ const HumanRight = () => {
   return (
     <section className="human-section">
       <div className="container text-center">
-        <h1 className="bg-heading-text-two-main">Human Right</h1>
+        <h2 className="bg-heading-text-two-main">Human Right</h2>
         <h3 className="fw-bold subtitle-tight">
           Clean & healthy water shouldn't be a luxury.
         </h3>

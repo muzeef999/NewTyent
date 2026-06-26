@@ -10,6 +10,7 @@ import Script from "next/script"; // ✅ correct import
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
+  adjustFontFallback: false,
 });
 
 const ClientComponent = dynamic(() => import("./(pages)/ClientComponent"), {
@@ -18,6 +19,14 @@ const ClientComponent = dynamic(() => import("./(pages)/ClientComponent"), {
 
 // Metadata is still used in app directory routing, not here directly in layout.js
 export const metadata = {
+  metadataBase: new URL("https://www.tyent.co.in"),
+  alternates: {
+    canonical: "./",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   title:
     "Tyent: Best Alkaline Water Ionizer in India",
   description:

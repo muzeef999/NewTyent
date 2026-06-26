@@ -9,7 +9,7 @@ const RealScience = () => {
       <div className="container">
         {/* Heading */}
         <div className="text-center">
-          <h1 className="bg-heading-text-two-main">The Real Science</h1>
+          <h2 className="bg-heading-text-two-main">The Real Science</h2>
           <h4 className="fw-bold subtitle-tight">Behind Our Products</h4>
           <p style={{maxWidth:'900px', margin:'0 auto 30px'}}>
             Confused between Water Ionizer and Hydrogen generator? Learn the facts, understand the difference, and choose with clarity.

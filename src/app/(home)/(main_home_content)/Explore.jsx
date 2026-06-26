@@ -44,7 +44,7 @@ const Explore = () => {
   return (
     <div className="container">
       <div className="text-center">
-        <h1 className="bg-heading-text-two-main">Explore</h1>
+        <h2 className="bg-heading-text-two-main">Explore</h2>
         <h3 className="fw-bold subtitle-tight">our best selling products</h3>
       </div>
       <div className="row g-5">

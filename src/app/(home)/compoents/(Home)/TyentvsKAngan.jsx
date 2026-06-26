@@ -12,7 +12,7 @@ const CompareSection = () => {
   return (
     <Container className="">
       <div className="text-center mb-5">
-        <h1 className="bg-heading-text-two-main">Tyent vs Kangen</h1>
+        <h2 className="bg-heading-text-two-main">Tyent vs Kangen</h2>
         <h3 className="fw-bold subtitle-tight">Think Once before buying.</h3>
         <p style={{ maxWidth: '900px', margin: '0 auto' }}>
           We believe in absolute transparency. No hidden charges, No hidden
