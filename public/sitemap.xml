@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://www.tyent.co.in/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.tyent.co.in</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://www.tyent.co.in/nmp-5</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/nmp-7</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/nmp-9</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/nmp-11</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/uce-9-plus</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/uce-11-plus</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/uce-13-plus</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.tyent.co.in/hybrid-h2</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/counter-top-water-ionizers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/under-counter-water-ionizers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/Sterilizing-water-generator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/soap</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/water-bottle-1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/filter-1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/7-types-of-Tyent-water</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/why-water-ionizer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/why-tyent</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/tyentvskangen</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/benefits</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/certifications</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/testimonials</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/solid-hybrid-mesh-plates</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/patented-SMPS-plus</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/0.1-micron-filters</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/our-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/tyent-global</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/blogs</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.tyent.co.in/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.tyent.co.in/html-sitemap</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://www.tyent.co.in/Cancellation_Returns</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://www.tyent.co.in/Terms_of_Use</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://www.tyent.co.in/Security</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://www.tyent.co.in/Privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>
