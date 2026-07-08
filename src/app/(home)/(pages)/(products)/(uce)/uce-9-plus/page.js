@@ -52,8 +52,8 @@ const Banner = dynamic(
 
 
 export const metadata = {
-  title: "TTyent UCE-9 Plus: Premium Under-Counter",
-  description: "The UCE-9 Plus is Tyent's flagship. This premium best alkaline water ionizer in India offers up to 13 plates and a sleek under-counter design.",
+  title: "Tyent UCE-9 Plus – Under Counter 9 Plate Ionizer India",
+  description: "Buy Tyent UCE-9 Plus under counter water ionizer India. 9 Japanese plates, hidden design, professional installation available.",
   keywords: "Tyent UCE-9 Plus, under counter ionizer, alkaline water machine, hydrogen water ionizer, 9 plate ionizer, Kangen alternative, 11.5 pH water, luxury kitchen ionizer, SMPS Plus, Japanese water ionizer"
 };
 

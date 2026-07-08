@@ -31,8 +31,8 @@ const Banner = dynamic(
 
 
 export const metadata = {
-  title: "Tyent H2-Hybrid | Twin Cell Alkaline & Hydrogen Ionizer",
-  description: "Tyent H2-Hybrid features dual-cell tech, 1850 PPB H₂, -1250 ORP, 11.5–2.5 pH, 7 water types & no chemicals. Advanced LCD, auto-clean, & 15-year electrode warranty.",
+  title: "Tyent Hybrid H2 Water Ionizer – Hydrogen Water India",
+  description: "Tyent Hybrid H2 water ionizer India — advanced hydrogen water generator with superior ORP and antioxidant output. Explore today.",
   keywords: "Tyent H2-Hybrid, twin cell ionizer, alkaline water ionizer, hydrogen water machine, 1850 PPB hydrogen, Kangen water alternative, 11.5 pH water, chemical-free ionizer, SMPS Plus technology, Japanese water ionizer",
 };
 

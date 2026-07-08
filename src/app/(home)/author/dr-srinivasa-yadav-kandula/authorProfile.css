@@ -1,0 +1,140 @@
+.author-page {
+  padding: 60px 20px 80px;
+  min-height: 70vh;
+  background: #f8f9fa;
+}
+
+.author-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.author-image-wrapper {
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.author-image {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.author-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.author-speciality {
+  font-size: 1rem;
+  color: #291495;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.author-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-item {
+  background: #f0edff;
+  color: #291495;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.author-social .linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0077b5;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.author-social .linkedin-btn:hover {
+  background: #005f8d;
+  color: #fff;
+}
+
+.author-divider {
+  margin: 30px 0;
+  border-color: #eee;
+}
+
+.bio-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 14px;
+}
+
+.author-bio p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.author-expertise {
+  margin-top: 24px;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-list li {
+  padding: 8px 0;
+  color: #333;
+  font-size: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 18px;
+}
+
+.expertise-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #291495;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .author-card {
+    padding: 24px;
+  }
+
+  .author-name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .author-speciality {
+    text-align: center;
+  }
+
+  .author-badges {
+    justify-content: center;
+  }
+}

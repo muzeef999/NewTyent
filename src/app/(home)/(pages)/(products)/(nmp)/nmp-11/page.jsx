@@ -42,8 +42,8 @@ const Banner = dynamic(
 );
 
 export const metadata = {
-  title: "Flagship Tyent: Best Alkaline Water Machine",
-  description: "Experience unmatched performance with the NMP-11 or NMP-9. This is truly the best alkaline water machine in India for power and purity.",
+  title: "Tyent NMP-11 Water Ionizer – 11 Plate Premium Ionizer India",
+  description: "Buy Tyent NMP-11 water ionizer India. 11 Japanese plates, maximum pH range, premium hydrogen-rich water. Top countertop ionizer.",
   keywords: "Tyent NMP-11, alkaline water ionizer, hydrogen water, 11 plate ionizer, ORP water machine, Kangen alternative, water ionizer India, 11.5 pH water, SMPS PLUS, Japanese water ionizer"
 }; 
 

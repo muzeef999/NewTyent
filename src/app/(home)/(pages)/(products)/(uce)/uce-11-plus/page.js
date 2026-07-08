@@ -51,9 +51,9 @@ const Banner = dynamic(
 
 
 export const metadata = {
-  title: "Tyent UCE-11 Plus: Premium Under-Counter",
+  title: "Tyent UCE-11 Plus – 11 Plate Under Sink Ionizer India",
   description:
-    "The UCE-11 Plus is Tyent's flagship. This premium best alkaline water ionizer in India offers up to 13 plates and a sleek under-counter design.",
+    "Buy Tyent UCE-11 Plus India. 11 Japanese plates, under-counter design, Premium installation support pan-India.",
     keywords:"Tyent UCE-11 Plus, 11 plate ionizer, hydrogen water ionizer, alkaline ionizer, luxury kitchen water filter, under counter ionizer, Kangen water machine, 11.5 pH ionizer, SMPS PLUS, Japanese ionizer"
 };
 

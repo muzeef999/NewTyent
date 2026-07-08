@@ -25,9 +25,9 @@ import tyentKangenHero from "@/asserts/tyentkengan.webp";
 
 export const metadata = {
   title:
-    "Tyent Water Ionizers vs Enagic Kangen | Advanced Alkaline Water Filtration",
+    "Tyent vs Kangen Water Ionizer – Which Is Better in India?",
   description:
-    "Explore the differences between Tyent water ionizers and Enagic Kangen systems. Discover the superior hydration, energy, and wellness benefits of hydrogen-rich, ionized water with Tyent’s advanced technology.",
+    "Compare Tyent vs Kangen water ionizer on price, plates, pH range, and warranty. See why Indians are choosing Tyent.",
   keywords:
     "tyent water ionizer vs Enagic Kangen, tyent water vs Enagic Kangen, tyent vs Enagic Kangen",
 };
