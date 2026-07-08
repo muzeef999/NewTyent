@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { Col, Container, Row } from "react-bootstrap";
 import WhyTyent from "./compoents/(Home)/WhyTyent";
 import SectionTwo from "./compoents/(Home)/SectionTwo";
@@ -298,26 +297,19 @@ const Home = () => {
 
   return (
     <div style={{ width: "100%", overflow: "hidden", position: "relative" }}>
-      <Script
-        id="organization-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        strategy="beforeInteractive"
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        strategy="beforeInteractive"
       />
-      <Script
-        id="video-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
-        strategy="beforeInteractive"
       />
-      <Script
-        id="localbusiness-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -341,7 +333,6 @@ const Home = () => {
           },
           "areaServed": "India"
         }) }}
-        strategy="beforeInteractive"
       />
       <h1 className="visually-hidden">
         Tyent – Best Alkaline Water Ionizer Machine in India | Hydrogen-Rich Water Purifier
