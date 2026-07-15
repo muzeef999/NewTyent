@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
 import default_image from "@/asserts/default_image.webp";
 import Link from "next/link";
+import AuthorCard from "./AuthorCard";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
 
@@ -59,6 +60,17 @@ export default async function BlogPage({ params }) {
     addSuffix: true,
   });
 
+  // Map blog author to author card
+  const authorMap = {
+    "Dr. Srinivasa Yadav Kandula": "dr-srinivasa-yadav-kandula",
+    "Dr Srinivasa Yadav Kandula": "dr-srinivasa-yadav-kandula",
+    "Srinivasa": "dr-srinivasa-yadav-kandula",
+    "Dr. G. Sree Suma": "dr-g-sree-suma",
+    "Dr G Sree Suma": "dr-g-sree-suma",
+    "Sree Suma": "dr-g-sree-suma",
+  };
+  const authorKey = authorMap[post.username] || (post.authorSlug ? post.authorSlug : "dr-srinivasa-yadav-kandula");
+
   return (
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
@@ -80,6 +92,8 @@ export default async function BlogPage({ params }) {
             className="mt-4"
             dangerouslySetInnerHTML={{ __html: post.content }}
           ></div>
+
+          <AuthorCard authorKey={authorKey} />
         </Col>
 
         <Col md={4}>
