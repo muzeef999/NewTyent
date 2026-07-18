@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Col, Row, Container } from "react-bootstrap";
 
-import nmp5 from "@/asserts/NMP5.webp";
-import nmp9 from "@/asserts/NMP9.webp";
+import nmp5 from "@/asserts/nmp5-home.webp";
+import nmp9 from "@/asserts/nmp9-home.webp";
 import hybrid from "@/asserts/Hybrid.webp";
 
 export const metadata = {

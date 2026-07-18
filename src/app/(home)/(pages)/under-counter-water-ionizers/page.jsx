@@ -3,7 +3,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import uce from "@/asserts/Uce.webp";
+import nmp9 from "@/asserts/nmp9-home.webp";
+import uce from "@/asserts/uce-home.webp";
 import { Col, Row, Container } from "react-bootstrap";
 
 export const metadata = {
@@ -21,7 +22,7 @@ export default function UnderCounterIonizers() {
       products: [
         {
           title: "Tyent UCE-9 Plus",
-          image: uce,
+          image: nmp9,
           link: "/uce-9-plus",
           details: [
             { label: "Price", value: "₹ 3,25,000/-" },
@@ -35,7 +36,7 @@ export default function UnderCounterIonizers() {
         },
         {
           title: "Tyent UCE-11 Plus",
-          image: uce,
+          image: nmp9,
           link: "/uce-11-plus",
           details: [
             { label: "Price", value: "₹ 3,46,000/-" },

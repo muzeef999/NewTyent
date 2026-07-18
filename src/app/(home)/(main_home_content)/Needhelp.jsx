@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { FaHeadset, FaPlayCircle, FaRegNewspaper } from "react-icons/fa";
+import Link from "next/link";
 import "./NeedHelp.css";
 
 const Needhelp = () => {
@@ -68,6 +69,7 @@ const Needhelp = () => {
                 Our #1 goal at Tyent is to ensure your experience is smooth and
                 delightful every step of the way
               </p>
+              <Link href="/contact" className="needhelp-btn">Contact Us</Link>
             </div>
 
             {/* Card 2 */}
@@ -78,6 +80,7 @@ const Needhelp = () => {
                 Deep dive into the world of hydrogen water and discover tips and
                 tricks, recipes, testimonials and more
               </p>
+              <Link href="/videos" className="needhelp-btn">Watch Videos</Link>
             </div>
 
             {/* Card 3 */}
@@ -88,6 +91,7 @@ const Needhelp = () => {
                 Tyent's blog is a wealth of information from unique uses, hacks
                 and tips on everything from working out to aging younger
               </p>
+              <Link href="/blogs" className="needhelp-btn">Read Blog</Link>
             </div>
 
           </div>

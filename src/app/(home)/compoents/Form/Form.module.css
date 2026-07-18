@@ -10,17 +10,17 @@
 
 .formInput {
   width: 100%;
-  padding: 10px 14px;
+  padding: 9px 12px;
   border: 1px solid #e5e5e5;
-  border-radius: 6px;
+  border-radius: 8px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .formInput:focus {
-  border-color: #0d6efd;
-  /* Blue border on focus */
-  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  border-color: #291495;
+  box-shadow: 0 0 0 3px rgba(41, 20, 149, 0.12);
   outline: none;
 }
 
@@ -39,20 +39,22 @@
 
 .button {
   color: #FFF;
-  background-color: #0d6efd;
+  background: linear-gradient(90deg, #291495 0%, #4b2ac4 100%);
   border-radius: 30px;
   width: 100%;
   border: none;
-  padding: 12px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   display: flex;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
-  background-color: #0b5ed7;
+  opacity: 0.9;
+  box-shadow: 0 4px 15px rgba(41, 20, 149, 0.3);
 }
 
 
@@ -74,16 +76,20 @@
 
 .textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 9px 12px;
   border: 1px solid #e5e5e5;
-  border-radius: 6px;
+  border-radius: 8px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 13px;
   resize: vertical;
+  height: 70px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.textarea {
-  height: 100px;
+.textarea:focus {
+  border-color: #291495;
+  box-shadow: 0 0 0 3px rgba(41, 20, 149, 0.12);
+  outline: none;
 }
 
 .contactImage {

@@ -1,26 +1,239 @@
-.collection-hero {
+/* ========== Breadcrumb Bar ========== */
+.collection-breadcrumb-bar {
+  background: #f8f8fa;
+  padding: 14px 0;
   text-align: center;
-  padding: 60px 0 40px;
 }
 
-.collection-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  background: linear-gradient(135deg, #291495 0%, #4b2ac4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 16px;
-}
-
-.collection-hero p {
-  font-size: 15px;
+.collection-hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
   color: #666;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.7;
 }
 
+.collection-hero-breadcrumb a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.collection-hero-breadcrumb a:hover {
+  color: #291495;
+  text-decoration: underline;
+}
+
+.collection-hero-breadcrumb span {
+  color: #999;
+  font-size: 11px;
+}
+
+.collection-hero-breadcrumb span:last-child {
+  color: #291495;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ========== Hero Banner ========== */
+.collection-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #f0ede8;
+}
+
+.collection-hero-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.collection-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0) 70%);
+}
+
+.collection-hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.collection-hero-content {
+  padding: 60px 0;
+  max-width: 500px;
+}
+
+.collection-hero-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.collection-badge-sale {
+  display: inline-block;
+  background: #291495;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.collection-badge-event {
+  display: inline-block;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.collection-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+
+.collection-hero-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .collection-hero-banner {
+    height: 60vh;
+  }
+
+  .collection-hero-overlay {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 60%, rgba(255,255,255,0.3) 100%);
+  }
+
+  .collection-hero-content {
+    padding: 40px 0;
+    max-width: 100%;
+  }
+}
+
+/* ========== Filter / Sort Bar ========== */
+.collection-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: #291495;
+  color: #291495;
+}
+
+.filter-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.sort-wrapper label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  white-space: nowrap;
+}
+
+.sort-select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  min-width: 180px;
+}
+
+.sort-select:focus {
+  border-color: #291495;
+}
+
+/* ========== Filter Pills ========== */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 0 8px;
+}
+
+.filter-pill {
+  padding: 8px 18px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: #291495;
+  color: #291495;
+}
+
+.filter-pill.active {
+  background: #291495;
+  border-color: #291495;
+  color: #fff;
+}
+
+/* ========== Product Grid ========== */
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -40,6 +253,7 @@
   }
 }
 
+/* ========== Product Card ========== */
 .product-card {
   background: #fff;
   border-radius: 16px;
@@ -107,7 +321,7 @@
 }
 
 .product-card-specs li::before {
-  content: "✓";
+  content: "\2713";
   color: #291495;
   font-weight: bold;
   font-size: 12px;
@@ -162,6 +376,7 @@
   padding: 4px 10px;
   border-radius: 20px;
   margin-bottom: 10px;
+  width: fit-content;
 }
 
 .coming-soon-overlay {

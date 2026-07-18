@@ -1,53 +1,91 @@
 /* animation.css */
 .animate-modal {
-    animation: showModal 0.5s ease-out;
+  animation: showModal 0.4s ease-out;
+}
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
   }
-  
-  @keyframes showModal {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
-  
-  .modal-container {
-    display: inline-block;
-    position: relative;
-    z-index: 9999;
-  }
-  
+}
+
+.modal-container {
+  display: inline-block;
+  position: relative;
+  z-index: 9999;
+}
+
+/* ========== Professional Modal Styling ========== */
+.customModal .modal-dialog {
+  max-width: 380px !important;
+}
+
+.customModal .modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.customModal .modal-header {
+  background: linear-gradient(135deg, #291495 0%, #4b2ac4 100%);
+  border-bottom: none;
+  padding: 16px 20px;
+}
+
+.customModal .modal-header .btn-close {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.customModal .modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.customModal .modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.customModal .modal-body {
+  padding: 20px 24px 24px;
+}
+
+.customModal .modal-body h3 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.customModal .modal-body p {
+  font-size: 12px;
+  color: #999;
+}
+
+.customModal .modal-body .mb-3 {
+  margin-bottom: 10px !important;
+}
+
+.customModal .modal-body .mb-4 {
+  margin-bottom: 12px !important;
+}
 
 @media (max-width: 768px) {
-
   .customModal .modal-dialog {
-    width: calc(100% - 40px) !important;
-    max-width: 80% !important;
-
-    margin-top: 30px !important;
-    margin-bottom: 20px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    max-width: calc(100% - 40px) !important;
+    margin: 20px auto !important;
   }
 
   .customModal .modal-content {
-    padding: 10px;
-    border-radius: 12px;
-  }
-
-  .customModal .modal-header {
-    padding: 10px 15px;
+    border-radius: 14px;
   }
 
   .customModal .modal-body {
-    padding: 10px;
+    padding: 16px 18px 20px;
   }
-
-  .customModal .modal-title {
-    font-size: 18px;
-  }
-
 }
