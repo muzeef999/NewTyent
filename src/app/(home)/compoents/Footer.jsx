@@ -445,7 +445,7 @@ const Footer = () => {
                       <div className="d-flex justify-content-center justify-content-md-end gap-3">
                         <a
                           style={{ cursor: "pointer" }}
-                          href="https://www.facebook.com/TyentIndiaOfficial/"
+                          href="https://www.facebook.com/profile.php?id=61587965279022"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Facebook"
@@ -461,7 +461,7 @@ const Footer = () => {
                           <FaLinkedin size={30} color="#0077B5" />
                         </a>
                         <a
-                          href="https://www.instagram.com/tyentindia/"
+                          href="https://www.instagram.com/tyentindia123/"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Instagram"
@@ -469,7 +469,7 @@ const Footer = () => {
                           <FaInstagram size={30} color="#E4405F" />
                         </a>
                         <a
-                          href="https://www.youtube.com/@TyentIndia3170"
+                          href="https://youtube.com/@tyentindia0369?si=eEGWqZDZWfYOeD3g"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="YouTube"

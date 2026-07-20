@@ -22,7 +22,7 @@ export default function UnderCounterIonizers() {
       products: [
         {
           title: "Tyent UCE-9 Plus",
-          image: nmp9,
+          image: uce,
           link: "/uce-9-plus",
           details: [
             { label: "Price", value: "₹ 3,25,000/-" },
@@ -36,7 +36,7 @@ export default function UnderCounterIonizers() {
         },
         {
           title: "Tyent UCE-11 Plus",
-          image: nmp9,
+          image: uce,
           link: "/uce-11-plus",
           details: [
             { label: "Price", value: "₹ 3,46,000/-" },

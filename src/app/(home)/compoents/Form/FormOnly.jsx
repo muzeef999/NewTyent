@@ -248,12 +248,12 @@ const FormOnly = () => {
                   <div className="d-flex justify-content-around align-items-center icons">
                 
                   <div>
-                    <Link href={"https://www.facebook.com/TyentIndiaOfficial/"}  target="_blank" style={{textDecoration:'none', color:"#969293"}}>
+                    <Link href={"https://www.facebook.com/profile.php?id=61587965279022"}  target="_blank" style={{textDecoration:'none', color:"#969293"}}>
                     <FaFacebook size={30} />
                     </Link>
                   </div>
                   <div>
-                    <Link href={"https://www.instagram.com/tyentindia/"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
+                    <Link href={"https://www.instagram.com/tyentindia123/"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
                     <IoLogoInstagram size={30} />
                     </Link>
                   </div>
@@ -264,7 +264,7 @@ const FormOnly = () => {
                     </Link>
                   </div>
                   <div>
-                    <Link href={"https://www.youtube.com/@TyentIndia3170"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
+                    <Link href={"https://youtube.com/@tyentindia0369?si=eEGWqZDZWfYOeD3g"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
                     <FaYoutube  size={30}/>
                     </Link>
                   </div>
