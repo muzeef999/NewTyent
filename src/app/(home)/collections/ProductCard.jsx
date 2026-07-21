@@ -18,15 +18,15 @@ export default function ProductCard({ product }) {
         {product.subtitle && (
           <p className="product-card-subtitle">{product.subtitle}</p>
         )}
-        {product.badge && (
-          <span className="product-card-badge">{product.badge}</span>
-        )}
-        {product.specs && product.specs.length > 0 && (
-          <ul className="product-card-specs">
-            {product.specs.map((spec, idx) => (
-              <li key={idx}>{spec}</li>
+        {product.details && product.details.length > 0 && (
+          <div className="product-card-details">
+            {product.details.map((detail, idx) => (
+              <div key={idx} className="product-card-detail-row">
+                <span className="detail-label">{detail.label}</span>
+                <span className="detail-value">{detail.value}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
         {product.price && (
           <div className="product-card-price">

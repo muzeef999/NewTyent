@@ -147,6 +147,9 @@ export default function CounterTopIonizers() {
                               style={{
                                 borderTopLeftRadius: "1rem",
                                 borderTopRightRadius: "1rem",
+                                padding: "20px",
+                                minHeight: "240px",
+                                maxHeight: "260px",
                               }}
                             >
                               <Image
@@ -156,7 +159,7 @@ export default function CounterTopIonizers() {
                                 style={{
                                   borderTopLeftRadius: "1rem",
                                   borderTopRightRadius: "1rem",
-                                  maxHeight: "100%",
+                                  maxHeight: "220px",
                                   objectFit: "contain",
                                 }}
                               />
@@ -199,6 +202,9 @@ export default function CounterTopIonizers() {
                               style={{
                                 borderTopLeftRadius: "1rem",
                                 borderTopRightRadius: "1rem",
+                                padding: "20px",
+                                minHeight: "240px",
+                                maxHeight: "260px",
                               }}
                             >
                               <Image
@@ -208,7 +214,7 @@ export default function CounterTopIonizers() {
                                 style={{
                                   borderTopLeftRadius: "1rem",
                                   borderTopRightRadius: "1rem",
-                                  maxHeight: "100%",
+                                  maxHeight: "220px",
                                   objectFit: "contain",
                                 }}
                               />

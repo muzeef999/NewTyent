@@ -6,9 +6,9 @@ import Link from "next/link";
 import ProductCard from "../ProductCard";
 import "../collections.css";
 
-import nmp5 from "@/asserts/NMP5.webp";
-import nmp9 from "@/asserts/NMP9.webp";
-import hybrid from "@/asserts/Hybrid.webp";
+import nmp5 from "@/asserts/nmp5-collection.webp";
+import nmp9 from "@/asserts/nmp9-collection.webp";
+import hybrid from "@/asserts/hybrid-collection.webp";
 import uce from "@/asserts/Uce.webp";
 import soap from "@/asserts/soap/soap.png";
 import filterImg from "@/asserts/filter/filter2.webp";
@@ -21,9 +21,15 @@ const allProducts = [
     subtitle: "Counter Top Hydrogen Rich Alkaline Water Ionizer",
     image: nmp5,
     link: "/nmp-5",
-    badge: "5 Plates",
     category: "Counter Top",
-    specs: ["ORP: Up to -850*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1550 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "5" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -850*" },
+      { label: "Hydrogen Range", value: "Up to 1550 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 1,68,000",
     priceNum: 168000,
   },
@@ -32,9 +38,15 @@ const allProducts = [
     subtitle: "Counter Top Hydrogen Rich Alkaline Water Ionizer",
     image: nmp5,
     link: "/nmp-7",
-    badge: "7 Plates",
     category: "Counter Top",
-    specs: ["ORP: Up to -950*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1550 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "7" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -950*" },
+      { label: "Hydrogen Range", value: "Up to 1550 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 2,05,000",
     priceNum: 205000,
   },
@@ -43,9 +55,15 @@ const allProducts = [
     subtitle: "Counter Top Hydrogen Rich Alkaline Water Ionizer",
     image: nmp9,
     link: "/nmp-9",
-    badge: "9 Plates",
     category: "Counter Top",
-    specs: ["ORP: Up to -1050*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1800 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "9" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -1050*" },
+      { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 2,38,000",
     priceNum: 238000,
   },
@@ -54,9 +72,15 @@ const allProducts = [
     subtitle: "Counter Top Hydrogen Rich Alkaline Water Ionizer",
     image: nmp9,
     link: "/nmp-11",
-    badge: "11 Plates",
     category: "Counter Top",
-    specs: ["ORP: Up to -1150*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1800 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "11" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -1150*" },
+      { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 2,72,000",
     priceNum: 272000,
   },
@@ -65,9 +89,15 @@ const allProducts = [
     subtitle: "Counter Top Twin Cell Hydrogen Water Ionizer",
     image: hybrid,
     link: "/hybrid-h2",
-    badge: "Twin Cell",
     category: "Counter Top",
-    specs: ["ORP: Up to -1250*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1850 PPB*"],
+    details: [
+      { label: "Electrode Type", value: "Twin Cell Technology" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -1250*" },
+      { label: "Hydrogen Range", value: "Up to 1850 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 3,67,000",
     priceNum: 367000,
   },
@@ -76,9 +106,15 @@ const allProducts = [
     subtitle: "Under Counter Hydrogen Rich Alkaline Water Ionizer",
     image: uce,
     link: "/uce-9-plus",
-    badge: "9 Plates",
     category: "Under Counter",
-    specs: ["ORP: Up to -1050*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1800 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "9" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -1050*" },
+      { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 3,25,000",
     priceNum: 325000,
   },
@@ -87,9 +123,15 @@ const allProducts = [
     subtitle: "Under Counter Hydrogen Rich Alkaline Water Ionizer",
     image: uce,
     link: "/uce-11-plus",
-    badge: "11 Plates",
     category: "Under Counter",
-    specs: ["ORP: Up to -1150*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1800 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "11" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -1150*" },
+      { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 3,46,000",
     priceNum: 346000,
   },
@@ -98,9 +140,15 @@ const allProducts = [
     subtitle: "Under Counter Hydrogen Rich Alkaline Water Ionizer",
     image: uce,
     link: "/uce-13-plus",
-    badge: "13 Plates",
     category: "Under Counter",
-    specs: ["ORP: Up to -1250*", "pH Range: 2.5 – 11.5*", "Hydrogen: Up to 1800 PPB*"],
+    details: [
+      { label: "Electrode/Plates", value: "13" },
+      { label: "pH Range", value: "2.5 - 11.5*" },
+      { label: "ORP Range", value: "Up to -1250*" },
+      { label: "Hydrogen Range", value: "Up to 1800 PPB*" },
+      { label: "Generates", value: "7 types of water levels" },
+      { label: "Warranty", value: "3 Years on ionizer & 15 years on electrodes/plates*" },
+    ],
     price: "₹ 3,67,000",
     priceNum: 367000,
   },
@@ -110,9 +158,12 @@ const allProducts = [
     subtitle: "Disinfection & Sterilization Soap",
     image: soap,
     link: "/soap",
-    badge: "Home Accessory",
     category: "Home Accessories",
-    specs: ["Weight: 80g", "High grade oil & natural glycerin", "Disinfection & sterilization"],
+    details: [
+      { label: "Weight", value: "80g" },
+      { label: "Ingredients", value: "High grade oil & natural glycerin" },
+      { label: "Use", value: "Disinfection & sterilization" },
+    ],
     price: "₹ 999",
     priceNum: 999,
   },
@@ -121,9 +172,12 @@ const allProducts = [
     subtitle: "Replacement Filter for Tyent Ionizers",
     image: filterImg,
     link: "/filter-1",
-    badge: "Home Accessory",
     category: "Home Accessories",
-    specs: [".01 Micron filtration", "NSF & EPA certified", "Dual filtration system"],
+    details: [
+      { label: "Filtration", value: ".01 Micron" },
+      { label: "Certification", value: "NSF & EPA certified" },
+      { label: "System", value: "Dual filtration" },
+    ],
     price: "Price on request",
     priceNum: 0,
   },
@@ -132,9 +186,12 @@ const allProducts = [
     subtitle: "Tyent Hydrogen Water Bottle",
     image: bottle,
     link: "/water-bottle-1",
-    badge: "Home Accessory",
     category: "Home Accessories",
-    specs: ["500ml capacity", "BPA-free material", "Portable design"],
+    details: [
+      { label: "Capacity", value: "500ml" },
+      { label: "Material", value: "BPA-free" },
+      { label: "Design", value: "Portable" },
+    ],
     comingSoon: true,
     priceNum: 0,
   },
@@ -144,9 +201,12 @@ const allProducts = [
     subtitle: "Electrolyzed Sterilizing Water Generator – TIE-N15WR",
     image: watergen,
     link: "/Sterilizing-water-generator",
-    badge: "Industrial",
     category: "Industrial",
-    specs: ["Electrolyzed sterilizing water", "Commercial & industrial use", "Size: 545(W) × 225(D) × 470(H) mm"],
+    details: [
+      { label: "Type", value: "Electrolyzed sterilizing water" },
+      { label: "Use", value: "Commercial & industrial" },
+      { label: "Size", value: "545(W) × 225(D) × 470(H) mm" },
+    ],
     price: "₹ 6,49,000",
     priceNum: 649000,
   },
@@ -188,20 +248,15 @@ export default function AllIonizers() {
       {/* Hero Banner */}
       <div className="collection-hero-banner">
         <img
-          src="/collections-hero.jpg"
-          alt="All Ionizers – Hydrogen rich water"
+          src="/collections-banner-desktop.webp"
+          alt="All Ionizers – Tyent India"
+          className="collection-banner-desktop"
         />
-        <div className="collection-hero-overlay" />
-        <Container className="collection-hero-content-wrapper">
-          <div className="collection-hero-content">
-            <div className="collection-hero-badges">
-              <span className="collection-badge-sale">Save 33% OFF</span>
-              <span className="collection-badge-event">Christmas in July Sale</span>
-            </div>
-            <h1>All Ionizers</h1>
-            <p>Hydrogen rich water, engineered for performance</p>
-          </div>
-        </Container>
+        <img
+          src="/collections-banner-mobile.webp"
+          alt="All Ionizers – Tyent India"
+          className="collection-banner-mobile"
+        />
       </div>
 
       <Container>
