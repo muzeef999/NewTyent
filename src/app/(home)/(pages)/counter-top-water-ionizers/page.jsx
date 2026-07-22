@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Col, Row, Container } from "react-bootstrap";
 
-import nmp5 from "@/asserts/nmp5-home.webp";
-import nmp9 from "@/asserts/nmp9-home.webp";
-import hybrid from "@/asserts/Hybrid.webp";
+import nmp5 from "@/asserts/nmp5-collection.webp";
+import nmp9 from "@/asserts/nmp9-collection.webp";
+import hybrid from "@/asserts/hybrid-collection.webp";
 
 export const metadata = {
   title: "Best Countertop Water Ionizer in India | Tyent NMP Range",
@@ -147,9 +147,9 @@ export default function CounterTopIonizers() {
                               style={{
                                 borderTopLeftRadius: "1rem",
                                 borderTopRightRadius: "1rem",
-                                padding: "20px",
-                                minHeight: "240px",
-                                maxHeight: "260px",
+                                padding: "24px",
+                                minHeight: "300px",
+                                maxHeight: "320px",
                               }}
                             >
                               <Image
@@ -159,7 +159,7 @@ export default function CounterTopIonizers() {
                                 style={{
                                   borderTopLeftRadius: "1rem",
                                   borderTopRightRadius: "1rem",
-                                  maxHeight: "220px",
+                                  maxHeight: "280px",
                                   objectFit: "contain",
                                 }}
                               />
@@ -202,9 +202,9 @@ export default function CounterTopIonizers() {
                               style={{
                                 borderTopLeftRadius: "1rem",
                                 borderTopRightRadius: "1rem",
-                                padding: "20px",
-                                minHeight: "240px",
-                                maxHeight: "260px",
+                                padding: "24px",
+                                minHeight: "300px",
+                                maxHeight: "320px",
                               }}
                             >
                               <Image
@@ -214,7 +214,7 @@ export default function CounterTopIonizers() {
                                 style={{
                                   borderTopLeftRadius: "1rem",
                                   borderTopRightRadius: "1rem",
-                                  maxHeight: "220px",
+                                  maxHeight: "280px",
                                   objectFit: "contain",
                                 }}
                               />

@@ -40,11 +40,14 @@
 .collection-hero-banner {
   width: 100%;
   line-height: 0;
+  overflow: hidden;
 }
 
 .collection-hero-banner img {
   width: 100%;
   height: auto;
+  margin-top: -80px;
+  margin-bottom: -80px;
 }
 
 .collection-hero-banner img.collection-banner-desktop {
@@ -56,6 +59,11 @@
 }
 
 @media (max-width: 768px) {
+  .collection-hero-banner img {
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
+
   .collection-hero-banner img.collection-banner-desktop {
     display: none;
   }
@@ -205,12 +213,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: 240px;
+  padding: 24px;
+  min-height: 300px;
 }
 
 .product-card-image img {
-  max-height: 220px;
+  max-height: 280px;
   object-fit: contain;
 }
 

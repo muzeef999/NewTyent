@@ -8,9 +8,9 @@ export default function ProductCard({ product }) {
         <Image
           src={product.image}
           alt={product.title}
-          width={300}
-          height={220}
-          style={{ objectFit: "contain", maxHeight: "220px", width: "auto" }}
+          width={350}
+          height={280}
+          style={{ objectFit: "contain", maxHeight: "280px", width: "auto" }}
         />
       </div>
       <div className="product-card-body">
