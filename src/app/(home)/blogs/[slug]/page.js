@@ -71,6 +71,37 @@ export default async function BlogPage({ params }) {
   };
   const authorKey = authorMap[post.username] || (post.authorSlug ? post.authorSlug : "dr-srinivasa-yadav-kandula");
 
+  // Interlinking map: slug -> [{ keyword, url }]
+  const interlinkMap = {
+    "the-tyent-advantage-why-your-family-deserves-the-ultimate-hydration": [
+      { keyword: "Why Tyent", url: "/why-tyent" },
+      { keyword: "basic filtration", url: "/filter-1" },
+      { keyword: "essential minerals like calcium and magnesium", url: "/7-types-of-Tyent-water" },
+    ],
+    "the-tyent-uce-13-plus-transforming-your-home-hydration": [
+      { keyword: "space-saving under-counter design", url: "/under-counter-water-ionizers" },
+      { keyword: "1-micron ultra-filtration", url: "/0.1-micron-filters" },
+      { keyword: "Platinum Lifetime Warranty", url: "/why-tyent" },
+      { keyword: "Best Alkaline Water Ionizer in India", url: "/under-counter-water-ionizers" },
+      { keyword: "space-saving under-the-counter design", url: "/under-counter-water-ionizers" },
+      { keyword: "Dual Filtration", url: "/0.1-micron-filters" },
+    ],
+  };
+
+  // Apply interlinking to blog content
+  let blogContent = post.content;
+  const interlinks = interlinkMap[slug];
+  if (interlinks) {
+    interlinks.forEach(({ keyword, url }) => {
+      const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const regex = new RegExp(`(?<!<a[^>]*>)(?<!<[^>]*)\\b(${escaped})\\b(?![^<]*<\\/a>)`, "i");
+      blogContent = blogContent.replace(
+        regex,
+        `<a href="${url}" style="color:#291495;text-decoration:underline;font-weight:600">$1</a>`
+      );
+    });
+  }
+
   return (
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
@@ -90,7 +121,7 @@ export default async function BlogPage({ params }) {
 
           <div
             className="mt-4"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: blogContent }}
           ></div>
 
           <AuthorCard authorKey={authorKey} />
