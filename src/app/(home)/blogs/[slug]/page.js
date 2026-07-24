@@ -105,7 +105,7 @@ export default async function BlogPage({ params }) {
             >
               
               <Link
-                href={`/blog/${blog.slug}`}
+                href={`/blogs/${blog.slug}`}
                 className="text-decoration-none">
               <div className="p-3">
                 <img
@@ -123,7 +123,7 @@ export default async function BlogPage({ params }) {
                     })}
                   </p>
                   <Link
-                    href={`/blog/${blog.slug}`}
+                    href={`/blogs/${blog.slug}`}
                     className="text-decoration-none"
                     aria-label={`Read more about ${blog.title}`}
                   ></Link>

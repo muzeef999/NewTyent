@@ -197,10 +197,25 @@ const TyentNMP5 = () => {
   };
 
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Tyent NMP-9",
+    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPRODUCTNMP1.ac2c6204.webp&w=3840&q=75",
+    "description": "Buy Tyent NMP-5 water ionizer India. 5 Japanese plates, hydrogen-rich alkaline water, easy countertop setup at an affordable price.",
+    "brand": {
+      "@type": "Brand",
+      "name": "tyent"
+    }
+  };
+
   return (
     <>
-    
-    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+
      {/* AMP Analytics Script */}
       <Head>
         <script

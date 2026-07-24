@@ -34,7 +34,27 @@ const Page = async () => {
   }
   const blogs = await res.json(); // Fetch blogs from API
 
-  const sortedBlogs = blogs.sort(
+  // Static blogs that are not in the API
+  const staticBlogs = [
+    {
+      slug: "best-alternative-to-kangen-water-machines-in-india",
+      title: "Best Alternative to Kangen Water Machines in India",
+      img: "/blog-kangen-alternative.webp",
+      username: "Tyent India",
+      createdAt: "2026-07-24T00:00:00.000Z",
+    },
+    {
+      slug: "common-alkaline-water-myths-indian-buyers-should-stop-believing",
+      title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
+      img: "/blog-kangen-alternative.webp",
+      username: "Tyent India",
+      createdAt: "2026-07-24T00:00:00.000Z",
+    },
+  ];
+
+  const allBlogs = [...staticBlogs, ...blogs];
+
+  const sortedBlogs = allBlogs.sort(
   (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
 );
 
