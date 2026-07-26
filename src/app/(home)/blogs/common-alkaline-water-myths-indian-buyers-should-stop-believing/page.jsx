@@ -15,7 +15,7 @@ export const metadata = {
     title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
     description:
       "Learn the truth behind common alkaline water myths in India. Compare ionizers, RO systems, bottled alkaline water, ORP, pH and Tyent technology.",
-    images: "/blog-kangen-alternative.webp",
+    images: "/blog-alkaline-myths.webp",
   },
 };
 
@@ -39,7 +39,7 @@ export default async function BlogPost() {
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
           <img
-            src="/blog-kangen-alternative.webp"
+            src="/blog-alkaline-myths.webp"
             alt="Common Alkaline Water Myths Indian Buyers Should Stop Believing"
             className="w-100 rounded-3 mb-3"
           />

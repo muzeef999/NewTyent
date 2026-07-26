@@ -46,7 +46,7 @@ const Page = async () => {
     {
       slug: "common-alkaline-water-myths-indian-buyers-should-stop-believing",
       title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
-      img: "/blog-kangen-alternative.webp",
+      img: "/blog-alkaline-myths.webp",
       username: "Tyent India",
       createdAt: "2026-07-24T00:00:00.000Z",
     },

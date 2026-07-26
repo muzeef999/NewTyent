@@ -88,7 +88,7 @@ export default async function BlogPost() {
                     <th>Kangen SD501</th>
                     <th>Tyent NMP-11</th>
                     <th>Tyent NMP-9</th>
-                    <th>AlkaViva Athena H2</th>
+                    <th>Tyent NMP-7</th>
                   </tr>
                 </thead>
                 <tbody>
