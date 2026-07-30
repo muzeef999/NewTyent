@@ -28,6 +28,10 @@ import goodDesign from "@/asserts/uce/good-desig.webp";
 import PRODUCTUCE1 from "@/asserts/uce/PRODUCTUCE-1.webp";
 import PRODUCTUCE2 from "@/asserts/uce/PRODUCTUCE-2.webp";
 import PRODUCTUCE3 from "@/asserts/uce/PRODUCTUCE-3.webp";
+import uceBlack from "@/asserts/uce-black.webp";
+import uceRosegold from "@/asserts/uce-rosegold.webp";
+import uceGold from "@/asserts/uce-gold.webp";
+import uceSilver from "@/asserts/uce-silver.webp";
 import { RxDownload } from "react-icons/rx";
 import Filter from "@/app/(home)/compoents/(products)/Filter";
 import list01 from "@/asserts/uce/list-01.webp";
@@ -136,7 +140,7 @@ const WaterFilterCards = ({ icon, title, content }) => {
 const page = () => {
   const products = [
     {
-      src: [PRODUCTUCE1, PRODUCTUCE2, PRODUCTUCE3],
+      src: [PRODUCTUCE1, PRODUCTUCE2, PRODUCTUCE3, uceBlack, uceRosegold, uceGold, uceSilver],
     },
   ];
 

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import watergen from "@/asserts/watergen/TIE_N20.webp";
+import watergen from "@/asserts/watergen/sterilizing-water-gen.png";
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import pro_01 from "@/asserts/watergen/pro_01.png";
 import pro_02 from "@/asserts/watergen/pro_02.png";

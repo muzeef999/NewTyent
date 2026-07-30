@@ -38,6 +38,10 @@ import plates_uce from "@/asserts/uce/plates_uce.webp"
 import PAST_UCE from "@/asserts/uce/PAST_UCE.webp"
 import TURBO_UCE from "@/asserts/uce/TURBO_UCE.webp"
 import ECO_UCE from "@/asserts/uce/ECO_UCE.webp"
+import uceBlack from "@/asserts/uce-black.webp";
+import uceRosegold from "@/asserts/uce-rosegold.webp";
+import uceGold from "@/asserts/uce-gold.webp";
+import uceSilver from "@/asserts/uce-silver.webp";
 import smpsplus from "@/asserts/whyTent/smpsplus.webp";
 import JOGDail from "@/asserts/uce/JOGDail.webp"
 import dynamic from "next/dynamic";
@@ -128,7 +132,7 @@ const WaterFilterCards = ({ icon, title, content }) => {
 const page = () => {
   const products = [
     {
-      src: [PRODUCTUCE1, PRODUCTUCE2],
+      src: [PRODUCTUCE1, PRODUCTUCE2, uceBlack, uceRosegold, uceGold, uceSilver],
     },
   ];
 

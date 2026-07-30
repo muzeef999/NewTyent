@@ -1,18 +1,43 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function ProductCard({ product }) {
+  const [activeColor, setActiveColor] = useState(null);
+
+  const hasColors = product.colorVariants && product.colorVariants.length > 0;
+  const currentImage = hasColors && activeColor !== null ? product.colorVariants[activeColor].image : product.image;
+
   const CardContent = (
     <div className={`product-card${product.comingSoon ? " coming-soon-overlay" : ""}`}>
       <div className="product-card-image">
         <Image
-          src={product.image}
+          src={currentImage}
           alt={product.title}
-          width={350}
-          height={280}
-          style={{ objectFit: "contain", maxHeight: "280px", width: "auto" }}
+          width={400}
+          height={300}
+          style={{ width: "100%", height: "auto" }}
         />
       </div>
+      {hasColors && (
+        <div className="product-color-swatches">
+          {product.colorVariants.map((variant, idx) => (
+            <button
+              key={idx}
+              className={`color-swatch${activeColor === idx ? " active" : ""}`}
+              style={{ background: variant.color }}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setActiveColor(idx);
+              }}
+              title={variant.name}
+            />
+          ))}
+        </div>
+      )}
       <div className="product-card-body">
         <h3 className="product-card-title">{product.title}</h3>
         {product.subtitle && (

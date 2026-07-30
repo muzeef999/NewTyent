@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import { Row, Col, Nav } from "react-bootstrap";
 import Image from "next/image";
-import nmp5 from "@/asserts/NMP5.webp";
-import nmp9 from "@/asserts/NMP9.webp";
+import nmp5 from "@/asserts/nmp5-collection.webp";
+import nmp9 from "@/asserts/nmp9-collection.webp";
 import uce from "@/asserts/Uce.webp";
-import hybrid from "@/asserts/Hybrid.webp";
-import soap from "@/asserts/soap/soap.png"
+import hybrid from "@/asserts/hybrid-collection.webp";
+import soap from "@/asserts/soap/tmx-soap-collection.png"
 import bottle from "@/asserts/bottle/bottle-500ml.jpg";
 import filter from "@/asserts/filter/filter2.webp"
-import TIEN20 from "@/asserts/watergen/TIE_N20.webp"
+import TIEN20 from "@/asserts/watergen/sterilizing-water-gen.png"
 import "../../style/Nmp.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -22,26 +22,31 @@ const ProductData = [
     category: "Models",
     products: [
       {
-        title: "NMP-5",
+        title: "NMP-7",
         image: nmp5,
-        link: "/nmp-5",
+        link: "/nmp-7",
       },
       {
-        title: "NMP-9",
+        title: "NMP-11",
         image: nmp9,
-        link: "/nmp-9",
+        link: "/nmp-11",
       },
       {
-        title: "UCE-9",
+        title: "UCE-13 Plus",
         image: uce,
-        link: "/uce-9-plus",
+        link: "/uce-13-plus",
       },
       {
-        title: "HYBRID H2",
+        title: "H2-Hybrid",
         image: hybrid,
         link: "/hybrid-h2",
       },
     ],
+  },
+  {
+    category: "All Collections",
+    link: "/collections/all-ionizers",
+    products: [],
   },
   {
     category: "Counter Top Water Ionizers",
@@ -119,16 +124,16 @@ const ProductData = [
       },
     ],
   },
-  {
-    category: "Filter",
-    products: [
-      {
-        title: "Filter",
-        image: filter,
-        link: "/filter-1",
-      },
-    ],
-  },
+  // {
+  //   category: "Filter",
+  //   products: [
+  //     {
+  //       title: "Filter",
+  //       image: filter,
+  //       link: "/filter-1",
+  //     },
+  //   ],
+  // },
   {
     category: "Sterilizing water generator",
     products: [
@@ -165,13 +170,24 @@ const ResponsiveProductPage = ({ isProductOpen }) => {
             <Nav className="flex-column">
               {ProductData.map((section) => (
                 <Nav.Item key={section.category}>
-                  <p style={{
-                        color: section.category === "Models" ? "#757575" :" ",fontSize:section.category === "Models" ? "25px":'' }}
-                    className="product-selection-filter p-0 m-0"
-                    onClick={() => setActiveCategory(section.category)}
-                  >
-                    {section.category}
-                  </p>
+                  {section.link ? (
+                    <Link
+                      href={section.link}
+                      className="product-selection-filter p-0 m-0"
+                      style={{ textDecoration: "none", color: "#291495", fontWeight: "600" }}
+                      onClick={(event) => sendData(event, section.link)}
+                    >
+                      {section.category}
+                    </Link>
+                  ) : (
+                    <p style={{
+                          color: section.category === "Models" ? "#757575" :" ",fontSize:section.category === "Models" ? "25px":'' }}
+                      className="product-selection-filter p-0 m-0"
+                      onClick={() => setActiveCategory(section.category)}
+                    >
+                      {section.category}
+                    </p>
+                  )}
                 </Nav.Item>
               ))}
             </Nav>

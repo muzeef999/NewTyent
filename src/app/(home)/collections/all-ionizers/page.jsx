@@ -10,10 +10,14 @@ import nmp5 from "@/asserts/nmp5-collection.webp";
 import nmp9 from "@/asserts/nmp9-collection.webp";
 import hybrid from "@/asserts/hybrid-collection.webp";
 import uce from "@/asserts/Uce.webp";
-import soap from "@/asserts/soap/soap.png";
+import soap from "@/asserts/soap/tmx-soap-collection.png";
 import filterImg from "@/asserts/filter/filter2.webp";
 import bottle from "@/asserts/bottle/bottle-500ml.jpg";
-import watergen from "@/asserts/watergen/TIE_N20.webp";
+import watergen from "@/asserts/watergen/sterilizing-water-gen.png";
+import uceBlack from "@/asserts/uce-black.webp";
+import uceRosegold from "@/asserts/uce-rosegold.webp";
+import uceGold from "@/asserts/uce-gold.webp";
+import uceSilver from "@/asserts/uce-silver.webp";
 
 const allProducts = [
   {
@@ -85,7 +89,7 @@ const allProducts = [
     priceNum: 272000,
   },
   {
-    title: "HYBRID H2",
+    title: "H2-Hybrid",
     subtitle: "Counter Top Twin Cell Hydrogen Water Ionizer",
     image: hybrid,
     link: "/hybrid-h2",
@@ -107,6 +111,12 @@ const allProducts = [
     image: uce,
     link: "/uce-9-plus",
     category: "Under Counter",
+    colorVariants: [
+      { name: "Black", color: "#1a1a1a", image: uceBlack },
+      { name: "Rose Gold", color: "#b76e79", image: uceRosegold },
+      { name: "Gold", color: "#c9a84c", image: uceGold },
+      { name: "Silver", color: "#c0c0c0", image: uceSilver },
+    ],
     details: [
       { label: "Electrode/Plates", value: "9" },
       { label: "pH Range", value: "2.5 - 11.5*" },
@@ -124,6 +134,12 @@ const allProducts = [
     image: uce,
     link: "/uce-11-plus",
     category: "Under Counter",
+    colorVariants: [
+      { name: "Black", color: "#1a1a1a", image: uceBlack },
+      { name: "Rose Gold", color: "#b76e79", image: uceRosegold },
+      { name: "Gold", color: "#c9a84c", image: uceGold },
+      { name: "Silver", color: "#c0c0c0", image: uceSilver },
+    ],
     details: [
       { label: "Electrode/Plates", value: "11" },
       { label: "pH Range", value: "2.5 - 11.5*" },
@@ -141,6 +157,12 @@ const allProducts = [
     image: uce,
     link: "/uce-13-plus",
     category: "Under Counter",
+    colorVariants: [
+      { name: "Black", color: "#1a1a1a", image: uceBlack },
+      { name: "Rose Gold", color: "#b76e79", image: uceRosegold },
+      { name: "Gold", color: "#c9a84c", image: uceGold },
+      { name: "Silver", color: "#c0c0c0", image: uceSilver },
+    ],
     details: [
       { label: "Electrode/Plates", value: "13" },
       { label: "pH Range", value: "2.5 - 11.5*" },
@@ -155,32 +177,35 @@ const allProducts = [
   // Home Accessories
   {
     title: "TM-X Beauty Soap",
-    subtitle: "Disinfection & Sterilization Soap",
+    subtitle: "TMX Fermentation Soap - Pomegranate",
     image: soap,
     link: "/soap",
     category: "Home Accessories",
     details: [
-      { label: "Weight", value: "80g" },
-      { label: "Ingredients", value: "High grade oil & natural glycerin" },
-      { label: "Use", value: "Disinfection & sterilization" },
+      { label: "Net Weight", value: "80 g" },
+      { label: "Key Ingredients", value: "Pomegranate Extract, Herbal Enzymes, Honey, Olive Oil, Hyaluronic Acid" },
+      { label: "Benefit", value: "Deeply moisturizes & nourishes the skin" },
+      { label: "Skin Care", value: "Helps reduce visible signs of aging" },
+      { label: "Cleansing", value: "Gently cleanses & refreshes the skin" },
+      { label: "Result", value: "Promotes a youthful, radiant complexion" },
     ],
     price: "₹ 999",
     priceNum: 999,
   },
-  {
-    title: "Tyent Filter",
-    subtitle: "Replacement Filter for Tyent Ionizers",
-    image: filterImg,
-    link: "/filter-1",
-    category: "Home Accessories",
-    details: [
-      { label: "Filtration", value: ".01 Micron" },
-      { label: "Certification", value: "NSF & EPA certified" },
-      { label: "System", value: "Dual filtration" },
-    ],
-    price: "Price on request",
-    priceNum: 0,
-  },
+  // {
+  //   title: "Tyent Filter",
+  //   subtitle: "Replacement Filter for Tyent Ionizers",
+  //   image: filterImg,
+  //   link: "/filter-1",
+  //   category: "Home Accessories",
+  //   details: [
+  //     { label: "Filtration", value: ".01 Micron" },
+  //     { label: "Certification", value: "NSF & EPA certified" },
+  //     { label: "System", value: "Dual filtration" },
+  //   ],
+  //   price: "Price on request",
+  //   priceNum: 0,
+  // },
   {
     title: "Water Bottle",
     subtitle: "Tyent Hydrogen Water Bottle",
