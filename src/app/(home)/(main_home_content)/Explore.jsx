@@ -10,7 +10,7 @@ import "@/app/style/AppBar.css"
 const products = [
   {
     name: "Tyent NMP-7",
-    img: "/explore/nmp-5.png",
+    img: "/explore/nmp5-collection.webp",
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -950*",
@@ -20,7 +20,7 @@ const products = [
   },
   {
     name: "Tyent NMP-11",
-    img: "/home/nmp-9.png",
+    img: "/explore/nmp9-collection.webp",
     desc: "Advanced top end water ionizer",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1150*",
@@ -30,7 +30,7 @@ const products = [
   },
   {
     name: "Tyent UCE-13 PLUS",
-    img: "/explore/uceColor1.png",
+    img: "/explore/uce13-collection.webp",
     desc: "Revolutionary water ionizer for modern kitchens",
     ph: "pH range: 11.5 - 2.5*",
     orp: "ORP range: upto -1250*",
@@ -57,9 +57,10 @@ const Explore = () => {
                   <Image
                     src={item.img}
                     alt={item.name}
-                    width={350}
+                    width={400}
                     height={300}
                     className="product-img"
+                    style={{ objectFit: "cover", width: "100%", height: "300px" }}
                   />
                 </div>
 

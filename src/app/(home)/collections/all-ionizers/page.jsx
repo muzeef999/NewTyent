@@ -108,7 +108,7 @@ const allProducts = [
   {
     title: "UCE-9 Plus",
     subtitle: "Under Counter Hydrogen Rich Alkaline Water Ionizer",
-    image: uce,
+    image: uceBlack,
     link: "/uce-9-plus",
     category: "Under Counter",
     colorVariants: [
@@ -131,7 +131,7 @@ const allProducts = [
   {
     title: "UCE-11 Plus",
     subtitle: "Under Counter Hydrogen Rich Alkaline Water Ionizer",
-    image: uce,
+    image: uceBlack,
     link: "/uce-11-plus",
     category: "Under Counter",
     colorVariants: [
@@ -154,7 +154,7 @@ const allProducts = [
   {
     title: "UCE-13 Plus",
     subtitle: "Under Counter Hydrogen Rich Alkaline Water Ionizer",
-    image: uce,
+    image: uceBlack,
     link: "/uce-13-plus",
     category: "Under Counter",
     colorVariants: [
