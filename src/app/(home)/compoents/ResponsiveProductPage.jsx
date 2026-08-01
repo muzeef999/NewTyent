@@ -4,7 +4,7 @@ import { Row, Col, Nav } from "react-bootstrap";
 import Image from "next/image";
 import nmp5 from "@/asserts/nmp5-collection.webp";
 import nmp9 from "@/asserts/nmp9-collection.webp";
-import uce from "@/asserts/Uce.webp";
+import uce from "@/asserts/uce-black.webp";
 import hybrid from "@/asserts/hybrid-collection.webp";
 import soap from "@/asserts/soap/tmx-soap-collection.png"
 import bottle from "@/asserts/bottle/bottle-500ml.jpg";
