@@ -37,6 +37,20 @@ const Page = async () => {
   // Static blogs that are not in the API
   const staticBlogs = [
     {
+      slug: "tyent-uce-plus-series-luxury-water-ionizer-modern-homes",
+      title: "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
+      img: "/blog-uce-plus-luxury.webp",
+      username: "Tyent India",
+      createdAt: "2026-08-01T00:00:00.000Z",
+    },
+    {
+      slug: "ro-water-purifier-vs-water-ionizer",
+      title: "The End of the RO Water Purifier? Why Water Ionizers Are Becoming the Future of Healthy Living",
+      img: "/blog-ro-vs-ionizer.jpg",
+      username: "Tyent India",
+      createdAt: "2026-08-01T00:00:00.000Z",
+    },
+    {
       slug: "best-alternative-to-kangen-water-machines-in-india",
       title: "Best Alternative to Kangen Water Machines in India",
       img: "/blog-kangen-alternative.webp",
