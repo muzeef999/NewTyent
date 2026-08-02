@@ -27,15 +27,8 @@ export async function generateMetadata() {
 
 const Page = async () => {
   try{
-  const res = await fetch(`${apiUrl}/api/blog`);
-  if (!res.ok) {
-    console.error(`Error fetching blogs: ${res.status} ${res.statusText}`);
-    return <p>No blogs found.</p>;
-  }
-  const blogs = await res.json(); // Fetch blogs from API
-
-  // Static blogs that are not in the API
-  const staticBlogs = [
+  // Static blogs only (API blogs removed)
+  const sortedBlogs = [
     {
       slug: "tyent-uce-plus-series-luxury-water-ionizer-modern-homes",
       title: "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
@@ -65,12 +58,6 @@ const Page = async () => {
       createdAt: "2026-07-24T00:00:00.000Z",
     },
   ];
-
-  const allBlogs = [...staticBlogs, ...blogs];
-
-  const sortedBlogs = allBlogs.sort(
-  (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-);
 
   const blogsPerPage = 6;
 
