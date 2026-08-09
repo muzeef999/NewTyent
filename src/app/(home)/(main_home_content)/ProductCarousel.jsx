@@ -106,8 +106,9 @@ const ProductCarousel = () => {
       ph: "2.5 - 11.5*",
       orp: "-1250*",
       hydrogen: "upto 1800ppb*",
-      image: "/home/nmp-9.png",
-      buttonText: "Shop Now"
+      image: "/home/nmp-9.webp",
+      buttonText: "Shop Now",
+      link: "/counter-top-water-ionizers"
     },
     {
       id: 2,
@@ -120,7 +121,8 @@ const ProductCarousel = () => {
       orp: "-1250*",
       hydrogen: "upto 1800ppb*",
       image: "/home/ucebg1.png",
-      buttonText: "Shop Now"
+      buttonText: "Shop Now",
+      link: "/under-counter-water-ionizers"
     },
     {
       id: 3,
@@ -131,8 +133,9 @@ const ProductCarousel = () => {
       ph: "2.5 - 11.5*",
       orp: "-1150*",
       hydrogen: "upto 1600ppb*",
-      image: "/home/our-story1.png",
-      buttonText: "Shop Now"
+      image: "/home/our-story1.webp",
+      buttonText: "Shop Now",
+      link: "/hybrid-h2"
     }
   ];
 
@@ -218,12 +221,13 @@ const ProductCarousel = () => {
                       *Depends on input water quality and flow rate.
                     </p>
 
-                    <button
+                    <a
+                      href={product.link}
                       className="btn btn-primary"
-                      style={buttonStyle}
+                      style={{ ...buttonStyle, textDecoration: "none" }}
                     >
                       {product.buttonText} <span>{">"}</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
 

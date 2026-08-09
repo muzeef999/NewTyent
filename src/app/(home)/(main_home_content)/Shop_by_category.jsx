@@ -8,19 +8,19 @@ const categories = [
   {
     title: "Above-counter Ionizers",
     desc: "Sleek & modern design, easy-to-install",
-    img: "/home/nmp-9.png",
+    img: "/home/nmp-9.webp",
     link: "/counter-top-water-ionizers",
   },
   {
     title: "Under the counter ionizers",
     desc: "Ultra premium and aesthetically designed",
-    img: "/explore/uceColor1.png",
+    img: "/explore/uceColor1.webp",
     link: "/under-counter-water-ionizers",
   },
   {
     title: "Filters",
     desc: "High-quality replacement filters",
-    img: "/home/filter.png",
+    img: "/home/filter.webp",
     link: "/0.1-micron-filters",
   },
 ];

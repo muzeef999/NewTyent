@@ -3,14 +3,31 @@ import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import AuthorCard from "../[slug]/AuthorCard";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
+const recentBlogsData = [
+  {
+    slug: "tyent-uce-plus-series-luxury-water-ionizer-modern-homes",
+    title: "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
+    img: "/blog-uce-plus-luxury.webp",
+    createdAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    slug: "ro-water-purifier-vs-water-ionizer",
+    title: "The End of the RO Water Purifier? Why Water Ionizers Are Becoming the Future of Healthy Living",
+    img: "/blog-ro-vs-ionizer.jpg",
+    createdAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    slug: "common-alkaline-water-myths-indian-buyers-should-stop-believing",
+    title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
+    img: "/blog-alkaline-myths.webp",
+    createdAt: "2026-07-24T00:00:00.000Z",
+  },
+];
 
 export const metadata = {
   title: "Best Alternative to Kangen Water Machines in India | Tyent",
   description:
     "Compare the best alternatives to Kangen water machines in India. Discover Tyent NMP-11, NMP-9 and NMP-7 with better ORP, pH range, pricing and service.",
-  keywords:
-    "Kangen water machine alternative India, Tyent NMP-11, Tyent NMP-9, alkaline water ionizer India, best water ionizer, Kangen vs Tyent",
   openGraph: {
     title: "Best Alternative to Kangen Water Machines in India | Tyent",
     description:
@@ -22,14 +39,7 @@ export const metadata = {
 const postDate = "2026-07-24T00:00:00.000Z";
 
 export default async function BlogPost() {
-  // Fetch recent blogs for sidebar
-  let recentBlogs = [];
-  try {
-    const recentRes = await fetch(`${apiUrl}/api/blog?limit=5`);
-    if (recentRes.ok) {
-      recentBlogs = await recentRes.json();
-    }
-  } catch (e) {}
+  const recentBlogs = recentBlogsData;
 
   const formattedTime = formatDistanceToNow(new Date(postDate), {
     addSuffix: true,

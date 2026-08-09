@@ -44,7 +44,6 @@ const Banner = dynamic(
 export const metadata = {
   title: "Tyent NMP-9 vs Kangen K8 | Best 9 Plate Ionizer India",
   description: "Tyent NMP-9 water ionizer India — 9 Japanese plates, hydrogen-rich alkaline water. Compare with Kangen K8 and choose smarter.",
- keywords:"Tyent NMP-9, alkaline water ionizer, hydrogen water, 9 plate ionizer, ORP water machine, Kangen alternative, ionized water purifier, 11.5 pH water, SMPS PLUS, Japanese water tech"
 }; 
 
 const TyentNMP5 = () => {

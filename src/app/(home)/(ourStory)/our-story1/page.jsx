@@ -14,7 +14,6 @@ import Head from 'next/head';
 export const metadata = {
   title: "Tyent India: Global Leader in Water Ionizers",
   description: "Since 2016, Tyent India has offered the best water ionizer in India, committed to health and wellness with advanced Japanese technology.",
-  keywords:"Alkaline water ionizer, hydrogen water India, Japanese water tech, Tyent partner, TAEYOUNG E&T"
 };
 
 

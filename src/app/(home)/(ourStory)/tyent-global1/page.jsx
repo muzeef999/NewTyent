@@ -15,7 +15,6 @@ import Head from "next/head";
 export const metadata = {
   title: "Tyent India: A Global Water Ionizer Leader",
   description: "Tyent is a global leader in water ionization. Learn about our R&D, advanced Japanese technology, and commitment to quality in India.",
- keywords:"Tyent India, water ionizer innovation, core values, sustainable hydration, patented ionizers,R&D water tech, global water brand, customer satisfaction, eco hydration, Medilight Tyent"
 };
 
 

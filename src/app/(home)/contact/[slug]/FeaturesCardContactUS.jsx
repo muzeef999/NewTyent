@@ -5,7 +5,7 @@ const features = [
   {
     link: "/solid-hybrid-mesh-plates",
     title: "Solid Hybrid Mesh Plate Technology",
-    img: "/contactIndetail/solidHybridMesh.png",
+    img: "/contactIndetail/solidHybridMesh.webp",
     desc: "Tyent uses industry-leading Solid Hybrid Mesh Plates made from 99.9% platinum-coated  titanium. This advanced design offers This unique fusion of solid plate with mesh plate design ensures superior hydration  performance unmatched by ordinary ionizers.",
     points: [
       "Japanese technology",
@@ -67,7 +67,7 @@ const features = [
   {
     link: "/why-tyent",
     title: "Premium Ionizers at Affordable Prices",
-    img: "/contactIndetail/Affordable.png",
+    img: "/contactIndetail/Affordable.webp",
     desc: "Experience world-class chemical free japaness technology technology with Tyent’s competitive, customer-friendly pricing-making premium health water accessible to every Indian home.",
     points: [
       "No hidden commissions",

@@ -56,7 +56,6 @@ const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 export const metadata = {
   title: "Benefits of Alkaline Water | Why Choose Tyent Water Ionizers?",
   description: "Discover the health benefits of drinking ionized alkaline water with Tyent water ionizers. Experience superior hydration, increased energy, and overall wellness with hydrogen-rich water.",
-  keywords: "benefits of ionized alkaline water, health benefits of ionized alkaline water, health benefits of drinking Enagic Kangen water, benefits of Tyent water ionizer",
 };
 
 

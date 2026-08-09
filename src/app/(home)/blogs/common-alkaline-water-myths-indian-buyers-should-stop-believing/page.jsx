@@ -3,14 +3,31 @@ import { Col, Row } from "react-bootstrap";
 import Link from "next/link";
 import AuthorCard from "../[slug]/AuthorCard";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
+const recentBlogsData = [
+  {
+    slug: "tyent-uce-plus-series-luxury-water-ionizer-modern-homes",
+    title: "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
+    img: "/blog-uce-plus-luxury.webp",
+    createdAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    slug: "ro-water-purifier-vs-water-ionizer",
+    title: "The End of the RO Water Purifier? Why Water Ionizers Are Becoming the Future of Healthy Living",
+    img: "/blog-ro-vs-ionizer.jpg",
+    createdAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    slug: "best-alternative-to-kangen-water-machines-in-india",
+    title: "Best Alternative to Kangen Water Machines in India",
+    img: "/blog-kangen-alternative.webp",
+    createdAt: "2026-07-24T00:00:00.000Z",
+  },
+];
 
 export const metadata = {
   title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
   description:
     "Learn the truth behind common alkaline water myths in India. Compare ionizers, RO systems, bottled alkaline water, ORP, pH and Tyent technology.",
-  keywords:
-    "alkaline water myths India, water ionizer vs alkaline filter, ORP alkaline water, Tyent ionizer India, ionized water benefits",
   openGraph: {
     title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
     description:
@@ -22,13 +39,7 @@ export const metadata = {
 const postDate = "2026-07-24T00:00:00.000Z";
 
 export default async function BlogPost() {
-  let recentBlogs = [];
-  try {
-    const recentRes = await fetch(`${apiUrl}/api/blog?limit=5`);
-    if (recentRes.ok) {
-      recentBlogs = await recentRes.json();
-    }
-  } catch (e) {}
+  const recentBlogs = recentBlogsData;
 
   const formattedTime = formatDistanceToNow(new Date(postDate), {
     addSuffix: true,

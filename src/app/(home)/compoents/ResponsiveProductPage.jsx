@@ -146,6 +146,16 @@ const ProductData = [
   },
 ];
 
+const categoryViewMoreLinks = {
+  "Models": "/collections/all-ionizers",
+  "Counter Top Water Ionizers": "/counter-top-water-ionizers",
+  "Under Counter water Ionizers": "/under-counter-water-ionizers",
+  "Tyent H2-Hybrid": "/hybrid-h2",
+  "TM-X Beauty Soap": "/soap",
+  "Water Bottle": "/water-bottle-1",
+  "Sterilizing water generator": "/Sterilizing-water-generator",
+};
+
 const ResponsiveProductPage = ({ isProductOpen }) => {
   const [activeCategory, setActiveCategory] = useState(ProductData[0].category);
 
@@ -200,7 +210,7 @@ const ResponsiveProductPage = ({ isProductOpen }) => {
           {ProductData.map(
             (section, idx) =>
               activeCategory === section.category && (
-                <div key={idx} className="mb-5">
+                <div key={idx} className="mb-3">
                   <Row>
                     {section.products.map((product, index) => (
                       <Col key={index} xs={12} sm={6} md={4} lg={3}>
@@ -238,9 +248,31 @@ const ResponsiveProductPage = ({ isProductOpen }) => {
                         </div>
                       </Link>
                     </Col>
-                    
+
                     ))}
                   </Row>
+                  {categoryViewMoreLinks[section.category] && (
+                    <Row>
+                      <Col xs={12} className="d-flex justify-content-start ps-2">
+                        <Link
+                          href={categoryViewMoreLinks[section.category]}
+                          onClick={(event) => sendData(event, categoryViewMoreLinks[section.category])}
+                          style={{
+                            textDecoration: "none",
+                            color: "#fff",
+                            backgroundColor: "#291495",
+                            fontWeight: "500",
+                            fontSize: "13px",
+                            padding: "6px 18px",
+                            borderRadius: "20px",
+                            display: "inline-block",
+                          }}
+                        >
+                          View More →
+                        </Link>
+                      </Col>
+                    </Row>
+                  )}
                 </div>
               )
           )}

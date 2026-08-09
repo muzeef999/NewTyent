@@ -28,8 +28,6 @@ export const metadata = {
     "Tyent vs Kangen Water Ionizer – Which Is Better in India?",
   description:
     "Compare Tyent vs Kangen water ionizer on price, plates, pH range, and warranty. See why Indians are choosing Tyent.",
-  keywords:
-    "tyent water ionizer vs Enagic Kangen, tyent water vs Enagic Kangen, tyent vs Enagic Kangen",
 };
 
 const tableData = [

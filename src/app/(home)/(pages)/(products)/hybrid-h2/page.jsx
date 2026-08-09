@@ -33,7 +33,6 @@ const Banner = dynamic(
 export const metadata = {
   title: "Tyent Hybrid H2 Water Ionizer – Hydrogen Water India",
   description: "Tyent Hybrid H2 water ionizer India — advanced hydrogen water generator with superior ORP and antioxidant output. Explore today.",
-  keywords: "Tyent H2-Hybrid, twin cell ionizer, alkaline water ionizer, hydrogen water machine, 1850 PPB hydrogen, Kangen water alternative, 11.5 pH water, chemical-free ionizer, SMPS Plus technology, Japanese water ionizer",
 };
 
 

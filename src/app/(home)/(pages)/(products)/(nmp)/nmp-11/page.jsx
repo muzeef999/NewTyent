@@ -45,7 +45,6 @@ const Banner = dynamic(
 export const metadata = {
   title: "Tyent NMP-11 Water Ionizer – 11 Plate Premium Ionizer India",
   description: "Buy Tyent NMP-11 water ionizer India. 11 Japanese plates, maximum pH range, premium hydrogen-rich water. Top countertop ionizer.",
-  keywords: "Tyent NMP-11, alkaline water ionizer, hydrogen water, 11 plate ionizer, ORP water machine, Kangen alternative, water ionizer India, 11.5 pH water, SMPS PLUS, Japanese water ionizer"
 }; 
 
 const TyentNMP5 = () => {

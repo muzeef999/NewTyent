@@ -47,7 +47,7 @@ const Slider = () => {
             Experience the healthiest hydrogen water on earth
           </p>
 
-          <button className="shop-btn">Shop the collection</button>
+          <a href="/collections/all-ionizers" className="shop-btn" style={{ textDecoration: "none" }}>Shop the collection</a>
         </div>
 
         <div className="responsive-container">
@@ -78,7 +78,7 @@ const Slider = () => {
             Experience the healthiest <br />hydrogen water on earth
           </p>
 
-          <button className="shop-btn">Shop the collection</button>
+          <a href="/collections/all-ionizers" className="shop-btn" style={{ textDecoration: "none" }}>Shop the collection</a>
         </div>
 
         <div className="responsive-container">

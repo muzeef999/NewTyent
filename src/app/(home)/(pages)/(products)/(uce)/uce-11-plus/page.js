@@ -58,7 +58,6 @@ export const metadata = {
   title: "Tyent UCE-11 Plus – 11 Plate Under Sink Ionizer India",
   description:
     "Buy Tyent UCE-11 Plus India. 11 Japanese plates, under-counter design, Premium installation support pan-India.",
-    keywords:"Tyent UCE-11 Plus, 11 plate ionizer, hydrogen water ionizer, alkaline ionizer, luxury kitchen water filter, under counter ionizer, Kangen water machine, 11.5 pH ionizer, SMPS PLUS, Japanese ionizer"
 };
 
 const data = [

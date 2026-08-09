@@ -42,7 +42,6 @@ const Banner = dynamic(
 export const metadata = {
   title: "Tyent NMP-7 Water Ionizer – 7 Plate Alkaline Machine India",
   description: "Tyent NMP-7 water ionizer India — 7 Japanese plates, hydrogen-rich alkaline water, ideal for families. Best value countertop ionizer.",
-  keywords:"Tyent NMP-7, water ionizer India, hydrogen water, alkaline ionizer, ORP water, 11.5 pH water, Japanese water plates, Tyent vs Kangen, eco hydration, antioxidant water"
 }; 
 
 const TyentNMP5 = () => {

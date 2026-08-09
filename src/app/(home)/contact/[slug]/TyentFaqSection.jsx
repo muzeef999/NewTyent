@@ -84,7 +84,7 @@ const TyentFaqSection = () => {
             </Link>
             <h3 className="demo-title">Book a Free Demo</h3>
             <p className="demo-copy">Your Healthy Upgrade is just a call away !</p>
-            <Button href="#book-demo" className="demo-button">
+            <Button href="/contact" className="demo-button">
               Book a Free Call
               <span className="demo-button-arrow" aria-hidden="true">
                 {">"}

@@ -8,14 +8,14 @@ import { SlGraduation } from "react-icons/sl";
 
 const OurStory = () => {
   const management = [
-    { name: 'Dr. Srinivas Yadav Kandula', role: 'Managing Director', image: '/management/Manager.png' },
-    { name: 'Dr. Sree Suma Goriparthy', role: 'Chairman', image: '/management/Manager.png' },
-    { name: 'A. Santosh Kumar', role: 'Finance Director', image: '/management/Manager.png' },
-    { name: 'G. Sindhumala,', role: 'CFO', image: '/management/Manager.png' },
-    { name: 'E. Sravan chowdary', role: 'Director of sales and marketing', image: '/management/Manager.png' },
-    { name: 'MD. Kurdhus', role: 'Advicer', image: '/management/Manager.png' },
-    { name: 'Sateesh Kumar', role: 'Head of Digial marketing', image: '/management/Manager.png' },
-    { name: 'Shaikmuzeef', role: 'Web Developer', image: '/management/Manager.png' },
+    { name: 'Dr. Srinivas Yadav Kandula', role: 'Managing Director', image: '/management/dr-srinivasa-yadav.webp' },
+    { name: 'Dr. Sree Suma Goriparthy', role: 'Chairman', image: '/management/dr-sree-suma.webp' },
+    // { name: 'A. Santosh Kumar', role: 'Finance Director', image: '/management/Manager.png' },
+    { name: 'G. Sindhumala', role: 'CFO', image: '/management/sindhumala.jpeg' },
+    { name: 'E. Sravan Chowdary', role: 'Director of Sales and Marketing', image: '/management/sravan-chowdary.jpeg' },
+    // { name: 'MD. Kurdhus', role: 'Advicer', image: '/management/Manager.png' },
+    // { name: 'Sateesh Kumar', role: 'Head of Digial marketing', image: '/management/Manager.png' },
+    // { name: 'Shaikmuzeef', role: 'Web Developer', image: '/management/Manager.png' },
   ];
 
   const galleryImages = [

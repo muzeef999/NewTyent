@@ -27,7 +27,7 @@ const CompareSection = () => {
           <div className="compare-card">
             <div className="compare-card-image-wrap">
               <Image
-                src="/tyentvsengic/tyent01.jpeg"
+                src="/tyentvsengic/tyent01.webp"
                 alt="product"
                 width={600}
                 height={300}
@@ -53,7 +53,7 @@ const CompareSection = () => {
           <div className="compare-card">
             <div className="compare-card-image-wrap">
               <Image
-                src="/tyentvsengic/enagic.jpeg"
+                src="/tyentvsengic/enagic.webp"
                 alt="product"
                 width={600}
                 height={300}

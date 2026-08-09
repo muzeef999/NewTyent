@@ -5,8 +5,6 @@ export const metadata = {
   title: "Tyent India Videos | Water Ionizer Demos, Testimonials & More",
   description:
     "Watch Tyent India videos — product demos, customer testimonials, health tips, and comparisons. Discover the power of hydrogen-rich alkaline water.",
-  keywords:
-    "Tyent India videos, water ionizer demo, Tyent testimonials, alkaline water benefits, hydrogen water, Tyent NMP, Tyent UCE",
 };
 
 const videos = [

@@ -60,8 +60,7 @@ export const metadata = {
   title: "Tyent UCE-13 Plus – 13 Plate Flagship Ionizer India",
   description:
     "Buy Tyent UCE-13 Plus India. 13 Japanese plates, maximum pH range, medical-grade hydrogen-rich water. India's most powerful ionizer.",
-keywords:"Tyent UCE-13 Plus, 13 plate ionizer, hydrogen water ionizer, luxury water ionizer, alkaline ionizer, under sink ionizer, SMPS Plus, Kangen water alternative, 11.5 pH machine,Japanese ionizer"
-  };
+};
 
 const data = [
   {

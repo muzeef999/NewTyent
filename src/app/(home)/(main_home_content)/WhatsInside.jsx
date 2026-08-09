@@ -65,7 +65,7 @@ const WhatsInside = () => {
         <div className="col-lg-4 text-center my-4 my-lg-0">
           <div className="circle-image-wrapper">
             <Image
-              src="/explore/round-glass.png"
+              src="/explore/round-glass.webp"
               alt="water"
               width={420}
               height={420}
@@ -93,7 +93,7 @@ const WhatsInside = () => {
             return (
               <div key={i} className="center-glass-mobile">
                 <Image
-                  src="/explore/round-glass.png"
+                  src="/explore/round-glass.webp"
                   alt="water"
                   width={260}
                   height={260}

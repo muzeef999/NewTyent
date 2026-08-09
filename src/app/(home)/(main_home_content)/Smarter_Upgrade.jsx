@@ -8,7 +8,7 @@ const features = [
   {
     link: "/solid-hybrid-mesh-plates",
     title: "Solid Hybrid Mesh Plate Technology",
-    img: "/contactIndetail/solidHybridMesh.png",
+    img: "/contactIndetail/solidHybridMesh.webp",
     desc: "Tyent water ionizers feature Japanese Solid Hybrid Mesh Plates from Permelac (est. 1967), providing greater surface area, durability, higher - ORP, and more molecular hydrogen. Built to last over 45 years and backed by a 15-year warranty.",
   },
   {
@@ -20,7 +20,7 @@ const features = [
   {
     link: "/0.1-micron-filters",
     title: "Turbo Mode",
-    img: "/contactIndetail/Affordable.png",
+    img: "/contactIndetail/Affordable.webp",
     desc: "Turbo Mode (11.5 pH) delivers high-performance water ideal for cleaning fruits and vegetables by effectively removing pesticides, insecticides, wax, and color coatings. Tyent produces this naturally - without chemicals, salts, or enhancers.",
   },
 ];

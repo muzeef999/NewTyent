@@ -8,6 +8,37 @@ import AuthorCard from "./AuthorCard";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://tyent.co.in";
 
+const staticRecentBlogs = [
+  {
+    id: "static-1",
+    slug: "tyent-uce-plus-series-luxury-water-ionizer-modern-homes",
+    title: "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
+    img: "/blog-uce-plus-luxury.webp",
+    createdAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    id: "static-2",
+    slug: "ro-water-purifier-vs-water-ionizer",
+    title: "The End of the RO Water Purifier? Why Water Ionizers Are Becoming the Future of Healthy Living",
+    img: "/blog-ro-vs-ionizer.jpg",
+    createdAt: "2026-08-01T00:00:00.000Z",
+  },
+  {
+    id: "static-3",
+    slug: "best-alternative-to-kangen-water-machines-in-india",
+    title: "Best Alternative to Kangen Water Machines in India",
+    img: "/blog-kangen-alternative.webp",
+    createdAt: "2026-07-24T00:00:00.000Z",
+  },
+  {
+    id: "static-4",
+    slug: "common-alkaline-water-myths-indian-buyers-should-stop-believing",
+    title: "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
+    img: "/blog-alkaline-myths.webp",
+    createdAt: "2026-07-24T00:00:00.000Z",
+  },
+];
+
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const res = await fetch(`${apiUrl}/api/blog/${slug}`);
@@ -24,7 +55,6 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.metaDescription,
-    keywords: post.metaKeywords,
     openGraph: {
       title: post.title,
       description: post.metaDescription,
@@ -44,17 +74,14 @@ export async function generateMetadata({ params }) {
 export default async function BlogPage({ params }) {
   const { slug } = params;
 
-  const [postRes, recentRes] = await Promise.all([
-    fetch(`${apiUrl}/api/blog/${slug}`),
-    fetch(`${apiUrl}/api/blog?limit=5`),
-  ]);
+  const postRes = await fetch(`${apiUrl}/api/blog/${slug}`);
 
   if (!postRes.ok) {
     notFound();
   }
 
   const post = await postRes.json();
-  const recentBlogs = recentRes.ok ? await recentRes.json() : [];
+  const recentBlogs = staticRecentBlogs.filter((b) => b.slug !== slug);
 
   const formattedTime = formatDistanceToNow(new Date(post.createdAt), {
     addSuffix: true,
