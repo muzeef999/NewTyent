@@ -1083,6 +1083,117 @@ const page = () => {
       <div className="section-spacing">
         <Filter />
       </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Tyent UCE-13 Plus – 13-Plate Flagship Water Ionizer India
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Enjoy high-quality alkaline water from our Tyent UCE-13 plus water ionizer in India that's designed for better performance, advanced Japanese technology and superior filtration. It is designed especially for modern homes, providing a supply of alkaline water and further enhancing the generation of hydrogen, with an easy-to-use operation, professional installation and reliable after-sales services.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Tyent UCE-13 Plus – The Most Powerful Ionizer in India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Our Tyent flagship water ionizer in India is designed for those who demand the best performance every day. It is a technologically advanced machine that provides stable alkaline water, increased hydrogen production and operation consistency. The Tyent UCE-13 plus water ionizer India is an elegant, intelligent and trusted Japanese-designed solution for modern life for better hydration.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>13-Plate Japanese Technology – Unmatched pH & ORP Performance</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The 13-plate water ionizer India uses the highly advanced Japanese electrode technology to achieve optimum electrolysis efficiency, along with impressive pH flexibility and excellent ORP performance. The design of its plates will enable it to generate uniform alkaline water and acidic water for many uses in daily life. This is the best 13-plate water ionizer in India, designed to operate with stability, guarantee performance, and ensure longevity for hardworking homes.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, Hydrogen Output & Filtration – UCE-13 Plus Specs</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-13 Plus has a broad pH range, powerful hydrogen generation and advanced filtration to enhance water quality prior to ionization. It has an intelligent filtering mechanism to reduce common impurities while ensuring optimal performance. It is an under-sink 13-plate alkaline ionizer in India that provides purified alkaline mineral water through a highly effective system to cater to the daily requirement for water.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Key Features of the Tyent UCE-13 Plus</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "8px" }}>
+            Key highlights include:
+          </p>
+          <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
+            <li>High-quality Japanese 13-plate electrode technology</li>
+            <li>High-tech multiple-stage filter system</li>
+            <li>Can be used across a wide pH range for various applications</li>
+            <li>Smart touchscreen controls</li>
+            <li>A water machine that can produce powerful hydrogen-rich water</li>
+            <li>High-quality, long-lasting build and finish</li>
+            <li>Energy-efficient performance</li>
+            <li>Professional installation support</li>
+            <li>Compact under-counter water ionizer design</li>
+          </ul>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            As the best medical-grade ionizer in India, it is aimed at those who are looking for the highest quality technology and reliability.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Best For Athletes, Medical Needs & Premium Households</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Designed for fitness enthusiasts, active families, professionals, and families seeking high-quality hydration options, our UCE-13 Plus is the perfect choice. It is also ideal for those with a desire for more potent ionization treatment for their general health. Its performance, filtering capabilities and usefulness make it a popular choice for busy lifestyles and high-end residential properties.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>The Cleanest, Most Powerful Alkaline Water Available in India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Our luxury water ionizer machine in India is designed to provide high-quality, high-pH alkaline water at all times, with advanced filtration systems and strong electrolysis powers. Each feature is designed for dependable performance, beauty and a superb taste of water for today's homes.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>UCE-13 Plus vs UCE-11 Plus – Is the Upgrade Worth It?</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-13 Plus has the same design as the Tyent UCE-11 Plus water ionizer in India, but features an extra set of electrode plates, providing superior electrolysis efficiency and hydrogen production capacity. The upgrade will give users with the desire for maximum output, premium features, and flagship-level performance the same trusted quality and user-friendly operation that they've already enjoyed with Tyent.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order Tyent UCE-13 Plus Online</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            It is easy to order the UCE-13 Plus. Review the product information, ask a question and talk to the Tyent team for product advice. Our experts assist you in selecting the right model, solving installation queries, and arranging a convenient purchase and delivery process throughout India.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & White-Glove Installation</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Our Tyent water ionizer is professionally set up for the best performance. From the point of purchase to installation, pan-India delivery, expert guidance and dedicated after-sales support ensure a smooth ownership experience.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent UCE-13 Plus</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The best under-counter water ionizer in India, 13-plate, that offers the best engineering, advanced filtration, powerful hydrogen production, and reliable performance, making it an excellent long-term investment for supreme alkaline water at home.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. What makes UCE-13 Plus the most powerful Tyent model?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The UCE-13 Plus comes with Tyent's most powerful residential water ionizer for high-quality water, with 13 advanced Japanese electrode plates, optimised electrolysis, improved hydrogen formation, advanced filtration and intelligent controls.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Who should buy the UCE-13 Plus?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The UCE-13 Plus is best for large families, health-conscious people, athletes, high-quality households and those seeking the highest alkaline water output. In terms of comparison, the Tyent UCE 9 plus alkaline water machine in India is the top choice.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. How many plates does UCE-13 Plus have?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The Tyent UCE-13 Plus comes with thirteen high-quality Japanese titanium-platinum coated plates, designed to increase electrolysis efficiency and generate a stable amount of alkaline water, acidic water and excellent hydrogen output to use every day.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the price of Tyent UCE-13 Plus in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Price is subject to change based on offers, installation specifications and availability. Users interested in finding out the differences between the models of the Tyent NMP-11 water ionizer in India can also request the same.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. Does UCE-13 Plus come with lifetime warranty?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              Warranty coverage is subject to the product components and terms that are offered by Tyent India. Another area that customers appreciate in Tyent vs kangen is its support and service.
+            </p>
+          </div>
+        </div>
+
     </Container>
   </div></>
 );

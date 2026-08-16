@@ -1083,6 +1083,114 @@ const page = () => {
       <div className="section-spacing">
         <Filter />
       </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Tyent UCE-11 Plus – 11-Plate Under-Counter Water Ionizer India
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Enjoy the highest quality alkaline water from Tyent UCE-11 plus water ionizer India. Specially engineered for modern homes, this high-tech under-counter system boasts powerful 11-plate technology, intelligent filtration and sleek design for a consistent supply of high-quality ionized water without sacrificing a clean and uncluttered kitchen counter.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Tyent UCE-11 Plus Premium Under-Counter Performance</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Our Tyent 11 plate under-counter ionizer in India is designed for homeowners who demand nothing but the best while maintaining a beautiful kitchen. It fits under the sink, saving valuable counter space and providing a constant supply of high-quality alkaline water. It boasts state-of-the-art engineering, a robust build, and efficient performance, making it a great option for daily drinking, cooking, and a healthy lifestyle.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>11-Plate Technology – Superior Alkalinity & Hydrogen Output</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The electrolysis technology of our under-sink 11-plate water ionizer in India is an advanced technology that is capable of producing consistent alkaline water with high hydrogen potential. The large titanium-coated platinum plates achieve high daily water consumption and high ionisation efficiency. This innovative system guarantees reliable performance and excellent water quality for the whole family, whether preparing meals, making drinks or drinking throughout the day.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, ORP & Filtration – UCE-11 Plus Specs</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-11 plus alkaline water machine India provides a variety of pH settings appropriate for drinking, cooking, preparing food and general household use. It employs an advanced multiple-stage filtration system, which can effectively eliminate common impurities before ionisation and optimise the ORP performance, producing alkaline water with good efficiency. For buyers researching tyent vs kangen, our UCE-11 Plus stands out with its premium engineering, reliable performance, and consistently refreshing, clean-tasting water.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Key Features of the Tyent UCE-11 Plus</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "8px" }}>
+            The premium under-sink water ionizer India 11 plate is loaded with high-end features that provide ease of use, efficiency, and durability.
+          </p>
+          <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
+            <li>The 11 plate advanced electrolysis technology is used.</li>
+            <li>The electrode plates are coated with titanium.</li>
+            <li>Multi-stage filtration for cleaner water.</li>
+            <li>The wide pH range allows for versatility in applications.</li>
+            <li>Elegant under-counter installation.</li>
+            <li>User-friendly digital operation.</li>
+            <li>High-quality materials that will last a long time.</li>
+            <li>Sturdy materials for long-lasting durability.</li>
+            <li>Stable high-flow water production.</li>
+          </ul>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Best For Premium Homes, Large Families & Health Enthusiasts</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            It is the best premium under-sink ionizer in India to be installed in large families, for wellness-focused homes, or for people who use water more frequently. It has a definite ability to provide top-notch alkaline water without sacrificing productivity. This ionizer is a great value for performance, convenience, and advanced technology.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Sleek, Hidden Design – No Clutter on Your Kitchen Counter</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-11 Plus is an elegant under-counter water ionizer, which is hidden under your sink, saving precious countertop space. The only visible part is the modern, attractive dispensing faucet that makes it easy to get great-tasting alkaline water when you need it, without compromising your kitchen's style.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>UCE-11 Plus vs UCE-9 Plus – Which to choose?</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Many buyers researching the Tyent UCE-11 Plus vs Kangen K8 also compare this model with the Tyent UCE 9 Plus alkaline water machine in India. Both models provide high-quality performance, but the UCE-11 Plus provides increased ionization capacity, output, and convenience in the home.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order Tyent UCE-11 Plus Online</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            It is easy to order our Tyent water ionizer. Check out the official website of Tyent India, review the product specifications, and ask questions to get in touch with a valid product expert. You will be provided with expert advice, pricing details, installation support, and individual suggestions that are tailored to your family's needs.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Installation Support</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Interested customers can also enjoy the benefit of Tyent's nationwide delivery and professional installation services for the Tyent UCE-13 Plus water ionizer in India and the Tyent NMP-11 water ionizer in India, helping them make a seamless purchase and hassle-free installation.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent UCE-11 Plus</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Looking for the best under-sink alkaline ionizer in India for 2025? Discover the trusted Tyent water ionizer system for high standards of engineering, sophisticated filtration, a touch of style, dependable performance and outstanding everyday convenience for your family's hydration needs.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>Frequently Asked Questions</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. How is UCE-11 Plus better than UCE-9 Plus?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The UCE-11 Plus is an advanced 11-plate electrolysis water system with increased ionization efficiency and increased daily water production. Ideal for larger families who want top-notch alkaline water results.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Is an 11-plate ionizer worth the extra investment?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Yes. Families seeking a high-quality alkaline water solution will find an 11-plate ionizer to be more efficient in its ionization process, with higher water output and long-lasting performance.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. Does UCE-11 Plus work with all Indian water sources?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The system can be operated by the majority of the municipal water supplies in India. Tyent experts can provide the appropriate filtration system configuration during the installation process based on local water quality.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the warranty on Tyent UCE-11 Plus?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The warranty is provided as per Tyent India's warranty policy. It is recommended that customers verify the most up-to-date warranties with an authorised Tyent representative prior to purchase.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. What is the price of UCE-11 Plus in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              It may vary depending on the installation needs, location and current offers. Simply visit the official website of Tyent India to get the most recent price, product consultation and exclusive purchase assistance.
+            </p>
+          </div>
+        </div>
+
     </Container>
   </div>
   </>

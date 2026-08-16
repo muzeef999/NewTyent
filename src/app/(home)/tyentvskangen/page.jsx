@@ -1153,6 +1153,130 @@ const page = () => {
             </Col>
           ))}
         </Row>
+
+        {/* Tyent vs Kangen SEO Content Section */}
+        <div className="section-spacing">
+          <h2 className="text-center mb-4" style={{ color: "#1a56f2", fontWeight: 700, fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Tyent Water Ionizer vs Enagic Kangen – Which Is Better?
+          </h2>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introduction</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Picking between Tyent and Kangen can feel a little confusing, especially when there are so many side-by-side comparisons floating around online. This guide compares the two brands across tech, filtration process, pricing, warranty terms, and day-to-day user experience, so you can figure out which water ionizer offers better overall value for Indian households.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Tyent vs Kangen – The Most Searched Water Ionizer Comparison in India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent vs Kangen debate has gotten more popular lately among Indian buyers looking for premium alkaline water systems. When you are comparing how well they perform, how they last over time, or what upkeep you'll need, it helps to know the differences. This Tyent vs kangen water ionizer guide compares both brands so you can pick a system that fits your family's everyday drinking water needs.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Side-by-Side Comparison Table – Tyent vs Kangen</h3>
+          <div style={{ overflowX: "auto", marginBottom: "20px" }}>
+            <Table bordered hover style={{ borderRadius: "4px", overflow: "hidden", backgroundColor: "#FFF", fontSize: "15px" }}>
+              <thead>
+                <tr style={{ backgroundColor: "#f0f4ff" }}>
+                  <th style={{ color: "#1a56f2", fontWeight: 600 }}>Feature</th>
+                  <th style={{ color: "#1a56f2", fontWeight: 600 }}>Tyent</th>
+                  <th style={{ color: "#4f4f4f", fontWeight: 600 }}>Kangen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Water Ionization</td><td>Advanced electrolysis technology</td><td>Electrolysis technology</td></tr>
+                <tr><td>Plate Technology</td><td>Premium Japanese plates</td><td>Japanese plates</td></tr>
+                <tr><td>Filtration</td><td>Multi-stage filtration</td><td>Standard filtration</td></tr>
+                <tr><td>Installation</td><td>Countertop and under-counter options</td><td>Primarily countertop</td></tr>
+                <tr><td>Product Range</td><td>Multiple models for different needs</td><td>Limited model variations</td></tr>
+                <tr><td>Warranty</td><td>Extended coverage</td><td>Varies by model</td></tr>
+                <tr><td>Value</td><td>More features at competitive pricing</td><td>Premium pricing</td></tr>
+              </tbody>
+            </Table>
+          </div>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            When comparing Kangen water vs Tyent, many buyers end up noticing that Tyent comes with more features, plus more flexible installation choices, and it still doesn't seem to compromise performance.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Technology Comparison – Japanese Plates, pH Range & ORP Levels</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            A quality ionizer depends on the internal technology. In the Tyent water ionizer vs kangen comparison, Tyent uses premium Japanese electrode plates that are made for steady output and durability. It also gives a broad pH range and strong negative ORP readings, so you end up with a bunch of different water choices.
+          </p>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Our Tyent water ionizer range includes countertop water ionizer and under-counter water ionizer models, helping homeowners choose the ideal solution for their kitchen and lifestyle.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Filtration Quality – How Tyent Cleans Water Better Than Kangen</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Water quality starts with filtration. In that Kangen water vs tyent comparison, filtration is the big deal, the main deciding factor. Tyent uses advanced filtration along with an efficient ionization process, so it can lessen unwanted contaminants and keep the essential minerals.
+          </p>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Our product lineup covers the Tyent NMP-9 water ionizer India, Tyent NMP-11 water ionizer India, and Tyent UCE-13 plus water ionizer India, which basically means customers get a few alternatives, depending on how they use water and household requirements.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Certifications & Safety Standards – Who Wins</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Safety and product quality should always come first. In the Tyent vs enagic comparison, Tyent puts the focus on well-known manufacturing standards and also on rigorous quality testing. Our systems are built to provide dependable performance, while also meeting globally accepted and very strict safety requirements. So, customers get more confidence in their longer-term investment, even when things get complicated.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Price vs Value – What You Actually Get for Your Money</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Price alone does not really determine value. In the Tyent water vs kangen comparison, Tyent seems to offer advanced technology, better filtration, more flexible installation, and a dependable track record at a cost that is competitive. Rather than paying more just for brand recognition, buyers get practical features that help with long-term usability, and the overall value stays consistently stronger.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Warranty & After-Sales Support – Tyent vs Kangen India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Reliable support matters just as much as the machine itself. When you compare Tyent vs kangen, many customers don't stop at the specifications, and they look into service quality too. We offer dependable customer assistance, help with installation guidance, and solid warranty support that is tailored specifically for Indian customers.
+          </p>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            In the Tyent vs Kangen Enagic discussion, we keep our emphasis on responsive post-purchase service and overall customer satisfaction, so buyers get that calm reassurance for the whole product's lifetime; it feels a bit more secure.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Real User Experience – Why Indians Are Switching to Tyent</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            A lot of Indian families are choosing Tyent because they want modern tech, smoother filtration, and steady, dependable customer support. In the Tyent water vs kangen comparison, people often like the combination of performance, convenience, and value. Someone who looks at Tyent vs Kangen tends to say that Tyent comes with a consistently wider range of options for daily life.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Make the Right Choice – Why Tyent Wins</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            If you are looking at Tyent vs kangen water ionizer then Tyent feels like the better fit; it brings a combination of advanced tech, strong filtration, competitive pricing, and dependable customer support. We help Indian homes enjoy premium water ionization, with more value and confidence.
+          </p>
+
+          <h3 style={{ color: "#1a56f2", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is Tyent better than a Kangen water machine?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Tyent offers advanced tech and efficient filtration, plus flexible install options and solid after-sales support. Many buyers tend to feel it's a better overall value because it mixes premium features with competitive pricing for Indian households.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price difference between Tyent and Kangen in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Tyent has more features for a competitive price compared to Kangen. The total cost shifts depending on which model you pick, whether installation is needed, and which promotions are available when you buy it.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Which has better pH range – Tyent or Kangen?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Tyent has a wide pH range, so it works well across different household uses. With that flexibility, users can pick the water for drinking and for other daily tasks, while still keeping the same ionization performance steady.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does Tyent offer better warranty than Kangen?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Yes, we provide dependable warranty protection along with responsive customer support in India. This combination helps customers get timely help during the whole ownership experience, and it boosts long-term trust, too.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Can Tyent replace my existing Kangen machine?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              Yes, in many cases, Tyent can replace an existing Kangen machine. Our team can help recommend the most suitable model based on your water source, your installation preferences, and household requirements.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   );

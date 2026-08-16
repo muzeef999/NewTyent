@@ -365,6 +365,103 @@ export default function UnderCounterIonizers() {
             </div>
           </div>
         </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Under-Counter Water Ionizers
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Turn your kitchen into a top-notch wellness space. This hidden appliance provides hydrogen-rich water without the mess. Experience high-end Japanese technology and medical-quality materials cleverly concealed under the sink.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Explore Tyent Under-Counter Water Ionizers Online India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Experience the Tyent water ionizer difference. These systems are designed for upscale properties and provide optimal use of water for the human body. Our models are a beautiful way to have maximum countertop efficiency and preserve essential minerals. We offer you a hydration solution for maximum performance and contemporary style.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>What Is an Under-Counter Water Ionizer?</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            An under-sink water ionizer purifies tap water and alters its pH level. This is a hidden device under the sink that sends purified water to an electric chamber. A mounted faucet dispenses the enhanced water. An under-counter water ionizer removes all the bulky appliances and combines a high-quality filtration system with smart electrolysis technology to ionize the drinking water.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Superior Filtration – Clean Hydrogen-Rich Water Every Time</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Standard filtration strips minerals. This under-sink alkaline water ionizer uses dual filtration to filter out harmful substances while keeping calcium and magnesium. Advanced plates produce molecular hydrogen, which helps to reduce oxidative stress. An alkaline water machine under the sink ensures you have clean water to facilitate cellular hydration and energy recovery with each sip.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Ideal For – Premium Homes Large Families & Health-Conscious Buyers</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Efficient appliances are a must in modern households. For larger households that require a constant supply of water, an under-counter alkaline water system is ideal. When it comes to tyent vs kangen, buyers favour hidden inside installations instead of the big units. This under-sink water ionizer delivers strong output so athletes and health-conscious people can enjoy high-quality water on demand through a smart faucet.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Tyent UCE Series – Features Plates & pH Performance</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent UCE-11 plus water ionizer India is made from medical-grade titanium plates with pure platinum coating. These are responsible for maximum electrolysis and have the highest possible oxidation-reduction potential. Try the tyent UCE-13 plus water ionizer India with the best-in-class solid hybrid mesh plates, or go with the tyent hybrid H2 water ionizer India for unparalleled hydrogen infusion.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Hidden Sleek & Space-Saving – Perfect for Modern Indian Kitchens</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Modern kitchens are known for their minimalist designs. An under-counter water ionizer maintains 100% clear primary surfaces. The modern touchscreen faucet fits perfectly with modern décor. This under-sink alkaline water ionizer gives homeowners the luxury appeal they want without compromising the necessary health advantages.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Professional Installation – Pan India Support</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Setting up is the key to getting the best performance. We supply expert technicians to flawlessly install your under-counter alkaline water ionizer. From making plumbing adjustments to making electrical connections, our authorised teams do it all and ensure your under-sink water ionizer functions like a dream from day one.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & After-Sales Service</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            We guarantee delivery across the country. Our annual maintenance contracts keep your under-counter alkaline water system performing efficiently. Timely filter replacement, routine cleaning, and strong warranty support are provided by certified engineers all over India.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order an Under-Counter Ionizer Online</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Again, it will take only a few minutes to buy the Tyent UCE 9 plus alkaline water machine in India. Shop our models, place your favourites in your shopping cart, and check out securely with encrypted checkout gateways.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent UCE Series – Get Yours Today</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Protect your family's health using Japanese engineering. These ionizers not only possess amazing antioxidant properties but also have secret designs. Get your kitchen and hydration system upgraded today.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is an under-counter water ionizer?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              It's an invisible water treatment unit under the sink. It delivers mineral-laden, hydrogen-rich water via a smooth stand-alone countertop faucet, leaving kitchen countertops completely clear.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does under-counter installation require a plumber?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Professional installation ensures proper connection to cold lines and secure faucet installation. Our trained technicians will do this, with the provision of a leak check and a 15-year warranty on critical parts.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How is UCE series different from NMP countertop series?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The UCE series features touchscreen faucets, and the main engine is concealed beneath the sink. The NMP series is placed on the counter. Both provide outstanding molecular hydrogen and filtration.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is under-counter ionizer better for large families?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Yes, these systems process high volumes rapidly. Large families have access to healthy water for free without waiting for small pitchers to filter.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the maintenance cost of an under-counter ionizer in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              Maintenance involves replacing dual filters every six to twelve months. The annual service contracts are also inexpensive and keep the plates and electronics working for decades of trouble-free operation.
+            </p>
+          </div>
+        </div>
+
       </Container>
     </>
   );

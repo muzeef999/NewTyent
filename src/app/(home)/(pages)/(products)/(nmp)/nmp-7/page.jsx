@@ -500,6 +500,107 @@ const TyentNMP5 = () => {
         <div className="section-spacing">
           <Filter />
         </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Tyent NMP-7 – 7-Plate Alkaline Water Ionizer India
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Transform regular tap water into therapeutic, hydrogen-rich hydration. Enjoy the best of medical technology and convenience at home. This compact system rests elegantly on your kitchen counter, providing unlimited antioxidant water.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent NMP-7 – Power & Affordability Combined</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent NMP-7 water ionizer India is a smooth upgrade from a regular RO water machine. It provides excellent chemical-free purification and strong electrolysis. This 7-plate water ionizer India produces a steady stream of antioxidant-rich molecular hydrogen, which is premium wellness without costing a lot more.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Who Should Buy the NMP-7? – Best for Mid-Size Families</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            This dynamic countertop water ionizer is carefully designed for medium-sized families who need the best daily hydration. This is the best countertop ionizer 7 plate in India, for generating water in large quantities, up to 3.0 litres per minute. It will support a family of four or five people comfortably, with enough space to drink, cook, wash vegetables, and sanitise.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>7-Plate Japanese Technology – Better ORP & pH Performance</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            This 7-plate alkaline ionizer India price bracket leader is based on Japan's solid hybrid mesh technology. The system consists of 7 Platinum-coated plates of 99.9% pure titanium. This excellent surface area generates very stable electrical conductivity and increases micro-clustering considerably. This 7-plate configuration offers the optimal balance of high ORP (Oxidation Reduction Potential) and long-lasting durability when compared to the Tyent NMP-5 water ionizer in India.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Key Features of the Tyent NMP-7 Water Ionizer</h3>
+          <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
+            <li><strong>Dual 0.01-Micron Filters:</strong> Filter out more than 200 contaminants, including microplastics and heavy metals, while retaining essential calcium and magnesium.</li>
+            <li><strong>Patented SMPS Plus Power Supply:</strong> 55+ power settings for electrical stability and protection from overheating.</li>
+            <li><strong>Eco Mode & Fixed Output:</strong> The LCD automatically dims to save 99.9% energy and provides 0.5L, 1.0L, or 1.5L automated pouring options.</li>
+            <li><strong>PAST Auto-Cleaning System:</strong> Sensor-controlled cleaning cycles to prevent mineral deposits from building up on the electrodes.</li>
+            <li><strong>Chemical-Free Turbo Mode:</strong> 11.5 pH and 2.5 pH water is produced naturally without toxic chemical enhancers.</li>
+          </ul>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, ORP Levels & Hydrogen Output – NMP-7 Specs</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent 7-plate alkaline water machine is easy to use and can create up to 7 water levels with a wide range of pH from 2.5 to 11.5. This efficient system produces an outstanding ORP of -950mV. As such, the 7-plate hydrogen water ionizer India produces high levels of selectively antioxidant molecular hydrogen up to 1550 ppb, which efficiently fights against cell oxidative stress.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>NMP-7 vs NMP-5 & NMP-9 – Which Is Right for You?</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            In terms of the Tyent line-up, the NMP-7 falls right in the middle ground. While the entry-level 5-plate model produces an ORP of -850mV, the premium Tyent NMP-9 water ionizer India produces a powerful -1050mV ORP. The NMP-7 also has much higher antioxidant capacity than the NMP-5, and is the better choice for the active family not yet prepared for the top-tier Tyent NMP-11 water ionizer India.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Easy Countertop Setup – No Plumber Required</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Installation of a 7-plate water ionizer India model is very easy. Its sleek tankless design just sits right next to your sink and is easily connected to your regular faucet line. The LCD display with a voice confirmation system ensures easy everyday use. When you compare Tyent vs Kangen, you will see that Tyent has a better modern appearance and a user-friendly interface.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Warranty Support</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent water ionizer offers comprehensive end-to-end services in more than 650+ Indian cities. All NMP-7 units come with the leading 3-year comprehensive machine warranty and a massive 15-year warranty on Japanese plates. Professional technicians change your filters and provide you with peace of mind.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order the Tyent NMP-7 Online</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            You can easily get the most competitive countertop 7-plate water machine India price through the official Tyent site. Check all technical parameters, click on 'Add to Cart' and complete the purchase with encrypted payment gateways to receive direct delivery to your doorstep.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent NMP-7</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            This 7-plate hydrogen water ionizer India is unbeatable in terms of chemical-free performance and beats any competition based on MLM rates. Invest in your family's well-being and hydration by getting the best mid-tier Japanese-engineered wellness device today.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the difference between NMP-7 and NMP-9?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The main difference is in the number of plates and the level of antioxidants. The Tyent NMP-7 is based on 7 plates that have an ORP of up to -950mV. The NMP-9 has 9 plates, which provide a higher -1050mV ORP and more molecular hydrogen.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does Tyent NMP-7 have?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              It is equipped with 7 advanced solid hybrid mesh plates coated with platinum and titanium. Made by Permelec, Japan, these high-purity plates provide maximum electrical surface area for optimum water electrolysis.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is NMP-7 good for daily family use?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Yes, it is the right 7 plate water ionizer India for home use. It offers a powerful flow rate of 3.0 L/min, which meets the drinking, cooking, and sanitising needs of a medium-sized family.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent NMP-7 in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The standard countertop 7 plate water machine India price is ₹2,05,000 M.R.P. In contrast to competing models, this 7 plate alkaline ionizer India price is free of any multi-level marketing fees and just charges for the technology.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does NMP-7 remove fluoride and chlorine from water?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              Dual 0.01 micron filters effectively filter out chlorine, heavy metals, and bacteria. Regular electrolysis, however, will not eliminate a dissolved mineral such as fluoride, so when using it on high TDS water, use it in conjunction with an RO pre-filter.
+            </p>
+          </div>
+        </div>
+
       </Container>
     </div>
     </>

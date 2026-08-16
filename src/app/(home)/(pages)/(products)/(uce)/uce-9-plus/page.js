@@ -1092,6 +1092,116 @@ const page = () => {
         <div className="section-spacing">
           <Filter />
         </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Tyent UCE-9 Plus – Under-Counter Alkaline Water Ionizer India
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Learn the best of the best under-counter water ionizers with the Tyent 9-plate water ionizer in India. The UCE-9 Plus unit not only promises to provide high-tech performance but also to minimise kitchen clutter and ensure a dependable water filter fit for any home looking to balance convenience with high-quality water.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent UCE-9 Plus – Clean Looks, Powerful Performance</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent UCE-9 Plus combines beauty and state-of-the-art technology to an ideal extent. Your idea of discrete yet out-of-the-way placement under the countertop never wastes any of your kitchen space, but yields high-quality ionized water whenever needed. Ideal for residential properties, this under-counter water ionizer is designed for consistent daily use, ensuring quality for those seeking both beauty and value.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>9-Plate Under-Counter Technology – Hidden Yet High-Performing</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Modern Japanese Engineering allows UCE-9 Plus to use Electrolysis with 9 long-lasting Titanium plates, and rate it as the most powerful water ionization system available. Being a 9-plate alkaline water ionizer in India, it guarantees steady performance without any hassle and is entirely concealed under your countertop. This system ensures long-lasting performance and offers a strong balance of efficiency, durability, and convenience for today's Indian residences in search of high-quality water treatment solutions.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, ORP & Hydrogen Output – UCE-9 Plus Specs</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-9 Plus offers a wide range of pH readings, high ORP readings, and increased hydrogen generation that make it suitable for a wide variety of home applications. The 9-plate hydrogen water ionizer in India is designed to generate steady ions and optimise its performance under different water conditions, to deliver reliable hydro-ionised water for all your day-to-day needs.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Key Features of the Tyent UCE-9 Plus</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "8px" }}>
+            High-quality engineering combined with the ease of operation is clear with the UCE-9 Plus.
+          </p>
+          <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
+            <li>The innovative 9-plate electrolysis technology</li>
+            <li>Multi-stage filtration system</li>
+            <li>Many pH selection options are wide</li>
+            <li>Elegant under-counter installation</li>
+            <li>Durable premium components</li>
+            <li>Intelligent touchscreen controller</li>
+            <li>Automatic cleaning function</li>
+            <li>Energy-efficient operation</li>
+          </ul>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            It features a high level of design, which ensures reliability and smooth operation of the system with a clean and uncluttered kitchen.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Space-Saving Design – Ideal for Modern Indian Kitchens</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The hidden installation helps to free up countertops without any loss of convenience due to its sleek faucet and control unit. The UCE-9 Plus water ionizer is an ideal place under the water ionizer 9 plate countertop India alternative, as a water ionizer with high-quality features and the ability to operate without taking up much space, fitting into a smart, contemporary kitchen design.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Professional Installation – Pan India Support Available</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-9 Plus is professionally installed for optimal performance from the first day. Every customer in India, from the initial advice and installation to dependable technical support, is taken care of with great expertise, thus giving a sense of confidence to the customer, and the system provides efficiency and performance for years and years.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>UCE-9 Plus vs NMP-9 – Which Is Better for You?</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Your preferred installation style will determine which is ideal. The UCE-9 Plus is constructed to be installed under the counter, and the Tyent NMP-9 water ionizer India is meant to be fitted in the countertop. When deciding between an NMP-9 vs NMP-11 comparison, you will likely need to consider the performance needs, capacity, and installation.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order the Tyent UCE-9 Plus Online</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            It's simple to order the UCE-9 Plus from the official Tyent India web page. Look at the detailed specifications, ask for product advice and get expert help with installation. For enhanced demand, customers can also check out the Tyent UCE-11 plus water ionizer in India or the Tyent UCE-13 plus water ionizer India.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & After-Sales Service</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Tyent's delivery system is reliable throughout India, and after-sales services are professionally available with responsive customer support. Every customer appreciates the superior engineering, reliable service and value of the 9 plate water machine India price.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent UCE-9 Plus</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The UCE-9 Plus combines top-quality under-counter performance, attractive installation and high-tech ionization technology. If you compare the UCE-9 Plus with the Tyent NMP-9 vs Kangen K8, or Tyent vs Kangen, you will find that the UCE-9 Plus has built-in reliability, along with a few convenient features.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the UCE-9 Plus and how is it different from countertop models?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              UCE-9 Plus is an under-counter water ionizer; the main unit is concealed underneath your kitchen cabinet. Capable of high-performance and still retaining countertop space and keeping your kitchen clean and modern.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does UCE-9 Plus require professional installation?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Yes. It is advisable to have someone professionally install it to ensure the plumbing connections are correct, the system operation is optimal, and it is installed properly. Proper installation also ensures maximum efficiency and safe and reliable operation of the ionizer.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does the UCE-9 Plus have?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The UCE-9 Plus comes with 9 premium titanium plates, making the electrolysis efficient. Providing stable alkaline, acidic, and purified water capabilities and reliable long-term operation for home water supply applications.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is UCE-9 Plus suitable for hard water in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              When used with proper filtration and regular maintenance, the UCE-9 Plus will operate efficiently under a variety of water conditions. Optimum performance will require occasional replacement of filters depending on water quality.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent UCE-9 Plus in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              Currently, the price for the 9-plate water machine in India depends on the offers received, availability and installation details. A professional website dedicated to Tyent India can offer you updated pricing information and help with your purchase.
+            </p>
+          </div>
+        </div>
+
       </Container>
     </div>
 

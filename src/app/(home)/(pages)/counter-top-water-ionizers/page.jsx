@@ -346,6 +346,109 @@ export default function CounterTopIonizers() {
             </div>
           </div>
         </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Countertop Water Ionizers
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Upgrade your daily hydration with a countertop water ionizer that's made for convenience, performance, and modern living. Enjoy hydrogen-rich alkaline water at home without the usual complex installation, which is honestly a relief. Take a look at advanced Tyent countertop models that bring together smart technology, elegant design, and dependable output for Indian households.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Explore Tyent Countertop Water Ionizers Online India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Tyent offers a premium collection of countertop ionizers for different household needs. Every countertop alkaline water machine combines advanced filtration, easy-to-navigate controls, and durable build quality.
+          </p>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Whether you are comparing the Tyent water ionizer range or researching Tyent vs kangen, users can pick models that fit their budget, household size, and the way they drink water day to day.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>What Is a Countertop Water Ionizer & How Does It Work</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            A countertop water ionizer connects directly to your kitchen tap through a simple diverter valve. After the initial filtration gets rid of common impurities, the water then goes through electrolysis plates, where acidic and alkaline streams get separated. From there, it makes hydrogen-rich alkaline water that people drink daily, while the acidic side is kept for household purposes. Every best countertop ionizer machine is built to provide reliable performance, simple controls, efficient water ionization, and convenient everyday use for households seeking a practical hydration solution.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Hydrogen-Rich Alkaline Water from Your Kitchen Counter</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            A countertop alkaline water machine gives you fresh alkaline water whenever you need it, and it does not really take up too much kitchen space. It uses advanced electrolysis technology that produces hydrogen-rich water, and it still keeps filtration working in an efficient way. The alkaline water ionizer countertop design makes premium water technology feel more reachable for homes, apartments, and even small urban Indian kitchens all over India with everyday lasting convenience.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Ideal For – Families, Health Enthusiasts & Small Kitchens</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Countertop ionizers are a good fit for growing families, people who care about fitness, busy working professionals, and homeowners who want simple hydration solutions. Their compact footprint fits right there beside the sink with no real permanent changes. If flexibility is a thing, the best countertop water ionizer really helps, since you can just move it around during renovations or even when you relocate, while still keeping that steady daily performance without affecting convenience, reliability, or your everyday drinking water experience at home.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Tyent NMP Series – Models, Features & Plate Technology</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The Tyent NMP Series includes solutions for different needs, like the Tyent NMP-5 water ionizer India, Tyent NMP-7 water ionizer India, Tyent NMP-9 water ionizer India, and the Tyent NMP-11 water ionizer India. Each of the best countertop ionizer machine relies on platinum-coated titanium plates, tuned for efficient electrolysis, steady durability, and uniform hydrogen output, delivering dependable performance for everyday hydration needs across modern Indian households consistently.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose a Countertop Model Over Under-Counter</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            A countertop unit goes up above the kitchen counter, so it becomes easier to reach, monitor, and move around if ever needed later. Unlike built-in options, installation usually does not require any cabinet modifications. Many homeowners go for the best countertop water ionizer, because it brings flexibility, ease of use, and everyday practicality in one compact appliance, so it feels practical right away.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Easy Installation – No Plumber Needed</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Most users can set up a countertop alkaline water machine in just a few minutes, using the provided faucet diverter thing. It is straightforward: no need for any permanent plumbing changes, so it works well in apartments, rental places, and short-term residences. You just line everything up, connect the unit, and finish the setup; then you can start enjoying hydrogen-rich alkaline water right away.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Installation Support</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Tyent provides delivery across the nation, with installation guidance and ongoing customer support. If you are buying your first alkaline water ionizer ionizer countertop or you're upgrading something you already have, there is experienced support to keep setup running smoothly and help with dependable operation across most major cities and regions in India.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order a Countertop Ionizer Online</h3>
+          <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
+            <li>Browse the available countertop ionizer models and compare their features.</li>
+            <li>Choose the model that best suits your household's daily water needs.</li>
+            <li>Place your order through the website using the secure online checkout.</li>
+            <li>Receive Pan India delivery along with installation guidance and customer support.</li>
+          </ul>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent – Order Your Countertop Ionizer Today</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            At Tyent, we bring together innovative engineering, premium components, and steady customer support to deliver lasting value. Feel free to explore our countertop water ionizer lineup today and pick a model that really matches your kitchen, your lifestyle, and your daily hydration needs.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the difference between countertop and under-counter water ionizers?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Countertop variants are located next to the sink, directly connecting to the faucet. Under-counter variants are installed in the cabinets. They connect to the main faucet using a mini-faucet. They are more permanent models.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Do countertop ionizers require professional installation?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              No. The ionizers are built to be installed easily, as they include parts to connect directly to compatible kitchen faucets. A plumbing professional may be required if you need a special fit.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Which Tyent countertop model is best for a 4-member family?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Water consumption determines which model is best. Models that fall in the mid- to high-range of capacity for Tyent NMP will, in all likelihood, be the best choice for a family of four.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How long do the filters last in a countertop ionizer?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Replacement intervals for countertop ionizers are determined by water quality and daily consumption. Many filters will require replacement after thousands of litres or will need replacement at the intervals set by the manufacturer.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is a countertop water ionizer suitable for Indian water conditions?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              Yes. These models are built to treat municipal water in India and are built to provide filtration and the production of alkaline water for home use with consistent everyday performance and reliability.
+            </p>
+          </div>
+        </div>
+
       </Container>
     </>
   );

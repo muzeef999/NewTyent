@@ -522,6 +522,113 @@ const TyentNMP5 = () => {
         <div className="section-spacing">
           <Filter />
         </div>
+        {/* SEO Content Section */}
+        <div className="mt-5 pt-4">
+          <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
+            Tyent NMP-5 Entry-Level Alkaline Water Ionizer India
+          </h2>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Get medical-grade hydrogen-rich water for your everyday hydration. It is a high-tech system that combines state-of-the-art filtration in a small package. It offers exceptional health benefits and sits comfortably on your countertop.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent NMP-5 – Affordable Alkaline Water for Every Home</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Finding a reliable yet affordable water ionizer India can be a major challenge for health-conscious shoppers. The tyent NMP-5 water ionizer India provides top-quality wellness at an affordable price.
+          </p>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            It brings the latest in engineering and user-friendly features to deliver therapeutic living water to your home. This tyent NMP-5 alkaline water machine effectively eliminates the harmful heavy metals, microplastics, and dangerous contaminants.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Who Should Buy the NMP-5? – Ideal Users & Households</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            This small countertop water ionizer is perfect for small or medium-sized modern Indian kitchens! It is a great fit for nuclear families with 2-3 members. This budget water ionizer India countertop setup provides you with an unlimited supply of clean water, which is rich in antioxidants, instead of making you spend on costly plastic bottled water.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>5-Plate Japanese Technology – Powerful Performance at Entry-Level Price</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The high-performance 5-plate water ionizer India is the heart of this machine. Tyent has added five platinum-coated, 99.9% pure titanium solid hybrid mesh plates from Permelec, Japan. According to any thorough tyent NMP5 alkaline water review, this setup gives exceptional electrical conductivity and exemplary durability over its 45-year lifespan.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Key Features of the Tyent NMP-5 Water Ionizer</h3>
+          <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
+            <li><strong>Patented SMPS Plus Power Supply:</strong> 55+ power settings to guarantee a stable operation without overheating.</li>
+            <li><strong>Polarity Anti Scale Technology (PAST):</strong> An automated sensor-controlled cleaning cycle ensures minimal mineral deposits on the plates.</li>
+            <li><strong>Dual .01-Micron Filtration:</strong> Certified filters capture the nano-viruses, bacteria, and chlorine, and safely keep natural healthy minerals.</li>
+            <li><strong>Fixed Quantity Output:</strong> Set your device to dispense precisely 0.5L, 1.0 L, or 1.5L of water without any problems.</li>
+            <li><strong>Eco Mode Configuration:</strong> Dim the bright LCD backlight automatically to save up to 99.9% idle energy.</li>
+          </ul>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range & ORP Levels – What the NMP-5 Delivers</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            The tyent NMP-5 alkaline water machine generates a wide pH range from 2.5 up to 11.5. It produces a remarkable Oxidation Reduction Potential (ORP) of up to -850mV. This results in the production of very potent anti-oxidative water with a dissolved molecular hydrogen content of up to 1550 PPB. Its unique Turbo mode yields strong acidic and alkaline water naturally, while completely avoiding external chemicals or salts.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>NMP-5 vs Other Entry-Level Ionizers in India</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            When you compare the tyent NMP-5 vs kangen, you will see there is a huge difference in sales model and technology. Enagic Kangen relies heavily on multi-level marketing (MLM) schemes, which charge inflated retail prices because of huge commissions paid to the middlemen.
+          </p>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            In contrast, the Tyent water ionizer relies on the traditional transparent marketing framework, prioritising consumer value above all else. Furthermore, when comparing Tyent NMP-5 vs kangen, Tyent's Turbo mode completely avoids any and all chemical additives, while its counterpart necessitates the use of artificial chemical enhancers to attain extreme pH levels.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Easy Countertop Installation – Ready in Minutes</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            This 5-plate water ionizer India model is easy to install, simple to use, and fast to set up. The tankless model is easily placed next to your kitchen sink and is directly linked to your water tap line. The LCD screen is very easy to use and has audio voice prompts to confirm your water selection.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Warranty Support</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            Tyent promises absolute peace of mind with doorstep customer service networks spread across 650+ cities in India. Your investment comes fully secured by a 3-year warranty on the main ionizer body. In addition, you get an industry-leading 15-year warranty for the high-purity Japanese electrodes.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order the Tyent NMP-5 Online</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            This is a totally safe and extremely convenient way to secure your unit online. Just visit the official Tyent India website, check out the detailed NMP-5 ionizer specifications India page, and add the system to your virtual shopping cart. Flexible payment options are available, and customer care also provides immediate assistance.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Why Choose Tyent NMP-5 – Order Yours Today</h3>
+          <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+            With this 5-plate water ionizer India model, you are opting for a healthier and vibrant lifestyle. It allows your family to get the proper micro-clustered hydration to fight oxidative stress every day. Protect your household's long-term wellness by ordering your authentic Tyent system today.
+          </p>
+
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does the Tyent NMP-5 have?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              It comes with 5 advanced platinum-coated titanium solid hybrid mesh plates from Japan. This structure ensures the most effective electrolysis process and a consistent hydrogen output with the greatest surface area.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What pH range does the NMP-5 produce?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The official MP-5 ionizer specifications in India charts show that it creates a broad pH range, from 2.5 to 11.5. It produces 7 different types of water for drinking, sanitation, and cooking.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is NMP-5 suitable for a 2–3-member family?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              Yes, it's the ideal starting model for nuclear families. A positive tyent NMP5 alkaline water review highlights the effortless way in which the tankless system can be used in your home every day.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent NMP-5 in India?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
+              The official NMP-5 countertop water ionizer price has an M.R.P. of ₹1,68,000. This transparent pricing comes with no hidden network marketing commissions, making it a very competitive option.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "20px" }}>
+            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How does NMP-5 compare to NMP-7?</h4>
+            <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
+              A technical comparison of Tyent NMP-5 vs kangen or other upgrades like the tyent NMP-7 water ionizer India highlights key differences. Compared to the NMP-5, the NMP-7 has 7 plates and a more potent ORP of -950mV, which is more suitable for a large family, while the NMP-5 is an affordable water ionizer India with 5 plates. To explore broader options, you can also check our high-capacity tyent NMP-9 water ionizer India and tyent NMP-11 water ionizer India units.
+            </p>
+          </div>
+        </div>
+
       </Container>
     </div>
      </>
