@@ -7,6 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import Script from "next/script"; // ✅ correct import
 
+// Font configuration for Poppins
+
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
