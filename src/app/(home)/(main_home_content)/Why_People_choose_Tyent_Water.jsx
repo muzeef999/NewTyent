@@ -33,7 +33,7 @@ const Why_People_choose_Tyent_Water = () => {
 
           <Col md={4}>
             <Card
-              img="/whyTent/Promotes_Weight_loss.jpg"
+              img="/whyTent/Promotes_Weight_loss.webp"
               title="Promotes Weight loss"
               desc={<>Many of our customers report<br />increased weight loss.</>}
             />
@@ -41,7 +41,7 @@ const Why_People_choose_Tyent_Water = () => {
 
           <Col md={4}>
             <Card
-              img="/whyTent/Faster_recovery_after_exercise.jpg"
+              img="/whyTent/Faster_recovery_after_exercise.webp"
               title="Faster recovery after exercise"
               desc="Hydrogen water easily absorbs into your cells to neutralize lactic acid for faster recovery."
             />
@@ -52,7 +52,7 @@ const Why_People_choose_Tyent_Water = () => {
       <Container className="mt-5">
         <div className="why-feature-banner">
           <Image
-            src="/whyTent/guy_drinking_water.jpg"
+            src="/whyTent/guy_drinking_water.webp"
             alt="Person drinking Tyent water"
             fill
             className="why-feature-image"

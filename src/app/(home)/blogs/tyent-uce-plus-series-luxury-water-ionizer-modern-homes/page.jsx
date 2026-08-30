@@ -85,7 +85,7 @@ export default async function BlogPost() {
               Introducing the Tyent UCE-PLUS Series
             </h2>
             <p>
-              The Tyent UCE-PLUS series sets the standard for most aesthetic and luxury design with advanced hydration to meet today&apos;s modern lifestyle. This system conceals the main machine under the counter, regardless of whether you select the Tyent under-counter ionizer 9-plate, 11-plates or the ultimate 13-plate flagship. You only interact with an intuitive, smartphone-style lcd touchscreen designer faucet. It&apos;s the best premium under-sink ionizer in India and around the world today.
+              The Tyent UCE-PLUS series sets the standard for most aesthetic and luxury design with advanced hydration to meet today&apos;s modern lifestyle. This system conceals the main machine under the counter, regardless of whether you select the Tyent <Link href="/under-counter-water-ionizers">under-counter ionizer 9-plate, 11-plates</Link> or the ultimate 13-plate flagship. You only interact with an intuitive, smartphone-style lcd touchscreen designer faucet. It&apos;s the best premium under-sink ionizer in India and around the world today.
             </p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>
@@ -116,12 +116,12 @@ export default async function BlogPost() {
               In addition to its gorgeous appearance, Tyent offers unparalleled technological performance.
             </p>
             <ul>
-              <li>Engineers use advanced Japanese medical-grade Solid Hybrid Mesh Plates for exceptional electrolysis conductivity, superior surface area and greater anti-oxidant production.</li>
-              <li>The Patented SMPS PLUS&reg; power supply naturally generates a broad pH range from 11.5-2.5 without any use of artificial chemicals, enhancers or salt.</li>
-              <li>Kidney-dialysis level purification with dual 0.01-micron filters that eliminate nano-plastics, nano-virus and heavy metals.</li>
+              <li>Engineers use <Link href="/solid-hybrid-mesh-plates">advanced Japanese medical-grade Solid Hybrid Mesh Plates</Link> for exceptional electrolysis conductivity, superior surface area and greater anti-oxidant production.</li>
+              <li>The <Link href="/patented-SMPS-plus">Patented SMPS PLUS&reg; power supply</Link> naturally generates a broad pH range from 11.5-2.5 without any use of artificial chemicals, enhancers or salt.</li>
+              <li>Kidney-dialysis level purification with <Link href="/why-tyent">dual 0.01-micron filters that eliminate nano-plastics</Link>, nano-virus and heavy metals.</li>
             </ul>
             <p>
-              For maximum power, the Tyent UCE-11 PLUS under-counter ionizer in India or the Tyent UCE-13 PLUS under-counter ionizer in India can produce high antioxidant levels easily.
+              For maximum power, the <Link href="/uce-11-plus">Tyent UCE-11 PLUS under-counter ionizer in India</Link> or the <Link href="/uce-13-plus">Tyent UCE-13 PLUS under-counter ionizer in India</Link> can produce high antioxidant levels easily.
             </p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>
@@ -164,7 +164,7 @@ export default async function BlogPost() {
 
             <div className="mb-3">
               <p className="fw-bold mb-1">5. Is a water ionizer a good long-term investment for a home?</p>
-              <p>Yes, Tyent offers long-lasting medical-grade titanium plates with an incredible 15-year warranty.</p>
+              <p>Yes, Tyent offers long-lasting medical-grade titanium plates with an <Link href="/tyentvskangen">incredible 15-year warranty</Link>.</p>
             </div>
           </div>
 

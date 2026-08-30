@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import contact from "@/asserts/contactwomen.jpg";
+import contact from "@/asserts/contactwomen.webp";
 import Image from "next/image";
 import style from "../../compoents/Form/Form.module.css";
 import FormOnly from "./FormOnly";

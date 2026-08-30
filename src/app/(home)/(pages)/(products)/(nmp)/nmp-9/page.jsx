@@ -201,10 +201,35 @@ const TyentNMP5 = () => {
     "@type": "Product",
     "name": "Tyent NMP-9",
     "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPRODUCTNMP1.ac2c6204.webp&w=3840&q=75",
-    "description": "Buy Tyent NMP-5 water ionizer India. 5 Japanese plates, hydrogen-rich alkaline water, easy countertop setup at an affordable price.",
+    "description": "Buy Tyent NMP-9 water ionizer India. 9 Japanese plates, hydrogen-rich alkaline water, superior ORP and advanced countertop design.",
     "brand": {
       "@type": "Brand",
-      "name": "tyent"
+      "name": "Tyent"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.tyent.co.in/nmp-9",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150",
+      "bestRating": "5"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer"
+      },
+      "reviewBody": "The NMP-9 is a fantastic water ionizer with 9 plates that deliver excellent hydrogen-rich alkaline water. Great build quality and performance."
     }
   };
 

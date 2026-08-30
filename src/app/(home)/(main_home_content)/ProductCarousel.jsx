@@ -120,7 +120,7 @@ const ProductCarousel = () => {
       ph: "2.5 - 11.5*",
       orp: "-1250*",
       hydrogen: "upto 1800ppb*",
-      image: "/home/ucebg1.png",
+      image: "/home/ucebg1.webp",
       buttonText: "Shop Now",
       link: "/under-counter-water-ionizers"
     },

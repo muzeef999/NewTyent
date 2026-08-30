@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import BannerOneDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop.png";
-import BannrrOneMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg.png";
+import BannerOneDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop.webp";
+import BannrrOneMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg.webp";
 import "@/app/style/ResponsiveBanner.css";
 import NmpDispalayfinal from "../(pages)/(products)/(nmp)/NmpDispalayfinal";
 import "../../style/slider.css";

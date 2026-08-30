@@ -117,10 +117,10 @@ export default function RootLayout({ children, session }) {
                   "@type": "OfferCatalog",
                   "name": "Alkaline Water Ionizers",
                   "itemListElement": [
-                    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tyent NMP Water Ionizer" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tyent UCE PLUS Water Ionizer" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tyent UCE 9 Alkaline Water Ionizer" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tyent UCE 11 Alkaline Water Ionizer" } }
+                    { "@type": "OfferCatalog", "name": "Tyent NMP Water Ionizer" },
+                    { "@type": "OfferCatalog", "name": "Tyent UCE PLUS Water Ionizer" },
+                    { "@type": "OfferCatalog", "name": "Tyent UCE 9 Alkaline Water Ionizer" },
+                    { "@type": "OfferCatalog", "name": "Tyent UCE 11 Alkaline Water Ionizer" }
                   ]
                 },
                 "knowsAbout": ["Alkaline Water Ionizers", "Hydrogen Rich Water", "Water Filtration", "Electrolysis Technology", "Medical Grade Water Systems"]

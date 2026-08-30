@@ -15,21 +15,27 @@ export default function AuthorPage() {
   const authorSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://www.tyent.co.in/author/dr-g-sree-suma#person",
     "name": "Dr. G. Sree Suma",
-    "jobTitle": "Consultant Obstetrician & Gynecologist",
-    "description": "Consultant Obstetrician and Gynecologist with over 18 years of experience in women's healthcare.",
-    "image": "https://www.tyent.co.in/Dr.%20G.%20Sree%20Suma.jpeg",
     "url": "https://www.tyent.co.in/author/dr-g-sree-suma",
+    "jobTitle": "Consultant Obstetrician & Gynecologist",
+    "description": "Dr. G. Sree Suma is a Consultant Obstetrician and Gynecologist with over 18 years of experience in women's healthcare, specializing in the comprehensive management of pregnancy, high-risk pregnancies, gynecological disorders, and preventive women's health.",
+    "image": "https://www.tyent.co.in/Dr.%20G.%20Sree%20Suma.jpeg",
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "DNB (Obstetrics & Gynaecology)"
+      }
+    ],
     "knowsAbout": [
-      "Obstetrics",
-      "Gynecology",
+      "Obstetrics & Gynecology",
       "High-Risk Pregnancies",
+      "Gynecological Disorders",
       "Preventive Women's Health",
       "Reproductive Health",
-      "Maternal Healthcare"
-    ],
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Degree", "name": "DNB (Obstetrics & Gynaecology)" }
+      "Maternal Healthcare",
+      "Postpartum Hemorrhage Management"
     ]
   };
 

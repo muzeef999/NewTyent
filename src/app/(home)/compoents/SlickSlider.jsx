@@ -17,16 +17,15 @@ import Image from 'next/image';
 
 // Importing images dynamically to avoid loading all at once
 const iconImages = [
-  { src: icon1, alt: "Icon 1" },
-  { src: icon2, alt: "Icon 2" },
-  { src: icon3, alt: "Icon 3" },
-  { src: icon4, alt: "Icon 4" },
-  { src: icon5, alt: "Icon 5" }, 
-  { src: icon6, alt: "Icon 6" },
-  { src: icon7, alt: "Icon 7" },
-  { src: icon8, alt: "Icon 8" },
-  {src:icon9,alt:"Icon 9"}
-  // Add more icons here as necessary
+  { src: icon1, alt: "GVK logo" },
+  { src: icon2, alt: "GMR logo" },
+  { src: icon3, alt: "KL University logo" },
+  { src: icon4, alt: "Scavolini logo" },
+  { src: icon5, alt: "Dasha logo" },
+  { src: icon6, alt: "Bossard logo" },
+  { src: icon7, alt: "Sai Neeraj logo" },
+  { src: icon8, alt: "KLE CTIE logo" },
+  { src: icon9, alt: "Starkey logo" },
 ];
 
 const SlickSlider = () => {

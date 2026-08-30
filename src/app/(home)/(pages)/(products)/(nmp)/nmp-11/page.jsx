@@ -469,7 +469,7 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent NMP-11 – The Ultimate Countertop Ionizer</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Specially developed for discerning owners, our Tyent NMP-11 is as innovative as it is easy to use. It is the best premium countertop ionizer in India, which provides consistent water ionization without losing its looks and style. Its sturdy build, smart control, and cutting-edge filtration process make it an ideal countertop water ionizer for families seeking to enhance the water consumption experience they have today.
+            Specially developed for discerning owners, our Tyent NMP-11 is as innovative as it is easy to use. It is the <Link href="/counter-top-water-ionizers">best premium countertop ionizer in India</Link>, which provides consistent water ionization without losing its looks and style. Its sturdy build, smart control, and cutting-edge filtration process make it an ideal countertop water ionizer for families seeking to enhance the water consumption experience they have today.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>11-Plate Japanese Technology – Highest Performance in NMP Series</h3>
@@ -508,7 +508,7 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Best For – Health Enthusiasts, Athletes & Large Households</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Our NMP-11 is optimised for an active lifestyle, expanding families, athletes, and anyone who needs more water each day. Being a premium 11 plate ionizer India, it will produce ample amounts of alkaline water for several people and also provide reliable performance. For high capacity, daily use, the Tyent NMP-9 water ionizer India may prove more reliable and suitable.
+            Our NMP-11 is optimised for an active lifestyle, expanding families, athletes, and anyone who needs more water each day. Being a premium 11 plate ionizer India, it will produce ample amounts of alkaline water for several people and also provide reliable performance. For high capacity, daily use, the <Link href="/nmp-9">Tyent NMP-9 water ionizer India</Link> may prove more reliable and suitable.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Countertop Convenience with Under-Counter Level Performance</h3>
@@ -518,12 +518,12 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>NMP-11 vs UCE-11 Plus – Which Should You Choose?</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Both options provide top-end performance, but one option may be better suited to your installation and family needs. If flexibility is desired at the countertop, the NMP-11 might be a better option, and if built-in solutions are preferred, users can check out the Tyent UCE-11 plus water ionizer in India. The long-term usability, technology and features are all considered when looking at Tyent vs kangen.
+            Both options provide top-end performance, but one option may be better suited to your installation and family needs. If flexibility is desired at the countertop, the NMP-11 might be a better option, and if built-in solutions are preferred, users can check out the <Link href="/under-counter-water-ionizers">Tyent UCE-11 plus water ionizer in India</Link>. The long-term usability, technology and features are all considered when looking at <Link href="/tyentvskangen">Tyent vs kangen</Link>.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order the Tyent NMP-11 Online</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            NMP-11 can be ordered through the official website of Tyent India easily. Research in detail about the products, read specifications, and ask for professional help before buying. Customers can also see how it compares with the Tyent NMP-7 water ionizer in India to pick the appropriate model to suit their home's needs.
+            NMP-11 can be ordered through the official website of Tyent India easily. Research in detail about the products, read specifications, and ask for professional help before buying. Customers can also see how it compares with the <Link href="/nmp-7">Tyent NMP-7 water ionizer in India</Link> to pick the appropriate model to suit their home's needs.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Warranty Support</h3>

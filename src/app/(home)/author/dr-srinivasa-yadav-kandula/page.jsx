@@ -17,30 +17,44 @@ export default function AuthorPage() {
   const authorSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula#person",
     "name": "Dr. Srinivasa Yadav Kandula",
-    "jobTitle": "Senior Consultant Laparoscopic, Robotic, Bariatric & Laser Surgeon",
-    "description": "Senior Consultant General Surgeon with over 20 years of experience in laparoscopic, robotic, bariatric, and laser surgery.",
-    "image": "https://www.tyent.co.in/Dr.%20Srinivasa%20Yadav%20Kandula.jpeg",
     "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula",
-    "sameAs": ["https://in.linkedin.com/in/srinivasa-yadav-kandula-626a1715"],
+    "jobTitle": "Senior Consultant Laparoscopic, Robotic, Bariatric & Laser Surgeon",
+    "description": "Dr. Srinivasa Yadav Kandula is a Senior Consultant General Surgeon and an expert in laparoscopic, robotic, bariatric, and laser surgery with over 20 years of experience in advanced surgical care.",
+    "image": "https://www.tyent.co.in/Dr.%20Srinivasa%20Yadav%20Kandula.jpeg",
     "worksFor": {
       "@type": "Organization",
-      "name": "Pristyn Care, Bangalore (Bellandur)"
+      "name": "Pristyn Care",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bellandur, Bangalore",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
     },
+    "sameAs": [
+      "https://www.linkedin.com/in/srinivasa-yadav-kandula-626a1715"
+    ],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "FMAS (Fellow of Minimal Access Surgery)" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "DMAS (Diploma in Minimal Access Surgery)" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "FICRS (Fellow of International College of Robotic Surgeons)" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "FIGE (Fellow of Institute of Gastrointestinal Endoscopy)" },
+      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "ECFMG Certification (USA)" }
+    ],
     "knowsAbout": [
       "Laparoscopic Surgery",
       "Robotic Surgery",
       "Bariatric Surgery",
       "Laser Surgery",
       "Minimally Invasive Surgery",
-      "General Surgery"
-    ],
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Fellowship", "name": "FMAS" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Fellowship", "name": "DMAS" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Fellowship", "name": "FICRS" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Fellowship", "name": "FIGE" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "ECFMG (USA)" }
+      "General Surgery",
+      "Hernia Treatment",
+      "Gallstone Surgery",
+      "Appendicitis Treatment",
+      "Piles Treatment",
+      "Fissures and Fistula Treatment"
     ]
   };
 

@@ -516,12 +516,12 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Who Should Buy the NMP-7? – Best for Mid-Size Families</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            This dynamic countertop water ionizer is carefully designed for medium-sized families who need the best daily hydration. This is the best countertop ionizer 7 plate in India, for generating water in large quantities, up to 3.0 litres per minute. It will support a family of four or five people comfortably, with enough space to drink, cook, wash vegetables, and sanitise.
+            This dynamic countertop water ionizer is carefully designed for medium-sized families who need the best daily hydration. This is the <Link href="/counter-top-water-ionizers">best countertop ionizer 7 plate in India</Link>, for generating water in large quantities, up to 3.0 litres per minute. It will support a family of four or five people comfortably, with enough space to drink, cook, wash vegetables, and sanitise.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>7-Plate Japanese Technology – Better ORP & pH Performance</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            This 7-plate alkaline ionizer India price bracket leader is based on Japan's solid hybrid mesh technology. The system consists of 7 Platinum-coated plates of 99.9% pure titanium. This excellent surface area generates very stable electrical conductivity and increases micro-clustering considerably. This 7-plate configuration offers the optimal balance of high ORP (Oxidation Reduction Potential) and long-lasting durability when compared to the Tyent NMP-5 water ionizer in India.
+            This 7-plate alkaline ionizer India price bracket leader is based on Japan's solid hybrid mesh technology. The system consists of 7 Platinum-coated plates of 99.9% pure titanium. This excellent surface area generates very stable electrical conductivity and increases micro-clustering considerably. This 7-plate configuration offers the optimal balance of high ORP (Oxidation Reduction Potential) and long-lasting durability when compared to the <Link href="/nmp-5">Tyent NMP-5 water ionizer in India</Link>.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Key Features of the Tyent NMP-7 Water Ionizer</h3>
@@ -540,12 +540,12 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>NMP-7 vs NMP-5 & NMP-9 – Which Is Right for You?</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            In terms of the Tyent line-up, the NMP-7 falls right in the middle ground. While the entry-level 5-plate model produces an ORP of -850mV, the premium Tyent NMP-9 water ionizer India produces a powerful -1050mV ORP. The NMP-7 also has much higher antioxidant capacity than the NMP-5, and is the better choice for the active family not yet prepared for the top-tier Tyent NMP-11 water ionizer India.
+            In terms of the Tyent line-up, the NMP-7 falls right in the middle ground. While the entry-level 5-plate model produces an ORP of -850mV, the premium <Link href="/nmp-9">Tyent NMP-9 water ionizer India</Link> produces a powerful -1050mV ORP. The NMP-7 also has much higher antioxidant capacity than the NMP-5, and is the better choice for the active family not yet prepared for the top-tier <Link href="/nmp-11">Tyent NMP-11 water ionizer India</Link>.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Easy Countertop Setup – No Plumber Required</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Installation of a 7-plate water ionizer India model is very easy. Its sleek tankless design just sits right next to your sink and is easily connected to your regular faucet line. The LCD display with a voice confirmation system ensures easy everyday use. When you compare Tyent vs Kangen, you will see that Tyent has a better modern appearance and a user-friendly interface.
+            Installation of a 7-plate water ionizer India model is very easy. Its sleek tankless design just sits right next to your sink and is easily connected to your regular faucet line. The LCD display with a voice confirmation system ensures easy everyday use. When you <Link href="/tyentvskangen">compare Tyent vs Kangen</Link>, you will see that Tyent has a better modern appearance and a user-friendly interface.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Warranty Support</h3>

@@ -14,7 +14,7 @@ const features = [
   {
     link: "/patented-SMPS-plus",
     title: "Patented SMPS Plus Power Supply",
-    img: "/contactIndetail/patentedSMPS.jpeg",
+    img: "/contactIndetail/patentedSMPS.webp",
     desc: "Tyent’s patented SMPS Plus system with 55+ power settings delivers unmatched consistency and durability. Designed exclusively for Tyent, it produces 11.5–2.5 pH water naturally, without chemicals, ensuring superior performance and long-term reliability.",
   },
   {

@@ -135,9 +135,9 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-        <h3 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>
+        <h2 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>
             Technical excellence with global availability
-          </h3>
+          </h2>
         <Video />
       </div>
 
@@ -173,7 +173,7 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-        <h3 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>Our Valued Clients</h3>
+        <h2 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>Our Valued Clients</h2>
         <br />
         <SlickSlider />
       </div>
