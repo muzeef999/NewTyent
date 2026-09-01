@@ -72,12 +72,27 @@ const nextConfig = {
       },
       {
         source: '/assets/Tyent_New_catalog.pdf',
-        destination: '/',
+        destination: '/pdf/Tyent_New_catalog.pdf',
         permanent: true,
       },
       {
         source: '/blog/:slug',
         destination: '/blogs/:slug',
+        permanent: true,
+      },
+      {
+        source: '/contact/tyent-delhi',
+        destination: '/contact/best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi',
+        permanent: true,
+      },
+      {
+        source: '/contact/Best_Hydrogen-Rich_Alkaline_Water_Ionizer_in_pune',
+        destination: '/contact/best-hydrogen-rich-alkaline-water-ionizer-in-pune',
+        permanent: true,
+      },
+      {
+        source: '/contact/best-hydrogen-rich-alkaline-water-ionizer-in-delhi',
+        destination: '/contact/best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi',
         permanent: true,
       },
     ];
