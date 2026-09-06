@@ -30,6 +30,20 @@ const Page = async () => {
   // Static blogs only (API blogs removed)
   const sortedBlogs = [
     {
+      slug: "water-ionizer-vs-hydrogen-water-generator",
+      title: "Water Ionizer vs Hydrogen Water Generator: What's the Difference?",
+      img: "/blog-water-ionizer-vs-hydrogen-generator.webp",
+      username: "Tyent India",
+      createdAt: "2026-09-06T00:00:00.000Z",
+    },
+    {
+      slug: "the-evolution-of-water-purification-from-boiling-water-to-water-ionizers",
+      title: "The Evolution of Water Purification: From Boiling Water to Water Ionizers",
+      img: "/blog-evolution-water-purification.webp",
+      username: "Tyent India",
+      createdAt: "2026-09-06T00:00:00.000Z",
+    },
+    {
       slug: "tyent-uce-plus-series-luxury-water-ionizer-modern-homes",
       title: "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
       img: "/blog-uce-plus-luxury.webp",
