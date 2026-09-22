@@ -36,6 +36,14 @@ import C_92 from "@/asserts/certifications/92.webp"
 import C_93 from "@/asserts/certifications/93.webp"
 import C_94 from "@/asserts/certifications/94.webp"
 import C_95 from "@/asserts/certifications/94.webp"
+import gmp1 from "@/asserts/certifications/gmp-1.webp"
+import gmp2 from "@/asserts/certifications/gmp-2.webp"
+import gmp3 from "@/asserts/certifications/gmp-3.webp"
+import gmp4 from "@/asserts/certifications/gmp-4.webp"
+import kidpUcePlus from "@/asserts/certifications/kidp-uce-plus.webp"
+import gPassNew from "@/asserts/certifications/g-pass-new.webp"
+import iso13485New from "@/asserts/certifications/iso13485-new.webp"
+import innoBizNew from "@/asserts/certifications/inno-biz-new.webp"
 import Head from "next/head";
 
 
@@ -48,16 +56,20 @@ const Header = dynamic(() => import("../compoents/Header"), {
 const iconImages = [
   { src: icon1, alt: "ISO 9001 - International standard for quality management" },
   { src: icon2, alt: "ISO 14001 - International standard for quality management" },
-  { src: icon3, alt: "ISO 13485 - Medical Device Certificate" },
+  { src: iso13485New, alt: "ISO 13485 - Medical Device Certificate" },
   { src: icon21, alt: "Tyent Plates/Electrodes Certificate" },
   {src:Tyent_FDA_1, alt: "US FDA - Medical Device manufacturer"},
   { src: icon6, alt: "KFDA - Medical Device manufacturer" },
-  { src: icon4, alt: "GMP - Medical Device manufacturer" },
-  { src: icon5, alt: "Inno-Biz certification" },
+  { src: gmp1, alt: "GMP - Medical Device manufacturer (Page 1)" },
+  { src: gmp2, alt: "GMP - Medical Device manufacturer (Page 2)" },
+  { src: gmp3, alt: "GMP - Medical Device manufacturer (Page 3)" },
+  { src: gmp4, alt: "GMP - Medical Device manufacturer (Page 4)" },
+  { src: innoBizNew, alt: "Inno-Biz certification" },
   { src: icon8, alt: "Certificate of Designation of an excellent company - Water Generator" },
-  { src: G_pass, alt: "Certificate of Designation of an excellent company - Water  ionizer" },
+  { src: gPassNew, alt: "G-PASS - Certificate of Designation of an excellent company - Water Ionizer" },
   { src: icon16, alt: "Tyent certificate of Free sales" },
   { src: icon17, alt: "Tyent - KITA Membership certificate" },
+  { src: kidpUcePlus, alt: "KIDP - Korea Institute of Design Promotion - UCE PLUS Series" },
   { src: kuv, alt: "TUV - Tyent European Directives Certificate - Tyent YT-Series " },
   { src: icon7, alt: "TUV - Tyent European Directives Certificate - Tyent NMP-Series" },
   { src: icon19, alt: "TUV - Tyent European Directives Certificate - Tyent UCE PLUS-Series" },
