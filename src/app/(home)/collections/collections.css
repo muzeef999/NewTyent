@@ -46,8 +46,6 @@
 .collection-hero-banner img {
   width: 100%;
   height: auto;
-  margin-top: -80px;
-  margin-bottom: -80px;
 }
 
 .collection-hero-banner img.collection-banner-desktop {
@@ -59,11 +57,6 @@
 }
 
 @media (max-width: 768px) {
-  .collection-hero-banner img {
-    margin-top: -30px;
-    margin-bottom: -30px;
-  }
-
   .collection-hero-banner img.collection-banner-desktop {
     display: none;
   }

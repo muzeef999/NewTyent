@@ -276,12 +276,12 @@ export default function AllIonizers() {
           All Tyent Water Ionizers – Shop the Complete Collection in India
         </h1>
         <img
-          src="/collections-banner-desktop.webp"
+          src="/collections-banner-desktop.jpg"
           alt="All Ionizers – Tyent India"
           className="collection-banner-desktop"
         />
         <img
-          src="/collections-banner-mobile.webp"
+          src="/collections-banner-mobile.jpg"
           alt="All Ionizers – Tyent India"
           className="collection-banner-mobile"
         />
