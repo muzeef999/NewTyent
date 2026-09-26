@@ -29,7 +29,7 @@ const BoosttheBody = ({Boost}) => {
               
               <div 
               >
-                <h1
+                <h2
                   style={{
                     fontSize: "clamp(20px, 5vw + 18px, 36px)",
                     fontWeight: "700",
@@ -39,7 +39,7 @@ const BoosttheBody = ({Boost}) => {
                   }}
                 >
                   {Boost.title}
-                </h1>
+                </h2>
 
                 <p
                   style={{

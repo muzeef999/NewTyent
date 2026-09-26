@@ -97,6 +97,7 @@ const data = [
 const WaterFilterCards = ({ icon, title, content }) => {
   return (
     <div className="custom-card-uce-scroll">
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent UCE-9 Plus – Under-Counter Alkaline Water Ionizer India</h1>
   <div
     className="d-flex flex-column justify-content-center align-items-center ml-4"
   >
@@ -998,9 +999,9 @@ const page = () => {
                   <b>SMART</b> safety Diagnosis function
                 </h2>
 
-                <h4 className="m-2 mt-4">
+                <h3 className="m-2 mt-4">
                   <b>Automatic Stop Function</b>
-                </h4>
+                </h3>
 
                 <p className="m-2">
                   The water outflow automatically stops to prevent overflow or
@@ -1008,17 +1009,17 @@ const page = () => {
                   immediately after the unit shuts off for added safety and
                   convenience.
                 </p>
-                <h4 className="m-2 mt-4">
+                <h3 className="m-2 mt-4">
                   <b>Temperature sensor</b>
-                </h4>
+                </h3>
 
                 <p className="m-2">
                   The unit features a temperature sensor that prevents
                   accidental hot water inflow, ensuring safety and protection.
                 </p>
-                <h4 className="m-2 mt-4">
+                <h3 className="m-2 mt-4">
                   <b>Sensing function of supplied raw water</b>
-                </h4>
+                </h3>
 
                 <p className="m-2">
                   The unit automatically stops functional water outflow when raw
@@ -1026,9 +1027,9 @@ const page = () => {
                   power supply from damage, preventing water waste, and avoiding
                   accidental leaks.
                 </p>
-                <h4 className="m-2 mt-4">
+                <h3 className="m-2 mt-4">
                   <b>Detects if filter door is open</b>
-                </h4>
+                </h3>
 
                 <p className="m-2">
                   The water supply automatically stops when the door is open,
@@ -1164,38 +1165,38 @@ const page = () => {
             The UCE-9 Plus combines top-quality under-counter performance, attractive installation and high-tech ionization technology. If you compare the UCE-9 Plus with the Tyent NMP-9 vs Kangen K8, or Tyent vs Kangen, you will find that the UCE-9 Plus has built-in reliability, along with a few convenient features.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+          <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the UCE-9 Plus and how is it different from countertop models?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the UCE-9 Plus and how is it different from countertop models?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               UCE-9 Plus is an under-counter water ionizer; the main unit is concealed underneath your kitchen cabinet. Capable of high-performance and still retaining countertop space and keeping your kitchen clean and modern.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does UCE-9 Plus require professional installation?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does UCE-9 Plus require professional installation?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Yes. It is advisable to have someone professionally install it to ensure the plumbing connections are correct, the system operation is optimal, and it is installed properly. Proper installation also ensures maximum efficiency and safe and reliable operation of the ionizer.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does the UCE-9 Plus have?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does the UCE-9 Plus have?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The UCE-9 Plus comes with 9 premium titanium plates, making the electrolysis efficient. Providing stable alkaline, acidic, and purified water capabilities and reliable long-term operation for home water supply applications.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is UCE-9 Plus suitable for hard water in India?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is UCE-9 Plus suitable for hard water in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               When used with proper filtration and regular maintenance, the UCE-9 Plus will operate efficiently under a variety of water conditions. Optimum performance will require occasional replacement of filters depending on water quality.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent UCE-9 Plus in India?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent UCE-9 Plus in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
               Currently, the price for the 9-plate water machine in India depends on the offers received, availability and installation details. A professional website dedicated to Tyent India can offer you updated pricing information and help with your purchase.
             </p>

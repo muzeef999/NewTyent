@@ -149,8 +149,8 @@ const ProductSection = ({ products, specifications }) => {
 
         </Col>    
         <Col sm={12} md={12} lg={6} xl={6}>
-          <h1 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#291495"}}>{model}</h1>
-          <h1 style={{color:'#000',fontSize:'20px'}}>{desc}</h1>
+          <h2 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#291495"}}>{model}</h2>
+          <h2 style={{color:'#000',fontSize:'20px'}}>{desc}</h2>
           <hr />
           <h4 className="m-2">
   M.R.P: <span style={{ fontWeight: 500 }}>
@@ -162,7 +162,7 @@ const ProductSection = ({ products, specifications }) => {
   </span>
 </h4>
           <hr />
-          <h4 className="m-2" style={{ fontWeight: 500 }}>Specifications</h4>
+          <h2 className="m-2" style={{ fontWeight: 500 }}>Specifications</h2>
           <hr />
           <Table  className="custom-table table-borderless" hover responsive>
             <tbody>

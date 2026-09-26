@@ -15,7 +15,7 @@ const Certifications = () => {
   return (
     <>
       <div className="container text-center">
-        <h3 className="fw-bold subtitle-tight">International Certifications & Global Trust</h3>
+        <h2 className="fw-bold subtitle-tight">International Certifications & Global Trust</h2>
         <center>
           <p
            data-aos="fade-in"

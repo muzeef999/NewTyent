@@ -278,6 +278,8 @@ const TyentNMP5 = () => {
       </amp-analytics>
     
     <div style={{width:'100% !important', overflow:'hidden !important'}}>
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent NMP-9 (9-Plate Alkaline Water Ionizer India)</h1>
+
 
       <button className={`fixed-vertical-button`}>
               <a
@@ -584,38 +586,38 @@ const TyentNMP5 = () => {
             Choose Tyent NMP-9 for its reliable 9-plate technology and consistent alkaline and hydrogen-rich water production. Further, you can expect sleek countertop design and robust performance. It is also backed by our prompt customer support and premium build quality, providing a long-term solution.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+          <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How is NMP-9 different from NMP-7?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How is NMP-9 different from NMP-7?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The NMP-9 highlights nine electrolysis plates, offering higher ionization efficiency and greater hydrogen production every time. It also comes with improved performance and is ideal for households with higher daily water consumption.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is 9-plate ionizer better than 7-plate?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is 9-plate ionizer better than 7-plate?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Yes, a 9-plate ionizer generally offers strong ionization and better hydrogen generation. It also comes with consistent performance, making it a viable choice for families who desire premium alkaline water with long-term reliability.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What pH levels can the NMP-9 achieve?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What pH levels can the NMP-9 achieve?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The Tyent NMP-9 delivers a wide pH range, producing alkaline, neutral, and acidic water for multiple daily applications. It includes drinking, cooking, food preparation, and household cleaning. So, it can be regulated as per your preferences.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is NMP-9 suitable for large Indian families?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is NMP-9 suitable for large Indian families?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Yes, it has high water output and advanced 9-plate technology. It can also guarantee continuous performance, making the Tyent NMP-9 an excellent choice for larger Indian families with greater daily water requirements.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What warranty does Tyent offer on NMP-9?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What warranty does Tyent offer on NMP-9?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
               The Tyent NMP-9 includes detailed warranty coverage and dedicated customer support. Warranty terms might differ, so refer to the official product details or contact Tyent India for the latest information.
             </p>

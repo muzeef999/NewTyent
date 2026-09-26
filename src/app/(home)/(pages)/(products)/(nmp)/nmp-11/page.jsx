@@ -240,6 +240,8 @@ const TyentNMP5 = () => {
     
   
     <div style={{width:'100% !important', overflow:'hidden !important'}}>
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent NMP-11</h1>
+
 
       <button className={`fixed-vertical-button`}>
               <a
@@ -536,38 +538,38 @@ const TyentNMP5 = () => {
             They are the top countertop water ionizer 11 plate for their advanced technology, high-quality construction, and reliability. As a high-performance countertop ionizer in India, it delivers reliable performance, consistent water quality, and long-term ease of use from a trusted Tyent water ionizer.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+          <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. What makes NMP-11 the top model in the NMP series?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. What makes NMP-11 the top model in the NMP series?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Our NMP-11 has advanced 11-plate technology, top-of-the-line filtration, intelligent controls and superior performance. It aims to maximise the efficiency, the water production, and the reliability of operation for daily use in families.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. How many plates does the Tyent NMP-11 have?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. How many plates does the Tyent NMP-11 have?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Our Tyent NMP-11 comes with 11 high-quality electrolysis titanium plates with an efficient coating. This high-tech design provides stable ionization to assist in the production of stable alkaline, acidic, and purified water for everyday use.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. Who should buy NMP-11 over NMP-9?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. Who should buy NMP-11 over NMP-9?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Our NMP-11 may be a better choice for households that drink more water, are larger families, athletes, or those who value better performance. Its new technology and extra capacity give added efficiency for rigorous daily water requirements.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the price of Tyent NMP-11 in India?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the price of Tyent NMP-11 in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Alkaline ionizer 11 plate India price depends on the present offers, accessibility, and permitted dealership charges. Please check our official Tyent India website for new pricing and buying support, or reach out to the sales team.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. Does NMP-11 come with a lifetime warranty?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. Does NMP-11 come with a lifetime warranty?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
               Product components and official warranty terms may affect warranties. For the full warranty and customer support information, customers are advised to check with Tyent India at the time of purchase for up-to-date warranty details.
             </p>

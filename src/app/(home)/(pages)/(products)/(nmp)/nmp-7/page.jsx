@@ -42,7 +42,7 @@ const Banner = dynamic(
 export const metadata = {
   title: "Tyent NMP-7 Water Ionizer – 7 Plate Alkaline Machine India",
   description: "Tyent NMP-7 water ionizer India — 7 Japanese plates, hydrogen-rich alkaline water, ideal for families. Best value countertop ionizer.",
-}; 
+};
 
 const TyentNMP5 = () => {
   const handleTab = (index) => {
@@ -59,7 +59,7 @@ const TyentNMP5 = () => {
     image: leftIamge,
     title: "The Daily Boost Your Body Deserves",
     description:
-      "Daily consumption of TYENT ionised alkaline water boosts  resistance, slows the ageing process, improves nutrient absorption, effectively removes toxins and free radicals, and aids in the prevention and treatment of dangerous chronic diseases such as cancer, diabetes, Hashimoto’s, gout, hypertension, stomach pain, colitis, digestive disorders, and many more…",
+      "Daily consumption of TYENT ionised alkaline water boosts  resistance, slows the ageing process, improves nutrient absorption, effectively removes toxins and free radicals, and aids in the prevention and treatment of dangerous chronic diseases such as cancer, diabetes, Hashimoto's, gout, hypertension, stomach pain, colitis, digestive disorders, and many more…",
   };
 
   const specifications = [
@@ -133,7 +133,7 @@ const TyentNMP5 = () => {
     {
       title: "7 Japanese Plates",
       description:
-        "The Tyent NMP-7 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -950*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
+        "The Tyent NMP-7 is equipped with five platinum-coated, 99.9% pure titanium solid hybrid mesh electrodes/plates, engineered with advanced Japanese technology. It ensures stable oxygen levels, an ORP of up to -950*, and superior micro-clustering. Backed by a 15-year warranty, it boasts a lifespan of over 45+ years.",
       icon: Plates, // Replace with the actual path to your icon
     },
     {
@@ -145,7 +145,7 @@ const TyentNMP5 = () => {
     {
       title: "Produces 7 Water Levels",
       description:
-        "The Tyent NMP-7 water ionizer produces a continuous stream of 7 different water levels,ranging from strong alkaline water (11.5 pH) to strong acidic water (2.5 pH). This versatile ionizer meets all your family’s needs, providing pH levels for drinking, cleaning, and more.",
+        "The Tyent NMP-7 water ionizer produces a continuous stream of 7 different water levels,ranging from strong alkaline water (11.5 pH) to strong acidic water (2.5 pH). This versatile ionizer meets all your family's needs, providing pH levels for drinking, cleaning, and more.",
       icon: display, // Replace with the actual path to your icon
     },
     {
@@ -163,19 +163,19 @@ const TyentNMP5 = () => {
     {
       title: "ECO Mode",
       description:
-        "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
+        "The Tyent water ionizer's features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
       icon: ECOMode, // Replace with the actual path to your icon
     },
     {
       title: "Real-Time Filter Indication",
       description:
-        "The Tyent water ionizer’s features a user-friendly LCD display that tracks real-time filter usage, alerting you when replacements are needed. This convenient monitoring system helps maintain optimal performance and ensures clean, healthy water at all times.",
+        "The Tyent water ionizer's features a user-friendly LCD display that tracks real-time filter usage, alerting you when replacements are needed. This convenient monitoring system helps maintain optimal performance and ensures clean, healthy water at all times.",
       icon: filterIndication, // Replace with the actual path to your icon
     },
     {
       title: "TURBO Mode",
       description:
-        "Tyent is the only water ionizer in the industry that produces strong alkaline water at 11.5 pH without the use of chemicals, salts, or enhancers, thanks to its patented SMPS PLUS technology. This powerful water is ideal for cleaning fruits and vegetables, removing pesticides, insecticides, wax, and color coatings.",
+        "Tyent is the only water ionizer in the industry that produces strong alkaline water at 11.5 pH without the use of chemicals, salts, or enhancers, thanks to its patented SMPS PLUS technology. This powerful water is ideal for cleaning fruits and vegetables, removing pesticides, insecticides, wax, and color coatings.",
       icon: turbo, // Replace with the actual path to your icon
     },
   ];
@@ -183,14 +183,14 @@ const TyentNMP5 = () => {
   const onetouch = {
     title: "Easy To Use One Touch Display",
     subTitle:
-      "Tyent water ionizers offer a user-friendly one-touch display with clear icons, making it easy to select and activate your desired water type effortlessly for convenient, customizable hydration.",
+      "Tyent water ionizers offer a user-friendly one-touch display with clear icons, making it easy to select and activate your desired water type effortlessly for convenient, customizable hydration.",
     link: "/7-types-of-Tyent-water",
-  }; 
+  };
 
   return (
     <>
 
-    
+
          {/* AMP Analytics Script */}
           <Head>
             <script
@@ -199,8 +199,8 @@ const TyentNMP5 = () => {
               src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
             />
           </Head>
-    
-          
+
+
           {/* AMP Google Ads + GA + Conversion */}
           <amp-analytics type="gtag" data-credentials="include">
             <script type="application/json">
@@ -228,6 +228,7 @@ const TyentNMP5 = () => {
             </script>
           </amp-analytics>
     <div style={{ width: "100% !important", overflow: "hidden !important" }}>
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent NMP-7</h1>
 
       <button className={`fixed-vertical-button`}>
               <a
@@ -240,9 +241,9 @@ const TyentNMP5 = () => {
                 <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
               </a>
             </button>
-            
+
             <Banner/>
-     
+
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
@@ -267,7 +268,7 @@ const TyentNMP5 = () => {
                 includes a 3-year warranty on the machine, a 15-year warranty on
                 the electrodes/plates, and a lifespan exceeding 45 years. Ideal
                 for small households, it provides clean, healthy ionized
-                water effortlessly.
+                water effortlessly.
               </p>
             </Col>
           </Row>
@@ -276,8 +277,8 @@ const TyentNMP5 = () => {
         <div className="section-spacing">
           <h2 style={{ color: "#5ac4f2" }}>
             <b>
-              <span style={{ color: "#291495" }}>Loud and clear.</span> Tyent’s
-              unparalleled specifications - no other ionizer comes close!
+              <span style={{ color: "#291495" }}>Loud and clear.</span> Tyent's
+              unparalleled specifications - no other ionizer comes close!
             </b>
           </h2>
 
@@ -310,7 +311,7 @@ const TyentNMP5 = () => {
               }}
             />
 
-            
+
           <div className={"nmp-5-desktop-one-touch-main-banner mt-2"}>
             {/* Right-Aligned Content */}
             <div className={"nmp-banner-content"}>
@@ -341,15 +342,15 @@ const TyentNMP5 = () => {
                 {/* Benefits */}
                 <div className="mt-3">
                   <p className={"nmp-banner-benefits-touch"}>
-                    Tyent’s one-touch display with clear icons ensures
+                    Tyent's one-touch display with clear icons ensures
                     effortless selection of your desired water type for
-                    convenient hydration.
+                    convenient hydration.
                     <br />
                   </p>
                 </div>
               </div>
               <br />
-              <Link 
+              <Link
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
                 href={"/7-types-of-Tyent-water"}
@@ -563,38 +564,38 @@ const TyentNMP5 = () => {
             This 7-plate hydrogen water ionizer India is unbeatable in terms of chemical-free performance and beats any competition based on MLM rates. Invest in your family's well-being and hydration by getting the best mid-tier Japanese-engineered wellness device today.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+          <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the difference between NMP-7 and NMP-9?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the difference between NMP-7 and NMP-9?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The main difference is in the number of plates and the level of antioxidants. The Tyent NMP-7 is based on 7 plates that have an ORP of up to -950mV. The NMP-9 has 9 plates, which provide a higher -1050mV ORP and more molecular hydrogen.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does Tyent NMP-7 have?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How many plates does Tyent NMP-7 have?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               It is equipped with 7 advanced solid hybrid mesh plates coated with platinum and titanium. Made by Permelec, Japan, these high-purity plates provide maximum electrical surface area for optimum water electrolysis.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is NMP-7 good for daily family use?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Is NMP-7 good for daily family use?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Yes, it is the right 7 plate water ionizer India for home use. It offers a powerful flow rate of 3.0 L/min, which meets the drinking, cooking, and sanitising needs of a medium-sized family.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent NMP-7 in India?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What is the price of Tyent NMP-7 in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The standard countertop 7 plate water machine India price is ₹2,05,000 M.R.P. In contrast to competing models, this 7 plate alkaline ionizer India price is free of any multi-level marketing fees and just charges for the technology.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does NMP-7 remove fluoride and chlorine from water?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>Does NMP-7 remove fluoride and chlorine from water?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
               Dual 0.01 micron filters effectively filter out chlorine, heavy metals, and bacteria. Regular electrolysis, however, will not eliminate a dissolved mineral such as fluoride, so when using it on high TDS water, use it in conjunction with an RO pre-filter.
             </p>

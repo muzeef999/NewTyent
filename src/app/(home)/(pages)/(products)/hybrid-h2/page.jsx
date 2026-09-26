@@ -111,6 +111,7 @@ const page = () => {
 
   return (
     <>
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent H2 Hybrid</h1>
       <Head>
         <script
           async
@@ -1071,45 +1072,45 @@ const page = () => {
           </h3>
 
           <div style={{ marginBottom: "16px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
               1. What is the difference between hydrogen water and alkaline water?
-            </h4>
+            </h3>
             <p style={{ lineHeight: 1.7, color: "#4f4f4f" }}>
               Hydrogen water is filled with molecular hydrogen, but alkaline water is more concerned with pH and mineralisation. Hydrogen-rich drinking water with the highest advanced technology is the goal of the Hybrid H2, designed for everyday hydration.
             </p>
           </div>
 
           <div style={{ marginBottom: "16px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
               2. Is the Hybrid H2 suitable for daily drinking?
-            </h4>
+            </h3>
             <p style={{ lineHeight: 1.7, color: "#4f4f4f" }}>
               Yes. The Hybrid H2 can be used in a regular household for everyday hydration as it produces hydrogen-rich water. Recommended maintenance is done to ensure long-term performance and water quality.
             </p>
           </div>
 
           <div style={{ marginBottom: "16px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
               3. What ORP and hydrogen levels does the Hybrid H2 produce?
-            </h4>
+            </h3>
             <p style={{ lineHeight: 1.7, color: "#4f4f4f" }}>
               The operating conditions and maintenance of the product can lead to changes in ORP and dissociation of hydrogen from the source water. Customers are advised to check the official Tyent product documentation for the most up-to-date technical specifications.
             </p>
           </div>
 
           <div style={{ marginBottom: "16px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
               4. Who should choose Hybrid H2 over NMP or UCE series?
-            </h4>
+            </h3>
             <p style={{ lineHeight: 1.7, color: "#4f4f4f" }}>
               The Hybrid H2 is perfect for users who want to use dedicated hydrogen-rich water technology. If you're more traditional, Tyent's countertop water ionizer or under-counter water ionizer is also a good choice.
             </p>
           </div>
 
           <div style={{ marginBottom: "16px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#291495", marginBottom: "6px" }}>
               5. What is the price of Tyent Hybrid H2 in India?
-            </h4>
+            </h3>
             <p style={{ lineHeight: 1.7, color: "#4f4f4f" }}>
               The price of the hydrogen water generator in India is subject to change according to the available offers, installation needs, and regional dependence. Please check the most current pricing, warranty, and promotional terms and conditions with Tyent India directly.
             </p>

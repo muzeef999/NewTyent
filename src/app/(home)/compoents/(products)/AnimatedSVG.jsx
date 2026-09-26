@@ -16,7 +16,7 @@ const AnimatedSVG = () => {
         <Row>
             <Col md={6}  className='d-flex justify-content-center align-items-center'>
             <div style={{padding:'50px'}}>
-          <h1 style={{fontWeight:'600', color:'#FFF'}}>Tyent's living water = Magical combination of Hydrogen rich + alkaline water </h1>
+          <h2 style={{fontWeight:'600', color:'#FFF'}}>Tyent's living water = Magical combination of Hydrogen rich + alkaline water </h2>
           <p style={{color:'#FFF'}}>Japanese researchers suggest that ionized hydrogen-rich alkaline water may extend life expectancy by 30–35% by reducing oxidative stress and improving cellular health.</p>
           </div>
             </Col>

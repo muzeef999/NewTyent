@@ -244,6 +244,7 @@ const page = () => {
       </amp-analytics>
     
     <div>
+    <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent UCE-13 Plus</h1>
     <Banner />
 
     <Container>
@@ -989,9 +990,9 @@ const page = () => {
                 <b>SMART</b> safety Diagnosis function
               </h2>
 
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Automatic Stop Function</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The water outflow automatically stops to prevent overflow or
@@ -999,17 +1000,17 @@ const page = () => {
                 immediately after the unit shuts off for added safety and
                 convenience.
               </p>
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Temperature sensor</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The unit features a temperature sensor that prevents
                 accidental hot water inflow, ensuring safety and protection.
               </p>
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Sensing function of supplied raw water</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The unit automatically stops functional water outflow when raw
@@ -1017,9 +1018,9 @@ const page = () => {
                 power supply from damage, preventing water waste, and avoiding
                 accidental leaks.
               </p>
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Detects if filter door is open</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The water supply automatically stops when the door is open,
@@ -1156,38 +1157,38 @@ const page = () => {
             The best under-counter water ionizer in India, 13-plate, that offers the best engineering, advanced filtration, powerful hydrogen production, and reliable performance, making it an excellent long-term investment for supreme alkaline water at home.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h3>
+          <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. What makes UCE-13 Plus the most powerful Tyent model?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. What makes UCE-13 Plus the most powerful Tyent model?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The UCE-13 Plus comes with Tyent's most powerful residential water ionizer for high-quality water, with 13 advanced Japanese electrode plates, optimised electrolysis, improved hydrogen formation, advanced filtration and intelligent controls.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Who should buy the UCE-13 Plus?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Who should buy the UCE-13 Plus?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The UCE-13 Plus is best for large families, health-conscious people, athletes, high-quality households and those seeking the highest alkaline water output. In terms of comparison, the Tyent UCE 9 plus alkaline water machine in India is the top choice.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. How many plates does UCE-13 Plus have?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. How many plates does UCE-13 Plus have?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The Tyent UCE-13 Plus comes with thirteen high-quality Japanese titanium-platinum coated plates, designed to increase electrolysis efficiency and generate a stable amount of alkaline water, acidic water and excellent hydrogen output to use every day.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the price of Tyent UCE-13 Plus in India?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the price of Tyent UCE-13 Plus in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Price is subject to change based on offers, installation specifications and availability. Users interested in finding out the differences between the models of the Tyent NMP-11 water ionizer in India can also request the same.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. Does UCE-13 Plus come with lifetime warranty?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. Does UCE-13 Plus come with lifetime warranty?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
               Warranty coverage is subject to the product components and terms that are offered by Tyent India. Another area that customers appreciate in Tyent vs kangen is its support and service.
             </p>

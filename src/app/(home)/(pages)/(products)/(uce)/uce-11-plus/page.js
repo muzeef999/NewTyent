@@ -97,6 +97,7 @@ const data = [
 const WaterFilterCards = ({ icon, title, content }) => {
   return (
     <div className="custom-card-uce-scroll">
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent UCE-11 Plus – 11-Plate Under-Counter Water Ionizer India</h1>
       <div className="ml-4 align-items-center">
         <div style={{ width: "100%", height: "auto" }}>
           <Image src={icon} alt="machine" layout="responsive" priority />
@@ -989,9 +990,9 @@ const page = () => {
                 <b>SMART</b> safety Diagnosis function
               </h2>
 
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Automatic Stop Function</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The water outflow automatically stops to prevent overflow or
@@ -999,17 +1000,17 @@ const page = () => {
                 immediately after the unit shuts off for added safety and
                 convenience.
               </p>
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Temperature sensor</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The unit features a temperature sensor that prevents
                 accidental hot water inflow, ensuring safety and protection.
               </p>
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Sensing function of supplied raw water</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The unit automatically stops functional water outflow when raw
@@ -1017,9 +1018,9 @@ const page = () => {
                 power supply from damage, preventing water waste, and avoiding
                 accidental leaks.
               </p>
-              <h4 className="m-2 mt-4">
+              <h3 className="m-2 mt-4">
                 <b>Detects if filter door is open</b>
-              </h4>
+              </h3>
 
               <p className="m-2">
                 The water supply automatically stops when the door is open,
@@ -1153,38 +1154,38 @@ const page = () => {
             Looking for the best under-sink alkaline ionizer in India for 2025? Discover the trusted Tyent water ionizer system for high standards of engineering, sophisticated filtration, a touch of style, dependable performance and outstanding everyday convenience for your family's hydration needs.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>Frequently Asked Questions</h3>
+          <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>Frequently Asked Questions</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. How is UCE-11 Plus better than UCE-9 Plus?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>1. How is UCE-11 Plus better than UCE-9 Plus?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The UCE-11 Plus is an advanced 11-plate electrolysis water system with increased ionization efficiency and increased daily water production. Ideal for larger families who want top-notch alkaline water results.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Is an 11-plate ionizer worth the extra investment?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Is an 11-plate ionizer worth the extra investment?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               Yes. Families seeking a high-quality alkaline water solution will find an 11-plate ionizer to be more efficient in its ionization process, with higher water output and long-lasting performance.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. Does UCE-11 Plus work with all Indian water sources?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>3. Does UCE-11 Plus work with all Indian water sources?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The system can be operated by the majority of the municipal water supplies in India. Tyent experts can provide the appropriate filtration system configuration during the installation process based on local water quality.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the warranty on Tyent UCE-11 Plus?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the warranty on Tyent UCE-11 Plus?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The warranty is provided as per Tyent India's warranty policy. It is recommended that customers verify the most up-to-date warranties with an authorised Tyent representative prior to purchase.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
-            <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. What is the price of UCE-11 Plus in India?</h4>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. What is the price of UCE-11 Plus in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
               It may vary depending on the installation needs, location and current offers. Simply visit the official website of Tyent India to get the most recent price, product consultation and exclusive purchase assistance.
             </p>
