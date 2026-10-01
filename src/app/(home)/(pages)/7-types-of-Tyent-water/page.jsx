@@ -190,7 +190,43 @@ const page = () => {
     },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use Tyent Alkaline Water Ionizer for Daily Drinking",
+    "description": "A step-by-step guide to safely transitioning into daily alkaline drinking water using a Tyent water ionizer, moving from Alk Level 1 (8.5 pH) to Alk Level 3 (9.5 pH) over 30-40 days.",
+    "totalTime": "P40D",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Alk Level 1 (8.5 pH) – Initial Drinking Water",
+        "text": "Start with Alk Level 1 (8.5 pH) as your initial drinking water. Consume it regularly for the first 15 days to gently introduce alkaline water into your routine.",
+        "url": "https://www.tyent.co.in/7-types-of-Tyent-water#alk-level-1"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Alk Level 2 (9.0 pH) – Intermediate Drinking Water",
+        "text": "Transition to Alk Level 2 (9.0 pH), an intermediate drinking water level, after 15 days of drinking 8.5 pH water. Gradually incorporate it into your routine for enhanced benefits.",
+        "url": "https://www.tyent.co.in/7-types-of-Tyent-water#alk-level-2"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Alk Level 3 (9.5 pH) – Regular Drinking Water",
+        "text": "Use Alk Level 3 (9.5 pH) as your regular drinking water 30-40 days after installation, once you have used both 8.5 pH and 9.0 pH water for at least 30 days total.",
+        "url": "https://www.tyent.co.in/7-types-of-Tyent-water#alk-level-3"
+      }
+    ]
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div>
       <Container>
         <div className="section-spacing">
@@ -481,6 +517,7 @@ const page = () => {
         </div>
       </Container>
     </div>
+    </>
   );
 };
 

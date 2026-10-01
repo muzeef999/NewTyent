@@ -45,7 +45,38 @@ export default async function BlogPost() {
     addSuffix: true,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tyent.co.in/blogs/best-alternative-to-kangen-water-machines-in-india"
+    },
+    "headline": "Best Alternative to Kangen Water Machines in India",
+    "description": "Compare the best alternatives to Kangen water machines in India. Discover Tyent NMP-11, NMP-9 and NMP-7 with better ORP, pH range, pricing and service.",
+    "image": "https://www.tyent.co.in/blog-kangen-alternative.webp",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Srinivasa Yadav Kandula",
+      "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tyent.co.in/tyent-logo.png"
+      }
+    },
+    "datePublished": "2026-07-24"
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
@@ -218,5 +249,6 @@ export default async function BlogPost() {
         </Col>
       </Row>
     </div>
+    </>
   );
 }

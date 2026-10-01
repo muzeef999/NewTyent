@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import filter from "@/asserts/filter.png";
 import filterbackboor from "@/asserts/filterbackboor.webp";
 import Image from "next/image";
+import Link from "next/link";
 import { MdWaterDrop } from "react-icons/md";
 
 
@@ -163,7 +164,7 @@ const Page = () => {
             Experience the <b>Purest, Healthiest,</b> and <b>Safest Water</b> with Tyent’s .01 Micron Filtration. Turn your dream of drinking water that is safe, healthy, and free from contaminants into reality with Tyent’s advanced .01 Micron filtration technology. 
             </p>
             <p>
-            Tyent's advanced <b>.01 Micron Extreme Filtration system</b> sets a new standard for water purification. This powerful dual, over sized, multi-stage filtration removes everyday contaminants like sediment, chlorine, chlorinates, and heavy metals. But it doesn’t stop there.
+            Tyent's advanced <b>.01 Micron Extreme Filtration system</b> sets a new standard for <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>hydrogen-rich alkaline water</Link> purification. This powerful dual, over sized, multi-stage filtration removes everyday contaminants like sediment, chlorine, chlorinates, and heavy metals. But it doesn’t stop there.
             </p>
             <p>
             Independent 3rd-party lab testing confirms that <b>Tyent's</b> filtration eliminates hundreds of harmful toxins, including herbicides, pesticides, pharmaceuticals, and other dangerous pollutants. This filtration level is the same used in kidney dialysis machines, ensuring hospital-grade purity for your drinking water. With <b>Tyent’s .01 Micron filtration,</b> you get the purest, healthiest, and safest water available today, free from harmful contaminants. Experience better health and wellness with every sip!
@@ -196,7 +197,7 @@ const Page = () => {
         <br/>
         <br/>
         <h2 className="text-center"><b>Why Filters are Essential in a Water Ionizer and <br/> Their Importance ?</b></h2>
-        <p className="text-center">Water ionizers are designed to produce clean, healthy, and hydrogen-rich alkaline water. However, without effective <br/> filtration, the water may still contain harmful contaminants like chlorine, heavy metals, bacteria, and pesticides. Here's <br/> why filters are crucial in a water ionizer</p>
+        <p className="text-center"><Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>Water ionizers</Link> are designed to produce clean, healthy, and hydrogen-rich alkaline water. However, without effective <br/> filtration, the water may still contain harmful contaminants like chlorine, heavy metals, bacteria, and pesticides. Here's <br/> why filters are crucial in a water ionizer</p>
          <br/>
          
         <Row className="d-flex flex-wrap g-3">
@@ -258,7 +259,7 @@ const Page = () => {
           <Col md={6} className="d-flex align-items-center justify-content-center">
 
           <div>
-            <h3>Molecular Hydrogen - <b style={{color:'#291495', fontSize:'40px'}}>An emerging medical as</b></h3>
+            <h3><Link href="/hybrid-h2" style={{ color: "inherit", textDecoration: "underline" }}>Molecular Hydrogen</Link> - <b style={{color:'#291495', fontSize:'40px'}}>An emerging medical as</b></h3>
             <p>
             Filters are just like kidneys of a water ionizer, ensuring pure, safe, and high-quality alkaline water. Regular replacement is crucial to maintain purity, protect your health, and sustain optimal ionizer performance. For best results, follow the manufacturer’s filter replacement schedule and invest in high-quality filters for your water ionizer.
             </p>

@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import React from 'react'
 import { Col, Row } from 'react-bootstrap';
+import Link from 'next/link';
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 import { SlEnergy } from "react-icons/sl";
 import { GoDotFill } from "react-icons/go";
@@ -162,9 +163,9 @@ const page = () => {
 
     <div className='container'  data-aos="fade-down">
         <h2 className='text-center'>Why Say <b style={{color:'#291495'}}>YES to Tyent's</b> SMPS <br/> PLUS Power Supply</h2>
-        <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality water ionization. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
+        <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality <Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>water ionization</Link>. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
     </div>
- 
+
 <div className='container'>
     <Row className="d-flex flex-wrap g-3">
           {controls.map((iconItem, index) => (
@@ -186,7 +187,7 @@ const page = () => {
           <Col md={6} className='d-flex justify-content-center align-items-center'> 
            <div className='m-3'>
             <h1><GoDotFill color='red'/>Drawbacks of Transformer Power Supply</h1>
-            <p>Tyent’s SMPS PLUS plays a pivotal role in achieving consistently high-quality water. By dynamically adjusting power output, it stabilizes pH and ORP levels, ensuring that every glass of water you drink is packed with maximum antioxidants, hydrogen, and essential minerals. This results in superior hydrogen-rich alkaline water that supports better hydration, detoxification, and overall health.</p>
+            <p>Tyent’s SMPS PLUS plays a pivotal role in achieving consistently high-quality water. By dynamically adjusting power output, it stabilizes pH and ORP levels, ensuring that every glass of water you drink is packed with maximum antioxidants, hydrogen, and essential minerals. This results in superior <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>hydrogen-rich alkaline water</Link> that supports better hydration, detoxification, and overall health.</p>
            </div>
           </Col>
           <Col md={6}>

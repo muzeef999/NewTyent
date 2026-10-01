@@ -45,7 +45,38 @@ export default async function BlogPost() {
     addSuffix: true,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tyent.co.in/blogs/common-alkaline-water-myths-indian-buyers-should-stop-believing"
+    },
+    "headline": "Common Alkaline Water Myths Indian Buyers Should Stop Believing",
+    "description": "Learn the truth behind common alkaline water myths in India. Compare ionizers, RO systems, bottled alkaline water, ORP, pH and Tyent technology.",
+    "image": "https://www.tyent.co.in/blog-alkaline-myths.webp",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Srinivasa Yadav Kandula",
+      "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tyent.co.in/tyent-logo.png"
+      }
+    },
+    "datePublished": "2026-07-24"
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
@@ -153,5 +184,6 @@ export default async function BlogPost() {
         </Col>
       </Row>
     </div>
+    </>
   );
 }

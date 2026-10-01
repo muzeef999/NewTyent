@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import React from 'react'
 import { Col, Row } from 'react-bootstrap';
 import Image from 'next/image';
+import Link from 'next/link';
 const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
 import hydrogen from "@/asserts/why ionizer/hydrogen.webp";
 import platesBanner from "@/asserts/platesBanner.png"
@@ -77,7 +78,7 @@ const page = () => {
               <Col md={6} className='d-flex justify-content-center align-items-center'>
               <div data-aos="fade-left">
                 <p>Electrodes or plates are one of the most important components of a water ionizer. These plates are typically made of metals like titanium and are coated with a specialized material like platinum, which helps to facilitate the ionization process. When water passes over the plates, an electric current is passed through the water, creating a separation of positive and negative ions.</p>
-                <p>The design, number, and quality of the plates used in a water ionizer play a crucial role in determining the effectiveness and efficiency of the ionization process. A well-designed plate system with more plates typically offers a higher ionization potential, resulting in the production of more hydrogen-rich alkaline water. Additionally, the quality of the materials used for the plates influences their durability and long-term performance.</p>
+                <p>The design, number, and quality of the plates used in a water ionizer play a crucial role in determining the effectiveness and efficiency of the ionization process. A well-designed plate system with more plates typically offers a higher ionization potential, resulting in the production of more <Link href="/collections/all-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>hydrogen-rich alkaline water</Link>. Additionally, the quality of the materials used for the plates influences their durability and long-term performance.</p>
                 <p>It’s important to choose a water ionizer with an advanced plate design and high-quality electrodes to ensure optimal hydrogen-rich alkaline water production. This not only enhances health benefits but also provides long-term cost savings by reducing reliance on expensive bottled water.</p>
               </div>
               </Col>
@@ -165,7 +166,7 @@ const page = () => {
                   >
                     <div>
                       <h3  data-aos="fade-down">
-                        Molecular Hydrogen -{" "}
+                        <Link href="/hybrid-h2" style={{ color: "inherit", textDecoration: "underline" }}>Molecular Hydrogen</Link> -{" "}
                         <span
                           style={{
                             color: "#291495",
