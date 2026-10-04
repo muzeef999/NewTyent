@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Hybrid_Desktop from "@/asserts/hybrid/Hybrid_Desktop_new.jpeg";
-import Hybrid_Mobile from "@/asserts/hybrid/Hybrid_Mobile.webp";
+import Hybrid_Mobile from "@/asserts/hybrid/Hybrid_Mobile_new.jpeg";
 import Image from 'next/image';
 
 const HybridBanner = () => {
