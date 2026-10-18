@@ -30,6 +30,20 @@ const Page = async () => {
   // Static blogs only (API blogs removed)
   const sortedBlogs = [
     {
+      slug: "alkaline-ro-vs-ionized-water",
+      title: "Ionized Hydrogen-Rich Alkaline Water or Just Alkaline RO Water? Don't Be Misled",
+      img: "/blog-alkaline-ro-vs-ionized-water.webp",
+      username: "Tyent India",
+      createdAt: "2026-10-18T00:00:00.000Z",
+    },
+    {
+      slug: "orp-drinking-water-india",
+      title: "What Is ORP (Oxidation Reduction Potential) and Why Should You Care?",
+      img: "/blog-orp-drinking-water.webp",
+      username: "Tyent India",
+      createdAt: "2026-10-18T00:00:00.000Z",
+    },
+    {
       slug: "water-ionizer-vs-hydrogen-water-generator",
       title: "Water Ionizer vs Hydrogen Water Generator: What's the Difference?",
       img: "/blog-water-ionizer-vs-hydrogen-generator.webp",
