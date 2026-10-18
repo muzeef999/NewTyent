@@ -10,8 +10,9 @@
 
 
 @font-face {
-  font-family: 'MyCustomFont'; /* Define the font name */
+  font-family: 'MyCustomFont';
   src: url('../../fonts/QuartzItalic.ttf') format('truetype');
+  font-display: swap;
 }
 
 

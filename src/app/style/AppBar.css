@@ -12,13 +12,28 @@ img {
 }
 
 @font-face {
-  font-family: 'HalenoirEx'; /* Define the font name */
+  font-family: 'HalenoirEx';
   src: url('../../fonts/HalenoirEx-BlackOutline.otf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins'; /* Define the font name */
+  font-family: 'Poppins';
   src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Override slick-carousel font to use font-display: swap */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('~slick-carousel/slick/fonts/slick.eot');
+  src: url('~slick-carousel/slick/fonts/slick.eot?#iefix') format('embedded-opentype'),
+       url('~slick-carousel/slick/fonts/slick.woff') format('woff'),
+       url('~slick-carousel/slick/fonts/slick.ttf') format('truetype'),
+       url('~slick-carousel/slick/fonts/slick.svg#slick') format('svg');
 }
 
 

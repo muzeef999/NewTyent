@@ -69,6 +69,7 @@ const WhatsInside = () => {
               alt="water"
               width={420}
               height={420}
+              sizes="(max-width: 768px) 260px, 420px"
               className="circle-image"
             />
           </div>
@@ -97,6 +98,7 @@ const WhatsInside = () => {
                   alt="water"
                   width={260}
                   height={260}
+                  sizes="260px"
                   className="circle-image"
                 />
               </div>

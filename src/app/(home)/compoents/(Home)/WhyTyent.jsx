@@ -3,6 +3,7 @@ import { SiTicktick } from "react-icons/si";
 import "@/app/style/AppBar.css";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
+import YouTubeFacade from "../YouTubeFacade";
 
 const WhyTyent = () => {
   return (
@@ -34,14 +35,11 @@ const WhyTyent = () => {
       overflow: "hidden",
     }}
   >
-    <iframe
-      src="https://www.youtube.com/embed/VA82Xf6jfv4?rel=0"
-      title="YouTube video player"
-      className="video-frame"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerPolicy="strict-origin-when-cross-origin"
-      allowFullScreen
-    ></iframe>
+    <YouTubeFacade
+      videoId="VA82Xf6jfv4"
+      title="Why Tyent Water Ionizer"
+      style={{ borderRadius: "20px", width: "100%", height: "100%" }}
+    />
   </div>
 </div>
 

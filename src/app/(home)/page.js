@@ -1,11 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap";
-import WhyTyent from "./compoents/(Home)/WhyTyent";
 import SectionTwo from "./compoents/(Home)/SectionTwo";
 import Certifications from "./compoents/Certifications";
 import Slider from "./compoents/Slider";
-import Video from "./compoents/Video";
 import Maps from "./compoents/Maps";
 import dynamic from "next/dynamic";
+
+const Video = dynamic(() => import("./compoents/Video"), { ssr: false });
+const WhyTyent = dynamic(() => import("./compoents/(Home)/WhyTyent"), { ssr: false });
 import minerals from "@/asserts/why ionizer/minerals.png";
 import puredrink from "@/asserts/health/puredrink.webp";
 import Molecular from "@/asserts/health/Molecular.webp";

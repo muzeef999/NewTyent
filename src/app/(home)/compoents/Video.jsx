@@ -1,42 +1,39 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Col, Row } from "react-bootstrap";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import RWebShareComp from "./RWebShare";
+import YouTubeFacade from "./YouTubeFacade";
 
 const videos = [
   {
     id: 1,
-    src: "https://www.youtube.com/embed/fZSV5ebM3D0?rel=0&modestbranding=1",
+    videoId: "fZSV5ebM3D0",
     description:
       "World's No: 1 Tyent Alkaline water ionizer - Now officially available in India.",
-    animation: "fade-left", // First video from left
+    animation: "fade-left",
   },
   {
     id: 2,
-    src: "https://www.youtube.com/embed/k213C_-BOq0?rel=0",
+    videoId: "k213C_-BOq0",
     description:
       "Tyent NMP series water ionizer (Above the Counter Extreme Series).",
-    animation: "fade-up", // Second video from down (middle)
+    animation: "fade-up",
   },
   {
     id: 3,
-    src: "https://www.youtube.com/embed/JAHUlOASNrI?rel=0",
+    videoId: "JAHUlOASNrI",
     description:
       "Tyent Vs Enagic kangen, In-detail product, technology & warranty comparison.",
-    animation: "fade-right", // Third video from right
+    animation: "fade-right",
   },
 ];
 
-const VideoCard = ({ src, description, animation }) => {
-  const iframeRef = useRef(null);
-
+const VideoCard = ({ videoId, description, animation }) => {
   return (
     <div data-aos={animation} data-aos-duration="1000" className="h-100">
-      <div 
-        className="custom-card text-center d-flex flex-column h-100" 
-        style={{ 
+      <div
+        className="custom-card text-center d-flex flex-column h-100"
+        style={{
           padding: "10px",
           border: "1px solid #ebebeb",
           borderRadius: "20px",
@@ -47,30 +44,23 @@ const VideoCard = ({ src, description, animation }) => {
           className="embed-responsive embed-responsive-16by9 mb-3"
           data-aos="zoom-in"
         >
-          <iframe
-            ref={iframeRef}
-            className="embed-responsive-item"
-            src={src}
-            style={{ borderRadius: "18px", width: "100%", height: "210px", border: "none" }}
-            allowFullScreen
-            title="Video"
-          />
+          <YouTubeFacade videoId={videoId} title={description} />
         </div>
         <div
-          style={{ 
-            display: "flex", 
-            alignItems: "center", 
+          style={{
+            display: "flex",
+            alignItems: "center",
             justifyContent: "space-between",
             padding: "0 8px 8px 8px",
             flexGrow: 1
           }}
           data-aos="slide-up"
         >
-          <p 
-            className="text-start mb-0" 
-            style={{ 
-              flexGrow: 1, 
-              fontSize: "14.5px", 
+          <p
+            className="text-start mb-0"
+            style={{
+              flexGrow: 1,
+              fontSize: "14.5px",
               fontWeight: "500",
               color: "#4a4a4a",
               lineHeight: "1.4",
@@ -80,7 +70,7 @@ const VideoCard = ({ src, description, animation }) => {
             {description}
           </p>
           <div style={{ flexShrink: 0, color: "#00aef0" }}>
-            <RWebShareComp text={description} link={src} />
+            <RWebShareComp text={description} link={`https://www.youtube.com/watch?v=${videoId}`} />
           </div>
         </div>
       </div>
@@ -89,13 +79,12 @@ const VideoCard = ({ src, description, animation }) => {
 };
 
 const Video = () => {
-
   return (
     <div className="container">
       <Row className="g-5">
-        {videos.map((video, index) => (
+        {videos.map((video) => (
           <Col md={4} key={video.id}>
-            <VideoCard src={video.src} description={video.description} animation={video.animation} />
+            <VideoCard videoId={video.videoId} description={video.description} animation={video.animation} />
           </Col>
         ))}
       </Row>

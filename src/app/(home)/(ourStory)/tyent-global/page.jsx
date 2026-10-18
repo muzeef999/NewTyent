@@ -391,7 +391,7 @@ const TyentGlobal = () => {
         .promise-bg {
           position: absolute;
           inset: 0;
-          background-image: url('/home/world-map.png');
+          background-image: url('/home/world-map.webp');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;

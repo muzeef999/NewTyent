@@ -60,6 +60,7 @@ const Shop_by_category = () => {
                       alt={item.title}
                       width={320}
                       height={240}
+                      sizes="(max-width: 768px) 85vw, 280px"
                       className="img-fluid category-img"
                       style={{ maxHeight: "200px", width: "auto", objectFit: "contain" }}
                     />
@@ -94,6 +95,7 @@ const Shop_by_category = () => {
                       alt={item.title}
                       width={320}
                       height={140}
+                      sizes="85vw"
                       className="img-fluid category-img"
                       style={{ maxHeight: "250px", width: "auto", objectFit: "contain" }}
                     />

@@ -381,7 +381,7 @@ const OurStory = () => {
           width: 100%;
         }
         .world-map-bg {
-          background-image: url('/home/world-map.png');
+          background-image: url('/home/world-map.webp');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;

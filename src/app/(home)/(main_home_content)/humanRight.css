@@ -17,7 +17,7 @@
 /* ===== STATS SECTION WITH MAP BACKGROUND ===== */
 
 .stats-section {
-  background-image: url("/home/world-map.png");
+  background-image: url("/home/world-map.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: min(92%, 800px);
