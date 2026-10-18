@@ -32,12 +32,6 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 
-const Banner = dynamic(
-  () => import("./TopBannersNmp7"),
-  {
-    ssr: false,
-  }
-);
 
 export const metadata = {
   title: "Tyent NMP-7 Water Ionizer – 7 Plate Alkaline Machine India",
@@ -241,8 +235,6 @@ const TyentNMP5 = () => {
                 <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
               </a>
             </button>
-
-            <Banner/>
 
       <Container>
         <div className="section-spacing">

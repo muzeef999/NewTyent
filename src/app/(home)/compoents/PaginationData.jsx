@@ -45,15 +45,15 @@ const PaginationData = ({ data, itemsPerPage }) => {
                 href={`/blogs/${blog.slug}`}
                 className="text-decoration-none"
               >
-                <div className="shadow-sm  rounded-4 h-100 d-flex flex-column justify-content-between">
+                <div className="shadow-sm rounded-4 h-100 d-flex flex-column overflow-hidden">
                   <img
                     src={blog.img}
                     alt={blog.title || "Blog Image"}
-                    className="w-100 rounded-top mb-3 object-fit-cover"
-                    style={{ height: "230px" }}
+                    className="w-100 object-fit-cover"
+                    style={{ height: "200px" }}
                   />
 
-                  <div className="d-flex p-3 justify-content-between text-secondary small mb-2">
+                  <div className="d-flex px-3 pt-2 justify-content-between text-secondary small">
                     <span>
                       <strong>By:</strong> {blog.username}
                     </span>
@@ -64,10 +64,9 @@ const PaginationData = ({ data, itemsPerPage }) => {
                     </span>
                   </div>
 
-                  <div className="d-flex p-3 justify-content-between align-items-center mb-2">
-                    <h2 className="fs-5 text-black fw-semibold mb-1">{blog.title}</h2>
-
-                    <FiArrowUpRight size={24} color="#291495" />
+                  <div className="px-3 pt-2 pb-3 position-relative">
+                    <h2 className="fs-6 text-black fw-semibold mb-0" style={{ paddingRight: "28px" }}>{blog.title}</h2>
+                    <FiArrowUpRight size={18} color="#291495" style={{ position: "absolute", top: "10px", right: "12px" }} />
                   </div>
 
                 </div>

@@ -32,12 +32,6 @@ import { RxDownload } from "react-icons/rx";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-const TopBannersNMP = dynamic(
-  () => import("./TopBannersNMP"),
-  {
-    ssr: false,
-  }
-);
 
 export const metadata = {
   title: "Tyent NMP-5 Water Ionizer – 5 Plate Alkaline Machine India",
@@ -290,8 +284,6 @@ const TyentNMP5 = () => {
           <RxDownload size={20} style={{ transform: "rotate(180deg)" }} />
         </a>
       </button>
-      <TopBannersNMP />
-
       <div className="section-spacing">
         <ProductSection products={products} specifications={specifications} />
       </div>

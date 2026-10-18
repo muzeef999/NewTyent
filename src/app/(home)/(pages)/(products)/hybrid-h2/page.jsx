@@ -21,13 +21,6 @@ import HybridTouchPreview from "./HybridTouchPreview";
 import Halfhybrid from "@/asserts/hybrid/Halfhybrid.webp"
 import Head from "next/head";
 
-import dynamic from "next/dynamic";
-const Banner = dynamic(
-  () => import("./HybridBanner"),
-  {
-    ssr: false,
-  }
-);
 
 
 export const metadata = {
@@ -149,7 +142,6 @@ const page = () => {
       </amp-analytics>
     <div className="hybridbackground">
       
- <Banner />
       <Container>
         <div className="section-spacing">
           <ProductSection products={products} specifications={specifications} />
