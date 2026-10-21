@@ -49,12 +49,6 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 
-const Banner = dynamic(
-  () => import("./TopBannerUCE13"),
-  {
-    ssr: false,
-  }
-);
 
 export const metadata = {
   title: "Tyent UCE-13 Plus – 13 Plate Flagship Ionizer India",
@@ -131,7 +125,7 @@ const WaterFilterCards = ({ icon, title, content }) => {
 const page = () => {
   const products = [
     {
-      src: [PRODUCTUCE1, PRODUCTUCE2, uceBlack, uceRosegold, uceGold, uceSilver],
+      src: [uceSilver, PRODUCTUCE1, PRODUCTUCE2, uceBlack, uceRosegold, uceGold],
     },
   ];
 
@@ -245,8 +239,6 @@ const page = () => {
     
     <div>
     <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent UCE-13 Plus</h1>
-    <Banner />
-
     <Container>
       <div className="section-spacing">
         <ProductSection products={products} specifications={specifications} />

@@ -46,14 +46,6 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 
-const Banner = dynamic(
-  () => import("./TopBannerUCE11"),
-  {
-    ssr: false,
-  }
-);
-
-
 export const metadata = {
   title: "Tyent UCE-11 Plus – 11 Plate Under Sink Ionizer India",
   description:
@@ -131,7 +123,7 @@ const WaterFilterCards = ({ icon, title, content }) => {
 const page = () => {
   const products = [
     {
-      src: [PRODUCTUCE1, PRODUCTUCE2, uceBlack, uceRosegold, uceGold, uceSilver],
+      src: [uceSilver, PRODUCTUCE1, PRODUCTUCE2, uceBlack, uceRosegold, uceGold],
     },
   ];
 
@@ -245,8 +237,6 @@ const page = () => {
       </amp-analytics>
     <div>
      
-     <Banner />
-
     <Container>
       <div className="section-spacing">
         <ProductSection products={products} specifications={specifications} />

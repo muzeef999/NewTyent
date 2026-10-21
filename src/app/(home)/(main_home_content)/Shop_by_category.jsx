@@ -14,7 +14,7 @@ const categories = [
   {
     title: "Under the counter ionizers",
     desc: "Ultra premium and aesthetically designed",
-    img: "/explore/uceColor1.webp",
+    img: "/home/uce-silver.webp",
     link: "/under-counter-water-ionizers",
   },
   {

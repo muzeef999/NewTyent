@@ -32,7 +32,7 @@ const PaginationData = ({ data, itemsPerPage }) => {
           currentItems.map((blog, index) => (
             <Col
               key={blog.slug}
-              md={4}
+              md={6}
               data-aos={
                 index % 3 === 0
                   ? "fade-right"
@@ -49,8 +49,8 @@ const PaginationData = ({ data, itemsPerPage }) => {
                   <img
                     src={blog.img}
                     alt={blog.title || "Blog Image"}
-                    className="w-100 object-fit-cover"
-                    style={{ height: "200px" }}
+                    className="w-100"
+                    style={{ width: "100%", height: "auto" }}
                   />
 
                   <div className="d-flex px-3 pt-2 justify-content-between text-secondary small">

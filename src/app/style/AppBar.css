@@ -742,10 +742,11 @@ padding-left: 48px !important;
 }
 
 .floating {
-   position: fixed; /* Fixed position to stay at bottom-right */
-  bottom: 2rem;
+  position: fixed;
+  bottom: 20px;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 
 /* Styles for the button */

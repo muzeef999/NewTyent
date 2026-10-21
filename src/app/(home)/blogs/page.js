@@ -99,16 +99,6 @@ const Page = async () => {
 
   return (
   <div>
-    <Header 
-        basic={headerData.basic} 
-        preheading={headerData.preheading} 
-        afterheading={headerData.afterheading}
-        content={headerData.content} 
-        img={headerData.img}
-        animatedText={headerData.animatedText} // Passing dynamic animated text
-      />
-  
-
     <div className="container" style={{overflow:'hidden'}}>
 
       
