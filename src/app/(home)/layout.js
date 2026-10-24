@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "aos/dist/aos.css";
 import "@/app/style/AppBar.css";
 import dynamic from "next/dynamic";
 import { Poppins } from "next/font/google";
@@ -55,11 +54,11 @@ export default function RootLayout({ children, session }) {
         {/* ✅ Google Scripts — placed safely OUTSIDE <Head> */}
 
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-T94BNYD8RB"
         />
 
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -69,7 +68,7 @@ export default function RootLayout({ children, session }) {
           `}
         </Script>
 {/* empty check */}
-        <Script id="conversion-report" strategy="afterInteractive">
+        <Script id="conversion-report" strategy="lazyOnload">
           {`
             function gtag_report_conversion(url) {
               var callback = function () {

@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { SessionProvider } from "next-auth/react";
 import { store } from "../../Redux/store";
 import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Footer from "../compoents/Footer";
