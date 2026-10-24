@@ -51,6 +51,10 @@ const faqItems = [
 ];
 
 const TyentFaqSection = () => {
+  const openFormPopup = () => {
+    window.dispatchEvent(new CustomEvent("openFormModal"));
+  };
+
   return (
     <section className="tyent-faq-section">
       <Container>
@@ -68,9 +72,9 @@ const TyentFaqSection = () => {
                 <Accordion.Item eventKey={String(index)} key={item.question}>
                   <Accordion.Header>
                     <span className="faq-question">{item.question}</span>
-                    <span className="faq-toggle-icon" aria-hidden="true">
-                      &times;
-                    </span>
+                    <svg className="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A90FF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
                   </Accordion.Header>
                   <Accordion.Body>{item.answer}</Accordion.Body>
                 </Accordion.Item>
@@ -84,7 +88,7 @@ const TyentFaqSection = () => {
             </Link>
             <h3 className="demo-title">Book a Free Demo</h3>
             <p className="demo-copy">Your Healthy Upgrade is just a call away !</p>
-            <Button href="/contact" className="demo-button">
+            <Button onClick={openFormPopup} className="demo-button">
               Book a Free Call
               <span className="demo-button-arrow" aria-hidden="true">
                 {">"}
@@ -242,9 +246,14 @@ const TyentFaqSection = () => {
         .faq-toggle-icon {
           flex: 0 0 auto;
           color: #111111;
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           font-weight: 300;
           line-height: 1;
+          transition: transform 0.3s ease;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) .faq-toggle-icon {
+          transform: rotate(180deg);
         }
 
         .faq-accordion .accordion-body {

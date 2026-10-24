@@ -62,6 +62,12 @@ const handleDownloadConversion = () => {
 
 
   useEffect(() => {
+    const handleOpenForm = () => setShowModal(true);
+    window.addEventListener("openFormModal", handleOpenForm);
+    return () => window.removeEventListener("openFormModal", handleOpenForm);
+  }, []);
+
+  useEffect(() => {
     Aos.init({
       duration: 1200, // Smooth & premium feel (1.2s)
       easing: "ease-in-out", // More natural motion
@@ -119,7 +125,7 @@ const handleDownloadConversion = () => {
         </center>
 
         {/* Modal Animation */}
-        {showModal && buttonRef && (
+        {showModal && (
           <div
             className="modal-container"
             style={{
