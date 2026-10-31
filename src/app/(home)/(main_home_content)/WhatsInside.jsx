@@ -46,8 +46,8 @@ const WhatsInside = () => {
     <div className="container inside-section">
 
       <div className="text-center mb-5">
-        <h2 className="bg-heading-text-two-main">Whats Inside</h2>
-        <h3 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h3>
+        <p className="bg-heading-text-two-main">Whats Inside</p>
+        <h1 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h1>
       </div>
 
       {/* Desktop Layout */}

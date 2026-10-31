@@ -48,7 +48,34 @@ export default async function BlogPost() {
     addSuffix: true,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tyent.co.in/blogs/the-evolution-of-water-purification-from-boiling-water-to-water-ionizers"
+    },
+    "headline": "The Evolution of Water Purification: From Boiling Water to Water Ionizers",
+    "description": "Discover the evolution of water purification from boiling and filtration to RO and hydrogen-rich alkaline water ionizers. Learn how water ionizers have changed drinking water technology.",
+    "image": "https://www.tyent.co.in/blog-evolution-water-purification.webp",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Srinivasa Yadav Kandula",
+      "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
+    }
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
@@ -251,5 +278,6 @@ export default async function BlogPost() {
         </Col>
       </Row>
     </div>
+    </>
   );
 }

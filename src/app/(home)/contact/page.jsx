@@ -20,9 +20,9 @@ const Header = dynamic(() => import("../compoents/Header"), {
 });
 
 export const metadata = {
-  title: "Contact Tyent India | Premium & Best Water Ionizers Support",
+  title: "Contact Tyent India: Book a Free Water Ionizer Demo",
   description:
-    "Contact Tyent India for support, inquiries, or business opportunities. Discover certified Ionized alkaline water & hydrogen water ionizers designed for quality and safety.",
+    "Book a free Tyent water ionizer demo or get product support. Call +91 9966 558 556 or find your city across India. Contact us today.",
 };
 
 const headerData = {
@@ -48,7 +48,7 @@ const InfoCard = ({ title, slug, image }) => (
         />
 
         <div className="location-overlay">
-          <h5 className="location-title">{title}</h5>
+          <h3 className="location-title">{title}</h3>
         </div>
       </div>
     </Link>
@@ -141,17 +141,9 @@ const Page = () => {
           <div className="hero-content container">
             <div className="row">
               <div className="col-md-8 col-lg-6">
-                <p className="fw-bold text-white fs-3 mb-1">
-                  Trust, Care & Commitment
-                </p>
-
-                <p className="fw-bold text-white fs-3 mb-1">
-                  Need to Enquire anything ?
-                </p>
-
-                <p className="fw-semibold text-white fs-3 mb-0">
-                  We're happy to help!
-                </p>
+                <h1 className="fw-bold text-white fs-3 mb-0">
+                  Trust, Care & Commitment. Need to Enquire Anything? We're Happy to Help!
+                </h1>
               </div>
             </div>
           </div>
@@ -164,9 +156,9 @@ const Page = () => {
             data-aos="fade-down"
           >
             <div className="contact-toolbar-copy mb-3 mb-md-0 text-start">
-              <h3 className="contact-toolbar-title m-0 fw-bold">
+              <h2 className="contact-toolbar-title m-0 fw-bold">
                 You can find us here!
-              </h3>
+              </h2>
               <p className="contact-toolbar-text m-0 mt-1">
                 We would love to connect with you
               </p>
@@ -254,12 +246,12 @@ const Page = () => {
 
               return (
                 <>
-                  <h4
+                  <h2
                     className="mb-3"
                     style={{ fontWeight: "600" }}
                   >
                     Top 12 Cities
-                  </h4>
+                  </h2>
                   {/* Top Cities */}
                   <Row>
                     {topCities.map((location, index) => (
@@ -273,12 +265,12 @@ const Page = () => {
                   </Row>
 
                   {/* All Cities Heading */}
-                  <h4
+                  <h3
                     className="mt-5 mb-3"
                     style={{ fontWeight: "600" }}
                   >
                     All Cities
-                  </h4>
+                  </h3>
 
                   {/* Remaining Cities */}
                   <Row>

@@ -4,6 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Col, Row, Container } from "react-bootstrap";
+import dynamic from "next/dynamic";
+
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 import uceBlack from "@/asserts/uce-black.webp";
 import uceRosegold from "@/asserts/uce-rosegold.webp";
@@ -463,6 +466,9 @@ export default function UnderCounterIonizers() {
         </div>
 
       </Container>
+      <div className="section-spacing">
+        <TrustedbyExperts />
+      </div>
     </>
   );
 }

@@ -4,6 +4,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { Col, Row, Container } from "react-bootstrap";
+import dynamic from "next/dynamic";
+
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 import nmp5 from "@/asserts/nmp5-collection.webp";
 import nmp9 from "@/asserts/nmp9-collection.webp";
@@ -450,6 +453,9 @@ export default function CounterTopIonizers() {
         </div>
 
       </Container>
+      <div className="section-spacing">
+        <TrustedbyExperts />
+      </div>
     </>
   );
 }

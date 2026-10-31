@@ -4,6 +4,7 @@ import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "@/app/style/Uce.css";
 import Image from "next/image";
+import Link from "next/link";
 import UceTopMachine from "../UceTopMachine";
 import list01 from "@/asserts/uce/list-01.webp";
 import UceDisplay from "../UceDisplay";
@@ -45,8 +46,9 @@ import uceSilver from "@/asserts/uce-silver.webp";
 import smpsplus from "@/asserts/whyTent/smpsplus.webp";
 import JOGDail from "@/asserts/uce/JOGDail.webp"
 import dynamic from "next/dynamic";
-
 import Head from "next/head";
+
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 
 
@@ -1082,7 +1084,7 @@ const page = () => {
             Tyent UCE-13 Plus – 13-Plate Flagship Water Ionizer India
           </h2>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Enjoy high-quality alkaline water from our Tyent UCE-13 plus water ionizer in India that's designed for better performance, advanced Japanese technology and superior filtration. It is designed especially for modern homes, providing a supply of alkaline water and further enhancing the generation of hydrogen, with an easy-to-use operation, professional installation and reliable after-sales services.
+            Enjoy high-quality alkaline water from our Tyent UCE-13 plus water ionizer in India that's designed for better performance, <Link href="/solid-hybrid-mesh-plates" style={{ color: "#291495", textDecoration: "underline" }}>advanced Japanese technology</Link> and superior filtration. It is designed especially for modern homes, providing a supply of alkaline water and further enhancing the generation of hydrogen, with an easy-to-use operation, professional installation and reliable after-sales services.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Tyent UCE-13 Plus – The Most Powerful Ionizer in India</h3>
@@ -1131,7 +1133,7 @@ const page = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>UCE-13 Plus vs UCE-11 Plus – Is the Upgrade Worth It?</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            The UCE-13 Plus has the same design as the Tyent UCE-11 Plus water ionizer in India, but features an extra set of electrode plates, providing superior electrolysis efficiency and hydrogen production capacity. The upgrade will give users with the desire for maximum output, premium features, and flagship-level performance the same trusted quality and user-friendly operation that they've already enjoyed with Tyent.
+            The UCE-13 Plus has the same design as the <Link href="/uce-11-plus" style={{ color: "#291495", textDecoration: "underline" }}>Tyent UCE-11 Plus water ionizer in India</Link>, but features an extra set of electrode plates, providing superior electrolysis efficiency and hydrogen production capacity. The upgrade will give users with the desire for maximum output, premium features, and flagship-level performance the same trusted quality and user-friendly operation that they've already enjoyed with Tyent.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>How to Order Tyent UCE-13 Plus Online</h3>
@@ -1161,7 +1163,7 @@ const page = () => {
           <div style={{ marginBottom: "20px" }}>
             <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>2. Who should buy the UCE-13 Plus?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-              The UCE-13 Plus is best for large families, health-conscious people, athletes, high-quality households and those seeking the highest alkaline water output. In terms of comparison, the Tyent UCE 9 plus alkaline water machine in India is the top choice.
+              The UCE-13 Plus is best for large families, health-conscious people, athletes, high-quality households and those seeking the highest alkaline water output. In terms of comparison, the <Link href="/uce-9-plus" style={{ color: "#291495", textDecoration: "underline" }}>Tyent UCE 9 plus alkaline water machine in India</Link> is the top choice.
             </p>
           </div>
 
@@ -1175,20 +1177,24 @@ const page = () => {
           <div style={{ marginBottom: "20px" }}>
             <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>4. What is the price of Tyent UCE-13 Plus in India?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-              Price is subject to change based on offers, installation specifications and availability. Users interested in finding out the differences between the models of the Tyent NMP-11 water ionizer in India can also request the same.
+              Price is subject to change based on offers, installation specifications and availability. Users interested in finding out the differences between the models of the <Link href="/nmp-11" style={{ color: "#291495", textDecoration: "underline" }}>Tyent NMP-11 water ionizer in India</Link> can also request the same.
             </p>
           </div>
 
           <div style={{ marginBottom: "20px" }}>
             <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>5. Does UCE-13 Plus come with lifetime warranty?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
-              Warranty coverage is subject to the product components and terms that are offered by Tyent India. Another area that customers appreciate in Tyent vs kangen is its support and service.
+              Warranty coverage is subject to the product components and terms that are offered by Tyent India. Another area that customers appreciate in <Link href="/tyentvskangen" style={{ color: "#291495", textDecoration: "underline" }}>Tyent vs kangen</Link> is its support and service.
             </p>
           </div>
         </div>
 
     </Container>
-  </div></>
+  </div>
+  <div className="section-spacing">
+    <TrustedbyExperts />
+  </div>
+  </>
 );
 };
 

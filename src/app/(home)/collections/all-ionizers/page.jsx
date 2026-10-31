@@ -225,7 +225,7 @@ const allProducts = [
     title: "Sterilizing Water Generator",
     subtitle: "Electrolyzed Sterilizing Water Generator – TIE-N15WR",
     image: watergen,
-    link: "/Sterilizing-water-generator",
+    link: "/sterilizing-water-generator",
     category: "Industrial",
     details: [
       { label: "Type", value: "Electrolyzed sterilizing water" },

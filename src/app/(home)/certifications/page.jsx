@@ -61,27 +61,27 @@ const iconImages = [
   {src:Tyent_FDA_1, alt: "US FDA - Medical Device manufacturer"},
   { src: icon6, alt: "KFDA - Medical Device manufacturer" },
   { src: gmp1, alt: "GMP - Medical Device manufacturer" },
-  { src: innoBizNew, alt: "Inno-Biz certification" },
-  { src: icon8, alt: "Certificate of Designation of an excellent company - Water Generator" },
-  { src: gPassNew, alt: "G-PASS - Certificate of Designation of an excellent company - Water Ionizer" },
+  { src: innoBizNew, alt: "Inno-biz certification" },
+  { src: icon8, alt: "Certificate of Designation as an excellent company - Water Generator" },
+  { src: gPassNew, alt: "G-PASS - Certificate of Designation of an excellent company - Water ionizer" },
   { src: icon16, alt: "Tyent certificate of Free sales" },
   { src: icon17, alt: "Tyent - KITA Membership certificate" },
-  { src: kidpUcePlus, alt: "KIDP - Korea Institute of Design Promotion - UCE PLUS Series" },
-  { src: kuv, alt: "TUV - Tyent European Directives Certificate - Tyent YT-Series " },
+  { src: kidpUcePlus, alt: "KIDP - Korea Industrial Design Promotion - UCE PLUS Series" },
+  { src: kuv, alt: "TUV - Tyent European Directives Certificate - Tyent YT-Series" },
   { src: icon7, alt: "TUV - Tyent European Directives Certificate - Tyent NMP-Series" },
   { src: icon19, alt: "TUV - Tyent European Directives Certificate - Tyent UCE PLUS-Series" },
-  { src: icon9, alt: "CB Test Certifacte - NMP Series - Safety of electrical and electronic products" },
-  { src: icon10, alt: "CB Test Certifacte - UCE Series - Safety of electrical and electronic products" },
-  { src: icon18, alt: "CB Test Certifacte - H2- Hybrid Series - Safety of electrical and electronic products" },
+  { src: icon9, alt: "CB Test Certificate - NMP Series - Safety of electrical and electronic products" },
+  { src: icon10, alt: "CB Test Certificate - UCE Series - Safety of electrical and electronic products" },
+  { src: icon18, alt: "CB Test Certificate - H2 - Hybrid Series - Safety of electrical and electronic products" },
   { src: icon11, alt: "RoHS compliant - NMP Series" },
   { src: icon12, alt: "RoHS compliant - UCE Series" },
-  { src: icon13, alt: "RoHS compliant - H2- Hybrid, YT Series" },
+  { src: icon13, alt: "RoHS compliant - H2 - Hybrid, YT Series" },
   { src: icon14, alt: "Tyent R&D certificate" },
   { src: icon20, alt: "Tyent CE certificate - H2-Hybrid" },
   { src: C_91, alt: "EMC Directive certificate" },
-  { src: C_92, alt: "EC Declaration of Confirmity Certificate - Hybrid water ionizer" },
-  { src: C_93, alt: "EC Declaration of Confirmity Certificate - NMP Series & YT Series." },
-  { src: C_94, alt: "EC Declaration of Confirmity Certificate - UCE-Series" },
+  { src: C_92, alt: "EC Declaration of Conformity Certificate - Hybrid water ionizer" },
+  { src: C_93, alt: "EC Declaration of Conformity Certificate - NMP Series & YT Series." },
+  { src: C_94, alt: "EC Declaration of Conformity Certificate - UCE-Series" },
   { src: C_95, alt: "Promising Company Certificate" },
 ];
 
@@ -114,6 +114,8 @@ const CertificationsPage = () => {
     
     
       <Head>
+        <title>Tyent Certifications: ISO, US FDA, KFDA and CE | Tyent India</title>
+        <meta name="description" content="View Tyent's ISO 9001, ISO 13485, US FDA registration, KFDA, CE and RoHS documents for its water ionizers. See the full list." />
         <script
           async
           custom-element="amp-analytics"
@@ -158,6 +160,8 @@ const CertificationsPage = () => {
         content={headerData.content}
         img={headerData.img}
         animatedText={headerData.animatedText}
+        useH1={true}
+        subtitleAsText={true}
       />
 
       <div className="section-spacing">
@@ -192,9 +196,9 @@ const CertificationsPage = () => {
                   </div>
                   
                 </div>
-                <p className="text-center  mt-2" style={{ color: "#291495", width:"90%" }}>
-                    <b>{image.alt}</b>
-                  </p>
+                <h2 className="text-center mt-2" style={{ color: "#291495", width:"90%", fontSize: "16px", fontWeight: "600" }}>
+                    {image.alt}
+                  </h2>
               </Col>
             ))}
           </Row>

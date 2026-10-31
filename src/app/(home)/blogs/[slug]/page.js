@@ -103,7 +103,7 @@ export default async function BlogPage({ params }) {
     "the-tyent-advantage-why-your-family-deserves-the-ultimate-hydration": [
       { keyword: "Why Tyent", url: "/why-tyent" },
       { keyword: "basic filtration", url: "/filter-1" },
-      { keyword: "essential minerals like calcium and magnesium", url: "/7-types-of-Tyent-water" },
+      { keyword: "essential minerals like calcium and magnesium", url: "/7-types-of-tyent-water" },
     ],
     "the-tyent-uce-13-plus-transforming-your-home-hydration": [
       { keyword: "space-saving under-counter design", url: "/under-counter-water-ionizers" },

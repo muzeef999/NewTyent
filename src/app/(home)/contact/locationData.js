@@ -3,44 +3,44 @@ export const locationsData = {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi",
     title: "New Delhi",
     image: "/contact/newDelhi.jpg",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In New Delhi",
+    metaTitle: "Tyent Ionizer for Delhi NCR Homes: Get a Callback",
     metaDescription:
-      "Discover the Best Hydrogen Rich Alkaline Water Ionizer In New Delhi. Advanced filtration, high hydrogen levels, and expert installation available.",
+      "Bring a Tyent ionizer to your Delhi NCR home. Ask about model options, request a callback and get it installed without the hassle.",
   },
  "tyent-mumbai": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-mumbai",
     title: "Mumbai",
     image: "/contact/mumbai.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Mumbai",
+    metaTitle: "Mumbai Kitchens: Compact Tyent Water Ionizers",
     metaDescription:
-      "Experience the Best Hydrogen Rich Alkaline Water Ionizer In Mumbai designed with advanced filtration, enhanced hydrogen levels, and reliable installation support.",
+      "Space is tight in most Mumbai kitchens. Explore Tyent's under-sink UCE and countertop NMP models and see which one fits yours.",
   },
 
   "tyent-hyderabad": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-hyderabad",
     title: "Hyderabad",
     image: "/contact/hyderabad.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Hyderabad",
+    metaTitle: "Hyderabad's Tyent Water Ionizer Range | Compare Models",
     metaDescription:
-      "Choose the Best Hydrogen Rich Alkaline Water Ionizer In Hyderabad with superior filtration, high hydrogen concentration, and professional installation assistance.",
+      "Not sure which Tyent ionizer fits your Hyderabad kitchen? Our team walks you through countertop and under-sink models and shows them live.",
   },
 
   "tyent-bengaluru": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-bengaluru",
     title: "Bengaluru",
     image: "/contact/bengaluru.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Bengaluru",
+    metaTitle: "Alkaline Water Machine Bengaluru | Tyent Home Ionizers",
     metaDescription:
-      "Explore the Best Hydrogen Rich Alkaline Water Ionizer In Bengaluru offering advanced filtration, enhanced hydrogen levels, and reliable installation support.",
+      "Apartment or independent house in Bengaluru? Find a Tyent alkaline water machine that fits your space, with installation handled by our team.",
   },
 
   "tyent-ahmedabad": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-ahmedabad",
     title: "Ahmedabad",
     image: "/contact/ahmedabad.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Ahmedabad",
+    metaTitle: "Ahmedabad Hydrogen Water Ionizer: Tyent Models & Enquiry",
     metaDescription:
-      "Find the Best Hydrogen Rich Alkaline Water Ionizer In Ahmedabad with advanced filtration, high hydrogen levels, and trusted installation support.",
+      "Switch to hydrogen-rich alkaline water in Ahmedabad. Browse Tyent models, compare features and send an enquiry to get started.",
   },
 
   "tyent-kochi": {
@@ -56,27 +56,27 @@ export const locationsData = {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-vijayawada",
     title: "Vijayawada",
     image: "/contact/vijayawada.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Vijayawada",
+    metaTitle: "Tyent Alkaline Water for Vijayawada Homes",
     metaDescription:
-      "Discover the Best Hydrogen Rich Alkaline Water Ionizer In Vijayawada offering advanced filtration, high hydrogen levels, and expert installation support.",
+      "Explore Tyent ionizers in Vijayawada, understand how the models differ and arrange a home demo with our team.",
   },
 
   "tyent-pune": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-pune",
     title: "Pune",
     image: "/contact/pune.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Pune",
+    metaTitle: "Best Hydrogen-Rich Alkaline Water Ionizer in Pune | Tyent",
     metaDescription:
-      "Explore the Best Hydrogen Rich Alkaline Water Ionizer In Pune offering advanced filtration, high hydrogen levels, and reliable installation support.",
+      "Choosing a home water ionizer in Pune? Our Tyent model guide helps you pick, and our team can arrange a demo at your place.",
   },
 
   "tyent-visakhapatnam": {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-visakhapatnam",
     title: "Visakhapatnam",
     image: "/contact/visakhapatnam.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Visakhapatnam",
+    metaTitle: "Visakhapatnam: NMP & UCE Tyent Ionizers with Installation",
     metaDescription:
-      "Discover the Best Hydrogen Rich Alkaline Water Ionizer In Visakhapatnam. Advanced filtration, high hydrogen levels, and expert installation available.",
+      "Compare Tyent's NMP and UCE ranges, get your questions answered and have your ionizer installed in Visakhapatnam by our team.",
   },
 
   "tyent-gurugram": {
@@ -92,9 +92,9 @@ export const locationsData = {
     slug: "best-hydrogen-rich-alkaline-water-ionizer-in-lucknow",
     title: "Lucknow",
     image: "/contact/lucknow.png",
-    metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Lucknow",
+    metaTitle: "Tyent Water Ionizer in Lucknow: Features, Models, Support",
     metaDescription:
-      "Discover the Best Hydrogen Rich Alkaline Water Ionizer In Lucknow with advanced filtration technology, high hydrogen levels, and professional installation support.",
+      "See a Tyent water ionizer working before you commit. Our Lucknow team shows you the features and answers your questions in person.",
   },
 
   "tyent-guntur": {
@@ -136,9 +136,9 @@ export const locationsData = {
   slug: "best-hydrogen-rich-alkaline-water-ionizer-in-surat",
   title: "Surat",
   image: "/contact/surat.png",
-  metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Surat",
+  metaTitle: "Surat Water Ionizer Buying Guide | Tyent Alkaline Models",
   metaDescription:
-    "Discover the Best Hydrogen Rich Alkaline Water Ionizer In Surat. Advanced filtration, high hydrogen levels, and expert installation available.",
+    "Have questions about Tyent ionizers in Surat? Our team can explain the models, share details and set up a demo that suits your schedule.",
 },
 
 "tyent-faridabad": {
@@ -154,18 +154,18 @@ export const locationsData = {
   slug: "best-hydrogen-rich-alkaline-water-ionizer-in-jaipur",
   title: "Jaipur",
   image: "/contact/jaipur.png",
-  metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Jaipur",
+  metaTitle: "Jaipur Alkaline Water Ionizer Guide | Tyent India",
   metaDescription:
-    "Get the Best Hydrogen Rich Alkaline Water Ionizer In Jaipur featuring advanced filtration, high hydrogen content, and expert installation for healthy, pure water.",
+    "Looking for an alkaline water machine for your Jaipur home? Check the Tyent range, ask for guidance and get help with installation.",
 },
 
 "tyent-chandigarh": {
   slug: "best-hydrogen-rich-alkaline-water-ionizer-in-chandigarh",
   title: "Chandigarh",
   image: "/contact/chandigarh.png",
-  metaTitle: "Best Hydrogen Rich Alkaline Water Ionizer In Chandigarh",
+  metaTitle: "Countertop & Under-Sink Ionizers in Chandigarh | Tyent",
   metaDescription:
-    "Experience the Best Hydrogen Rich Alkaline Water Ionizer In Chandigarh with high hydrogen water, advanced filtration, and professional installation for healthy hydration.",
+    "From countertop to under-sink, Tyent ionizers come in several series. Find the right one for your Chandigarh home with our team's help.",
 },
 
 "tyent-chennai": {

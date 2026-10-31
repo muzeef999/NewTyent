@@ -45,6 +45,7 @@ import JOGDail from "@/asserts/uce/JOGDail.webp"
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 export const metadata = {
   title: "Tyent UCE-11 Plus – 11 Plate Under Sink Ionizer India",
@@ -1035,7 +1036,7 @@ const page = () => {
           fontSize: "2rem", // Default for large screens
         }}
       >
-        Tyent UCE-11 plus Specification's
+        Tyent UCE-11 plus Specifications
       </h2>
 
       <Table className="custom-table" hover responsive>
@@ -1183,6 +1184,9 @@ const page = () => {
         </div>
 
     </Container>
+  </div>
+  <div className="section-spacing">
+    <TrustedbyExperts />
   </div>
   </>
 );

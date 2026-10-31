@@ -165,9 +165,9 @@ const InDetail = () => {
                   className="image-saop"
                 />
                 <div className="ms-3">
-                  <h4>
+                  <h3>
                     <b>{item.title}</b>
-                  </h4>
+                  </h3>
                   <ul>
                     {item.features.map((feature, i) => (
                       <li key={i}>{feature}</li>

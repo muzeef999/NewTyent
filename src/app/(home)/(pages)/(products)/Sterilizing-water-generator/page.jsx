@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import watergen from "@/asserts/watergen/sterilizing-water-gen.png";
@@ -58,8 +59,13 @@ const Page = () => {
 
   return (
     <div>
+      <Head>
+        <title>TIE-N15WR Sterilizing Water Generator | Tyent India</title>
+        <meta name="description" content="Make sterilizing water from just water and salt. The Tyent TIE-N15WR gives 99.9% sterilization for hospitals and restaurants. Get a quote." />
+      </Head>
       <Container>
         <div className="section-spacing">
+          <h1 className="text-center mb-4" style={{ fontWeight: "600" }}>TIE - N15WR</h1>
           <ProductSection products={products} specifications={specifications} />
         </div>
 
@@ -69,7 +75,7 @@ const Page = () => {
               <Image src={pro_01} alt="pro1" layout="responsive" priority />
             </div>
 
-            <p
+            <h3
               style={{
                 color: "#0082bc",
                 fontSize: "30px",
@@ -77,7 +83,7 @@ const Page = () => {
               }}
             >
               1) Generative Principle & Purpose Of use
-            </p>
+            </h3>
             <Row>
               <Col
                 md={8}
@@ -144,7 +150,7 @@ const Page = () => {
           </center>
 
           <br />
-          <p
+          <h2
             style={{
               textAlign: "center",
               fontSize: "40px",
@@ -152,7 +158,7 @@ const Page = () => {
             }}
           >
             Generative Principle
-          </p>
+          </h2>
           <br />
           <Row>
             <Col
@@ -222,7 +228,7 @@ const Page = () => {
               </div>
             </Container>
           </center>
-          <p
+          <h2
             style={{
               textAlign: "center",
               fontSize: "40px",
@@ -230,7 +236,7 @@ const Page = () => {
             }}
           >
             Product Features
-          </p>
+          </h2>
 
           <Row>
             <Col
@@ -243,9 +249,9 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Dual Electrolyzer System
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 (Patent technology 10-1556371) <br />
                 <br />
@@ -287,17 +293,17 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   ONE TOUCH automatic flush
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 The touch sense system allows you to easily get the water going
                 or stop. You can see the status of the button you chose.
                 <br />
                 <br />
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Production of different concentrations of active chlorine
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 The product automatically produces the sterilized water based on
                 its use (100/200/1000ppm)
@@ -315,9 +321,9 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   1000ppm generation function for high concentration
-                </span>{" "}
+                </h3>{" "}
                 <br />
               </p>
             </Col>
@@ -343,15 +349,15 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   SMPS Power method
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 SMPS power supply method provides steady power. <br />
                 <br />
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Safe self check function
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 The safety function has improved by displaying and alerting the
                 unmet condition of the electrolytes (salt) and flow.
@@ -370,9 +376,9 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   TPE material salt container & integral structure
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 he salt container made of environmentally friendly TPE material
                 is safe and durable.
@@ -406,9 +412,9 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Salt drain valve fitted
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 Convenient for cleaning the salt container after not using it
                 for long time.
@@ -427,9 +433,9 @@ const Page = () => {
               }}
             >
               <p>
-                <span style={{ fontSize: "50px", fontWeight: "600" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Available with Wall-mounted
-                </span>{" "}
+                </h3>{" "}
                 <br />
                 The wall-mounted design provides effective use of space.
               </p>

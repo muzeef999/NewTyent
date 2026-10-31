@@ -45,7 +45,34 @@ export default async function BlogPost() {
     addSuffix: true,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tyent.co.in/blogs/tyent-uce-plus-series-luxury-water-ionizer-modern-homes"
+    },
+    "headline": "Why the Tyent UCE-PLUS Series Is Becoming the Ultimate Luxury Upgrade for Modern Homes",
+    "description": "Discover why the Tyent UCE-PLUS Series is the ultimate luxury upgrade for modern homes with award-winning design, advanced water ionization, and space-saving installation.",
+    "image": "https://www.tyent.co.in/blog-uce-plus-luxury.webp",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Srinivasa Yadav Kandula",
+      "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
+    }
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
@@ -117,7 +144,7 @@ export default async function BlogPost() {
             </p>
             <ul>
               <li>Engineers use <Link href="/solid-hybrid-mesh-plates">advanced Japanese medical-grade Solid Hybrid Mesh Plates</Link> for exceptional electrolysis conductivity, superior surface area and greater anti-oxidant production.</li>
-              <li>The <Link href="/patented-SMPS-plus">Patented SMPS PLUS&reg; power supply</Link> naturally generates a broad pH range from 11.5-2.5 without any use of artificial chemicals, enhancers or salt.</li>
+              <li>The <Link href="/patented-smps-plus">Patented SMPS PLUS&reg; power supply</Link> naturally generates a broad pH range from 11.5-2.5 without any use of artificial chemicals, enhancers or salt.</li>
               <li>Kidney-dialysis level purification with <Link href="/why-tyent">dual 0.01-micron filters that eliminate nano-plastics</Link>, nano-virus and heavy metals.</li>
             </ul>
             <p>
@@ -207,5 +234,6 @@ export default async function BlogPost() {
         </Col>
       </Row>
     </div>
+    </>
   );
 }

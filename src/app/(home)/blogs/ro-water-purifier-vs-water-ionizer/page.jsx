@@ -45,7 +45,34 @@ export default async function BlogPost() {
     addSuffix: true,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tyent.co.in/blogs/ro-water-purifier-vs-water-ionizer"
+    },
+    "headline": "The End of the RO Water Purifier? Why Water Ionizers Are Becoming the Future of Healthy Living",
+    "description": "Learn why many households are moving from RO water purifiers to advanced water ionizers for healthier hydration, natural minerals, and modern water purification.",
+    "image": "https://www.tyent.co.in/blog-ro-vs-ionizer.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Srinivasa Yadav Kandula",
+      "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
+    }
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
@@ -207,5 +234,6 @@ export default async function BlogPost() {
         </Col>
       </Row>
     </div>
+    </>
   );
 }

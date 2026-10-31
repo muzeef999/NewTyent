@@ -32,6 +32,7 @@ import { RxDownload } from "react-icons/rx";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 export const metadata = {
   title: "Tyent NMP-5 Water Ionizer – 5 Plate Alkaline Machine India",
@@ -184,7 +185,7 @@ const TyentNMP5 = () => {
     title: "Easy To Use One Touch Display",
     subTitle:
       "Tyent offer a user-friendly one-touch display with clear icons, enabling effortless selection of your desired water type for  convenient, customizable hydration.",
-    link: "/7-types-of-Tyent-water",
+    link: "/7-types-of-tyent-water",
   };
 
 
@@ -394,7 +395,7 @@ const TyentNMP5 = () => {
               <Link
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
-                href={"/7-types-of-Tyent-water"}
+                href={"/7-types-of-tyent-water"}
               >
                 Click Here &nbsp;
                 <GoArrowRight />
@@ -461,7 +462,7 @@ const TyentNMP5 = () => {
               <Link
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
-                href={"/7-types-of-Tyent-water"}
+                href={"/7-types-of-tyent-water"}
               >
                 Click Here &nbsp;
                 <GoArrowRight />
@@ -499,7 +500,7 @@ const TyentNMP5 = () => {
               fontSize: "2rem", // Default for large screens
             }}
           >
-            Tyent NMP-5 Specification's
+            Tyent NMP-5 Specifications
           </h2>
 
           <Table className="custom-table" hover responsive>
@@ -647,6 +648,9 @@ const TyentNMP5 = () => {
         </div>
 
       </Container>
+    </div>
+    <div className="section-spacing">
+      <TrustedbyExperts />
     </div>
      </>
   );

@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+  title: "7 Types of Ionized Water from Tyent and Their Uses",
+  description: "Tyent ionizers make 7 water levels, from 11.5 pH cleaning water to 2.5 pH sanitizer. See what each is for and how to use it.",
+};
+
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import "@/app/style/TypesofTyentwater.css";
@@ -202,21 +207,21 @@ const page = () => {
         "position": 1,
         "name": "Alk Level 1 (8.5 pH) – Initial Drinking Water",
         "text": "Start with Alk Level 1 (8.5 pH) as your initial drinking water. Consume it regularly for the first 15 days to gently introduce alkaline water into your routine.",
-        "url": "https://www.tyent.co.in/7-types-of-Tyent-water#alk-level-1"
+        "url": "https://www.tyent.co.in/7-types-of-tyent-water#alk-level-1"
       },
       {
         "@type": "HowToStep",
         "position": 2,
         "name": "Alk Level 2 (9.0 pH) – Intermediate Drinking Water",
         "text": "Transition to Alk Level 2 (9.0 pH), an intermediate drinking water level, after 15 days of drinking 8.5 pH water. Gradually incorporate it into your routine for enhanced benefits.",
-        "url": "https://www.tyent.co.in/7-types-of-Tyent-water#alk-level-2"
+        "url": "https://www.tyent.co.in/7-types-of-tyent-water#alk-level-2"
       },
       {
         "@type": "HowToStep",
         "position": 3,
         "name": "Alk Level 3 (9.5 pH) – Regular Drinking Water",
         "text": "Use Alk Level 3 (9.5 pH) as your regular drinking water 30-40 days after installation, once you have used both 8.5 pH and 9.0 pH water for at least 30 days total.",
-        "url": "https://www.tyent.co.in/7-types-of-Tyent-water#alk-level-3"
+        "url": "https://www.tyent.co.in/7-types-of-tyent-water#alk-level-3"
       }
     ]
   };
@@ -242,12 +247,12 @@ const page = () => {
 
         <div className="section-spacing">
           <div>
-            <h2 className="text-center" data-aos="fade-up">
+            <h1 className="text-center" data-aos="fade-up">
               <b>
                 Turbo
                 <span style={{ color: "#FF0000" }}>(11.5 pH)</span>
               </b>
-            </h2>
+            </h1>
             <h4 className="text-center m-0" data-aos="fade-up">
               Strong alkaline water
             </h4>
@@ -284,7 +289,7 @@ const page = () => {
                       />
                     </div>
                     <div className="p-3">
-                      <h2 className="my-3">{item.title}</h2>
+                      <h3 className="my-3">{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
                   </div>
@@ -309,9 +314,9 @@ const page = () => {
               for at least 30 days before transitioning to this level.
             </p>
             <br />
-            <h1 className="text-center" data-aos="fade-up">
+            <h3 className="text-center" data-aos="fade-up">
               <b>How to Use ?</b>
-            </h1>
+            </h3>
             <br />
 
             <Row
@@ -376,12 +381,12 @@ const page = () => {
 
         <div className="section-spacing">
           <div>
-            <h3 data-aos="fade-up" className="text-center m-3">
+            <h2 data-aos="fade-up" className="text-center m-3">
               <b>
                 {" "}
                 <span style={{ color: "#00FD12" }}>H20</span> water{" "}
               </b>
-            </h3>
+            </h2>
             <h4 data-aos="fade-up" className="text-center m-0">
               H20 water Purified water or Neutral Water{" "}
             </h4>
@@ -409,7 +414,7 @@ const page = () => {
                       />
                     </div>
                     <div className="p-3">
-                      <h2>{item.title}</h2>
+                      <h3>{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
                   </div>

@@ -55,7 +55,7 @@ export default async function BlogPost() {
       "@type": "WebPage",
       "@id": "https://www.tyent.co.in/blogs/alkaline-ro-vs-ionized-water"
     },
-    "headline": "Alkaline RO Water vs Hydrogen-Rich Ionized Water India",
+    "headline": "Ionized Hydrogen-Rich Alkaline Water or Just Alkaline RO Water? Don't Be Misled",
     "description": "Alkaline pH does not mean hydrogen-rich. See how alkaline RO and ionized water differ and what to ask a seller before you buy.",
     "image": "https://www.tyent.co.in/blog-alkaline-ro-vs-ionized-water.webp",
     "author": {
@@ -65,13 +65,11 @@ export default async function BlogPost() {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Tyent",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.tyent.co.in/tyent-logo.png"
-      }
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
     },
-    "datePublished": "2026-10-18"
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
   };
 
   return (
@@ -129,7 +127,7 @@ export default async function BlogPost() {
               Why Does the Difference Matter for Your Health?
             </h2>
             <p>
-              While studies are underway to find out the health benefits of hydrogen-rich water for humans, the current evidence is mostly from animal studies and needs to be confirmed by larger and more rigorous human studies. Having an alkaline pH or high H&#8322; concentration does not necessarily mean that the machine will have any health benefits. First and foremost, people need to have access to safe and treated drinking water. (systematic review, PubMed indexed)
+              While studies are underway to find out the <Link href="/benefits" style={{ color: "#291495", textDecoration: "underline" }}>health benefits of hydrogen-rich water</Link> for humans, the current evidence is mostly from animal studies and needs to be confirmed by larger and more rigorous human studies. Having an alkaline pH or high H&#8322; concentration does not necessarily mean that the machine will have any health benefits. First and foremost, people need to have access to safe and treated drinking water. (systematic review, PubMed indexed)
             </p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>
@@ -145,17 +143,17 @@ export default async function BlogPost() {
               <li>Claims that the water can treat disease or that it can alter the body&apos;s pH.</li>
             </ul>
             <p>
-              These checks will apply regardless of the cost or brand of the hydrogen-rich water being marketed, whether it is a countertop water ionizer or an under sink water ionizer.
+              These checks will apply regardless of the cost or brand of the hydrogen-rich water being marketed, whether it is a <Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>countertop water ionizer</Link> or an <Link href="/under-counter-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>under sink water ionizer</Link>.
             </p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>
               Why Consider a Tyent Water Ionizer?
             </h2>
             <p>
-              Tyent India offers countertop NMP and under-counter UCE models of water ionizers, including the tyent NMP-5 water ionizer, tyent NMP-7 water ionizer, tyent NMP-9 water ionizer, and tyent NMP-11 water ionizer, along with under-counter options like the UCE 9 plus alkaline water machine India, tyent UCE-11 plus water ionizer India, and tyent UCE-13 plus water ionizer India, that are different from RO purifiers even with an added alkaline filter. Since the main objective of these water treatment devices is to produce ionized and hydrogen rich water, the treatment process is very relevant.
+              Tyent India offers countertop NMP and under-counter UCE models of water ionizers, including the <Link href="/nmp-5" style={{ color: "#291495", textDecoration: "underline" }}>tyent NMP-5 water ionizer</Link>, <Link href="/nmp-7" style={{ color: "#291495", textDecoration: "underline" }}>tyent NMP-7 water ionizer</Link>, <Link href="/nmp-9" style={{ color: "#291495", textDecoration: "underline" }}>tyent NMP-9 water ionizer</Link>, and <Link href="/nmp-11" style={{ color: "#291495", textDecoration: "underline" }}>tyent NMP-11 water ionizer</Link>, along with under-counter options like the <Link href="/uce-9-plus" style={{ color: "#291495", textDecoration: "underline" }}>UCE 9 plus alkaline water machine India</Link>, <Link href="/uce-11-plus" style={{ color: "#291495", textDecoration: "underline" }}>tyent UCE-11 plus water ionizer India</Link>, and <Link href="/uce-13-plus" style={{ color: "#291495", textDecoration: "underline" }}>tyent UCE-13 plus water ionizer India</Link>, that are different from RO purifiers even with an added alkaline filter. Since the main objective of these water treatment devices is to produce ionized and hydrogen rich water, the treatment process is very relevant.
             </p>
             <p>
-              Any model of Tyent water ionizer sold in India needs to be confirmed for the treatment method&apos;s specific filtration requirements, suitability for the source water of the potential buyer, the ongoing maintenance costs and the quantified amounts of H&#8322; it can produce. When researching a tyent hybrid H2 water ionizer in India, ask the company to specify the model and explain &apos;hybrid H2&apos; for that model.
+              Any model of Tyent water ionizer sold in India needs to be confirmed for the treatment method&apos;s specific filtration requirements, suitability for the source water of the potential buyer, the ongoing maintenance costs and the quantified amounts of H&#8322; it can produce. When researching a <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>tyent hybrid H2 water ionizer in India</Link>, ask the company to specify the model and explain &apos;hybrid H2&apos; for that model.
             </p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>
@@ -197,7 +195,7 @@ export default async function BlogPost() {
 
             <div className="mb-3">
               <p className="fw-bold mb-1">5. Why consider Tyent over an alkaline RO system?</p>
-              <p>Tyent water ionizers use a different technology to the alkaline water filter — check out the verified numbers for the different Tyent water ionizer models, including options like tyent NMP-5, NMP-7, NMP-9, and NMP-11, and see how they compare with the alkaline RO water filter in terms of water compatibility and cost to own.</p>
+              <p><Link href="/why-tyent" style={{ color: "#291495", textDecoration: "underline" }}>Tyent water ionizers</Link> use a different technology to the alkaline water filter — check out the verified numbers for the different Tyent water ionizer models, including options like tyent NMP-5, NMP-7, NMP-9, and NMP-11, and see how they compare with the alkaline RO water filter in terms of water compatibility and cost to own.</p>
             </div>
           </div>
 

@@ -12,7 +12,7 @@ const features = [
     desc: "Tyent water ionizers feature Japanese Solid Hybrid Mesh Plates from Permelac (est. 1967), providing greater surface area, durability, higher - ORP, and more molecular hydrogen. Built to last over 45 years and backed by a 15-year warranty.",
   },
   {
-    link: "/patented-SMPS-plus",
+    link: "/patented-smps-plus",
     title: "Patented SMPS Plus Power Supply",
     img: "/contactIndetail/patentedSMPS.webp",
     desc: "Tyent’s patented SMPS Plus system with 55+ power settings delivers unmatched consistency and durability. Designed exclusively for Tyent, it produces 11.5–2.5 pH water naturally, without chemicals, ensuring superior performance and long-term reliability.",
@@ -30,10 +30,10 @@ export default function Smarter_Upgrade() {
     <div className="container">
 
       <div className="text-center mb-5">
-        <h2 className="bg-heading-text-two-main">Smarter Upgrade</h2>
-        <h3 className="fw-bold subtitle-tight">
+        <p className="bg-heading-text-two-main">Smarter Upgrade</p>
+        <h2 className="fw-bold subtitle-tight">
           Your Wellness Starts with Tyent
-        </h3>
+        </h2>
         <p style={{ maxWidth: "1100px", margin: "0 auto 30px" }}>
           Thinking of a water ionizer? Choose Tyent - the world’s most advanced, upgraded, and trusted ionizer. With 40+ years of expertise, ultra-slim next-gen designs, and updated Japanese technology, Tyent is preferred in 123+ countries for its unmatched innovation and customer satisfaction..
         </p>

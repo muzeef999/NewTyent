@@ -35,10 +35,10 @@ const sitemapData = [
   {
     heading: "Policies & Legal",
     links: [
-      { name: "Cancellation & Returns Policy", url: "/Cancellation_Returns" },
-      { name: "Terms of Use", url: "/Terms_of_Use" },
-      { name: "Security Policy", url: "/Security" },
-      { name: "Privacy Policy", url: "/Privacy" },
+      { name: "Cancellation & Returns Policy", url: "/cancellation-returns" },
+      { name: "Terms of Use", url: "/terms-of-use" },
+      { name: "Security Policy", url: "/security" },
+      { name: "Privacy Policy", url: "/privacy" },
     ],
   },
   {
@@ -46,14 +46,14 @@ const sitemapData = [
     links: [
       { name: "Tyent vs Kangen", url: "/tyentvskangen" },
       { name: "Tyent's Solid Hybrid Mesh Plates", url: "/solid-hybrid-mesh-plates" },
-      { name: "Tyent's Patented SMPS PLUS", url: "/patented-SMPS-plus" },
+      { name: "Tyent's Patented SMPS PLUS", url: "/patented-smps-plus" },
       { name: "Tyent's .01 Micron Filters", url: "/0.1-micron-filters" },
     ],
   },
   {
     heading: "Customers",
     links: [
-      { name: "Usage Instructions", url: "/7-types-of-Tyent-water" },
+      { name: "Usage Instructions", url: "/7-types-of-tyent-water" },
       { name: "Benefits", url: "/benefits" },
       { name: "Testimonials", url: "/testimonials" },
       { name: "Why Tyent", url: "/why-tyent" },

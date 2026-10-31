@@ -1,5 +1,6 @@
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import hybrid from "@/asserts/hybrid/hybrid.webp";
@@ -20,8 +21,9 @@ import OneTouchDispaly from "@/app/(home)/compoents/(products)/OneTouchDispaly";
 import HybridTouchPreview from "./HybridTouchPreview";
 import Halfhybrid from "@/asserts/hybrid/Halfhybrid.webp"
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
-
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 export const metadata = {
   title: "Tyent Hybrid H2 Water Ionizer – Hydrogen Water India",
@@ -994,7 +996,7 @@ const page = () => {
             Hybrid H2 Technology – How It Generates Pure Hydrogen Water
           </h3>
           <p style={{ lineHeight: 1.7, color: "#4f4f4f", marginBottom: "24px" }}>
-            The Hybrid H2 features a separate hydrogen generation system where the purified water is infused with molecular hydrogen, with high-quality filtering. The hydrogen production is carried out with optimal efficiency and low maintenance costs, thanks to advanced electrolysis technology. Tyent H2 hybrid specifications in India feature top-notch engineering for consistent performance, making it a perfect choice for households seeking next-generation water solutions.
+            The Hybrid H2 features a separate hydrogen generation system where the purified water is infused with molecular hydrogen, with high-quality filtering powered by <Link href="/0.1-micron-filters" style={{ color: "#291495", textDecoration: "underline" }}>Tyent Extreme .01 micron filters</Link>. The hydrogen production is carried out with optimal efficiency and low maintenance costs, thanks to advanced electrolysis technology. Tyent H2 hybrid specifications in India feature top-notch engineering for consistent performance, making it a perfect choice for households seeking next-generation water solutions.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginBottom: "10px" }}>
@@ -1018,10 +1020,10 @@ const page = () => {
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginBottom: "10px" }}>
-            Health Benefits of Hydrogen-Rich Water Science-Backed
+            <Link href="/benefits" style={{ color: "#291495", textDecoration: "none" }}>Health Benefits of Hydrogen-Rich Water</Link> Science-Backed
           </h3>
           <p style={{ lineHeight: 1.7, color: "#4f4f4f", marginBottom: "24px" }}>
-            Studies on hydrogen-rich water are ongoing to see how it can benefit overall health and wellness and how it can help reduce oxidative stress. Hydrogen water is preferred by many as part of active lifestyles, including those researching tyent vs kangen, centred around healthy hydration. Although results may differ, frequent drinking can help balance the diet, exercise and healthy lifestyle, making hydrogen-rich water more and more a popular drink for wellness.
+            Studies on hydrogen-rich water are ongoing to see how it can benefit overall health and wellness and how it can help reduce oxidative stress. Hydrogen water is preferred by many as part of active lifestyles, including those researching <Link href="/tyentvskangen" style={{ color: "#291495", textDecoration: "underline" }}>Tyent vs Kangen</Link>, centred around healthy hydration. Although results may differ, frequent drinking can help balance the diet, exercise and healthy lifestyle, making hydrogen-rich water more and more a popular drink for wellness.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginBottom: "10px" }}>
@@ -1042,7 +1044,7 @@ const page = () => {
             How to Order the Tyent Hybrid H2 Online
           </h3>
           <p style={{ lineHeight: 1.7, color: "#4f4f4f", marginBottom: "24px" }}>
-            The Hybrid H2 is easily ordered from the Tyent India official website. Product specialists can help you with specifications, installation and purchasing support. In addition, based on the needs of each customer, there are other premium water ionizers, such as Tyent NMP-11 water ionizer India, and Tyent UCE-13 plus water ionizer India.
+            The Hybrid H2 is easily ordered from the Tyent India official website. Product specialists can help you with specifications, installation and purchasing support. In addition, based on the needs of each customer, there are other premium water ionizers, such as <Link href="/nmp-11" style={{ color: "#291495", textDecoration: "underline" }}>Tyent NMP-11 water ionizer India</Link>, and <Link href="/uce-13-plus" style={{ color: "#291495", textDecoration: "underline" }}>Tyent UCE-13 plus water ionizer India</Link>.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginBottom: "10px" }}>
@@ -1095,7 +1097,7 @@ const page = () => {
               4. Who should choose Hybrid H2 over NMP or UCE series?
             </h3>
             <p style={{ lineHeight: 1.7, color: "#4f4f4f" }}>
-              The Hybrid H2 is perfect for users who want to use dedicated hydrogen-rich water technology. If you're more traditional, Tyent's countertop water ionizer or under-counter water ionizer is also a good choice.
+              The Hybrid H2 is perfect for users who want to use dedicated hydrogen-rich water technology. If you're more traditional, Tyent's <Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>countertop water ionizer</Link> or <Link href="/under-counter-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>under-counter water ionizer</Link> is also a good choice.
             </p>
           </div>
 
@@ -1109,6 +1111,9 @@ const page = () => {
           </div>
         </div>
       </Container>
+    </div>
+    <div className="section-spacing">
+      <TrustedbyExperts />
     </div>
     </>
   );

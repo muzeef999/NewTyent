@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "TM-X Beauty Soap: Fermented Pomegranate Soap | Tyent",
+  description: "Tyent TM-X Beauty Soap blends fermented pomegranate, honey and hyaluronic acid for gentle cleansing. 80g, Rs 999. Order now.",
+};
+
 import ProductSection from "@/app/(home)/compoents/(products)/ProductSection";
 import React from "react";
 import soap from "@/asserts/soap/soap.png"
@@ -27,6 +32,7 @@ const page = () => {
   return (
     <div>
       <div className="section-spacing">
+        <h1 className="text-center mb-4" style={{ fontWeight: "600" }}>TM-X Beauty Soap</h1>
         <ProductSection products={products} specifications={specifications} />
       </div>
       

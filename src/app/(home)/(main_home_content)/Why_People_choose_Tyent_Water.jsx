@@ -20,7 +20,7 @@ const Why_People_choose_Tyent_Water = () => {
   return (
     <section className="why-section">
       <Container>
-        <h3 className="fw-bold subtitle-tight" style={{ textAlign: "center" }}>Why People choose Tyent Water</h3>
+        <h2 className="fw-bold subtitle-tight" style={{ textAlign: "center" }}>Why People choose Tyent Water</h2>
 
         <Row className="g-3 mt-3">
           <Col md={4}>

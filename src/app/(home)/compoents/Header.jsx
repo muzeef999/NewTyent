@@ -4,7 +4,7 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { TypeAnimation } from 'react-type-animation'
 
-const Header = ({ basic, preheading, afterheading, content, img, animatedText }) => {
+const Header = ({ basic, preheading, afterheading, content, img, animatedText, useH1 = false, subtitleAsText = false }) => {
 
     // Split animatedText into an array of strings
     const animatedTextArray = animatedText.split(",").map(text => text.trim());
@@ -34,36 +34,71 @@ const Header = ({ basic, preheading, afterheading, content, img, animatedText })
   className="d-flex justify-content-center align-items-center"
 >
   <div className="p-4">
-    <h2 
-      className="m-0"  
-      style={{ 
-        fontWeight: "500", 
-        fontSize: 'clamp(20px, 5vw, 40px)'  // Responsive font size, minimum 20px, maximum 40px
-      }}
-    >
-      {basic}
-    </h2>
+    {useH1 ? (
+      <h1
+        className="m-0"
+        style={{
+          fontWeight: "500",
+          fontSize: 'clamp(20px, 5vw, 40px)'
+        }}
+      >
+        {basic}
+      </h1>
+    ) : (
+      <h2
+        className="m-0"
+        style={{
+          fontWeight: "500",
+          fontSize: 'clamp(20px, 5vw, 40px)'
+        }}
+      >
+        {basic}
+      </h2>
+    )}
     <br />
-    <h2 
-      className="m-0" 
-      style={{ 
-        fontWeight: 700, 
-        fontSize: 'clamp(24px, 6vw, 48px)'  // Responsive font size, minimum 24px, maximum 48px
-      }}
-    >
-      {preheading} &nbsp;
-      <br/>
-      <span style={{ color: "#291495" }}>
-        <TypeAnimation
-          sequence={sequence}   // Use the dynamic sequence here
-          speed={60}  // Speed of typing animation
-          repeat={Infinity}  // Repeat animation infinitely
-        />
-      </span>
-      <br />
-      {afterheading}
-      <br />
-    </h2>
+    {subtitleAsText ? (
+      <p
+        className="m-0"
+        style={{
+          fontWeight: 700,
+          fontSize: 'clamp(24px, 6vw, 48px)'
+        }}
+      >
+        {preheading} &nbsp;
+        <br/>
+        <span style={{ color: "#291495" }}>
+          <TypeAnimation
+            sequence={sequence}
+            speed={60}
+            repeat={Infinity}
+          />
+        </span>
+        <br />
+        {afterheading}
+        <br />
+      </p>
+    ) : (
+      <h2
+        className="m-0"
+        style={{
+          fontWeight: 700,
+          fontSize: 'clamp(24px, 6vw, 48px)'
+        }}
+      >
+        {preheading} &nbsp;
+        <br/>
+        <span style={{ color: "#291495" }}>
+          <TypeAnimation
+            sequence={sequence}
+            speed={60}
+            repeat={Infinity}
+          />
+        </span>
+        <br />
+        {afterheading}
+        <br />
+      </h2>
+    )}
   </div>
 </Col>
 

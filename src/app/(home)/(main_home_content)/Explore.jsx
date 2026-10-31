@@ -44,8 +44,8 @@ const Explore = () => {
   return (
     <div className="container">
       <div className="text-center">
-        <h2 className="bg-heading-text-two-main">Explore</h2>
-        <h3 className="fw-bold subtitle-tight">our best selling products</h3>
+        <p className="bg-heading-text-two-main">Explore</p>
+        <h2 className="fw-bold subtitle-tight">our best selling products</h2>
       </div>
       <div className="row g-5">
         {products.map((item, index) => (

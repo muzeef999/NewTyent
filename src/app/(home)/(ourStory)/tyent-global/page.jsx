@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Tyent Global: Korean Hydrogen Water Ionizer Brand",
+  description: "Tyent is made by TAE YOUNG E&T in South Korea, with in-house R&D and ISO-certified quality control. Explore Tyent's global story.",
+};
+
 import { BsLightningCharge } from "react-icons/bs";
 import { FaHandHoldingWater } from "react-icons/fa";
 import { FiClipboard, FiSettings, FiShield, FiAlertTriangle } from "react-icons/fi";
@@ -61,10 +66,10 @@ const TyentGlobal = () => {
     <div className="container">
       <br />
       <div className="text-center position-relative pb-2">
-        <h1 className="bg-heading-text-two-main">Tyent Global</h1>
-          <h3 className="fw-bold subtitle-tight mb-5">
+        <span className="bg-heading-text-two-main">Tyent Global</span>
+          <h1 className="fw-bold subtitle-tight mb-5">
             World Leaders in Hydrogen-Rich Alkaline Water Ionizer Technology
-          </h3>
+          </h1>
         <div className="overlap-heading">
           <p className="mt-3 mt-md-4 mx-auto" style={{ maxWidth: "800px", fontSize: '15px' }}>
             Tyent is a globally trusted premium water ionizer brand, powered by decades of innovation,
@@ -77,9 +82,9 @@ const TyentGlobal = () => {
       </div>
 
       <div className="text-center mt-5">
-        <h4 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '24px' }}>
+        <h2 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '24px' }}>
           Tyent Parent Company & Brand Story
-        </h4>
+        </h2>
 
         <p
           className="mx-auto"
@@ -92,9 +97,9 @@ const TyentGlobal = () => {
       <div className="row align-items-center mt-5">
         <div className="col-lg-6 pe-lg-5">
           <div className="mb-5">
-            <h4 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '22px' }}>
+            <h2 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '22px' }}>
               Advanced Research & Development (R&D)
-            </h4>
+            </h2>
             <p className="mb-3" style={{ fontSize: '15px', color: '#4a4a4a' }}>
               Research and innovation are the backbone of Tyent. The company operates
               dedicated R&D facilities in South Korea, staffed by experienced engineers,
@@ -115,9 +120,9 @@ const TyentGlobal = () => {
           </div>
 
           <div className="mb-5">
-            <h4 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '22px' }}>
+            <h2 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '22px' }}>
               Unmatched Quality Control & Certifications
-            </h4>
+            </h2>
             <p className="mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>
               Tyent follows one of the strictest quality control processes in the global water
               ionizer industry. Each unit is manufactured under ISO-certified facilities and
@@ -139,9 +144,9 @@ const TyentGlobal = () => {
           </div>
 
           <div>
-            <h4 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '22px' }}>
+            <h2 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '22px' }}>
               Why Tyent is Different Globally
-            </h4>
+            </h2>
             <p className="mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>
               Tyent does not operate on MLM models or commission-heavy
               distribution chains. Instead, the company reinvests into:
@@ -174,9 +179,9 @@ const TyentGlobal = () => {
       </div>
 
       <div className="">
-        <h3 className="fw-bold text-center mb-5" style={{ color: '#273fdb', fontSize: '24px' }}>
+        <h2 className="fw-bold text-center mb-5" style={{ color: '#273fdb', fontSize: '24px' }}>
           Quality Management
-        </h3>
+        </h2>
 
         <div className="quality-masonry">
           {qualityCertifications.map((cert) => (
@@ -191,7 +196,7 @@ const TyentGlobal = () => {
                   style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                 />
               </div>
-              <h5 className="fw-bold mb-1" style={{ color: '#273fdb', fontSize: '18px' }}>{cert.title}</h5>
+              <h3 className="fw-bold mb-1" style={{ color: '#273fdb', fontSize: '18px' }}>{cert.title}</h3>
               <h6 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '13px' }}>{cert.subtitle}</h6>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 {cert.text}
@@ -203,9 +208,9 @@ const TyentGlobal = () => {
 
       <div className="mb-5 pb-5">
         <div className="text-center mb-5">
-          <h3 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '24px' }}>
+          <h2 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '24px' }}>
             Quality Control
-          </h3>
+          </h2>
           <p className="text-muted mx-auto" style={{ fontSize: '15px', maxWidth: '1000px' }}>
             For our product innovation, we establish our quality goals every year that are appropriate to our working principle. We strictly follow all the regulations and laws as manufactures, and follow our quality assurance system to satisfy our customers.
           </p>
@@ -218,9 +223,9 @@ const TyentGlobal = () => {
                 <FiClipboard size={24} color="#000" />
               </div>
               <h5 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '16px' }}>Step 01</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
                 Quality Planning
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 We manage the products systematically to be supplied consistent quality conformity and safety.
               </p>
@@ -233,9 +238,9 @@ const TyentGlobal = () => {
                 <FiSettings size={24} color="#000" />
               </div>
               <h5 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '16px' }}>Step 02</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
                 Quality Management
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 As a most effective method to keep the appropriateness and the effectiveness of the products and the quality assurance system, we design from our experience and data that we gained through Corrective and Preventive Action.<br /><br />Plan &rarr; Do &rarr; Check &rarr; Action &rarr; Replan
               </p>
@@ -248,9 +253,9 @@ const TyentGlobal = () => {
                 <FiShield size={24} color="#000" />
               </div>
               <h5 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '16px' }}>Step 03</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
                 Quality Assurance
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 We remove the origins of the inappropriate situations and inconsistency and try every measures to prevent the situations from reoccurring.<br />
                 <span className="fw-bold text-dark">Correction :</span> Removal of nonconforming item.<br />
@@ -265,9 +270,9 @@ const TyentGlobal = () => {
                 <FiAlertTriangle size={24} color="#000" />
               </div>
               <h5 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '16px' }}>Step 04</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px' }}>
                 Quality improvement
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 Although we have not had an incident of nonconforming items, we analyze the reason for it based on our statistical data and the possibility of it happening and remove those origins.
               </p>
@@ -278,9 +283,9 @@ const TyentGlobal = () => {
 
       <div className="">
         <div className="text-center mb-5">
-          <h3 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '24px' }}>
+          <h2 className="fw-bold mb-2" style={{ color: '#273fdb', fontSize: '24px' }}>
             R&D Center
-          </h3>
+          </h2>
           <p className="text-muted" style={{ fontSize: '15px' }}>
             Research & Development
           </p>
@@ -293,9 +298,9 @@ const TyentGlobal = () => {
                 <GiWaterRecycling size={32} color="#273fdb" />
               </div>
               <h5 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '18px' }}>Step 01</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px', lineHeight: '1.3' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px', lineHeight: '1.3' }}>
                 Continued investment for technical development
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 TYENT's institute of Technology, authorized by Ministry of Commerce, Industry and Energy in 2004, invests continued development for the new technology with R&D investment strategy.
               </p>
@@ -308,9 +313,9 @@ const TyentGlobal = () => {
                 <BsLightningCharge size={32} color="#273fdb" />
               </div>
               <h5 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '18px' }}>Step 02</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px', lineHeight: '1.3' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px', lineHeight: '1.3' }}>
                 Technology to increase water quality
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 Our main fostering business is development of products that is valuable to the people and environment based on "electrolysis technology." our products : Water ionizer, Hydrogen water generator, Sterilizing water generator, , Industrial strong alkaline water generator, Industrial strong acid water generator, RO system.
               </p>
@@ -323,9 +328,9 @@ const TyentGlobal = () => {
                 <FaHandHoldingWater size={32} color="#273fdb" />
               </div>
               <h5 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '18px' }}>Step 03</h5>
-              <h4 className="fw-bold mb-3" style={{ fontSize: '20px', lineHeight: '1.3' }}>
+              <h3 className="fw-bold mb-3" style={{ fontSize: '20px', lineHeight: '1.3' }}>
                 Quality Assurance
-              </h4>
+              </h3>
               <p className="text-muted mb-0" style={{ fontSize: '14px', lineHeight: '1.6' }}>
                 All products produced from TAEYOUNG E&T gain its competitiveness in technology such as standardization and differentiation, and we create added values through the knowledge of technology from the institute of Technology.
               </p>
@@ -335,9 +340,9 @@ const TyentGlobal = () => {
       </div>
 
       <div className="text-center mb-5">
-        <h3 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '24px' }}>
+        <h2 className="fw-bold mb-3" style={{ color: '#273fdb', fontSize: '24px' }}>
           Tyent Global Promise
-        </h3>
+        </h2>
         <p className="text-muted mx-auto" style={{ fontSize: '15px', maxWidth: '850px', lineHeight: '1.8' }}>
           Tyent's mission is simple yet powerful - to deliver the purest, safest, and most effective drinking water technology available today. With a strong parent company, world-class R&D, uncompromising quality control, and values rooted in trust, Tyent continues to redefine what premium water truly means.
         </p>
@@ -349,21 +354,21 @@ const TyentGlobal = () => {
 
         <div className="row justify-content-center text-center g-4 mt-4 position-relative px-3" style={{ zIndex: 1 }}>
           <div className="col-12 col-sm-6 col-md-4">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>123+</h1>
+            <p className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>123+</p>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Global Presence</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               Providing innovative water solutions that improve health and well-being across India.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-4">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>160+</h1>
+            <p className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>160+</p>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Technology Patents</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               160+ patents, showcasing groundbreaking advancements in water ionization.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-4">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>30+</h1>
+            <p className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>30+</p>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Years of R&D</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               29 years of cutting-edge research delivering innovative water solutions globally.
@@ -371,14 +376,14 @@ const TyentGlobal = () => {
           </div>
 
           <div className="col-12 col-sm-6 col-md-4 mt-md-5">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>15</h1>
+            <p className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>15</p>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Years Warranty</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               Prestigious design awards blending innovation and aesthetics in luxury water ionizers.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-4 mt-md-5">
-            <h1 className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>26</h1>
+            <p className="fw-bold mb-1" style={{ color: '#0d6efd', fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', letterSpacing: '-1px' }}>26</p>
             <h6 className="fw-bold mb-2" style={{ fontSize: '15px', color: '#4a4a4a' }}>Design Awards</h6>
             <p className="text-muted mx-auto" style={{ fontSize: '13px', lineHeight: '1.6', maxWidth: '240px' }}>
               Recognized for design excellence in advanced, luxury water ionizers worldwide.

@@ -28,9 +28,9 @@ export const metadata = {
 const Home = () => {
   return (
     <div style={{ width: "100%", overflow: "hidden", position: "relative" }}>
-      <h1 className="visually-hidden">
+      <p className="visually-hidden">
         Tyent – Best Alkaline Water Ionizer Machine in India | Hydrogen-Rich Water Purifier
-      </h1>
+      </p>
       <Slider />
 
       <div className="section-spacing">

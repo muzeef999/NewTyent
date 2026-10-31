@@ -8,6 +8,11 @@ import hydrogen from "@/asserts/why ionizer/hydrogen.webp";
 import platesBanner from "@/asserts/platesBanner.png"
 import platesvs from "@/asserts/platesvs.png"
 
+export const metadata = {
+  title: "Solid Hybrid Mesh Plates for Water Ionizers | Tyent India",
+  description: "Tyent's Solid Hybrid Mesh Plates pair solid-plate strength with mesh efficiency for richer hydrogen water. 15-year warranty. See how.",
+};
+
  
 
 const RegularReplacement = [
@@ -60,11 +65,13 @@ const WaterFilterCards = ({ title, content }) => {
 const page = () => {
 
      const headerData = {
-            basic: "Japanese Technology",
-            preheading: "Advanced Design",
-            afterheading: "With Tyent's Solid Hybrid Mesh Plates",
+            basic: "Advanced Design With Tyent's Solid Hybrid Mesh Plates",
+            preheading: "Japanese Technology",
+            afterheading: "",
             img: platesBanner,
             animatedText: "More Surface Area, More Anti-Oxidants, More Durability,",
+            useH1: true,
+            subtitleAsText: true,
           };
   
           return (
@@ -93,7 +100,7 @@ const page = () => {
             <Row>
             <Col md={6} className='d-flex jjustify-content-center align-items-center'>
             <div className='m-4'>
-              <h1 data-aos="fade-up" style={{color:'#291495'}}><b>Types of Electrodes/Plates:</b></h1>
+              <h2 data-aos="fade-up" style={{color:'#291495'}}><b>Types of Electrodes/Plates:</b></h2>
               <h5>Solid Hybrid mesh plate, Mesh plate & Solid plate</h5>
               </div>
             </Col>
@@ -133,7 +140,7 @@ const page = () => {
             style={{ backgroundColor: "#f2f2f2", color: "#000",}}
           >
             <div style={{ padding: "60px" }}>
-              <h2 style={{ fontWeight: 600 }}>Solid Plates</h2>
+              <h3 style={{ fontWeight: 600 }}>Solid Plates</h3>
               <p>
               Traditional solid plates have a large surface area and are the oldest and strongest technology in water ionizers. However, they do not ionize the water effectively because the ionization happens unevenly, mainly only at the edges. This results in lower hydrogen production and fewer antioxidants (-ORP). Over time, solid plates also get scale buildup, which affects their performance and requires regular cleaning. They are also bulky and consume more power to give the same ionization, leading to higher energy bills and less efficient water purification compared to newer technologies.
               </p>
@@ -146,7 +153,7 @@ const page = () => {
             style={{ backgroundColor: "#291495", color: "#FFF", }}
           >
             <div style={{ padding: "60px" }}>
-              <h2 style={{ fontWeight: 600 }}>Mesh Plates</h2>
+              <h3 style={{ fontWeight: 600 }}>Mesh Plates</h3>
               <p>
               Mesh plates are generally more efficient for ionization because they have a larger surface area, allowing for better water flow and more effective electrolysis. However, their performance is limited by the unorganized design of the mesh, which can cause uneven ionization and lower hydrogen production (-ORP/antioxidants). While mesh plates are more efficient than solid plates, they don’t provide the same ionization power and production of hydrogen/antioxidants as solid hybrid mesh plates, reducing their effectiveness. Also, some mesh plates may wear out faster, affecting their long-term durability and performance.
               </p>
@@ -165,7 +172,7 @@ const page = () => {
                     className="d-flex justify-content-center align-items-center"
                   >
                     <div>
-                      <h3  data-aos="fade-down">
+                      <h2  data-aos="fade-down">
                         <Link href="/hybrid-h2" style={{ color: "inherit", textDecoration: "underline" }}>Molecular Hydrogen</Link> -{" "}
                         <span
                           style={{
@@ -176,7 +183,7 @@ const page = () => {
                         >
                           An emerging medical Gas
                         </span>
-                      </h3>
+                      </h2>
                       <p data-aos="fade-up">
                         Although the research is early, the 1000+ scientific articles
                         suggest that H2 has therapeutic potential in over 170 different

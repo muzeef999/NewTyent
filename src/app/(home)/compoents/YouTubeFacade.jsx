@@ -39,9 +39,10 @@ const YouTubeFacade = ({ videoId, title, style = {} }) => {
       }}
     >
       <img
-        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+        src={`/thumbnails/${videoId}.webp`}
         alt={title || "Video thumbnail"}
         loading="lazy"
+        onError={(e) => { e.target.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`; }}
         style={{
           width: "100%",
           height: "100%",

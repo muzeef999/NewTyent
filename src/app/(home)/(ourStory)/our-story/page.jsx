@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "About Tyent India and Medilight: Story and Mission",
+  description: "Know Tyent India's story: Medilight Pvt. Ltd. brings hydrogen-rich water ionizers to India with 73+ branches. Read our mission.",
+};
+
 import { PiLightbulb } from "react-icons/pi";
 import { GoGoal } from "react-icons/go";
 import { BsShieldPlus } from "react-icons/bs";
@@ -31,8 +36,8 @@ const OurStory = () => {
     <div className="container">
       <br />
       <div className="text-center position-relative pb-2">
-        <h1 className="bg-heading-text-two-main">Tyent & Medilight</h1>
-        <h3 className="fw-bold subtitle-tight mb-5">Advancing Preventive Health Through Water</h3>
+        <span className="bg-heading-text-two-main">Tyent & Medilight</span>
+        <h1 className="fw-bold subtitle-tight mb-5">Advancing Preventive Health Through Water</h1>
         <div className="overlap-heading">
           <p className="mt-4" style={{ fontSize: '15px' }}>
             Founded in 2016 by a team of experienced doctor’s and visionary entrepreneurs, Tyent  was established with a clear mission: to deliver world-class preventive healthcare through  water. By combining medical insight with advanced engineering, Tyent pioneered  hydrogen-rich alkaline water ionizers and hydrogen water generators designed to  support long-term wellness, cellular hydration, and antioxidant protection.  Tyent’s technology focuses on producing high-pH, hydrogen-rich water with negative  ORP, helping individuals adopt a proactive approach toward health through daily hydration.  Today, Tyent is globally recognized for its medical-grade water ionizers, innovation, and  uncompromising quality standards.
@@ -42,9 +47,9 @@ const OurStory = () => {
 
       <div className="row align-items-center mb-5 pb-4">
         <div className="col-lg-6 pe-lg-4">
-          <h4 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
+          <h2 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
             Tyent in India - Authorized Partnership with Medilight Pvt. Ltd.
-          </h4>
+          </h2>
           <p className="  mb-3" style={{ fontSize: '15px' }}>
             Medilight Pvt. Ltd. is the official and authorized partner of TAEYOUNG E&T CO.,  LTD. for Tyent in India, responsible for strategic market expansion, nationwide  distribution, brand positioning, and comprehensive after-sales service. With a strong  foundation in healthcare, wellness solutions, and advanced water technology, Medilight  plays a critical role in introducing and scaling Tyent’s hydrogen-rich alkaline water  ionizer’s with cutting edge Japanese technology across Indian households, clinics,  hospitals, and institutional environments. Through this partnership, Medilight ensures
           </p>
@@ -60,9 +65,9 @@ const OurStory = () => {
             health-supporting hydrogen-rich alkaline water.
           </p>
 
-          <h4 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
+          <h2 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
             Role of Medilight in Tyent's Global Ecosystem
-          </h4>
+          </h2>
           <p className="  mb-3" style={{ fontSize: '15px' }}>
             Medilight Pvt. Ltd. acts as the exclusive operational and brand custodian for
             Tyent in India, responsible for:
@@ -78,9 +83,9 @@ const OurStory = () => {
             technology, not diluted or modified versions.
           </p>
 
-          <h4 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
+          <h2 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
             Commitment to Quality & Customer Trust
-          </h4>
+          </h2>
           <p className="  mb-3" style={{ fontSize: '15px' }}>
             Medilight strictly follows Tyent's global quality and service protocols. All
             installations, servicing, and customer interactions are handled by trained in-
@@ -110,9 +115,9 @@ const OurStory = () => {
       <div className="row mb-5 pb-5">
         {/* Service-First Approach Column */}
         <div className="col-lg-6 pe-lg-5 mb-4 mb-lg-0">
-          <h4 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
+          <h2 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
             Service-First Approach
-          </h4>
+          </h2>
           <p className="  mb-3" style={{ fontSize: '15px' }}>
             Unlike conventional appliance distributors, Medilight operates on a service-first
             philosophy. The company has invested heavily in :
@@ -130,9 +135,9 @@ const OurStory = () => {
 
         {/* Shared Values Column */}
         <div className="col-lg-6 ps-lg-5">
-          <h4 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
+          <h2 className="fw-bold fs-5 mb-3" style={{ color: '#273fdb' }}>
             Shared Values with Tyent Global
-          </h4>
+          </h2>
           <p className="  mb-3" style={{ fontSize: '15px' }}>
             Medilight and Tyent are aligned on core values:
           </p>
@@ -151,9 +156,9 @@ const OurStory = () => {
 
       <div className="">
         <div className="text-center mb-5 pb-4">
-          <h3 className="fw-bold mb-4" style={{ color: '#273fdb', fontSize: '24px' }}>
+          <h2 className="fw-bold mb-4" style={{ color: '#273fdb', fontSize: '24px' }}>
             Strengthening Tyent's Global Presence
-          </h3>
+          </h2>
           <p className="  mx-auto" style={{ maxWidth: '1150px', fontSize: '15px' }}>
             Through Medilight Pvt. Ltd., Tyent continues to strengthen its global footprint while adapting  responsibly to local market needs - without compromising on technology, quality, or ethics.  Together, Tyent Global and Medilight Pvt. Ltd. are committed to delivering the world’s  most advanced hydrogen-rich alkaline water ionizers with advanced Japanese  technology, backed by global research, certified quality, and dependable service  infrastructure.
           </p>
@@ -168,7 +173,7 @@ const OurStory = () => {
                 <PiLightbulb size={40} />
               </span>
             </div>
-            <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Vision</h5>
+            <h3 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Vision</h3>
             <p className="  mx-auto px-3 px-md-0" style={{ fontSize: '15px', maxWidth: '550px' }}>
               To revolutionize hydration in India by becoming the most trusted name in
               advanced water ionization and purification solutions, contributing to a
@@ -183,7 +188,7 @@ const OurStory = () => {
                 <GoGoal size={40} />
               </span>
             </div>
-            <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Mission</h5>
+            <h3 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Mission</h3>
             <p className="  mx-auto px-3 px-md-0" style={{ fontSize: '15px', maxWidth: '550px' }}>
               Together, we aim to make every drop of water count towards a better,
               healthier future for India.
@@ -197,7 +202,7 @@ const OurStory = () => {
             <div className="mb-3">
               <BsShieldPlus size={40} />
             </div>
-            <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Health & Wellness</h5>
+            <h3 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Health & Wellness</h3>
             <p className=" px-3 px-md-0" style={{ fontSize: '15px' }}>
               To provide innovative water solutions that improve the health and well-being of
               individuals and families across India.
@@ -208,7 +213,7 @@ const OurStory = () => {
             <div className="mb-3">
               <FaRecycle size={40} />
             </div>
-            <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Sustainability</h5>
+            <h3 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Sustainability</h3>
             <p className=" px-3 px-md-0" style={{ fontSize: '15px' }}>
               To promote eco-friendly practices by reducing the dependency on single-use
               plastics and encouraging sustainable hydration.
@@ -219,7 +224,7 @@ const OurStory = () => {
             <div className="mb-3">
               <SlEnergy size={40} />
             </div>
-            <h5 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Technology Leadership</h5>
+            <h3 className="fw-bold mb-3" style={{ color: '#273fdb' }}>Technology Leadership</h3>
             <p className=" px-3 px-md-0" style={{ fontSize: '15px' }}>
               To continuously innovate and deliver cutting-edge water ionization and
               purification systems.
@@ -238,9 +243,9 @@ const OurStory = () => {
               <div className="mb-3">
                 <BiSupport size={40} />
               </div>
-              <h5 className="fw-bold mb-3" style={{ color: "#273fdb" }}>
+              <h3 className="fw-bold mb-3" style={{ color: "#273fdb" }}>
                 Customer-Centric Approach
-              </h5>
+              </h3>
               <p
                 className="  mx-auto"
                 style={{ fontSize: "15px", maxWidth: "400px" }}
@@ -254,9 +259,9 @@ const OurStory = () => {
               <div className="mb-3">
                 <SlGraduation size={40} />
               </div>
-              <h5 className="fw-bold mb-3" style={{ color: "#273fdb" }}>
+              <h3 className="fw-bold mb-3" style={{ color: "#273fdb" }}>
                 Education & Awareness
-              </h5>
+              </h3>
               <p
                 className="  mx-auto"
                 style={{ fontSize: "15px", maxWidth: "400px" }}
@@ -270,27 +275,27 @@ const OurStory = () => {
           {/* Stats Section */}
           <div className="row align-items-center justify-content-center">
             <div className="col-6 col-md-2 mb-4 mb-md-0">
-              <h1 className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>73+</h1>
+              <p className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>73+</p>
               <p className="text-dark mb-0 fw-medium">Indian Branches</p>
             </div>
 
             <div className="col-6 col-md-2 mb-4 mb-md-0">
-              <h1 className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>9M+</h1>
+              <p className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>9M+</p>
               <p className="text-dark mb-0 fw-medium">Most Trusted</p>
             </div>
 
             <div className="col-6 col-md-2 mb-4 mb-md-0">
-              <h1 className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>125+</h1>
+              <p className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>125+</p>
               <p className="text-dark mb-0 fw-medium">Strong team</p>
             </div>
 
             <div className="col-6 col-md-2 mb-4 mb-md-0">
-              <h1 className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>09</h1>
+              <p className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>09</p>
               <p className="text-dark mb-0 fw-medium">Indian R&D</p>
             </div>
 
             <div className="col-6 col-md-2">
-              <h1 className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>15+</h1>
+              <p className="fw-bold mb-2" style={{ color: "#273fdb", fontSize: "2.5rem" }}>15+</p>
               <p className="text-dark mb-0 fw-medium">Plates warranty</p>
             </div>
           </div>
@@ -302,7 +307,7 @@ const OurStory = () => {
       <div className="mb-5 rounded-4" style={{ backgroundColor: '#f8f9fa' }}>
         <div className="my-4 px-3">
           <div className="text-center mb-5 pb-2">
-            <h3 className="fw-bold" style={{ fontSize: '24px' }}>Our Management</h3>
+            <h2 className="fw-bold" style={{ fontSize: '24px' }}>Our Management</h2>
           </div>
 
           <div className="row justify-content-center">
@@ -329,9 +334,9 @@ const OurStory = () => {
                   />
 
                   <div className="mt-auto">
-                    <h6 className="fw-bold text-dark mt-2 mb-1" style={{ fontSize: "15px" }}>
+                    <h3 className="fw-bold text-dark mt-2 mb-1" style={{ fontSize: "15px" }}>
                       {member.name}
-                    </h6>
+                    </h3>
                     <p className="text-dark mb-0 fw-bold" style={{ fontSize: "11px" }}>
                       {member.role}
                     </p>

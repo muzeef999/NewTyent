@@ -9,8 +9,8 @@ const RealScience = () => {
       <div className="container">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="bg-heading-text-two-main">The Real Science</h2>
-          <h4 className="fw-bold subtitle-tight">Behind Our Products</h4>
+          <p className="bg-heading-text-two-main">The Real Science</p>
+          <h2 className="fw-bold subtitle-tight">Behind Our Products</h2>
           <p style={{maxWidth:'900px', margin:'0 auto 30px'}}>
             Confused between Water Ionizer and Hydrogen generator? Learn the facts, understand the difference, and choose with clarity.
           </p>
@@ -21,7 +21,7 @@ const RealScience = () => {
           {/* LEFT CARD */}
           <div className="col-lg-6">
             <div className="science-card light-card h-100">
-              <h4 className="fw-bold mb-3">What is a Water Ionizer?</h4>
+              <h3 className="fw-bold mb-3">What is a Water Ionizer?</h3>
               <p>
                A water ionizer is a smart device that converts regular water into antioxidant-rich, alkaline, hydrogen-infused water through advanced electrolysis. It has magical combination of both alkalinity & selective anti-oxidant molecular hydrogen. Due to its magical combination it enhances hydration, boosts pH, supports cellular health, reduces oxidative stress, and supports overall energy. It’s the smartest upgrade for your drinking water - pure, energized, and optimized for modern wellness for every day use.
               </p>
@@ -31,9 +31,9 @@ const RealScience = () => {
           {/* RIGHT CARD */}
           <div className="col-lg-6">
             <div className="science-card blue-card h-100">
-              <h4 className="fw-bold mb-3 text-white">
+              <h3 className="fw-bold mb-3 text-white">
                 What is a Hydrogen Generator?
-              </h4>
+              </h3>
               <p className="text-white">
               A hydrogen generator uses advanced PEM (Proton Exchange Membrane) technology to infuse pure molecular hydrogen (H₂) into water without changing its pH. This hydrogen-rich water supports cellular health, reduces oxidative stress, and boosts daily energy. Unlike ionizers, it does not neutralize acidity. It’s a compact wellness device - ideal for individuals on kidney dialysis or with high creatinine - delivering clean, potent hydrogen in every sip, without alkalinity.
               </p>

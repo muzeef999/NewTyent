@@ -208,7 +208,7 @@ const Footer = () => {
                         <li>
                           <Link
                             style={{ textDecoration: "none", color: "#FFF" }}
-                            href={"/Sterilizing-water-generator"}
+                            href={"/sterilizing-water-generator"}
                           >
                             Stainless Steel Water Bottles
                           </Link>
@@ -241,7 +241,7 @@ const Footer = () => {
                         <li>
                           <Link
                             style={{ textDecoration: "none", color: "#FFF" }}
-                            href={"/patented-SMPS-plus"}
+                            href={"/patented-smps-plus"}
                           >
                             Tyent’s Patented SMPS PLUS
                           </Link>
@@ -310,7 +310,7 @@ const Footer = () => {
                           <li>
                             <Link
                               style={{ textDecoration: "none", color: "#FFF" }}
-                              href={"/7-types-of-Tyent-water"}
+                              href={"/7-types-of-tyent-water"}
                             >
                               Usage Instructions
                             </Link>
@@ -356,28 +356,28 @@ const Footer = () => {
                             <br />
                             <Link
                               style={{ textDecoration: "none", color: "#FFF" }}
-                              href={"/Cancellation_Returns"}
+                              href={"/cancellation-returns"}
                             >
                               Cancellation & Returns{" "}
                             </Link>
                             <br />
                             <Link
                               style={{ textDecoration: "none", color: "#FFF" }}
-                              href={"/Terms_of_Use"}
+                              href={"/terms-of-use"}
                             >
                               Terms of Use
                             </Link>
                             <br />
                             <Link
                               style={{ textDecoration: "none", color: "#FFF" }}
-                              href={"/Security"}
+                              href={"/security"}
                             >
                               Security
                             </Link>
                             <br />
                             <Link
                               style={{ textDecoration: "none", color: "#FFF" }}
-                              href={"/Privacy"}
+                              href={"/privacy"}
                             >
                               Privacy
                             </Link>

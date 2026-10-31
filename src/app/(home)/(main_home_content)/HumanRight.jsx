@@ -26,10 +26,10 @@ const HumanRight = () => {
   return (
     <section className="human-section">
       <div className="container text-center">
-        <h2 className="bg-heading-text-two-main">Human Right</h2>
-        <h3 className="fw-bold subtitle-tight">
+        <p className="bg-heading-text-two-main">Human Right</p>
+        <h2 className="fw-bold subtitle-tight">
           Clean & healthy water shouldn't be a luxury.
-        </h3>
+        </h2>
 
         <p style={{maxWidth:'900px', margin:'0 auto'}}>
           With rising contamination and declining water quality, every family
@@ -47,7 +47,7 @@ const HumanRight = () => {
             {stats.map((item, i) => (
               <div key={i} className="col-12 col-sm-6 col-lg-3 mb-4">
                 <div className="stat-card">
-                  <h2 className="stat-number">{item.number}</h2>
+                  <p className="stat-number">{item.number}</p>
                   <p className="stat-text">{item.text}</p>
                 </div>
               </div>

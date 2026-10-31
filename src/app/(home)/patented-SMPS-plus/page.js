@@ -9,6 +9,11 @@ import { BiSolidJoystickButton } from "react-icons/bi";
 import "@/app/style/Benfits.css"
 import smpsplus from "@/asserts/smps.png"
 
+export const metadata = {
+  title: "Tyent SMPS PLUS: Patented Water Ionizer Power Supply",
+  description: "See why Tyent's patented SMPS PLUS beats transformer and standard SMPS units for stable pH and ORP, and 11.5 and 2.5 pH water. Learn more.",
+};
+
 
 
 
@@ -112,8 +117,8 @@ import smpsplus from "@/asserts/smps.png"
           <div className='d-flex'>
           <BiSolidJoystickButton style={{width:'40px', height:'40px', backgroundColor:'#565959', color:'#FFF', borderRadius:'50%', padding:'10px'}}/>
           <div>
-          <h3 className="m-0 text-start" style={{ color: "#291495" }}><b>&nbsp;{title}</b>
-          </h3>
+          <h4 className="m-0 text-start" style={{ color: "#291495" }}><b>&nbsp;{title}</b>
+          </h4>
           <br/>
           <div className="hover-line"></div>
           </div>
@@ -155,6 +160,8 @@ const page = () => {
         afterheading: "With Tyent’s Patented SMPS PLUS",
         img: smpsplus,
         animatedText: "More Power, More Efficiency,  More Performance",
+        useH1: true,
+        subtitleAsText: true,
       };
 
   return (
@@ -186,7 +193,7 @@ const page = () => {
         <Row className='g-2'>
           <Col md={6} className='d-flex justify-content-center align-items-center'> 
            <div className='m-3'>
-            <h1><GoDotFill color='red'/>Drawbacks of Transformer Power Supply</h1>
+            <h3><GoDotFill color='red'/>Drawbacks of Transformer Power Supply</h3>
             <p>Tyent’s SMPS PLUS plays a pivotal role in achieving consistently high-quality water. By dynamically adjusting power output, it stabilizes pH and ORP levels, ensuring that every glass of water you drink is packed with maximum antioxidants, hydrogen, and essential minerals. This results in superior <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>hydrogen-rich alkaline water</Link> that supports better hydration, detoxification, and overall health.</p>
            </div>
           </Col>
@@ -210,7 +217,7 @@ const page = () => {
         <Row  data-aos="fade-up" className='g-2'>
           <Col md={6} className='d-flex justify-content-center align-items-center'> 
            <div className='m-3'>
-            <h1><GoDotFill color='red'/>Drawbacks of Standard SMPS Power Supply</h1>
+            <h3><GoDotFill color='red'/>Drawbacks of Standard SMPS Power Supply</h3>
            </div>
           </Col>
           <Col md={6}>

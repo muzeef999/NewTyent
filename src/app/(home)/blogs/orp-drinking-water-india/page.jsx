@@ -55,7 +55,7 @@ export default async function BlogPost() {
       "@type": "WebPage",
       "@id": "https://www.tyent.co.in/blogs/orp-drinking-water-india"
     },
-    "headline": "What Is ORP in Drinking Water? Complete India Guide",
+    "headline": "What Is ORP (Oxidation Reduction Potential) and Why Should You Care?",
     "description": "Learn what ORP means in drinking water, what it can't tell you, and how to test it before buying a water ionizer in India.",
     "image": "https://www.tyent.co.in/blog-orp-drinking-water.webp",
     "author": {
@@ -65,13 +65,11 @@ export default async function BlogPost() {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Tyent",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.tyent.co.in/tyent-logo.png"
-      }
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
     },
-    "datePublished": "2026-10-18"
+    "datePublished": "2026-10-18",
+    "dateModified": "2026-10-18"
   };
 
   return (

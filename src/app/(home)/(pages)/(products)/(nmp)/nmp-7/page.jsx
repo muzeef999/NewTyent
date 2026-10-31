@@ -31,7 +31,7 @@ import { RxDownload } from "react-icons/rx";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 export const metadata = {
   title: "Tyent NMP-7 Water Ionizer – 7 Plate Alkaline Machine India",
@@ -178,7 +178,7 @@ const TyentNMP5 = () => {
     title: "Easy To Use One Touch Display",
     subTitle:
       "Tyent water ionizers offer a user-friendly one-touch display with clear icons, making it easy to select and activate your desired water type effortlessly for convenient, customizable hydration.",
-    link: "/7-types-of-Tyent-water",
+    link: "/7-types-of-tyent-water",
   };
 
   return (
@@ -345,7 +345,7 @@ const TyentNMP5 = () => {
               <Link
                 className="appbardemo"
                 style={{ textDecoration: "none" }}
-                href={"/7-types-of-Tyent-water"}
+                href={"/7-types-of-tyent-water"}
               >
                 Click Here &nbsp;
                 <GoArrowRight />
@@ -413,7 +413,7 @@ const TyentNMP5 = () => {
                 <Link
                   className="appbardemo"
                   style={{ textDecoration: "none" }}
-                  href={"/7-types-of-Tyent-water"}
+                  href={"/7-types-of-tyent-water"}
                 >
                   Click Here &nbsp;
                   <GoArrowRight />
@@ -453,7 +453,7 @@ const TyentNMP5 = () => {
               fontSize: "2rem", // Default for large screens
             }}
           >
-            Tyent NMP-7 Specification's
+            Tyent NMP-7 Specifications
           </h2>
 
           <Table className="custom-table" hover responsive>
@@ -496,13 +496,13 @@ const TyentNMP5 = () => {
         {/* SEO Content Section */}
         <div className="mt-5 pt-4">
           <h2 className="fw-bold mb-4" style={{ color: "#291495", fontSize: "clamp(22px, 4vw, 36px)" }}>
-            Tyent NMP-7 – 7-Plate Alkaline Water Ionizer India
+            Tyent NMP-7 (7-Plate Alkaline Water Ionizer India)
           </h2>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
             Transform regular tap water into therapeutic, hydrogen-rich hydration. Enjoy the best of medical technology and convenience at home. This compact system rests elegantly on your kitchen counter, providing unlimited antioxidant water.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent NMP-7 – Power & Affordability Combined</h3>
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent NMP-7 – The Ultimate Countertop Ionizer</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
             The Tyent NMP-7 water ionizer India is a smooth upgrade from a regular RO water machine. It provides excellent chemical-free purification and strong electrolysis. This 7-plate water ionizer India produces a steady stream of antioxidant-rich molecular hydrogen, which is premium wellness without costing a lot more.
           </p>
@@ -512,7 +512,7 @@ const TyentNMP5 = () => {
             This dynamic countertop water ionizer is carefully designed for medium-sized families who need the best daily hydration. This is the <Link href="/counter-top-water-ionizers">best countertop ionizer 7 plate in India</Link>, for generating water in large quantities, up to 3.0 litres per minute. It will support a family of four or five people comfortably, with enough space to drink, cook, wash vegetables, and sanitise.
           </p>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>7-Plate Japanese Technology – Better ORP & pH Performance</h3>
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>7-Plate Japanese Technology – Highest Performance in NMP Series</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
             This 7-plate alkaline ionizer India price bracket leader is based on Japan's solid hybrid mesh technology. The system consists of 7 Platinum-coated plates of 99.9% pure titanium. This excellent surface area generates very stable electrical conductivity and increases micro-clustering considerably. This 7-plate configuration offers the optimal balance of high ORP (Oxidation Reduction Potential) and long-lasting durability when compared to the <Link href="/nmp-5">Tyent NMP-5 water ionizer in India</Link>.
           </p>
@@ -526,7 +526,7 @@ const TyentNMP5 = () => {
             <li><strong>Chemical-Free Turbo Mode:</strong> 11.5 pH and 2.5 pH water is produced naturally without toxic chemical enhancers.</li>
           </ul>
 
-          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, ORP Levels & Hydrogen Output – NMP-7 Specs</h3>
+          <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, ORP & Hydrogen – NMP-7 Premium Specs</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
             The Tyent 7-plate alkaline water machine is easy to use and can create up to 7 water levels with a wide range of pH from 2.5 to 11.5. This efficient system produces an outstanding ORP of -950mV. As such, the 7-plate hydrogen water ionizer India produces high levels of selectively antioxidant molecular hydrogen up to 1550 ppb, which efficiently fights against cell oxidative stress.
           </p>
@@ -595,6 +595,9 @@ const TyentNMP5 = () => {
         </div>
 
       </Container>
+    </div>
+    <div className="section-spacing">
+      <TrustedbyExperts />
     </div>
     </>
   );

@@ -38,7 +38,7 @@ const OneTouchDispaly = () => {
             <Link
               className="appbardemo text-center"
               style={{ textDecoration: "none" }}
-              href={"/7-types-of-Tyent-water"}
+              href={"/7-types-of-tyent-water"}
             >
               Click Here &nbsp;
               <GoArrowDownRight />

@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Col, Row, Table } from "react-bootstrap";
 import "@/app/style/Benfits.css";
 import benfitsBanner from "@/asserts/benfits.png";
@@ -474,7 +475,7 @@ const Page = () => {
               Ionized hydrogen-rich alkaline water has been trusted across
               Western, European, and Asian countries as a symbol of health,
               wellness, and vitality. Backed by extensive research, clinical
-              trials, and medical endorsements, Tyent water ionizers offer far
+              trials, and <Link href="/certifications" style={{ color: "#291495", textDecoration: "underline" }}>medical endorsements</Link>, <Link href="/collections/all-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>Tyent water ionizers</Link> offer far
               more than hydration.{" "}
             </p>
 
@@ -500,7 +501,7 @@ const Page = () => {
               </div>
             </Row> */}
             <p>
-              Unlike regular water, Tyent's ionized alkaline water modulates
+              Unlike regular water, Tyent's <Link href="/7-types-of-tyent-water" style={{ color: "#291495", textDecoration: "underline" }}>ionized alkaline water</Link> modulates
               signal transduction, protein phosphorylation, and gene expression,
               delivering powerful health benefits. It provides anti-inflammatory,
               anti-allergy, and anti-apoptotic protective effects, supporting
@@ -509,7 +510,7 @@ const Page = () => {
               Detoxification by eliminating toxins and free radicals, Improving
               gastrointestinal health, reducing acidity, and promoting better
               digestion, Decreasing the risk of chronic diseases like cancer,
-              heart disease, and diabetes.
+              heart disease, and diabetes. Discover <Link href="/why-tyent" style={{ color: "#291495", textDecoration: "underline" }}>why Tyent</Link> is trusted by families worldwide.
             </p>
 
             <div className="container mt-4">
@@ -542,13 +543,16 @@ const Page = () => {
               style={{
                 color: "#000",
                 fontWeight: "600",
-                fontSize: "2rem", // Default for large screens
+                fontSize: "2rem",
               }}
             >
               The Benefits of{" "}
-              <span style={{ color: "#291495" }}>onised alkaline water </span> for
+              <span style={{ color: "#291495" }}>ionised alkaline water </span> for
               your health
             </h2>
+            <p style={{ color: "#405261", textAlign: "center" }}>
+              Experience these benefits with our premium range of <Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>countertop water ionizers</Link> and <Link href="/under-counter-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>under-counter water ionizers</Link>. Read what our <Link href="/testimonials" style={{ color: "#291495", textDecoration: "underline" }}>customers say about Tyent</Link>.
+            </p>
           </center>
           <br />
         </div>
@@ -601,14 +605,14 @@ const Page = () => {
             </h2>
           </center>
           <p style={{ color: "#405261", textAlign: "center" }}>
-            ORP (Oxidation-Reduction Potential) measures a substance's ability to
+            ORP (Oxidation-Reduction Potential) measures a substance&apos;s ability to
             either oxidize (lose electrons) or reduce (gain electrons) in
             millivolts (mV). Higher positive ORP indicates oxidative stress, which
             promotes aging and disease. Oxidation increases ORP, while
-            antioxidants lower ORP by neutralizing free radicals. Tyent’s
+            antioxidants lower ORP by neutralizing free radicals. Tyent&apos;s
             hydrogen-rich alkaline water has a negative ORP (-850 to -1250 mV),
             offering powerful antioxidant protection that combats oxidative
-            damage, boosts immunity, and promotes better health.{" "}
+            damage, boosts immunity, and promotes better health. Learn more about <Link href="/blogs/orp-drinking-water-india" style={{ color: "#291495", textDecoration: "underline" }}>ORP in drinking water</Link> and understand <Link href="/why-water-ionizer" style={{ color: "#291495", textDecoration: "underline" }}>why a water ionizer is essential</Link>.
           </p>
           <br />
 
@@ -714,6 +718,10 @@ const Page = () => {
               ))}
             </tbody>
           </Table>
+
+          <p style={{ color: "#405261", textAlign: "center", marginTop: "20px" }}>
+            Upgrade to Tyent&apos;s advanced ionizers like the <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>Hybrid H2</Link>, <Link href="/uce-13-plus" style={{ color: "#291495", textDecoration: "underline" }}>UCE-13 Plus</Link>, or explore our <Link href="/blogs/ro-water-purifier-vs-water-ionizer" style={{ color: "#291495", textDecoration: "underline" }}>comparison of RO purifiers vs water ionizers</Link> to make an informed choice. You can also read about <Link href="/blogs/alkaline-ro-vs-ionized-water" style={{ color: "#291495", textDecoration: "underline" }}>alkaline RO vs ionized water</Link>.
+          </p>
         </div>
 
         <Row className="align-items-center">
@@ -740,12 +748,12 @@ const Page = () => {
             >
               <p>
                 Tyent water has a magical combination of selective antioxidant
-                molecular hydrogen and alkalinity.The selective antioxidant
+                molecular hydrogen and alkalinity. The selective antioxidant
                 molecular hydrogen works to counteract free radicals and reduce
                 oxidative stress. Meanwhile, the alkalinity in the water helps
                 neutralize acidic stress. This combination contributes to a more
                 balanced and beneficial hydration experience. Stay ahead in your
-                wellness journey with every sip of Tyent ionized alkaline water.
+                wellness journey with every sip of Tyent ionized alkaline water. Powered by our patented <Link href="/patented-smps-plus" style={{ color: "#fff", textDecoration: "underline" }}>SMPS Plus technology</Link> and <Link href="/solid-hybrid-mesh-plates" style={{ color: "#fff", textDecoration: "underline" }}>Solid Hybrid Mesh Plates</Link>.
               </p>
             </div>
           </div>

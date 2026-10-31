@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import BannerDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop_hybrid.jpeg";
-import BannerMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg_hybrid.jpeg";
+import BannerDesktop from "@/asserts/homeBanners/banner1/home_Banner_Bg_Desktop_hybrid.webp";
+import BannerMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg_hybrid.webp";
 
 const Slider = () => {
   return (

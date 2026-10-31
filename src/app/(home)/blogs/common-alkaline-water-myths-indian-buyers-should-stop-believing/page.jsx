@@ -62,13 +62,11 @@ export default async function BlogPost() {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Tyent",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.tyent.co.in/tyent-logo.png"
-      }
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
     },
-    "datePublished": "2026-07-24"
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24"
   };
 
   return (

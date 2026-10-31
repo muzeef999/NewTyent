@@ -140,7 +140,7 @@ const ProductData = [
       {
         title: "Sterilizing-water-generator",
         image:TIEN20,
-        link:"/Sterilizing-water-generator",
+        link:"/sterilizing-water-generator",
       },
     ],
   },
@@ -153,7 +153,7 @@ const categoryViewMoreLinks = {
   "Tyent H2-Hybrid": "/hybrid-h2",
   "TM-X Beauty Soap": "/soap",
   "Water Bottle": "/water-bottle-1",
-  "Sterilizing water generator": "/Sterilizing-water-generator",
+  "Sterilizing water generator": "/sterilizing-water-generator",
 };
 
 const ResponsiveProductPage = ({ isProductOpen }) => {

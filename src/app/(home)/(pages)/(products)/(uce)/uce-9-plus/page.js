@@ -46,6 +46,7 @@ import ucerotate from "@/asserts/uce/ucerotate.webp"
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
+const TrustedbyExperts = dynamic(() => import("@/app/(home)/(main_home_content)/TrustedbyExperts"), { ssr: false });
 
 export const metadata = {
   title: "Tyent UCE-9 Plus – Under Counter 9 Plate Ionizer India",
@@ -1044,7 +1045,7 @@ const page = () => {
             fontSize: "2rem", // Default for large screens
           }}
         >
-          Tyent UCE-9 plus Specification's
+          Tyent UCE-9 Plus Specifications
         </h2>
 
         <Table className="custom-table" hover responsive>
@@ -1195,7 +1196,9 @@ const page = () => {
 
       </Container>
     </div>
-
+    <div className="section-spacing">
+      <TrustedbyExperts />
+    </div>
     </>
   );
 };

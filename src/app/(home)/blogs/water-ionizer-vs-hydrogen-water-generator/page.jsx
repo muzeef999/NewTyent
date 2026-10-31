@@ -48,8 +48,34 @@ export default async function BlogPost() {
     addSuffix: true,
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tyent.co.in/blogs/water-ionizer-vs-hydrogen-water-generator"
+    },
+    "headline": "Water Ionizer vs Hydrogen Water Generator: What's the Difference?",
+    "description": "Understand the key differences between a water ionizer and a hydrogen water generator. Learn which device is best for your family's health, alkaline water needs, and hydrogen-rich water benefits.",
+    "image": "https://www.tyent.co.in/blog-water-ionizer-vs-hydrogen-generator.webp",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Srinivasa Yadav Kandula",
+      "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
+    }
+  };
+
   return (
     <div className="container py-4" style={{ overflowX: "hidden" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
           <img

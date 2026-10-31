@@ -16,7 +16,7 @@ const features = [
     ],
   },
   {
-    link: "/patented-SMPS-plus",
+    link: "/patented-smps-plus",
     title: "Patented SMPS Plus Power Supply",
     img: "/contactIndetail/patentedSMPS.webp",
     desc: "Tyent’s exclusive SMPS PLUS technology guarantees voltage stability and precise control,  delivering: Unlike conventional transformers, this system ensures stable output even in fluctuating Delhi  power conditions.",
