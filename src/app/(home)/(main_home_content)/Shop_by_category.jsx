@@ -8,19 +8,19 @@ const categories = [
   {
     title: "Above-counter Ionizers",
     desc: "Sleek & modern design, easy-to-install",
-    img: "/home/nmp-9.webp",
+    img: "/explore/nmp5-collection.webp",
     link: "/counter-top-water-ionizers",
   },
   {
     title: "Under the counter ionizers",
     desc: "Ultra premium and aesthetically designed",
-    img: "/home/uce-silver.webp",
+    img: "/explore/uce13-collection.webp",
     link: "/under-counter-water-ionizers",
   },
   {
     title: "Filters",
     desc: "High-quality replacement filters",
-    img: "/home/filter.webp",
+    img: "/home/filter-white.png",
     link: "/0.1-micron-filters",
   },
 ];
@@ -53,18 +53,16 @@ const Shop_by_category = () => {
           <div key={index} className="col-md-4 d-flex">
             <a href={item.link} className="text-decoration-none w-100">
               <div className="category-card text-center p-4 d-flex flex-column h-100">
-                <div style={{ height: "200px" }} className="d-flex align-items-center justify-content-center mb-3">
-                  <div style={{ width: "85%" }} className="mx-auto">
+                <div className="category-img-wrapper mb-3" style={{}}>
                     <Image
                       src={item.img}
                       alt={item.title}
-                      width={320}
-                      height={240}
+                      width={400}
+                      height={300}
                       sizes="(max-width: 768px) 85vw, 280px"
                       className="img-fluid category-img"
-                      style={{ maxHeight: "200px", width: "auto", objectFit: "contain" }}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
                     />
-                  </div>
                 </div>
                 <div className="mt-auto">
                   <h5 style={{ color: "#000", fontWeight: 600 }}>
@@ -88,18 +86,16 @@ const Shop_by_category = () => {
           <div key={index} className="category-slide d-flex">
             <a href={item.link} className="text-decoration-none w-100">
               <div className="category-card text-center p-3 d-flex flex-column h-100">
-                <div style={{ height: "250px" }} className="d-flex align-items-center justify-content-center mb-3">
-                  <div style={{ width: "100%" }} className="mx-auto">
+                <div className="category-img-wrapper mb-3" style={{}}>
                     <Image
                       src={item.img}
                       alt={item.title}
-                      width={320}
-                      height={140}
+                      width={400}
+                      height={300}
                       sizes="85vw"
                       className="img-fluid category-img"
-                      style={{ maxHeight: "250px", width: "auto", objectFit: "contain" }}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
                     />
-                  </div>
                 </div>
                 <div className="mt-auto">
                   <h5 style={{ color: "#000", fontWeight: 600 }}>

@@ -38,7 +38,7 @@ const DetailComparison = () => {
     {
       id: 2,
       name: "KANGEN Jr4",
-      price: 218000,
+      price: 240000,
       generates: "5 Water types",
       plates: 4,
       orp: -450,
@@ -60,7 +60,7 @@ const DetailComparison = () => {
     {
       id: 4,
       name: "KANGEN SD501DX",
-      price: 278000,
+      price: 340000,
       generates: "5 Water types",
       plates: 7,
       orp: -631,
@@ -82,7 +82,7 @@ const DetailComparison = () => {
     {
       id: 6,
       name: "KANGEN K8",
-      price: 345000,
+      price: 380000,
       generates: "5 Water types",
       plates: 8,
       orp: -722,
@@ -104,7 +104,7 @@ const DetailComparison = () => {
     {
       id: 8,
       name: "KANGEN SUPER SD501",
-      price: 378000,
+      price: 440000,
       generates: "5 Water types",
       plates: 12,
       orp: -800,

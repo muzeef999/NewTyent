@@ -21,7 +21,7 @@ const PriceComp = () => {
       bgColor: "#d9dbda",
       color: "#000",
       details: [
-        { label: "Price:", value: "218,000/-" },
+        { label: "Price:", value: "2,40,000/-" },
         { label: "Generates:", value: "5 Water types" },
         { label: "Plates:", value: "4" },
         { label: "ORP:", value: "-450" },
@@ -45,7 +45,7 @@ const PriceComp = () => {
       bgColor: "#d9dbda",
       color: "#000",
       details: [
-        { label: "Price:", value: "277,000/-" },
+        { label: "Price:", value: "3,40,000/-" },
         { label: "Generates:", value: "5 Water types" },
         { label: "Plates:", value: "7" },
         { label: "ORP:", value: "-631" },
@@ -69,7 +69,7 @@ const PriceComp = () => {
       bgColor: "#d9dbda",
       color: "#000",
       details: [
-        { label: "Price:", value: "345,000/-" },
+        { label: "Price:", value: "3,80,000/-" },
         { label: "Generates:", value: "5 Water types" },
         { label: "Plates:", value: "8" },
         { label: "ORP:", value: "-722" },
@@ -93,7 +93,7 @@ const PriceComp = () => {
       bgColor: "#d9dbda",
       color: "#000",
       details: [
-        { label: "Price:", value: "378,000/-" },
+        { label: "Price:", value: "4,40,000/-" },
         { label: "Generates:", value: "5 Water types" },
         { label: "Plates:", value: "12" },
         { label: "ORP:", value: "-800" },

@@ -98,7 +98,7 @@ export default async function BlogPost() {
             <p>I come across many water alkaline water ionizers that are similar to Kangen water ionizer machines, popular alkaline water ionizers from around the world but very expensive for most Indians. In this post we review and compare the best Alkaline Water Ionizers in India on the basis of 4 key parameters : Features, Performance, Price and Value</p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>What Is a Kangen Water Machine and Why People Look for Alternatives</h2>
-            <p>The Kangen water machine is an Alkaline Water Ionizer made by Enagic. This equipment uses electrolysis in order to produce ionized Alkaline Water. The pH level of this water can vary from 2.5 to 11.5. The Kangen water machines are available in the Indian market at prices ranging from Rs. 2,18,000 to Rs. 4,12,000. The incredibly expensive because of its MLM selling structure where 49% of the machine price is offered as commission. The higher price of the product, chemical usage & no doorstep service ensures that most of the potential customers will look for an alternative to get similar results at a fraction of the cost.</p>
+            <p>The Kangen water machine is an Alkaline Water Ionizer made by Enagic. This equipment uses electrolysis in order to produce ionized Alkaline Water. The pH level of this water can vary from 2.5 to 11.5. The Kangen water machines are available in the Indian market at prices ranging from Rs. 2,40,000 to Rs. 4,40,000. The incredibly expensive because of its MLM selling structure where 49% of the machine price is offered as commission. The higher price of the product, chemical usage & no doorstep service ensures that most of the potential customers will look for an alternative to get similar results at a fraction of the cost.</p>
 
             <h2 className="fw-bold mt-4 mb-3" style={{ fontSize: "22px" }}>Key Features to Compare When Choosing an Alkaline Water Ionizer</h2>
             <p>Buyers should evaluate these features before selecting an alkaline water ionizer in India:</p>
@@ -187,7 +187,7 @@ export default async function BlogPost() {
 
             <div className="mb-3">
               <p className="fw-bold mb-1">Q: Why are people looking for alternatives to Kangen water machines in India?</p>
-              <p>A: Enagic's Kangen Water Machines are priced in India between INR 2,18,000 and 4,18,000 and there are similar ionizing machines available in the market for 20-30% less.</p>
+              <p>A: Enagic's Kangen Water Machines are priced in India between INR 2,40,000 and 4,40,000 and there are similar ionizing machines available in the market for 20-30% less.</p>
             </div>
 
             <div className="mb-3">
