@@ -106,7 +106,7 @@ const ProductCarousel = () => {
       ph: "2.5 - 11.5*",
       orp: "-1250*",
       hydrogen: "upto 1800ppb*",
-      image: "/home/nmp-9.webp",
+      image: "/home/nmp-9-white.png",
       buttonText: "Shop Now",
       link: "/counter-top-water-ionizers"
     },
@@ -120,7 +120,7 @@ const ProductCarousel = () => {
       ph: "2.5 - 11.5*",
       orp: "-1250*",
       hydrogen: "upto 1800ppb*",
-      image: "/home/ucebg1.webp",
+      image: "/home/ucebg1-white.png",
       buttonText: "Shop Now",
       link: "/under-counter-water-ionizers"
     },
@@ -133,7 +133,7 @@ const ProductCarousel = () => {
       ph: "2.5 - 11.5*",
       orp: "-1150*",
       hydrogen: "upto 1600ppb*",
-      image: "/home/our-story1.webp",
+      image: "/home/our-story1-white.png",
       buttonText: "Shop Now",
       link: "/hybrid-h2"
     }
@@ -241,7 +241,7 @@ const ProductCarousel = () => {
                       alt={product.series}
                       width={620}
                       height={620}
-                      style={{ width: "100%", maxWidth: "620px", height: "auto", objectFit: "contain" }}
+                      style={{ width: "100%", maxWidth: "620px", height: "auto", objectFit: "contain", }}
                     />
                   </div>
                   <h2 className="mobile-title">
