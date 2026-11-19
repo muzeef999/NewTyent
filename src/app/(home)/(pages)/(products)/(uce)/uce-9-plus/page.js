@@ -204,11 +204,33 @@ const page = () => {
     },
   ];
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Tyent UCE-9 Plus",
+    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuce-silver.a541d088.webp&w=3840&q=75",
+    "description": "Buy Tyent UCE-9 Plus under counter water ionizer India. 9 Japanese plates, hidden design, professional installation available.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Tyent"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.tyent.co.in/uce-9-plus",
+      "priceCurrency": "INR",
+      "price": "325000",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  };
+
   return (
-
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
 
-    
      {/* AMP Analytics Script */}
       <Head>
         <script

@@ -194,8 +194,8 @@ const TyentNMP5 = () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Tyent NMP-9",
-    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPRODUCTNMP1.ac2c6204.webp&w=3840&q=75",
-    "description": "Buy Tyent NMP-9 water ionizer India. 9 Japanese plates, hydrogen-rich alkaline water, superior ORP and advanced countertop design.",
+    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnmp911-product.7fa90c19.webp&w=3840&q=75",
+    "description": "Buy Tyent NMP-5 water ionizer India. 5 Japanese plates, hydrogen-rich alkaline water, easy countertop setup at an affordable price.",
     "brand": {
       "@type": "Brand",
       "name": "Tyent"
@@ -204,26 +204,9 @@ const TyentNMP5 = () => {
       "@type": "Offer",
       "url": "https://www.tyent.co.in/nmp-9",
       "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150",
-      "bestRating": "5"
-    },
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Verified Customer"
-      },
-      "reviewBody": "The NMP-9 is a fantastic water ionizer with 9 plates that deliver excellent hydrogen-rich alkaline water. Great build quality and performance."
+      "price": "238000",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
     }
   };
 
@@ -498,7 +481,7 @@ const TyentNMP5 = () => {
             Tyent NMP-9 (9-Plate Alkaline Water Ionizer India)
           </h2>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Are you willing to experience powerful hydration and hydrogen-rich water for your everyday life? Tyent 9-plate water ionizer in India is curated to offer you that premium feeling. The 9-plate alkaline water ionizer in India comes with advanced technology, elegant design, and reliable performance, making it a desirable choice for healthier water.
+            Are you willing to experience powerful hydration and hydrogen-rich water for your everyday life? Tyent 9-plate water ionizer in India is curated to offer you that premium feeling. The 9-plate alkaline water ionizer in India comes with advanced technology, elegant design, and reliable performance, making it a desirable choice for healthier water. As a premium <Link href="/counter-top-water-ionizers">countertop water ionizer</Link>, it delivers unmatched quality.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Introducing the Tyent NMP-9 – Our Most Popular Countertop Model</h3>
@@ -519,7 +502,7 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>9-Plate Technology – Maximum Alkalinity for Optimal Health</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            Engineered with advanced 9-plate electrolysis technology, the Tyent NMP-7 water ionizer in India offers a higher concentration of alkaline and hydrogen-rich water throughout the day. Being a premium water ionizer 9 plate countertop in India, it is curated to maximise the ionization efficiency for better hydration and everyday wellness.
+            Engineered with <Link href="/solid-hybrid-mesh-plates">advanced 9-plate electrolysis technology</Link>, the Tyent NMP-7 water ionizer in India offers a higher concentration of alkaline and hydrogen-rich water throughout the day. Being a premium water ionizer 9 plate countertop in India, it is curated to maximise the ionization efficiency for better hydration and everyday wellness.
           </p>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
             So, if you are searching for a dependable 9-plate countertop water ionizer in India, the NMP-9 offers an ideal combination of robust technology and durability at the same time.
@@ -532,8 +515,8 @@ const TyentNMP5 = () => {
           <ul style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px", paddingLeft: "20px" }}>
             <li>Sleek design that complements modern kitchens.</li>
             <li>Easy-to-use touchscreen interface with effective controls.</li>
-            <li>Multiple water settings for drinking, cooking, cleaning, etc.</li>
-            <li>Get high-performance filtration for cleaner and better-tasting water.</li>
+            <li><Link href="/7-types-of-tyent-water">Multiple water settings</Link> for drinking, cooking, cleaning, etc.</li>
+            <li>Get high-performance <Link href="/0.1-micron-filters">advanced filtration</Link> for cleaner and better-tasting water.</li>
             <li>Durable construction designed for long-term everyday use.</li>
             <li>Energy-efficient operation that needs minimal maintenance.</li>
           </ul>
@@ -543,17 +526,17 @@ const TyentNMP5 = () => {
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>pH Range, ORP & Hydrogen Output – NMP-9 Performance</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            The NMP-9 vs. NMP-11 comparison is essential to understand their relevance. The Tyent NMP-9 is designed to offer a wide pH range, strong negative ORP, and hydrogen-rich water for versatile everyday use. Its advanced 9-plate technology ensures stable ionization. So, whether you are drinking, cooking, or cleaning, the water ionizer 9 plate countertop in India offers reliable water quality while maintaining high efficiency and long-term durability.
+            The <Link href="/nmp-11">NMP-9 vs. NMP-11 comparison</Link> is essential to understand their relevance. The Tyent NMP-9 is designed to offer a wide pH range, strong negative ORP, and hydrogen-rich water for versatile everyday use. Its advanced 9-plate technology ensures stable ionization. So, whether you are drinking, cooking, or cleaning, the water ionizer 9 plate countertop in India offers reliable water quality while maintaining high efficiency and long-term durability.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>NMP-9 vs UCE-9 Plus – Countertop vs Under-Counter</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            The Tyent NMP-9 is a stylish countertop model that offers easy installation and everyday convenience, while the Tyent UCE 9 plus alkaline water machine in India is designed for an under-counter setup. So, if you are considering the NMP-9 vs. NMP-11 comparison, the NMP-9 is an excellent choice for most families.
+            The Tyent NMP-9 is a stylish countertop model that offers easy installation and everyday convenience, while the <Link href="/uce-9-plus">Tyent UCE 9 plus alkaline water machine in India</Link> is designed for an <Link href="/under-counter-water-ionizers">under-counter setup</Link>. So, if you are considering the NMP-9 vs. NMP-11 comparison, the NMP-9 is an excellent choice for most families.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Easy Countertop Setup – Ready to Use Instantly</h3>
           <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
-            The Tyent NMP-9 is curated for quick, hassle-free countertop installation. This way, you can enjoy alkaline and hydrogen-rich water in minutes. In the Tyent NMP-9 vs Kangen K8 comparison, the NMP-9 stands out for its user-friendly setup and everyday convenience. You can easily connect the unit and enjoy cleaner and healthier water without any complex installation.
+            The Tyent NMP-9 is curated for quick, hassle-free countertop installation. This way, you can enjoy alkaline and hydrogen-rich water in minutes. In the <Link href="/tyentvskangen">Tyent NMP-9 vs Kangen K8 comparison</Link>, the NMP-9 stands out for its user-friendly setup and everyday convenience. You can easily connect the unit and enjoy cleaner and healthier water without any complex installation.
           </p>
 
           <h3 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "30px" }}>Pan India Delivery & Warranty Support</h3>
@@ -581,7 +564,7 @@ const TyentNMP5 = () => {
           <h2 style={{ color: "#291495", fontWeight: 600, fontSize: "20px", marginTop: "40px", marginBottom: "20px" }}>FAQs</h2>
 
           <div style={{ marginBottom: "20px" }}>
-            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How is NMP-9 different from NMP-7?</h3>
+            <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>How is NMP-9 different from <Link href="/nmp-7">NMP-7</Link>?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "16px" }}>
               The NMP-9 highlights nine electrolysis plates, offering higher ionization efficiency and greater hydrogen production every time. It also comes with improved performance and is ideal for households with higher daily water consumption.
             </p>
@@ -611,7 +594,7 @@ const TyentNMP5 = () => {
           <div style={{ marginBottom: "20px" }}>
             <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#222", marginBottom: "8px" }}>What warranty does Tyent offer on NMP-9?</h3>
             <p style={{ lineHeight: "1.7", color: "#4f4f4f", marginBottom: "0" }}>
-              The Tyent NMP-9 includes detailed warranty coverage and dedicated customer support. Warranty terms might differ, so refer to the official product details or contact Tyent India for the latest information.
+              The Tyent NMP-9 includes detailed warranty coverage and dedicated customer support. Warranty terms might differ, so refer to the official product details or <Link href="/contact">contact Tyent India</Link> for the latest information.
             </p>
           </div>
         </div>

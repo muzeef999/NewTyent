@@ -150,7 +150,7 @@ const ProductSection = ({ products, specifications }) => {
         </Col>    
         <Col sm={12} md={12} lg={6} xl={6}>
           <h2 style={{ fontWeight: 600,color: urlFound === "hybrid-h2" ? "#000" : urlFound === "uce" ? "#000" : "#291495"}}>{model}</h2>
-          <h2 style={{color:'#000',fontSize:'20px'}}>{desc}</h2>
+          <p style={{color:'#000',fontSize:'20px'}}>{desc}</p>
           <hr />
           <h4 className="m-2">
   M.R.P: <span style={{ fontWeight: 500 }}>

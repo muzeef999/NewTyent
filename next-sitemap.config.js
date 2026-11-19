@@ -3,6 +3,9 @@ module.exports = {
   siteUrl: process.env.SITE_URL || 'https://www.tyent.co.in',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
+  changefreq: null,
+  priority: null,
+  autoLastmod: false,
   exclude: [
     '/dashboard',
     '/adminBlog',

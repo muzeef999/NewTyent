@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import Script from "next/script"; // ✅ correct import
+import LocalBusinessSchema from "./compoents/LocalBusinessSchema";
 
 // Font configuration for Poppins
 
@@ -165,32 +166,8 @@ export default function RootLayout({ children, session }) {
             { "@context": "https://schema.org", "@type": "VideoObject", "name": "Unlocking Superiority: Tyent vs. Enagic Kangen Water Ionizers | #tyent #kangenwater #enagickangen", "description": "In the realm of water ionizers, two giants stand out: Tyent and Enagic Kangen. Yet, in the race for superiority and innovation, Tyent reigns supreme. Tyent employs the groundbreaking Solid Hybrid Mesh Plate, merging the durability of solid plates with the enhanced surface area of mesh plates. This innovation ensures optimal electrolysis, yielding high-quality ionized water. Enagic Kangen lacks this advanced plate design, making Tyent the superior choice in water ionization technology. Equipped with state-of-the-art Japanese technology, Tyent water ionizers feature ionization chambers crafted by Permelec, a prestigious Japanese company synonymous with superior quality and performance. In contrast, Enagic Kangen falls short in technological advancements, making Tyent the preferred option for those seeking the latest innovations in water ionization. Visit www.Tyent.co.in or call 9966 558 556.", "thumbnailUrl": "https://i.ytimg.com/vi/JAHUlOASNrI/maxresdefault.jpg", "uploadDate": "2020-09-22", "duration": "PT13M57S", "contentUrl": "https://www.youtube.com/watch?v=JAHUlOASNrI", "embedUrl": "https://www.youtube.com/embed/JAHUlOASNrI" }
           ]) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": "https://www.tyent.co.in/#localbusiness",
-            "name": "Tyent India",
-            "url": "https://www.tyent.co.in/",
-            "telephone": "+91-9966558556",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "8-2-277/45, UBI Colony, Near TV9 Office, Road No. 3, Banjara Hills",
-              "addressLocality": "Hyderabad",
-              "addressRegion": "Telangana",
-              "postalCode": "500034",
-              "addressCountry": "IN"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "17.42085",
-              "longitude": "78.43948"
-            },
-            "areaServed": "India"
-          }) }}
-        />
 
+        <LocalBusinessSchema />
         <ClientComponent session={session}>{children}</ClientComponent>
       </body>
     </html>

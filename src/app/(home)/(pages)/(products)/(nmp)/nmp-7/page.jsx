@@ -181,9 +181,32 @@ const TyentNMP5 = () => {
     link: "/7-types-of-tyent-water",
   };
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Tyent NMP-7",
+    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnmp57-product.d82920f9.webp&w=3840&q=75",
+    "description": "Tyent NMP-7 water ionizer India — 7 Japanese plates, hydrogen-rich alkaline water, ideal for families. Best value countertop ionizer.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Tyent"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.tyent.co.in/nmp-7",
+      "priceCurrency": "INR",
+      "price": "205000",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  };
+
   return (
     <>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
 
          {/* AMP Analytics Script */}
           <Head>

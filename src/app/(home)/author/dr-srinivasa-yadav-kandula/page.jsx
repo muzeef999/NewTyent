@@ -15,47 +15,17 @@ export const metadata = {
 
 export default function AuthorPage() {
   const authorSchema = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": "Person",
-    "@id": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula#person",
     "name": "Dr. Srinivasa Yadav Kandula",
     "url": "https://www.tyent.co.in/author/dr-srinivasa-yadav-kandula",
+    "image": "https://www.tyent.co.in/_next/image?url=%2FDr.%20Srinivasa%20Yadav%20Kandula.jpeg&w=640&q=75",
+    "sameAs": "https://www.linkedin.com/in/srinivasa-yadav-kandula-626a1715",
     "jobTitle": "Senior Consultant Laparoscopic, Robotic, Bariatric & Laser Surgeon",
-    "description": "Dr. Srinivasa Yadav Kandula is a Senior Consultant General Surgeon and an expert in laparoscopic, robotic, bariatric, and laser surgery with over 20 years of experience in advanced surgical care.",
-    "image": "https://www.tyent.co.in/Dr.%20Srinivasa%20Yadav%20Kandula.jpeg",
     "worksFor": {
       "@type": "Organization",
-      "name": "Pristyn Care",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bellandur, Bangalore",
-        "addressRegion": "Karnataka",
-        "addressCountry": "IN"
-      }
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/srinivasa-yadav-kandula-626a1715"
-    ],
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "FMAS (Fellow of Minimal Access Surgery)" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "DMAS (Diploma in Minimal Access Surgery)" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "FICRS (Fellow of International College of Robotic Surgeons)" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "FIGE (Fellow of Institute of Gastrointestinal Endoscopy)" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "ECFMG Certification (USA)" }
-    ],
-    "knowsAbout": [
-      "Laparoscopic Surgery",
-      "Robotic Surgery",
-      "Bariatric Surgery",
-      "Laser Surgery",
-      "Minimally Invasive Surgery",
-      "General Surgery",
-      "Hernia Treatment",
-      "Gallstone Surgery",
-      "Appendicitis Treatment",
-      "Piles Treatment",
-      "Fissures and Fistula Treatment"
-    ]
+      "name": "Tyent"
+    }
   };
 
   return (

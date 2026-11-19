@@ -198,10 +198,34 @@ const page = () => {
     },
   ];
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Tyent UCE-13 Plus",
+    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuce-silver.a541d088.webp&w=3840&q=75",
+    "description": "Buy Tyent UCE-13 Plus India. 13 Japanese plates, maximum pH range, medical-grade hydrogen-rich water. India's most powerful ionizer.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Tyent"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.tyent.co.in/uce-13-plus",
+      "priceCurrency": "INR",
+      "price": "367000",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  };
+
   return (
     <>
-    
-    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+
      {/* AMP Analytics Script */}
       <Head>
         <script

@@ -104,8 +104,33 @@ const page = () => {
     },
   ];
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Tyent H2-Hybrid",
+    "image": "https://www.tyent.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhybrid-product.3dd7a052.webp&w=3840&q=75",
+    "description": "Tyent Hybrid H2 water ionizer India — advanced hydrogen water generator with superior ORP and antioxidant output. Explore today.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Tyent"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.tyent.co.in/hybrid-h2",
+      "priceCurrency": "INR",
+      "price": "367000",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent H2 Hybrid</h1>
       <Head>
         <script
