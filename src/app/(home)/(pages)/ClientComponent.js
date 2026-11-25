@@ -107,13 +107,9 @@ export default function ClientComponent({ children, session, footer }) {
               scrollable
                 className="animate-modal customModal"
             >
-              <Modal.Header closeButton>
-                <Modal.Title>Get a Free Demo</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <FormOnly />
+              <Modal.Body className="p-0">
+                <FormOnly onClose={() => setShowModal(false)} />
               </Modal.Body>
-              
             </Modal>
           </div>
         )}

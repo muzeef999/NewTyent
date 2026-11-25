@@ -1,0 +1,417 @@
+/* ===== Demo Form - Dark Theme ===== */
+.demoForm {
+  background: #0b1225;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+/* --- Close Button (circle) --- */
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Header --- */
+.header {
+  background: linear-gradient(160deg, #0b1225 0%, #111d3a 40%, #1a2f5c 100%);
+  padding: 24px 22px 18px;
+  position: relative;
+}
+
+.headerContent {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Brand: TYENT + WATER IONIZER */
+.brandRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.brandName {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.brandSub {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: -2px;
+}
+
+/* FREE HOME DEMO badge */
+.demoBadge {
+  display: inline-block;
+  background: #16a34a;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.headerTitle {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.highlight {
+  color: #fff;
+}
+
+/* Subtitle */
+.headerSub {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Product Image */
+.headerImg {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.productImg {
+  object-fit: contain;
+  max-height: 140px;
+  width: auto;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+  border-radius: 12px;
+  border: 2px solid #fff;
+}
+
+/* --- Form Body --- */
+.formBody {
+  padding: 20px 22px 20px;
+  background: #fff;
+}
+
+/* --- Field Label --- */
+.fieldLabel {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.req {
+  color: #ef4444;
+}
+
+/* --- Input Group --- */
+.inputGroup {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.inputGroup:focus-within {
+  border-color: #1a4fc2;
+}
+
+.inputGroupError {
+  border-color: #ef4444 !important;
+}
+
+/* Icon inside input */
+.inputIcon {
+  margin-left: 14px;
+  color: #9ca3af;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Input field */
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: transparent;
+  color: #111;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+/* Phone prefix */
+.phonePrefix {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 14px;
+  flex-shrink: 0;
+}
+
+.prefixText {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.phoneDivider {
+  width: 1px;
+  height: 20px;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* Error text */
+.errorText {
+  display: block;
+  color: #ef4444;
+  font-size: 11px;
+  margin: -10px 0 10px 14px;
+}
+
+/* --- Consent --- */
+.consent {
+  font-size: 11px;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin: 2px 0 16px;
+}
+
+/* --- Submit Button --- */
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #0b1225 0%, #1a2f5c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, box-shadow 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.submitBtn:hover {
+  opacity: 0.92;
+  box-shadow: 0 4px 20px rgba(11, 18, 37, 0.4);
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Privacy Note (green text) --- */
+.privacyNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #16a34a;
+  margin: 14px 0 0;
+}
+
+.lockIcon {
+  margin-right: 5px;
+  opacity: 0.8;
+}
+
+/* --- Divider --- */
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0;
+}
+
+/* --- Trust Badges --- */
+.trustRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.trustBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+  text-align: center;
+}
+
+.trustIcon {
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.trustTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+}
+
+.trustSub {
+  font-size: 9px;
+  color: #9ca3af;
+  line-height: 1.3;
+}
+
+/* --- Rating --- */
+.ratingRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding-bottom: 4px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.ratingText {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.ratingText strong {
+  color: #333;
+}
+
+/* --- Success State --- */
+.successWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px 30px;
+  text-align: center;
+  background: #0b1225;
+  border-radius: 16px;
+}
+
+.successTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 16px 0 8px;
+}
+
+.successText {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.socialRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.socialIcon {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  color: #22c55e;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 16px 14px;
+  }
+
+  .headerTitle {
+    font-size: 17px;
+  }
+
+  .headerSub {
+    font-size: 11px;
+  }
+
+  .productImg {
+    max-height: 115px;
+  }
+
+  .formBody {
+    padding: 16px 16px 16px;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .submitBtn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .trustTitle {
+    font-size: 10px;
+  }
+
+  .trustSub {
+    font-size: 8px;
+  }
+}

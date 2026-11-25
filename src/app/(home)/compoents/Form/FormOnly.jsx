@@ -1,284 +1,246 @@
 "use client";
-import React, { useId, useState } from "react";
-import Input from "../Input/Input";
-import formStyle from "../Form/Form.module.css";
-import Button from "../Button/Button";
-import axios from "axios";
+import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { FaCheckCircle, FaFacebook, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
-import { IoLogoInstagram } from "react-icons/io5";
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://tyent.co.in'; // Fallback URL
+import axios from "axios";
 import { Spinner } from "react-bootstrap";
+import { FaCheckCircle, FaFacebook, FaLinkedinIn, FaYoutube, FaUser, FaMapMarkerAlt, FaLock, FaStar, FaGlobeAmericas, FaShieldAlt, FaAward } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
+import styles from "./DemoForm.module.css";
 
+const FormOnly = ({ onClose }) => {
+  const [inputdata, setInput] = useState({
+    name: "",
+    number: "",
+    location: "",
+  });
 
-
-const ACCESS_TOKEN =
-    "EAAU9dqi5jOQBOzzAoR5bx2HCz3lDO12uH3aoys4sIlEZA20HmKBXhUZB5mwoLZBb4RruHZB7q2D756XnjG8kRB3IjBXp0cf6IjPd9sNuefAZBAp5Fkf3BwOwHEUUlKklWsxN0YXB5fAV6J7qvhFfO0FNNuCzQbjSZAYnbJVwr3FGbtK37VZC4WweBzpe7ZCrlW04"
-  
-const FormOnly = () => {
-  const messageId = useId();
-
+  const [error, setError] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const [loadingData, setLoadingData] = useState(false);
 
   const handleDownloadConversion = () => {
     window.reportTyentConversion?.();
-};
+  };
 
+  const inputHandler = (e) => {
+    const { name, value } = e.target;
+    setInput({ ...inputdata, [name]: value });
+    if (error[name]) setError({ ...error, [name]: "" });
+  };
 
-    const [inputdata, setInput] = useState({
-        name: "",
-        email: "",
-        number: "",
-        location: "",
-        message: ""
-      });
-     
-      const [error, setError] = useState({
-        name: "",
-        email: "",
-        number: "",
-        location: "",
-        message: ""
-      });
-    
-      const [loading, setLoading] = useState(true);
-      const [loadingData, setLoadingData] = useState(false);
-    
-      const inputHandler = (e) => {
-        const { name, value } = e.target;
-        setInput({ ...inputdata, [name]: value });
-      };
-    
-      const validateForm = () => {
-        const { name, email, number, location, message } = inputdata;
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        const numberRegex = /^\d{10}$/;
-    
-        let isValid = true;
-        let errors = {};
-    
-        if (!name.trim()) {
-          errors.name = "Name is required";
-          isValid = false;
-        }
-        if (!email || !emailRegex.test(email)) {
-          errors.email = "Invalid email";
-          isValid = false;
-        }
-        if (!number || !numberRegex.test(number)) {
-          errors.number = "Invalid number";
-          isValid = false;
-        }
-        if (!location.trim()) {
-          errors.location = "Location is required";
-          isValid = false;
-        }
-        if (!message.trim()) {
-          errors.message = "Message is required";
-          isValid = false;
-        }
-    
-        setError(errors);
-        return isValid;
-      };
-    
-      const handleSubmit = async(e) => {
-    
-        e.preventDefault();
-        setLoadingData(true);
-        
-        if (validateForm()) {
-          setLoading(true);
-        
-          try {
+  const validateForm = () => {
+    const { name, number, location } = inputdata;
+    const numberRegex = /^\d{10}$/;
+    let isValid = true;
+    let errors = {};
 
-            await axios.post(
-              `/api/lead`,
-              {
-                name: inputdata.name,
-                email: inputdata.email,
-                number: inputdata.number,
-                location: inputdata.location,
-                message: inputdata.message,
-              },
-              {
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              }
-            );
+    if (!name.trim()) {
+      errors.name = "Name is required";
+      isValid = false;
+    }
+    if (!number || !numberRegex.test(number)) {
+      errors.number = "Enter a valid 10-digit number";
+      isValid = false;
+    }
+    if (!location.trim()) {
+      errors.location = "City is required";
+      isValid = false;
+    }
 
- handleDownloadConversion();
-       
-            //  const res = await axios.post(
-            //   "https://graph.facebook.com/v19.0/209988965541805/messages",
-            //   payload,
-            //   {
-            //     headers: {
-            //       "Content-Type": "application/json",
-            //       Authorization: `Bearer ${ACCESS_TOKEN}`,
-            //     },
-            //   }
-            // );
-            if(res.status === 200){
-              setLoading(false);
-            }
-            
-          } catch (error) {
-          
-          }finally {
-            setLoading(false);
-            setLoadingData(false);
-            
-          }
-          
-        }
-      };
+    setError(errors);
+    return isValid;
+  };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoadingData(true);
+
+    if (validateForm()) {
+      try {
+        await axios.post(
+          `/api/lead`,
+          {
+            name: inputdata.name,
+            email: "",
+            number: inputdata.number,
+            location: inputdata.location,
+            message: "Free Home Demo Request",
+          },
+          { headers: { "Content-Type": "application/json" } }
+        );
+        handleDownloadConversion();
+      } catch (err) {
+        // handled silently
+      } finally {
+        setSubmitted(true);
+        setLoadingData(false);
+      }
+    } else {
+      setLoadingData(false);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className={styles.successWrap}>
+        <FaCheckCircle size={60} color="#22c55e" />
+        <h3 className={styles.successTitle}>Thank you!</h3>
+        <p className={styles.successText}>We&apos;ve received your demo request. Our expert will contact you shortly.</p>
+        <div className={styles.socialRow}>
+          <Link href="https://www.facebook.com/profile.php?id=61592796100297&mibextid=wwXIfr" target="_blank" className={styles.socialIcon}><FaFacebook size={22} /></Link>
+          <Link href="https://www.instagram.com/tyent.india" target="_blank" className={styles.socialIcon}><IoLogoInstagram size={22} /></Link>
+          <Link href="https://www.linkedin.com/company/tyent-india1/posts/?feedView=all" target="_blank" className={styles.socialIcon}><FaLinkedinIn size={22} /></Link>
+          <Link href="https://youtube.com/@tyentindiaofficial?si=0MoE09BzeY3eBesr" target="_blank" className={styles.socialIcon}><FaYoutube size={22} /></Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div>
-        <div  data-aos="fade-left" className="flex-column justify-content-center align-items-center">
-        {loading ? (<>
-          <h3 data-aos="fade-up" className={`fw-bold ${formStyle.heading}`}>Fill out the form - Free demo</h3>
-          <p data-aos="fade-up" className="fw-bold mb-4" style={{ fontSize: "14px" }}>We respect your privacy</p>
-          <form onSubmit={handleSubmit} className="w-100">
-            <div data-aos="fade-right" className="mb-3">
-              <Input
-                type="text"
-                name="name"
-                label="Name"
-                value={inputdata.name}
-                // placeholder="Full Name"
-                onChange={inputHandler}
-              />
-              {error.name && <div style={{ color: "red", fontSize: "0.9em" }}>{error.name}</div>}
-            </div>
-            
-            <div data-aos="fade-right" className="mb-3">
-              <Input
-                type="email"
-                name="email"
-                label="Email"
-                value={inputdata.email}
-                // placeholder="Email"
-                onChange={inputHandler}
-              />
-              {error.email && <div style={{ color: "red", fontSize: "0.9em" }}>{error.email}</div>}
+    <div className={styles.demoForm}>
+      {/* Close Button */}
+      <button type="button" className={styles.closeBtn} onClick={onClose} aria-label="Close">&times;</button>
+
+      {/* Header */}
+      <div className={styles.header}>
+        <div className={styles.headerContent}>
+          <div className={styles.headerText}>
+            {/* Brand */}
+            <div className={styles.brandRow}>
+              <span className={styles.brandName}>TYENT</span>
+              <span className={styles.brandSub}>WATER IONIZER</span>
             </div>
 
-            <div data-aos="fade-right" className="mb-3">
-              <Input
-                type="text"
-                name="number"
-                label="Number"
-                value={inputdata.number}
-                // placeholder="Number"
-                onChange={inputHandler}
-              />
-              {error.number && <div style={{ color: "red", fontSize: "0.9em" }}>{error.number}</div>}
-            </div>
+            {/* Badge */}
+            <span className={styles.demoBadge}>FREE HOME DEMO</span>
 
-            <div data-aos="fade-right" className="mb-3">
-              <Input
-                type="text"
-                name="location"
-                label="Location"
-                value={inputdata.location}
-                // placeholder="Location"
-                onChange={inputHandler}
-              />
-              {error.location && <div style={{ color: "red", fontSize: "0.9em" }}>{error.location}</div>}
-            </div>
-
-            <div data-aos="fade-right" className="mb-4">
-              <label htmlFor={messageId} className={`${formStyle.formLabel} fw-normal`}>
-                Message
-              </label>
-              <textarea
-                id={messageId}
-                name="message"
-                rows={2}
-                className={`${formStyle.textarea}`}
-                value={inputdata.message}
-                onChange={inputHandler}
-                // placeholder="Include a message..."
-              />
-              {error.message && <div style={{ color: "red", fontSize: "0.9em" }}>{error.message}</div>}
-            </div>
-
-            <Button type="submit" data-aos="fade-right" 
-             name={loadingData ? (<> <Spinner size="sm" />&nbsp;&nbsp;{"Send"} </>) : ("Send")}/>
-          </form>
-        
-        </>) :(<>
-        
-          <div className="d-flex justify-content-center align-items-center boarder border border-secondary rounded p-3">
-              <br />
-              <div>
-                <center>
-                  <FaCheckCircle
-                    style={{
-                      color: "#291495",
-                      justifyContent: "center",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                    size={80}
-                  />
-                </center>
-                <br />
-                <h2 style={{ textAlign: "center" }}>
-                  Thank you for contacting us!
-                </h2>
-                <p style={{ color: "#969293", textAlign: "center" }}>
-                  we have received your message.
-                </p>
-                <p style={{ color: "#969293", textAlign: "center" }}>
-                  we'll reach you out immedately!
-                </p>
-                <br />
-                <br />
-                <center>
-                  Let's connect!
-                  <br/>
-                  <br/>
-                  <div className="d-flex justify-content-around align-items-center icons">
-                
-                  <div>
-                    <Link href={"https://www.facebook.com/profile.php?id=61592796100297&mibextid=wwXIfr"}  target="_blank" style={{textDecoration:'none', color:"#969293"}}>
-                    <FaFacebook size={30} />
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href={"https://www.instagram.com/tyent.india"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
-                    <IoLogoInstagram size={30} />
-                    </Link>
-                  </div>
-                 
-                  <div>
-                    <Link href={"https://www.linkedin.com/company/tyent-india1/posts/?feedView=all"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
-                    <FaLinkedinIn  size={30}/>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href={"https://youtube.com/@tyentindiaofficial?si=0MoE09BzeY3eBesr"} target="_blank" style={{textDecoration:'none', color:"#969293"}}>
-                    <FaYoutube  size={30}/>
-                    </Link>
-                  </div>
-                </div>
-
-                </center>
-                <br />
-                <br />
-              </div>
-            </div>
-        
-        </>)
-         
-        }
+            {/* Title */}
+            <h3 className={styles.headerTitle}>
+              Experience <span className={styles.highlight}>Tyent water</span> in your own kitchen
+            </h3>
+            <p className={styles.headerSub}>A Tyent expert will show you all 7 water types, at no cost.</p>
+          </div>
+          <div className={styles.headerImg}>
+            <Image
+              src="/explore/nmp5-collection.webp"
+              alt="Tyent NMP Water Ionizer"
+              width={120}
+              height={150}
+              className={styles.productImg}
+            />
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
 
-export default FormOnly
+      {/* Form */}
+      <div className={styles.formBody}>
+        <form onSubmit={handleSubmit}>
+          {/* Full Name */}
+          <label className={styles.fieldLabel}>FULL NAME <span className={styles.req}>*</span></label>
+          <div className={`${styles.inputGroup} ${error.name ? styles.inputGroupError : ""}`}>
+            <FaUser className={styles.inputIcon} />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              value={inputdata.name}
+              onChange={inputHandler}
+              className={styles.input}
+            />
+          </div>
+          {error.name && <span className={styles.errorText}>{error.name}</span>}
+
+          {/* Mobile Number */}
+          <label className={styles.fieldLabel}>MOBILE NUMBER <span className={styles.req}>*</span></label>
+          <div className={`${styles.inputGroup} ${error.number ? styles.inputGroupError : ""}`}>
+            <div className={styles.phonePrefix}>
+              <Image src="/india-flag.svg" alt="IN" width={18} height={13} onError={(e) => { e.target.style.display = 'none'; }} />
+              <span className={styles.prefixText}>+91</span>
+            </div>
+            <div className={styles.phoneDivider} />
+            <input
+              type="tel"
+              name="number"
+              placeholder="10-digit mobile number"
+              value={inputdata.number}
+              onChange={inputHandler}
+              maxLength={10}
+              className={styles.input}
+            />
+          </div>
+          {error.number && <span className={styles.errorText}>{error.number}</span>}
+
+          {/* City */}
+          <label className={styles.fieldLabel}>CITY <span className={styles.req}>*</span></label>
+          <div className={`${styles.inputGroup} ${error.location ? styles.inputGroupError : ""}`}>
+            <FaMapMarkerAlt className={styles.inputIcon} />
+            <input
+              type="text"
+              name="location"
+              placeholder="e.g. Hyderabad"
+              value={inputdata.location}
+              onChange={inputHandler}
+              className={styles.input}
+            />
+          </div>
+          {error.location && <span className={styles.errorText}>{error.location}</span>}
+
+          {/* Consent */}
+          <p className={styles.consent}>
+            By submitting, you agree that Tyent India (Medilight Private Limited) may contact you about your demo.
+          </p>
+
+          {/* Submit */}
+          <button type="submit" className={styles.submitBtn} disabled={loadingData}>
+            {loadingData ? (
+              <><Spinner size="sm" />&nbsp;&nbsp;Booking...</>
+            ) : (
+              <>Book my free demo &rarr;</>
+            )}
+          </button>
+        </form>
+
+        {/* Privacy note */}
+        <p className={styles.privacyNote}>
+          <FaLock size={11} className={styles.lockIcon} />
+          Your number is safe with us. We never share personal data.
+        </p>
+
+        {/* Divider */}
+        <div className={styles.divider} />
+
+        {/* Trust badges */}
+        <div className={styles.trustRow}>
+          <div className={styles.trustBadge}>
+            <FaGlobeAmericas size={18} className={styles.trustIcon} />
+            <span className={styles.trustTitle}>123+ countries</span>
+            <span className={styles.trustSub}>Trusted worldwide</span>
+          </div>
+          <div className={styles.trustBadge}>
+            <FaShieldAlt size={18} className={styles.trustIcon} />
+            <span className={styles.trustTitle}>NSF &middot; EPA &middot; ANSI</span>
+            <span className={styles.trustSub}>Certified .01 micron filters</span>
+          </div>
+          <div className={styles.trustBadge}>
+            <FaAward size={18} className={styles.trustIcon} />
+            <span className={styles.trustTitle}>3 + 15 years</span>
+            <span className={styles.trustSub}>Ionizer &amp; plate warranty</span>
+          </div>
+        </div>
+
+        {/* Google rating */}
+        <div className={styles.ratingRow}>
+          <div className={styles.stars}>
+            {[...Array(5)].map((_, i) => (
+              <FaStar key={i} size={12} color="#f5a623" />
+            ))}
+          </div>
+          <span className={styles.ratingText}><strong>4.9/5</strong> from 150 Google reviews</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FormOnly;
