@@ -1,8 +1,6 @@
 "use client"
-import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import '@/app/style/SlickSlider.css';
 import icon1 from '@/asserts/logos/1.png'
 import icon2 from '@/asserts/logos/47.png'
@@ -15,7 +13,6 @@ import icon8 from '@/asserts/logos/44.png'
 import icon9 from '@/asserts/logos/46.png'
 import Image from 'next/image';
 
-// Importing images dynamically to avoid loading all at once
 const iconImages = [
   { src: icon1, alt: "GVK logo" },
   { src: icon2, alt: "GMR logo" },
@@ -70,23 +67,17 @@ const SlickSlider = () => {
     ],
   };
 
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    setImages(iconImages);
-  }, []);
-
   return (
     <div>
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {iconImages.map((image, index) => (
           <div key={index}>
             <Image
               src={image.src}
               alt={image.alt}
               width={100}
               height={80}
-              priority
+
             />
           </div>
         ))}

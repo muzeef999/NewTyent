@@ -28,10 +28,10 @@ const Footer = () => {
             <Row>
               <Col xs={12} md={3}>
                 <div>
-                  <h5 style={{ fontWeight: "600" }}>Our Branches</h5>
+                  <h2 className="h5" style={{ fontWeight: "600" }}>Our Branches</h2>
                   <ul className="footer-list list-unstyled pb-4">
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-hyderabad"
                         className="footer-link"
                       >
@@ -40,7 +40,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-bengaluru"
                         className="footer-link"
                       >
@@ -49,7 +49,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi"
                         className="footer-link"
                       >
@@ -58,7 +58,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-mumbai"
                         className="footer-link"
                       >
@@ -67,7 +67,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-ahmedabad"
                         className="footer-link"
                       >
@@ -76,7 +76,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-pune"
                         className="footer-link"
                       >
@@ -85,7 +85,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-lucknow"
                         className="footer-link"
                       >
@@ -94,7 +94,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-jaipur"
                         className="footer-link"
                       >
@@ -103,7 +103,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-chandigarh"
                         className="footer-link"
                       >
@@ -112,7 +112,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-vijayawada"
                         className="footer-link"
                       >
@@ -121,7 +121,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-visakhapatnam"
                         className="footer-link"
                       >
@@ -130,7 +130,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <Link
+                      <Link prefetch={false}
                         href="/contact/best-hydrogen-rich-alkaline-water-ionizer-in-surat"
                         className="footer-link"
                       >
@@ -145,7 +145,7 @@ const Footer = () => {
       © {new Date().getFullYear()} All rights reserved.
     </p>
 
-    <Link
+    <Link prefetch={false}
       href="https://www.syntaxarts.com"
       target="_blank"
       rel="noopener noreferrer"
@@ -163,10 +163,10 @@ const Footer = () => {
                   <Row>
                     {/* Column 1: Products */}
                     <Col xs={12} md={4} className="mb-4">
-                      <h5 style={{ fontWeight: "600" }}>Products</h5>
+                      <h2 className="h5" style={{ fontWeight: "600" }}>Products</h2>
                       <ul className="list-unstyled">
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/counter-top-water-ionizers"}
                           >
@@ -174,7 +174,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/under-counter-water-ionizers"}
                           >
@@ -182,7 +182,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/hybrid-h2"}
                           >
@@ -190,7 +190,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/0.1-micron-filters"}
                           >
@@ -198,7 +198,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/soap"}
                           >
@@ -206,7 +206,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/sterilizing-water-generator"}
                           >
@@ -218,12 +218,12 @@ const Footer = () => {
 
                     {/* Column 3: Technical Information */}
                     <Col xs={12} md={4} className="mb-4">
-                      <h5 style={{ color: "#FFF", fontWeight: "600" }}>
+                      <h2 className="h5" style={{ color: "#FFF", fontWeight: "600" }}>
                         Technical Information
-                      </h5>
+                      </h2>
                       <ul className="list-unstyled">
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/tyentvskangen"}
                           >
@@ -231,7 +231,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/solid-hybrid-mesh-plates"}
                           >
@@ -239,7 +239,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/patented-smps-plus"}
                           >
@@ -247,7 +247,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={"/0.1-micron-filters"}
                           >
@@ -255,7 +255,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <Link prefetch={false}
                             style={{ textDecoration: "none", color: "#FFF" }}
                             href={""}
                           >
@@ -267,21 +267,21 @@ const Footer = () => {
 
                     {/* Column 4: Product Sales & Service */}
                     <Col xs={12} md={4} className="mb-4">
-                      <h5 style={{ color: "#FFF", fontWeight: "600" }}>
+                      <h2 className="h5" style={{ color: "#FFF", fontWeight: "600" }}>
                         Product Sales & Service
-                      </h5>
+                      </h2>
                       <ul className="list-unstyled">
                         <li>Product Demo: +91 9966 558 556</li>
                         <li>
                           Product Support:{" "}
-                          <a href="mailto:Sravan@medilightindia.com">
+                          <a className="link-light" href="mailto:Sravan@medilightindia.com">
                             Sravan@medilightindia.com
                           </a>
                         </li>
                         <li>Complaints: 912-12-12-555</li>
                         <li>
                           Technical Support:{" "}
-                          <a href="mailto:Technical@MedilightIndia.com">
+                          <a className="link-light" href="mailto:Technical@MedilightIndia.com">
                             Technical@MedilightIndia.com
                           </a>
                         </li>
@@ -295,12 +295,12 @@ const Footer = () => {
                     <Row>
                       {/* Column 2: Customers */}
                       <Col xs={12} md={3} className="mb-4">
-                        <h5 style={{ color: "#FFF", fontWeight: "600" }}>
+                        <h2 className="h5" style={{ color: "#FFF", fontWeight: "600" }}>
                           Customers
-                        </h5>
+                        </h2>
                         <ul className="list-unstyled">
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"#"}
                             >
@@ -308,7 +308,7 @@ const Footer = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/7-types-of-tyent-water"}
                             >
@@ -316,7 +316,7 @@ const Footer = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/benefits"}
                             >
@@ -324,7 +324,7 @@ const Footer = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/testimonials"}
                             >
@@ -332,7 +332,7 @@ const Footer = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/why-tyent"}
                             >
@@ -354,28 +354,28 @@ const Footer = () => {
                               CONSUMER POLICY
                             </span>
                             <br />
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/cancellation-returns"}
                             >
                               Cancellation & Returns{" "}
                             </Link>
                             <br />
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/terms-of-use"}
                             >
                               Terms of Use
                             </Link>
                             <br />
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/security"}
                             >
                               Security
                             </Link>
                             <br />
-                            <Link
+                            <Link prefetch={false}
                               style={{ textDecoration: "none", color: "#FFF" }}
                               href={"/privacy"}
                             >
@@ -391,7 +391,7 @@ const Footer = () => {
                         md={3}
                         className="d-flex justify-content-center align-items-center"
                       >
-                        <Link href={"/"}>
+                        <Link prefetch={false} href={"/"}>
                           <Button
                             style={{
                               backgroundColor: "#F8FBFE",
@@ -433,7 +433,7 @@ const Footer = () => {
                         className="justify-content-center justify-content-md-end"
                         style={{ userSelect: "all", pointerEvents: "auto" }}
                       >
-                        <Link href="/" className="navbar-brand">
+                        <Link prefetch={false} href="/" className="navbar-brand" aria-label="Tyent India home">
                           <div
                             className="d-none d-lg-block p-2"
                             style={{ width: "40%" }}

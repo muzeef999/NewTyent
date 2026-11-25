@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./tyentvskangan.css";
-import DetailComparison from "./DetailComparison";
+import dynamic from "next/dynamic";
+
+const DetailComparison = dynamic(() => import("./DetailComparison"));
 
 const Item = ({ title, text }) => (
   <div className="cmp-item">
-    <h5>{title}</h5>
+    <h3 className="h5">{title}</h3>
     <p>{text}</p>
   </div>
 );
@@ -20,19 +22,21 @@ const Comparsion = () => {
 
       {/* ===== TABS ===== */}
       <div className="cmp-tabs">
-        <span
+        <button type="button"
           className={`cmp-tab ${tab === "overview" ? "active" : ""}`}
+          aria-pressed={tab === "overview"}
           onClick={() => setTab("overview")}
         >
           Technical Overview
-        </span>
+        </button>
 
-        <span
+        <button type="button"
           className={`cmp-tab ${tab === "detail" ? "active" : ""}`}
+          aria-pressed={tab === "detail"}
           onClick={() => setTab("detail")}
         >
           Detail Comparison
-        </span>
+        </button>
       </div>
 
       {/* ===== CONTENT ===== */}

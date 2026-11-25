@@ -50,16 +50,6 @@ const ProductSection = ({ products, specifications }) => {
 
   
 
-  const thumbnails = document.querySelectorAll('.thumbnail');
-
-  thumbnails.forEach((thumbnail, index) => {
-    if (currentIndex === index) {
-      thumbnail.setAttribute('data-active', 'true');
-    } else {
-      thumbnail.setAttribute('data-active', 'false');
-    }
-  });
-
   const model = specifications.find((item) => item.label === "Model")?.name;
   const price = specifications.find((item) => item.label === "Price")?.name;
   const  desc = specifications.find((item) => item.label === "sub-head")?.name;

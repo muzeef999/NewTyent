@@ -1,10 +1,7 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./explore.css";
 import Link from "next/link";
-import "@/app/style/AppBar.css"
 
 
 const products = [
@@ -48,11 +45,11 @@ const Explore = () => {
         <h2 className="fw-bold subtitle-tight">our best selling products</h2>
       </div>
       <div className="row g-5">
-        {products.map((item, index) => (
-          <div key={index} className="col-12 col-md-6 col-lg-4">
-            <div className="product-card" href={item.link}>
+        {products.map((item) => (
+          <div key={item.link} className="col-12 col-md-6 col-lg-4">
+            <div className="product-card">
               {/* Product Image */}
-              <Link href={item.link} style={{ cursor: 'pointer', textDecoration: 'none', color: '#000' }}>
+              <Link prefetch={false} href={item.link} style={{ cursor: 'pointer', textDecoration: 'none', color: '#000' }}>
                 <div className="product-img-wrapper">
                   <Image
                     src={item.img}
@@ -66,7 +63,7 @@ const Explore = () => {
                 </div>
 
                 {/* Product Info */}
-                <h5 className="fw-bold mt-3">{item.name}</h5>
+                <h3 className="h5 fw-bold mt-3">{item.name}</h3>
 
                 {/* Stars */}
                 <div className="rating mb-2">

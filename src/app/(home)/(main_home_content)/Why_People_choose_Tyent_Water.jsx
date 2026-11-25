@@ -1,55 +1,53 @@
-"use client";
 import Image from "next/image";
-import { Container, Row, Col } from "react-bootstrap";
 import "./whyTyent.css";
 import Link from "next/link";
 
 const Card = ({ img, title, desc }) => (
   <div className="why-card text-center">
     <div className="why-img-wrapper">
-      <Image src={img} alt={title} fill className="why-img" />
+      <Image src={img} alt={title} fill sizes="(min-width: 768px) 33vw, 100vw" className="why-img" />
     </div>
 
-    <h4 className="why-title">{title}</h4>
+    <h3 className="why-title">{title}</h3>
     <p className="why-desc">{desc}</p>
-    <Link href="/benefits" className="why-link">Click here</Link>
+    <Link href="/benefits" className="why-link">Explore water ionizer benefits</Link>
   </div>
 );
 
 const Why_People_choose_Tyent_Water = () => {
   return (
     <section className="why-section">
-      <Container>
+      <div className="container">
         <h2 className="fw-bold subtitle-tight" style={{ textAlign: "center" }}>Why People choose Tyent Water</h2>
 
-        <Row className="g-3 mt-3">
-          <Col md={4}>
+        <div className="row g-3 mt-3">
+          <div className="col-md-4">
             <Card
               img="/whyTent/Increase_energy.jpg"
               title="Increase energy"
               desc="An abundance of molecular hydrogen adds noticeable energy boost"
             />
-          </Col>
+          </div>
 
-          <Col md={4}>
+          <div className="col-md-4">
             <Card
               img="/whyTent/Promotes_Weight_loss.webp"
               title="Promotes Weight loss"
               desc={<>Many of our customers report<br />increased weight loss.</>}
             />
-          </Col>
+          </div>
 
-          <Col md={4}>
+          <div className="col-md-4">
             <Card
               img="/whyTent/Faster_recovery_after_exercise.webp"
               title="Faster recovery after exercise"
               desc="Hydrogen water easily absorbs into your cells to neutralize lactic acid for faster recovery."
             />
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
 
-      <Container className="mt-5">
+      <div className="container mt-5">
         <div className="why-feature-banner">
           <Image
             src="/whyTent/guy_drinking_water.webp"
@@ -71,7 +69,7 @@ const Why_People_choose_Tyent_Water = () => {
             </p>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 };

@@ -1,13 +1,12 @@
-/* Desktop visible */
-.desktop-view {
-  display: flex;
+.category-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
-/* Mobile hidden */
-.mobile-view {
+.category-dots {
   display: none;
 }
-
 
 .category-card {
   background: #FFFF;
@@ -23,6 +22,11 @@
 }
 
 .category-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
   transition: transform 0.4s ease;
 }
 
@@ -30,7 +34,9 @@
   transform: scale(1.05);
 }
 
-.category-card h5 {
+.category-card h3 {
+  color: #000;
+  font-weight: 600;
   font-size: 18px;
   margin-top: 14px;
 }
@@ -39,33 +45,7 @@
   font-size: 14px;
 }
 
-/* Desktop layout fix */
-@media (min-width: 768px) {
-
-  .desktop-view {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .desktop-view .col-md-4 {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-
-}
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-
-  .desktop-view {
-    display: none;
-  }
-
-  .mobile-view {
-    display: block;
-  }
-
+@media (max-width: 767.98px) {
   .category-scroll {
     display: flex;
     overflow-x: auto;
@@ -81,18 +61,18 @@
   }
 
   .category-slide {
-    min-width: 85%;
+    flex: 0 0 85%;
     scroll-snap-align: center;
   }
 
-  .dots {
+  .category-dots {
     display: flex;
     justify-content: center;
     margin-top: 14px;
     gap: 6px;
   }
 
-  .dot {
+  .category-dots .dot {
     width: 6px;
     height: 6px;
     background: #ccc;
@@ -100,7 +80,7 @@
     transition: all 0.3s ease;
   }
 
-  .dot.active {
+  .category-dots .dot.active {
     width: 14px;
     height: 6px;
     background: #3c2df1;

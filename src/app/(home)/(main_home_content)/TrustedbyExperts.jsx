@@ -107,7 +107,7 @@ const TrustedbyExperts = () => {
             {reviews.map((item, index) => (
               <div className="expert-card" key={index}>
                 <div className="stars">★★★★★</div>
-                <h4 className="expert-name">{item.name}</h4>
+                <h3 className="expert-name">{item.name}</h3>
                 <p className="expert-role">{item.role}</p>
                 {item.company ? (
                   <p className="expert-company">{item.company}</p>
@@ -129,7 +129,7 @@ const TrustedbyExperts = () => {
           {reviews.map((item, index) => (
             <div className="expert-mobile-card" key={index}>
               <div className="stars">★★★★★</div>
-              <h4 className="expert-name">{item.name}</h4>
+              <h3 className="expert-name">{item.name}</h3>
               <p className="expert-role">{item.role}</p>
               {item.company ? (
                 <p className="expert-company">{item.company}</p>
@@ -146,6 +146,9 @@ const TrustedbyExperts = () => {
           {reviews.map((_, i) => (
             <button
               key={i}
+              type="button"
+              aria-label={`Show testimonial ${i + 1}`}
+              aria-pressed={activeIndex === i}
               className={`dot ${activeIndex === i ? "active" : ""}`}
               onClick={() => scrollToCard(i)}
             />

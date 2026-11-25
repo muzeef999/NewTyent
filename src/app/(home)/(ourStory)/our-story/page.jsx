@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const metadata = {
   title: "About Tyent India and Medilight: Story and Mission",
   description: "Know Tyent India's story: Medilight Pvt. Ltd. brings hydrogen-rich water ionizers to India with 73+ branches. Read our mission.",
@@ -104,8 +105,11 @@ const OurStory = () => {
           </p>
         </div>
         <div className="col-lg-6 text-center ps-lg-5">
-          <img
+          <Image
             src="/home/our-story.png"
+            width={1024}
+            height={816}
+            sizes="(min-width: 992px) 1255px, 100vw"
             alt="Tyent Hybrid Water Ionizer"
             className="img-fluid our-story-img"
           />
@@ -321,8 +325,11 @@ const OurStory = () => {
                     boxShadow: "0 4px 15px rgba(0,0,0,0.03)"
                   }}
                 >
-                  <img
+                  <Image
                     src={member.image}
+                    width={336}
+                    height={280}
+                    sizes="(min-width: 1200px) 260px, (min-width: 992px) 285px, (min-width: 576px) 320px, 100vw"
                     alt={member.name}
                     style={{
                       width: "100%",
@@ -357,17 +364,18 @@ const OurStory = () => {
                 style={{
                   width: "100%",
                   height: "250px",
+                  position: "relative",
                   borderRadius: "20px",
                   overflow: "hidden",
                   boxShadow: "0 6px 20px rgba(0,0,0,0.08)"
                 }}
               >
-                <img
+                <Image
                   src={src}
+                  fill
+                  sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
                   alt={`Tyent gallery image ${index + 1}`}
                   style={{
-                    width: "100%",
-                    height: "100%",
                     objectFit: "cover"
                   }}
                 />

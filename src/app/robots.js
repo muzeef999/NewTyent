@@ -2,7 +2,8 @@ export default function robots() {
   return {
     rules: [
       { userAgent: '*', allow: '/' },
-      { userAgent: 'Googlebot', allow: '/' },
+      { userAgent: 'Googlebot', allow: '/', disallow: '/private' },
+      { userAgent: 'meta-externalagent', disallow: '/' },
       { userAgent: 'Bingbot', allow: '/' },
       { userAgent: 'Slurp', allow: '/' },
       { userAgent: 'Yandex', allow: '/' },

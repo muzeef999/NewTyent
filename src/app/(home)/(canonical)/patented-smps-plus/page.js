@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic';
+﻿import dynamic from 'next/dynamic';
 import React from 'react'
 import { Col, Row } from 'react-bootstrap';
 import Link from 'next/link';
-const Header = dynamic(() => import("../compoents/Header"), { ssr: false });
+const Header = dynamic(() => import("@/app/(home)/compoents/Header"), { ssr: false });
 import { SlEnergy } from "react-icons/sl";
 import { GoDotFill } from "react-icons/go";
 import { BiSolidJoystickButton } from "react-icons/bi";
@@ -22,7 +22,7 @@ export const metadata = {
     {
       title: "Advanced Power Control",
       content:
-   " Tyent’s SMPS PLUS delivers dynamic, adjustable power output that adapts to water quality, ensuring precise and stable production of high pH and ORP levels."
+   " Tyentâ€™s SMPS PLUS delivers dynamic, adjustable power output that adapts to water quality, ensuring precise and stable production of high pH and ORP levels."
     },
     {
       title: "Production of 11.5 & 2.5 pH Water",
@@ -42,12 +42,12 @@ export const metadata = {
     {
       title: "Longer Lifespan",
       content:
-   "With its enhanced cooling system and dynamic control, SMPS PLUS offers a significantly longer lifespan, reducing maintenance and replacement costs. How Tyent’s SMPS PLUS Impacts Water Quality"
+   "With its enhanced cooling system and dynamic control, SMPS PLUS offers a significantly longer lifespan, reducing maintenance and replacement costs. How Tyentâ€™s SMPS PLUS Impacts Water Quality"
     },
     {
         title: "Compact and Lightweight Design",
         content:
-    "Tyent’s SMPS PLUS is compact, silent, and lightweight, enhancing the overall design of the water ionizer."  
+    "Tyentâ€™s SMPS PLUS is compact, silent, and lightweight, enhancing the overall design of the water ionizer."  
     },
   ];
 
@@ -157,7 +157,7 @@ const page = () => {
     const headerData = {
         basic: "Reliable & High-Performance ",
         preheading: "Advanced Design",
-        afterheading: "With Tyent’s Patented SMPS PLUS",
+        afterheading: "With Tyentâ€™s Patented SMPSÂ PLUS",
         img: smpsplus,
         animatedText: "More Power, More Efficiency,  More Performance",
         useH1: true,
@@ -170,7 +170,7 @@ const page = () => {
 
     <div className='container'  data-aos="fade-down">
         <h2 className='text-center'>Why Say <b style={{color:'#291495'}}>YES to Tyent's</b> SMPS <br/> PLUS Power Supply</h2>
-        <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality <Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>water ionization</Link>. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
+        <p className='text-center'>Tyentâ€™s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality <Link href="/counter-top-water-ionizers" style={{ color: "#291495", textDecoration: "underline" }}>water ionization</Link>. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
     </div>
 
 <div className='container'>
@@ -189,12 +189,12 @@ const page = () => {
         <div className='container' data-aos="fade-up">
         <div className='section-spacing'>
         <h2 className='text-center'>Why Say<b style={{color:'red'}}> No</b> to Transformer Power Supply <br/>in Water Ionizers ?</h2>
-        <p className='text-center'>Tyent’s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality water ionization. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
+        <p className='text-center'>Tyentâ€™s SMPS PLUS (Switch Mode Power Supply Plus) is a revolutionary upgrade, offering precise power control and advanced <br/> technology to ensure consistent, high-quality water ionization. Unlike transformers and standard SMPS, Tyent's SMPS PLUS <br/> offers dynamic voltage control, allowing for optimal water quality under any condition.</p>
         <Row className='g-2'>
           <Col md={6} className='d-flex justify-content-center align-items-center'> 
            <div className='m-3'>
             <h3><GoDotFill color='red'/>Drawbacks of Transformer Power Supply</h3>
-            <p>Tyent’s SMPS PLUS plays a pivotal role in achieving consistently high-quality water. By dynamically adjusting power output, it stabilizes pH and ORP levels, ensuring that every glass of water you drink is packed with maximum antioxidants, hydrogen, and essential minerals. This results in superior <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>hydrogen-rich alkaline water</Link> that supports better hydration, detoxification, and overall health.</p>
+            <p>Tyentâ€™s SMPS PLUS plays a pivotal role in achieving consistently high-quality water. By dynamically adjusting power output, it stabilizes pH and ORP levels, ensuring that every glass of water you drink is packed with maximum antioxidants, hydrogen, and essential minerals. This results in superior <Link href="/hybrid-h2" style={{ color: "#291495", textDecoration: "underline" }}>hydrogen-rich alkaline water</Link> that supports better hydration, detoxification, and overall health.</p>
            </div>
           </Col>
           <Col md={6}>

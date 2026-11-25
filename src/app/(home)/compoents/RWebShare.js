@@ -9,13 +9,13 @@ const RWebShareComp = ({text,link}) => {
     <div>
          <RWebShare
           data={{
-            text: text.text,
-            url:  link.src,
+            text: typeof text === "string" ? text : text?.text,
+            url: typeof link === "string" ? link : link?.src,
             title: "Tyent",
           }}
           onClick={() => console.log("Shared successfully!")}
         >
-          <button className="filterbutton">
+          <button type="button" className="filterbutton" aria-label="Share">
             <IoShareSocial />
           </button>
         </RWebShare>

@@ -1,7 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
+  sourceDir: process.env.TYENT_NEXT_DIST_DIR || ".next",
   siteUrl: process.env.SITE_URL || 'https://www.tyent.co.in',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   generateIndexSitemap: false,
   changefreq: null,
   priority: null,
@@ -18,20 +19,4 @@ module.exports = {
     '/our-story1',
     '/tyent-global1',
   ],
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
-      {
-        userAgent: 'Googlebot',
-        disallow: '/private',
-      },
-      {
-  userAgent: "meta-externalagent",
-  disallow: "/",
-},
-    ],
-  },
 };

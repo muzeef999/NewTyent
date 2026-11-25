@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -47,7 +46,7 @@ const WhatsInside = () => {
 
       <div className="text-center mb-5">
         <p className="bg-heading-text-two-main">Whats Inside</p>
-        <h1 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h1>
+        <h2 className="fw-bold subtitle-tight">Amazing Properties of Tyent water.</h2>
       </div>
 
       {/* Desktop Layout */}
@@ -56,7 +55,7 @@ const WhatsInside = () => {
         <div className="col-lg-4">
           {leftData.map((item, i) => (
             <div key={i} className="feature-box text-lg-end text-center">
-              <h5 className="feature-title">{item.title}</h5>
+              <h3 className="h5 feature-title">{item.title}</h3>
               <p>{item.text}</p>
             </div>
           ))}
@@ -78,7 +77,7 @@ const WhatsInside = () => {
         <div className="col-lg-4">
           {rightData.map((item, i) => (
             <div key={i} className="feature-box text-lg-start text-center">
-              <h5 className="feature-title">{item.title}</h5>
+              <h3 className="h5 feature-title">{item.title}</h3>
               <p>{item.text}</p>
             </div>
           ))}
@@ -99,6 +98,7 @@ const WhatsInside = () => {
                   width={260}
                   height={260}
                   sizes="260px"
+                  quality={60}
                   className="circle-image"
                 />
               </div>
@@ -107,7 +107,7 @@ const WhatsInside = () => {
 
           return (
             <div key={i} className="feature-box text-center">
-              <h5 className="feature-title">{item.title}</h5>
+              <h3 className="h5 feature-title">{item.title}</h3>
               <p>{item.text}</p>
             </div>
           );

@@ -83,7 +83,7 @@ const TyentFaqSection = () => {
           </div>
 
           <div className="demo-card">
-            <Link className="demo-logo" href="/">
+            <Link className="demo-logo" href="/" aria-label="Tyent India home">
               <Logo />
             </Link>
             <h3 className="demo-title">Book a Free Demo</h3>

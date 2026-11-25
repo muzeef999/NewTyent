@@ -41,9 +41,8 @@ const Certifications = () => {
                    <Image 
                     src={icon}
                     alt={`Certification ${index + 1}`}
-                    layout='responsive'
-                    priority
-                    style={{ objectFit: 'contain', userSelect:'none', pointerEvents:'none' }}
+                    sizes="(min-width: 768px) 145px, 30vw"
+                    style={{ width: '100%', height: 'auto', objectFit: 'contain', userSelect:'none', pointerEvents:'none' }}
                   />
                  </div>
               </Col> 

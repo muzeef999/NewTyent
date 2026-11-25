@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "../Redux/store";
 import { SessionProvider } from "next-auth/react";
 
-export default function RootLayout({ children, session }) {
+export default function RootLayout({ children }) {
   const [showSidebar, setShowSidebar] = useState(true);
 
   const toggleSidebar = () => {
@@ -24,7 +24,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
       <body>
-        <SessionProvider session={session}>
+        <SessionProvider>
           <Provider store={store}>
             <DashboardBar toggleSidebar={toggleSidebar} />
             <div className="App d-flex">

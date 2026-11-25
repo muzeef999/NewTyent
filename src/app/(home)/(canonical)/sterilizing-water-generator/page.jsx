@@ -140,12 +140,12 @@ const Page = () => {
               </Col>
               <Col md={4}>
                 <div style={{ width: "100%", height: "auto" }}>
-                  <Image src={pro_02} alt="pro1" layout="responsive" priority />
+                  <Image src={pro_02} alt="pro1" layout="responsive" />
                 </div>
               </Col>
             </Row>
             <div style={{ width: "100%", height: "auto" }}>
-              <Image src={pro_03} alt="pro1" layout="responsive" priority />
+              <Image src={pro_03} alt="pro1" layout="responsive" />
             </div>
           </center>
 
@@ -212,7 +212,7 @@ const Page = () => {
             </Container>
           </center>
           <div style={{ width: "100%", height: "auto" }}>
-            <Image src={pro_11} alt="pro1" layout="responsive" priority />
+            <Image src={pro_11} alt="pro1" layout="responsive" />
           </div>
           <br />
           <br />
@@ -272,7 +272,7 @@ const Page = () => {
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_13} alt="pro1" layout="responsive" priority />
+                <Image src={pro_13} alt="pro1" layout="responsive" />
               </div>
             </Col>
           </Row>
@@ -280,7 +280,7 @@ const Page = () => {
           <Row>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_14} alt="pro1" layout="responsive" priority />
+                <Image src={pro_14} alt="pro1" layout="responsive" />
               </div>
             </Col>
             <Col
@@ -329,14 +329,14 @@ const Page = () => {
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_15} alt="pro1" layout="responsive" priority />
+                <Image src={pro_15} alt="pro1" layout="responsive" />
               </div>
             </Col>
           </Row>
           <Row>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_16} alt="pro1" layout="responsive" priority />
+                <Image src={pro_16} alt="pro1" layout="responsive" />
               </div>
             </Col>
             <Col
@@ -391,7 +391,7 @@ const Page = () => {
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_17} alt="pro1" layout="responsive" priority />
+                <Image src={pro_17} alt="pro1" layout="responsive" />
               </div>
             </Col>
           </Row>
@@ -399,7 +399,7 @@ const Page = () => {
           <Row>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_18} alt="pro1" layout="responsive" priority />
+                <Image src={pro_18} alt="pro1" layout="responsive" />
               </div>
             </Col>
             <Col
@@ -442,7 +442,7 @@ const Page = () => {
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
-                <Image src={pro_19} alt="pro1" layout="responsive" priority />
+                <Image src={pro_19} alt="pro1" layout="responsive" />
               </div>
             </Col>
           </Row>

@@ -62,7 +62,7 @@ export default function Smarter_Upgrade() {
               </div>
 
               <div className="">
-                <h6 className="fw-bold text-primary mb-2">{item.title}</h6>
+                <h3 className="h6 fw-bold text-primary-emphasis mb-2">{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
             </Link>

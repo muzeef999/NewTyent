@@ -1,6 +1,8 @@
 // Remove TypeScript-only type import/annotation for .mjs
 const nextConfig = {
+  distDir: process.env.TYENT_NEXT_DIST_DIR || ".next",
   experimental: {
+    caseSensitiveRoutes: true,
     optimizeCss: true,
     serverActions: { allowedOrigins: ['*']}
   },

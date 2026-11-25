@@ -2,24 +2,21 @@
 import { Provider } from "react-redux";
 import { SessionProvider } from "next-auth/react";
 import { store } from "../../Redux/store";
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import Footer from "../compoents/Footer";
 import AppBar from "../compoents/AppBar";
 import Form from "../compoents/Form/Form";
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMessage } from "react-icons/md";
 import { Modal, Button } from "react-bootstrap";
 import '@/app/style/Animation.css'; // Import the animation CSS
-import FormOnly from "../compoents/Form/FormOnly";
 import { Toaster } from "sonner";
-import NextNProgress from 'nextjs-progressbar'; 
+import FormOnly from "../compoents/Form/FormOnly";
 
 
 
-export default function ClientComponent({ children, session }) {
+export default function ClientComponent({ children, session, footer }) {
   const pathname = usePathname();
   const noLayoutPages = ["/shipping", "/blog/*"];
   const shouldExcludeLayout = noLayoutPages.includes(pathname);
@@ -68,15 +65,23 @@ const handleDownloadConversion = () => {
     return () => window.removeEventListener("openFormModal", handleOpenForm);
   }, []);
 
+  const animationsInitialized = useRef(false);
   useEffect(() => {
-    Aos.init({
-      duration: 1200, // Smooth & premium feel (1.2s)
-      easing: "ease-in-out", // More natural motion
-      offset: 100, // Not too early, not too late
-      delay: 100, // Adds a slight delay for elegance
-      once: true, // Animations play only once for a polished experience
+    if (animationsInitialized.current || (pathname === "/" && CSS.supports("selector(body:has(*))"))) return;
+    let cancelled = false;
+    import("aos").then(({ default: Aos }) => {
+      if (cancelled) return;
+      animationsInitialized.current = true;
+      Aos.init({
+        duration: 1200,
+        easing: "ease-in-out",
+        offset: 100,
+        delay: 100,
+        once: true,
+      });
     });
-  }, []);
+    return () => { cancelled = true; };
+  }, [pathname]);
 
   const handleCallClick = () => {
 
@@ -88,7 +93,6 @@ const handleDownloadConversion = () => {
 
   return (
     <SessionProvider session={session}>
-       <NextNProgress color="#FFF" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
      
        <Toaster richColors position="top-center"  style={{marginTop:'70px'}}/>
       <Provider store={store}>
@@ -97,7 +101,7 @@ const handleDownloadConversion = () => {
         
           {!shouldExcludeLayout && <Form />}
          <br/>
-        <Footer />
+        {footer}
 
         {/* Floating Buttons */}
         <center>

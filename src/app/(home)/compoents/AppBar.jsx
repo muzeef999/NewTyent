@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,16 +18,17 @@ import { MdMiscellaneousServices } from "react-icons/md";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { setUser } from "@/app/Redux/authSlice";
 import { fetchCart } from "@/app/Redux/cartSlice";
-import Login from "./Login";
-import ResponsiveProductPage from "./ResponsiveProductPage";
-import Cartpage from "./Cart";
 import "@/app/style/AppBar.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { toast } from "sonner";
 import { IoPeopleCircleOutline } from "react-icons/io5";
 import Logo from "./Logo";
-import ServiceHistory from "./(Home)/ServiceHistory";
-import Order from "./(Home)/Order";
+
+const ResponsiveProductPage = dynamic(() => import("./ResponsiveProductPage"), { ssr: false });
+const ServiceHistory = dynamic(() => import("./(Home)/ServiceHistory"), { ssr: false });
+const Order = dynamic(() => import("./(Home)/Order"), { ssr: false });
+const Login = dynamic(() => import("./Login"), { ssr: false });
+const Cartpage = dynamic(() => import("./Cart"), { ssr: false });
 
 const AppBar = () => {
   const { data: session } = useSession();
@@ -91,23 +93,18 @@ const AppBar = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("bootstrap/dist/js/bootstrap.bundle.min.js").catch((err) =>
+    if (userData) {
+      import("bootstrap/js/dist/dropdown").catch((err) =>
         console.error("Failed to load Bootstrap JS", err)
       );
     }
-  }, []);
+  }, [userData]);
 
   const handleLogout = () => {
     signOut();
     toast.success("You have successfully logged out!");
     router.push("/");
   };
-
-  const currentUrl = window.location.href;
-
-  // Check if "uce" is found in the URL
-  const urlFound = currentUrl.includes("uce");
 
   return (
     <div>
@@ -171,17 +168,17 @@ const AppBar = () => {
                     </>
                   )}
                   {userData.role === "admin" && (
-                    <Link className="dropdown-item" href={"/dashboard"}>
+                    <Link prefetch={false} className="dropdown-item" href={"/dashboard"}>
                       <IoGridOutline /> Dashboard
                     </Link>
                   )}
                   {userData.role === "manager" && (
-                    <Link className="dropdown-item" href={"/leads"}>
+                    <Link prefetch={false} className="dropdown-item" href={"/leads"}>
                       <IoPeopleOutline /> Leads
                     </Link>
                   )}
                   {userData.role === "employee" && (
-                    <Link className="dropdown-item" href={"/complains"}>
+                    <Link prefetch={false} className="dropdown-item" href={"/complains"}>
                       <IoPeopleCircleOutline /> Complains
                     </Link>
                   )}
@@ -193,13 +190,13 @@ const AppBar = () => {
                 </ul>
               </div>
             ) : (
-              <p
-                className="mb-0"
-                style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+              <button
+                type="button"
+                className="btn btn-link text-white text-decoration-none p-0 text-nowrap"
                 onClick={() => setShowLoginModal(true)}
               >
-                <FaUser size={15} /> Login
-              </p>
+                <FaUser aria-hidden="true" size={15} /> Login
+              </button>
             )}
           </div>
         </div>
@@ -216,6 +213,7 @@ const AppBar = () => {
             {/* Toggle Button */}
             <button
               className="navbar-toggler"
+              aria-label="Open navigation menu"
               type="button"
               onClick={toggleOffcanvas}
               aria-expanded={offcanvasOpen ? "true" : "false"}
@@ -224,9 +222,10 @@ const AppBar = () => {
             </button>
 
             {/* Logo */}
-            <Link
+            <Link prefetch={false}
               href="/"
               className="navbar-brand"
+              aria-label="Tyent India home"
               style={{ display: "flex", alignItems: "center" }}
             >
               <Logo />
@@ -256,7 +255,7 @@ const AppBar = () => {
                     className={"nav-item"}
                     onMouseEnter={() => setIsProductOpen(false)}
                   >
-                    <Link
+                    <Link prefetch={false}
                       href="/"
                       className={`nav-link ${pathname === "/" ? "active" : ""}`}
                       onClick={closeOffcanvas}
@@ -272,7 +271,7 @@ const AppBar = () => {
                     onMouseEnter={() => setIsAboutDropdownOpen(true)}
                     onMouseLeave={() => setIsAboutDropdownOpen(false)}
                   >
-                    <Link
+                    <Link prefetch={false}
                       href="#"
                       className={`dropdown-toggle nav-link ${
                         ["/our-story", "/tyent-global"].includes(pathname)
@@ -289,7 +288,7 @@ const AppBar = () => {
                       }`}
                     >
                       <li>
-                        <Link
+                        <Link prefetch={false}
                           href="/our-story"
                           className={`dropdown-item ${
                             pathname === "/our-story" ? "active" : ""
@@ -300,7 +299,7 @@ const AppBar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link
+                        <Link prefetch={false}
                           href="/tyent-global"
                           className={`dropdown-item ${
                             pathname === "/tyent-global" ? "active" : ""
@@ -320,7 +319,7 @@ const AppBar = () => {
                     onMouseEnter={() => setIsProductsDropdownOpen(true)}
                     onMouseLeave={() => setIsProductsDropdownOpen(false)}
                   >
-                    <Link
+                    <Link prefetch={false}
                       href="#"
                       className="dropdown-toggle nav-link"
                       role="button"
@@ -341,7 +340,7 @@ const AppBar = () => {
                         onMouseEnter={() => handleSubmenuEnter("nmp")}
                         onMouseLeave={handleSubmenuLeave}
                       >
-                        <Link href="#" className="dropdown-item">
+                        <Link prefetch={false} href="#" className="dropdown-item">
                           NMP Series{" "}
                           <MdOutlineArrowDropDown
                             size={20}
@@ -357,7 +356,7 @@ const AppBar = () => {
                           }`}
                         >
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/nmp-5"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -367,7 +366,7 @@ const AppBar = () => {
                           </li>
                           <div className="dropdown-divider"></div>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/nmp-7"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -377,7 +376,7 @@ const AppBar = () => {
                           </li>
                           <div className="dropdown-divider"></div>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/nmp-9"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -387,7 +386,7 @@ const AppBar = () => {
                           </li>
                           <div className="dropdown-divider"></div>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/nmp-11"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -405,7 +404,7 @@ const AppBar = () => {
                         onMouseEnter={() => handleSubmenuEnter("uce")}
                         onMouseLeave={handleSubmenuLeave}
                       >
-                        <Link href="#" className="dropdown-item">
+                        <Link prefetch={false} href="#" className="dropdown-item">
                           UCE Series{" "}
                           <MdOutlineArrowDropDown
                             size={20}
@@ -421,7 +420,7 @@ const AppBar = () => {
                           }`}
                         >
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/uce-9-plus"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -431,7 +430,7 @@ const AppBar = () => {
                           </li>
                           <div className="dropdown-divider"></div>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/uce-11-plus"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -441,7 +440,7 @@ const AppBar = () => {
                           </li>
                           <div className="dropdown-divider"></div>
                           <li>
-                            <Link
+                            <Link prefetch={false}
                               href="/uce-13-plus"
                               className="dropdown-item"
                               onClick={closeOffcanvas}
@@ -453,7 +452,7 @@ const AppBar = () => {
                       </li>
                       <div className="dropdown-divider"></div>
                       <li>
-                        <Link
+                        <Link prefetch={false}
                           href="/hybrid-h2"
                           className="dropdown-item"
                           onClick={closeOffcanvas}
@@ -463,7 +462,7 @@ const AppBar = () => {
                       </li>
                       <div className="dropdown-divider"></div>
                       <li>
-                        <Link
+                        <Link prefetch={false}
                           href="/soap"
                           className="dropdown-item"
                           onClick={closeOffcanvas}
@@ -501,7 +500,7 @@ const AppBar = () => {
                       className="nav-item"
                       onMouseEnter={() => setIsProductOpen(false)}
                     >
-                      <Link
+                      <Link prefetch={false}
                         href={item.path}
                         className={`nav-link ${
                           pathname === item.path ? "active" : ""
@@ -518,14 +517,15 @@ const AppBar = () => {
             </div>
 
             {/* Cart Icon */}
-            <div
-              className="d-flex align-items-center"
-              style={{ cursor: "pointer", position: "relative" }}
+            <button
+              type="button"
+              className="btn border-0 p-0 d-flex align-items-center position-relative"
+              aria-label={`Open cart (${Number(totalItems)} items)`}
               onClick={() => setCartShow(true)}
             >
-              <div className="counter m-2">{Number(totalItems)}</div>
-              <PiShoppingCartLight size={40} color="#291495" />
-            </div>
+              <span className="counter m-2">{Number(totalItems)}</span>
+              <PiShoppingCartLight aria-hidden="true" size={40} color="#291495" />
+            </button>
           </div>
 
           {/* Product Page */}
@@ -588,7 +588,7 @@ const AppBar = () => {
 
         <Modal show={showLoginModal} onHide={() => setShowLoginModal(false)}>
           <Modal.Body>
-            <Login setShowLoginModal={setShowLoginModal} />
+            {showLoginModal && <Login setShowLoginModal={setShowLoginModal} />}
           </Modal.Body>
         </Modal>
       </div>

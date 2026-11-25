@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import Image from "next/image";
 import Link from "next/link";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const sectionStyle = {
   backgroundColor: "#f4f7fc",
@@ -256,18 +255,28 @@ const ProductCarousel = () => {
 
       <style jsx global>{`
         .slick-dots {
+          position: absolute;
           bottom: -40px;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-align: center;
         }
         .slick-dots li {
+          display: inline-block;
           margin: 0 3px;
           width: auto;
           height: auto;
           transition: all 0.3s ease;
         }
         .slick-dots li button {
+           width: 24px;
+           height: 24px;
            padding: 0;
-           width: auto;
-           height: auto;
+           border: 0;
+           background: transparent;
+           font-size: 0;
         }
         .slick-dots li button:before {
           content: "";

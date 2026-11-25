@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, useEffect, useMemo } from "react";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import animationData from '@/asserts/icons/security-research.json'; // Path to your Lottie JSON file
 import { gsap } from "gsap";
+
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const MyComponent = () => {
   const [caption, setCaption] = useState("Wait a bit, I am working...");

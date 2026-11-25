@@ -1,0 +1,33 @@
+.deferred-product-carousel {
+  min-height: 700px;
+  background: #f4f7fc;
+}
+
+.deferred-client-logos {
+  min-height: 80px;
+}
+
+@media (max-width: 991.98px) {
+  .deferred-product-carousel {
+    min-height: 1120px;
+  }
+}
+
+/* Keep content visible on the homepage without initializing scroll animations. */
+body:has(main > .tyent-homepage) [data-aos] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+  pointer-events: auto;
+}
+
+.deferred-video { min-height: 250px; }
+.deferred-comparison { min-height: 650px; }
+.deferred-testimonials { min-height: 280px; }
+.deferred-help { min-height: 260px; }
+.deferred-faq { min-height: 490px; }
+
+@media (max-width: 767.98px) {
+  .deferred-video { min-height: 760px; }
+  .deferred-comparison { min-height: 1120px; }
+}

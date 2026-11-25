@@ -1,23 +1,14 @@
+import WhatsInside from "./(main_home_content)/WhatsInside";
+import Why_People_choose_Tyent_Water from "./(main_home_content)/Why_People_choose_Tyent_Water";
+import RealScience from "./(main_home_content)/RealScience";
+import HumanRight from "./(main_home_content)/HumanRight";
+import Smarter_Upgrade from "./(main_home_content)/Smarter_Upgrade";
+import Explore from "./(main_home_content)/Explore";
 import Slider from "./compoents/Slider";
-import dynamic from "next/dynamic";
+import { DeferredProductCarousel, DeferredClientLogos, DeferredVideo, DeferredTyentvsKAngan, DeferredTrustedbyExperts, DeferredNeedhelp, DeferredTyentFaqSection } from "./(main_home_content)/DeferredCarousels";
 import Shop_by_category from "./(main_home_content)/Shop_by_category";
 
-// Lazy load all below-fold components
-const Explore = dynamic(() => import("./(main_home_content)/Explore"), { ssr: true });
-const WhatsInside = dynamic(() => import("./(main_home_content)/WhatsInside"), { ssr: true });
-const ProductCarousel = dynamic(() => import("./(main_home_content)/ProductCarousel"), { ssr: false });
-const Smarter_Upgrade = dynamic(() => import("./(main_home_content)/Smarter_Upgrade"), { ssr: true });
-const Video = dynamic(() => import("./compoents/Video"), { ssr: false });
-const WhyTyent = dynamic(() => import("./compoents/(Home)/WhyTyent"), { ssr: false });
-const TyentvsKAngan = dynamic(() => import("./compoents/(Home)/TyentvsKAngan"), { ssr: false });
-const HumanRight = dynamic(() => import("./(main_home_content)/HumanRight"), { ssr: true });
-const RealScience = dynamic(() => import("./(main_home_content)/RealScience"), { ssr: true });
-const Why_People_choose_Tyent_Water = dynamic(() => import("./(main_home_content)/Why_People_choose_Tyent_Water"), { ssr: false });
-const TrustedbyExperts = dynamic(() => import("./(main_home_content)/TrustedbyExperts"), { ssr: false });
-const Certifications = dynamic(() => import("./compoents/Certifications"), { ssr: false });
-const Needhelp = dynamic(() => import("./(main_home_content)/Needhelp"), { ssr: false });
-const SlickSlider = dynamic(() => import("./compoents/SlickSlider"), { ssr: false });
-const TyentFaqSection = dynamic(() => import("./contact/[slug]/TyentFaqSection"), { ssr: false });
+import Certifications from "./compoents/Certifications";
 
 export const metadata = {
   title: "Tyent Water Ionizer - Best Alkaline Water Machine in India",
@@ -27,10 +18,10 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <div style={{ width: "100%", overflow: "hidden", position: "relative" }}>
-      <p className="visually-hidden">
+    <div className="tyent-homepage" style={{ width: "100%", overflow: "hidden", position: "relative" }}>
+      <h1 className="visually-hidden">
         Tyent – Best Alkaline Water Ionizer Machine in India | Hydrogen-Rich Water Purifier
-      </p>
+      </h1>
       <Slider />
 
       <div className="section-spacing">
@@ -46,7 +37,7 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-        <ProductCarousel />
+        <DeferredProductCarousel />
       </div>
 
       <div className="section-spacing">
@@ -57,11 +48,11 @@ const Home = () => {
         <h2 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>
             Technical excellence with global availability
           </h2>
-        <Video />
+        <DeferredVideo />
       </div>
 
       <div className="section-spacing">
-        <TyentvsKAngan />
+        <DeferredTyentvsKAngan />
       </div>
 
       <div className="section-spacing">
@@ -77,7 +68,7 @@ const Home = () => {
       </div>
 
       <div className="">
-        <TrustedbyExperts />
+        <DeferredTrustedbyExperts />
       </div>
 
       <div className="section-spacing">
@@ -85,16 +76,16 @@ const Home = () => {
       </div>
 
       <div className="section-spacing">
-        <Needhelp />
+        <DeferredNeedhelp />
       </div>
 
       <div className="section-spacing">
         <h2 className="fw-bold subtitle-tight" style={{textAlign: "center"}}>Our Valued Clients</h2>
         <br />
-        <SlickSlider />
+        <DeferredClientLogos />
       </div>
       <div className="section-spacing">
-        <TyentFaqSection />
+        <DeferredTyentFaqSection />
       </div>
     </div>
   );

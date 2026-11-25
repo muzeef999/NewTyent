@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
 import "./tyentvskangan.css";
@@ -40,11 +40,7 @@ const CompareSection = () => {
               Tyent, a medical-grade water ionizer manufactured by TAEYOUNG E&T, is available in 123+ countries. Since more than 3 decades Tyent is known for its advanced Japanese technology, Tyent follows traditional marketing and offers end-to-end service with an in-house team handling demos, installations, and after-sales support, focusing customer satisfaction and brand trust.
             </p>
 
-            <Link href="/why-tyent" passHref>
-              <Button variant="link" className="p-0 text-decoration-none">
-                Click here →
-              </Button>
-            </Link>
+            <Link href="/why-tyent" prefetch={false} className="text-primary-emphasis text-decoration-none">Explore Tyent technology</Link>
           </div>
         </Col>
 
@@ -66,11 +62,7 @@ const CompareSection = () => {
               Kangen, a medical-grade water ionizer manufactured by Enagic & Co, is available in 26+ countries., relies on an MLM business model, doubling prices as 49% of costs go to commissions for 30 middlemen. Unlike other ionizers, Kangen lacks manpower for demo, installation and after-sales doorstep service globally, Focusing revenue generation over end customer satisfaction.
             </p>
 
-            <Link href="/tyentvskangen" passHref>
-              <Button variant="link" className="p-0 text-decoration-none">
-                Click here →
-              </Button>
-            </Link>
+            <Link href="/tyentvskangen" prefetch={false} className="text-primary-emphasis text-decoration-none">Compare Tyent and Kangen</Link>
           </div>
         </Col>
       </Row>

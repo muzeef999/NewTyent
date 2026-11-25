@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import "./shopCategory.css";
 import Image from "next/image";
 
@@ -25,102 +25,52 @@ const categories = [
   },
 ];
 
-const Shop_by_category = () => {
-
+export default function ShopByCategory() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef(null);
 
-  const handleScroll = () => {
+  useEffect(() => {
     const container = scrollRef.current;
-    if (!container) return;
+    const observer = new IntersectionObserver((entries) => {
+      const current = entries.find((entry) => entry.intersectionRatio >= 0.65);
+      if (current) setActiveIndex(Number(current.target.dataset.index));
+    }, { root: container, threshold: 0.65 });
 
-    const slideWidth = container.offsetWidth * 0.85;
-    const index = Math.round(container.scrollLeft / slideWidth);
-    setActiveIndex(index);
-  };
+    for (const slide of container.children) observer.observe(slide);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="container shop-category-wrapper">
-
-      {/* Heading */}
+    <section className="container shop-category-wrapper" aria-labelledby="shop-category-title">
       <div className="text-center mb-4">
-        <h2 className="fw-bold subtitle-tight">Shop by category</h2>
+        <h2 id="shop-category-title" className="fw-bold subtitle-tight">Shop by category</h2>
       </div>
-
-      {/* Desktop View */}
-      <div className="row g-4 justify-content-center desktop-view">
+      <div className="category-scroll" ref={scrollRef}>
         {categories.map((item, index) => (
-          <div key={index} className="col-md-4 d-flex">
-            <a href={item.link} className="text-decoration-none w-100">
-              <div className="category-card text-center p-4 d-flex flex-column h-100">
-                <div className="category-img-wrapper mb-3" style={{}}>
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      width={400}
-                      height={300}
-                      sizes="(max-width: 768px) 85vw, 280px"
-                      className="img-fluid category-img"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
-                    />
-                </div>
-                <div className="mt-auto">
-                  <h5 style={{ color: "#000", fontWeight: 600 }}>
-                    {item.title}
-                  </h5>
-                  <p className="text-muted small mb-0">{item.desc}</p>
-                </div>
+          <div key={item.link} className="category-slide" data-index={index}>
+            <Link href={item.link} prefetch={false} className="category-card text-center p-3 p-md-4 d-flex flex-column h-100 text-decoration-none">
+              <Image
+                src={item.img}
+                alt=""
+                width={400}
+                height={400}
+                sizes="(min-width: 1400px) 368px, (min-width: 1200px) 306px, (min-width: 992px) 246px, (min-width: 768px) 166px, (min-width: 576px) 380px, calc(85vw - 80px)"
+                quality={70}
+                className="category-img mb-3"
+              />
+              <div className="mt-auto">
+                <h3>{item.title}</h3>
+                <p className="text-muted small mb-0">{item.desc}</p>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
-
-      {/* Mobile Carousel */}
-      <div
-        className="category-scroll mobile-view"
-        ref={scrollRef}
-        onScroll={handleScroll}
-      >
+      <div className="category-dots" aria-hidden="true">
         {categories.map((item, index) => (
-          <div key={index} className="category-slide d-flex">
-            <a href={item.link} className="text-decoration-none w-100">
-              <div className="category-card text-center p-3 d-flex flex-column h-100">
-                <div className="category-img-wrapper mb-3" style={{}}>
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      width={400}
-                      height={300}
-                      sizes="85vw"
-                      className="img-fluid category-img"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
-                    />
-                </div>
-                <div className="mt-auto">
-                  <h5 style={{ color: "#000", fontWeight: 600 }}>
-                    {item.title}
-                  </h5>
-                  <p className="text-muted small mb-0">{item.desc}</p>
-                </div>
-              </div>
-            </a>
-          </div>
+          <span key={item.link} className={index === activeIndex ? "dot active" : "dot"} />
         ))}
       </div>
-
-      {/* Dots */}
-      <div className="dots mobile-view">
-        {categories.map((_, i) => (
-          <span
-            key={i}
-            className={`dot ${activeIndex === i ? "active" : ""}`}
-          />
-        ))}
-      </div>
-
-    </div>
+    </section>
   );
-};
-
-export default Shop_by_category;
+}

@@ -1,31 +1,12 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import contact from "@/asserts/contactwomen.webp";
 import Image from "next/image";
-import style from "../../compoents/Form/Form.module.css";
-import FormOnly from "./FormOnly";
 import { Col, Row } from "react-bootstrap";
- 
+import contact from "@/asserts/contactwomen.webp";
+import FormOnly from "./FormOnly";
+import style from "./Form.module.css";
 
-
-const ContactSection = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Simulate loading time (e.g., data fetching, component mount)
-    const timer = setTimeout(() => setIsLoaded(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function ContactSection() {
   return (
-    <div
-      style={{
-        backgroundColor: "transparent",
-        width: "100%",
-        overflow: "hidden",
-        minHeight: "500px",
-      }}
-    >
+    <div style={{ width: "100%", overflow: "hidden", minHeight: "500px" }}>
       <div className="container">
         <Row>
           <Col
@@ -33,93 +14,20 @@ const ContactSection = () => {
             data-aos="fade-right"
             className="d-flex justify-content-center align-items-center mb-4 mb-md-0"
           >
-            {isLoaded ? (
-              <div className={style.card}>
-                <Image
-                  className={`${style.conimg} ${style.contactImage}`}
-                  src={contact}
-                  alt="Contact"
-                  priority
-                />
-              </div>
-            ) : (
-              <div
-                style={{
-                  width: "100%",
-                  height: "400px",
-                  backgroundColor: "#e0e0e0",
-                  borderRadius: "10px",
-                  animation: "pulse 1.5s infinite",
-                }}
+            <div className={style.card}>
+              <Image
+                className={`${style.conimg} ${style.contactImage}`}
+                src={contact}
+                alt="Contact"
+                sizes="(min-width: 768px) 50vw, 100vw"
               />
-            )}
+            </div>
           </Col>
           <Col md={6}>
-            {isLoaded ? (
-              <FormOnly />
-            ) : (
-              <div>
-                <div
-                  style={{
-                    height: "50px",
-                    width: "80%",
-                    backgroundColor: "#e0e0e0",
-                    borderRadius: "8px",
-                    marginBottom: "16px",
-                    animation: "pulse 1.5s infinite",
-                  }}
-                />
-                <div
-                  style={{
-                    height: "50px",
-                    width: "100%",
-                    backgroundColor: "#e0e0e0",
-                    borderRadius: "8px",
-                    marginBottom: "16px",
-                    animation: "pulse 1.5s infinite",
-                  }}
-                />
-                <div
-                  style={{
-                    height: "150px",
-                    width: "100%",
-                    backgroundColor: "#e0e0e0",
-                    borderRadius: "8px",
-                    marginBottom: "16px",
-                    animation: "pulse 1.5s infinite",
-                  }}
-                />
-                <div
-                  style={{
-                    height: "40px",
-                    width: "40%",
-                    backgroundColor: "#e0e0e0",
-                    borderRadius: "8px",
-                    animation: "pulse 1.5s infinite",
-                  }}
-                />
-              </div>
-            )}
+            <FormOnly />
           </Col>
         </Row>
       </div>
-
-      {/* Optional CSS animation */}
-      <style jsx>{`
-        @keyframes pulse {
-          0% {
-            background-color: #e0e0e0;
-          }
-          50% {
-            background-color: #f0f0f0;
-          }
-          100% {
-            background-color: #e0e0e0;
-          }
-        }
-      `}</style>
     </div>
   );
-};
-
-export default ContactSection;
+}

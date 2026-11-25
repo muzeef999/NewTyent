@@ -9,7 +9,8 @@ const Input = ({ type, name, label, value, placeholder, onChange }) => {
         <label className={style.formLabel} htmlFor={uniqueid}>{label}</label>
       </div>
 
-      <input  className={style.formInput} 
+      <input className={style.formInput}
+        id={uniqueid}
         type={type}
         placeholder={placeholder}
         name={name}
