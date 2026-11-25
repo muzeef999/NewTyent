@@ -4,10 +4,21 @@ import BannerDesktopMedium from "@/asserts/homeBanners/banner1/home_Banner_Bg_De
 import BannerMobile from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg_hybrid.webp";
 import BannerMobileSmall from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg_hybrid_480.webp";
 
+import BannerMobileAvif from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg_hybrid.avif";
+import BannerMobileSmallAvif from "@/asserts/homeBanners/banner1/home_Banner_mobile_Bg_hybrid_480.avif";
+
 export default function Slider() {
   return (
     <Link href="/hybrid-h2" prefetch={false} className="d-block overflow-hidden">
       <picture>
+        <source
+          media="(max-width: 768px)"
+          type="image/avif"
+          srcSet={`${BannerMobileSmallAvif.src} ${BannerMobileSmallAvif.width}w, ${BannerMobileAvif.src} ${BannerMobileAvif.width}w`}
+          sizes="100vw"
+          width={BannerMobile.width}
+          height={BannerMobile.height}
+        />
         <source
           media="(max-width: 768px)"
           srcSet={`${BannerMobileSmall.src} ${BannerMobileSmall.width}w, ${BannerMobile.src} ${BannerMobile.width}w`}

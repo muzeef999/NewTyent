@@ -20,11 +20,7 @@ const FormOnly = () => {
 
 
   const handleDownloadConversion = () => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", "conversion", {
-      send_to: "AW-802308772/gmjyCLODuIMYEKSFyf4C",
-    });
-  }
+    window.reportTyentConversion?.();
 };
 
 

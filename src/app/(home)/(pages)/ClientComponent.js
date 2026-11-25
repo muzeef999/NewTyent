@@ -2,14 +2,13 @@
 import { Provider } from "react-redux";
 import { SessionProvider } from "next-auth/react";
 import { store } from "../../Redux/store";
-import "aos/dist/aos.css";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import AppBar from "../compoents/AppBar";
 import Form from "../compoents/Form/Form";
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMessage } from "react-icons/md";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import '@/app/style/Animation.css'; // Import the animation CSS
 import { Toaster } from "sonner";
 import FormOnly from "../compoents/Form/FormOnly";
@@ -22,43 +21,6 @@ export default function ClientComponent({ children, session, footer }) {
   const shouldExcludeLayout = noLayoutPages.includes(pathname);
   
   const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState("");
-  const [buttonRef, setButtonRef] = useState(null); // Store button reference
-
-  const handleShowModal = (content, event) => {
-    setModalContent(content);
-    setShowModal(true);
-  };
-
-  useEffect(() => {
-  const timer = setTimeout(() => {
-    setShowModal(true);
-  }, 30000); // 1 minute = 60,000 ms
-
-  return () => clearTimeout(timer); // cleanup
-}, []);
-
-
-
-
-  useEffect(() => {
-  const timer = setTimeout(() => {
-    setShowModal(true);
-  }, 60000); // 1 minute = 60,000 ms
-
-  return () => clearTimeout(timer); // cleanup
-}, []);
-
-
-const handleDownloadConversion = () => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", "conversion", {
-      send_to: "AW-802308772/gmjyCLODuIMYEKSFyf4C",
-    });
-  }
-};
-
-
   useEffect(() => {
     const handleOpenForm = () => setShowModal(true);
     window.addEventListener("openFormModal", handleOpenForm);
@@ -69,7 +31,7 @@ const handleDownloadConversion = () => {
   useEffect(() => {
     if (animationsInitialized.current || (pathname === "/" && CSS.supports("selector(body:has(*))"))) return;
     let cancelled = false;
-    import("aos").then(({ default: Aos }) => {
+    Promise.all([import("aos"), import("aos/dist/aos.css")]).then(([{ default: Aos }]) => {
       if (cancelled) return;
       animationsInitialized.current = true;
       Aos.init({
@@ -84,10 +46,7 @@ const handleDownloadConversion = () => {
   }, [pathname]);
 
   const handleCallClick = () => {
-
-     if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
-    window.gtag_report_conversion("tel:+919966558556");
-  }
+    window.reportTyentConversion?.();
     window.location.href = "tel:+919966558556";
   };
 
@@ -112,8 +71,7 @@ const handleDownloadConversion = () => {
               className="floating-button"
               title="Click to message"
               
-              onClick={(e) => handleShowModal("This is a messaging modal.", e)}
-              ref={setButtonRef} // Attach button ref for modal placement
+              onClick={() => setShowModal(true)}
             >
               <MdOutlineMessage size={30} />
             </button>
@@ -121,8 +79,7 @@ const handleDownloadConversion = () => {
             <button style={{position:'absolute', bottom:'1rem', right:'2rem'}}
               className="floating-button"
               title="Click to call"
-              onClick={() => {handleCallClick(),  handleDownloadConversion();
-       }}
+              onClick={handleCallClick}
             >
               <IoIosCall size={30} />
             </button>
@@ -147,6 +104,7 @@ const handleDownloadConversion = () => {
               show={showModal}
               onHide={() => setShowModal(false)}
               centered
+              scrollable
                 className="animate-modal customModal"
             >
               <Modal.Header closeButton>
