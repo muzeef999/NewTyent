@@ -28,6 +28,10 @@ module.exports = {
         userAgent: 'Googlebot',
         disallow: '/private',
       },
+      {
+  userAgent: "meta-externalagent",
+  disallow: "/",
+},
     ],
   },
 };
