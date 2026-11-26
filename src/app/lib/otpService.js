@@ -1,11 +1,17 @@
-import twilio from "twilio";
 import connect from "@/app/lib/mongoDB";
 import Otp from "@/models/Otp";
 
-const client = twilio(
-  process.env.TWILIO_ACCOUNT_SID,
-  process.env.TWILIO_AUTH_TOKEN
-);
+let client;
+function getTwilioClient() {
+  if (!client) {
+    const twilio = require("twilio");
+    client = twilio(
+      process.env.TWILIO_ACCOUNT_SID,
+      process.env.TWILIO_AUTH_TOKEN
+    );
+  }
+  return client;
+}
 
 // Send OTP to phone number
 export const sendOtpToPhone = async (phoneNumber) => {
@@ -16,7 +22,7 @@ export const sendOtpToPhone = async (phoneNumber) => {
     await connect();
 
     // Send OTP via Twilio
-    await client.messages.create({
+    await getTwilioClient().messages.create({
       body: `Tyent India: Your verification OTP is ${otp}.`,
       from: process.env.TWILIO_PHONE_NUMBER, // Replace with your Twilio number
       to: phoneNumber,

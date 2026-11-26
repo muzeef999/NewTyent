@@ -129,7 +129,40 @@ export default async function BlogPage({ params }) {
     });
   }
 
+  // BlogPosting JSON-LD schema
+  const publishedDate = post.createdAt ? new Date(post.createdAt).toISOString().split("T")[0] : "";
+  const modifiedDate = post.updatedAt ? new Date(post.updatedAt).toISOString().split("T")[0] : publishedDate;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.tyent.co.in/blogs/${slug}`
+    },
+    "headline": post.title,
+    "description": post.metaDescription || "",
+    "image": post.img ? `https://www.tyent.co.in${post.img}` : "",
+    "author": {
+      "@type": "Person",
+      "name": post.username || "Dr. Srinivasa Yadav Kandula",
+      "url": `https://www.tyent.co.in/author/${authorKey}`
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tyent India",
+      "url": "https://www.tyent.co.in"
+    },
+    ...(publishedDate && { "datePublished": publishedDate }),
+    ...(modifiedDate && { "dateModified": modifiedDate })
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
     <div className="container py-4" style={{ overflowX: "hidden" }}>
       <Row>
         <Col md={8} className="mb-4" style={{ overflowX: "hidden" }}>
@@ -195,5 +228,6 @@ export default async function BlogPage({ params }) {
         </Col>
       </Row>
     </div>
+    </>
   );
 }
