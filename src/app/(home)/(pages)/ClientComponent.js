@@ -27,6 +27,16 @@ export default function ClientComponent({ children, session, footer }) {
     return () => window.removeEventListener("openFormModal", handleOpenForm);
   }, []);
 
+  // Auto popup after 5 seconds (once per session)
+  useEffect(() => {
+    if (sessionStorage.getItem("popupShown")) return;
+    const timer = setTimeout(() => {
+      setShowModal(true);
+      sessionStorage.setItem("popupShown", "true");
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const animationsInitialized = useRef(false);
   useEffect(() => {
     if (animationsInitialized.current || (pathname === "/" && CSS.supports("selector(body:has(*))"))) return;
