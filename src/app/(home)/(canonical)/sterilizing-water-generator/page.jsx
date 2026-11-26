@@ -94,7 +94,7 @@ const Page = () => {
                   alignItems: "center",
                 }}
               >
-                <p
+                <div
                   style={{
                     fontSize: "20px",
                     fontWeight: "400",
@@ -108,35 +108,35 @@ const Page = () => {
                     <li>
                       <b>Convenient hygiene management</b>
                     </li>
-                    <p>
+                    <span>
                       Process that does not require dilution increases the
                       production efficiency.
                       <br />
                       The automatic consecutive system allows you to use the
                       water like a regular tap water. <br />
                       The one-touch control provides easy and safe use.
-                    </p>
+                    </span>
                     <br />
                     <li>
                       <b>Clean Quality assurance</b>
                     </li>
-                    <p>
+                    <span>
                       Quick sterilization and minimal residue is a great
                       advantage. - Ideal for food sterilization without
                       affecting the taste and the smell of the food.
-                    </p>
+                    </span>
                     <br />
                     <li>
                       <b>Safe Working environment</b>
                     </li>
-                    <p>
+                    <span>
                       The electrolysis of water and salt does not affect the
                       environment. When the residue is contacted with organic
                       matter after the use, the active chlorine decreases and
                       naturally dissolute.
-                    </p>
+                    </span>
                   </ul>
-                </p>
+                </div>
               </Col>
               <Col md={4}>
                 <div style={{ width: "100%", height: "auto" }}>
@@ -248,7 +248,7 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Dual Electrolyzer System
                 </h3>{" "}
@@ -268,7 +268,7 @@ const Page = () => {
                 <br />
                 <br />A more stable available chlorine concentration is
                 maintained through a two-step electrolysis process.
-              </p>
+              </div>
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
@@ -292,7 +292,7 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   ONE TOUCH automatic flush
                 </h3>{" "}
@@ -307,7 +307,7 @@ const Page = () => {
                 <br />
                 The product automatically produces the sterilized water based on
                 its use (100/200/1000ppm)
-              </p>
+              </div>
             </Col>
           </Row>
           <Row>
@@ -320,12 +320,12 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   1000ppm generation function for high concentration
                 </h3>{" "}
                 <br />
-              </p>
+              </div>
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
@@ -348,7 +348,7 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   SMPS Power method
                 </h3>{" "}
@@ -361,7 +361,7 @@ const Page = () => {
                 <br />
                 The safety function has improved by displaying and alerting the
                 unmet condition of the electrolytes (salt) and flow.
-              </p>
+              </div>
             </Col>
           </Row>
 
@@ -375,7 +375,7 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   TPE material salt container & integral structure
                 </h3>{" "}
@@ -387,7 +387,7 @@ const Page = () => {
                 It has high space utilization due to the integral structure of
                 salt container. No separate space is required for the salt
                 container installation.
-              </p>
+              </div>
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
@@ -411,14 +411,14 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Salt drain valve fitted
                 </h3>{" "}
                 <br />
                 Convenient for cleaning the salt container after not using it
                 for long time.
-              </p>
+              </div>
             </Col>
           </Row>
 
@@ -432,13 +432,13 @@ const Page = () => {
                 alignItems: "center",
               }}
             >
-              <p>
+              <div>
                 <h3 style={{ fontSize: "30px", fontWeight: "600", display: "inline" }}>
                   Available with Wall-mounted
                 </h3>{" "}
                 <br />
                 The wall-mounted design provides effective use of space.
-              </p>
+              </div>
             </Col>
             <Col md={4}>
               <div style={{ width: "100%", height: "auto" }}>
