@@ -97,41 +97,6 @@ const nextConfig = {
         destination: '/contact/best-hydrogen-rich-alkaline-water-ionizer-in-new-delhi',
         permanent: true,
       },
-      {
-        source: '/Terms_of_Use',
-        destination: '/terms-of-use',
-        permanent: true,
-      },
-      {
-        source: '/Cancellation_Returns',
-        destination: '/cancellation-returns',
-        permanent: true,
-      },
-      {
-        source: '/Sterilizing-water-generator',
-        destination: '/sterilizing-water-generator',
-        permanent: true,
-      },
-      {
-        source: '/7-types-of-Tyent-water',
-        destination: '/7-types-of-tyent-water',
-        permanent: true,
-      },
-      {
-        source: '/patented-SMPS-plus',
-        destination: '/patented-smps-plus',
-        permanent: true,
-      },
-      {
-        source: '/Privacy',
-        destination: '/privacy',
-        permanent: true,
-      },
-      {
-        source: '/Security',
-        destination: '/security',
-        permanent: true,
-      },
     ];
   },
 };

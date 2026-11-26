@@ -69,28 +69,30 @@ const data = [
   {
     icon: PAST_UCE,
     title: "Past cleaning Technology",
+    isH3: false,
     content:
       "Tyent Water Ionizers use advanced Polarity Anti Scale Technology (PAST) for automated cleaning. Timer and sensor activation reduce mineral buildup on electrodes, enhancing durability and consistently delivering ionized water with more molecular hydrogen.",
   },
   {
     icon: TURBO_UCE,
     title: "Turbo mode",
+    isH3: false,
     content:
       "Tyent’s Turbo Mode provides 11.5 to 2.5 pH water for specialized uses. Powered by patented SMPS PLUS, it’s the only ionizer globally producing this range without chemicals, enhancers, or salts, ensuring unmatched quality and versatility.",
   },
   {
     icon: ECO_UCE,
     title: "Eco mode",
+    isH3: false,
     content:
       "The Tyent water ionizer’s features Eco Mode, enhancing energy efficiency with up to 99.9% savings. It reduces power consumption by automatically turning off the LCD backlight during idle periods.",
   },
 ];
 
 
-const WaterFilterCards = ({ icon, title, content }) => {
+const WaterFilterCards = ({ icon, title, content, isH3 = true }) => {
   return (
     <div className="custom-card-uce-scroll">
-      <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Tyent UCE-9 Plus – Under-Counter Alkaline Water Ionizer India</h1>
   <div
     className="d-flex flex-column justify-content-center align-items-center ml-4"
   >
@@ -100,9 +102,15 @@ const WaterFilterCards = ({ icon, title, content }) => {
     </div>
      <br/>
     {/* Title */}
-    <h3 className="text-start" style={{ color: "#000", textAlign:'start' }}>
-      <b>{title}</b>
-    </h3>
+    {isH3 ? (
+      <h3 className="text-start" style={{ color: "#000", textAlign:'start' }}>
+        <b>{title}</b>
+      </h3>
+    ) : (
+      <p className="text-start fw-bold" style={{ color: "#000", fontSize: "1.17em", textAlign:'start' }}>
+        {title}
+      </p>
+    )}
     
     {/* Content */}
     <div style={{ maxWidth: "600px" }}>
@@ -230,6 +238,8 @@ const page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+
+     <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Elevate Your Kitchen with Tyent UCE</h1>
 
      {/* AMP Analytics Script */}
       <Head>
@@ -450,6 +460,7 @@ const page = () => {
                 icon={iconItem.icon}
                 title={iconItem.title}
                 content={iconItem.content}
+                isH3={iconItem.isH3 !== false}
               />
             ))}
           </div>
@@ -493,7 +504,7 @@ const page = () => {
                 </div>
               </div>
               <h3>
-                <b>Jog Dail</b>
+                <b>Jog Dial</b>
               </h3>
               <p>
                 Smart-Phone inspired touch screen interface and jog dial provide

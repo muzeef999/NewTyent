@@ -26,10 +26,28 @@ const roleRedirects = {
   employee: '/complains',
 };
 
+// Case-sensitive redirects (old uppercase URLs → new lowercase)
+const caseRedirects = {
+  '/Terms_of_Use': '/terms-of-use',
+  '/Cancellation_Returns': '/cancellation-returns',
+  '/Sterilizing-water-generator': '/sterilizing-water-generator',
+  '/7-types-of-Tyent-water': '/7-types-of-tyent-water',
+  '/patented-SMPS-plus': '/patented-smps-plus',
+  '/Privacy': '/privacy',
+  '/Security': '/security',
+};
+
 export async function middleware(request) {
   const url = new URL(request.url);
   const origin = request.headers.get('origin') ?? '';
   const isAllowedOrigin = allowedOrigins.includes(origin);
+
+  // Case-sensitive redirect check (exact match only)
+  const redirectTo = caseRedirects[url.pathname];
+  if (redirectTo) {
+    url.pathname = redirectTo;
+    return NextResponse.redirect(url, 308);
+  }
 
   // ✅ Handle preflight OPTIONS request
   if (request.method === 'OPTIONS') {
@@ -99,6 +117,13 @@ export const config = {
     '/leads',
     '/complains',
     '/service',
-    '/api/:path*', // 👈 ensures CORS is applied to API calls too
+    '/api/:path*',
+    '/Terms_of_Use',
+    '/Cancellation_Returns',
+    '/Sterilizing-water-generator',
+    '/7-types-of-Tyent-water',
+    '/patented-SMPS-plus',
+    '/Privacy',
+    '/Security',
   ],
 };
