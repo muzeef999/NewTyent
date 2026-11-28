@@ -7,12 +7,14 @@ import { usePathname } from "next/navigation";
 import AppBar from "../compoents/AppBar";
 import Form from "../compoents/Form/Form";
 import { IoIosCall } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMessage } from "react-icons/md";
 import { Modal } from "react-bootstrap";
 import '@/app/style/Animation.css'; // Import the animation CSS
 import { Toaster } from "sonner";
 import FormOnly from "../compoents/Form/FormOnly";
 
+const whatsappMessage = "Hi Tyent! I'd like to learn more about your water ionizers.";
 
 
 export default function ClientComponent({ children, session, footer }) {
@@ -72,29 +74,35 @@ export default function ClientComponent({ children, session, footer }) {
          <br/>
         {footer}
 
-        {/* Floating Buttons */}
-        <center>
-          <div
-            className="floating"
-          >
-            <button  style={{position:'absolute', bottom:'1rem', left:'2rem'}}
-              className="floating-button"
-              title="Click to message"
-              
-              onClick={() => setShowModal(true)}
-            >
-              <MdOutlineMessage size={30} />
-            </button>
+        <button
+          type="button"
+          className="floating-button floating-form-button"
+          aria-label="Open enquiry form"
+          onClick={() => setShowModal(true)}
+        >
+          <MdOutlineMessage size={30} aria-hidden="true" />
+        </button>
 
-            <button style={{position:'absolute', bottom:'1rem', right:'2rem'}}
-              className="floating-button"
-              title="Click to call"
-              onClick={handleCallClick}
-            >
-              <IoIosCall size={30} />
-            </button>
-          </div>
-        </center>
+        <div className="floating">
+          <a
+            className="floating-button floating-button-whatsapp"
+            href={`https://wa.me/919966558556?text=${encodeURIComponent(whatsappMessage)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with Tyent on WhatsApp"
+          >
+            <FaWhatsapp size={30} aria-hidden="true" />
+          </a>
+
+          <button
+            type="button"
+            className="floating-button"
+            aria-label="Call Tyent"
+            onClick={handleCallClick}
+          >
+            <IoIosCall size={30} aria-hidden="true" />
+          </button>
+        </div>
 
         {/* Modal Animation */}
         {showModal && (

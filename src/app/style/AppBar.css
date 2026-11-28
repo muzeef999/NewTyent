@@ -739,10 +739,12 @@ padding-left: 48px !important;
 
 .floating {
   position: fixed;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1rem + env(safe-area-inset-right, 0px));
   z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /* Styles for the button */
@@ -761,6 +763,19 @@ padding-left: 48px !important;
   cursor: pointer; /* Pointer cursor for button */
   transition: transform 0.3s ease; /* Smooth animation for scale effect */
   animation: floating 2s ease-in-out infinite; /* Floating animation */
+}
+
+.floating-form-button {
+  position: fixed;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  left: calc(1rem + env(safe-area-inset-left, 0px));
+  z-index: 999;
+}
+
+.floating-button-whatsapp {
+  background-color: #128c4a;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Hover effect to scale */
